@@ -125,6 +125,11 @@ export default function Home() {
                 <p className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-1">45+</p>
                 <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[100px] leading-tight">Years of Experience</p>
               </div>
+              <div className="hidden sm:block w-px h-12 bg-border"></div>
+              <div className="flex items-center gap-4">
+                <p className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-1">190+</p>
+                <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[100px] leading-tight">Companies</p>
+              </div>
             </div>
           </div>
         </div>
