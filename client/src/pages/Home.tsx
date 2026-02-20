@@ -115,7 +115,7 @@ export default function Home() {
         {/* Stats (Static below carousel, spanning full width at bottom) */}
         <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-border py-6 z-20">
           <div className="container mx-auto px-6 md:px-12">
-            <div className="flex flex-col sm:flex-row gap-8 lg:gap-16 items-center sm:items-start animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both">
+            <div className="flex flex-col sm:flex-row gap-8 lg:gap-12 xl:gap-16 items-center sm:items-start animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both">
               <div className="flex items-center gap-4">
                 <p className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-1">18</p>
                 <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[100px] leading-tight">Funds Raised</p>
@@ -129,6 +129,11 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <p className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-1">190+</p>
                 <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[100px] leading-tight">Companies</p>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-border"></div>
+              <div className="flex items-center gap-4">
+                <p className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-1">$33B+</p>
+                <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[100px] leading-tight">Capital Raised</p>
               </div>
             </div>
           </div>
