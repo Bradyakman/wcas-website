@@ -3,6 +3,7 @@ import { ArrowRight, TrendingUp, Users, Cpu, Briefcase, Quote } from "lucide-rea
 import heroBg from "@assets/healthcare-portfolio-RESIZE-jpg_1771595437015.webp";
 import testimonial1 from "@/assets/images/testimonial-1.png";
 import testimonial2 from "@/assets/images/testimonial-2.png";
+import { useState, useEffect } from "react";
 
 // Placeholder logos array
 const logos = [
@@ -11,34 +12,77 @@ const logos = [
   "Asurion", "Avetta", "Shields Health", "LINQ"
 ];
 
+const heroSlides = [
+  {
+    title: (
+      <>Supporting innovation and growth in <span className="text-primary">Technology</span> and <span className="text-primary">Healthcare</span></>
+    ),
+    description: "Forming ongoing partnerships with leading management teams to build exceptional companies."
+  },
+  {
+    title: (
+      <>Empowering visionary <span className="text-primary">Leaders</span> to redefine their <span className="text-primary">Industries</span></>
+    ),
+    description: "Providing the strategic guidance and capital required to scale market-leading platforms."
+  },
+  {
+    title: (
+      <>Four decades of <span className="text-primary">Excellence</span> in private <span className="text-primary">Equity</span></>
+    ),
+    description: "A proven track record of creating value through operational improvements and strategic M&A."
+  }
+];
+
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden">
         <div 
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 transition-opacity duration-1000"
           style={{
             backgroundImage: `url(${heroBg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-white/80 backdrop-blur-[4px]"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
         </div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-extrabold text-foreground leading-[1.1] tracking-tighter mb-8 animate-in slide-in-from-bottom-8 duration-700">
-              Supporting innovation and growth in <span className="text-primary">Technology</span> and <span className="text-primary">Healthcare</span>
-            </h1>
+          <div className="max-w-4xl min-h-[300px] flex flex-col justify-center relative">
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed animate-in slide-in-from-bottom-8 duration-700 delay-150 fill-mode-both">
-              Forming ongoing partnerships with leading management teams to build exceptional companies.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-8 animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both">
+            {/* Carousel Content */}
+            {heroSlides.map((slide, index) => (
+              <div 
+                key={index}
+                className={`absolute inset-0 flex flex-col justify-center transition-all duration-700 ease-in-out ${
+                  index === currentSlide 
+                    ? "opacity-100 translate-y-0 pointer-events-auto" 
+                    : "opacity-0 translate-y-8 pointer-events-none"
+                }`}
+              >
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-extrabold text-foreground leading-[1.1] tracking-tighter mb-8">
+                  {slide.title}
+                </h1>
+                <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
+                  {slide.description}
+                </p>
+              </div>
+            ))}
+            
+            {/* Stats (Static below carousel) */}
+            <div className="mt-[340px] md:mt-[300px] flex flex-col sm:flex-row gap-8 animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both">
               <div className="border-l-4 border-primary pl-6">
                 <p className="text-5xl font-heading font-bold text-foreground mb-1">18</p>
                 <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Funds Raised</p>
@@ -48,6 +92,35 @@ export default function Home() {
                 <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Years of Experience</p>
               </div>
             </div>
+
+            {/* Carousel Indicators */}
+            <div className="absolute -left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-3">
+              {heroSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? "h-8 bg-primary" : "h-2 bg-primary/20 hover:bg-primary/50"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+            
+            {/* Mobile Indicators */}
+            <div className="mt-12 flex gap-3 lg:hidden">
+              {heroSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? "w-8 bg-primary" : "w-2 bg-primary/20"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+
           </div>
         </div>
       </section>
