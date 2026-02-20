@@ -141,13 +141,13 @@ export default function Home() {
       </section>
 
       {/* Logos Ticker */}
-      <section className="py-12 border-y border-border bg-white overflow-hidden">
+      <section className="py-12 border-y border-border overflow-hidden bg-transparent">
         <div className="container mx-auto px-6 md:px-12 mb-6">
           <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground text-center">Over 300 Companies Partnered</p>
         </div>
         <div className="relative w-full logo-ticker flex items-center">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10"></div>
           
           <div className="flex space-x-16 animate-scroll whitespace-nowrap px-8 items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {/* Double the logos to make continuous scroll seamless */}
