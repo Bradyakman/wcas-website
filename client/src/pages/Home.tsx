@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Cpu, Briefcase, Quote } from "lucide-react";
-import heroBg from "@/assets/images/hero-bg.png";
+import heroBg from "@assets/healthcare-portfolio-RESIZE-jpg_1771595437015.webp";
 import testimonial1 from "@/assets/images/testimonial-1.png";
 import testimonial2 from "@/assets/images/testimonial-2.png";
 
