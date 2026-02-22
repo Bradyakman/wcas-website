@@ -272,7 +272,7 @@ export default function Technology() {
       </section>
 
       {/* Portfolio CTA Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative py-32 md:py-48 lg:py-56 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={techPortfolioBg} 
