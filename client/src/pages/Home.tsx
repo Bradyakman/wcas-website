@@ -193,9 +193,9 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12 mb-8">
           <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground text-center">Over 300 Companies Partnered</p>
         </div>
-        <div className="relative w-full overflow-hidden flex items-center bg-white py-8">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="relative w-full overflow-hidden flex items-center py-8">
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/50 to-transparent z-10 pointer-events-none"></div>
           
           <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
             {/* Render logos 3 times to ensure smooth infinite scroll */}
