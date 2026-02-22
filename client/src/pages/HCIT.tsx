@@ -23,8 +23,8 @@ export default function HCIT() {
         
         <div className="container mx-auto mt-12 relative z-10">
           <div className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-white/60 mb-6">
-            <Link href="/">
-              <a className="hover:text-white transition-colors">Home</a>
+            <Link href="/healthcare">
+              <a className="hover:text-white transition-colors">Healthcare</a>
             </Link>
             <span>/</span>
             <span className="text-white">Healthcare Information Technology (HCIT)</span>
