@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
-import { ArrowRight, Building, MapPin, Calendar, Briefcase, Tag, Target } from "lucide-react";
+import { ArrowRight, Building, MapPin, Calendar, Briefcase, Tag, Target, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 const SUCCESSES = [
   {
@@ -149,68 +150,79 @@ export default function TechOperatingSuccesses() {
       {/* Main Content */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col gap-16 md:gap-24">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {SUCCESSES.map((company, index) => (
-              <div 
-                key={company.name} 
-                className="bg-white rounded-3xl shadow-xl shadow-black/5 border border-border overflow-hidden flex flex-col lg:flex-row"
-              >
-                {/* Left Column: Logo & Stats */}
-                <div className="w-full lg:w-1/3 bg-secondary/50 p-8 md:p-12 flex flex-col border-b lg:border-b-0 lg:border-r border-border">
-                  <div className="h-24 md:h-32 flex items-center justify-start mb-12 bg-white p-6 rounded-2xl shadow-sm border border-border/50">
+              <Dialog key={company.name}>
+                <DialogTrigger asChild>
+                  <div className="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-border overflow-hidden cursor-pointer group flex items-center justify-center p-8 aspect-video relative">
+                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors z-0"></div>
                     <img 
                       src={company.logo} 
                       alt={`${company.name} logo`} 
-                      className="max-h-full max-w-full object-contain"
+                      className="max-h-full max-w-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  
-                  <div className="space-y-6 flex-grow">
-                    <h4 className="text-sm font-bold uppercase tracking-widest text-primary mb-6">At a Glance</h4>
-                    
-                    {Object.entries(company.stats).map(([key, value]) => (
-                      <div key={key} className="flex items-start gap-4">
-                        <div className="mt-1 text-primary">
-                          <StatIcon type={key} />
-                        </div>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[700px] lg:max-w-[900px] p-0 overflow-hidden border-0 bg-white">
+                  <div className="flex flex-col lg:flex-row max-h-[85vh] overflow-y-auto">
+                    {/* Left Column: Stats & Logo */}
+                    <div className="w-full lg:w-1/3 bg-secondary/50 p-8 flex flex-col border-b lg:border-b-0 lg:border-r border-border shrink-0">
+                      <div className="h-20 flex items-center justify-start mb-8">
+                        <img 
+                          src={company.logo} 
+                          alt={`${company.name} logo`} 
+                          className="max-h-full max-w-full object-contain"
+                        />
+                      </div>
+                      
+                      <div className="space-y-6 flex-grow">
+                        <h4 className="text-xs font-bold uppercase tracking-widest text-primary mb-4">At a Glance</h4>
+                        
+                        {Object.entries(company.stats).map(([key, value]) => (
+                          <div key={key} className="flex items-start gap-3">
+                            <div className="mt-0.5 text-primary">
+                              <StatIcon type={key} />
+                            </div>
+                            <div>
+                              <div className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider mb-0.5">{key}</div>
+                              <div className="text-sm font-medium text-foreground">{value}</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Right Column: Descriptions */}
+                    <div className="w-full lg:w-2/3 p-8 md:p-10 flex flex-col">
+                      <DialogHeader className="mb-8 text-left">
+                        <DialogTitle className="text-3xl font-heading font-bold text-[#002759]">
+                          {company.name}
+                        </DialogTitle>
+                      </DialogHeader>
+                      
+                      <div className="space-y-8">
                         <div>
-                          <div className="text-xs font-semibold uppercase text-muted-foreground tracking-wider mb-1">{key}</div>
-                          <div className="text-foreground font-medium">{value}</div>
+                          <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-3">
+                            Company Description
+                          </h3>
+                          <p className="text-muted-foreground leading-relaxed text-sm md:text-base font-light">
+                            {company.companyDesc}
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-3">
+                            Deal Description
+                          </h3>
+                          <p className="text-muted-foreground leading-relaxed text-sm md:text-base font-light">
+                            {company.dealDesc}
+                          </p>
                         </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Right Column: Content */}
-                <div className="w-full lg:w-2/3 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-                  <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#002759] mb-8">
-                    {company.name}
-                  </h2>
-                  
-                  <div className="space-y-10">
-                    <div>
-                      <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                        Company Description
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed text-lg font-light">
-                        {company.companyDesc}
-                      </p>
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                        Deal Description
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed text-lg font-light">
-                        {company.dealDesc}
-                      </p>
                     </div>
                   </div>
-                </div>
-              </div>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
