@@ -229,14 +229,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Mission Section */}
+      {/* Mission & Video Slider Section */}
       <section className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
         {/* Abstract shapes for background interest */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-50"></div>
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50"></div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-8 tracking-tighter">
                 Our Mission: Your Partner of Choice
@@ -250,6 +250,30 @@ export default function Home() {
               <Button size="lg" variant="secondary" className="rounded-full px-8 font-semibold">
                 Learn More About Our History
               </Button>
+            </div>
+          </div>
+
+          {/* Video Slider */}
+          <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-black/20 backdrop-blur-sm border border-white/10 p-4 md:p-8">
+            <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+              {[
+                "861242809", "913387748", "861242949", "913387297", 
+                "861243091", "913334845", "861243221", "913388269"
+              ].map((videoId, index) => (
+                <div key={index} className="min-w-[85vw] md:min-w-[60vw] lg:min-w-[45vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-black/50 relative group">
+                  <iframe 
+                    src={`https://player.vimeo.com/video/${videoId}?h=dbf9bc9a77&title=0&byline=0&portrait=0`}
+                    className="absolute top-0 left-0 w-full h-full"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              ))}
+            </div>
+            {/* Scroll hint indicators */}
+            <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+              <ArrowRight size={24} />
             </div>
           </div>
         </div>
