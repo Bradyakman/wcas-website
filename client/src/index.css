@@ -97,10 +97,6 @@
 }
 
 .animate-marquee {
-  animation: scroll 60s linear infinite;
+  animation: scroll 80s linear infinite;
   width: max-content;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
 }
