@@ -43,14 +43,10 @@ const stats = [
 ];
 
 const wcasVideos = [
-  { id: "1059530438", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS" },
-  { id: "1059546200", title: "Strategic Growth Investment", partner: "TrueCommerce" },
-  { id: "1059550993", title: "Building Sustainable Platforms", partner: "Concentra" },
-  { id: "1059552199", title: "Investing in Better Healthcare", partner: "InnovAge" },
-  { id: "1059555627", title: "Advancing Front-Office Automation", partner: "EquiLend" },
-  { id: "1059557342", title: "Investing in Technology", partner: "Absorb" },
-  { id: "1059560447", title: "Strategic Expansion", partner: "AIA Contract Documents" },
-  { id: "1059565251", title: "Transforming Healthcare", partner: "Mphasis" }
+  { id: "861242809", title: "Building Success", partner: "Green Street" },
+  { id: "861242949", title: "Partnership Growth", partner: "Quickbase" },
+  { id: "861243091", title: "Strategic Vision", partner: "Absorb" },
+  { id: "861243091", title: "Market Leadership", partner: "Intoxalock" }
 ];
 
 const news = [
