@@ -78,7 +78,7 @@ export default function HCIT() {
                 image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=2864&auto=format&fit=crop"
               }
             ].map((trend, i) => (
-              <div key={i} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[35vw] snap-center shrink-0 rounded-2xl overflow-hidden aspect-[4/5] md:aspect-square bg-black relative group shadow-lg">
+              <div key={i} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[35vw] snap-center shrink-0 rounded-2xl overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[4/3] bg-black relative group shadow-lg">
                 <img 
                   src={trend.image} 
                   alt={trend.title} 
