@@ -212,7 +212,7 @@ export default function Home() {
         </div>
       </section>
       {/* The 4 Boxes - Reimagined Layout */}
-      <section className="py-32 bg-secondary/50">
+      <section className="pb-32 bg-secondary/50">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mb-20">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Approach</h2>
