@@ -6,6 +6,7 @@ import carolineDechertImg from "@assets/caroline_dechert-jpg_1771774248059.webp"
 import edwardSobolImg from "@assets/Edward_Sobol_bio-jpg_1771779192599.webp";
 import cathySunImg from "@assets/Cathy-Sun-jpg_1771795073666.webp";
 import adityaShahImg from "@assets/Aditya-Shah_1771795295962.png";
+import markTomainoImg from "@assets/mark_tomaino-jpg_1771795380192.webp";
 import unparalleledExpertiseImg from "@assets/unparalled-expertise-jpeg_1771774489695.webp";
 import heroBgImg from "@assets/HCIT-jpg_1771775487806.webp";
 
@@ -169,7 +170,8 @@ export default function HCIT() {
               { 
                 name: "Mark M. Tomaino", 
                 role: "Operating Partner | Healthcare",
-                bio: "Mr. Tomaino is an Operating Partner on the Healthcare team and focuses on investments in the healthcare information technology industry, having joined WCAS in 2010. Mark was previously Senior Vice President of Corporate Development at The TriZetto Group."
+                bio: "Mr. Tomaino is an Operating Partner on the Healthcare team and focuses on investments in the healthcare information technology industry, having joined WCAS in 2010. Mark was previously Senior Vice President of Corporate Development at The TriZetto Group.",
+                image: markTomainoImg
               },
               { 
                 name: "Francesca Dea", 
