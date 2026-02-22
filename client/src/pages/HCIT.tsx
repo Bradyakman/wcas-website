@@ -64,16 +64,16 @@ export default function HCIT() {
       {/* Trends Section */}
       <section className="py-24 bg-white border-y border-border overflow-hidden">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Investment Themes</h2>
-            <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
+          <div className="mb-10 md:mb-16">
+            <h2 className="text-xs md:text-sm font-bold uppercase tracking-widest text-primary mb-3 md:mb-4">Investment Themes</h2>
+            <h3 className="text-3xl md:text-5xl font-heading font-bold text-foreground tracking-tight leading-tight">
               Trends We're Excited To Invest Behind
             </h3>
           </div>
         </div>
 
         <div className="relative w-full overflow-visible">
-          <div className="flex gap-4 md:gap-6 overflow-x-auto pb-12 snap-x snap-mandatory scrollbar-hide w-[100vw] pr-[5vw] ml-[calc(50%-50vw)] pl-[max(1.5rem,calc(50vw-40rem))] md:pl-[max(3rem,calc(50vw-40rem))] lg:pl-[max(3rem,calc(50vw-36rem))] xl:pl-[max(3rem,calc(50vw-38rem))] 2xl:pl-[max(3rem,calc(50vw-40rem))]" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          <div className="flex gap-4 md:gap-6 overflow-x-auto pb-8 md:pb-12 snap-x snap-mandatory scrollbar-hide w-[100vw] pr-[5vw] ml-[calc(50%-50vw)] pl-[max(1.5rem,calc(50vw-40rem))] md:pl-[max(3rem,calc(50vw-40rem))] lg:pl-[max(3rem,calc(50vw-36rem))] xl:pl-[max(3rem,calc(50vw-38rem))] 2xl:pl-[max(3rem,calc(50vw-40rem))]" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {[
               {
                   title: "Accelerated adoption of software",
@@ -96,7 +96,7 @@ export default function HCIT() {
                 image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=2864&auto=format&fit=crop"
               }
             ].map((trend, i) => (
-              <div key={i} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[35vw] snap-center shrink-0 rounded-2xl overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[16/9] bg-black relative group shadow-lg">
+              <div key={i} className="min-w-[80vw] sm:min-w-[45vw] lg:min-w-[35vw] snap-center shrink-0 rounded-2xl overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[16/9] bg-black relative group shadow-lg">
                 <img 
                   src={trend.image} 
                   alt={trend.title} 
@@ -104,16 +104,16 @@ export default function HCIT() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
                 
-                <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
-                  <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                    <div className="flex items-start gap-4 mb-2 md:mb-4">
-                      <span className="text-4xl md:text-5xl font-serif text-white/50 font-bold leading-none shrink-0 mt-1 md:mt-0">0{i+1}</span>
-                      <h4 className="text-2xl md:text-3xl font-heading font-bold text-white leading-tight">
+                <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-end">
+                  <div className="transform translate-y-4 md:translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                    <div className="flex items-start gap-3 md:gap-4 mb-2 md:mb-4">
+                      <span className="text-3xl md:text-5xl font-serif text-white/50 font-bold leading-none shrink-0 mt-1 md:mt-0">0{i+1}</span>
+                      <h4 className="text-xl md:text-3xl font-heading font-bold text-white leading-tight">
                         {trend.title}
                       </h4>
                     </div>
                     <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 delay-100">
-                      <p className="text-white/80 text-sm md:text-base font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 pb-4">
+                      <p className="text-white/80 text-xs md:text-base font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 pb-4">
                         {trend.desc}
                       </p>
                     </div>
@@ -127,20 +127,20 @@ export default function HCIT() {
       {/* Team Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-6">
             <div className="max-w-2xl text-left">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Leadership</h2>
-              <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
+              <h2 className="text-xs md:text-sm font-bold uppercase tracking-widest text-primary mb-3 md:mb-4">Leadership</h2>
+              <h3 className="text-3xl md:text-5xl font-heading font-bold text-foreground tracking-tight leading-tight">
                 See The Sector Team
               </h3>
             </div>
-            <Button variant="outline" className="rounded-full group w-fit">
+            <Button variant="outline" className="rounded-full group w-fit text-sm md:text-base px-5 py-2 md:px-6 md:py-3 h-auto">
               Meet Our Full Healthcare Team
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
             {[
               { 
                 name: "Caroline Dechert", 
@@ -188,18 +188,18 @@ export default function HCIT() {
               <Dialog key={i}>
                 <DialogTrigger asChild>
                   <div className="group cursor-pointer">
-                    <div className="aspect-square bg-muted rounded-xl mb-4 overflow-hidden relative">
+                    <div className="aspect-square bg-muted rounded-xl mb-3 md:mb-4 overflow-hidden relative">
                       <div className="absolute inset-0 bg-[#002759]/10 group-hover:bg-[#002759]/0 transition-colors z-10"></div>
                       {member.image ? (
                         <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-secondary text-muted-foreground">
-                          <span className="text-4xl font-light">{member.name.charAt(0)}</span>
+                          <span className="text-2xl md:text-4xl font-light">{member.name.charAt(0)}</span>
                         </div>
                       )}
                     </div>
-                    <h4 className="text-lg font-bold font-heading group-hover:text-primary transition-colors">{member.name}</h4>
-                    <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
+                    <h4 className="text-base md:text-lg font-bold font-heading group-hover:text-primary transition-colors leading-snug">{member.name}</h4>
+                    <p className="text-xs md:text-sm text-muted-foreground mt-1 line-clamp-1">{member.role}</p>
                   </div>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[500px] md:max-w-[700px] p-0 overflow-hidden border-0">
@@ -251,13 +251,13 @@ export default function HCIT() {
           <div className="absolute inset-0 bg-[#002759]/70"></div>
         </div>
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 leading-tight">
+            <h2 className="text-3xl md:text-6xl font-heading font-bold mb-6 md:mb-8 leading-tight">
             Unparalleled Expertise in Building Industry-Leading Companies
           </h2>
-          <p className="text-xl md:text-2xl text-white/80 font-light mb-12 max-w-3xl mx-auto">
+          <p className="text-lg md:text-2xl text-white/80 font-light mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed">
             We've been investing in Healthcare companies for over forty years. Across that time, we've built out an impressive roster of expert growth drivers and strategic industry thinkers.
           </p>
-          <Button size="lg" className="bg-white text-[#002759] hover:bg-gray-100 rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg font-bold tracking-wider uppercase w-full sm:w-auto">
+          <Button size="lg" className="bg-white text-[#002759] hover:bg-gray-100 rounded-full px-6 py-4 md:px-8 md:py-6 text-sm md:text-lg font-bold tracking-wider uppercase w-full sm:w-auto h-auto">
             Meet Our Full Healthcare Team
           </Button>
         </div>
@@ -265,14 +265,14 @@ export default function HCIT() {
       {/* Healthcare News Section */}
       <section className="py-24 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-6">
             <div className="max-w-2xl text-left">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Insights</h2>
-              <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
+              <h2 className="text-xs md:text-sm font-bold uppercase tracking-widest text-primary mb-3 md:mb-4">Insights</h2>
+              <h3 className="text-3xl md:text-5xl font-heading font-bold text-foreground tracking-tight leading-tight">
                 Healthcare News & Perspectives
               </h3>
             </div>
-            <Button variant="outline" className="rounded-full group w-fit">
+            <Button variant="outline" className="rounded-full group w-fit text-sm md:text-base px-5 py-2 md:px-6 md:py-3 h-auto">
               See More News
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
