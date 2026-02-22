@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Cpu, Briefcase, Quote, Play } from "lucide-react";
 import heroBg from "@assets/healthcare-portfolio-RESIZE-jpg_1771595437015.webp";
 import growthImg from "@assets/WCAS_March-13_04509616.mov.20_53_56_26.Still001-scaled_1771765691568.webp";
+import talentImg from "@assets/137_WCAS_March-6-23-by-John-Abbott-scaled_1771765917799.jpg";
 import testimonial1 from "@/assets/images/testimonial-1.png";
 import testimonial2 from "@/assets/images/testimonial-2.png";
 import { useState, useEffect } from "react";
@@ -202,17 +203,20 @@ export default function Home() {
             </div>
 
             {/* Box 2 */}
-            <div className="group bg-white p-10 md:p-12 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 group-hover:scale-110 transition-all duration-500">
-                <Users size={120} />
+            <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
+              <div className="h-48 w-full overflow-hidden">
+                <img 
+                  src={talentImg} 
+                  alt="Team discussion in conference room" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
               </div>
-              <div className="h-16 w-16 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                <Users size={32} />
+              <div className="p-10 md:p-12 flex-grow">
+                <h4 className="text-2xl font-heading font-bold mb-4">Talent</h4>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Cultivating top teams and company culture to attract, retain, and empower industry-leading professionals.
+                </p>
               </div>
-              <h4 className="text-2xl font-heading font-bold mb-4">Talent</h4>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Cultivating top teams and company culture to attract, retain, and empower industry-leading professionals.
-              </p>
             </div>
 
             {/* Box 3 */}
