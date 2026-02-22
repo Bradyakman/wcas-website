@@ -175,13 +175,13 @@ export default function Technology() {
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50"></div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center mb-8 md:mb-16">
             <div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-8 tracking-tighter">A Trusted Partner for Long-Term Success</h2>
-              <div className="w-20 h-1 bg-white/30 mb-8"></div>
+              <div className="w-20 h-1 bg-white/30 mb-8 md:mb-0"></div>
             </div>
             <div>
-              <p className="text-xl md:text-2xl leading-relaxed text-white/90 font-light mb-10">Our approach matters because we believe it can accelerate revenue growth and operational scaling for innovative tech companies. WCAS fosters long-term relationships, valued by sellers and management teams alike to become the partner of choice.</p>
+              <p className="text-xl md:text-2xl leading-relaxed text-white/90 font-light mb-4 md:mb-10">Our approach matters because we believe it can accelerate revenue growth and operational scaling for innovative tech companies. WCAS fosters long-term relationships, valued by sellers and management teams alike to become the partner of choice.</p>
             </div>
           </div>
         </div>
