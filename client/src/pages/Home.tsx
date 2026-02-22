@@ -364,49 +364,6 @@ export default function Home() {
           </div>
         </div>
       )}
-      {/* Testimonials Redesign (No video, sleek quote cards) */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="text-center mb-20">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Perspectives</h2>
-            <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
-              Partnership Success Stories
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {/* Testimonial 1 */}
-            <div className="bg-secondary/30 p-10 md:p-12 rounded-3xl relative">
-              <Quote className="absolute top-10 right-10 text-primary/10 rotate-180" size={80} />
-              <div className="flex gap-6 items-center mb-8 relative z-10">
-                <img src={testimonial1} alt="CEO" className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-sm" />
-                <div>
-                  <h4 className="text-xl font-bold font-heading">Jack Shields</h4>
-                  <p className="text-muted-foreground font-medium">Founder & Chairman, Shields Health Solutions</p>
-                </div>
-              </div>
-              <p className="text-xl md:text-2xl leading-relaxed text-foreground/80 font-light italic relative z-10">
-                "Their deep domain expertise in healthcare services was instrumental in our rapid expansion across the country. They are true partners who understand how to build sustainable platforms."
-              </p>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="bg-secondary/30 p-10 md:p-12 rounded-3xl relative">
-              <Quote className="absolute top-10 right-10 text-primary/10 rotate-180" size={80} />
-              <div className="flex gap-6 items-center mb-8 relative z-10">
-                <img src={testimonial2} alt="CEO" className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-sm" />
-                <div>
-                  <h4 className="text-xl font-bold font-heading">Keith Newton</h4>
-                  <p className="text-muted-foreground font-medium">CEO, Concentra</p>
-                </div>
-              </div>
-              <p className="text-xl md:text-2xl leading-relaxed text-foreground/80 font-light italic relative z-10">
-                "WCAS brought more than just capital. They brought strategic vision, operational excellence, and an unparalleled network that accelerated our growth trajectory significantly."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* News Section Redesign */}
       <section className="py-32 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
