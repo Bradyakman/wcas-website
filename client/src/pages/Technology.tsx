@@ -79,11 +79,11 @@ export default function Technology() {
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-black text-white">
         {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
             src={techHeroBg} 
             alt="WCAS Technology Team" 
-            className="w-full h-full object-cover opacity-60 object-top"
+            className="w-full h-[120%] object-cover opacity-60 object-top -translate-y-8 md:-translate-y-16"
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
