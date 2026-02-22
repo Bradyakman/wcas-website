@@ -277,7 +277,7 @@ export default function Technology() {
             className="w-full h-full object-cover object-top"
           />
           {/* Gradient to make text readable, mostly covering right side */}
-          <div className="absolute inset-0 bg-white/80 md:bg-gradient-to-r md:from-white/0 md:via-white/70 md:to-white"></div>
+          <div className="absolute inset-0 bg-white/70 md:bg-gradient-to-r md:from-white/0 md:via-white/60 md:to-white/95"></div>
         </div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10 h-full flex flex-col justify-center">
