@@ -133,13 +133,7 @@ export default function HCIT() {
               { 
                 name: "Caroline Dechert", 
                 role: "General Partner | Healthcare",
-                bio: (
-                  <>
-                    <p>Caroline Dechert is a General Partner in the Healthcare Group, having joined WCAS in 2012. Caroline primarily focuses on investments in the healthcare technology sector but has also invested in companies across healthcare services. She currently serves on the Board of Directors of EnableComp, Norstella and Owl Practice Suite and was previously involved in WCAS' investments in InnovAge, The Health Management Academy and Identifix. Prior to joining WCAS's, she worked in the Healthcare Investment Banking group at Morgan Stanley.</p>
-                    <p>Caroline holds a B.A. from the University of North Carolina at Chapel Hill and an M.B.A. from Harvard Business School.</p>
-                    <p>In the community, Caroline is on the Board of Juma Ventures, an organization that strives to break the cycle of poverty by paving the way to work, education and financial capability for youth across America. An avid runner, Caroline enjoys exploring the Bay Area with her family, rooting for the Tar Heels and imagining that she will someday be good at golf.</p>
-                  </>
-                ),
+                bio: "Caroline Dechert is a General Partner in the Healthcare Group, having joined WCAS in 2012. Caroline primarily focuses on investments in the healthcare technology sector but has also invested in companies across healthcare services.",
                 image: carolineDechertImg
               },
               { 
@@ -206,7 +200,7 @@ export default function HCIT() {
                           {member.role}
                         </DialogDescription>
                       </DialogHeader>
-                      <div className="text-foreground/90 leading-relaxed font-light mt-4 mb-8 prose prose-sm md:prose-base max-w-none prose-p:mb-4 last:prose-p:mb-0">
+                      <div className="text-foreground/90 leading-relaxed font-light mt-4 mb-8">
                         {member.bio}
                       </div>
                       

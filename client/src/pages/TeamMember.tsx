@@ -56,7 +56,7 @@ export default function TeamMember() {
               </div>
             </div>
 
-            <div className="prose prose-lg max-w-none prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:font-light prose-p:mb-6 last:prose-p:mb-0">
+            <div className="prose prose-lg max-w-none prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:font-light">
               <p>
                 Caroline Dechert is a General Partner in the Healthcare Group, having joined WCAS in 2012. Caroline primarily focuses on investments in the healthcare technology sector but has also invested in companies across healthcare services. She currently serves on the Board of Directors of EnableComp, Norstella and Owl Practice Suite and was previously involved in WCAS' investments in InnovAge, The Health Management Academy and Identifix. Prior to joining WCAS's, she worked in the Healthcare Investment Banking group at Morgan Stanley.
               </p>
