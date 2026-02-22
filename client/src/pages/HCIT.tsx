@@ -261,7 +261,7 @@ export default function HCIT() {
           <p className="text-xl md:text-2xl text-white/80 font-light mb-12 max-w-3xl mx-auto">
             We've been investing in Healthcare companies for over forty years. Across that time, we've built out an impressive roster of expert growth drivers and strategic industry thinkers.
           </p>
-          <Button size="lg" className="bg-white text-[#002759] hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-bold tracking-wider uppercase">
+          <Button size="lg" className="bg-white text-[#002759] hover:bg-gray-100 rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg font-bold tracking-wider uppercase w-full sm:w-auto">
             Meet Our Full Healthcare Team
           </Button>
         </div>
