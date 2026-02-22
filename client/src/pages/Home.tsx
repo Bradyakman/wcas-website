@@ -369,7 +369,6 @@ export default function Home() {
             Learn More About Our History
           </Button>
         </div>
-        </div>
       </section>
 
       {/* Video Lightbox Modal */}
