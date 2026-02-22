@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import carolineDechertImg from "@assets/caroline_dechert-jpg_1771774248059.webp";
 import edwardSobolImg from "@assets/Edward_Sobol_bio-jpg_1771779192599.webp";
 import cathySunImg from "@assets/Cathy-Sun-jpg_1771795073666.webp";
+import adityaShahImg from "@assets/Aditya-Shah_1771795295962.png";
 import unparalleledExpertiseImg from "@assets/unparalled-expertise-jpeg_1771774489695.webp";
 import heroBgImg from "@assets/HCIT-jpg_1771775487806.webp";
 
@@ -162,7 +163,8 @@ export default function HCIT() {
               { 
                 name: "Aditya Shah", 
                 role: "Associate | Healthcare",
-                bio: "Aditya Shah is an Associate in the Healthcare Group, having joined WCAS in 2023. Prior to joining WCAS, he worked in the Global Healthcare Group at Barclays Investment Bank."
+                bio: "Aditya Shah is an Associate in the Healthcare Group, having joined WCAS in 2023. Prior to joining WCAS, he worked in the Global Healthcare Group at Barclays Investment Bank.",
+                image: adityaShahImg
               },
               { 
                 name: "Mark M. Tomaino", 
