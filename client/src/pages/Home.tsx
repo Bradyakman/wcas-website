@@ -72,10 +72,10 @@ export default function Home() {
                     : "opacity-0 translate-y-8 pointer-events-none"
                 }`}
               >
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-extrabold text-foreground leading-[1.1] tracking-tighter mb-8">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-extrabold text-foreground leading-[1.1] tracking-tighter mb-6 md:mb-8">
                   {slide.title}
                 </h1>
-                <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
+                <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
                   {slide.description}
                 </p>
               </div>
