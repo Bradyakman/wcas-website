@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import carolineDechertImg from "@assets/caroline_dechert-jpg_1771774248059.webp";
 import edwardSobolImg from "@assets/Edward_Sobol_bio-jpg_1771779192599.webp";
+import cathySunImg from "@assets/Cathy-Sun-jpg_1771795073666.webp";
 import unparalleledExpertiseImg from "@assets/unparalled-expertise-jpeg_1771774489695.webp";
 import heroBgImg from "@assets/HCIT-jpg_1771775487806.webp";
 
@@ -155,7 +156,8 @@ export default function HCIT() {
               { 
                 name: "Cathy Sun", 
                 role: "Vice President | Healthcare",
-                bio: "Cathy Sun is a Vice President on the Healthcare team at WCAS, having joined in 2021. She is involved in many of the firm's healthcare technology and pharma value chain investments."
+                bio: "Cathy Sun is a Vice President on the Healthcare team at WCAS, having joined in 2021. She is involved in many of the firm's healthcare technology and pharma value chain investments.",
+                image: cathySunImg
               },
               { 
                 name: "Aditya Shah", 
