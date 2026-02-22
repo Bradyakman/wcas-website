@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp, Users, Cpu, Briefcase, Quote } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Cpu, Briefcase, Quote, Play } from "lucide-react";
 import heroBg from "@assets/healthcare-portfolio-RESIZE-jpg_1771595437015.webp";
 import testimonial1 from "@/assets/images/testimonial-1.png";
 import testimonial2 from "@/assets/images/testimonial-2.png";
@@ -33,8 +33,20 @@ const heroSlides = [
   }
 ];
 
+const wcasVideos = [
+  { id: "861242809", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS" },
+  { id: "913387748", title: "Investing in Technology", partner: "quickbase" },
+  { id: "861242949", title: "Strategic Growth Investment", partner: "TrueCommerce" },
+  { id: "913387297", title: "Building Sustainable Platforms", partner: "Concentra" },
+  { id: "861243091", title: "Investing in Better Healthcare", partner: "InnovAge" },
+  { id: "913334845", title: "Advancing Front-Office Automation", partner: "EquiLend" },
+  { id: "861243221", title: "Investing in Technology", partner: "Clearway" },
+  { id: "913388269", title: "Strategic Growth Investment", partner: "AIA Contract Documents" }
+];
+
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -257,18 +269,41 @@ export default function Home() {
         </div>
         <div className="relative w-full overflow-hidden mt-8 mb-12">
           <div className="flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-12 pb-6 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-            {[
-              "861242809", "913387748", "861242949", "913387297", 
-              "861243091", "913334845", "861243221", "913388269"
-            ].map((videoId, index) => (
-              <div key={index} className="min-w-[85vw] md:min-w-[60vw] lg:min-w-[45vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-black/50 relative group shadow-2xl">
-                <iframe 
-                  src={`https://player.vimeo.com/video/${videoId}?h=dbf9bc9a77&title=0&byline=0&portrait=0`}
-                  className="absolute top-0 left-0 w-full h-full"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+            {wcasVideos.map((video, index) => (
+              <div key={index} className="min-w-[85vw] md:min-w-[60vw] lg:min-w-[45vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group shadow-2xl">
+                {playingVideo === video.id ? (
+                  <iframe 
+                    src={`https://player.vimeo.com/video/${video.id}?h=dbf9bc9a77&title=0&byline=0&portrait=0&autoplay=1`}
+                    className="absolute top-0 left-0 w-full h-full"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  <div 
+                    className="absolute inset-0 cursor-pointer text-white p-6 md:p-8 flex flex-col justify-center"
+                    onClick={() => setPlayingVideo(video.id)}
+                  >
+                    <div className="flex items-center justify-center gap-4 md:gap-6 h-full w-full group-hover:scale-[1.02] transition-transform duration-500">
+                      <div className="text-right flex-1 flex justify-end">
+                        <h3 className="text-lg md:text-xl lg:text-2xl font-bold font-heading leading-tight max-w-[200px]">{video.title}</h3>
+                      </div>
+                      <div className="w-px h-16 md:h-24 bg-white/20"></div>
+                      <div className="text-left flex-1">
+                        <p className="text-[10px] md:text-xs lg:text-sm text-white/60 mb-1 md:mb-2 tracking-wide">In Partnership with</p>
+                        <h4 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading tracking-tight">{video.partner}</h4>
+                      </div>
+                    </div>
+                    
+                    <div className="absolute bottom-4 left-6 md:bottom-6 md:left-8">
+                      <span className="text-lg md:text-xl font-heading font-bold tracking-widest text-white/40">WCAS</span>
+                    </div>
+                    
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 w-14 h-10 md:w-16 md:h-12 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors z-10 backdrop-blur-sm">
+                      <Play className="text-white fill-white" size={24} />
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
