@@ -4,6 +4,7 @@ import { ArrowRight, Building, MapPin, Calendar, Briefcase, Tag, Target, Externa
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import heroBgImg from "@assets/WCAS_March_6_01783636.mov.08_16_17_23.Image_1-1-scaled_1771793919066.webp";
 
 const SUCCESSES = [
   {
@@ -122,9 +123,12 @@ export default function TechOperatingSuccesses() {
       {/* Hero Section */}
       <section className="pt-32 pb-24 px-6 bg-[#002759] text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-800/40 via-[#002759] to-[#002759]"></div>
-          {/* Subtle grid pattern */}
-          <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+          <img 
+            src={heroBgImg} 
+            alt="WCAS Team Meeting" 
+            className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
+          />
+          <div className="absolute inset-0 bg-[#002759]/70"></div>
         </div>
         
         <div className="container mx-auto mt-12 relative z-10">
