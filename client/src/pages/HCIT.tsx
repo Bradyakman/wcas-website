@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Activity, Cpu, Network, ShieldCheck } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 export default function HCIT() {
   return (
@@ -107,23 +108,65 @@ export default function HCIT() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {[
-              { name: "Caroline Dechert", role: "General Partner | Healthcare" },
-              { name: "Edward P. Sobol", role: "General Partner | Healthcare" },
-              { name: "Cathy Sun", role: "Vice President | Healthcare" },
-              { name: "Aditya Shah", role: "Associate | Healthcare" },
-              { name: "Mark M. Tomaino", role: "Operating Partner | Healthcare" }
+              { 
+                name: "Caroline Dechert", 
+                role: "General Partner | Healthcare",
+                bio: "Caroline Dechert is a General Partner in the Healthcare Group, having joined WCAS in 2012. Caroline primarily focuses on investments in the healthcare technology sector but has also invested in companies across healthcare services."
+              },
+              { 
+                name: "Edward P. Sobol", 
+                role: "General Partner | Healthcare",
+                bio: "Ed Sobol is a General Partner in the Healthcare Group and a member of WCAS's Management Committee, having joined WCAS in 2010. Ed primarily focuses on investments in the healthcare technology subsector and has invested across a range of other subsectors, including healthcare delivery, medical technology, payor services and financial technology."
+              },
+              { 
+                name: "Cathy Sun", 
+                role: "Vice President | Healthcare",
+                bio: "Cathy Sun is a Vice President on the Healthcare team at WCAS, having joined in 2021. She is involved in many of the firm's healthcare technology and pharma value chain investments."
+              },
+              { 
+                name: "Aditya Shah", 
+                role: "Associate | Healthcare",
+                bio: "Aditya Shah is an Associate in the Healthcare Group, having joined WCAS in 2023. Prior to joining WCAS, he worked in the Global Healthcare Group at Barclays Investment Bank."
+              },
+              { 
+                name: "Mark M. Tomaino", 
+                role: "Operating Partner | Healthcare",
+                bio: "Mr. Tomaino is an Operating Partner on the Healthcare team and focuses on investments in the healthcare information technology industry, having joined WCAS in 2010. Mark was previously Senior Vice President of Corporate Development at The TriZetto Group."
+              }
             ].map((member, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="aspect-square bg-muted rounded-xl mb-4 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-[#002759]/10 group-hover:bg-[#002759]/0 transition-colors z-10"></div>
-                  {/* Placeholder for headshot */}
-                  <div className="w-full h-full flex items-center justify-center bg-secondary text-muted-foreground">
-                    <span className="text-4xl font-light">{member.name.charAt(0)}</span>
+              <Dialog key={i}>
+                <DialogTrigger asChild>
+                  <div className="group cursor-pointer">
+                    <div className="aspect-square bg-muted rounded-xl mb-4 overflow-hidden relative">
+                      <div className="absolute inset-0 bg-[#002759]/10 group-hover:bg-[#002759]/0 transition-colors z-10"></div>
+                      {/* Placeholder for headshot */}
+                      <div className="w-full h-full flex items-center justify-center bg-secondary text-muted-foreground">
+                        <span className="text-4xl font-light">{member.name.charAt(0)}</span>
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-bold font-heading group-hover:text-primary transition-colors">{member.name}</h4>
+                    <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
                   </div>
-                </div>
-                <h4 className="text-lg font-bold font-heading group-hover:text-primary transition-colors">{member.name}</h4>
-                <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
-              </div>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden border-0">
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="w-full sm:w-2/5 bg-secondary flex items-center justify-center p-8 aspect-square sm:aspect-auto">
+                      <span className="text-7xl font-light text-muted-foreground/50">{member.name.charAt(0)}</span>
+                    </div>
+                    <div className="p-8 sm:w-3/5">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-heading font-bold text-[#002759] mb-1">{member.name}</DialogTitle>
+                        <DialogDescription className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6">
+                          {member.role}
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="text-foreground/90 leading-relaxed font-light mt-4">
+                        {member.bio}
+                      </div>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
