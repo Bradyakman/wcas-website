@@ -60,26 +60,28 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="max-w-4xl min-h-[300px] flex flex-col justify-center relative pb-32 md:pb-24 lg:pb-0">
+          <div className="max-w-5xl relative">
             
             {/* Carousel Content */}
-            {heroSlides.map((slide, index) => (
-              <div 
-                key={index}
-                className={`absolute inset-0 flex flex-col justify-center transition-all duration-700 ease-in-out pb-24 md:pb-16 lg:pb-0 ${
-                  index === currentSlide 
-                    ? "opacity-100 translate-y-0 pointer-events-auto" 
-                    : "opacity-0 translate-y-8 pointer-events-none"
-                }`}
-              >
-                <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-8xl font-heading font-extrabold text-foreground leading-[1.1] tracking-tighter mb-6 md:mb-8">
-                  {slide.title}
-                </h1>
-                <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-                  {slide.description}
-                </p>
-              </div>
-            ))}
+            <div className="grid pb-32 md:pb-32 lg:pb-40 xl:pb-32">
+              {heroSlides.map((slide, index) => (
+                <div 
+                  key={index}
+                  className={`[grid-area:1/1] flex flex-col justify-center transition-all duration-700 ease-in-out ${
+                    index === currentSlide 
+                      ? "opacity-100 translate-y-0 pointer-events-auto z-10" 
+                      : "opacity-0 translate-y-8 pointer-events-none z-0"
+                  }`}
+                >
+                  <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-heading font-extrabold text-foreground leading-[1.1] tracking-tighter mb-6 md:mb-8">
+                    {slide.title}
+                  </h1>
+                  <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground max-w-3xl leading-relaxed">
+                    {slide.description}
+                  </p>
+                </div>
+              ))}
+            </div>
             
             {/* Carousel Indicators */}
             <div className="absolute -left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-3">
