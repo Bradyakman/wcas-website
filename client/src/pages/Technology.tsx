@@ -92,9 +92,7 @@ export default function Technology() {
           <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight mb-6 text-white drop-shadow-lg">
             Technology
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-light max-w-2xl mx-auto drop-shadow-md">
-            Leading Technology Investments Since 1979. We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.
-          </p>
+          <p className="text-xl md:text-2xl text-white/90 font-light max-w-2xl mx-auto drop-shadow-md">Leading Technology Investments Since 1979.</p>
         </div>
       </section>
       {/* Logo Ticker */}
@@ -270,7 +268,6 @@ export default function Technology() {
           </Button>
         </div>
       </section>
-
       {/* Portfolio CTA Section */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -299,7 +296,6 @@ export default function Technology() {
           </div>
         </div>
       </section>
-
       {/* News Section */}
       <section className="py-24 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
