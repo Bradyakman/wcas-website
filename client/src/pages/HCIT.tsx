@@ -3,6 +3,7 @@ import { ArrowRight, Activity, Cpu, Network, ShieldCheck } from "lucide-react";
 import { Link } from "wouter";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import carolineDechertImg from "@assets/caroline_dechert-jpg_1771774248059.webp";
+import edwardSobolImg from "@assets/Edward_Sobol_bio-jpg_1771779192599.webp";
 import unparalleledExpertiseImg from "@assets/unparalled-expertise-jpeg_1771774489695.webp";
 import heroBgImg from "@assets/HCIT-jpg_1771775487806.webp";
 
@@ -139,7 +140,8 @@ export default function HCIT() {
               { 
                 name: "Edward P. Sobol", 
                 role: "General Partner | Healthcare",
-                bio: "Ed Sobol is a General Partner in the Healthcare Group and a member of WCAS's Management Committee, having joined WCAS in 2010. Ed primarily focuses on investments in the healthcare technology subsector and has invested across a range of other subsectors, including healthcare delivery, medical technology, payor services and financial technology."
+                bio: "Ed Sobol is a General Partner in the Healthcare Group and a member of WCAS's Management Committee, having joined WCAS in 2010. Ed primarily focuses on investments in the healthcare technology subsector and has invested across a range of other subsectors, including healthcare delivery, medical technology, payor services and financial technology.",
+                image: edwardSobolImg
               },
               { 
                 name: "Cathy Sun", 
