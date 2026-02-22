@@ -55,7 +55,7 @@ export default function HCIT() {
         </div>
 
         <div className="relative w-full overflow-visible">
-          <div className="flex gap-4 md:gap-6 overflow-x-auto pb-12 snap-x snap-mandatory scrollbar-hide w-[100vw] pr-[5vw] ml-[calc(50%-50vw)] pl-[max(1.5rem,calc(50vw-42rem))] md:pl-[max(3rem,calc(50vw-42rem))]" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          <div className="flex gap-4 md:gap-6 overflow-x-auto pb-12 snap-x snap-mandatory scrollbar-hide w-[100vw] pr-[5vw] ml-[calc(50%-50vw)] pl-[max(1.5rem,calc(50vw-40rem))] md:pl-[max(3rem,calc(50vw-40rem))] lg:pl-[max(3rem,calc(50vw-36rem))] xl:pl-[max(3rem,calc(50vw-38rem))] 2xl:pl-[max(3rem,calc(50vw-40rem))]" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {[
               {
                   title: "Accelerated adoption of software",
