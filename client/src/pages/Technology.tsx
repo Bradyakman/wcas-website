@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 import techHeroBg from "@assets/1070_WCAS_March-7-23-by-John-Abbott-scaled_1771766085574.jpg";
 import techPortfolioBg from "@assets/WCAS_March-13_04509616.mov.20_53_56_26.Still001-scaled_(1)_1771769557518.webp";
 import sector1 from "@/assets/images/sector_1.jpg";
@@ -88,6 +89,13 @@ export default function Technology() {
         </div>
         
         <div className="container mx-auto mt-12 relative z-10">
+          <div className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-white/60 mb-6">
+            <Link href="/">
+              <a className="hover:text-white transition-colors">Home</a>
+            </Link>
+            <span>/</span>
+            <span className="text-white">Technology</span>
+          </div>
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8 leading-tight">
               Technology
