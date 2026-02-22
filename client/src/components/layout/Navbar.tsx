@@ -16,7 +16,13 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Our Firm", href: "/#firm" },
-    { name: "Technology", href: "/technology" },
+    { 
+      name: "Technology", 
+      href: "/technology",
+      dropdown: [
+        { name: "Operating Successes", href: "/technology/operating-successes" }
+      ]
+    },
     { 
       name: "Healthcare", 
       href: "/#healthcare",

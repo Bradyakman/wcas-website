@@ -10,6 +10,7 @@ import Home from "@/pages/Home";
 import Technology from "@/pages/Technology";
 import HCIT from "@/pages/HCIT";
 import News from "@/pages/News";
+import TechOperatingSuccesses from "@/pages/TechOperatingSuccesses";
 import NotFound from "@/pages/not-found";
 
 import TeamMember from "@/pages/TeamMember";
@@ -33,6 +34,7 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/technology" component={Technology} />
+      <Route path="/technology/operating-successes" component={TechOperatingSuccesses} />
       <Route path="/news" component={News} />
           <Route path="/hcit" component={HCIT} />
           <Route path="/team/:name" component={TeamMember} />
