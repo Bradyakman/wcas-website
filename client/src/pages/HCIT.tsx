@@ -205,6 +205,85 @@ export default function HCIT() {
           </Button>
         </div>
       </section>
+
+      {/* Healthcare News Section */}
+      <section className="py-24 bg-secondary/50 border-t border-border">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="max-w-2xl">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Insights</h2>
+              <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
+                Healthcare News & Perspectives
+              </h3>
+            </div>
+            <Button variant="outline" className="rounded-full group">
+              See More News
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Megan Callahan Joins Welsh, Carson, Anderson & Stowe as an HCIT Operating Partner",
+                category: "News",
+                date: "November 1, 2023",
+                desc: "New York, NY, November 1, 2023 – Welsh, Carson, Anderson & Stowe (WCAS), a leading private equity firm focused exclusively on..."
+              },
+              {
+                title: "LIBERTY Dental Plan Announces New CEO",
+                category: "News",
+                date: "March 1, 2023",
+                desc: "IRVINE, Calif. & NEW YORK, March 1, 2023 (Business Wire) – LIBERTY Dental Plan Corporation (LIBERTY) has selected Marti Lolli as..."
+              },
+              {
+                title: "ImageTrend Announces Strategic Growth Investment from Welsh, Carson, Anderson & Stowe",
+                category: "News",
+                date: "February 9, 2023",
+                desc: "LAKEVILLE, MINN., February 9, 2023 - ImageTrend, Inc., a growing, market-leading software solutions and services provider in the public safety and..."
+              },
+              {
+                title: "Lumexa Imaging Announces Pricing of Initial Public Offering",
+                category: "News",
+                date: "January 27, 2026",
+                desc: "RALEIGH, NORTH CAROLINA, (DECEMBER 10, 2025) - Lumexa Imaging Holdings, Inc. (“Lumexa Imaging”) announced today the pricing of its initial..."
+              },
+              {
+                title: "Constitution Surgery Alliance Announces Strategic Growth Investment",
+                category: "News",
+                date: "June 16, 2025",
+                desc: "AVON, Conn., June 16, 2025 /PRNewswire/ -- Constitution Surgery Alliance (CSA), an independent developer and operator of ambulatory surgery centers..."
+              },
+              {
+                title: "WCAS Annual Quality Forum 2023",
+                category: "News",
+                date: "June 21, 2024",
+                desc: "Annual Quality Forum - 4 As part of our commitment to quality, WCAS conducts an annual “Quality Forum,” an all-day..."
+              }
+            ].map((item, i) => (
+              <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 h-full">
+                <div className="p-8 flex-grow flex flex-col">
+                  <div className="flex items-center gap-4 mb-6 text-sm">
+                    <span className="text-primary font-bold tracking-wider uppercase">{item.category}</span>
+                    <span className="text-muted-foreground">&bull;</span>
+                    <span className="text-muted-foreground">{item.date}</span>
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-heading font-bold mb-4 group-hover:text-primary transition-colors leading-tight">
+                    {item.title}
+                  </h4>
+                  <p className="text-muted-foreground line-clamp-3 mb-8">
+                    {item.desc}
+                  </p>
+                  <div className="mt-auto pt-6 border-t border-border flex items-center font-semibold text-primary">
+                    Read Article
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
