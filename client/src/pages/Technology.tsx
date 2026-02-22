@@ -77,7 +77,7 @@ export default function Technology() {
   return (
     <div className="flex flex-col min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-black text-white">
+      <section className="relative py-32 md:py-48 overflow-hidden bg-black text-white">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
