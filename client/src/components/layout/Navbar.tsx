@@ -33,7 +33,7 @@ export function Navbar() {
     },
     { 
       name: "Healthcare", 
-      href: "/#healthcare",
+      href: "/healthcare",
       dropdown: [
         { name: "HCIT", href: "/hcit" }
       ]
