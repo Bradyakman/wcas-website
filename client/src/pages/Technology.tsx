@@ -277,7 +277,7 @@ export default function Technology() {
           <img 
             src={techPortfolioBg} 
             alt="WCAS Technology Team Meeting" 
-            className="w-full h-full object-cover object-center translate-y-12 md:translate-y-24"
+            className="w-full h-full object-cover object-top"
           />
           {/* Gradient to make text readable, mostly covering right side */}
           <div className="absolute inset-0 bg-white/80 md:bg-gradient-to-r md:from-white/0 md:via-white/70 md:to-white"></div>
