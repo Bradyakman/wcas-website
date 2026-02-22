@@ -117,7 +117,7 @@ export default function Home() {
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both min-w-max md:min-w-0">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0">18</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0">18+</p>
                 <p className="text-xs md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[80px] md:max-w-[100px] leading-tight text-left">Funds Raised</p>
               </div>
               <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
@@ -139,7 +139,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Logos Ticker */}
       <section className="py-12 border-t border-border overflow-hidden bg-secondary/50">
         <div className="container mx-auto px-6 md:px-12 mb-6">
@@ -159,7 +158,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* The 4 Boxes - Reimagined Layout */}
       <section className="py-32 bg-secondary/50">
         <div className="container mx-auto px-6 md:px-12">
@@ -229,7 +227,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Mission Section */}
       <section className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
         {/* Abstract shapes for background interest */}
@@ -255,7 +252,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Redesign (No video, sleek quote cards) */}
       <section className="py-32 bg-white">
         <div className="container mx-auto px-6 md:px-12">
@@ -299,7 +295,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* News Section Redesign */}
       <section className="py-32 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
