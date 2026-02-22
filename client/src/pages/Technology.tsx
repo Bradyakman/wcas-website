@@ -80,7 +80,7 @@ export default function Technology() {
       </section>
 
       {/* Logo Ticker */}
-      <section className="py-16 bg-white border-b border-border overflow-hidden">
+      <section className="py-8 bg-white border-b border-border overflow-hidden">
         <div className="flex animate-marquee items-center">
           {/* Duplicated for seamless loop */}
           {[...Array(2)].map((_, i) => (
@@ -88,10 +88,10 @@ export default function Technology() {
               {[
                 { name: 'Headstrong', src: headstrongLogo },
                 { name: 'Global Collect', src: globalCollectLogo },
-                { name: 'Simeio', src: simeioLogo },
+                { name: 'Simeio', src: simeioLogo, className: "scale-75" },
                 { name: 'Alert Logic', src: alertLogicLogo },
                 { name: 'Identifix', src: identifixLogo },
-                { name: 'LINQ', src: linqLogo },
+                { name: 'LINQ', src: linqLogo, className: "scale-90" },
                 { name: 'Triple Point', src: triplePointLogo },
                 { name: 'Ceridian', src: ceridianLogo },
                 { name: 'Avetta', src: avettaLogo },
@@ -102,7 +102,7 @@ export default function Technology() {
                   <img 
                     src={logo.src} 
                     alt={`${logo.name} logo`} 
-                    className="max-h-full max-w-full object-contain mix-blend-multiply"
+                    className={`max-h-full max-w-full object-contain mix-blend-multiply ${logo.className || ''}`}
                   />
                 </div>
               ))}
