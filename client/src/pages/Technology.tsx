@@ -30,7 +30,7 @@ const stats = [
   { value: "105+", label: "Current or Former Technology Investments" },
   { value: "8", label: "Focused Investment Sectors" },
   { value: "18", label: "Number of Funds" },
-  { value: "45+", label: "Years Investing in Technology Companies" },
+  { value: "45+", label: "Years Investing in Tech" },
 ];
 
 const news = [
@@ -112,9 +112,9 @@ export default function Technology() {
       </section>
 
       {/* Stats & Intro Section */}
-      <section className="py-24 bg-secondary/30">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-32">
             <div>
               <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Investment Strategy</h2>
               <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight mb-8">
@@ -129,13 +129,26 @@ export default function Technology() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, i) => (
-              <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-border/50 flex flex-col justify-center items-center text-center group hover:shadow-md transition-shadow">
-                <div className="text-5xl md:text-6xl font-heading font-bold text-primary mb-4 group-hover:scale-105 transition-transform">{stat.value}</div>
-                <div className="text-sm md:text-base font-semibold text-muted-foreground uppercase tracking-wider">{stat.label}</div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-start">
+            {/* Main Stat */}
+            <div className="md:col-span-1 border-b border-border/50 pb-8 md:border-0 md:pb-0">
+              <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">{stats[0].label}</div>
+              <div className="text-7xl md:text-8xl lg:text-9xl font-heading font-normal tracking-tight text-foreground">{stats[0].value}</div>
+            </div>
+
+            {/* Other Stats */}
+            <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-8">
+              {stats.slice(1).map((stat, i) => (
+                <div key={i} className="flex flex-col justify-start">
+                  <div className="text-xs font-semibold text-muted-foreground mb-4 h-8 flex items-end">{stat.label}</div>
+                  <div className="text-4xl md:text-5xl font-heading font-normal tracking-tight text-foreground border-b border-border pb-4">{stat.value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="mt-12 text-xs text-muted-foreground/60 font-medium">
+            Note: All figures as of December 31, 2025, unless otherwise indicated.
           </div>
         </div>
       </section>
