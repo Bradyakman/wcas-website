@@ -7,6 +7,7 @@ import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
 import Home from "@/pages/Home";
 import Technology from "@/pages/Technology";
+import HCIT from "@/pages/HCIT";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -17,6 +18,7 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/technology" component={Technology} />
+          <Route path="/hcit" component={HCIT} />
           <Route component={NotFound} />
         </Switch>
       </main>
