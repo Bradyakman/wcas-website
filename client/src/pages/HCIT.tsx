@@ -86,13 +86,14 @@ export default function HCIT() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
                 
-                <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-between">
-                  <div className="text-4xl md:text-5xl font-serif text-white/30 font-bold leading-none">0{i+1}</div>
-                  
+                <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                   <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <h4 className="text-2xl md:text-3xl font-heading font-bold text-white mb-2 md:mb-4 leading-tight">
-                      {trend.title}
-                    </h4>
+                    <div className="flex items-start gap-4 mb-2 md:mb-4">
+                      <span className="text-4xl md:text-5xl font-serif text-white/50 font-bold leading-none shrink-0">0{i+1}</span>
+                      <h4 className="text-2xl md:text-3xl font-heading font-bold text-white leading-tight mt-1">
+                        {trend.title}
+                      </h4>
+                    </div>
                     <p className="text-white/80 text-sm md:text-base font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                       {trend.desc}
                     </p>
