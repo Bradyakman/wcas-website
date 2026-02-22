@@ -270,14 +270,14 @@ export default function HCIT() {
       {/* Healthcare News Section */}
       <section className="py-24 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div className="max-w-2xl">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+            <div className="max-w-2xl text-left">
               <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Insights</h2>
               <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
                 Healthcare News & Perspectives
               </h3>
             </div>
-            <Button variant="outline" className="rounded-full group">
+            <Button variant="outline" className="rounded-full group w-fit">
               See More News
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
