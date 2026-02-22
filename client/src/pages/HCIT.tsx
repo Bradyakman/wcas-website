@@ -7,6 +7,7 @@ import edwardSobolImg from "@assets/Edward_Sobol_bio-jpg_1771779192599.webp";
 import cathySunImg from "@assets/Cathy-Sun-jpg_1771795073666.webp";
 import adityaShahImg from "@assets/Aditya-Shah_1771795295962.png";
 import markTomainoImg from "@assets/mark_tomaino-jpg_1771795380192.webp";
+import meganCallahanImg from "@assets/Callahan_1771798106326.jpg";
 import unparalleledExpertiseImg from "@assets/unparalled-expertise-jpeg_1771774489695.webp";
 import heroBgImg from "@assets/HCIT-jpg_1771775487806.webp";
 
@@ -181,7 +182,8 @@ export default function HCIT() {
               { 
                 name: "Megan Callahan", 
                 role: "Operating Partner | Healthcare",
-                bio: "Megan Callahan joined WCAS as an Operating Partner in 2023. She brings extensive experience in healthcare technology and digital health."
+                bio: "Megan Callahan joined WCAS as an Operating Partner in 2023. She brings extensive experience in healthcare technology and digital health.",
+                image: meganCallahanImg
               }
             ].map((member, i) => (
               <Dialog key={i}>
