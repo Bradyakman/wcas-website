@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Activity, Cpu, Network, ShieldCheck } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import carolineDechertImg from "@assets/caroline_dechert-jpg_1771774248059.webp";
+import unparalleledExpertiseImg from "@assets/unparalled-expertise-jpeg_1771774489695.webp";
 
 export default function HCIT() {
   return (
@@ -192,8 +193,16 @@ export default function HCIT() {
       </section>
 
       {/* Unparalleled Expertise CTA */}
-      <section className="py-32 bg-[#002759] text-white text-center px-6">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative py-32 bg-[#002759] text-white text-center px-6 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={unparalleledExpertiseImg} 
+            alt="WCAS Team Meeting" 
+            className="w-full h-full object-cover opacity-30 object-center mix-blend-luminosity"
+          />
+          <div className="absolute inset-0 bg-[#002759]/70"></div>
+        </div>
+        <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 leading-tight">
             Unparalleled Expertise in Building Industry-Leading Companies
           </h2>
