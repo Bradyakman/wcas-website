@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Activity, Cpu, Network, ShieldCheck } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import carolineDechertImg from "@assets/caroline_dechert-jpg_1771774248059.webp";
 
 export default function HCIT() {
   return (
@@ -111,7 +112,8 @@ export default function HCIT() {
               { 
                 name: "Caroline Dechert", 
                 role: "General Partner | Healthcare",
-                bio: "Caroline Dechert is a General Partner in the Healthcare Group, having joined WCAS in 2012. Caroline primarily focuses on investments in the healthcare technology sector but has also invested in companies across healthcare services."
+                bio: "Caroline Dechert is a General Partner in the Healthcare Group, having joined WCAS in 2012. Caroline primarily focuses on investments in the healthcare technology sector but has also invested in companies across healthcare services.",
+                image: carolineDechertImg
               },
               { 
                 name: "Edward P. Sobol", 
@@ -149,10 +151,13 @@ export default function HCIT() {
                   <div className="group cursor-pointer">
                     <div className="aspect-square bg-muted rounded-xl mb-4 overflow-hidden relative">
                       <div className="absolute inset-0 bg-[#002759]/10 group-hover:bg-[#002759]/0 transition-colors z-10"></div>
-                      {/* Placeholder for headshot */}
-                      <div className="w-full h-full flex items-center justify-center bg-secondary text-muted-foreground">
-                        <span className="text-4xl font-light">{member.name.charAt(0)}</span>
-                      </div>
+                      {member.image ? (
+                        <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-secondary text-muted-foreground">
+                          <span className="text-4xl font-light">{member.name.charAt(0)}</span>
+                        </div>
+                      )}
                     </div>
                     <h4 className="text-lg font-bold font-heading group-hover:text-primary transition-colors">{member.name}</h4>
                     <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
@@ -160,8 +165,12 @@ export default function HCIT() {
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[500px] md:max-w-[700px] p-0 overflow-hidden border-0">
                   <div className="flex flex-col sm:flex-row">
-                    <div className="w-full sm:w-2/5 md:w-1/3 bg-secondary flex items-center justify-center p-8 aspect-square sm:aspect-auto">
-                      <span className="text-7xl font-light text-muted-foreground/50">{member.name.charAt(0)}</span>
+                    <div className="w-full sm:w-2/5 md:w-1/3 bg-secondary flex items-center justify-center p-0 aspect-square sm:aspect-auto overflow-hidden relative">
+                      {member.image ? (
+                        <img src={member.image} alt={member.name} className="absolute inset-0 w-full h-full object-cover object-top" />
+                      ) : (
+                        <span className="text-7xl font-light text-muted-foreground/50">{member.name.charAt(0)}</span>
+                      )}
                     </div>
                     <div className="p-8 sm:w-3/5 md:w-2/3">
                       <DialogHeader>
