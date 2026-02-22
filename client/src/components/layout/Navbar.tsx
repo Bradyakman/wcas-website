@@ -1,10 +1,17 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
+
+  // Check if we are on a page with a dark hero section
+  const isDarkHeroPage = location === "/hcit" || 
+                         location === "/news" || 
+                         location === "/technology/operating-successes" || 
+                         location.startsWith("/team/");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +50,9 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link href="/">
-          <a className="text-2xl md:text-3xl font-heading font-bold text-primary tracking-tighter" data-testid="link-home">
+          <a className={`text-2xl md:text-3xl font-heading font-bold tracking-tighter ${
+            !isScrolled && isDarkHeroPage ? "text-white" : "text-primary"
+          }`} data-testid="link-home">
             WCAS
           </a>
         </Link>
@@ -55,8 +64,12 @@ export function Navbar() {
               <div key={link.name} className="relative group">
                 <a 
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-primary flex items-center gap-1 ${
-                    isScrolled ? "text-foreground/80" : "text-foreground/90"
+                  className={`text-sm font-medium transition-colors flex items-center gap-1 ${
+                    isScrolled 
+                      ? "text-foreground/80 hover:text-primary" 
+                      : isDarkHeroPage 
+                        ? "text-white/90 hover:text-white" 
+                        : "text-foreground/90 hover:text-primary"
                   }`}
                 >
                   {link.name}
@@ -80,8 +93,12 @@ export function Navbar() {
               <a 
                 key={link.name} 
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isScrolled ? "text-foreground/80" : "text-foreground/90"
+                className={`text-sm font-medium transition-colors ${
+                  isScrolled 
+                    ? "text-foreground/80 hover:text-primary" 
+                    : isDarkHeroPage 
+                      ? "text-white/90 hover:text-white" 
+                      : "text-foreground/90 hover:text-primary"
                 }`}
               >
                 {link.name}
@@ -92,7 +109,7 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <button 
-          className="lg:hidden p-2 text-foreground"
+          className={`lg:hidden p-2 ${!isScrolled && isDarkHeroPage ? "text-white" : "text-foreground"}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
