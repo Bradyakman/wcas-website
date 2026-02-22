@@ -364,7 +364,7 @@ export default function Home() {
         </div>
 
         {/* Button moved below scroller */}
-        <div className="container mx-auto px-6 md:px-12 flex justify-center pb-8 md:pb-12 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 flex justify-center pb-4 md:pb-6 relative z-10">
           <Button size="lg" variant="secondary" className="rounded-full px-10 font-semibold shadow-lg hover:shadow-xl transition-all">
             Learn More About Our History
           </Button>
@@ -399,7 +399,7 @@ export default function Home() {
         </div>
       )}
       {/* News Section Redesign */}
-      <section className="py-16 md:py-20 bg-secondary/50 border-t border-border">
+      <section className="py-12 md:py-16 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 gap-6">
             <div className="max-w-2xl">
