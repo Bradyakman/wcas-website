@@ -2,6 +2,19 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Truck, ShieldCheck, Building2, Database, Users, GraduationCap, Landmark, CreditCard } from "lucide-react";
 import techHeroBg from "@assets/1070_WCAS_March-7-23-by-John-Abbott-scaled_1771766085574.jpg";
 
+// Import logos
+import headstrongLogo from "@assets/Headstrong-logo-jpg_1771767564732.webp";
+import globalCollectLogo from "@assets/Glocal-Collect-logo-jpg_1771767564738.webp";
+import simeioLogo from "@assets/simeio_2x-1-300x88_1771767564739.png";
+import alertLogicLogo from "@assets/Alert_Logic_2x-300x204_1771767564739.png";
+import identifixLogo from "@assets/Identifix-logo-jpg_1771767564740.webp";
+import linqLogo from "@assets/LINQ-300x300_1771767564740.png";
+import triplePointLogo from "@assets/Triple-Point-Tech-logo-jpg_1771767564740.webp";
+import ceridianLogo from "@assets/Ceridian-logo-jpg_1771767564740.webp";
+import avettaLogo from "@assets/Avetta-5-300x176_1771767564741.png";
+import asurionLogo from "@assets/Asurion-300x300_1771767564741.png";
+import govcioLogo from "@assets/GovCIO-300x300_1771767564741.png";
+
 const sectors = [
   { name: "Supply Chain Management Software", icon: Truck },
   { name: "Governance, Risk and Compliance", icon: ShieldCheck },
@@ -68,13 +81,29 @@ export default function Technology() {
 
       {/* Logo Ticker */}
       <section className="py-12 bg-white border-b border-border overflow-hidden">
-        <div className="flex whitespace-nowrap animate-marquee">
+        <div className="flex whitespace-nowrap animate-marquee items-center">
           {/* Duplicated for seamless loop */}
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-16 items-center mx-8">
-              {['Alert Logic', 'Clearwater Analytics', 'Quickbase', 'Asurion', 'Avetta', 'Fiserv', 'GovCIO', 'Absorb'].map((logo, j) => (
-                <div key={j} className="text-2xl font-heading font-bold text-muted-foreground/30 uppercase tracking-widest whitespace-nowrap px-8">
-                  {logo}
+              {[
+                { name: 'Headstrong', src: headstrongLogo },
+                { name: 'Global Collect', src: globalCollectLogo },
+                { name: 'Simeio', src: simeioLogo },
+                { name: 'Alert Logic', src: alertLogicLogo },
+                { name: 'Identifix', src: identifixLogo },
+                { name: 'LINQ', src: linqLogo },
+                { name: 'Triple Point', src: triplePointLogo },
+                { name: 'Ceridian', src: ceridianLogo },
+                { name: 'Avetta', src: avettaLogo },
+                { name: 'Asurion', src: asurionLogo },
+                { name: 'GovCIO', src: govcioLogo }
+              ].map((logo, j) => (
+                <div key={j} className="h-16 w-32 md:w-48 relative flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 px-4">
+                  <img 
+                    src={logo.src} 
+                    alt={`${logo.name} logo`} 
+                    className="max-h-full max-w-full object-contain"
+                  />
                 </div>
               ))}
             </div>
