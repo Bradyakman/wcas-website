@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Truck, ShieldCheck, Building2, Database, Users, GraduationCap, Landmark, CreditCard } from "lucide-react";
 import techHeroBg from "@assets/1070_WCAS_March-7-23-by-John-Abbott-scaled_1771766085574.jpg";
+import sector1 from "@/assets/images/sector_1.jpg";
+import sector2 from "@/assets/images/sector_2.jpg";
+import sector3 from "@/assets/images/sector_3.jpg";
+import sector4 from "@/assets/images/sector_4.jpg";
+import sector5 from "@/assets/images/sector_5.jpg";
+import sector6 from "@/assets/images/sector_6.jpg";
+import sector7 from "@/assets/images/sector_7.jpg";
+import sector8 from "@/assets/images/sector_8.jpg";
 
 // Import logos
 import headstrongLogo from "@assets/Headstrong-logo-jpg_1771767564732.webp";
@@ -16,14 +24,14 @@ import asurionLogo from "@assets/Asurion-300x300_1771767564741.png";
 import govcioLogo from "@assets/GovCIO-300x300_1771767564741.png";
 
 const sectors = [
-  { name: "Supply Chain Management Software", icon: Truck },
-  { name: "Governance, Risk and Compliance", icon: ShieldCheck },
-  { name: "Real Estate Technology", icon: Building2 },
-  { name: "Data & Information Services", icon: Database },
-  { name: "Human Capital Management", icon: Users },
-  { name: "Education Tech", icon: GraduationCap },
-  { name: "Government Tech", icon: Landmark },
-  { name: "Finance Tech & Payments", icon: CreditCard },
+  { name: "Supply Chain Management Software", image: sector1 },
+  { name: "Governance, Risk and Compliance", image: sector2 },
+  { name: "Real Estate Technology", image: sector3 },
+  { name: "Data & Information Services", image: sector4 },
+  { name: "Human Capital Management", image: sector5 },
+  { name: "Education Tech", image: sector6 },
+  { name: "Government Tech", image: sector7 },
+  { name: "Finance Tech & Payments", image: sector8 },
 ];
 
 const stats = [
@@ -154,9 +162,9 @@ export default function Technology() {
       </section>
 
       {/* Subsectors Grid */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+      <section className="py-24 bg-white relative">
+        <div className="container mx-auto px-6 md:px-12 mb-16 relative z-10">
+          <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Focused Subsectors</h2>
             <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight mb-6">
               Decades of Experience
@@ -165,29 +173,39 @@ export default function Technology() {
               For over four decades, we've continually innovated and refined our investments in specific sectors, developing an investment approach and strategy for each subsector that has allowed us to provide a differentiated viewpoint.
             </p>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {sectors.map((sector, i) => {
-              const Icon = sector.icon;
-              return (
-                <div key={i} className="group bg-secondary/20 p-8 rounded-2xl hover:bg-primary transition-colors duration-300 cursor-pointer text-center flex flex-col items-center">
-                  <div className="w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="text-primary group-hover:text-primary" size={32} />
+        <div className="relative w-full overflow-hidden">
+          <div className="flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-12 pb-12 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            {sectors.map((sector, i) => (
+              <div key={i} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-2xl overflow-hidden aspect-[4/3] bg-black relative group shadow-lg cursor-pointer">
+                <img 
+                  src={sector.image} 
+                  alt={sector.name} 
+                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <h4 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4 leading-tight">
+                      {sector.name}
+                    </h4>
+                    <div className="flex items-center text-primary-foreground font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                      View Sector
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </div>
                   </div>
-                  <h4 className="text-xl font-heading font-bold text-foreground group-hover:text-white transition-colors duration-300">
-                    {sector.name}
-                  </h4>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
+        </div>
 
-          <div className="mt-16 text-center">
-            <Button size="lg" className="rounded-full px-8 group">
-              View All Technology Investment Sectors
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
+        <div className="mt-8 text-center relative z-10">
+          <Button size="lg" className="rounded-full px-8 group">
+            View All Technology Investment Sectors
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
         </div>
       </section>
 
