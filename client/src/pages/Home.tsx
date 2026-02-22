@@ -364,7 +364,7 @@ export default function Home() {
         </div>
 
         {/* Button moved below scroller */}
-        <div className="container mx-auto px-6 md:px-12 flex justify-center mb-12">
+        <div className="container mx-auto px-6 md:px-12 flex justify-center pb-12">
           <Button size="lg" variant="secondary" className="rounded-full px-10 font-semibold shadow-lg hover:shadow-xl transition-all">
             Learn More About Our History
           </Button>
@@ -399,9 +399,9 @@ export default function Home() {
         </div>
       )}
       {/* News Section Redesign */}
-      <section className="py-32 bg-secondary/50 border-t border-border">
+      <section className="py-20 md:py-24 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 gap-6">
             <div className="max-w-2xl">
               <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Insights</h2>
               <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
