@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Activity, Cpu, Network, ShieldCheck } from "lucide-react";
 import { Link } from "wouter";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import carolineDechertImg from "@assets/caroline_dechert-jpg_1771774248059.webp";
 import unparalleledExpertiseImg from "@assets/unparalled-expertise-jpeg_1771774489695.webp";
 import heroBgImg from "@assets/HCIT-jpg_1771775487806.webp";
@@ -166,39 +167,57 @@ export default function HCIT() {
                 bio: "Michael Jones is a Vice President on the Healthcare team, focusing on technology and services investments."
               }
             ].map((member, i) => (
-              member.name === "Caroline Dechert" ? (
-                <Link href="/team/caroline-dechert" key={i}>
-                  <a className="group cursor-pointer block">
+              <Dialog key={i}>
+                <DialogTrigger asChild>
+                  <div className="group cursor-pointer">
                     <div className="aspect-square bg-muted rounded-xl mb-4 overflow-hidden relative">
                       <div className="absolute inset-0 bg-[#002759]/10 group-hover:bg-[#002759]/0 transition-colors z-10"></div>
                       {member.image ? (
-                        <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                        <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-secondary text-muted-foreground group-hover:scale-105 transition-transform duration-500">
+                        <div className="w-full h-full flex items-center justify-center bg-secondary text-muted-foreground">
                           <span className="text-4xl font-light">{member.name.charAt(0)}</span>
                         </div>
                       )}
                     </div>
                     <h4 className="text-lg font-bold font-heading group-hover:text-primary transition-colors">{member.name}</h4>
                     <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
-                  </a>
-                </Link>
-              ) : (
-                <div key={i} className="group cursor-pointer">
-                  <div className="aspect-square bg-muted rounded-xl mb-4 overflow-hidden relative">
-                    <div className="absolute inset-0 bg-[#002759]/10 group-hover:bg-[#002759]/0 transition-colors z-10"></div>
-                    {member.image ? (
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-secondary text-muted-foreground">
-                        <span className="text-4xl font-light">{member.name.charAt(0)}</span>
-                      </div>
-                    )}
                   </div>
-                  <h4 className="text-lg font-bold font-heading group-hover:text-primary transition-colors">{member.name}</h4>
-                  <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
-                </div>
-              )
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[500px] md:max-w-[700px] p-0 overflow-hidden border-0">
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="w-full sm:w-2/5 md:w-1/3 bg-secondary flex items-center justify-center p-0 aspect-square sm:aspect-auto overflow-hidden relative">
+                      {member.image ? (
+                        <img src={member.image} alt={member.name} className="absolute inset-0 w-full h-full object-cover object-top" />
+                      ) : (
+                        <span className="text-7xl font-light text-muted-foreground/50">{member.name.charAt(0)}</span>
+                      )}
+                    </div>
+                    <div className="p-8 sm:w-3/5 md:w-2/3 flex flex-col">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-heading font-bold text-[#002759] mb-1">{member.name}</DialogTitle>
+                        <DialogDescription className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6">
+                          {member.role}
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="text-foreground/90 leading-relaxed font-light mt-4 mb-8">
+                        {member.bio}
+                      </div>
+                      
+                      {member.name === "Caroline Dechert" && (
+                        <div className="mt-auto">
+                          <Link href="/team/caroline-dechert">
+                            <Button className="w-full group rounded-full" size="lg">
+                              Read More Profile
+                              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
