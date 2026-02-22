@@ -60,13 +60,13 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="max-w-4xl min-h-[300px] flex flex-col justify-center relative">
+          <div className="max-w-4xl min-h-[300px] flex flex-col justify-center relative pb-32 md:pb-24 lg:pb-0">
             
             {/* Carousel Content */}
             {heroSlides.map((slide, index) => (
               <div 
                 key={index}
-                className={`absolute inset-0 flex flex-col justify-center transition-all duration-700 ease-in-out ${
+                className={`absolute inset-0 flex flex-col justify-center transition-all duration-700 ease-in-out pb-24 md:pb-16 lg:pb-0 ${
                   index === currentSlide 
                     ? "opacity-100 translate-y-0 pointer-events-auto" 
                     : "opacity-0 translate-y-8 pointer-events-none"
