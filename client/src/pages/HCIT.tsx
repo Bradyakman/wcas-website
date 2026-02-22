@@ -205,10 +205,10 @@ export default function HCIT() {
                       </div>
                       
                       {member.name === "Caroline Dechert" && (
-                        <div className="mt-auto">
+                        <div className="mt-auto pt-4">
                           <Link href="/team/caroline-dechert">
-                            <Button className="w-full group rounded-full" size="lg">
-                              Read More Profile
+                            <Button className="group rounded-full" size="lg">
+                              See Full Profile
                               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Button>
                           </Link>
