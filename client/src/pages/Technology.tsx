@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Truck, ShieldCheck, Building2, Database, Users, GraduationCap, Landmark, CreditCard } from "lucide-react";
+import techHeroBg from "@assets/1070_WCAS_March-7-23-by-John-Abbott-scaled_1771766085574.jpg";
 
 const sectors = [
   { name: "Supply Chain Management Software", icon: Truck },
@@ -44,20 +45,22 @@ export default function Technology() {
   return (
     <div className="flex flex-col min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 bg-primary text-primary-foreground overflow-hidden">
-        {/* Abstract Background Elements */}
-        <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-30"></div>
-        <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-20"></div>
+      <section className="relative py-24 md:py-32 overflow-hidden bg-black text-white">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={techHeroBg} 
+            alt="WCAS Technology Team" 
+            className="w-full h-full object-cover opacity-40 object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#002759]/90 via-[#002759]/60 to-transparent"></div>
+        </div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10 text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-8">
-            <span className="w-2 h-2 rounded-full bg-blue-400"></span>
-            Technology Focus
-          </div>
-          <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight mb-6">
+          <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight mb-6 text-white drop-shadow-lg">
             Technology
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 font-light max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/90 font-light max-w-2xl mx-auto drop-shadow-md">
             Leading Technology Investments Since 1979. We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.
           </p>
         </div>
