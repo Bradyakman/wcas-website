@@ -16,7 +16,7 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Our Firm", href: "/#firm" },
-    { name: "News", href: "/technology" },
+    { name: "Technology", href: "/technology" },
     { 
       name: "Healthcare", 
       href: "/#healthcare",
@@ -25,7 +25,7 @@ export function Navbar() {
       ]
     },
     { name: "Contact", href: "/#contact" },
-    { name: "News", href: "/#news" },
+    { name: "News", href: "/news" },
     { name: "Investor Portal", href: "/#investor" },
   ];
 
