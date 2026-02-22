@@ -102,7 +102,7 @@ export default function Technology() {
         <div className="flex animate-marquee items-center">
           {/* Duplicated for seamless loop */}
           {[...Array(2)].map((_, i) => (
-            <div key={i} className="flex gap-20 md:gap-24 items-center shrink-0 pr-20 md:pr-24">
+            <div key={i} className="flex gap-8 md:gap-24 items-center shrink-0 pr-8 md:pr-24">
               {[
                 { name: 'Headstrong', src: headstrongLogo },
                 { name: 'Global Collect', src: globalCollectLogo },
@@ -116,7 +116,7 @@ export default function Technology() {
                 { name: 'Asurion', src: asurionLogo },
                 { name: 'GovCIO', src: govcioLogo }
               ].map((logo, j) => (
-                <div key={j} className="h-16 w-36 md:h-20 md:w-48 lg:w-56 relative flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <div key={j} className="h-12 w-24 md:h-20 md:w-48 lg:w-56 relative flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                   <img 
                     src={logo.src} 
                     alt={`${logo.name} logo`} 
@@ -172,7 +172,7 @@ export default function Technology() {
       </section>
 
       {/* Video Slider Section */}
-      <section className="py-20 md:pt-24 md:pb-12 bg-primary text-primary-foreground relative overflow-hidden">
+      <section className="pt-20 md:pt-24 pb-8 md:pb-12 bg-primary text-primary-foreground relative overflow-hidden">
         {/* Abstract shapes for background interest */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-50"></div>
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50"></div>
