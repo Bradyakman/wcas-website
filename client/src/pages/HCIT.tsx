@@ -148,12 +148,12 @@ export default function HCIT() {
                     <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden border-0">
+                <DialogContent className="sm:max-w-[500px] md:max-w-[700px] p-0 overflow-hidden border-0">
                   <div className="flex flex-col sm:flex-row">
-                    <div className="w-full sm:w-2/5 bg-secondary flex items-center justify-center p-8 aspect-square sm:aspect-auto">
+                    <div className="w-full sm:w-2/5 md:w-1/3 bg-secondary flex items-center justify-center p-8 aspect-square sm:aspect-auto">
                       <span className="text-7xl font-light text-muted-foreground/50">{member.name.charAt(0)}</span>
                     </div>
-                    <div className="p-8 sm:w-3/5">
+                    <div className="p-8 sm:w-3/5 md:w-2/3">
                       <DialogHeader>
                         <DialogTitle className="text-2xl font-heading font-bold text-[#002759] mb-1">{member.name}</DialogTitle>
                         <DialogDescription className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6">
