@@ -44,7 +44,7 @@ export default function HCIT() {
       </section>
 
       {/* Trends Section */}
-      <section className="py-24 bg-secondary/30 border-y border-border">
+      <section className="py-24 bg-white border-y border-border overflow-hidden">
         <div className="container mx-auto px-6 md:px-12">
           <div className="mb-16">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Investment Themes</h2>
@@ -52,39 +52,51 @@ export default function HCIT() {
               Trends We're Excited To Invest Behind
             </h3>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="relative w-full overflow-hidden">
+          <div className="flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-12 pb-12 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {[
               {
-                icon: <Cpu className="w-8 h-8 text-primary" />,
                 title: "Accelerated adoption of software",
-                desc: "Accelerated adoption of software- and technology-based solutions broadly driven by technological innovation and regulation and promoting interoperability and data collection"
+                desc: "Accelerated adoption of software- and technology-based solutions broadly driven by technological innovation and regulation and promoting interoperability and data collection",
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop"
               },
               {
-                icon: <Activity className="w-8 h-8 text-primary" />,
                 title: "Increasing need for automation",
-                desc: "The increasing need for automation to reduce manual processes, boost productivity, and ameliorate the impact of labor shortages"
+                desc: "The increasing need for automation to reduce manual processes, boost productivity, and ameliorate the impact of labor shortages",
+                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop"
               },
               {
-                icon: <Network className="w-8 h-8 text-primary" />,
                 title: "Growing demand for data analytics",
-                desc: "Growing demand for data analytics and insights to drive business and clinical strategies, ranging from patient engagement, to clinical decision support, to a drug's commercialization strategy"
+                desc: "Growing demand for data analytics and insights to drive business and clinical strategies, ranging from patient engagement, to clinical decision support, to a drug's commercialization strategy",
+                image: "https://images.unsplash.com/photo-1551076805-e18690c5e53b?q=80&w=2832&auto=format&fit=crop"
               },
               {
-                icon: <ShieldCheck className="w-8 h-8 text-primary" />,
                 title: "Increased focus on transparency",
-                desc: "Increased focus among healthcare stakeholders and the government to improve transparency, access and experience for consumers"
+                desc: "Increased focus among healthcare stakeholders and the government to improve transparency, access and experience for consumers",
+                image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=2864&auto=format&fit=crop"
               }
             ].map((trend, i) => (
-              <div key={i} className="flex flex-col sm:flex-row gap-6 bg-white p-8 rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow">
-                <div className="shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-primary/5">
-                  {trend.icon}
-                </div>
-                <div>
-                  <div className="text-5xl font-serif text-muted-foreground/20 font-bold mb-4 leading-none">0{i+1}</div>
-                  <p className="text-lg text-foreground font-medium leading-relaxed">
-                    {trend.desc}
-                  </p>
+              <div key={i} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[35vw] snap-center shrink-0 rounded-2xl overflow-hidden aspect-[4/3] bg-black relative group shadow-lg">
+                <img 
+                  src={trend.image} 
+                  alt={trend.title} 
+                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
+                
+                <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between">
+                  <div className="text-4xl md:text-5xl font-serif text-white/30 font-bold leading-none">0{i+1}</div>
+                  
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <h4 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4 leading-tight">
+                      {trend.title}
+                    </h4>
+                    <p className="text-white/80 font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-4">
+                      {trend.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
