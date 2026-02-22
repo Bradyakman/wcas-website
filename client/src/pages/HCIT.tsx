@@ -3,13 +3,17 @@ import { ArrowRight, Activity, Cpu, Network, ShieldCheck } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import carolineDechertImg from "@assets/caroline_dechert-jpg_1771774248059.webp";
 import unparalleledExpertiseImg from "@assets/unparalled-expertise-jpeg_1771774489695.webp";
+import heroBgImg from "@assets/HCIT-jpg_1771775487806.webp";
 
 export default function HCIT() {
   return (
     <div className="flex flex-col min-h-screen pt-24">
       {/* Hero Section */}
       <section className="relative py-32 md:py-48 overflow-hidden bg-[#002759] text-white">
-        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+        <div 
+          className="absolute inset-0 z-0 opacity-30 bg-cover bg-center mix-blend-luminosity"
+          style={{ backgroundImage: `url(${heroBgImg})` }}
+        ></div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="max-w-4xl">
