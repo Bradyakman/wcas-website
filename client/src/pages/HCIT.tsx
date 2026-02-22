@@ -93,7 +93,7 @@ export default function HCIT() {
                     <h4 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4 leading-tight">
                       {trend.title}
                     </h4>
-                    <p className="text-white/80 font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-4">
+                    <p className="text-white/80 text-sm md:text-base font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                       {trend.desc}
                     </p>
                   </div>
