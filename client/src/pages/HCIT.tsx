@@ -172,6 +172,16 @@ export default function HCIT() {
                 role: "Operating Partner | Healthcare",
                 bio: "Mr. Tomaino is an Operating Partner on the Healthcare team and focuses on investments in the healthcare information technology industry, having joined WCAS in 2010. Mark was previously Senior Vice President of Corporate Development at The TriZetto Group.",
                 image: markTomainoImg
+              },
+              { 
+                name: "Jared Kesselheim", 
+                role: "General Partner | Healthcare",
+                bio: "Jared Kesselheim is a General Partner in the Healthcare Group, having joined WCAS in 2018. He focuses on investments in the healthcare information technology and services sectors."
+              },
+              { 
+                name: "Megan Callahan", 
+                role: "Operating Partner | Healthcare",
+                bio: "Megan Callahan joined WCAS as an Operating Partner in 2023. She brings extensive experience in healthcare technology and digital health."
               }
             ].map((member, i) => (
               <Dialog key={i}>
