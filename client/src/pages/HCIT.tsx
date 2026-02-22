@@ -78,7 +78,7 @@ export default function HCIT() {
                 image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=2864&auto=format&fit=crop"
               }
             ].map((trend, i) => (
-              <div key={i} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[35vw] snap-center shrink-0 rounded-2xl overflow-hidden aspect-[4/3] bg-black relative group shadow-lg">
+              <div key={i} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[35vw] snap-center shrink-0 rounded-2xl overflow-hidden min-h-[450px] lg:min-h-[500px] bg-black relative group shadow-lg">
                 <img 
                   src={trend.image} 
                   alt={trend.title} 
@@ -89,13 +89,17 @@ export default function HCIT() {
                 <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between">
                   <div className="text-4xl md:text-5xl font-serif text-white/30 font-bold leading-none">0{i+1}</div>
                   
-                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <h4 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4 leading-tight">
+                  <div className="mt-auto">
+                    <h4 className="text-2xl md:text-3xl font-heading font-bold text-white mb-2 leading-tight transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       {trend.title}
                     </h4>
-                    <p className="text-white/80 text-sm md:text-base font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                      {trend.desc}
-                    </p>
+                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+                      <div className="overflow-hidden">
+                        <p className="text-white/80 text-sm md:text-base font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 pt-2 pb-2">
+                          {trend.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
