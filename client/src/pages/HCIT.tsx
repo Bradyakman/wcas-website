@@ -52,13 +52,12 @@ export default function HCIT() {
               Trends We're Excited To Invest Behind
             </h3>
           </div>
-        </div>
 
-        <div className="relative w-full overflow-hidden">
-          <div className="flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-12 pb-12 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-            {[
-              {
-                title: "Accelerated adoption of software",
+          <div className="relative w-full">
+            <div className="flex gap-4 md:gap-6 overflow-x-auto pb-12 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+              {[
+                {
+                  title: "Accelerated adoption of software",
                 desc: "Accelerated adoption of software- and technology-based solutions broadly driven by technological innovation and regulation and promoting interoperability and data collection",
                 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop"
               },
@@ -104,6 +103,7 @@ export default function HCIT() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </section>
 
