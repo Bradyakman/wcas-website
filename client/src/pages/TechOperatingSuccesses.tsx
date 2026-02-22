@@ -240,9 +240,9 @@ export default function TechOperatingSuccesses() {
             Discover how WCAS can help accelerate your company's growth and build long-term value.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="bg-white text-[#002759] hover:bg-gray-100 rounded-full px-10 py-7 text-lg font-bold tracking-wider uppercase group">
+            <Button size="default" className="bg-white text-[#002759] hover:bg-gray-100 rounded-full px-8 py-6 text-base font-bold tracking-wider uppercase group">
               Get in Touch
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
         </div>
