@@ -241,24 +241,6 @@ export default function HCIT() {
                 category: "News",
                 date: "February 9, 2023",
                 desc: "LAKEVILLE, MINN., February 9, 2023 - ImageTrend, Inc., a growing, market-leading software solutions and services provider in the public safety and..."
-              },
-              {
-                title: "Lumexa Imaging Announces Pricing of Initial Public Offering",
-                category: "News",
-                date: "January 27, 2026",
-                desc: "RALEIGH, NORTH CAROLINA, (DECEMBER 10, 2025) - Lumexa Imaging Holdings, Inc. (“Lumexa Imaging”) announced today the pricing of its initial..."
-              },
-              {
-                title: "Constitution Surgery Alliance Announces Strategic Growth Investment",
-                category: "News",
-                date: "June 16, 2025",
-                desc: "AVON, Conn., June 16, 2025 /PRNewswire/ -- Constitution Surgery Alliance (CSA), an independent developer and operator of ambulatory surgery centers..."
-              },
-              {
-                title: "WCAS Annual Quality Forum 2023",
-                category: "News",
-                date: "June 21, 2024",
-                desc: "Annual Quality Forum - 4 As part of our commitment to quality, WCAS conducts an annual “Quality Forum,” an all-day..."
               }
             ].map((item, i) => (
               <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 h-full">
