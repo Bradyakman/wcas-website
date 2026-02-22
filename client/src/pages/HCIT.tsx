@@ -132,6 +132,16 @@ export default function HCIT() {
                 name: "Mark M. Tomaino", 
                 role: "Operating Partner | Healthcare",
                 bio: "Mr. Tomaino is an Operating Partner on the Healthcare team and focuses on investments in the healthcare information technology industry, having joined WCAS in 2010. Mark was previously Senior Vice President of Corporate Development at The TriZetto Group."
+              },
+              { 
+                name: "Francesca Dea", 
+                role: "Operating Partner | Healthcare",
+                bio: "Francesca Dea is an Operating Partner in the Healthcare Group. She brings extensive experience in healthcare operations and strategy."
+              },
+              { 
+                name: "Michael Jones", 
+                role: "Vice President | Healthcare",
+                bio: "Michael Jones is a Vice President on the Healthcare team, focusing on technology and services investments."
               }
             ].map((member, i) => (
               <Dialog key={i}>
