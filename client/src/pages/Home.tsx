@@ -272,12 +272,9 @@ export default function Home() {
               <div className="w-20 h-1 bg-white/30 mb-8"></div>
             </div>
             <div>
-              <p className="text-xl md:text-2xl leading-relaxed text-white/90 font-light mb-10">
+              <p className="text-xl md:text-2xl leading-relaxed text-white/90 font-light">
                 WCAS’s mission is to lead in Healthcare and Technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner by executives and investors.
               </p>
-              <Button size="lg" variant="secondary" className="rounded-full px-8 font-semibold">
-                Learn More About Our History
-              </Button>
             </div>
           </div>
 
@@ -317,6 +314,13 @@ export default function Home() {
           <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white pointer-events-none opacity-0 hover:opacity-100 transition-opacity">
             <ArrowRight size={24} />
           </div>
+        </div>
+
+        {/* Button moved below scroller */}
+        <div className="container mx-auto px-6 md:px-12 flex justify-center mb-12">
+          <Button size="lg" variant="secondary" className="rounded-full px-10 font-semibold shadow-lg hover:shadow-xl transition-all">
+            Learn More About Our History
+          </Button>
         </div>
       </section>
 
