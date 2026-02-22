@@ -133,7 +133,7 @@ export default function Technology() {
             {/* Main Stat */}
             <div className="md:col-span-1 border-b border-border/50 pb-8 md:border-0 md:pb-0">
               <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">{stats[0].label}</div>
-              <div className="text-7xl md:text-8xl lg:text-9xl font-heading font-normal tracking-tight text-foreground">{stats[0].value}</div>
+              <div className="text-7xl md:text-8xl lg:text-9xl font-serif font-normal tracking-tighter text-foreground">{stats[0].value}</div>
             </div>
 
             {/* Other Stats */}
@@ -141,7 +141,7 @@ export default function Technology() {
               {stats.slice(1).map((stat, i) => (
                 <div key={i} className="flex flex-col justify-start">
                   <div className="text-xs font-semibold text-muted-foreground mb-4 h-8 flex items-end">{stat.label}</div>
-                  <div className="text-4xl md:text-5xl font-heading font-normal tracking-tight text-foreground border-b border-border pb-4">{stat.value}</div>
+                  <div className="text-4xl md:text-5xl font-serif font-normal tracking-tight text-foreground border-b border-border pb-4">{stat.value}</div>
                 </div>
               ))}
             </div>
