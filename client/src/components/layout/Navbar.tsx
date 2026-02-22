@@ -15,12 +15,12 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Our Firm", href: "#" },
-    { name: "Technology", href: "#" },
-    { name: "Healthcare", href: "#" },
-    { name: "Contact", href: "#" },
-    { name: "News", href: "#" },
-    { name: "Investor Portal", href: "#" },
+    { name: "Our Firm", href: "/#firm" },
+    { name: "Technology", href: "/technology" },
+    { name: "Healthcare", href: "/#healthcare" },
+    { name: "Contact", href: "/#contact" },
+    { name: "News", href: "/#news" },
+    { name: "Investor Portal", href: "/#investor" },
   ];
 
   return (
