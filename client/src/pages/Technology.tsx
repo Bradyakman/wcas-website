@@ -181,9 +181,7 @@ export default function Technology() {
               <div className="w-20 h-1 bg-white/30 mb-8"></div>
             </div>
             <div>
-              <p className="text-xl md:text-2xl leading-relaxed text-white/90 font-light mb-10">
-                Hear directly from the executives and founders we've partnered with about how our technology expertise and strategic support helped accelerate their growth.
-              </p>
+              <p className="text-xl md:text-2xl leading-relaxed text-white/90 font-light mb-10">Our approach matters because we believe it can accelerate revenue growth and operational scaling for innovative tech companies. WCAS fosters long-term relationships, valued by sellers and management teams alike to become the partner of choice.</p>
             </div>
           </div>
         </div>
