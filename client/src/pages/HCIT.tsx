@@ -8,6 +8,7 @@ import cathySunImg from "@assets/Cathy-Sun-jpg_1771795073666.webp";
 import adityaShahImg from "@assets/Aditya-Shah_1771795295962.png";
 import markTomainoImg from "@assets/mark_tomaino-jpg_1771795380192.webp";
 import meganCallahanImg from "@assets/Callahan_1771798106326.jpg";
+import jaredKesselheimImg from "@assets/Spector-Jared_1771798397713.jpg";
 import unparalleledExpertiseImg from "@assets/unparalled-expertise-jpeg_1771774489695.webp";
 import heroBgImg from "@assets/HCIT-jpg_1771775487806.webp";
 
@@ -177,7 +178,8 @@ export default function HCIT() {
               { 
                 name: "Jared Kesselheim", 
                 role: "General Partner | Healthcare",
-                bio: "Jared Kesselheim is a General Partner in the Healthcare Group, having joined WCAS in 2018. He focuses on investments in the healthcare information technology and services sectors."
+                bio: "Jared Kesselheim is a General Partner in the Healthcare Group, having joined WCAS in 2018. He focuses on investments in the healthcare information technology and services sectors.",
+                image: jaredKesselheimImg
               },
               { 
                 name: "Megan Callahan", 
