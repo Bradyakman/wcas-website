@@ -30,11 +30,9 @@ export default function HCIT() {
             <span className="text-white">Healthcare Information Technology (HCIT)</span>
           </div>
           <div className="max-w-4xl">
-            <h2 className="text-primary-foreground/80 font-bold tracking-widest uppercase mb-4 text-sm md:text-base">Healthcare Investment Sectors</h2>
             <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8 leading-tight">
               Healthcare Information Technology (HCIT)
             </h1>
-            <div className="w-24 h-1 bg-white/30 mb-8"></div>
           </div>
         </div>
       </section>
