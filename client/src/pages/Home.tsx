@@ -311,63 +311,64 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16 md:mb-24">
+            <div className="max-w-[85vw] md:max-w-2xl lg:max-w-none mx-auto lg:mx-0 text-center lg:text-left">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-8 tracking-tighter">
                 Our Mission: Your Partner of Choice
               </h2>
-              <div className="w-20 h-1 bg-white/30 mb-8"></div>
+              <div className="w-20 h-1 bg-white/30 mb-8 mx-auto lg:mx-0"></div>
             </div>
-            <div>
+            <div className="max-w-[85vw] md:max-w-2xl lg:max-w-none mx-auto lg:mx-0 text-center lg:text-left">
               <p className="text-xl md:text-2xl leading-relaxed text-white/90 font-light">
                 WCAS’s mission is to lead in Healthcare and Technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner by executives and investors.
               </p>
             </div>
           </div>
-
-          {/* Video Slider - Full Width */}
-        </div>
-        <div className="relative w-full overflow-hidden mt-8 mb-12">
-          <div className="flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-12 pb-6 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-            {wcasVideos.map((video, index) => (
-              <div key={index} className="min-w-[85vw] md:min-w-[60vw] lg:min-w-[45vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group shadow-2xl">
-                <div 
-                  className="absolute inset-0 cursor-pointer text-white p-6 md:p-8 flex flex-col justify-center"
-                  onClick={() => setPlayingVideo(video.id)}
-                >
-                  <div className="flex items-center justify-center gap-4 md:gap-6 h-full w-full group-hover:scale-[1.02] transition-transform duration-500">
-                    <div className="text-right flex-1 flex justify-end">
-                      <h3 className="text-lg md:text-xl lg:text-2xl font-bold font-heading leading-tight max-w-[200px]">{video.title}</h3>
+          
+          {/* Video Slider - Aligned left, reaches right edge of screen */}
+          <div className="relative w-[100vw] -ml-6 md:-ml-12 lg:ml-0 lg:w-[calc(50%+50vw)] mb-12">
+            <div className="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide px-6 md:px-12 lg:px-0 lg:pr-12" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+              {wcasVideos.map((video, index) => (
+                <div key={index} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group shadow-2xl">
+                    <div 
+                      className="absolute inset-0 cursor-pointer text-white p-6 md:p-8 flex flex-col justify-center"
+                      onClick={() => setPlayingVideo(video.id)}
+                    >
+                      <div className="flex items-center justify-center gap-4 md:gap-6 h-full w-full group-hover:scale-[1.02] transition-transform duration-500">
+                        <div className="text-right flex-1 flex justify-end">
+                          <h3 className="text-sm md:text-base font-bold font-heading leading-tight">{video.title}</h3>
+                        </div>
+                        <div className="w-px h-12 md:h-16 bg-white/20"></div>
+                        <div className="text-left flex-1">
+                          <p className="text-[10px] text-white/60 mb-1 tracking-wide">In Partnership with</p>
+                          <h4 className="text-base md:text-lg font-bold font-heading tracking-tight">{video.partner}</h4>
+                        </div>
+                      </div>
+                      
+                      <div className="absolute bottom-4 left-6 md:bottom-6 md:left-8">
+                        <span className="text-sm md:text-base font-heading font-bold tracking-widest text-white/40">WCAS</span>
+                      </div>
+                      
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 w-12 h-8 md:w-14 md:h-10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors z-10 backdrop-blur-sm">
+                        <Play className="text-white fill-white" size={20} />
+                      </div>
                     </div>
-                    <div className="w-px h-16 md:h-24 bg-white/20"></div>
-                    <div className="text-left flex-1">
-                      <p className="text-[10px] md:text-xs lg:text-sm text-white/60 mb-1 md:mb-2 tracking-wide">In Partnership with</p>
-                      <h4 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading tracking-tight">{video.partner}</h4>
-                    </div>
                   </div>
-                  
-                  <div className="absolute bottom-4 left-6 md:bottom-6 md:left-8">
-                    <span className="text-lg md:text-xl font-heading font-bold tracking-widest text-white/40">WCAS</span>
-                  </div>
-                  
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 w-14 h-10 md:w-16 md:h-12 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors z-10 backdrop-blur-sm">
-                    <Play className="text-white fill-white" size={24} />
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
+              {/* Scroll hint indicators */}
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white pointer-events-none opacity-0 hover:opacity-100 transition-opacity">
+                <ArrowRight size={20} />
+              </div>
+            </div>
           </div>
-          {/* Scroll hint indicators */}
-          <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white pointer-events-none opacity-0 hover:opacity-100 transition-opacity">
-            <ArrowRight size={24} />
-          </div>
-        </div>
 
-        {/* Button moved below scroller */}
-        <div className="container mx-auto px-6 md:px-12 flex justify-center pb-24 md:pb-32 relative z-10">
+          {/* Button moved below scroller */}
+        <div className="flex justify-center pb-24 md:pb-32 relative z-10">
           <Button size="lg" variant="secondary" className="rounded-full px-10 font-semibold shadow-lg hover:shadow-xl transition-all">
             Learn More About Our History
           </Button>
+        </div>
         </div>
       </section>
 
