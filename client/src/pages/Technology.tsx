@@ -83,7 +83,7 @@ export default function Technology() {
           <img 
             src={techHeroBg} 
             alt="WCAS Technology Team" 
-            className="w-full h-full object-cover opacity-60 object-center"
+            className="w-full h-full object-cover opacity-60 object-top"
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
