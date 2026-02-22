@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Truck, ShieldCheck, Building2, Database, Users, GraduationCap, Landmark, CreditCard } from "lucide-react";
+import { ArrowRight, Play, X } from "lucide-react";
+import { useState } from "react";
 import techHeroBg from "@assets/1070_WCAS_March-7-23-by-John-Abbott-scaled_1771766085574.jpg";
 import sector1 from "@/assets/images/sector_1.jpg";
 import sector2 from "@/assets/images/sector_2.jpg";
@@ -41,6 +42,17 @@ const stats = [
   { value: "45+", label: "Years Investing in Tech" },
 ];
 
+const wcasVideos = [
+  { id: "1059530438", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS" },
+  { id: "1059546200", title: "Strategic Growth Investment", partner: "TrueCommerce" },
+  { id: "1059550993", title: "Building Sustainable Platforms", partner: "Concentra" },
+  { id: "1059552199", title: "Investing in Better Healthcare", partner: "InnovAge" },
+  { id: "1059555627", title: "Advancing Front-Office Automation", partner: "EquiLend" },
+  { id: "1059557342", title: "Investing in Technology", partner: "Absorb" },
+  { id: "1059560447", title: "Strategic Expansion", partner: "AIA Contract Documents" },
+  { id: "1059565251", title: "Transforming Healthcare", partner: "Mphasis" }
+];
+
 const news = [
   {
     date: "February 20, 2026",
@@ -63,6 +75,8 @@ const news = [
 ];
 
 export default function Technology() {
+  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
+
   return (
     <div className="flex flex-col min-h-screen pt-24">
       {/* Hero Section */}
@@ -161,6 +175,65 @@ export default function Technology() {
         </div>
       </section>
 
+      {/* Video Slider Section */}
+      <section className="py-20 md:py-24 bg-primary text-primary-foreground relative overflow-hidden">
+        {/* Abstract shapes for background interest */}
+        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-50"></div>
+        <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50"></div>
+        
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+            <div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-8 tracking-tighter">
+                Partnership Success Stories
+              </h2>
+              <div className="w-20 h-1 bg-white/30 mb-8"></div>
+            </div>
+            <div>
+              <p className="text-xl md:text-2xl leading-relaxed text-white/90 font-light mb-10">
+                Hear directly from the executives and founders we've partnered with about how our technology expertise and strategic support helped accelerate their growth.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative w-full overflow-hidden mt-8 mb-12">
+          <div className="flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-12 pb-6 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            {wcasVideos.map((video, index) => (
+              <div key={index} className="min-w-[85vw] md:min-w-[60vw] lg:min-w-[45vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group shadow-2xl">
+                <div 
+                  className="absolute inset-0 cursor-pointer text-white p-6 md:p-8 flex flex-col justify-center"
+                  onClick={() => setPlayingVideo(video.id)}
+                >
+                  <div className="flex items-center justify-center gap-4 md:gap-6 h-full w-full group-hover:scale-[1.02] transition-transform duration-500">
+                    <div className="text-right flex-1 flex justify-end">
+                      <h3 className="text-lg md:text-xl lg:text-2xl font-bold font-heading leading-tight max-w-[200px]">{video.title}</h3>
+                    </div>
+                    <div className="w-px h-16 md:h-24 bg-white/20"></div>
+                    <div className="text-left flex-1">
+                      <p className="text-[10px] md:text-xs lg:text-sm text-white/60 mb-1 md:mb-2 tracking-wide">In Partnership with</p>
+                      <h4 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading tracking-tight">{video.partner}</h4>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute bottom-4 left-6 md:bottom-6 md:left-8">
+                    <span className="text-lg md:text-xl font-heading font-bold tracking-widest text-white/40">WCAS</span>
+                  </div>
+                  
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 w-14 h-10 md:w-16 md:h-12 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors z-10 backdrop-blur-sm">
+                    <Play className="text-white fill-white" size={24} />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* Scroll hint indicators */}
+          <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white pointer-events-none opacity-0 hover:opacity-100 transition-opacity">
+            <ArrowRight size={24} />
+          </div>
+        </div>
+      </section>
+
       {/* Subsectors Grid */}
       <section className="py-24 bg-white relative">
         <div className="container mx-auto px-6 md:px-12 mb-16 relative z-10">
@@ -250,6 +323,33 @@ export default function Technology() {
           </div>
         </div>
       </section>
+      {/* Video Lightbox Modal */}
+      {playingVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm p-4 md:p-8" onClick={() => setPlayingVideo(null)}>
+          <button 
+            className="absolute top-6 right-6 md:top-8 md:right-8 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors z-50"
+            onClick={(e) => {
+              e.stopPropagation();
+              setPlayingVideo(null);
+            }}
+          >
+            <X size={24} />
+          </button>
+          
+          <div 
+            className="w-full max-w-6xl aspect-video bg-black rounded-lg shadow-2xl overflow-hidden relative border border-white/10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <iframe 
+              src={`https://player.vimeo.com/video/${playingVideo}?h=dbf9bc9a77&title=0&byline=0&portrait=0&autoplay=1`}
+              className="absolute top-0 left-0 w-full h-full"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
