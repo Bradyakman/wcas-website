@@ -11,6 +11,8 @@ import Technology from "@/pages/Technology";
 import HCIT from "@/pages/HCIT";
 import NotFound from "@/pages/not-found";
 
+import TeamMember from "@/pages/TeamMember";
+
 function ScrollToTop() {
   const [location] = useLocation();
   
@@ -31,6 +33,7 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/technology" component={Technology} />
           <Route path="/hcit" component={HCIT} />
+          <Route path="/team/:name" component={TeamMember} />
           <Route component={NotFound} />
         </Switch>
       </main>
