@@ -75,24 +75,27 @@ export default function Technology() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
 
   return (
-    <div className="flex flex-col min-h-screen pt-24">
+    <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-32 md:py-48 overflow-hidden bg-black text-white">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
+      <section className="pt-32 pb-24 px-6 bg-[#002759] text-white relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <img 
             src={techHeroBg} 
             alt="WCAS Technology Team" 
-            className="w-full h-[120%] object-cover opacity-60 object-top -translate-y-8 md:-translate-y-16"
+            className="w-full h-full object-cover opacity-40 mix-blend-luminosity object-top"
           />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-[#002759]/70"></div>
         </div>
         
-        <div className="container mx-auto px-6 md:px-12 relative z-10 text-center max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight mb-6 text-white drop-shadow-lg">
-            Technology
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-light max-w-2xl mx-auto drop-shadow-md">Leading Technology Investments Since 1979.</p>
+        <div className="container mx-auto mt-12 relative z-10">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8 leading-tight">
+              Technology
+            </h1>
+            <p className="text-xl md:text-2xl font-light text-white/80 max-w-3xl leading-relaxed">
+              Leading Technology Investments Since 1979.
+            </p>
+          </div>
         </div>
       </section>
       {/* Logo Ticker */}

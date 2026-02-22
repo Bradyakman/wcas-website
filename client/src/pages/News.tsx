@@ -88,9 +88,7 @@ export default function News() {
   });
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <Navbar />
-      
+    <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 relative overflow-hidden text-white">
         <div className="absolute inset-0 z-0">

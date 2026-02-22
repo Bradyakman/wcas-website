@@ -117,9 +117,7 @@ const StatIcon = ({ type }: { type: string }) => {
 
 export default function TechOperatingSuccesses() {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <Navbar />
-      
+    <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="pt-32 pb-24 px-6 bg-[#002759] text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">

@@ -10,6 +10,7 @@ export function Navbar() {
   // Check if we are on a page with a dark hero section
   const isDarkHeroPage = location === "/hcit" || 
                          location === "/news" || 
+                         location === "/technology" ||
                          location === "/technology/operating-successes" || 
                          location.startsWith("/team/");
 
