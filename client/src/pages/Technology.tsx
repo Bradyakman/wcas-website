@@ -81,10 +81,10 @@ export default function Technology() {
 
       {/* Logo Ticker */}
       <section className="py-12 bg-white border-b border-border overflow-hidden">
-        <div className="flex whitespace-nowrap animate-marquee items-center">
+        <div className="flex animate-marquee items-center">
           {/* Duplicated for seamless loop */}
           {[...Array(2)].map((_, i) => (
-            <div key={i} className="flex gap-16 items-center mx-8">
+            <div key={i} className="flex gap-16 items-center shrink-0 pr-16">
               {[
                 { name: 'Headstrong', src: headstrongLogo },
                 { name: 'Global Collect', src: globalCollectLogo },
@@ -98,7 +98,7 @@ export default function Technology() {
                 { name: 'Asurion', src: asurionLogo },
                 { name: 'GovCIO', src: govcioLogo }
               ].map((logo, j) => (
-                <div key={j} className="h-16 w-32 md:w-48 relative flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 px-4">
+                <div key={j} className="h-16 w-32 md:w-48 relative flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                   <img 
                     src={logo.src} 
                     alt={`${logo.name} logo`} 
