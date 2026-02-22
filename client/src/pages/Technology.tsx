@@ -98,11 +98,11 @@ export default function Technology() {
                 { name: 'Asurion', src: asurionLogo },
                 { name: 'GovCIO', src: govcioLogo }
               ].map((logo, j) => (
-                <div key={j} className="h-16 w-32 md:w-48 relative flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                <div key={j} className="h-12 w-28 md:h-16 md:w-40 lg:w-48 relative flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                   <img 
                     src={logo.src} 
                     alt={`${logo.name} logo`} 
-                    className="max-h-full max-w-full object-contain"
+                    className="max-h-full max-w-full object-contain mix-blend-multiply"
                   />
                 </div>
               ))}
