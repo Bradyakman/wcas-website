@@ -11,16 +11,27 @@ export default function HCIT() {
   return (
     <div className="flex flex-col min-h-screen pt-24">
       {/* Hero Section */}
-      <section className="relative py-32 md:py-48 overflow-hidden bg-[#002759] text-white">
-        <div 
-          className="absolute inset-0 z-0 opacity-30 bg-cover bg-center mix-blend-luminosity"
-          style={{ backgroundImage: `url(${heroBgImg})` }}
-        ></div>
+      <section className="pt-32 pb-24 px-6 bg-[#002759] text-white relative overflow-hidden min-h-[400px] md:min-h-[500px]">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroBgImg} 
+            alt="Healthcare Information Technology" 
+            className="w-full h-full object-cover opacity-40 mix-blend-luminosity object-top"
+          />
+          <div className="absolute inset-0 bg-[#002759]/70"></div>
+        </div>
         
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
+        <div className="container mx-auto mt-12 relative z-10">
+          <div className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-white/60 mb-6">
+            <Link href="/">
+              <a className="hover:text-white transition-colors">Home</a>
+            </Link>
+            <span>/</span>
+            <span className="text-white">Healthcare Information Technology (HCIT)</span>
+          </div>
           <div className="max-w-4xl">
             <h2 className="text-primary-foreground/80 font-bold tracking-widest uppercase mb-4 text-sm md:text-base">Healthcare Investment Sectors</h2>
-            <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight mb-8 text-white">
+            <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8 leading-tight">
               Healthcare Information Technology (HCIT)
             </h1>
             <div className="w-24 h-1 bg-white/30 mb-8"></div>
