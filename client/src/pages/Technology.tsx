@@ -82,9 +82,9 @@ export default function Technology() {
           <img 
             src={techHeroBg} 
             alt="WCAS Technology Team" 
-            className="w-full h-full object-cover opacity-40 object-center"
+            className="w-full h-full object-cover opacity-60 object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#002759]/90 via-[#002759]/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10 text-center max-w-4xl">
