@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, X } from "lucide-react";
 import { useState } from "react";
 import techHeroBg from "@assets/1070_WCAS_March-7-23-by-John-Abbott-scaled_1771766085574.jpg";
+import techPortfolioBg from "@assets/WCAS_March-13_04509616.mov.20_53_56_26.Still001-scaled_(1)_1771769557518.webp";
 import sector1 from "@/assets/images/sector_1.jpg";
 import sector2 from "@/assets/images/sector_2.jpg";
 import sector3 from "@/assets/images/sector_3.jpg";
@@ -269,6 +270,36 @@ export default function Technology() {
           </Button>
         </div>
       </section>
+
+      {/* Portfolio CTA Section */}
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={techPortfolioBg} 
+            alt="WCAS Technology Team Meeting" 
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Gradient to make text readable, mostly covering right side */}
+          <div className="absolute inset-0 bg-white/80 md:bg-gradient-to-r md:from-white/0 md:via-white/70 md:to-white"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 md:px-12 relative z-10 h-full flex flex-col justify-center">
+          <div className="flex flex-col md:items-end text-center md:text-right">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-[#1e3a8a] mb-6 tracking-tight">
+                Our Technology Portfolio
+              </h2>
+              <p className="text-xl md:text-2xl text-[#475569] mb-10 leading-relaxed font-light">
+                For decades, we've built sector-leading companies across the technology and software industry.
+              </p>
+              <Button size="lg" className="bg-[#cbd5e1] hover:bg-[#bbf7d0] text-[#1e3a8a] hover:text-[#1e3a8a] font-bold tracking-wider uppercase px-8 py-6 rounded-full transition-colors">
+                See Our Portfolio
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* News Section */}
       <section className="py-24 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
