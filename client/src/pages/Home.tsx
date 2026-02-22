@@ -293,7 +293,7 @@ export default function Home() {
         </div>
       </section>
       {/* Mission & Video Slider Section */}
-      <section className="py-20 md:py-24 text-primary-foreground relative overflow-hidden">
+      <section className="pt-20 md:pt-24 text-primary-foreground relative overflow-hidden">
         {/* Abstract shapes for background interest */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-50 z-0"></div>
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50 z-0"></div>
@@ -364,7 +364,7 @@ export default function Home() {
         </div>
 
         {/* Button moved below scroller */}
-        <div className="container mx-auto px-6 md:px-12 flex justify-center pb-12">
+        <div className="container mx-auto px-6 md:px-12 flex justify-center pb-8 md:pb-12 relative z-10">
           <Button size="lg" variant="secondary" className="rounded-full px-10 font-semibold shadow-lg hover:shadow-xl transition-all">
             Learn More About Our History
           </Button>
@@ -399,7 +399,7 @@ export default function Home() {
         </div>
       )}
       {/* News Section Redesign */}
-      <section className="py-20 md:py-24 bg-secondary/50 border-t border-border">
+      <section className="py-16 md:py-20 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 gap-6">
             <div className="max-w-2xl">
