@@ -8,13 +8,43 @@ import techImg from "@assets/1070_WCAS_March-7-23-by-John-Abbott-scaled_17717660
 import maImg from "@assets/healthcare-RESIZED-jpg_1771766272998.webp";
 import testimonial1 from "@/assets/images/testimonial-1.png";
 import testimonial2 from "@/assets/images/testimonial-2.png";
+
+// Company Logos
+import logoTransfirst from "@assets/Transfirst-4_1771799704120.png";
+import logoLinq from "@assets/LINQ_1771799704131.png";
+import logoShields from "@assets/Shields_logo_transparent_LRG-3-1024x272_1771799704132.png";
+import logoAvetta from "@assets/Avetta-5-e1733175555759_1771799704133.png";
+import logoAsurion from "@assets/Asurion_1771799704133.png";
+import logoInnovAge from "@assets/InnovAge_1771799704134.png";
+import logoQuickbase from "@assets/Quickbase_1771799704134.png";
+import logoGovCIO from "@assets/GovCIO_1771799704134.png";
+import logoKindred from "@assets/KindredAtHome_Logo_1771799704135.png";
+import logoClearwater from "@assets/Clearwater-Analytics_1771799704135.png";
+import logoAlliance from "@assets/AllianceData_1771799704135.png";
+import logoNavihealth from "@assets/navihealth-jpg_1771799704136.webp";
+import logoNorstella from "@assets/Norstella_color_positive_RGB_-_USE_THIS-1-1024x354_1771799704136.png";
+import logoSelect from "@assets/Select_Medical_2x-3_1771799704136.png";
+import logoBisys from "@assets/BISYS-logo-jpg_1771799704137.webp";
+
 import { useState, useEffect } from "react";
 
 // Placeholder logos array
 const logos = [
-  "Fiserv", "Norstella", "Select Medical", "NaviHealth", 
-  "AllianceData", "Clearwater", "Quickbase", "InnovAge", 
-  "Asurion", "Avetta", "Shields Health", "LINQ"
+  { name: "Transfirst", src: logoTransfirst },
+  { name: "LINQ", src: logoLinq },
+  { name: "Shields Health", src: logoShields },
+  { name: "Avetta", src: logoAvetta },
+  { name: "Asurion", src: logoAsurion },
+  { name: "InnovAge", src: logoInnovAge },
+  { name: "Quickbase", src: logoQuickbase },
+  { name: "GovCIO", src: logoGovCIO },
+  { name: "Kindred at Home", src: logoKindred },
+  { name: "Clearwater Analytics", src: logoClearwater },
+  { name: "AllianceData", src: logoAlliance },
+  { name: "naviHealth", src: logoNavihealth },
+  { name: "Norstella", src: logoNorstella },
+  { name: "Select Medical", src: logoSelect },
+  { name: "BISYS", src: logoBisys }
 ];
 
 const heroSlides = [
@@ -160,19 +190,23 @@ export default function Home() {
       </section>
       {/* Logos Ticker */}
       <section className="py-12 border-t border-border overflow-hidden bg-secondary/50">
-        <div className="container mx-auto px-6 md:px-12 mb-6">
+        <div className="container mx-auto px-6 md:px-12 mb-8">
           <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground text-center">Over 300 Companies Partnered</p>
         </div>
-        <div className="relative w-full logo-ticker flex items-center">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/50 to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/50 to-transparent z-10"></div>
+        <div className="relative w-full overflow-hidden flex items-center bg-white py-8">
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
           
-          <div className="flex space-x-16 animate-scroll whitespace-nowrap px-8 items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Double the logos to make continuous scroll seamless */}
+          <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
+            {/* Render logos 3 times to ensure smooth infinite scroll */}
             {[...logos, ...logos, ...logos].map((logo, index) => (
-              <span key={index} className="text-xl md:text-2xl font-heading font-bold text-foreground/80 hover:text-primary transition-colors">
-                {logo}
-              </span>
+              <div key={index} className="flex-shrink-0 px-8 mx-4 w-48 md:w-56 h-20 flex items-center justify-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+                <img 
+                  src={logo.src} 
+                  alt={`${logo.name} logo`} 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
             ))}
           </div>
         </div>
