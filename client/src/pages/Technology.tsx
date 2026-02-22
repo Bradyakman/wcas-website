@@ -96,7 +96,6 @@ export default function Technology() {
           </p>
         </div>
       </section>
-
       {/* Logo Ticker */}
       <section className="py-8 bg-white border-b border-border overflow-hidden">
         <div className="flex animate-marquee items-center">
@@ -128,7 +127,6 @@ export default function Technology() {
           ))}
         </div>
       </section>
-
       {/* Stats & Intro Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 md:px-12">
@@ -170,7 +168,6 @@ export default function Technology() {
           </div>
         </div>
       </section>
-
       {/* Video Slider Section */}
       <section className="pt-20 md:pt-24 pb-8 md:pb-12 bg-primary text-primary-foreground relative overflow-hidden">
         {/* Abstract shapes for background interest */}
@@ -180,9 +177,7 @@ export default function Technology() {
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
             <div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-8 tracking-tighter">
-                Partnership Success Stories
-              </h2>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-8 tracking-tighter">A Trusted Partner for Long-Term Success</h2>
               <div className="w-20 h-1 bg-white/30 mb-8"></div>
             </div>
             <div>
@@ -229,7 +224,6 @@ export default function Technology() {
           </div>
         </div>
       </section>
-
       {/* Subsectors Grid */}
       <section className="py-24 bg-white relative">
         <div className="container mx-auto px-6 md:px-12 mb-16 relative z-10">
@@ -277,7 +271,6 @@ export default function Technology() {
           </Button>
         </div>
       </section>
-
       {/* News Section */}
       <section className="py-24 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
