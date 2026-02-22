@@ -32,7 +32,7 @@ export default function HCIT() {
               <a className="hover:text-white transition-colors">Healthcare</a>
             </Link>
             <span>/</span>
-            <span className="text-white">Healthcare Information Technology (HCIT)</span>
+            <span className="text-white">HCIT</span>
           </div>
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8 leading-tight">
@@ -41,7 +41,6 @@ export default function HCIT() {
           </div>
         </div>
       </section>
-
       {/* Perspective Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 md:px-12">
@@ -62,7 +61,6 @@ export default function HCIT() {
           </div>
         </div>
       </section>
-
       {/* Trends Section */}
       <section className="py-24 bg-white border-y border-border overflow-hidden">
         <div className="container mx-auto px-6 md:px-12">
@@ -126,7 +124,6 @@ export default function HCIT() {
           </div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 md:px-12">
@@ -243,7 +240,6 @@ export default function HCIT() {
           </div>
         </div>
       </section>
-
       {/* Unparalleled Expertise CTA */}
       <section className="relative py-32 bg-[#002759] text-white text-center px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -266,7 +262,6 @@ export default function HCIT() {
           </Button>
         </div>
       </section>
-
       {/* Healthcare News Section */}
       <section className="py-24 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
