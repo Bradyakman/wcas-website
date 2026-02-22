@@ -114,18 +114,18 @@ export default function News() {
       </section>
 
       {/* Filter and Search Bar */}
-      <section className="py-8 bg-secondary/50 border-b border-border sticky top-20 z-40 backdrop-blur-md">
+      <section className="py-4 bg-white/90 border-b border-border sticky top-16 z-40 backdrop-blur-md shadow-sm">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             
             {/* Category Filters */}
             <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto hide-scrollbar">
-              <SlidersHorizontal className="w-5 h-5 text-muted-foreground mr-2 hidden md:block" />
+              <SlidersHorizontal className="w-4 h-4 text-muted-foreground mr-2 hidden md:block" />
               {CATEGORIES.map(category => (
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-6 py-2.5 rounded-full text-sm font-bold tracking-wider uppercase transition-all whitespace-nowrap ${
+                  className={`px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap ${
                     activeCategory === category 
                       ? "bg-primary text-white shadow-md" 
                       : "bg-white text-muted-foreground hover:bg-gray-100 border border-border/50"
@@ -137,12 +137,12 @@ export default function News() {
             </div>
 
             {/* Search Input */}
-            <div className="relative w-full md:w-96">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+            <div className="relative w-full md:w-80">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input 
                 type="text" 
                 placeholder="Search news and insights..." 
-                className="w-full pl-12 pr-10 py-6 rounded-full border-border/50 bg-white shadow-sm text-base focus-visible:ring-primary"
+                className="w-full pl-10 pr-8 py-4 rounded-full border-border/50 bg-white shadow-sm text-sm focus-visible:ring-primary h-10"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -151,7 +151,7 @@ export default function News() {
                   onClick={() => setSearchQuery("")}
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
                 >
-                  <X className="w-4 h-4" />
+                  <X className="w-3 h-3" />
                 </button>
               )}
             </div>
