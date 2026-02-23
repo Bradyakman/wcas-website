@@ -29,21 +29,21 @@ import logoBisys from "@assets/BISYS_final.png";
 import { useState, useEffect } from "react";
 
 const logos = [
-  { name: "Transfirst", src: logoTransfirst, mx: 14 },
-  { name: "LINQ", src: logoLinq, mx: 14 },
-  { name: "Shields Health", src: logoShields, mx: 12 },
-  { name: "Avetta", src: logoAvetta, mx: 10 },
-  { name: "Asurion", src: logoAsurion, mx: 10 },
-  { name: "InnovAge", src: logoInnovAge, mx: 14 },
-  { name: "Quickbase", src: logoQuickbase, mx: 14 },
-  { name: "GovCIO", src: logoGovCIO, mx: 16 },
-  { name: "Kindred at Home", src: logoKindred, mx: 16 },
-  { name: "Clearwater Analytics", src: logoClearwater, mx: 14 },
-  { name: "AllianceData", src: logoAlliance, mx: 14 },
-  { name: "naviHealth", src: logoNavihealth, mx: 10 },
-  { name: "Norstella", src: logoNorstella, mx: 10 },
-  { name: "Select Medical", src: logoSelect, scale: 0.7, mx: 6 },
-  { name: "BISYS", src: logoBisys, mx: 6 }
+  { name: "Transfirst", src: logoTransfirst, mx: 22 },
+  { name: "LINQ", src: logoLinq, mx: 22 },
+  { name: "Shields Health", src: logoShields, mx: 20 },
+  { name: "Avetta", src: logoAvetta, mx: 18 },
+  { name: "Asurion", src: logoAsurion, mx: 18 },
+  { name: "InnovAge", src: logoInnovAge, mx: 22 },
+  { name: "Quickbase", src: logoQuickbase, mx: 22 },
+  { name: "GovCIO", src: logoGovCIO, mx: 24 },
+  { name: "Kindred at Home", src: logoKindred, mx: 24 },
+  { name: "Clearwater Analytics", src: logoClearwater, mx: 22 },
+  { name: "AllianceData", src: logoAlliance, mx: 22 },
+  { name: "naviHealth", src: logoNavihealth, mx: 18 },
+  { name: "Norstella", src: logoNorstella, mx: 18 },
+  { name: "Select Medical", src: logoSelect, scale: 0.7, mx: 14 },
+  { name: "BISYS", src: logoBisys, mx: 14 }
 ];
 
 const heroSlides = [
