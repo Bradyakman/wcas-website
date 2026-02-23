@@ -131,8 +131,8 @@ export default function TechOperatingSuccesses() {
         
         <div className="container mx-auto mt-12 relative z-10">
           <div className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-white/60 mb-6">
-            <Link href="/technology">
-              <a className="hover:text-white transition-colors">Technology</a>
+            <Link href="/technology" className="hover:text-white transition-colors">
+              Technology
             </Link>
             <span>/</span>
             <span className="text-white">Operating Successes</span>
