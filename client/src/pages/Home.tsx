@@ -16,7 +16,7 @@ import logoShields from "@assets/Shields_logo_transparent_LRG-3-1024x272_1771799
 import logoAvetta from "@assets/Avetta-5-e1733175555759_1771799704133_transparent.png";
 import logoAsurion from "@assets/Asurion_1771799704133_trimmed.png";
 import logoInnovAge from "@assets/InnovAge_1771799704134_trimmed.png";
-import logoQuickbase from "@assets/Quickbase_1771799704134_trimmed.png";
+import logoQuickbase from "@assets/Quickbase_1771799704134_transparent.png";
 import logoGovCIO from "@assets/GovCIO_1771799704134_trimmed.png";
 import logoKindred from "@assets/KindredAtHome_Logo_1771799704135_transparent.png";
 import logoClearwater from "@assets/Clearwater-Analytics_1771799704135_trimmed.png";
