@@ -175,7 +175,7 @@ export default function Home() {
           <div className="mb-20">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Approach</h2>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground leading-tight tracking-tight">
-              Four decades working to reshape landscapes and drive growth.
+              For nearly five decades, WCAS has partnered with industry leaders to reshape landscapes and drive growth.
             </h3>
           </div>
 
