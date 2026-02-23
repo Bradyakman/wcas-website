@@ -3,35 +3,36 @@ import wcasLogoWhite from "@assets/image_1771877140413.png";
 
 export function Footer() {
   return (
-    <footer className="bg-[#0f172a] text-white pt-20 pb-10">
+    <footer className="bg-[#0f172a] text-white pt-16 pb-10">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
-          <div className="lg:col-span-2">
+        <div className="flex flex-col lg:flex-row gap-16 mb-16">
+          <div className="lg:w-1/4">
             <img src={wcasLogoWhite} alt="WCAS" className="h-10 mb-8" />
-            <h4 className="font-heading font-semibold mb-6 uppercase tracking-wider text-sm text-white/80">Locations</h4>
-            <ul className="space-y-4 text-white/60 text-sm">
+            <ul className="space-y-3 text-white/60 text-sm">
               <li>New York</li>
               <li>San Francisco</li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-heading font-semibold mb-6 uppercase tracking-wider text-sm text-white/80">Focus Areas</h4>
-            <ul className="space-y-4">
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Technology</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Healthcare</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Our Approach</a></li>
-            </ul>
-          </div>
+          <div className="flex flex-1 gap-16 lg:gap-24">
+            <div>
+              <h4 className="font-heading font-semibold mb-6 uppercase tracking-wider text-sm text-white/80">Focus Areas</h4>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Technology</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Healthcare</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Our Approach</a></li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-heading font-semibold mb-6 uppercase tracking-wider text-sm text-white/80">Company</h4>
-            <ul className="space-y-4">
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Our Firm</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">News & Perspectives</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Contact</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Investor Portal</a></li>
-            </ul>
+            <div>
+              <h4 className="font-heading font-semibold mb-6 uppercase tracking-wider text-sm text-white/80">Company</h4>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Our Firm</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">News & Perspectives</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Contact</a></li>
+                <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Investor Portal</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
