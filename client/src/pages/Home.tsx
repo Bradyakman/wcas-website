@@ -181,12 +181,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
             {/* Box 1 */}
             <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
-              <div className="h-72 w-full overflow-hidden">
+              <div className="h-72 w-full overflow-hidden relative">
                 <img 
                   src={growthImg} 
                   alt="Team member working on tablet" 
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
+                <div className="absolute inset-0 bg-[#0a1628]/85"></div>
               </div>
               <div className="p-10 md:p-12 flex-grow">
                 <h4 className="text-2xl font-heading font-bold mb-4">Growth</h4>
@@ -198,12 +199,13 @@ export default function Home() {
 
             {/* Box 2 */}
             <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
-              <div className="h-72 w-full overflow-hidden">
+              <div className="h-72 w-full overflow-hidden relative">
                 <img 
                   src={talentImg} 
                   alt="Team discussion in conference room" 
                   className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
+                <div className="absolute inset-0 bg-[#0a1628]/85"></div>
               </div>
               <div className="p-10 md:p-12 flex-grow">
                 <h4 className="text-2xl font-heading font-bold mb-4">Talent</h4>
