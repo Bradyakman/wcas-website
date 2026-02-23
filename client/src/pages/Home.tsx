@@ -31,7 +31,6 @@ import { useState, useEffect } from "react";
 
 const logos = [
   { name: "Transfirst", src: logoTransfirst, mx: 30 },
-  { name: "LINQ", src: logoLinq, mx: 30 },
   { name: "Shields Health", src: logoShields, mx: 28 },
   { name: "Avetta", src: logoAvetta, mx: 26 },
   { name: "Asurion", src: logoAsurion, mx: 26 },
@@ -44,8 +43,8 @@ const logos = [
   { name: "naviHealth", src: logoNavihealth, mx: 26 },
   { name: "Norstella", src: logoNorstella, mx: 26 },
   { name: "Select Medical", src: logoSelect, scale: 0.7, mx: 22 },
-  { name: "BISYS", src: logoBisys, mx: 22 },
-  { name: "Lumexa Imaging", src: logoLumexa, mx: 26 }
+  { name: "BISYS", src: logoBisys, mx: 22, scale: 0.7 },
+  { name: "Lumexa Imaging", src: logoLumexa, mx: 26, scale: 0.7 }
 ];
 
 const heroSlides = [
