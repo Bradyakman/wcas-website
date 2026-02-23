@@ -50,7 +50,7 @@ const logos = [
 const heroSlides = [
   {
     title: (
-      <>Supporting innovation and growth in <span className="text-primary">Technology</span> and <span className="text-primary">Healthcare</span></>
+      <>Supporting innovation and growth in <span className="text-white underline decoration-[#4da3ff] decoration-4 underline-offset-8">Technology</span> and <span className="text-white underline decoration-[#4da3ff] decoration-4 underline-offset-8">Healthcare</span></>
     ),
     description: "Forming ongoing partnerships with leading management teams to build exceptional companies."
   },
