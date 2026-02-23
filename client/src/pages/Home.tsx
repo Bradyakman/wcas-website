@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] md:min-h-[78vh] flex items-center pt-24 pb-12 overflow-hidden">
+      <section className="relative min-h-[60vh] md:min-h-[78vh] flex items-end pt-24 pb-12 overflow-hidden">
         <div 
           className="absolute inset-0 z-0 transition-opacity duration-1000"
           style={{
@@ -174,6 +174,9 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="mb-20">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4 text-center">Our Approach</h2>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground leading-tight tracking-tight text-center">
+              For nearly five decades, WCAS has partnered with industry leaders to reshape landscapes and drive growth
+            </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
