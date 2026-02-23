@@ -29,21 +29,21 @@ import logoBisys from "@assets/BISYS_final.png";
 import { useState, useEffect } from "react";
 
 const logos = [
-  { name: "Transfirst", src: logoTransfirst },
-  { name: "LINQ", src: logoLinq },
-  { name: "Shields Health", src: logoShields },
-  { name: "Avetta", src: logoAvetta },
-  { name: "Asurion", src: logoAsurion },
-  { name: "InnovAge", src: logoInnovAge },
-  { name: "Quickbase", src: logoQuickbase },
-  { name: "GovCIO", src: logoGovCIO },
-  { name: "Kindred at Home", src: logoKindred },
-  { name: "Clearwater Analytics", src: logoClearwater },
-  { name: "AllianceData", src: logoAlliance },
-  { name: "naviHealth", src: logoNavihealth },
-  { name: "Norstella", src: logoNorstella },
-  { name: "Select Medical", src: logoSelect, scale: 0.7 },
-  { name: "BISYS", src: logoBisys }
+  { name: "Transfirst", src: logoTransfirst, mx: 14 },
+  { name: "LINQ", src: logoLinq, mx: 14 },
+  { name: "Shields Health", src: logoShields, mx: 12 },
+  { name: "Avetta", src: logoAvetta, mx: 10 },
+  { name: "Asurion", src: logoAsurion, mx: 10 },
+  { name: "InnovAge", src: logoInnovAge, mx: 14 },
+  { name: "Quickbase", src: logoQuickbase, mx: 14 },
+  { name: "GovCIO", src: logoGovCIO, mx: 16 },
+  { name: "Kindred at Home", src: logoKindred, mx: 16 },
+  { name: "Clearwater Analytics", src: logoClearwater, mx: 14 },
+  { name: "AllianceData", src: logoAlliance, mx: 14 },
+  { name: "naviHealth", src: logoNavihealth, mx: 10 },
+  { name: "Norstella", src: logoNorstella, mx: 10 },
+  { name: "Select Medical", src: logoSelect, scale: 0.7, mx: 6 },
+  { name: "BISYS", src: logoBisys, mx: 6 }
 ];
 
 const heroSlides = [
@@ -156,7 +156,7 @@ export default function Home() {
           <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
             {/* Render logos 3 times to ensure smooth infinite scroll */}
             {[...logos, ...logos, ...logos].map((logo, index) => (
-              <div key={index} className="flex-shrink-0 mx-8 w-44 h-16 flex items-center justify-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+              <div key={index} className="flex-shrink-0 w-44 h-16 flex items-center justify-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${logo.mx}px`, marginRight: `${logo.mx}px` }}>
                 <img 
                   src={logo.src} 
                   alt={`${logo.name} logo`} 
