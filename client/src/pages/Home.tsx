@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[52vh] md:min-h-[68vh] flex items-end pt-24 pb-12 overflow-hidden">
+      <section className="relative min-h-[60vh] md:min-h-[78vh] flex items-end pt-24 pb-12 overflow-hidden">
         <div 
           className="absolute inset-0 z-0 transition-opacity duration-1000"
           style={{
