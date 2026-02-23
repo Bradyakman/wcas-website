@@ -116,7 +116,7 @@ export default function Home() {
                   {heroSlides[0].title}
                 </h1>
                 <p className="text-lg md:text-xl text-white/80 mt-6 font-light">
-                  Partnering with leading management teams to build industry leaders
+                  For nearly five decades, WCAS has partnered with leading management teams to build industry leaders
                 </p>
               </div>
             </div>
