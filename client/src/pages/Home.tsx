@@ -13,7 +13,7 @@ import testimonial2 from "@/assets/images/testimonial-2.png";
 import logoTransfirst from "@assets/Transfirst_final.png";
 import logoLinq from "@assets/LINQ_1771799704131_trimmed.png";
 import logoShields from "@assets/Shields_final.png";
-import logoAvetta from "@assets/Avetta_final.png";
+import logoAvetta from "@assets/Avetta_final2.png";
 import logoAsurion from "@assets/Asurion_1771799704133_trimmed.png";
 import logoInnovAge from "@assets/InnovAge_1771799704134_trimmed.png";
 import logoQuickbase from "@assets/Quickbase_1771799704134_transparent.png";
