@@ -94,13 +94,15 @@ export default function Home() {
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:min-h-[78vh] flex items-end pt-24 pb-12 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[#002759]">
-          <img 
-            src={heroBg} 
-            alt="WCAS Conference Room" 
-            className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
-          />
-          <div className="absolute inset-0 bg-[#002759]/70"></div>
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-[#0d1f3c]/80"></div>
         </div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
