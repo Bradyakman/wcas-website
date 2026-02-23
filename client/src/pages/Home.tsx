@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden">
+      <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-end pt-24 pb-12 overflow-hidden">
         <div 
           className="absolute inset-0 z-0 transition-opacity duration-1000"
           style={{
@@ -112,12 +112,9 @@ export default function Home() {
             {/* Hero Content */}
             <div className="pb-32 md:pb-32 lg:pb-40 xl:pb-32">
               <div className="flex flex-col justify-center">
-                <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-heading font-extrabold text-white leading-[1.1] tracking-tighter mb-6 md:mb-8">
+                <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-heading font-extrabold text-white leading-[1.1] tracking-tighter">
                   {heroSlides[0].title}
                 </h1>
-                <p className="text-lg md:text-xl xl:text-2xl text-white/80 max-w-3xl leading-relaxed">
-                  {heroSlides[0].description}
-                </p>
               </div>
             </div>
             
