@@ -25,6 +25,7 @@ import logoNavihealth from "@assets/navihealth_final.png";
 import logoNorstella from "@assets/Norstella_final.png";
 import logoSelect from "@assets/Select_final.png";
 import logoBisys from "@assets/BISYS_final2.png";
+import logoLumexa from "@assets/Lumexa_final.png";
 
 import { useState, useEffect } from "react";
 
@@ -43,7 +44,8 @@ const logos = [
   { name: "naviHealth", src: logoNavihealth, mx: 26 },
   { name: "Norstella", src: logoNorstella, mx: 26 },
   { name: "Select Medical", src: logoSelect, scale: 0.7, mx: 22 },
-  { name: "BISYS", src: logoBisys, mx: 22 }
+  { name: "BISYS", src: logoBisys, mx: 22 },
+  { name: "Lumexa Imaging", src: logoLumexa, mx: 26 }
 ];
 
 const heroSlides = [
