@@ -219,7 +219,7 @@ export default function Home() {
                 <img 
                   src={techImg} 
                   alt="Team networking in bright office space" 
-                  className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
               <div className="p-10 md:p-12 flex-grow">
