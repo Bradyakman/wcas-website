@@ -173,9 +173,9 @@ export default function Home() {
       <section className="pb-32 bg-secondary/50">
         <div className="container mx-auto px-6 md:px-12">
           <div className="mb-20">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Approach</h2>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground leading-tight tracking-tight">
-              For nearly five decades, WCAS has partnered with industry leaders to reshape landscapes and drive growth.
+            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4 text-center">Our Approach</h2>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground leading-tight tracking-tight text-center">
+              For nearly five decades, WCAS has partnered with industry leaders to reshape landscapes and drive growth
             </h3>
           </div>
 
