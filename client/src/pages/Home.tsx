@@ -102,7 +102,7 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-[#0a1628]/85"></div>
+          <div className="absolute inset-0 bg-[#0a1628]/75"></div>
         </div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
