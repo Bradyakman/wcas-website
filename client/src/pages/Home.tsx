@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden">
+      <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden">
         <div 
           className="absolute inset-0 z-0 transition-opacity duration-1000"
           style={{
@@ -129,7 +129,7 @@ export default function Home() {
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both min-w-max md:min-w-0">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">18+</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">18</p>
                 <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[70px] md:max-w-[100px] leading-tight text-left">Funds Raised</p>
               </div>
               <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
@@ -333,7 +333,6 @@ export default function Home() {
           </Button>
         </div>
       </section>
-
       {/* Video Lightbox Modal */}
       {playingVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm p-4 md:p-8" onClick={() => setPlayingVideo(null)}>
