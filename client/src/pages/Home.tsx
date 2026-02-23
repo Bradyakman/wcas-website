@@ -115,9 +115,6 @@ export default function Home() {
                 <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-[1.1] tracking-tighter">
                   {heroSlides[0].title}
                 </h1>
-                <p className="text-lg md:text-xl text-white/80 mt-6 font-light">
-                  For nearly five decades, WCAS has partnered with leading management teams to build industry leaders
-                </p>
               </div>
             </div>
             
@@ -177,9 +174,6 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="mb-20">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4 text-center">Our Approach</h2>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground leading-tight tracking-tight text-center">
-              For nearly five decades, WCAS has partnered with industry leaders to reshape landscapes and drive growth
-            </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
