@@ -94,10 +94,10 @@ export default function Home() {
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:min-h-[78vh] flex items-end pt-24 pb-12 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[#002759]">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#001a3d] via-[#002759] to-[#003580]"></div>
-          <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[700px] h-[700px] rounded-full bg-[#0047ab]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[500px] h-[500px] rounded-full bg-[#4da3ff]/10 blur-3xl"></div>
+        <div className="absolute inset-0 z-0 bg-[#0a1628]">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0f1f3d] to-[#0a1628]"></div>
+          <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[700px] h-[700px] rounded-full bg-[#002759]/30 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[500px] h-[500px] rounded-full bg-[#1a3a6b]/15 blur-3xl"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full border border-white/5"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full border border-white/5"></div>
