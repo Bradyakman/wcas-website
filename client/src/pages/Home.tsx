@@ -148,12 +148,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Logos Ticker */}
-      <section className="py-12 border-t border-border overflow-hidden bg-secondary/50">
-        <div className="container mx-auto px-6 md:px-12 mb-8">
-          <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground text-center">Over 300 Companies Partnered</p>
+      {/* "Over 300" title on blue */}
+      <div className="bg-[#002759] pt-12 pb-4">
+        <div className="container mx-auto px-6 md:px-12">
+          <p className="text-sm font-semibold uppercase tracking-widest text-white/60 text-center">Over 300 Companies Partnered</p>
         </div>
-        <div className="relative w-full overflow-hidden flex items-center py-8">
+      </div>
+      {/* Logos Ticker on grey */}
+      <section className="py-8 overflow-hidden bg-secondary/50">
+        <div className="relative w-full overflow-hidden flex items-center py-4">
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/50 to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/50 to-transparent z-10 pointer-events-none"></div>
           
@@ -172,11 +175,11 @@ export default function Home() {
         </div>
       </section>
       {/* The 4 Boxes - Reimagined Layout */}
-      <section className="pb-32 bg-secondary/50">
+      <section className="pb-32 bg-[#002759]">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="max-w-3xl mb-20">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Approach</h2>
-            <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground leading-tight tracking-tight">
+          <div className="max-w-3xl mb-20 pt-16">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-[#4da3ff] mb-4">Our Approach</h2>
+            <h3 className="text-4xl md:text-5xl font-heading font-bold text-white leading-tight tracking-tight">
               Four decades working to reshape landscapes and drive growth.
             </h3>
           </div>
