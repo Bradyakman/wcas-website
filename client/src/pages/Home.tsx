@@ -161,7 +161,7 @@ export default function Home() {
                 <img 
                   src={logo.src} 
                   alt={`${logo.name} logo`} 
-                  className="max-w-full max-h-full object-contain"
+                  className="max-w-full max-h-full object-contain mix-blend-multiply"
                 />
               </div>
             ))}
