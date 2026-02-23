@@ -107,12 +107,12 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="max-w-5xl relative">
+          <div className="w-full relative">
             
             {/* Hero Content */}
-            <div className="pb-32 md:pb-32 lg:pb-40 xl:pb-32">
-              <div className="flex flex-col justify-center">
-                <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-[1.1] tracking-tighter">
+            <div className="pb-32 md:pb-32 lg:pb-40 xl:pb-32 w-full">
+              <div className="flex flex-col items-center justify-center">
+                <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-[1.1] tracking-tighter text-center">
                   {heroSlides[0].title}
                 </h1>
               </div>
