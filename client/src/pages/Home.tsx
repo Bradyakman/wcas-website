@@ -187,7 +187,6 @@ export default function Home() {
                   alt="Team member working on tablet" 
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-[#0d1f3c]/80"></div>
               </div>
               <div className="p-10 md:p-12 flex-grow">
                 <h4 className="text-2xl font-heading font-bold mb-4">Growth</h4>
@@ -205,7 +204,6 @@ export default function Home() {
                   alt="Team discussion in conference room" 
                   className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-[#0d1f3c]/80"></div>
               </div>
               <div className="p-10 md:p-12 flex-grow">
                 <h4 className="text-2xl font-heading font-bold mb-4">Talent</h4>
