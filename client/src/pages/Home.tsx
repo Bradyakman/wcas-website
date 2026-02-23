@@ -158,7 +158,7 @@ export default function Home() {
           <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
             {/* Render logos 3 times to ensure smooth infinite scroll */}
             {[...logos, ...logos, ...logos].map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-44 h-16 flex items-center justify-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${logo.mx}px`, marginRight: `${logo.mx}px` }}>
+              <div key={index} className="flex-shrink-0 w-[167px] h-[61px] flex items-center justify-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${logo.mx}px`, marginRight: `${logo.mx}px` }}>
                 <img 
                   src={logo.src} 
                   alt={`${logo.name} logo`} 
