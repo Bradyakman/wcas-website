@@ -21,7 +21,7 @@ import logoGovCIO from "@assets/GovCIO_1771799704134_trimmed.png";
 import logoKindred from "@assets/Kindred_final.png";
 import logoClearwater from "@assets/Clearwater-Analytics_1771799704135_trimmed.png";
 import logoAlliance from "@assets/AllianceData_1771799704135_trimmed.png";
-import logoNavihealth from "@assets/navihealth-jpg_1771799704136_trimmed.png";
+import logoNavihealth from "@assets/navihealth_final.png";
 import logoNorstella from "@assets/Norstella_final.png";
 import logoSelect from "@assets/Select_final.png";
 import logoBisys from "@assets/BISYS_final.png";
