@@ -29,21 +29,21 @@ import logoBisys from "@assets/BISYS-logo-jpg_1771799704137.webp";
 import { useState, useEffect } from "react";
 
 const logos = [
-  { name: "Transfirst", src: logoTransfirst },
-  { name: "LINQ", src: logoLinq },
-  { name: "Shields Health", src: logoShields },
-  { name: "Avetta", src: logoAvetta },
-  { name: "Asurion", src: logoAsurion },
-  { name: "InnovAge", src: logoInnovAge },
-  { name: "Quickbase", src: logoQuickbase },
-  { name: "GovCIO", src: logoGovCIO },
-  { name: "Kindred at Home", src: logoKindred },
-  { name: "Clearwater Analytics", src: logoClearwater },
-  { name: "AllianceData", src: logoAlliance },
-  { name: "naviHealth", src: logoNavihealth },
-  { name: "Norstella", src: logoNorstella },
-  { name: "Select Medical", src: logoSelect },
-  { name: "BISYS", src: logoBisys }
+  { name: "Transfirst", src: logoTransfirst, height: "28px" },
+  { name: "LINQ", src: logoLinq, height: "40px" },
+  { name: "Shields Health", src: logoShields, height: "36px" },
+  { name: "Avetta", src: logoAvetta, height: "50px" },
+  { name: "Asurion", src: logoAsurion, height: "36px" },
+  { name: "InnovAge", src: logoInnovAge, height: "40px" },
+  { name: "Quickbase", src: logoQuickbase, height: "36px" },
+  { name: "GovCIO", src: logoGovCIO, height: "40px" },
+  { name: "Kindred at Home", src: logoKindred, height: "36px" },
+  { name: "Clearwater Analytics", src: logoClearwater, height: "40px" },
+  { name: "AllianceData", src: logoAlliance, height: "40px" },
+  { name: "naviHealth", src: logoNavihealth, height: "36px" },
+  { name: "Norstella", src: logoNorstella, height: "32px" },
+  { name: "Select Medical", src: logoSelect, height: "40px" },
+  { name: "BISYS", src: logoBisys, height: "40px" }
 ];
 
 const heroSlides = [
@@ -156,11 +156,12 @@ export default function Home() {
           <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
             {/* Render logos 3 times to ensure smooth infinite scroll */}
             {[...logos, ...logos, ...logos].map((logo, index) => (
-              <div key={index} className="flex-shrink-0 px-8 mx-4 w-48 md:w-56 h-20 flex items-center justify-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+              <div key={index} className="flex-shrink-0 px-8 mx-4 flex items-center justify-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
                 <img 
                   src={logo.src} 
                   alt={`${logo.name} logo`} 
-                  className="max-w-full max-h-full object-contain mix-blend-multiply"
+                  className="object-contain mix-blend-multiply"
+                  style={{ height: logo.height, width: 'auto' }}
                 />
               </div>
             ))}
