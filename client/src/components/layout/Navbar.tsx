@@ -50,12 +50,10 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/">
-          <a className={`text-2xl md:text-3xl font-heading font-bold tracking-tighter ${
-            !isScrolled && isDarkHeroPage ? "text-white" : "text-primary"
-          }`} data-testid="link-home">
-            WCAS
-          </a>
+        <Link href="/" className={`text-2xl md:text-3xl font-heading font-bold tracking-tighter ${
+          !isScrolled && isDarkHeroPage ? "text-white" : "text-primary"
+        }`} data-testid="link-home">
+          WCAS
         </Link>
 
         {/* Desktop Nav */}
@@ -81,10 +79,8 @@ export function Navbar() {
                 <div className="absolute top-full left-0 pt-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200">
                   <div className="bg-white rounded-lg shadow-lg border border-border py-2 min-w-[200px] flex flex-col">
                     {link.dropdown.map((dropItem) => (
-                      <Link key={dropItem.name} href={dropItem.href}>
-                        <a className="px-4 py-2 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 transition-colors">
-                          {dropItem.name}
-                        </a>
+                      <Link key={dropItem.name} href={dropItem.href} className="px-4 py-2 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 transition-colors">
+                        {dropItem.name}
                       </Link>
                     ))}
                   </div>
