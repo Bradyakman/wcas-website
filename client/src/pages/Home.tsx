@@ -98,9 +98,20 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0f1f3d] to-[#0a1628]"></div>
           <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[700px] h-[700px] rounded-full bg-[#002759]/30 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[500px] h-[500px] rounded-full bg-[#1a3a6b]/15 blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full border border-white/5"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full border border-white/5"></div>
+          <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+          <div className="absolute top-[15%] right-[10%] w-[400px] h-[400px] border border-white/5 rotate-45"></div>
+          <div className="absolute top-[20%] right-[12%] w-[300px] h-[300px] border border-white/[0.03] rotate-45"></div>
+          <div className="absolute bottom-[10%] left-[5%] w-[200px] h-[200px] border border-white/5 rotate-12"></div>
+          <div className="absolute top-[30%] right-[25%] w-2 h-2 rounded-full bg-[#4da3ff]/30"></div>
+          <div className="absolute top-[50%] right-[15%] w-1.5 h-1.5 rounded-full bg-[#4da3ff]/20"></div>
+          <div className="absolute top-[20%] right-[40%] w-1 h-1 rounded-full bg-white/20"></div>
+          <div className="absolute top-[60%] right-[30%] w-1.5 h-1.5 rounded-full bg-white/15"></div>
+          <div className="absolute top-[40%] right-[50%] w-1 h-1 rounded-full bg-[#4da3ff]/25"></div>
+          <svg className="absolute top-[10%] right-[8%] w-[500px] h-[500px] opacity-[0.04]" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M250 50 L450 150 L450 350 L250 450 L50 350 L50 150 Z" stroke="white" strokeWidth="1"/>
+            <path d="M250 100 L400 175 L400 325 L250 400 L100 325 L100 175 Z" stroke="white" strokeWidth="1"/>
+            <path d="M250 150 L350 200 L350 300 L250 350 L150 300 L150 200 Z" stroke="white" strokeWidth="1"/>
+          </svg>
         </div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
