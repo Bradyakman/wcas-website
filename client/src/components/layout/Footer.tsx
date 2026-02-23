@@ -8,6 +8,7 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row gap-16 mb-16">
           <div className="lg:w-1/4">
             <img src={wcasLogoWhite} alt="WCAS" className="h-10 mb-8" />
+            <h4 className="font-heading font-semibold mb-4 uppercase tracking-wider text-sm text-white/80">Offices</h4>
             <ul className="space-y-3 text-white/60 text-sm">
               <li>New York</li>
               <li>San Francisco</li>
