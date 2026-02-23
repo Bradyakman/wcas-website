@@ -5,14 +5,16 @@ export function Footer() {
   return (
     <footer className="bg-[#0f172a] text-white pt-20 pb-10">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div>
-            <img src={wcasLogoWhite} alt="WCAS" className="h-10 mb-6" />
-            <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Leading in Healthcare and Technology investments through thought leadership, culture, and results.
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+          <div className="lg:col-span-2">
+            <img src={wcasLogoWhite} alt="WCAS" className="h-10 mb-8" />
+            <h4 className="font-heading font-semibold mb-6 uppercase tracking-wider text-sm text-white/80">Locations</h4>
+            <ul className="space-y-4 text-white/60 text-sm">
+              <li>New York</li>
+              <li>San Francisco</li>
+            </ul>
           </div>
-          
+
           <div>
             <h4 className="font-heading font-semibold mb-6 uppercase tracking-wider text-sm text-white/80">Focus Areas</h4>
             <ul className="space-y-4">
@@ -29,14 +31,6 @@ export function Footer() {
               <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">News & Perspectives</a></li>
               <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Contact</a></li>
               <li><a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Investor Portal</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-heading font-semibold mb-6 uppercase tracking-wider text-sm text-white/80">Locations</h4>
-            <ul className="space-y-4 text-white/60 text-sm">
-              <li>New York</li>
-              <li>San Francisco</li>
             </ul>
           </div>
         </div>
