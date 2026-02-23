@@ -112,7 +112,7 @@ export default function Home() {
             {/* Hero Content */}
             <div className="pb-32 md:pb-32 lg:pb-40 xl:pb-32">
               <div className="flex flex-col justify-center">
-                <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-heading font-extrabold text-white leading-[1.1] tracking-tighter">
+                <h1 className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-heading font-extrabold text-white leading-[1.1] tracking-tighter">
                   {heroSlides[0].title}
                 </h1>
               </div>
