@@ -102,8 +102,8 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-white/80 backdrop-blur-[4px]"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-[#002759]/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#002759] via-transparent to-transparent"></div>
         </div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -112,10 +112,10 @@ export default function Home() {
             {/* Hero Content */}
             <div className="pb-32 md:pb-32 lg:pb-40 xl:pb-32">
               <div className="flex flex-col justify-center">
-                <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-heading font-extrabold text-foreground leading-[1.1] tracking-tighter mb-6 md:mb-8">
+                <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-heading font-extrabold text-white leading-[1.1] tracking-tighter mb-6 md:mb-8">
                   {heroSlides[0].title}
                 </h1>
-                <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground max-w-3xl leading-relaxed">
+                <p className="text-lg md:text-xl xl:text-2xl text-white/80 max-w-3xl leading-relaxed">
                   {heroSlides[0].description}
                 </p>
               </div>
