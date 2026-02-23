@@ -109,55 +109,18 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="max-w-5xl relative">
             
-            {/* Carousel Content */}
-            <div className="grid pb-32 md:pb-32 lg:pb-40 xl:pb-32">
-              {heroSlides.map((slide, index) => (
-                <div 
-                  key={index}
-                  className={`[grid-area:1/1] flex flex-col justify-center transition-all duration-700 ease-in-out ${
-                    index === currentSlide 
-                      ? "opacity-100 translate-y-0 pointer-events-auto z-10" 
-                      : "opacity-0 translate-y-8 pointer-events-none z-0"
-                  }`}
-                >
-                  <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-heading font-extrabold text-foreground leading-[1.1] tracking-tighter mb-6 md:mb-8">
-                    {slide.title}
-                  </h1>
-                  <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground max-w-3xl leading-relaxed">
-                    {slide.description}
-                  </p>
-                </div>
-              ))}
+            {/* Hero Content */}
+            <div className="pb-32 md:pb-32 lg:pb-40 xl:pb-32">
+              <div className="flex flex-col justify-center">
+                <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-heading font-extrabold text-foreground leading-[1.1] tracking-tighter mb-6 md:mb-8">
+                  {heroSlides[0].title}
+                </h1>
+                <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground max-w-3xl leading-relaxed">
+                  {heroSlides[0].description}
+                </p>
+              </div>
             </div>
             
-            {/* Carousel Indicators */}
-            <div className="absolute -left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-3">
-              {heroSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? "h-8 bg-primary" : "h-2 bg-primary/20 hover:bg-primary/50"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-            
-            {/* Mobile Indicators */}
-            <div className="mt-12 flex gap-3 lg:hidden">
-              {heroSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? "w-8 bg-primary" : "w-2 bg-primary/20"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-
           </div>
         </div>
 
