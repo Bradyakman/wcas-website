@@ -115,6 +115,9 @@ export default function Home() {
                 <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-[1.1] tracking-tighter">
                   {heroSlides[0].title}
                 </h1>
+                <p className="text-lg md:text-xl text-white/80 mt-6 font-light">
+                  Partnering with leading management teams to build industry leaders
+                </p>
               </div>
             </div>
             
