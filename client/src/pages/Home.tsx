@@ -151,7 +151,7 @@ export default function Home() {
       {/* Logos Ticker */}
       <section className="py-12 border-t border-border overflow-hidden bg-secondary/50">
         <div className="container mx-auto px-6 md:px-12 mb-8">
-          <p className="text-xl md:text-2xl font-bold uppercase tracking-widest text-foreground text-center">Over 300 Companies Partnered</p>
+          <p className="text-xl md:text-2xl font-bold uppercase tracking-widest text-primary text-center">WCAS Has Partnered With Over 190 Companies</p>
         </div>
         <div className="relative w-full overflow-hidden flex items-center py-8">
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/50 to-transparent z-10 pointer-events-none"></div>
@@ -176,7 +176,7 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="mb-20">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Our Approach</h2>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight tracking-tight">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground leading-tight tracking-tight">
               Four decades working to reshape landscapes and drive growth.
             </h3>
           </div>
