@@ -182,7 +182,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
             {/* Box 1 */}
             <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
-              <div className="h-48 w-full overflow-hidden">
+              <div className="h-72 w-full overflow-hidden">
                 <img 
                   src={growthImg} 
                   alt="Team member working on tablet" 
@@ -199,7 +199,7 @@ export default function Home() {
 
             {/* Box 2 */}
             <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
-              <div className="h-48 w-full overflow-hidden">
+              <div className="h-72 w-full overflow-hidden">
                 <img 
                   src={talentImg} 
                   alt="Team discussion in conference room" 
@@ -216,7 +216,7 @@ export default function Home() {
 
             {/* Box 3 */}
             <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
-              <div className="h-48 w-full overflow-hidden">
+              <div className="h-72 w-full overflow-hidden">
                 <img 
                   src={techImg} 
                   alt="Team networking in bright office space" 
@@ -233,7 +233,7 @@ export default function Home() {
 
             {/* Box 4 */}
             <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
-              <div className="h-48 w-full overflow-hidden">
+              <div className="h-72 w-full overflow-hidden">
                 <img 
                   src={maImg} 
                   alt="Team looking out over city skyline" 
