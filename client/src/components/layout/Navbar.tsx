@@ -1,6 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,10 +51,10 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" className={`text-3xl md:text-4xl font-bold tracking-wide ${
-          !isScrolled && isDarkHeroPage ? "text-white" : "text-primary"
-        }`} style={{ fontFamily: "'Playfair Display', serif" }} data-testid="link-home">
-          WCAS
+        <Link href="/" data-testid="link-home">
+          <img src={wcasLogo} alt="WCAS" className={`h-8 md:h-10 w-auto ${
+            !isScrolled && isDarkHeroPage ? "brightness-0 invert" : ""
+          }`} />
         </Link>
 
         {/* Desktop Nav */}
