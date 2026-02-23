@@ -50,7 +50,7 @@ const logos = [
 const heroSlides = [
   {
     title: (
-      <>Supporting innovation and growth in <span className="text-white underline decoration-[#4da3ff] decoration-4 underline-offset-8">Technology</span> and <span className="text-white underline decoration-[#4da3ff] decoration-4 underline-offset-8">Healthcare</span></>
+      <>Supporting innovation and growth in <span className="font-extrabold">Technology</span> and <span className="font-extrabold">Healthcare</span></>
     ),
     description: "Forming ongoing partnerships with leading management teams to build exceptional companies."
   },
@@ -112,7 +112,7 @@ export default function Home() {
             {/* Hero Content */}
             <div className="pb-40 md:pb-44 lg:pb-48 xl:pb-44">
               <div className="flex flex-col justify-center">
-                <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-[1.1] tracking-tighter">
+                <h1 className="text-5xl md:text-7xl font-heading font-light text-white leading-[1.1] tracking-tighter">
                   {heroSlides[0].title}
                 </h1>
               </div>
