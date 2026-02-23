@@ -24,7 +24,7 @@ import logoAlliance from "@assets/AllianceData_1771799704135_trimmed.png";
 import logoNavihealth from "@assets/navihealth_final.png";
 import logoNorstella from "@assets/Norstella_final.png";
 import logoSelect from "@assets/Select_final.png";
-import logoBisys from "@assets/BISYS_final.png";
+import logoBisys from "@assets/BISYS_final2.png";
 
 import { useState, useEffect } from "react";
 
