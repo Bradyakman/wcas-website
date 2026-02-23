@@ -11,17 +11,17 @@ import testimonial2 from "@/assets/images/testimonial-2.png";
 
 // Company Logos
 import logoTransfirst from "@assets/Transfirst-4_1771799704120.png";
-import logoLinq from "@assets/LINQ_1771799704131.png";
+import logoLinq from "@assets/LINQ_1771799704131_trimmed.png";
 import logoShields from "@assets/Shields_logo_transparent_LRG-3-1024x272_1771799704132.png";
 import logoAvetta from "@assets/Avetta-5-e1733175555759_1771799704133_transparent.png";
-import logoAsurion from "@assets/Asurion_1771799704133_transparent.png";
-import logoInnovAge from "@assets/InnovAge_1771799704134.png";
-import logoQuickbase from "@assets/Quickbase_1771799704134.png";
-import logoGovCIO from "@assets/GovCIO_1771799704134.png";
+import logoAsurion from "@assets/Asurion_1771799704133_trimmed.png";
+import logoInnovAge from "@assets/InnovAge_1771799704134_trimmed.png";
+import logoQuickbase from "@assets/Quickbase_1771799704134_trimmed.png";
+import logoGovCIO from "@assets/GovCIO_1771799704134_trimmed.png";
 import logoKindred from "@assets/KindredAtHome_Logo_1771799704135_transparent.png";
-import logoClearwater from "@assets/Clearwater-Analytics_1771799704135.png";
-import logoAlliance from "@assets/AllianceData_1771799704135_transparent.png";
-import logoNavihealth from "@assets/navihealth-jpg_1771799704136_transparent.png";
+import logoClearwater from "@assets/Clearwater-Analytics_1771799704135_trimmed.png";
+import logoAlliance from "@assets/AllianceData_1771799704135_trimmed.png";
+import logoNavihealth from "@assets/navihealth-jpg_1771799704136_trimmed.png";
 import logoNorstella from "@assets/Norstella_color_positive_RGB_-_USE_THIS-1-1024x354_1771799704136.png";
 import logoSelect from "@assets/Select_Medical_2x-3_1771799704136.png";
 import logoBisys from "@assets/BISYS-logo-jpg_1771799704137.webp";
@@ -42,7 +42,7 @@ const logos = [
   { name: "AllianceData", src: logoAlliance },
   { name: "naviHealth", src: logoNavihealth },
   { name: "Norstella", src: logoNorstella },
-  { name: "Select Medical", src: logoSelect },
+  { name: "Select Medical", src: logoSelect, scale: 0.7 },
   { name: "BISYS", src: logoBisys }
 ];
 
@@ -161,6 +161,7 @@ export default function Home() {
                   src={logo.src} 
                   alt={`${logo.name} logo`} 
                   className="max-w-full max-h-full object-contain mix-blend-multiply"
+                  style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
                 />
               </div>
             ))}
