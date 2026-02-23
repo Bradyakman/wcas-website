@@ -13,22 +13,21 @@ import testimonial2 from "@/assets/images/testimonial-2.png";
 import logoTransfirst from "@assets/Transfirst-4_1771799704120.png";
 import logoLinq from "@assets/LINQ_1771799704131.png";
 import logoShields from "@assets/Shields_logo_transparent_LRG-3-1024x272_1771799704132.png";
-import logoAvetta from "@assets/Avetta-5-e1733175555759_1771799704133.png";
-import logoAsurion from "@assets/Asurion_1771799704133.png";
+import logoAvetta from "@assets/Avetta-5-e1733175555759_1771799704133_transparent.png";
+import logoAsurion from "@assets/Asurion_1771799704133_transparent.png";
 import logoInnovAge from "@assets/InnovAge_1771799704134.png";
 import logoQuickbase from "@assets/Quickbase_1771799704134.png";
 import logoGovCIO from "@assets/GovCIO_1771799704134.png";
-import logoKindred from "@assets/KindredAtHome_Logo_1771799704135.png";
+import logoKindred from "@assets/KindredAtHome_Logo_1771799704135_transparent.png";
 import logoClearwater from "@assets/Clearwater-Analytics_1771799704135.png";
-import logoAlliance from "@assets/AllianceData_1771799704135.png";
-import logoNavihealth from "@assets/navihealth-jpg_1771799704136.webp";
+import logoAlliance from "@assets/AllianceData_1771799704135_transparent.png";
+import logoNavihealth from "@assets/navihealth-jpg_1771799704136_transparent.png";
 import logoNorstella from "@assets/Norstella_color_positive_RGB_-_USE_THIS-1-1024x354_1771799704136.png";
 import logoSelect from "@assets/Select_Medical_2x-3_1771799704136.png";
 import logoBisys from "@assets/BISYS-logo-jpg_1771799704137.webp";
 
 import { useState, useEffect } from "react";
 
-// Placeholder logos array
 const logos = [
   { name: "Transfirst", src: logoTransfirst },
   { name: "LINQ", src: logoLinq },
