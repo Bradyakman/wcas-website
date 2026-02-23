@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Cpu, Briefcase, Quote, Play, X } from "lucide-react";
-import heroBg from "@assets/healthcare-portfolio-RESIZE-jpg_1771595437015.webp";
+import heroBg from "@assets/1119_WCAS_March_7_23_by_John_Abbott_1771874713215.JPG";
 import missionBg from "@assets/2345234534_1771799538730.jpg";
 import growthImg from "@assets/WCAS_March-13_04509616.mov.20_53_56_26.Still001-scaled_1771765691568.webp";
 import talentImg from "@assets/137_WCAS_March-6-23-by-John-Abbott-scaled_1771765917799.jpg";
