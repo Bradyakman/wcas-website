@@ -94,7 +94,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[34vh] md:min-h-[44vh] flex items-center pt-16 pb-8 overflow-hidden">
+      <section className="relative min-h-[34vh] md:min-h-[44vh] flex items-center pt-24 pb-8 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#0d1f3c]"></div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center justify-center h-full">
