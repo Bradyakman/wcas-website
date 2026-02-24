@@ -40,7 +40,6 @@ export function Navbar() {
         { name: "HCIT", href: "/hcit" }
       ]
     },
-    { name: "Contact", href: "/#contact" },
     { name: "News", href: "/news" },
     { name: "Investor Portal", href: "/#investor" },
   ];
