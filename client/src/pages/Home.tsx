@@ -94,12 +94,12 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[42vh] md:min-h-[55vh] flex items-center pt-16 pb-8 overflow-hidden">
+      <section className="relative min-h-[34vh] md:min-h-[44vh] flex items-center pt-16 pb-8 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#0d1f3c]"></div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center justify-center h-full">
           <div className="pb-40 md:pb-44 lg:pb-48 xl:pb-44 flex flex-col items-center text-center">
-            <img src={wcasLogo} alt="WCAS" className="h-20 md:h-28 w-auto brightness-0 invert mb-10" />
+            <img src={wcasLogo} alt="WCAS" className="h-20 md:h-28 w-auto brightness-0 invert mb-14" />
             <h1 className="text-[1.2rem] md:text-[1.5rem] font-bold text-white leading-[1.3] tracking-normal max-w-3xl" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
               {heroSlides[0].title}
             </h1>
