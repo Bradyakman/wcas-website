@@ -50,7 +50,7 @@ const logos = [
 const heroSlides = [
   {
     title: (
-      <>For nearly five decades, WCAS has partnered with industry leaders to reshape landscapes and drive growth</>
+      <>For 45+ years, WCAS has partnered with industry leaders across technology & healthcare to reshape landscapes and drive growth</>
     ),
     description: ""
   },
@@ -102,7 +102,7 @@ export default function Home() {
             {/* Hero Content */}
             <div className="pb-40 md:pb-44 lg:pb-48 xl:pb-44">
               <div className="flex flex-col justify-center">
-                <h1 className="text-[1.6rem] md:text-[2.2rem] font-bold text-white leading-[1.2] tracking-normal" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
+                <h1 className="text-[1.4rem] md:text-[1.85rem] font-bold text-white leading-[1.2] tracking-normal" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
                   {heroSlides[0].title}
                 </h1>
               </div>
