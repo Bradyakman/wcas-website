@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Cpu, Briefcase, Quote, Play, X } from "lucide-react";
 import heroBg from "@assets/1115_WCAS_March_7_23_by_John_Abbott_1771874983441.JPG";
+import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import missionBg from "@assets/2345234534_1771799538730.jpg";
 import growthImg from "@assets/WCAS_March-13_04509616.mov.20_53_56_26.Still001-scaled_1771765691568.webp";
 import talentImg from "@assets/137_WCAS_March-6-23-by-John-Abbott-scaled_1771765917799.jpg";
@@ -93,21 +94,15 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[42vh] md:min-h-[55vh] flex items-end pt-16 pb-8 overflow-hidden">
+      <section className="relative min-h-[42vh] md:min-h-[55vh] flex items-center pt-16 pb-8 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#0d1f3c]"></div>
 
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="max-w-5xl relative">
-            
-            {/* Hero Content */}
-            <div className="pb-40 md:pb-44 lg:pb-48 xl:pb-44">
-              <div className="flex flex-col justify-center">
-                <h1 className="text-[1.4rem] md:text-[1.85rem] font-bold text-white leading-[1.2] tracking-normal" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
-                  {heroSlides[0].title}
-                </h1>
-              </div>
-            </div>
-            
+        <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center justify-center h-full">
+          <div className="pb-40 md:pb-44 lg:pb-48 xl:pb-44 flex flex-col items-center text-center">
+            <img src={wcasLogo} alt="WCAS" className="h-20 md:h-28 w-auto brightness-0 invert mb-6" />
+            <h1 className="text-[1.2rem] md:text-[1.5rem] font-bold text-white leading-[1.3] tracking-normal max-w-3xl" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
+              {heroSlides[0].title}
+            </h1>
           </div>
         </div>
 
