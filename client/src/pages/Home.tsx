@@ -169,7 +169,7 @@ export default function Home() {
                 />
               </div>
               <div className="p-10 md:p-12 flex-grow">
-                <h4 className="text-2xl font-heading font-bold mb-4">Growth</h4>
+                <h4 className="text-2xl font-heading font-bold mb-4">Healthcare</h4>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Guiding sustainable organic growth strategies
                 </p>
@@ -186,46 +186,13 @@ export default function Home() {
                 />
               </div>
               <div className="p-10 md:p-12 flex-grow">
-                <h4 className="text-2xl font-heading font-bold mb-4">Talent</h4>
+                <h4 className="text-2xl font-heading font-bold mb-4">Technology</h4>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Cultivating top teams and company culture
                 </p>
               </div>
             </div>
 
-            {/* Box 3 */}
-            <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
-              <div className="h-72 w-full overflow-hidden">
-                <img 
-                  src={techImg} 
-                  alt="Team networking in bright office space" 
-                  className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
-              </div>
-              <div className="p-10 md:p-12 flex-grow">
-                <h4 className="text-2xl font-heading font-bold mb-4">Technology</h4>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  Fueling tech evolution and unlocking new potential
-                </p>
-              </div>
-            </div>
-
-            {/* Box 4 */}
-            <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
-              <div className="h-72 w-full overflow-hidden">
-                <img 
-                  src={maImg} 
-                  alt="Team looking out over city skyline" 
-                  className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
-              </div>
-              <div className="p-10 md:p-12 flex-grow">
-                <h4 className="text-2xl font-heading font-bold mb-4">M & A</h4>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  Evaluating and sourcing prime targets
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
