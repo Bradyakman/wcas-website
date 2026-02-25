@@ -29,7 +29,6 @@ import logoSelect from "@assets/Select_final.png";
 import logoBisys from "@assets/BISYS_final2.png";
 import logoLumexa from "@assets/Lumexa_final.png";
 import shieldsFullLogo from "@assets/image_1772033135330.png";
-import quickbaseWhiteLogo from "@assets/quickbase_white_transparent_1772033532470.png";
 
 import { useState, useEffect, useRef } from "react";
 
@@ -73,7 +72,7 @@ const heroSlides = [
 ];
 
 const wcasVideos = [
-  { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseWhiteLogo },
+  { id: "861242809", title: "Paths to Growth", partner: "quickbase" },
   { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS" },
   { id: "861242949", title: "Strategic Growth Investment", partner: "TrueCommerce" },
   { id: "913387297", title: "Building Sustainable Platforms", partner: "Concentra" },
@@ -265,16 +264,12 @@ export default function Home() {
                     >
                       <div className="flex items-center justify-center gap-4 md:gap-6 h-full w-full group-hover:scale-[1.02] transition-transform duration-500">
                         <div className="text-right flex-1 flex justify-end">
-                          <h3 className="text-base md:text-xl font-bold font-heading leading-tight">{video.title}</h3>
+                          <h3 className="text-sm md:text-base font-bold font-heading leading-tight">{video.title}</h3>
                         </div>
                         <div className="w-px h-12 md:h-16 bg-white/20"></div>
                         <div className="text-left flex-1">
-                          <p className="text-xs text-white/60 mb-2 tracking-wide">In Partnership with</p>
-                          {'partnerLogo' in video && video.partnerLogo ? (
-                            <img src={video.partnerLogo} alt={video.partner} className="h-12 md:h-14 w-auto" />
-                          ) : (
-                            <h4 className="text-lg md:text-xl font-bold font-heading tracking-tight">{video.partner}</h4>
-                          )}
+                          <p className="text-[10px] text-white/60 mb-1 tracking-wide">In Partnership with</p>
+                          <h4 className="text-base md:text-lg font-bold font-heading tracking-tight">{video.partner}</h4>
                         </div>
                       </div>
                       
