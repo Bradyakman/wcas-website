@@ -29,6 +29,7 @@ import logoSelect from "@assets/image_1772034518225.png";
 import logoBisys from "@assets/BISYS_final2.png";
 import logoLumexa from "@assets/Lumexa_final.png";
 import shieldsFullLogo from "@assets/image_1772033135330.png";
+import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 
 import { useState, useEffect, useRef } from "react";
 
@@ -72,7 +73,7 @@ const heroSlides = [
 ];
 
 const wcasVideos = [
-  { id: "861242809", title: "Paths to Growth", partner: "quickbase" },
+  { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo },
   { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS" },
   { id: "861242949", title: "Paths to Growth", partner: "absorb" },
   { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella" },
@@ -314,7 +315,11 @@ export default function Home() {
                           <div className="w-px h-12 md:h-16 bg-white/20"></div>
                           <div className="text-left flex-1">
                             <p className="text-xs text-white/60 mb-1 tracking-wide">In Partnership with</p>
-                            <h4 className="text-lg md:text-2xl font-bold font-heading tracking-tight">{video.partner}</h4>
+                            {'partnerLogo' in video && video.partnerLogo ? (
+                              <img src={video.partnerLogo} alt={video.partner} className="h-8 md:h-10 w-auto" />
+                            ) : (
+                              <h4 className="text-lg md:text-2xl font-bold font-heading tracking-tight">{video.partner}</h4>
+                            )}
                           </div>
                         </div>
                       )}
