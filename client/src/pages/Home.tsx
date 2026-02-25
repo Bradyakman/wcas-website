@@ -179,7 +179,7 @@ export default function Home() {
 
         <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center justify-center h-full">
           <div className="pb-40 md:pb-44 lg:pb-48 xl:pb-44 flex flex-col items-center text-center">
-            <img src={wcasLogo} alt="WCAS" className="h-20 md:h-28 w-auto brightness-0 invert mb-14" />
+            <span className="text-white font-heading font-bold text-6xl md:text-8xl tracking-tight mb-14 block" style={{ fontFamily: "'bilo', serif" }}>hi ann</span>
             <h1 className="text-[1.386rem] md:text-[1.733rem] font-bold text-white leading-[1.3] tracking-normal max-w-4xl" >
               {heroSlides[0].title}
             </h1>
