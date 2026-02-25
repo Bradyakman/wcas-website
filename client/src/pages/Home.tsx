@@ -435,7 +435,15 @@ export default function Home() {
                 desc: "A leading private equity firm with a 45-year track record invests in the gold standard for risk management..."
               }
             ].map((news, i) => (
-              <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 h-full">
+              <a
+                href="#"
+                key={i}
+                className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl active:shadow-xl focus-visible:shadow-xl hover:-translate-y-0.5 active:-translate-y-0.5 focus-visible:-translate-y-0.5 transition-all duration-300 border border-border/50 hover:border-primary/30 active:border-primary/30 focus-visible:border-primary/30 h-full cursor-pointer no-underline text-inherit focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+                onTouchStart={(e) => e.currentTarget.classList.add('is-pressed')}
+                onTouchEnd={(e) => { const el = e.currentTarget; setTimeout(() => el.classList.remove('is-pressed'), 150); }}
+                onTouchCancel={(e) => e.currentTarget.classList.remove('is-pressed')}
+              >
                 <div className="p-8 flex-grow flex flex-col">
                   <div className="flex items-center gap-4 mb-6 text-sm">
                     <span className="text-primary font-bold tracking-wider uppercase">{news.category}</span>
