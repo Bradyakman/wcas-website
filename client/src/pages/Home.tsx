@@ -256,7 +256,7 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-[#002759]/80"></div>
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(13,31,60,0.88) 0%, rgba(0,39,89,0.8) 30%, rgba(0,39,89,0.78) 100%)' }}></div>
         </div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">

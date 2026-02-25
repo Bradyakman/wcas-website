@@ -1,0 +1,45 @@
+Rework ONLY the middle “Our Mission” section to match the top/bottom navy a bit better, but keep the current look. The last attempt made it too dark and made the futuristic network background look smaller. Do NOT do that.
+
+Hard constraints:
+- Do NOT change the top hero section.
+- Do NOT change the bottom-most section.
+- Do NOT reduce the size/coverage of the network background image.
+  - Keep background-size the same as it is now (or larger), and keep its current position.
+- Do NOT introduce heavy dark overlays that make the whole section moodier.
+
+Goal:
+- Make the middle section’s TOP EDGE slightly closer to the hero navy (small shift only).
+- Keep the existing gradient feel and keep the network image prominent and large.
+
+What to change (subtle only):
+1) Sample the hero navy from computed styles (exact rgb/hex).
+2) Adjust the middle section gradient so the top 0–30% blends toward the hero navy, but only by a small amount.
+   - Keep overall brightness similar to current.
+   - Do not flatten to a single dark navy.
+3) Keep the network image layer unchanged in size/position.
+4) If there’s an overlay tint layer, reduce its opacity slightly and shift its color toward the hero navy, rather than adding new layers.
+
+Suggested gentle gradient target (tune slightly, don’t overdo):
+- Top stop: hero navy at ~0–10% but with low strength (or blended using opacity)
+- Mid stop: keep close to current mid tone
+- Bottom stop: keep current brighter blue so the image still pops
+
+Example approach:
+- background-image:
+  linear-gradient(180deg,
+    rgba(<HERO_NAVY_RGB>, 0.65) 0%,
+    rgba(<CURRENT_MIDDLE_RGB>, 0.85) 35%,
+    rgba(<CURRENT_MIDDLE_BOTTOM_RGB>, 1) 100%
+  ),
+  url(<existing network image>);
+(Use the existing current colors for mid/bottom and only nudge the top.)
+
+Verification (required):
+- Provide computed background color at the top edge of:
+  - hero
+  - middle section
+Middle should move closer to hero, but not become darker than the current middle.
+
+Deliverable:
+- Diffs (files + exact lines changed).
+- Include before/after computed rgb/hex at the middle top edge.
