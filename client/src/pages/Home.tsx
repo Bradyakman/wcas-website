@@ -52,7 +52,7 @@ const logos = [
   { name: "AllianceData", src: logoAlliance, mx: 30 },
   { name: "naviHealth", src: logoNavihealth, mx: 26 },
   { name: "Norstella", src: logoNorstella, mx: 26 },
-  { name: "Select Medical", src: logoSelectColor, scale: 0.7, mx: 22 },
+  { name: "Select Medical", src: logoSelectColor, scale: 0.77, mx: 22 },
   { name: "BISYS", src: logoBisys, mx: 22, scale: 0.7 },
   { name: "Lumexa Imaging", src: logoLumexa, mx: 26, scale: 0.7 }
 ];
