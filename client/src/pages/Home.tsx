@@ -99,6 +99,11 @@ export default function Home() {
   const scrollLeft = useRef(0);
   const hasDragged = useRef(false);
 
+  const newsDragging = useRef(false);
+  const newsStartX = useRef(0);
+  const newsScrollLeft = useRef(0);
+  const newsHasDragged = useRef(false);
+
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!sliderRef.current) return;
     isDragging.current = true;
@@ -123,6 +128,34 @@ export default function Home() {
     isDragging.current = false;
     sliderRef.current.style.cursor = 'grab';
     sliderRef.current.style.scrollSnapType = 'x mandatory';
+  };
+
+  const handleNewsMouseDown = (e: React.MouseEvent) => {
+    if (!newsScrollRef.current) return;
+    newsDragging.current = true;
+    newsHasDragged.current = false;
+    newsStartX.current = e.pageX - newsScrollRef.current.offsetLeft;
+    newsScrollLeft.current = newsScrollRef.current.scrollLeft;
+    newsScrollRef.current.style.cursor = 'grabbing';
+    newsScrollRef.current.style.scrollSnapType = 'none';
+    newsScrollRef.current.style.userSelect = 'none';
+  };
+
+  const handleNewsMouseMove = (e: React.MouseEvent) => {
+    if (!newsDragging.current || !newsScrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - newsScrollRef.current.offsetLeft;
+    const walk = (x - newsStartX.current) * 1.5;
+    if (Math.abs(walk) > 5) newsHasDragged.current = true;
+    newsScrollRef.current.scrollLeft = newsScrollLeft.current - walk;
+  };
+
+  const handleNewsMouseUp = () => {
+    if (!newsScrollRef.current) return;
+    newsDragging.current = false;
+    newsScrollRef.current.style.cursor = 'grab';
+    newsScrollRef.current.style.scrollSnapType = 'x mandatory';
+    newsScrollRef.current.style.userSelect = '';
   };
 
   const scrollSlider = (direction: 'left' | 'right') => {
@@ -438,31 +471,10 @@ export default function Home() {
               ref={newsScrollRef}
               className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide cursor-grab active:cursor-grabbing flex-1 min-w-0"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-              onMouseDown={(e) => {
-                const el = e.currentTarget;
-                const sX = e.pageX - el.offsetLeft;
-                const sL = el.scrollLeft;
-                let dragged = false;
-                const onMove = (ev: MouseEvent) => {
-                  const x = ev.pageX - el.offsetLeft;
-                  const walk = (x - sX) * 1.5;
-                  if (Math.abs(walk) > 5) dragged = true;
-                  el.scrollLeft = sL - walk;
-                };
-                const onUp = () => {
-                  document.removeEventListener('mousemove', onMove);
-                  document.removeEventListener('mouseup', onUp);
-                  el.style.cursor = 'grab';
-                  if (dragged) {
-                    el.querySelectorAll('a').forEach(a => a.style.pointerEvents = '');
-                    setTimeout(() => el.querySelectorAll('a').forEach(a => a.style.pointerEvents = ''), 50);
-                  }
-                };
-                document.addEventListener('mousemove', onMove);
-                document.addEventListener('mouseup', onUp);
-                el.style.cursor = 'grabbing';
-                el.querySelectorAll('a').forEach(a => a.style.pointerEvents = 'none');
-              }}
+              onMouseDown={handleNewsMouseDown}
+              onMouseMove={handleNewsMouseMove}
+              onMouseUp={handleNewsMouseUp}
+              onMouseLeave={handleNewsMouseUp}
             >
             {[
               {
@@ -507,6 +519,7 @@ export default function Home() {
                 key={i}
                 className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl active:shadow-xl focus-visible:shadow-xl hover:-translate-y-0.5 active:-translate-y-0.5 focus-visible:-translate-y-0.5 transition-all duration-300 border border-border/50 hover:border-primary/30 active:border-primary/30 focus-visible:border-primary/30 cursor-pointer no-underline text-inherit focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 snap-start"
                 style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', flex: '0 0 calc((100% - 4rem) / 3)', minWidth: '300px' }}
+                onClick={(e) => { if (newsHasDragged.current) e.preventDefault(); }}
                 onTouchStart={(e) => e.currentTarget.classList.add('is-pressed')}
                 onTouchEnd={(e) => { const el = e.currentTarget; setTimeout(() => el.classList.remove('is-pressed'), 150); }}
                 onTouchCancel={(e) => e.currentTarget.classList.remove('is-pressed')}
