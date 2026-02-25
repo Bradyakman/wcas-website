@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </section>
       {/* The 4 Boxes - Reimagined Layout */}
-      <section className="pt-12 pb-32 bg-secondary/50">
+      <section className="pt-8 pb-16 bg-secondary/50">
         <div className="container mx-auto px-6 md:px-12">
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
