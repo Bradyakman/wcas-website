@@ -29,7 +29,7 @@ import logoSelect from "@assets/Select_final.png";
 import logoBisys from "@assets/BISYS_final2.png";
 import logoLumexa from "@assets/Lumexa_final.png";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const logos = [
   { name: "Transfirst", src: logoTransfirst, mx: 30 },
@@ -84,6 +84,17 @@ const wcasVideos = [
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const scrollSlider = (direction: 'left' | 'right') => {
+    if (sliderRef.current) {
+      const scrollAmount = sliderRef.current.offsetWidth * 0.6;
+      sliderRef.current.scrollBy({
+        left: direction === 'right' ? scrollAmount : -scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -232,7 +243,17 @@ export default function Home() {
           
           {/* Video Slider - Aligned left, reaches right edge of screen */}
           <div className="relative w-full mb-12">
-            <div className="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory px-6 md:px-12" style={{ scrollbarWidth: 'thin' }}>
+            <button
+              onClick={() => scrollSlider('left')}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-white/40 transition-colors"
+            >
+              <ArrowRight size={20} className="rotate-180" />
+            </button>
+            <div
+              ref={sliderRef}
+              className="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory px-12 md:px-16"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               {wcasVideos.map((video, index) => (
                 <div key={index} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group shadow-2xl">
                     <div 
@@ -261,10 +282,12 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              {/* Scroll hint indicators */}
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white pointer-events-none opacity-0 hover:opacity-100 transition-opacity">
-                <ArrowRight size={20} />
-              </div>
+            <button
+              onClick={() => scrollSlider('right')}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-white/40 transition-colors"
+            >
+              <ArrowRight size={20} />
+            </button>
             </div>
           </div>
 
