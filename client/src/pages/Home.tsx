@@ -33,7 +33,7 @@ import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
 import norstellaLogo from "@assets/norstella_text_white_1772038125226.png";
 import intoxalockLogo from "@assets/intoxalock_black_to_white_clean_1772038444095.png";
-import leitersLogo from "@assets/image_1772038702098.png";
+import leitersLogo from "@assets/image_1772039486572.png";
 import greenStreetLogo from "@assets/greenstreet_text_white_preserve_bg_1772038753340.png";
 
 import { useState, useEffect, useRef } from "react";
