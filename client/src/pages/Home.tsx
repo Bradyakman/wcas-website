@@ -28,7 +28,7 @@ import logoNorstella from "@assets/Norstella_final.png";
 import logoSelect from "@assets/image_1772034518225.png";
 import logoBisys from "@assets/BISYS_final2.png";
 import logoLumexa from "@assets/Lumexa_final.png";
-import shieldsFullLogo from "@assets/shields_icon_blue_text_white_transparent_cropped_1772035189564.png";
+import shieldsFullLogo from "@assets/shields_word_white_only_1772037749705.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 import absorbLogo from "@assets/absorb_white_text_transparent_1772035213594.png";
 
