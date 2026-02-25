@@ -93,6 +93,7 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
+  const newsScrollRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
@@ -418,45 +419,51 @@ export default function Home() {
             </Button>
           </div>
 
-          <div
-            ref={(el) => {
-              if (el && !(el as any).__wheelAttached) {
-                (el as any).__wheelAttached = true;
-                el.addEventListener('wheel', (ev) => {
-                  if (Math.abs(ev.deltaY) > Math.abs(ev.deltaX)) {
-                    el.scrollLeft += ev.deltaY;
-                    ev.preventDefault();
-                  }
-                }, { passive: false });
-              }
-            }}
-            className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 cursor-grab active:cursor-grabbing"
-            onMouseDown={(e) => {
-              const el = e.currentTarget;
-              const startX = e.pageX - el.offsetLeft;
-              const scrollLeft = el.scrollLeft;
-              let dragged = false;
-              const onMove = (ev: MouseEvent) => {
-                const x = ev.pageX - el.offsetLeft;
-                const walk = (x - startX) * 1.5;
-                if (Math.abs(walk) > 5) dragged = true;
-                el.scrollLeft = scrollLeft - walk;
-              };
-              const onUp = () => {
-                document.removeEventListener('mousemove', onMove);
-                document.removeEventListener('mouseup', onUp);
-                el.style.cursor = 'grab';
-                if (dragged) {
-                  el.querySelectorAll('a').forEach(a => a.style.pointerEvents = '');
-                  setTimeout(() => el.querySelectorAll('a').forEach(a => a.style.pointerEvents = ''), 50);
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => {
+                const el = newsScrollRef.current;
+                if (el) {
+                  const card = el.querySelector('a') as HTMLElement;
+                  const scrollAmount = card ? card.offsetWidth + 32 : el.offsetWidth * 0.35;
+                  el.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
                 }
-              };
-              document.addEventListener('mousemove', onMove);
-              document.addEventListener('mouseup', onUp);
-              el.style.cursor = 'grabbing';
-              el.querySelectorAll('a').forEach(a => a.style.pointerEvents = 'none');
-            }}
-          >
+              }}
+              className="shrink-0 w-10 h-10 rounded-full bg-border/50 border border-border text-foreground/60 flex items-center justify-center hover:bg-border hover:text-foreground transition-colors"
+              aria-label="Scroll news left"
+            >
+              <ArrowRight size={20} className="rotate-180" />
+            </button>
+            <div
+              ref={newsScrollRef}
+              className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide cursor-grab active:cursor-grabbing flex-1 min-w-0"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              onMouseDown={(e) => {
+                const el = e.currentTarget;
+                const sX = e.pageX - el.offsetLeft;
+                const sL = el.scrollLeft;
+                let dragged = false;
+                const onMove = (ev: MouseEvent) => {
+                  const x = ev.pageX - el.offsetLeft;
+                  const walk = (x - sX) * 1.5;
+                  if (Math.abs(walk) > 5) dragged = true;
+                  el.scrollLeft = sL - walk;
+                };
+                const onUp = () => {
+                  document.removeEventListener('mousemove', onMove);
+                  document.removeEventListener('mouseup', onUp);
+                  el.style.cursor = 'grab';
+                  if (dragged) {
+                    el.querySelectorAll('a').forEach(a => a.style.pointerEvents = '');
+                    setTimeout(() => el.querySelectorAll('a').forEach(a => a.style.pointerEvents = ''), 50);
+                  }
+                };
+                document.addEventListener('mousemove', onMove);
+                document.addEventListener('mouseup', onUp);
+                el.style.cursor = 'grabbing';
+                el.querySelectorAll('a').forEach(a => a.style.pointerEvents = 'none');
+              }}
+            >
             {[
               {
                 date: "July 31, 2025",
@@ -523,6 +530,21 @@ export default function Home() {
                 </div>
               </a>
             ))}
+            </div>
+            <button
+              onClick={() => {
+                const el = newsScrollRef.current;
+                if (el) {
+                  const card = el.querySelector('a') as HTMLElement;
+                  const scrollAmount = card ? card.offsetWidth + 32 : el.offsetWidth * 0.35;
+                  el.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+              }}
+              className="shrink-0 w-10 h-10 rounded-full bg-border/50 border border-border text-foreground/60 flex items-center justify-center hover:bg-border hover:text-foreground transition-colors"
+              aria-label="Scroll news right"
+            >
+              <ArrowRight size={20} />
+            </button>
           </div>
         </div>
       </section>
