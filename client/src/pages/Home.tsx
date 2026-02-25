@@ -366,11 +366,11 @@ export default function Home() {
 
           {/* Button moved below scroller */}
         <div className="flex justify-center pb-24 md:pb-32 relative z-10">
-          <a href="/#firm" style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}>
-            <Button size="lg" variant="secondary" className="rounded-full px-14 py-6 text-lg font-semibold shadow-lg hover:shadow-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer">
+          <Button size="lg" variant="secondary" asChild className="rounded-full px-14 py-6 text-lg font-semibold shadow-lg hover:shadow-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer">
+            <a href="/#firm" style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', pointerEvents: 'auto' }}>
               Learn More About Our History
-            </Button>
-          </a>
+            </a>
+          </Button>
         </div>
       </section>
       {/* Video Lightbox Modal */}
@@ -410,12 +410,12 @@ export default function Home() {
                 News & Perspectives
               </h3>
             </div>
-            <a href="/news" className="no-underline" style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}>
-              <Button variant="outline" className="rounded-full group hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+            <Button variant="outline" asChild className="rounded-full group hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+              <a href="/news" style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', pointerEvents: 'auto' }}>
                 See All News
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
