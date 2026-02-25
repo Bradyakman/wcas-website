@@ -211,7 +211,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
             {/* Box 1 */}
-            <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden flex flex-col">
+            <a
+              href="/healthcare"
+              className="group bg-white rounded-2xl shadow-sm hover:shadow-xl active:shadow-xl focus-visible:shadow-xl active:-translate-y-0.5 hover:-translate-y-0.5 focus-visible:-translate-y-0.5 transition-all duration-500 relative overflow-hidden flex flex-col no-underline text-inherit cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+              onTouchStart={(e) => e.currentTarget.classList.add('is-pressed')}
+              onTouchEnd={(e) => { const el = e.currentTarget; setTimeout(() => el.classList.remove('is-pressed'), 150); }}
+              onTouchCancel={(e) => e.currentTarget.classList.remove('is-pressed')}
+            >
               <div className="h-72 w-full overflow-hidden relative">
                 <img 
                   src={healthcareImg} 
@@ -222,10 +229,17 @@ export default function Home() {
               <div className="py-6 md:py-8 px-10 md:px-12 flex-grow flex items-center justify-center">
                 <h4 className="text-3xl md:text-4xl font-heading font-bold">Healthcare</h4>
               </div>
-            </div>
+            </a>
 
             {/* Box 2 */}
-            <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden flex flex-col">
+            <a
+              href="/technology"
+              className="group bg-white rounded-2xl shadow-sm hover:shadow-xl active:shadow-xl focus-visible:shadow-xl active:-translate-y-0.5 hover:-translate-y-0.5 focus-visible:-translate-y-0.5 transition-all duration-500 relative overflow-hidden flex flex-col no-underline text-inherit cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+              onTouchStart={(e) => e.currentTarget.classList.add('is-pressed')}
+              onTouchEnd={(e) => { const el = e.currentTarget; setTimeout(() => el.classList.remove('is-pressed'), 150); }}
+              onTouchCancel={(e) => e.currentTarget.classList.remove('is-pressed')}
+            >
               <div className="h-72 w-full overflow-hidden relative">
                 <img 
                   src={talentImg} 
@@ -236,7 +250,7 @@ export default function Home() {
               <div className="py-6 md:py-8 px-10 md:px-12 flex-grow flex items-center justify-center">
                 <h4 className="text-3xl md:text-4xl font-heading font-bold">Technology</h4>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>
