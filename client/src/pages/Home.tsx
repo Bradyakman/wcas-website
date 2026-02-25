@@ -26,6 +26,7 @@ import logoAlliance from "@assets/AllianceData_1771799704135_trimmed.png";
 import logoNavihealth from "@assets/navihealth_final.png";
 import logoNorstella from "@assets/Norstella_final.png";
 import logoSelect from "@assets/image_1772034518225.png";
+import logoSelectColor from "@assets/image_1772040415579.png";
 import logoBisys from "@assets/BISYS_final2.png";
 import logoLumexa from "@assets/Lumexa_final.png";
 import shieldsFullLogo from "@assets/shields_word_white_only_1772037749705.png";
@@ -51,7 +52,7 @@ const logos = [
   { name: "AllianceData", src: logoAlliance, mx: 30 },
   { name: "naviHealth", src: logoNavihealth, mx: 26 },
   { name: "Norstella", src: logoNorstella, mx: 26 },
-  { name: "Select Medical", src: logoSelect, scale: 0.7, mx: 22 },
+  { name: "Select Medical", src: logoSelectColor, scale: 0.7, mx: 22 },
   { name: "BISYS", src: logoBisys, mx: 22, scale: 0.7 },
   { name: "Lumexa Imaging", src: logoLumexa, mx: 26, scale: 0.7 }
 ];
