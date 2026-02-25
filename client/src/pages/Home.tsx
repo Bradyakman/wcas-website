@@ -86,6 +86,36 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+  const hasDragged = useRef(false);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!sliderRef.current) return;
+    isDragging.current = true;
+    hasDragged.current = false;
+    startX.current = e.pageX - sliderRef.current.offsetLeft;
+    scrollLeft.current = sliderRef.current.scrollLeft;
+    sliderRef.current.style.cursor = 'grabbing';
+    sliderRef.current.style.scrollSnapType = 'none';
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging.current || !sliderRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - sliderRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5;
+    if (Math.abs(walk) > 5) hasDragged.current = true;
+    sliderRef.current.scrollLeft = scrollLeft.current - walk;
+  };
+
+  const handleMouseUp = () => {
+    if (!sliderRef.current) return;
+    isDragging.current = false;
+    sliderRef.current.style.cursor = 'grab';
+    sliderRef.current.style.scrollSnapType = 'x mandatory';
+  };
 
   const scrollSlider = (direction: 'left' | 'right') => {
     if (sliderRef.current) {
@@ -253,14 +283,18 @@ export default function Home() {
             </button>
             <div
               ref={sliderRef}
-              className="flex gap-4 md:gap-6 overflow-x-auto pb-2 snap-x snap-mandatory flex-1"
+              className="flex gap-4 md:gap-6 overflow-x-auto pb-2 snap-x snap-mandatory flex-1 cursor-grab select-none"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
             >
               {wcasVideos.map((video, index) => (
                 <div key={index} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group shadow-2xl">
                     <div 
                       className="absolute inset-0 cursor-pointer text-white p-6 md:p-8 flex flex-col justify-center"
-                      onClick={() => setPlayingVideo(video.id)}
+                      onClick={() => { if (!hasDragged.current) setPlayingVideo(video.id); }}
                     >
                       <div className="flex items-center justify-center gap-4 md:gap-6 h-full w-full group-hover:scale-[1.02] transition-transform duration-500">
                         <div className="text-right flex-1 flex justify-end">
