@@ -252,11 +252,13 @@ export default function Home() {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: `url(${missionBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundSize: "120% auto",
+            backgroundPosition: "30% 60%",
+            backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #0d1f3c 0%, #0d1f3c 55%, rgba(7,57,104,0.92) 80%, rgba(3,42,87,0.88) 100%)' }}></div>
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, rgba(13,31,60,0.95) 0%, rgba(13,31,60,0.7) 45%, rgba(13,31,60,0.4) 100%)' }}></div>
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #0d1f3c 0%, transparent 35%, transparent 75%, rgba(13,31,60,0.85) 100%)' }}></div>
         </div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
