@@ -242,16 +242,16 @@ export default function Home() {
           </div>
           
           {/* Video Slider - Aligned left, reaches right edge of screen */}
-          <div className="relative w-full mb-12">
+          <div className="flex items-center gap-4 mb-12">
             <button
               onClick={() => scrollSlider('left')}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-white/40 transition-colors"
+              className="shrink-0 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-white/40 transition-colors"
             >
               <ArrowRight size={20} className="rotate-180" />
             </button>
             <div
               ref={sliderRef}
-              className="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory px-12 md:px-16"
+              className="flex gap-4 md:gap-6 overflow-x-auto pb-2 snap-x snap-mandatory flex-1"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {wcasVideos.map((video, index) => (
@@ -284,11 +284,11 @@ export default function Home() {
               </div>
             <button
               onClick={() => scrollSlider('right')}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-white/40 transition-colors"
+              className="shrink-0 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center hover:bg-white/40 transition-colors"
             >
               <ArrowRight size={20} />
             </button>
-            </div>
+          </div>
           </div>
 
           {/* Button moved below scroller */}
