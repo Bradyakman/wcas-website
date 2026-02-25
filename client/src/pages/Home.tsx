@@ -418,7 +418,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {[
               {
                 date: "July 31, 2025",
@@ -437,13 +437,31 @@ export default function Home() {
                 category: "News",
                 title: "WCAS Announces Strategic Growth Investment in AIA Contract Documents",
                 desc: "A leading private equity firm with a 45-year track record invests in the gold standard for risk management..."
+              },
+              {
+                date: "June 24, 2025",
+                category: "News",
+                title: "Concentra Expands National Footprint with Acquisition of 12 New Centers",
+                desc: "Concentra continues its strategic expansion, bringing occupational health services to new communities across the country..."
+              },
+              {
+                date: "June 10, 2025",
+                category: "Perspectives",
+                title: "The Future of Healthcare IT: Trends Shaping the Industry in 2025",
+                desc: "WCAS explores the key technology trends driving transformation in healthcare delivery and patient outcomes..."
+              },
+              {
+                date: "May 28, 2025",
+                category: "News",
+                title: "Quickbase Launches New AI-Powered Workflow Automation Platform",
+                desc: "Quickbase unveils next-generation capabilities designed to help enterprises streamline complex business processes..."
               }
             ].map((news, i) => (
               <a
                 href="#"
                 key={i}
-                className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl active:shadow-xl focus-visible:shadow-xl hover:-translate-y-0.5 active:-translate-y-0.5 focus-visible:-translate-y-0.5 transition-all duration-300 border border-border/50 hover:border-primary/30 active:border-primary/30 focus-visible:border-primary/30 h-full cursor-pointer no-underline text-inherit focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-                style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+                className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl active:shadow-xl focus-visible:shadow-xl hover:-translate-y-0.5 active:-translate-y-0.5 focus-visible:-translate-y-0.5 transition-all duration-300 border border-border/50 hover:border-primary/30 active:border-primary/30 focus-visible:border-primary/30 cursor-pointer no-underline text-inherit focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 snap-start"
+                style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', flex: '0 0 calc((100% - 4rem) / 3)', minWidth: '300px' }}
                 onTouchStart={(e) => e.currentTarget.classList.add('is-pressed')}
                 onTouchEnd={(e) => { const el = e.currentTarget; setTimeout(() => el.classList.remove('is-pressed'), 150); }}
                 onTouchCancel={(e) => e.currentTarget.classList.remove('is-pressed')}
