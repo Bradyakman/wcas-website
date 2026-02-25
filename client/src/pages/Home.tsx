@@ -231,8 +231,8 @@ export default function Home() {
           </div>
           
           {/* Video Slider - Aligned left, reaches right edge of screen */}
-          <div className="relative w-[100vw] -ml-6 md:-ml-12 lg:ml-0 lg:w-[calc(50%+50vw)] mb-12">
-            <div className="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide px-6 md:px-12 lg:px-0 lg:pr-12" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          <div className="relative w-full mb-12">
+            <div className="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory px-6 md:px-12" style={{ scrollbarWidth: 'thin' }}>
               {wcasVideos.map((video, index) => (
                 <div key={index} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group shadow-2xl">
                     <div 
