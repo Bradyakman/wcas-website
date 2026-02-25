@@ -328,8 +328,8 @@ export default function Home() {
                         </div>
                       )}
                       
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 w-12 h-8 md:w-14 md:h-10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors z-10 backdrop-blur-sm">
-                        <Play className="text-white fill-white" size={20} />
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/20 backdrop-blur-md border-2 border-white/40 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 z-10">
+                        <Play className="text-white fill-white ml-1" size={22} />
                       </div>
                     </div>
                   </div>
@@ -346,7 +346,7 @@ export default function Home() {
 
           {/* Button moved below scroller */}
         <div className="flex justify-center pb-24 md:pb-32 relative z-10">
-          <Button size="lg" variant="secondary" className="rounded-full px-14 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
+          <Button size="lg" variant="secondary" className="rounded-full px-14 py-6 text-lg font-semibold shadow-lg hover:shadow-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer">
             Learn More About Our History
           </Button>
         </div>
