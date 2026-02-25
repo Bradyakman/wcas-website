@@ -218,8 +218,8 @@ export default function Home() {
                   className="w-full h-full object-cover object-[center_25%] scale-125 group-hover:scale-[1.35] transition-transform duration-700 ease-out"
                 />
               </div>
-              <div className="py-6 md:py-8 px-10 md:px-12 flex-grow flex items-center justify-center bg-primary">
-                <h4 className="text-3xl md:text-4xl font-heading font-bold text-white">Healthcare</h4>
+              <div className="py-6 md:py-8 px-10 md:px-12 flex-grow flex items-center justify-center">
+                <h4 className="text-3xl md:text-4xl font-heading font-bold">Healthcare</h4>
               </div>
             </div>
 
@@ -232,8 +232,8 @@ export default function Home() {
                   className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
-              <div className="py-6 md:py-8 px-10 md:px-12 flex-grow flex items-center justify-center bg-primary">
-                <h4 className="text-3xl md:text-4xl font-heading font-bold text-white">Technology</h4>
+              <div className="py-6 md:py-8 px-10 md:px-12 flex-grow flex items-center justify-center">
+                <h4 className="text-3xl md:text-4xl font-heading font-bold">Technology</h4>
               </div>
             </div>
 
