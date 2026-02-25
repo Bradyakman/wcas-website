@@ -34,6 +34,7 @@ import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
 import norstellaLogo from "@assets/norstella_text_white_1772038125226.png";
 import intoxalockLogo from "@assets/intoxalock_black_to_white_clean_1772038444095.png";
 import leitersLogo from "@assets/image_1772038702098.png";
+import greenStreetLogo from "@assets/greenstreet_text_white_preserve_bg_1772038753340.png";
 
 import { useState, useEffect, useRef } from "react";
 
@@ -83,7 +84,7 @@ const wcasVideos = [
   { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo, logoClass: "h-12 md:h-14 -mt-1" },
   { id: "861243091", title: "Paths to Growth", partner: "intoxalock", partnerLogo: intoxalockLogo, logoClass: "h-6 md:h-7" },
   { id: "913334845", title: "Innovative Partnership Between Private Capital and a Leading, Publicly Traded Company", partner: "Concentra", specialLayout: true },
-  { id: "861243221", title: "Paths to Growth", partner: "Green Street" },
+  { id: "861243221", title: "Paths to Growth", partner: "Green Street", partnerLogo: greenStreetLogo },
   { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", partnerLogo: leitersLogo }
 ];
 
