@@ -343,7 +343,7 @@ export default function Home() {
 
           {/* Button moved below scroller */}
         <div className="flex justify-center pb-24 md:pb-32 relative z-10">
-          <Button size="lg" variant="secondary" className="rounded-full px-10 font-semibold shadow-lg hover:shadow-xl transition-all">
+          <Button size="lg" variant="secondary" className="rounded-full px-14 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
             Learn More About Our History
           </Button>
         </div>
