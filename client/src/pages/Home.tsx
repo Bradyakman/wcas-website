@@ -103,6 +103,8 @@ export default function Home() {
     let isDragging = false;
     let startX = 0;
     let startScrollLeft = 0;
+    let pointerId = -1;
+    let containerEl: HTMLDivElement | null = null;
     return {
       onPointerDown: (e: React.PointerEvent<HTMLDivElement>) => {
         if (e.pointerType === 'touch') return;
@@ -111,7 +113,8 @@ export default function Home() {
         draggedRef.current = false;
         startX = e.clientX;
         startScrollLeft = e.currentTarget.scrollLeft;
-        e.currentTarget.setPointerCapture(e.pointerId);
+        pointerId = e.pointerId;
+        containerEl = e.currentTarget;
       },
       onPointerMove: (e: React.PointerEvent<HTMLDivElement>) => {
         if (!isPointerDown) return;
@@ -119,9 +122,12 @@ export default function Home() {
         if (!isDragging && Math.abs(dx) >= THRESHOLD) {
           isDragging = true;
           draggedRef.current = true;
-          e.currentTarget.style.cursor = 'grabbing';
-          e.currentTarget.style.userSelect = 'none';
-          e.currentTarget.style.scrollSnapType = 'none';
+          if (containerEl) {
+            containerEl.setPointerCapture(pointerId);
+            containerEl.style.cursor = 'grabbing';
+            containerEl.style.userSelect = 'none';
+            containerEl.style.scrollSnapType = 'none';
+          }
         }
         if (isDragging) {
           e.preventDefault();
@@ -131,13 +137,16 @@ export default function Home() {
       onPointerUp: (e: React.PointerEvent<HTMLDivElement>) => {
         if (!isPointerDown) return;
         isPointerDown = false;
-        e.currentTarget.releasePointerCapture(e.pointerId);
-        e.currentTarget.style.cursor = 'grab';
-        e.currentTarget.style.scrollSnapType = 'x mandatory';
-        e.currentTarget.style.userSelect = '';
+        const el = e.currentTarget;
+        if (isDragging) {
+          try { el.releasePointerCapture(pointerId); } catch (_) {}
+        }
+        el.style.cursor = 'grab';
+        el.style.scrollSnapType = 'x mandatory';
+        el.style.userSelect = '';
+        containerEl = null;
         setTimeout(() => { isDragging = false; draggedRef.current = false; }, 0);
       },
-      isDragging: () => isDragging,
     };
   };
 
@@ -456,7 +465,7 @@ export default function Home() {
             <div
               ref={newsScrollRef}
               className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide cursor-grab flex-1 min-w-0"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', touchAction: 'pan-y' }}
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
               onPointerDown={newsDrag.onPointerDown}
               onPointerMove={newsDrag.onPointerMove}
               onPointerUp={newsDrag.onPointerUp}
