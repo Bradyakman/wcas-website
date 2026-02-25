@@ -30,6 +30,7 @@ import logoBisys from "@assets/BISYS_final2.png";
 import logoLumexa from "@assets/Lumexa_final.png";
 import shieldsFullLogo from "@assets/shields_icon_blue_text_white_transparent_cropped_1772035189564.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
+import absorbLogo from "@assets/absorb_white_text_transparent_1772035213594.png";
 
 import { useState, useEffect, useRef } from "react";
 
@@ -75,7 +76,7 @@ const heroSlides = [
 const wcasVideos = [
   { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo },
   { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS", partnerLogo: shieldsFullLogo },
-  { id: "861242949", title: "Paths to Growth", partner: "absorb" },
+  { id: "861242949", title: "Paths to Growth", partner: "absorb", partnerLogo: absorbLogo },
   { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella" },
   { id: "861243091", title: "Paths to Growth", partner: "intoxalock" },
   { id: "913334845", title: "Innovative Partnership Between Private Capital and a Leading, Publicly Traded Company", partner: "Concentra", specialLayout: true },
