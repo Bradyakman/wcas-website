@@ -265,15 +265,15 @@ export default function Home() {
                     >
                       <div className="flex items-center justify-center gap-4 md:gap-6 h-full w-full group-hover:scale-[1.02] transition-transform duration-500">
                         <div className="text-right flex-1 flex justify-end">
-                          <h3 className="text-sm md:text-base font-bold font-heading leading-tight">{video.title}</h3>
+                          <h3 className="text-base md:text-xl font-bold font-heading leading-tight">{video.title}</h3>
                         </div>
                         <div className="w-px h-12 md:h-16 bg-white/20"></div>
                         <div className="text-left flex-1">
-                          <p className="text-[10px] text-white/60 mb-1 tracking-wide">In Partnership with</p>
+                          <p className="text-xs text-white/60 mb-2 tracking-wide">In Partnership with</p>
                           {'partnerLogo' in video && video.partnerLogo ? (
-                            <img src={video.partnerLogo} alt={video.partner} className="h-10 md:h-12 w-auto" />
+                            <img src={video.partnerLogo} alt={video.partner} className="h-12 md:h-14 w-auto" />
                           ) : (
-                            <h4 className="text-base md:text-lg font-bold font-heading tracking-tight">{video.partner}</h4>
+                            <h4 className="text-lg md:text-xl font-bold font-heading tracking-tight">{video.partner}</h4>
                           )}
                         </div>
                       </div>
