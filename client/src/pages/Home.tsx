@@ -166,7 +166,7 @@ export default function Home() {
                 <img 
                   src={healthcareImg} 
                   alt="Team discussion in office lounge" 
-                  className="w-full h-full object-cover object-center scale-150 group-hover:scale-[1.6] transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-[center_25%] scale-125 group-hover:scale-[1.35] transition-transform duration-700 ease-out"
                 />
               </div>
               <div className="p-10 md:p-12 flex-grow">
