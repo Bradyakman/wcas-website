@@ -271,7 +271,7 @@ export default function Home() {
                         <div className="text-left flex-1">
                           <p className="text-[10px] text-white/60 mb-1 tracking-wide">In Partnership with</p>
                           {'partnerLogo' in video && video.partnerLogo ? (
-                            <img src={video.partnerLogo} alt={video.partner} className="h-6 md:h-8 w-auto" />
+                            <img src={video.partnerLogo} alt={video.partner} className="h-10 md:h-12 w-auto" />
                           ) : (
                             <h4 className="text-base md:text-lg font-bold font-heading tracking-tight">{video.partner}</h4>
                           )}
