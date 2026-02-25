@@ -205,7 +205,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
             {/* Box 1 */}
-            <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
+            <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden flex flex-col">
               <div className="h-72 w-full overflow-hidden relative">
                 <img 
                   src={healthcareImg} 
@@ -214,7 +214,7 @@ export default function Home() {
                 />
               </div>
               <div className="p-10 md:p-12 flex-grow">
-                <h4 className="text-2xl font-heading font-bold mb-4">Healthcare</h4>
+                <h4 className="text-3xl md:text-4xl font-heading font-bold mb-4">Healthcare</h4>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Guiding sustainable organic growth strategies
                 </p>
@@ -222,7 +222,7 @@ export default function Home() {
             </div>
 
             {/* Box 2 */}
-            <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
+            <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden flex flex-col">
               <div className="h-72 w-full overflow-hidden relative">
                 <img 
                   src={talentImg} 
@@ -231,7 +231,7 @@ export default function Home() {
                 />
               </div>
               <div className="p-10 md:p-12 flex-grow">
-                <h4 className="text-2xl font-heading font-bold mb-4">Technology</h4>
+                <h4 className="text-3xl md:text-4xl font-heading font-bold mb-4">Technology</h4>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Cultivating top teams and company culture
                 </p>
