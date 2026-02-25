@@ -315,7 +315,6 @@ export default function Home() {
                           </div>
                           <div className="w-px h-12 md:h-16 bg-white/20"></div>
                           <div className="text-left flex-1">
-                            <p className="text-xs text-white/60 mb-1 tracking-wide">In Partnership with</p>
                             {'partnerLogo' in video && video.partnerLogo ? (
                               <img src={video.partnerLogo} alt={video.partner} className={`${'logoClass' in video && video.logoClass ? video.logoClass : 'h-10 md:h-12'} w-auto -ml-1`} style={{ imageRendering: 'auto', WebkitFontSmoothing: 'antialiased' }} />
                             ) : (
