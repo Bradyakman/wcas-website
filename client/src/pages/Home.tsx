@@ -88,7 +88,7 @@ export default function Home() {
 
   const scrollSlider = (direction: 'left' | 'right') => {
     if (sliderRef.current) {
-      const scrollAmount = sliderRef.current.offsetWidth * 0.6;
+      const scrollAmount = sliderRef.current.offsetWidth * 0.35;
       sliderRef.current.scrollBy({
         left: direction === 'right' ? scrollAmount : -scrollAmount,
         behavior: 'smooth'
