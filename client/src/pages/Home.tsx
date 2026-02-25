@@ -259,7 +259,7 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16 md:mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16 md:mb-24">
             <div className="max-w-[85vw] md:max-w-2xl lg:max-w-none mx-auto lg:mx-0 text-center lg:text-left">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-8 tracking-tighter">
                 Our Mission: Your Partner of Choice
