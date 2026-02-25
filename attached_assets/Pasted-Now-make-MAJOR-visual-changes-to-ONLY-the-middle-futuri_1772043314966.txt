@@ -1,0 +1,46 @@
+Now make MAJOR visual changes to ONLY the middle “futuristic/network” section so it feels cohesive with the top hero and bottom band blues. The goal is to reduce the jump in color between sections while keeping the futuristic image and a premium look.
+
+Hard constraints:
+- Do NOT change the top hero section styles.
+- Do NOT change the bottom-most band styles.
+- Only modify the middle section (and its internal overlays/background layers).
+
+Goals:
+- The middle section should start (at its top edge) very close to the hero navy.
+- Keep a gradient and the futuristic network image, but tune them so the palette is closer to the hero/bottom navy.
+- Avoid a moody/dark look: keep it crisp and readable.
+
+Implementation requirements:
+1) Sample the hero’s computed navy (exact rgb/hex). Use that as the top color stop for the middle section.
+2) Rebuild the middle section background using layered backgrounds:
+   - Base: solid hero navy.
+   - Overlay gradient: starts at hero navy at 0%, stays near it until ~40–60% down, then gently shifts slightly lighter/teal-toned near the bottom to let the network image show.
+   - Network image: keep it, but adjust position/scale so it covers more of the section (not just bottom-right), with a soft fade so it doesn’t fight the text.
+
+Suggested structure (adjust values as needed):
+- background:
+  linear-gradient(
+    180deg,
+    <HERO_NAVY> 0%,
+    <HERO_NAVY> 55%,
+    rgba(0, 80, 140, 0.45) 100%
+  ),
+  radial-gradient(
+    circle at 70% 75%,
+    rgba(0, 140, 200, 0.25) 0%,
+    rgba(0, 0, 0, 0) 55%
+  ),
+  url(<network-image>);
+
+3) If there’s an overlay div or ::before/::after currently tinting the section, replace it with a controlled overlay that keeps the top edge matching <HERO_NAVY>.
+4) Keep text contrast strong. If needed, add a subtle darkening layer ONLY behind text blocks (not across the whole section).
+
+Verification (required):
+- Report computed background color at:
+  - top edge of hero (rgb/hex)
+  - top edge of middle section (rgb/hex)
+They should be extremely close (ideally identical at the top edge).
+
+Deliverable:
+- Show diffs (files + exact lines changed).
+- Include the computed rgb/hex values for hero and middle top edge as proof.

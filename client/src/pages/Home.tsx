@@ -242,21 +242,53 @@ export default function Home() {
         </div>
       </section>
       {/* Mission & Video Slider Section */}
-      <section className="pt-20 md:pt-24 text-primary-foreground relative overflow-hidden">
+      <section id="middle-section" className="pt-20 md:pt-24 text-primary-foreground relative overflow-hidden">
         {/* Abstract shapes for background interest */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-50 z-0"></div>
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50 z-0"></div>
         
-        {/* Background Image */}
+        {/* Layered Background: hero navy base + network image + gradient overlay */}
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url(${missionBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundColor: "#0d1f3c",
           }}
         >
-          <div className="absolute inset-0 bg-[#002759]/80"></div>
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${missionBg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 40%",
+              opacity: 0.35,
+            }}
+          ></div>
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: `
+                linear-gradient(
+                  180deg,
+                  #0d1f3c 0%,
+                  #0d1f3c 30%,
+                  rgba(13, 31, 60, 0.85) 55%,
+                  rgba(10, 35, 70, 0.7) 100%
+                )
+              `,
+            }}
+          ></div>
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: `
+                radial-gradient(
+                  circle at 70% 75%,
+                  rgba(0, 120, 180, 0.15) 0%,
+                  rgba(0, 0, 0, 0) 55%
+                )
+              `,
+            }}
+          ></div>
         </div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
