@@ -88,7 +88,8 @@ export default function Home() {
 
   const scrollSlider = (direction: 'left' | 'right') => {
     if (sliderRef.current) {
-      const scrollAmount = sliderRef.current.offsetWidth * 0.35;
+      const card = sliderRef.current.querySelector('div') as HTMLElement;
+      const scrollAmount = card ? card.offsetWidth + 16 : sliderRef.current.offsetWidth * 0.35;
       sliderRef.current.scrollBy({
         left: direction === 'right' ? scrollAmount : -scrollAmount,
         behavior: 'smooth'
@@ -269,10 +270,6 @@ export default function Home() {
                           <p className="text-[10px] text-white/60 mb-1 tracking-wide">In Partnership with</p>
                           <h4 className="text-base md:text-lg font-bold font-heading tracking-tight">{video.partner}</h4>
                         </div>
-                      </div>
-                      
-                      <div className="absolute bottom-4 left-6 md:bottom-6 md:left-8">
-                        <span className="text-sm md:text-base font-heading font-bold tracking-widest text-white/40">WCAS</span>
                       </div>
                       
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 w-12 h-8 md:w-14 md:h-10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors z-10 backdrop-blur-sm">
