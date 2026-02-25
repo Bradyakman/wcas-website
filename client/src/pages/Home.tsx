@@ -33,6 +33,7 @@ import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
 import norstellaLogo from "@assets/norstella_text_white_1772038125226.png";
 import intoxalockLogo from "@assets/intoxalock_black_to_white_clean_1772038444095.png";
+import leitersLogo from "@assets/image_1772038702098.png";
 
 import { useState, useEffect, useRef } from "react";
 
@@ -83,7 +84,7 @@ const wcasVideos = [
   { id: "861243091", title: "Paths to Growth", partner: "intoxalock", partnerLogo: intoxalockLogo, logoClass: "h-6 md:h-7" },
   { id: "913334845", title: "Innovative Partnership Between Private Capital and a Leading, Publicly Traded Company", partner: "Concentra", specialLayout: true },
   { id: "861243221", title: "Paths to Growth", partner: "Green Street" },
-  { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health" }
+  { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", partnerLogo: leitersLogo }
 ];
 
 export default function Home() {
