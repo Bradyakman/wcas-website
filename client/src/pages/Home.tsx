@@ -98,38 +98,46 @@ export default function Home() {
   const newsHasDragged = useRef(false);
 
   const makeDragHandlers = (draggedRef: React.MutableRefObject<boolean>) => {
-    let dragging = false;
-    let sX = 0;
-    let sL = 0;
+    const THRESHOLD = 6;
+    let isPointerDown = false;
+    let isDragging = false;
+    let startX = 0;
+    let startScrollLeft = 0;
     return {
       onPointerDown: (e: React.PointerEvent<HTMLDivElement>) => {
         if (e.pointerType === 'touch') return;
-        const el = e.currentTarget;
-        dragging = true;
+        isPointerDown = true;
+        isDragging = false;
         draggedRef.current = false;
-        sX = e.clientX;
-        sL = el.scrollLeft;
-        el.setPointerCapture(e.pointerId);
-        el.style.cursor = 'grabbing';
-        el.style.scrollSnapType = 'none';
-        el.style.userSelect = 'none';
+        startX = e.clientX;
+        startScrollLeft = e.currentTarget.scrollLeft;
+        e.currentTarget.setPointerCapture(e.pointerId);
       },
       onPointerMove: (e: React.PointerEvent<HTMLDivElement>) => {
-        if (!dragging) return;
-        e.preventDefault();
-        const walk = e.clientX - sX;
-        if (Math.abs(walk) > 6) draggedRef.current = true;
-        e.currentTarget.scrollLeft = sL - walk;
+        if (!isPointerDown) return;
+        const dx = e.clientX - startX;
+        if (!isDragging && Math.abs(dx) >= THRESHOLD) {
+          isDragging = true;
+          draggedRef.current = true;
+          e.currentTarget.style.cursor = 'grabbing';
+          e.currentTarget.style.userSelect = 'none';
+          e.currentTarget.style.scrollSnapType = 'none';
+        }
+        if (isDragging) {
+          e.preventDefault();
+          e.currentTarget.scrollLeft = startScrollLeft - dx;
+        }
       },
       onPointerUp: (e: React.PointerEvent<HTMLDivElement>) => {
-        if (!dragging) return;
-        dragging = false;
-        const el = e.currentTarget;
-        el.releasePointerCapture(e.pointerId);
-        el.style.cursor = 'grab';
-        el.style.scrollSnapType = 'x mandatory';
-        el.style.userSelect = '';
+        if (!isPointerDown) return;
+        isPointerDown = false;
+        e.currentTarget.releasePointerCapture(e.pointerId);
+        e.currentTarget.style.cursor = 'grab';
+        e.currentTarget.style.scrollSnapType = 'x mandatory';
+        e.currentTarget.style.userSelect = '';
+        setTimeout(() => { isDragging = false; draggedRef.current = false; }, 0);
       },
+      isDragging: () => isDragging,
     };
   };
 
@@ -497,7 +505,7 @@ export default function Home() {
                 key={i}
                 className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl active:shadow-xl focus-visible:shadow-xl hover:-translate-y-0.5 active:-translate-y-0.5 focus-visible:-translate-y-0.5 transition-all duration-300 border border-border/50 hover:border-primary/30 active:border-primary/30 focus-visible:border-primary/30 cursor-pointer no-underline text-inherit focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 snap-start"
                 style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', flex: '0 0 calc((100% - 4rem) / 3)', minWidth: '300px' }}
-                onClick={(e) => { if (newsHasDragged.current) e.preventDefault(); }}
+                onClickCapture={(e) => { if (newsHasDragged.current) { e.preventDefault(); e.stopPropagation(); } }}
                 onTouchStart={(e) => e.currentTarget.classList.add('is-pressed')}
                 onTouchEnd={(e) => { const el = e.currentTarget; setTimeout(() => el.classList.remove('is-pressed'), 150); }}
                 onTouchCancel={(e) => e.currentTarget.classList.remove('is-pressed')}
