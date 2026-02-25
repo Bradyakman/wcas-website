@@ -328,8 +328,8 @@ export default function Home() {
                         </div>
                       )}
                       
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-all duration-300 z-10 shadow-lg">
-                        <Play className="text-[#0a2540] fill-[#0a2540] ml-1" size={22} />
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 w-12 h-8 md:w-14 md:h-10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors z-10 backdrop-blur-sm">
+                        <Play className="text-white fill-white" size={20} />
                       </div>
                     </div>
                   </div>
