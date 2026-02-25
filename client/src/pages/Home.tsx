@@ -252,13 +252,11 @@ export default function Home() {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: `url(${missionBg})`,
-            backgroundSize: "120% auto",
-            backgroundPosition: "30% 60%",
-            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, rgba(13,31,60,0.95) 0%, rgba(13,31,60,0.7) 45%, rgba(13,31,60,0.4) 100%)' }}></div>
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #0d1f3c 0%, transparent 35%, transparent 75%, rgba(13,31,60,0.85) 100%)' }}></div>
+          <div className="absolute inset-0 bg-[#002759]/80"></div>
         </div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -294,7 +292,7 @@ export default function Home() {
               onMouseLeave={handleMouseUp}
             >
               {wcasVideos.map((video, index) => (
-                <div key={index} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video relative group shadow-[0_8px_30px_rgba(0,0,0,0.4)] border border-white/[0.14] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.5)] hover:border-white/[0.22] transition-all duration-300 focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d1f3c]" style={{ background: 'radial-gradient(ellipse at 30% 40%, rgba(25,50,90,1) 0%, rgba(12,28,55,1) 50%, rgba(8,20,42,1) 100%)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06)' }}>
+                <div key={index} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group shadow-2xl">
                     <div 
                       className="absolute inset-0 cursor-pointer text-white p-6 md:p-8 flex flex-col justify-center"
                       onClick={() => { if (!hasDragged.current) setPlayingVideo(video.id); }}
@@ -331,8 +329,8 @@ export default function Home() {
                         </div>
                       )}
                       
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 flex items-center justify-center group-hover:bg-black/60 group-hover:scale-110 group-hover:border-white/40 transition-all duration-300 z-10">
-                        <Play className="text-white fill-white ml-0.5" size={24} />
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 w-12 h-8 md:w-14 md:h-10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors z-10 backdrop-blur-sm">
+                        <Play className="text-white fill-white" size={20} />
                       </div>
                     </div>
                   </div>
