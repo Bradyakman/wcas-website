@@ -30,7 +30,7 @@ import logoBisys from "@assets/BISYS_final2.png";
 import logoLumexa from "@assets/Lumexa_final.png";
 import shieldsFullLogo from "@assets/shields_word_white_only_1772037749705.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
-import absorbLogo from "@assets/absorb_white_text_transparent_1772035213594.png";
+import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
 
 import { useState, useEffect, useRef } from "react";
 
