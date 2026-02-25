@@ -388,9 +388,9 @@ export default function Home() {
                 News & Perspectives
               </h3>
             </div>
-            <Button variant="outline" className="rounded-full group">
+            <Button variant="outline" className="rounded-full group hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
               See All News
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
           </div>
 
