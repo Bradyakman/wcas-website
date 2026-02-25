@@ -77,7 +77,7 @@ const wcasVideos = [
   { id: "861242949", title: "Paths to Growth", partner: "absorb" },
   { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella" },
   { id: "861243091", title: "Paths to Growth", partner: "intoxalock" },
-  { id: "913334845", title: "Innovative Partnership Between Private Capital and a Leading, Publicly Traded Company", partner: "Concentra" },
+  { id: "913334845", title: "Innovative Partnership Between Private Capital and a Leading, Publicly Traded Company", partner: "Concentra", specialLayout: true },
   { id: "861243221", title: "Paths to Growth", partner: "Green Street" },
   { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health" }
 ];
@@ -296,16 +296,28 @@ export default function Home() {
                       className="absolute inset-0 cursor-pointer text-white p-6 md:p-8 flex flex-col justify-center"
                       onClick={() => { if (!hasDragged.current) setPlayingVideo(video.id); }}
                     >
-                      <div className="flex items-center justify-center gap-4 md:gap-6 h-full w-full group-hover:scale-[1.02] transition-transform duration-500">
-                        <div className="text-right flex-1 flex justify-end">
-                          <h3 className="text-sm md:text-base font-bold font-heading leading-tight">{video.title}</h3>
+                      {'specialLayout' in video && video.specialLayout ? (
+                        <div className="flex flex-col items-center justify-center h-full w-full group-hover:scale-[1.02] transition-transform duration-500 gap-4">
+                          <h3 className="text-sm md:text-base font-bold font-heading leading-tight text-center max-w-[80%]">{video.title}</h3>
+                          <div className="flex items-center justify-center gap-3 md:gap-4">
+                            <img src={wcasLogo} alt="WCAS" className="h-6 md:h-8 w-auto brightness-0 invert" />
+                            <div className="w-px h-10 md:h-12 bg-white/20"></div>
+                            <img src={logoSelect} alt="Select Medical" className="h-8 md:h-10 w-auto" />
+                          </div>
+                          <h4 className="text-lg md:text-2xl font-bold font-heading tracking-tight">{video.partner}</h4>
                         </div>
-                        <div className="w-px h-12 md:h-16 bg-white/20"></div>
-                        <div className="text-left flex-1">
-                          <p className="text-[10px] text-white/60 mb-1 tracking-wide">In Partnership with</p>
-                          <h4 className="text-base md:text-lg font-bold font-heading tracking-tight">{video.partner}</h4>
+                      ) : (
+                        <div className="flex items-center justify-center gap-4 md:gap-6 h-full w-full group-hover:scale-[1.02] transition-transform duration-500">
+                          <div className="text-right flex-1 flex justify-end">
+                            <h3 className="text-sm md:text-base font-bold font-heading leading-tight">{video.title}</h3>
+                          </div>
+                          <div className="w-px h-12 md:h-16 bg-white/20"></div>
+                          <div className="text-left flex-1">
+                            <p className="text-[10px] text-white/60 mb-1 tracking-wide">In Partnership with</p>
+                            <h4 className="text-base md:text-lg font-bold font-heading tracking-tight">{video.partner}</h4>
+                          </div>
                         </div>
-                      </div>
+                      )}
                       
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 w-12 h-8 md:w-14 md:h-10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors z-10 backdrop-blur-sm">
                         <Play className="text-white fill-white" size={20} />
