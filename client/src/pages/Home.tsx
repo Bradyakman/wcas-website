@@ -267,7 +267,7 @@ export default function Home() {
                         </div>
                         <div className="w-px h-12 md:h-16 bg-white/20"></div>
                         <div className="text-left flex-1">
-                          <p className="text-[10px] text-white/60 mb-1 tracking-wide">In Partnership</p>
+                          <p className="text-[10px] text-white/60 mb-1 tracking-wide">In Partnership with</p>
                           <h4 className="text-base md:text-lg font-bold font-heading tracking-tight">{video.partner}</h4>
                         </div>
                       </div>
