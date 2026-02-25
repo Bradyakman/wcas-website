@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Cpu, Briefcase, Quote, Play, X } from "lucide-react";
 import heroBg from "@assets/1115_WCAS_March_7_23_by_John_Abbott_1771874983441.JPG";
+import healthcareImg from "@assets/0223_WCAS_March_13_23_by_John_Abbott_1772032006133.JPG";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import missionBg from "@assets/2345234534_1771799538730.jpg";
 import growthImg from "@assets/WCAS_March-13_04509616.mov.20_53_56_26.Still001-scaled_1771765691568.webp";
@@ -163,8 +164,8 @@ export default function Home() {
             <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 relative overflow-hidden flex flex-col">
               <div className="h-72 w-full overflow-hidden relative">
                 <img 
-                  src={growthImg} 
-                  alt="Team member working on tablet" 
+                  src={healthcareImg} 
+                  alt="Team discussion in office lounge" 
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
