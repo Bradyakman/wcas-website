@@ -300,7 +300,7 @@ export default function Home() {
                         <div className="flex flex-col items-center justify-center h-full w-full group-hover:scale-[1.02] transition-transform duration-500 gap-4">
                           <h3 className="text-base md:text-xl font-bold font-heading leading-tight text-center max-w-[80%]">{video.title}</h3>
                           <div className="flex items-center justify-center gap-3 md:gap-4">
-                            <img src={wcasLogo} alt="WCAS" className="h-6 md:h-8 w-auto brightness-0 invert" />
+                            <img src={wcasLogo} alt="WCAS" className="h-8 md:h-10 w-auto brightness-0 invert" />
                             <div className="w-px h-10 md:h-12 bg-white/20"></div>
                             <img src={logoSelect} alt="Select Medical" className="h-8 md:h-10 w-auto" />
                           </div>
