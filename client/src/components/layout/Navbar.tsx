@@ -1,14 +1,15 @@
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [location] = useLocation();
+  const navRef = useRef<HTMLElement>(null);
 
-  // Check if we are on a page with a dark hero section
   const isDarkHeroPage = location === "/" ||
                          location === "/hcit" || 
                          location === "/news" || 
@@ -23,6 +24,33 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const closeDropdown = useCallback(() => {
+    setOpenDropdown(null);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent | TouchEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        closeDropdown();
+      }
+    };
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeDropdown();
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [closeDropdown]);
+
+  const toggleDropdown = (name: string) => {
+    setOpenDropdown(prev => prev === name ? null : name);
+  };
 
   const navLinks = [
     { name: "Our Firm", href: "/#firm" },
@@ -51,30 +79,54 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav ref={navRef} className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             link.dropdown ? (
-              <div key={link.name} className="relative group">
-                <a 
-                  href={link.href}
-                  className={`text-sm font-medium transition-colors flex items-center gap-1 ${
+              <div key={link.name} className="relative">
+                <button
+                  type="button"
+                  aria-expanded={openDropdown === link.name}
+                  aria-controls={`dropdown-${link.name}`}
+                  aria-haspopup="true"
+                  onClick={() => toggleDropdown(link.name)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      toggleDropdown(link.name);
+                    }
+                  }}
+                  className={`text-sm font-medium transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
                     isScrolled 
                       ? "text-foreground/80 hover:text-primary" 
                       : isDarkHeroPage 
                         ? "text-white/90 hover:text-white" 
                         : "text-foreground/90 hover:text-primary"
                   }`}
+                  style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
                 >
                   {link.name}
-                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-70 group-hover:rotate-180 transition-transform duration-300">
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={`opacity-70 transition-transform duration-300 ${openDropdown === link.name ? 'rotate-180' : ''}`}>
                     <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </a>
-                <div className="absolute top-full left-0 pt-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200">
+                </button>
+                <div
+                  id={`dropdown-${link.name}`}
+                  role="menu"
+                  className={`absolute top-full left-0 pt-4 transition-all duration-200 ${
+                    openDropdown === link.name
+                      ? 'opacity-100 pointer-events-auto translate-y-0'
+                      : 'opacity-0 pointer-events-none -translate-y-1'
+                  }`}
+                >
                   <div className="bg-white rounded-lg shadow-lg border border-border py-2 min-w-[200px] flex flex-col">
                     {link.dropdown.map((dropItem) => (
-                      <Link key={dropItem.name} href={dropItem.href} className="px-4 py-2 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 transition-colors">
+                      <Link
+                        key={dropItem.name}
+                        href={dropItem.href}
+                        role="menuitem"
+                        className="px-4 py-2 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 transition-colors"
+                        onClick={closeDropdown}
+                      >
                         {dropItem.name}
                       </Link>
                     ))}
@@ -99,7 +151,6 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* Mobile Toggle */}
         <button 
           className={`lg:hidden p-2 ${!isScrolled && isDarkHeroPage ? "text-white" : "text-foreground"}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -108,7 +159,6 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {mobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t py-4 px-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
           {navLinks.map((link) => (
