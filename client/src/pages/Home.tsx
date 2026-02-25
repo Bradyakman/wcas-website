@@ -395,33 +395,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div
-            className="flex gap-6 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing pb-4"
-            onMouseDown={(e) => {
-              const el = e.currentTarget;
-              const startX = e.pageX - el.offsetLeft;
-              const scrollLeft = el.scrollLeft;
-              let dragged = false;
-              const onMove = (ev: MouseEvent) => {
-                const x = ev.pageX - el.offsetLeft;
-                const walk = (x - startX) * 1.5;
-                if (Math.abs(walk) > 5) dragged = true;
-                el.scrollLeft = scrollLeft - walk;
-              };
-              const onUp = () => {
-                document.removeEventListener('mousemove', onMove);
-                document.removeEventListener('mouseup', onUp);
-                el.style.cursor = 'grab';
-                if (dragged) {
-                  el.querySelectorAll('a').forEach(a => a.style.pointerEvents = '');
-                }
-              };
-              document.addEventListener('mousemove', onMove);
-              document.addEventListener('mouseup', onUp);
-              el.style.cursor = 'grabbing';
-              el.querySelectorAll('a').forEach(a => a.style.pointerEvents = 'none');
-            }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 date: "July 31, 2025",
@@ -440,27 +414,9 @@ export default function Home() {
                 category: "News",
                 title: "WCAS Announces Strategic Growth Investment in AIA Contract Documents",
                 desc: "A leading private equity firm with a 45-year track record invests in the gold standard for risk management..."
-              },
-              {
-                date: "June 24, 2025",
-                category: "News",
-                title: "Concentra Expands National Footprint with Acquisition of 12 New Centers",
-                desc: "Concentra continues its strategic expansion, bringing occupational health services to new communities across the country..."
-              },
-              {
-                date: "June 10, 2025",
-                category: "Perspectives",
-                title: "The Future of Healthcare IT: Trends Shaping the Industry in 2025",
-                desc: "WCAS explores the key technology trends driving transformation in healthcare delivery and patient outcomes..."
-              },
-              {
-                date: "May 28, 2025",
-                category: "News",
-                title: "Quickbase Launches New AI-Powered Workflow Automation Platform",
-                desc: "Quickbase unveils next-generation capabilities designed to help enterprises streamline complex business processes..."
               }
             ].map((news, i) => (
-              <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] flex-shrink-0">
+              <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 h-full">
                 <div className="p-8 flex-grow flex flex-col">
                   <div className="flex items-center gap-4 mb-6 text-sm">
                     <span className="text-primary font-bold tracking-wider uppercase">{news.category}</span>
