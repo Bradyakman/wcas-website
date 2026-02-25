@@ -90,7 +90,15 @@ export default function News() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 relative overflow-hidden text-white bg-[#0d1f3c]">
+      <section className="pt-32 pb-20 px-6 relative overflow-hidden text-white">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
+            alt="Office Background" 
+            className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
+          />
+          <div className="absolute inset-0 bg-[#002759]/80"></div>
+        </div>
         <div className="container mx-auto mt-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">

@@ -3,6 +3,7 @@ import { ArrowRight, TrendingUp, Users, Cpu, Briefcase, Quote, Play, X } from "l
 import heroBg from "@assets/1115_WCAS_March_7_23_by_John_Abbott_1771874983441.JPG";
 import healthcareImg from "@assets/0223_WCAS_March_13_23_by_John_Abbott_1772032006133.JPG";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
+import missionBg from "@assets/2345234534_1771799538730.jpg";
 import growthImg from "@assets/WCAS_March-13_04509616.mov.20_53_56_26.Still001-scaled_1771765691568.webp";
 import talentImg from "@assets/137_WCAS_March-6-23-by-John-Abbott-scaled_1771765917799.jpg";
 import techImg from "@assets/1070_WCAS_March-7-23-by-John-Abbott-scaled_1771766085574.jpg";
@@ -241,9 +242,22 @@ export default function Home() {
         </div>
       </section>
       {/* Mission & Video Slider Section */}
-      <section className="pt-20 md:pt-24 text-primary-foreground relative overflow-hidden bg-[#002759]">
+      <section className="pt-20 md:pt-24 text-primary-foreground relative overflow-hidden">
+        {/* Abstract shapes for background interest */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-50 z-0"></div>
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50 z-0"></div>
+        
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${missionBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-[#002759]/80"></div>
+        </div>
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16 md:mb-24">
@@ -366,16 +380,16 @@ export default function Home() {
         </div>
       )}
       {/* News Section Redesign */}
-      <section className="py-24 md:py-32 bg-[#002759] border-t border-transparent">
+      <section className="py-24 md:py-32 bg-secondary/50 border-t border-border">
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">Insights</h2>
-              <h3 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Insights</h2>
+              <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
                 News & Perspectives
               </h3>
             </div>
-            <Button variant="outline" className="rounded-full group hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border-white/40 text-white hover:bg-white/10 hover:text-white">
+            <Button variant="outline" className="rounded-full group hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
               See All News
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
@@ -402,7 +416,7 @@ export default function Home() {
                 desc: "A leading private equity firm with a 45-year track record invests in the gold standard for risk management..."
               }
             ].map((news, i) => (
-              <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-white/20 h-full">
+              <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 h-full">
                 <div className="p-8 flex-grow flex flex-col">
                   <div className="flex items-center gap-4 mb-6 text-sm">
                     <span className="text-primary font-bold tracking-wider uppercase">{news.category}</span>
