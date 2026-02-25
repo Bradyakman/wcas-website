@@ -79,7 +79,7 @@ const wcasVideos = [
   { id: "861243091", title: "Paths to Growth", partner: "intoxalock" },
   { id: "913334845", title: "Innovative Partnership Between Private Capital and a Leading, Publicly Traded Company", partner: "Concentra" },
   { id: "861243221", title: "Paths to Growth", partner: "Green Street" },
-  { id: "913388269", title: "Strategic Growth Investment", partner: "AIA Contract Documents" }
+  { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health" }
 ];
 
 export default function Home() {
