@@ -28,7 +28,7 @@ import logoNorstella from "@assets/Norstella_final.png";
 import logoSelect from "@assets/image_1772034518225.png";
 import logoBisys from "@assets/BISYS_final2.png";
 import logoLumexa from "@assets/Lumexa_final.png";
-import shieldsFullLogo from "@assets/image_1772033135330.png";
+import shieldsFullLogo from "@assets/shields_white_transparent_cropped_1772034994168.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 
 import { useState, useEffect, useRef } from "react";
@@ -74,7 +74,7 @@ const heroSlides = [
 
 const wcasVideos = [
   { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo },
-  { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS" },
+  { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS", partnerLogo: shieldsFullLogo },
   { id: "861242949", title: "Paths to Growth", partner: "absorb" },
   { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella" },
   { id: "861243091", title: "Paths to Growth", partner: "intoxalock" },
