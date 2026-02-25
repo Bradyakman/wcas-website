@@ -31,6 +31,7 @@ import logoLumexa from "@assets/Lumexa_final.png";
 import shieldsFullLogo from "@assets/shields_word_white_only_1772037749705.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
+import norstellaLogo from "@assets/norstella_text_white_1772038125226.png";
 
 import { useState, useEffect, useRef } from "react";
 
@@ -77,7 +78,7 @@ const wcasVideos = [
   { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo },
   { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS", partnerLogo: shieldsFullLogo },
   { id: "861242949", title: "Paths to Growth", partner: "absorb", partnerLogo: absorbLogo },
-  { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella" },
+  { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo },
   { id: "861243091", title: "Paths to Growth", partner: "intoxalock" },
   { id: "913334845", title: "Innovative Partnership Between Private Capital and a Leading, Publicly Traded Company", partner: "Concentra", specialLayout: true },
   { id: "861243221", title: "Paths to Growth", partner: "Green Street" },
