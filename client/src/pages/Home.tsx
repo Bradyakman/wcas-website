@@ -72,7 +72,7 @@ const heroSlides = [
 ];
 
 const wcasVideos = [
-  { id: "861242809", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS" },
+  { id: "861242809", title: "Paths to Growth", partner: "quickbase" },
   { id: "913387748", title: "Investing in Technology", partner: "quickbase" },
   { id: "861242949", title: "Strategic Growth Investment", partner: "TrueCommerce" },
   { id: "913387297", title: "Building Sustainable Platforms", partner: "Concentra" },
