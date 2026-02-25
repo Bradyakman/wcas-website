@@ -75,7 +75,7 @@ const wcasVideos = [
   { id: "861242809", title: "Paths to Growth", partner: "quickbase" },
   { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS" },
   { id: "861242949", title: "Paths to Growth", partner: "absorb" },
-  { id: "913387297", title: "Building Sustainable Platforms", partner: "Concentra" },
+  { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella" },
   { id: "861243091", title: "Investing in Better Healthcare", partner: "InnovAge" },
   { id: "913334845", title: "Advancing Front-Office Automation", partner: "EquiLend" },
   { id: "861243221", title: "Investing in Technology", partner: "Clearway" },
