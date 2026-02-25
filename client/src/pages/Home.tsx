@@ -84,7 +84,7 @@ const wcasVideos = [
   { id: "861242949", title: "Paths to Growth", partner: "absorb", partnerLogo: absorbLogo },
   { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo, logoClass: "h-12 md:h-14 -mt-1" },
   { id: "861243091", title: "Paths to Growth", partner: "intoxalock", partnerLogo: intoxalockLogo, logoClass: "h-6 md:h-7" },
-  { id: "913334845", title: "Innovative Partnership Between Private Capital and a Leading, Publicly Traded Company", partner: "Concentra", specialLayout: true },
+  { id: "913334845", title: "", partner: "Concentra", specialLayout: true },
   { id: "861243221", title: "Paths to Growth", partner: "Green Street", partnerLogo: greenStreetLogo, logoClass: "h-10 md:h-12 -mt-2" },
   { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", partnerLogo: leitersLogo, logoClass: "h-6 md:h-7" }
 ];
