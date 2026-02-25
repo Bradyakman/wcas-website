@@ -94,69 +94,47 @@ export default function Home() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
   const newsScrollRef = useRef<HTMLDivElement>(null);
-  const isDragging = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
   const hasDragged = useRef(false);
-
-  const newsDragging = useRef(false);
-  const newsStartX = useRef(0);
-  const newsScrollLeft = useRef(0);
   const newsHasDragged = useRef(false);
 
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!sliderRef.current) return;
-    isDragging.current = true;
-    hasDragged.current = false;
-    startX.current = e.pageX - sliderRef.current.offsetLeft;
-    scrollLeft.current = sliderRef.current.scrollLeft;
-    sliderRef.current.style.cursor = 'grabbing';
-    sliderRef.current.style.scrollSnapType = 'none';
+  const makeDragHandlers = (draggedRef: React.MutableRefObject<boolean>) => {
+    let dragging = false;
+    let sX = 0;
+    let sL = 0;
+    return {
+      onPointerDown: (e: React.PointerEvent<HTMLDivElement>) => {
+        if (e.pointerType === 'touch') return;
+        const el = e.currentTarget;
+        dragging = true;
+        draggedRef.current = false;
+        sX = e.clientX;
+        sL = el.scrollLeft;
+        el.setPointerCapture(e.pointerId);
+        el.style.cursor = 'grabbing';
+        el.style.scrollSnapType = 'none';
+        el.style.userSelect = 'none';
+      },
+      onPointerMove: (e: React.PointerEvent<HTMLDivElement>) => {
+        if (!dragging) return;
+        e.preventDefault();
+        const walk = e.clientX - sX;
+        if (Math.abs(walk) > 6) draggedRef.current = true;
+        e.currentTarget.scrollLeft = sL - walk;
+      },
+      onPointerUp: (e: React.PointerEvent<HTMLDivElement>) => {
+        if (!dragging) return;
+        dragging = false;
+        const el = e.currentTarget;
+        el.releasePointerCapture(e.pointerId);
+        el.style.cursor = 'grab';
+        el.style.scrollSnapType = 'x mandatory';
+        el.style.userSelect = '';
+      },
+    };
   };
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging.current || !sliderRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.5;
-    if (Math.abs(walk) > 5) hasDragged.current = true;
-    sliderRef.current.scrollLeft = scrollLeft.current - walk;
-  };
-
-  const handleMouseUp = () => {
-    if (!sliderRef.current) return;
-    isDragging.current = false;
-    sliderRef.current.style.cursor = 'grab';
-    sliderRef.current.style.scrollSnapType = 'x mandatory';
-  };
-
-  const handleNewsMouseDown = (e: React.MouseEvent) => {
-    if (!newsScrollRef.current) return;
-    newsDragging.current = true;
-    newsHasDragged.current = false;
-    newsStartX.current = e.pageX - newsScrollRef.current.offsetLeft;
-    newsScrollLeft.current = newsScrollRef.current.scrollLeft;
-    newsScrollRef.current.style.cursor = 'grabbing';
-    newsScrollRef.current.style.scrollSnapType = 'none';
-    newsScrollRef.current.style.userSelect = 'none';
-  };
-
-  const handleNewsMouseMove = (e: React.MouseEvent) => {
-    if (!newsDragging.current || !newsScrollRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - newsScrollRef.current.offsetLeft;
-    const walk = (x - newsStartX.current) * 1.5;
-    if (Math.abs(walk) > 5) newsHasDragged.current = true;
-    newsScrollRef.current.scrollLeft = newsScrollLeft.current - walk;
-  };
-
-  const handleNewsMouseUp = () => {
-    if (!newsScrollRef.current) return;
-    newsDragging.current = false;
-    newsScrollRef.current.style.cursor = 'grab';
-    newsScrollRef.current.style.scrollSnapType = 'x mandatory';
-    newsScrollRef.current.style.userSelect = '';
-  };
+  const [videoDrag] = useState(() => makeDragHandlers(hasDragged));
+  const [newsDrag] = useState(() => makeDragHandlers(newsHasDragged));
 
   const scrollSlider = (direction: 'left' | 'right') => {
     if (sliderRef.current) {
@@ -334,10 +312,10 @@ export default function Home() {
               ref={sliderRef}
               className="flex gap-4 md:gap-6 overflow-x-auto pb-2 snap-x snap-mandatory flex-1 cursor-grab select-none"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-              onMouseDown={handleMouseDown}
-              onMouseMove={handleMouseMove}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={handleMouseUp}
+              onPointerDown={videoDrag.onPointerDown}
+              onPointerMove={videoDrag.onPointerMove}
+              onPointerUp={videoDrag.onPointerUp}
+              onPointerCancel={videoDrag.onPointerUp}
             >
               {wcasVideos.map((video, index) => (
                 <div key={index} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group transition-all duration-300 hover:-translate-y-[3px] focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 focus-within:ring-offset-transparent" style={{ border: '1px solid rgba(255,255,255,0.16)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.2)', backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 45%)' }} onMouseEnter={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.22)'; e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,0.08), 0 12px 40px rgba(0,0,0,0.45), 0 4px 12px rgba(0,0,0,0.25)'; }} onMouseLeave={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.16)'; e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.2)'; }}>
@@ -469,12 +447,12 @@ export default function Home() {
             </button>
             <div
               ref={newsScrollRef}
-              className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide cursor-grab active:cursor-grabbing flex-1 min-w-0"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-              onMouseDown={handleNewsMouseDown}
-              onMouseMove={handleNewsMouseMove}
-              onMouseUp={handleNewsMouseUp}
-              onMouseLeave={handleNewsMouseUp}
+              className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide cursor-grab flex-1 min-w-0"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', touchAction: 'pan-y' }}
+              onPointerDown={newsDrag.onPointerDown}
+              onPointerMove={newsDrag.onPointerMove}
+              onPointerUp={newsDrag.onPointerUp}
+              onPointerCancel={newsDrag.onPointerUp}
             >
             {[
               {
