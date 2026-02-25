@@ -418,7 +418,45 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          <div
+            ref={(el) => {
+              if (el && !(el as any).__wheelAttached) {
+                (el as any).__wheelAttached = true;
+                el.addEventListener('wheel', (ev) => {
+                  if (Math.abs(ev.deltaY) > Math.abs(ev.deltaX)) {
+                    el.scrollLeft += ev.deltaY;
+                    ev.preventDefault();
+                  }
+                }, { passive: false });
+              }
+            }}
+            className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 cursor-grab active:cursor-grabbing"
+            onMouseDown={(e) => {
+              const el = e.currentTarget;
+              const startX = e.pageX - el.offsetLeft;
+              const scrollLeft = el.scrollLeft;
+              let dragged = false;
+              const onMove = (ev: MouseEvent) => {
+                const x = ev.pageX - el.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                if (Math.abs(walk) > 5) dragged = true;
+                el.scrollLeft = scrollLeft - walk;
+              };
+              const onUp = () => {
+                document.removeEventListener('mousemove', onMove);
+                document.removeEventListener('mouseup', onUp);
+                el.style.cursor = 'grab';
+                if (dragged) {
+                  el.querySelectorAll('a').forEach(a => a.style.pointerEvents = '');
+                  setTimeout(() => el.querySelectorAll('a').forEach(a => a.style.pointerEvents = ''), 50);
+                }
+              };
+              document.addEventListener('mousemove', onMove);
+              document.addEventListener('mouseup', onUp);
+              el.style.cursor = 'grabbing';
+              el.querySelectorAll('a').forEach(a => a.style.pointerEvents = 'none');
+            }}
+          >
             {[
               {
                 date: "July 31, 2025",
