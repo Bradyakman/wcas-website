@@ -292,7 +292,7 @@ export default function Home() {
               onMouseLeave={handleMouseUp}
             >
               {wcasVideos.map((video, index) => (
-                <div key={index} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group shadow-2xl">
+                <div key={index} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group transition-all duration-300 hover:-translate-y-[3px] focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 focus-within:ring-offset-transparent" style={{ border: '1px solid rgba(255,255,255,0.16)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.2)', backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 45%)' }} onMouseEnter={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.22)'; e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,0.08), 0 12px 40px rgba(0,0,0,0.45), 0 4px 12px rgba(0,0,0,0.25)'; }} onMouseLeave={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.16)'; e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.2)'; }}>
                     <div 
                       className="absolute inset-0 cursor-pointer text-white p-6 md:p-8 flex flex-col justify-center"
                       onClick={() => { if (!hasDragged.current) setPlayingVideo(video.id); }}
@@ -329,8 +329,8 @@ export default function Home() {
                         </div>
                       )}
                       
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 w-12 h-8 md:w-14 md:h-10 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors z-10 backdrop-blur-sm">
-                        <Play className="text-white fill-white" size={20} />
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/15 w-14 h-10 md:w-16 md:h-12 rounded-lg flex items-center justify-center group-hover:bg-white/25 transition-all duration-300 z-10 backdrop-blur-sm border border-white/20">
+                        <Play className="text-white fill-white" size={22} />
                       </div>
                     </div>
                   </div>
