@@ -293,8 +293,10 @@ export default function Home() {
             >
               {wcasVideos.map((video, index) => (
                 <div key={index} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-xl overflow-hidden aspect-video bg-[#0f172a] relative group transition-all duration-300 hover:-translate-y-[3px] focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 focus-within:ring-offset-transparent" style={{ border: '1px solid rgba(255,255,255,0.16)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.2)', backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 45%)' }} onMouseEnter={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.22)'; e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,0.08), 0 12px 40px rgba(0,0,0,0.45), 0 4px 12px rgba(0,0,0,0.25)'; }} onMouseLeave={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.16)'; e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.2)'; }}>
+                    <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0.18) 100%)' }}></div>
+                    <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: 'radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.18) 100%)' }}></div>
                     <div 
-                      className="absolute inset-0 cursor-pointer text-white p-6 md:p-8 flex flex-col justify-center"
+                      className="absolute inset-0 cursor-pointer text-white p-6 md:p-8 flex flex-col justify-center z-[2]"
                       onClick={() => { if (!hasDragged.current) setPlayingVideo(video.id); }}
                     >
                       {'specialLayout' in video && video.specialLayout ? (
@@ -329,8 +331,11 @@ export default function Home() {
                         </div>
                       )}
                       
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/15 w-14 h-10 md:w-16 md:h-12 rounded-lg flex items-center justify-center group-hover:bg-white/25 transition-all duration-300 z-10 backdrop-blur-sm border border-white/20">
-                        <Play className="text-white fill-white" size={22} />
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-1.5 z-10">
+                        <div className="bg-white/20 w-16 h-11 md:w-[4.5rem] md:h-[3.25rem] rounded-lg flex items-center justify-center group-hover:bg-white/30 transition-all duration-300 backdrop-blur-sm border border-white/25">
+                          <Play className="text-white fill-white" size={24} />
+                        </div>
+                        <span className="text-[10px] md:text-xs font-semibold tracking-widest uppercase text-white/0 group-hover:text-white/80 transition-all duration-300">Watch</span>
                       </div>
                     </div>
                   </div>
