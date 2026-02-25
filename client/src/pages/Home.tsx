@@ -380,16 +380,16 @@ export default function Home() {
         </div>
       )}
       {/* News Section Redesign */}
-      <section className="py-24 md:py-32 bg-secondary/50 border-t border-border">
+      <section className="py-24 md:py-32 bg-[#002759] border-t border-transparent">
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Insights</h2>
-              <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">Insights</h2>
+              <h3 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight">
                 News & Perspectives
               </h3>
             </div>
-            <Button variant="outline" className="rounded-full group hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+            <Button variant="outline" className="rounded-full group hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border-white/40 text-white hover:bg-white/10 hover:text-white">
               See All News
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
@@ -416,7 +416,7 @@ export default function Home() {
                 desc: "A leading private equity firm with a 45-year track record invests in the gold standard for risk management..."
               }
             ].map((news, i) => (
-              <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 h-full">
+              <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-white/20 h-full">
                 <div className="p-8 flex-grow flex flex-col">
                   <div className="flex items-center gap-4 mb-6 text-sm">
                     <span className="text-primary font-bold tracking-wider uppercase">{news.category}</span>
