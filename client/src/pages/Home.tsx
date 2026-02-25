@@ -79,7 +79,7 @@ const wcasVideos = [
   { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo, logoClass: "h-6 md:h-7" },
   { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS", partnerLogo: shieldsFullLogo, logoClass: "h-12 md:h-14" },
   { id: "861242949", title: "Paths to Growth", partner: "absorb", partnerLogo: absorbLogo },
-  { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo },
+  { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo, logoClass: "h-12 md:h-14 -mt-1" },
   { id: "861243091", title: "Paths to Growth", partner: "intoxalock", partnerLogo: intoxalockLogo, logoClass: "h-6 md:h-7" },
   { id: "913334845", title: "Innovative Partnership Between Private Capital and a Leading, Publicly Traded Company", partner: "Concentra", specialLayout: true },
   { id: "861243221", title: "Paths to Growth", partner: "Green Street" },
