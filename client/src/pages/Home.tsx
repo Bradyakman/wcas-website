@@ -75,7 +75,7 @@ const heroSlides = [
 ];
 
 const wcasVideos = [
-  { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo },
+  { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo, logoClass: "h-6 md:h-7" },
   { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS", partnerLogo: shieldsFullLogo },
   { id: "861242949", title: "Paths to Growth", partner: "absorb", partnerLogo: absorbLogo },
   { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo },
@@ -318,7 +318,7 @@ export default function Home() {
                           <div className="text-left flex-1">
                             <p className="text-xs text-white/60 mb-1 tracking-wide">In Partnership with</p>
                             {'partnerLogo' in video && video.partnerLogo ? (
-                              <img src={video.partnerLogo} alt={video.partner} className="h-10 md:h-12 w-auto -ml-1" />
+                              <img src={video.partnerLogo} alt={video.partner} className={`${'logoClass' in video && video.logoClass ? video.logoClass : 'h-10 md:h-12'} w-auto -ml-1`} />
                             ) : (
                               <h4 className="text-lg md:text-2xl font-bold font-heading tracking-tight">{video.partner}</h4>
                             )}
