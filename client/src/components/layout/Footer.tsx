@@ -3,7 +3,7 @@ import wcasLogoWhite from "@assets/image_1771877140413.png";
 
 export function Footer() {
   return (
-    <footer className="bg-[#0f172a] text-white pt-16 pb-10">
+    <footer id="bottom-band" className="bg-[#0d1f3c] text-white pt-16 pb-10">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row gap-16 mb-16">
           <div className="lg:w-1/4">
