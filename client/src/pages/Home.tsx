@@ -265,7 +265,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16 md:mb-24">
             <div className="max-w-[85vw] md:max-w-2xl lg:max-w-none mx-auto lg:mx-0 text-center lg:text-left">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-8 tracking-tighter">
-                Our Mission: Your Partner of Choice
+                Our Mission: Be Your Partner of Choice
               </h2>
               <div className="w-20 h-1 bg-white/30 mb-8 mx-auto lg:mx-0"></div>
             </div>
