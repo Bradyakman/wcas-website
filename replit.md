@@ -8,6 +8,7 @@ WCAS (Welsh, Carson, Anderson & Stowe) corporate website — a full-stack React 
 - **Backend**: Express 5, TypeScript, tsx
 - **Build**: Vite for client, esbuild for server
 - **Styling**: Tailwind CSS with shadcn/ui components
+- **Typography**: Bilo (Adobe Typekit, kit `mny3qsl`) — matches WCAS.com; loaded globally for all text
 
 ## Project Structure
 ```

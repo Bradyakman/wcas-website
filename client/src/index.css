@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: 'Inter', sans-serif;
-  --font-heading: 'Work Sans', sans-serif;
+  --font-sans: 'bilo', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: 'bilo', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
