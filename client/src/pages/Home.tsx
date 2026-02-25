@@ -460,7 +460,7 @@ export default function Home() {
                 desc: "Quickbase unveils next-generation capabilities designed to help enterprises streamline complex business processes..."
               }
             ].map((news, i) => (
-              <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 min-w-[340px] md:min-w-[380px] flex-shrink-0">
+              <a href="#" key={i} className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] flex-shrink-0">
                 <div className="p-8 flex-grow flex flex-col">
                   <div className="flex items-center gap-4 mb-6 text-sm">
                     <span className="text-primary font-bold tracking-wider uppercase">{news.category}</span>
