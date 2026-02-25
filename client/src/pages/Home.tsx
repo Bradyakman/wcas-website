@@ -25,7 +25,7 @@ import logoClearwater from "@assets/Clearwater-Analytics_1771799704135_trimmed.p
 import logoAlliance from "@assets/AllianceData_1771799704135_trimmed.png";
 import logoNavihealth from "@assets/navihealth_final.png";
 import logoNorstella from "@assets/Norstella_final.png";
-import logoSelect from "@assets/Select_final.png";
+import logoSelect from "@assets/image_1772034518225.png";
 import logoBisys from "@assets/BISYS_final2.png";
 import logoLumexa from "@assets/Lumexa_final.png";
 import shieldsFullLogo from "@assets/image_1772033135330.png";
