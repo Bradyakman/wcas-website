@@ -220,9 +220,6 @@ export default function Home() {
               </div>
               <div className="p-10 md:p-12 flex-grow">
                 <h4 className="text-3xl md:text-4xl font-heading font-bold mb-4">Healthcare</h4>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  Guiding sustainable organic growth strategies
-                </p>
               </div>
             </div>
 
@@ -237,9 +234,6 @@ export default function Home() {
               </div>
               <div className="p-10 md:p-12 flex-grow">
                 <h4 className="text-3xl md:text-4xl font-heading font-bold mb-4">Technology</h4>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  Cultivating top teams and company culture
-                </p>
               </div>
             </div>
 
