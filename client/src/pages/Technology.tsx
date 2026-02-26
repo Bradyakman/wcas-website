@@ -86,7 +86,7 @@ export default function Technology() {
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6">
               Technology
             </h1>
-            <p className="text-lg md:text-xl font-light text-white/80 max-w-3xl leading-relaxed">
+            <p className="text-[1.386rem] md:text-[1.733rem] font-bold text-white leading-[1.3] tracking-normal max-w-4xl">
               We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.
             </p>
           </div>
