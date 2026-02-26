@@ -185,27 +185,27 @@ export default function Home() {
         </div>
 
         {/* Stats (Static below carousel, spanning full width at bottom) */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-border py-10 md:py-12 z-20 overflow-x-auto scrollbar-hide">
+        <div className="absolute bottom-0 left-0 right-0 py-10 md:py-12 z-20 overflow-x-auto scrollbar-hide" style={{ backgroundColor: '#0a1628' }}>
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both min-w-max md:min-w-0">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">18</p>
-                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Funds Raised</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-0 leading-none md:leading-normal">18</p>
+                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider max-w-[70px] md:max-w-[100px] leading-tight text-left" style={{ color: 'rgba(255,255,255,0.5)' }}>Funds Raised</p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
+              <div className="w-px h-10 md:h-12 bg-white/15 shrink-0"></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">45+</p>
-                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Years of Experience</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-0 leading-none md:leading-normal">45<span className="text-primary">+</span></p>
+                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider max-w-[70px] md:max-w-[100px] leading-tight text-left" style={{ color: 'rgba(255,255,255,0.5)' }}>Years of Experience</p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
+              <div className="w-px h-10 md:h-12 bg-white/15 shrink-0"></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">190+</p>
-                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Companies</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-0 leading-none md:leading-normal">190<span className="text-primary">+</span></p>
+                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider max-w-[70px] md:max-w-[100px] leading-tight text-left" style={{ color: 'rgba(255,255,255,0.5)' }}>Companies</p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
+              <div className="w-px h-10 md:h-12 bg-white/15 shrink-0"></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0 pr-6 md:pr-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">$33B+</p>
-                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Capital Raised</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-0 leading-none md:leading-normal">$33B<span className="text-primary">+</span></p>
+                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider max-w-[70px] md:max-w-[100px] leading-tight text-left" style={{ color: 'rgba(255,255,255,0.5)' }}>Capital Raised</p>
               </div>
             </div>
           </div>
@@ -262,18 +262,18 @@ export default function Home() {
         </div>
       </section>
       {/* Logos Ticker */}
-      <section className="pt-0 pb-10 overflow-hidden" style={{ backgroundColor: '#0d1f3c' }}>
+      <section className="pt-0 pb-10 overflow-hidden bg-white">
         <div className="relative w-full overflow-hidden flex items-center py-4">
-          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #0d1f3c, transparent)' }}></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #0d1f3c, transparent)' }}></div>
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
           
           <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
             {[...logos, ...logos, ...logos].map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-[167px] h-[61px] flex items-center justify-center opacity-70 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${logo.mx}px`, marginRight: `${logo.mx}px` }}>
+              <div key={index} className="flex-shrink-0 w-[167px] h-[61px] flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${logo.mx}px`, marginRight: `${logo.mx}px` }}>
                 <img 
                   src={logo.src} 
                   alt={`${logo.name} logo`} 
-                  className="max-w-full max-h-full object-contain brightness-0 invert"
+                  className="max-w-full max-h-full object-contain mix-blend-multiply"
                   style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
                 />
               </div>
