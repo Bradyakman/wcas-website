@@ -190,22 +190,22 @@ export default function Home() {
             <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both min-w-max md:min-w-0">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
                 <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">18</p>
-                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[70px] md:max-w-[100px] leading-tight text-left">Funds Raised</p>
+                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Funds Raised</p>
               </div>
               <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
                 <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">45+</p>
-                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[70px] md:max-w-[100px] leading-tight text-left">Years of Experience</p>
+                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Years of Experience</p>
               </div>
               <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
                 <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">190+</p>
-                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[70px] md:max-w-[100px] leading-tight text-left">Companies</p>
+                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Companies</p>
               </div>
               <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0 pr-6 md:pr-0">
                 <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">$33B+</p>
-                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[70px] md:max-w-[100px] leading-tight text-left">Capital Raised</p>
+                <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Capital Raised</p>
               </div>
             </div>
           </div>
@@ -228,7 +228,7 @@ export default function Home() {
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:hidden"></div>
             <div className="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
             <div className="relative z-10 py-20 md:py-24 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
-              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(4rem, 8vw, 6.5rem)' }}>Healthcare</h2>
+              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Healthcare</h2>
               <div className="w-16 h-px bg-white/30 mb-8"></div>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
               <span className="inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-colors duration-500">
@@ -250,7 +250,7 @@ export default function Home() {
               <div className="absolute -right-12 -bottom-12 w-[300px] h-[300px] rounded-full border border-white/[0.03]"></div>
             </div>
             <div className="relative z-10 py-20 md:py-24 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
-              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(4rem, 8vw, 6.5rem)' }}>Technology</h2>
+              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Technology</h2>
               <div className="w-16 h-px bg-white/30 mb-8"></div>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Building category-defining technology platforms through strategic investment and operational excellence.</p>
               <span className="inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-colors duration-500">
