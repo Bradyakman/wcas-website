@@ -79,14 +79,14 @@ const heroSlides = [
 ];
 
 const wcasVideos = [
-  { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo, centeredLayout: true },
-  { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS", partnerLogo: shieldsFullLogo, centeredLayout: true },
-  { id: "861242949", title: "Paths to Growth", partner: "absorb", partnerLogo: absorbLogo, centeredLayout: true },
-  { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo, centeredLayout: true },
-  { id: "861243091", title: "Paths to Growth", partner: "intoxalock", partnerLogo: intoxalockLogo, centeredLayout: true },
+  { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
+  { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS", partnerLogo: shieldsFullLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
+  { id: "861242949", title: "Paths to Growth", partner: "absorb", partnerLogo: absorbLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
+  { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo, centeredLayout: true, logoClass: "h-12 md:h-14" },
+  { id: "861243091", title: "Paths to Growth", partner: "intoxalock", partnerLogo: intoxalockLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
   { id: "913334845", title: "Investing in Better Healthcare", partner: "Concentra", specialLayout: true },
-  { id: "861243221", title: "Paths to Growth", partner: "Green Street", partnerLogo: greenStreetLogo, centeredLayout: true },
-  { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", partnerLogo: leitersLogo, centeredLayout: true }
+  { id: "861243221", title: "Paths to Growth", partner: "Green Street", partnerLogo: greenStreetLogo, centeredLayout: true, logoClass: "h-12 md:h-14" },
+  { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", partnerLogo: leitersLogo, centeredLayout: true, logoClass: "h-8 md:h-10" }
 ];
 
 export default function Home() {
@@ -359,7 +359,7 @@ export default function Home() {
                           <h3 className="text-lg md:text-2xl font-bold font-heading leading-tight text-center">{video.title}</h3>
                           <div className="flex-1"></div>
                           {'partnerLogo' in video && video.partnerLogo && (
-                            <img src={video.partnerLogo} alt={video.partner} className="h-8 md:h-10 w-auto" />
+                            <img src={video.partnerLogo} alt={video.partner} className={`${'logoClass' in video && video.logoClass ? video.logoClass : 'h-8 md:h-10'} w-auto`} />
                           )}
                         </div>
                       ) : (
