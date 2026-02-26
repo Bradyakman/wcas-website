@@ -282,7 +282,7 @@ export default function Home() {
         </div>
       </section>
       {/* Mission & Video Slider Section */}
-      <section className="text-primary-foreground relative overflow-hidden" style={{ paddingTop: '30px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+      <section className="text-primary-foreground relative overflow-hidden border-t border-white/10" style={{ paddingTop: '30px' }}>
         {/* Abstract shapes for background interest */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-50 z-0"></div>
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50 z-0"></div>
