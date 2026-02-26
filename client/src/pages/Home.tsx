@@ -213,29 +213,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Logos Ticker */}
-      <section className="py-8 border-t border-border overflow-hidden bg-secondary/50">
-        <div className="relative w-full overflow-hidden flex items-center py-4">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/50 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/50 to-transparent z-10 pointer-events-none"></div>
-          
-          <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
-            {/* Render logos 3 times to ensure smooth infinite scroll */}
-            {[...logos, ...logos, ...logos].map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-[167px] h-[61px] flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${logo.mx}px`, marginRight: `${logo.mx}px` }}>
-                <img 
-                  src={logo.src} 
-                  alt={`${logo.name} logo`} 
-                  className="max-w-full max-h-full object-contain mix-blend-multiply"
-                  style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* The 4 Boxes - Reimagined Layout */}
-      <section className="pt-2 pb-16 bg-secondary/50">
+      <section className="pt-2 pb-8 bg-secondary/50">
         <div className="container mx-auto px-6 md:px-12">
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
@@ -281,6 +260,26 @@ export default function Home() {
               </div>
             </a>
 
+          </div>
+        </div>
+      </section>
+      {/* Logos Ticker */}
+      <section className="py-8 border-t border-border overflow-hidden bg-secondary/50">
+        <div className="relative w-full overflow-hidden flex items-center py-4">
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/50 to-transparent z-10 pointer-events-none"></div>
+          
+          <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
+            {[...logos, ...logos, ...logos].map((logo, index) => (
+              <div key={index} className="flex-shrink-0 w-[167px] h-[61px] flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${logo.mx}px`, marginRight: `${logo.mx}px` }}>
+                <img 
+                  src={logo.src} 
+                  alt={`${logo.name} logo`} 
+                  className="max-w-full max-h-full object-contain mix-blend-multiply"
+                  style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
