@@ -228,7 +228,7 @@ export default function Home() {
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:hidden"></div>
             <div className="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
             <div className="relative z-10 py-20 md:py-24 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
-              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Healthcare</h2>
+              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Healthcare</h2>
               <div className="w-16 h-px bg-white/30 mb-8"></div>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
               <span className="inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-colors duration-500">
@@ -250,7 +250,7 @@ export default function Home() {
               <div className="absolute -right-12 -bottom-12 w-[300px] h-[300px] rounded-full border border-white/[0.03]"></div>
             </div>
             <div className="relative z-10 py-20 md:py-24 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
-              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Technology</h2>
+              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Technology</h2>
               <div className="w-16 h-px bg-white/30 mb-8"></div>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Building category-defining technology platforms through strategic investment and operational excellence.</p>
               <span className="inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-colors duration-500">
