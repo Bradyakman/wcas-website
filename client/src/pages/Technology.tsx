@@ -87,7 +87,7 @@ export default function Technology() {
               Technology
             </h1>
             <p className="text-[1.386rem] md:text-[1.733rem] font-bold text-white leading-[1.3] tracking-normal max-w-4xl">
-              We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.
+              Decades of Experience: Strategic Insight Across Our Focused Subsectors
             </p>
           </div>
         </div>
