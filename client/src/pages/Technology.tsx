@@ -139,15 +139,8 @@ export default function Technology() {
           </div>
         </div>
 
-        <div className="mt-8 text-center relative z-10">
-          <Button size="lg" className="rounded-full px-8 group">
-            View All Technology Investment Sectors
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </div>
-      </section>
-      {/* Logo Ticker */}
-      <section className="py-8 bg-white border-b border-border overflow-hidden">
+        {/* Logo Ticker */}
+        <div className="mt-12 overflow-hidden">
         <div className="flex animate-marquee items-center">
           {/* Duplicated for seamless loop */}
           {[...Array(2)].map((_, i) => (
@@ -176,6 +169,7 @@ export default function Technology() {
               ))}
             </div>
           ))}
+        </div>
         </div>
       </section>
       {/* Video Slider Section */}
