@@ -84,17 +84,7 @@
   }
   @media (min-width: 1536px) {
     .container {
-      max-width: 1440px;
-    }
-  }
-  @media (min-width: 1800px) {
-    .container {
-      max-width: 1600px;
-    }
-  }
-  @media (min-width: 2200px) {
-    .container {
-      max-width: 1920px;
+      max-width: 90%;
     }
   }
 }
