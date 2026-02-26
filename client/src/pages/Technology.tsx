@@ -117,21 +117,21 @@ export default function Technology() {
               {[
                 { name: 'Headstrong', src: headstrongLogo },
                 { name: 'Global Collect', src: globalCollectLogo },
-                { name: 'Simeio', src: simeioLogo, className: "scale-75" },
+                { name: 'Simeio', src: simeioLogo },
                 { name: 'Alert Logic', src: alertLogicLogo },
                 { name: 'Identifix', src: identifixLogo },
-                { name: 'LINQ', src: linqLogo, className: "scale-90" },
+                { name: 'LINQ', src: linqLogo },
                 { name: 'Triple Point', src: triplePointLogo },
                 { name: 'Ceridian', src: ceridianLogo },
                 { name: 'Avetta', src: avettaLogo },
                 { name: 'Asurion', src: asurionLogo },
                 { name: 'GovCIO', src: govcioLogo }
               ].map((logo, j) => (
-                <div key={j} className="h-16 w-32 md:h-24 md:w-56 lg:w-64 relative flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300">
+                <div key={j} className="flex-shrink-0 w-[140px] h-[50px] md:w-[167px] md:h-[61px] flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300">
                   <img 
                     src={logo.src} 
                     alt={`${logo.name} logo`} 
-                    className={`max-h-full max-w-full object-contain mix-blend-multiply ${logo.className || ''}`}
+                    className="max-w-full max-h-full object-contain mix-blend-multiply"
                   />
                 </div>
               ))}
