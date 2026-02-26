@@ -226,7 +226,6 @@ export default function Home() {
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:hidden"></div>
             <div className="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
             <div className="relative z-10 py-24 md:py-28 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
-              <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.3em] text-white/40 mb-6">Sector Focus</p>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.05] tracking-tight mb-8" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>Healthcare</h2>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
               <span className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/50 group-hover:text-white/90 transition-colors duration-500">
@@ -246,7 +245,6 @@ export default function Home() {
               <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(255,255,255,0.02) 100px, rgba(255,255,255,0.02) 101px)' }}></div>
             </div>
             <div className="relative z-10 py-24 md:py-28 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
-              <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.3em] text-white/40 mb-6">Sector Focus</p>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.05] tracking-tight mb-8" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>Technology</h2>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Building category-defining technology platforms through strategic investment and operational excellence.</p>
               <span className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/50 group-hover:text-white/90 transition-colors duration-500">
@@ -258,18 +256,18 @@ export default function Home() {
         </div>
       </section>
       {/* Logos Ticker */}
-      <section className="pt-0 pb-10 overflow-hidden bg-secondary/50">
+      <section className="pt-0 pb-10 overflow-hidden" style={{ backgroundColor: '#0d1f3c' }}>
         <div className="relative w-full overflow-hidden flex items-center py-4">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/50 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #0d1f3c, transparent)' }}></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #0d1f3c, transparent)' }}></div>
           
           <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
             {[...logos, ...logos, ...logos].map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-[167px] h-[61px] flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${logo.mx}px`, marginRight: `${logo.mx}px` }}>
+              <div key={index} className="flex-shrink-0 w-[167px] h-[61px] flex items-center justify-center opacity-70 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${logo.mx}px`, marginRight: `${logo.mx}px` }}>
                 <img 
                   src={logo.src} 
                   alt={`${logo.name} logo`} 
-                  className="max-w-full max-h-full object-contain mix-blend-multiply"
+                  className="max-w-full max-h-full object-contain brightness-0 invert"
                   style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
                 />
               </div>
