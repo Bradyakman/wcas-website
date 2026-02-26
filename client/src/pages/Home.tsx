@@ -262,10 +262,10 @@ export default function Home() {
         </div>
       </section>
       {/* Logos Ticker */}
-      <section className="overflow-hidden border-t border-white/10" style={{ backgroundColor: '#0d1f3c', paddingTop: '30px', paddingBottom: '30px' }}>
+      <section className="overflow-hidden" style={{ backgroundColor: '#0a1628', paddingTop: '30px', paddingBottom: '30px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div className="relative w-full overflow-hidden flex items-center py-2">
-          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #0d1f3c, transparent)' }}></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #0d1f3c, transparent)' }}></div>
+          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #0a1628, transparent)' }}></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #0a1628, transparent)' }}></div>
           
           <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
             {[...logos, ...logos, ...logos].map((logo, index) => (
