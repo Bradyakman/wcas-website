@@ -183,20 +183,10 @@ export default function Technology() {
           <div className="absolute inset-0 bg-white/70 md:bg-gradient-to-r md:from-white/0 md:via-white/60 md:to-white/95"></div>
         </div>
         
-        <div className="container mx-auto px-6 md:px-12 relative z-10 h-full flex flex-col justify-center">
-          <div className="flex flex-col md:items-end text-center md:text-right">
-            <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-[#1e3a8a] mb-6 tracking-tight">
-                Our Technology Portfolio
-              </h2>
-              <p className="text-xl md:text-2xl text-[#475569] mb-10 leading-relaxed font-light">
-                For decades, we've built sector-leading companies across the technology and software industry.
-              </p>
-              <Button size="lg" className="bg-[#cbd5e1] hover:bg-[#bbf7d0] text-[#1e3a8a] hover:text-[#1e3a8a] font-bold tracking-wider uppercase px-8 py-6 rounded-full transition-colors">
-                See Our Portfolio
-              </Button>
-            </div>
-          </div>
+        <div className="container mx-auto px-6 md:px-12 relative z-10 h-full flex items-center justify-center">
+          <Button size="lg" className="bg-[#cbd5e1] hover:bg-[#bbf7d0] text-[#1e3a8a] hover:text-[#1e3a8a] font-bold tracking-wider uppercase px-12 py-8 rounded-full transition-colors text-lg md:text-xl">
+            See Our Tech Portfolio
+          </Button>
         </div>
       </section>
       {/* Video Slider Section */}
