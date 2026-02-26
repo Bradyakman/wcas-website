@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Cpu, Briefcase, Quote, Play, X } from "lucide-react";
 import heroBg from "@assets/1115_WCAS_March_7_23_by_John_Abbott_1771874983441.JPG";
-import healthcareImg from "@assets/0223_WCAS_March_13_23_by_John_Abbott_1772032006133.JPG";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import missionBg from "@assets/2345234534_1771799538730.jpg";
 import growthImg from "@assets/WCAS_March-13_04509616.mov.20_53_56_26.Still001-scaled_1771765691568.webp";
-import talentImg from "@assets/137_WCAS_March-6-23-by-John-Abbott-scaled_1771765917799.jpg";
 import techImg from "@assets/1070_WCAS_March-7-23-by-John-Abbott-scaled_1771766085574.jpg";
 import maImg from "@assets/healthcare-RESIZED-jpg_1771766272998.webp";
 import testimonial1 from "@/assets/images/testimonial-1.png";
@@ -213,54 +211,50 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* The 4 Boxes - Reimagined Layout */}
-      <section className="pt-10 pb-10 bg-secondary/50">
-        <div className="container mx-auto px-6 md:px-12">
+      {/* Sector Split Panels */}
+      <section className="w-full">
+        <div className="flex flex-col md:flex-row w-full">
+          <a
+            href="/healthcare"
+            className="group relative w-full md:w-1/2 min-h-[80vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden no-underline cursor-pointer"
+            style={{ WebkitTapHighlightColor: 'transparent' }}
+          >
+            <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ background: 'linear-gradient(160deg, #0a1628 0%, #0d1f3c 35%, #122a4e 65%, #0d1f3c 100%)' }}>
+              <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%), radial-gradient(circle at 60% 80%, rgba(255,255,255,0.03) 0%, transparent 45%)' }}></div>
+              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.02) 80px, rgba(255,255,255,0.02) 81px)' }}></div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:hidden"></div>
+            <div className="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
+            <div className="relative z-10 px-10 md:px-16 lg:px-20 text-center max-w-xl">
+              <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.3em] text-white/40 mb-6">Sector Focus</p>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.05] tracking-tight mb-8" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>Healthcare</h2>
+              <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
+              <span className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/50 group-hover:text-white/90 transition-colors duration-500">
+                Explore
+                <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform duration-500" />
+              </span>
+            </div>
+          </a>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
-            {/* Box 1 */}
-            <a
-              href="/healthcare"
-              className="group bg-white rounded-2xl shadow-sm hover:shadow-xl active:shadow-xl focus-visible:shadow-xl active:-translate-y-0.5 hover:-translate-y-0.5 focus-visible:-translate-y-0.5 transition-all duration-500 relative overflow-hidden flex flex-col no-underline text-inherit cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-              style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
-              onTouchStart={(e) => e.currentTarget.classList.add('is-pressed')}
-              onTouchEnd={(e) => { const el = e.currentTarget; setTimeout(() => el.classList.remove('is-pressed'), 150); }}
-              onTouchCancel={(e) => e.currentTarget.classList.remove('is-pressed')}
-            >
-              <div className="h-72 w-full overflow-hidden relative">
-                <img 
-                  src={healthcareImg} 
-                  alt="Team discussion in office lounge" 
-                  className="w-full h-full object-cover object-[center_25%] scale-125 group-hover:scale-[1.35] transition-transform duration-700 ease-out"
-                />
-              </div>
-              <div className="py-6 md:py-8 px-10 md:px-12 flex-grow flex items-center justify-center">
-                <h4 className="text-3xl md:text-4xl font-heading font-bold">Healthcare</h4>
-              </div>
-            </a>
-
-            {/* Box 2 */}
-            <a
-              href="/technology"
-              className="group bg-white rounded-2xl shadow-sm hover:shadow-xl active:shadow-xl focus-visible:shadow-xl active:-translate-y-0.5 hover:-translate-y-0.5 focus-visible:-translate-y-0.5 transition-all duration-500 relative overflow-hidden flex flex-col no-underline text-inherit cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-              style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
-              onTouchStart={(e) => e.currentTarget.classList.add('is-pressed')}
-              onTouchEnd={(e) => { const el = e.currentTarget; setTimeout(() => el.classList.remove('is-pressed'), 150); }}
-              onTouchCancel={(e) => e.currentTarget.classList.remove('is-pressed')}
-            >
-              <div className="h-72 w-full overflow-hidden relative">
-                <img 
-                  src={talentImg} 
-                  alt="Team discussion in conference room" 
-                  className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
-              </div>
-              <div className="py-6 md:py-8 px-10 md:px-12 flex-grow flex items-center justify-center">
-                <h4 className="text-3xl md:text-4xl font-heading font-bold">Technology</h4>
-              </div>
-            </a>
-
-          </div>
+          <a
+            href="/technology"
+            className="group relative w-full md:w-1/2 min-h-[80vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden no-underline cursor-pointer"
+            style={{ WebkitTapHighlightColor: 'transparent' }}
+          >
+            <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ background: 'linear-gradient(200deg, #070e1a 0%, #0b1729 35%, #0f1f38 65%, #0b1729 100%)' }}>
+              <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 75% 40%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 25% 75%, rgba(255,255,255,0.05) 0%, transparent 40%), radial-gradient(circle at 50% 10%, rgba(255,255,255,0.03) 0%, transparent 45%)' }}></div>
+              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(255,255,255,0.02) 100px, rgba(255,255,255,0.02) 101px)' }}></div>
+            </div>
+            <div className="relative z-10 px-10 md:px-16 lg:px-20 text-center max-w-xl">
+              <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.3em] text-white/40 mb-6">Sector Focus</p>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.05] tracking-tight mb-8" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>Technology</h2>
+              <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10">Building category-defining technology platforms through strategic investment and operational excellence.</p>
+              <span className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/50 group-hover:text-white/90 transition-colors duration-500">
+                Explore
+                <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform duration-500" />
+              </span>
+            </div>
+          </a>
         </div>
       </section>
       {/* Logos Ticker */}
