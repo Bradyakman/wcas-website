@@ -173,17 +173,8 @@ export default function Technology() {
         </div>
       </section>
       {/* Portfolio CTA Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={techPortfolioBg} 
-            alt="WCAS Technology Team Meeting" 
-            className="w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-white/70 md:bg-gradient-to-r md:from-white/0 md:via-white/60 md:to-white/95"></div>
-        </div>
-        
-        <div className="container mx-auto px-6 md:px-12 relative z-10 h-full flex items-center justify-center">
+      <section className="py-10 bg-white">
+        <div className="container mx-auto px-6 md:px-12 flex items-center justify-center">
           <Button size="lg" className="bg-[#cbd5e1] hover:bg-[#bbf7d0] text-[#1e3a8a] hover:text-[#1e3a8a] font-bold tracking-wider uppercase px-12 py-8 rounded-full transition-colors text-lg md:text-xl">
             See Our Tech Portfolio
           </Button>
