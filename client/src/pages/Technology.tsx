@@ -110,18 +110,6 @@ export default function Technology() {
       </section>
       {/* Subsectors Grid */}
       <section className="py-24 bg-white relative">
-        <div className="container mx-auto px-6 md:px-12 mb-16 relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Focused Subsectors</h2>
-            <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight mb-6">
-              Decades of Experience
-            </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              For over four decades, we've continually innovated and refined our investments in specific sectors, developing an investment approach and strategy for each subsector that has allowed us to provide a differentiated viewpoint.
-            </p>
-          </div>
-        </div>
-
         <div className="relative w-full overflow-hidden">
           <div className="flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-12 pb-12 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {sectors.map((sector, i) => (
