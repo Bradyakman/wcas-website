@@ -109,7 +109,7 @@ export default function Technology() {
         </div>
       </section>
       {/* Subsectors Grid */}
-      <section className="py-24 bg-white relative">
+      <section className="pt-10 pb-24 bg-white relative">
         <div className="container mx-auto px-6 md:px-12 mb-12">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground text-center">Focused Subsectors</h2>
         </div>
