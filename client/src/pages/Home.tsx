@@ -307,7 +307,6 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-8 tracking-tighter">
                 Our Mission: Be Your Partner of Choice
               </h2>
-              <div className="w-20 h-1 bg-white/30 mb-8 mx-auto lg:mx-0"></div>
             </div>
             <div className="max-w-[85vw] md:max-w-2xl lg:max-w-none mx-auto lg:mx-0 text-center lg:text-left lg:pt-2">
               <p className="text-xl md:text-2xl leading-relaxed text-white/90 font-light">
