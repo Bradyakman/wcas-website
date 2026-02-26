@@ -111,7 +111,7 @@ export default function Technology() {
       {/* Subsectors Grid */}
       <section className="py-24 bg-white relative">
         <div className="container mx-auto px-6 md:px-12 mb-12">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-primary text-center">Focused Subsectors</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground text-center">Focused Subsectors</h2>
         </div>
         <div className="relative w-full overflow-hidden">
           <div className="flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-12 pb-12 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
