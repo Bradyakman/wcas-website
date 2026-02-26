@@ -78,13 +78,31 @@ export default function Technology() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pt-24 pb-8 px-6 text-white relative overflow-hidden min-h-[34vh] md:min-h-[44vh] flex items-center">
+      <section className="relative min-h-[34vh] md:min-h-[44vh] flex items-center pt-24 pb-8 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#0d1f3c]"></div>
         
-        <div className="container mx-auto mt-12 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8 leading-tight">
-            Technology
-          </h1>
+        <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center justify-center h-full">
+          <div className="pb-40 md:pb-44 lg:pb-48 xl:pb-44 flex flex-col items-center text-center">
+            <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight">
+              Technology
+            </h1>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-border py-4 md:py-6 z-20 overflow-x-auto scrollbar-hide">
+          <div className="container mx-auto px-6 md:px-12">
+            <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center min-w-max md:min-w-0">
+              {stats.map((stat, i) => (
+                <div key={i} className="contents">
+                  <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
+                    <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">{stat.value}</p>
+                    <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[120px] md:max-w-[160px] leading-tight text-left">{stat.label}</p>
+                  </div>
+                  {i < stats.length - 1 && <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
       {/* Logo Ticker */}
@@ -116,41 +134,6 @@ export default function Technology() {
               ))}
             </div>
           ))}
-        </div>
-      </section>
-      {/* Stats & Intro Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-32">
-            <div>
-              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Investment Strategy</h2>
-              <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight mb-8">
-                A Trusted Partner for Long-Term Success
-              </h3>
-            </div>
-            <div className="flex flex-col justify-center">
-              <p className="text-xl leading-relaxed text-muted-foreground mb-8">
-                Our approach matters because we believe it can accelerate revenue growth and operational scaling for innovative tech companies. WCAS fosters long-term relationships, valued by sellers and management teams alike to become the partner of choice.
-              </p>
-              <div className="w-16 h-1 bg-primary"></div>
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center min-w-max md:min-w-0">
-            {stats.map((stat, i) => (
-              <div key={i} className="contents">
-                <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                  <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">{stat.value}</p>
-                  <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[120px] md:max-w-[160px] leading-tight text-left">{stat.label}</p>
-                </div>
-                {i < stats.length - 1 && <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>}
-              </div>
-            ))}
-          </div>
-          
-          <div className="mt-8 text-xs text-muted-foreground/60 font-medium text-center">
-            Note: All figures as of December 31, 2025, unless otherwise indicated.
-          </div>
         </div>
       </section>
       {/* Video Slider Section */}
