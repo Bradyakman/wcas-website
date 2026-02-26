@@ -185,27 +185,27 @@ export default function Home() {
         </div>
 
         {/* Stats (Static below carousel, spanning full width at bottom) */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-border py-4 md:py-6 z-20 overflow-x-auto scrollbar-hide">
+        <div className="absolute bottom-0 left-0 right-0 py-4 md:py-6 z-20 overflow-x-auto scrollbar-hide" style={{ backgroundColor: '#0a1628' }}>
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both min-w-max md:min-w-0">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">18</p>
-                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[70px] md:max-w-[100px] leading-tight text-left">Funds Raised</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-0 leading-none md:leading-normal" style={{ color: '#c9a84c' }}>18</p>
+                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-white/60 max-w-[70px] md:max-w-[100px] leading-tight text-left">Funds Raised</p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
+              <div className="w-px h-10 md:h-12 bg-white/15 shrink-0"></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">45+</p>
-                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[70px] md:max-w-[100px] leading-tight text-left">Years of Experience</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-0 leading-none md:leading-normal" style={{ color: '#c9a84c' }}>45+</p>
+                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-white/60 max-w-[70px] md:max-w-[100px] leading-tight text-left">Years of Experience</p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
+              <div className="w-px h-10 md:h-12 bg-white/15 shrink-0"></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">190+</p>
-                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[70px] md:max-w-[100px] leading-tight text-left">Companies</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-0 leading-none md:leading-normal" style={{ color: '#c9a84c' }}>190+</p>
+                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-white/60 max-w-[70px] md:max-w-[100px] leading-tight text-left">Companies</p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
+              <div className="w-px h-10 md:h-12 bg-white/15 shrink-0"></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0 pr-6 md:pr-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">$33B+</p>
-                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[70px] md:max-w-[100px] leading-tight text-left">Capital Raised</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-0 leading-none md:leading-normal" style={{ color: '#c9a84c' }}>$33B+</p>
+                <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-white/60 max-w-[70px] md:max-w-[100px] leading-tight text-left">Capital Raised</p>
               </div>
             </div>
           </div>
@@ -216,7 +216,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row w-full">
           <a
             href="/healthcare"
-            className="group relative w-full md:w-1/2 min-h-[80vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden no-underline cursor-pointer"
+            className="group relative w-full md:w-1/2 overflow-hidden no-underline cursor-pointer block"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ background: 'linear-gradient(160deg, #0a1628 0%, #0d1f3c 35%, #122a4e 65%, #0d1f3c 100%)' }}>
@@ -225,10 +225,10 @@ export default function Home() {
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:hidden"></div>
             <div className="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
-            <div className="relative z-10 px-10 md:px-16 lg:px-20 text-center max-w-xl -mt-16 md:-mt-20">
+            <div className="relative z-10 py-24 md:py-28 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
               <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.3em] text-white/40 mb-6">Sector Focus</p>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.05] tracking-tight mb-8" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>Healthcare</h2>
-              <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
+              <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
               <span className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/50 group-hover:text-white/90 transition-colors duration-500">
                 Explore
                 <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform duration-500" />
@@ -238,17 +238,17 @@ export default function Home() {
 
           <a
             href="/technology"
-            className="group relative w-full md:w-1/2 min-h-[80vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden no-underline cursor-pointer"
+            className="group relative w-full md:w-1/2 overflow-hidden no-underline cursor-pointer block"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ background: 'linear-gradient(200deg, #070e1a 0%, #0b1729 35%, #0f1f38 65%, #0b1729 100%)' }}>
               <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 75% 40%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 25% 75%, rgba(255,255,255,0.05) 0%, transparent 40%), radial-gradient(circle at 50% 10%, rgba(255,255,255,0.03) 0%, transparent 45%)' }}></div>
               <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(255,255,255,0.02) 100px, rgba(255,255,255,0.02) 101px)' }}></div>
             </div>
-            <div className="relative z-10 px-10 md:px-16 lg:px-20 text-center max-w-xl -mt-16 md:-mt-20">
+            <div className="relative z-10 py-24 md:py-28 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
               <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.3em] text-white/40 mb-6">Sector Focus</p>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.05] tracking-tight mb-8" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>Technology</h2>
-              <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10">Building category-defining technology platforms through strategic investment and operational excellence.</p>
+              <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Building category-defining technology platforms through strategic investment and operational excellence.</p>
               <span className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/50 group-hover:text-white/90 transition-colors duration-500">
                 Explore
                 <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform duration-500" />
