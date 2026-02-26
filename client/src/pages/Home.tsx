@@ -398,7 +398,7 @@ export default function Home() {
           </div>
 
           {/* Button moved below scroller */}
-        <div className="flex justify-center pb-24 md:pb-32 relative z-10">
+        <div className="flex justify-center pt-10 md:pt-14 pb-24 md:pb-32 relative z-10">
           <Button size="lg" variant="secondary" asChild className="rounded-full px-14 py-6 text-lg font-semibold shadow-lg hover:shadow-2xl hover:scale-105 hover:brightness-110 transition-all duration-300 cursor-pointer">
             <a href="/#firm" style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', pointerEvents: 'auto' }}>
               Learn More About Our History
