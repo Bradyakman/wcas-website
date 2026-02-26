@@ -148,25 +148,19 @@ export default function Technology() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-start">
-            {/* Main Stat */}
-            <div className="md:col-span-1 border-b border-border/50 pb-8 md:border-0 md:pb-0">
-              <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">{stats[0].label}</div>
-              <div className="text-7xl md:text-8xl lg:text-9xl font-serif font-normal tracking-tighter text-foreground">{stats[0].value}</div>
-            </div>
-
-            {/* Other Stats */}
-            <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-8">
-              {stats.slice(1).map((stat, i) => (
-                <div key={i} className="flex flex-col justify-start">
-                  <div className="text-xs font-semibold text-muted-foreground mb-4 h-8 flex items-end">{stat.label}</div>
-                  <div className="text-4xl md:text-5xl font-serif font-normal tracking-tight text-foreground border-b border-border pb-4">{stat.value}</div>
+          <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center min-w-max md:min-w-0">
+            {stats.map((stat, i) => (
+              <div key={i} className="contents">
+                <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">{stat.value}</p>
+                  <p className="text-[10px] md:text-sm font-semibold uppercase tracking-wider text-muted-foreground max-w-[120px] md:max-w-[160px] leading-tight text-left">{stat.label}</p>
                 </div>
-              ))}
-            </div>
+                {i < stats.length - 1 && <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>}
+              </div>
+            ))}
           </div>
           
-          <div className="mt-12 text-xs text-muted-foreground/60 font-medium">
+          <div className="mt-8 text-xs text-muted-foreground/60 font-medium text-center">
             Note: All figures as of December 31, 2025, unless otherwise indicated.
           </div>
         </div>
