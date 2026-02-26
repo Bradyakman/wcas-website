@@ -212,7 +212,7 @@ export default function Home() {
         </div>
       </section>
       {/* Sector Split Panels */}
-      <section className="w-full" style={{ backgroundColor: '#0d1f3c', paddingBottom: '30px' }}>
+      <section className="w-full">
         <div className="flex flex-col md:flex-row w-full">
           <a
             href="/healthcare"
@@ -225,11 +225,11 @@ export default function Home() {
               <div className="absolute -right-20 -top-20 w-[400px] h-[400px] rounded-full border border-white/[0.04]"></div>
               <div className="absolute -left-10 -bottom-10 w-[250px] h-[250px] rounded-full border border-white/[0.03]"></div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10 md:hidden"></div>
-            <div className="absolute top-0 right-0 bottom-0 w-px bg-white/10 hidden md:block"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:hidden"></div>
+            <div className="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
             <div className="relative z-10 py-20 md:py-24 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
-              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Healthcare</h2>
-              <div className="w-16 h-px bg-white/10 mb-8"></div>
+              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Healthcare</h2>
+              <div className="w-16 h-px bg-white/30 mb-8"></div>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
               <span className="inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-colors duration-500">
                 Explore
@@ -250,8 +250,8 @@ export default function Home() {
               <div className="absolute -right-12 -bottom-12 w-[300px] h-[300px] rounded-full border border-white/[0.03]"></div>
             </div>
             <div className="relative z-10 py-20 md:py-24 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
-              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Technology</h2>
-              <div className="w-16 h-px bg-white/10 mb-8"></div>
+              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Technology</h2>
+              <div className="w-16 h-px bg-white/30 mb-8"></div>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Building category-defining technology platforms through strategic investment and operational excellence.</p>
               <span className="inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-colors duration-500">
                 Explore
@@ -262,10 +262,10 @@ export default function Home() {
         </div>
       </section>
       {/* Logos Ticker */}
-      <section className="overflow-hidden" style={{ backgroundColor: '#0a1628', paddingTop: '30px', paddingBottom: '30px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-        <div className="relative w-full overflow-hidden flex items-center py-2">
-          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #0a1628, transparent)' }}></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #0a1628, transparent)' }}></div>
+      <section className="pt-0 pb-10 overflow-hidden" style={{ backgroundColor: '#0d1f3c' }}>
+        <div className="relative w-full overflow-hidden flex items-center py-4">
+          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #0d1f3c, transparent)' }}></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #0d1f3c, transparent)' }}></div>
           
           <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
             {[...logos, ...logos, ...logos].map((logo, index) => (
@@ -282,7 +282,7 @@ export default function Home() {
         </div>
       </section>
       {/* Mission & Video Slider Section */}
-      <section className="text-primary-foreground relative overflow-hidden border-t border-white/10" style={{ paddingTop: '30px' }}>
+      <section className="pt-8 md:pt-10 text-primary-foreground relative overflow-hidden">
         {/* Abstract shapes for background interest */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-50 z-0"></div>
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50 z-0"></div>
