@@ -81,22 +81,10 @@ export default function Technology() {
       <section className="pt-24 pb-8 px-6 text-white relative overflow-hidden min-h-[34vh] md:min-h-[44vh] flex items-center">
         <div className="absolute inset-0 z-0 bg-[#0d1f3c]"></div>
         
-        <div className="container mx-auto mt-12 relative z-10">
-          <div className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-white/60 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">
-              Home
-            </Link>
-            <span>/</span>
-            <span className="text-white">Technology</span>
-          </div>
-          <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8 leading-tight">
-              Technology
-            </h1>
-            <p className="text-xl md:text-2xl font-light text-white/80 max-w-3xl leading-relaxed">
-              Leading Technology Investments Since 1979.
-            </p>
-          </div>
+        <div className="container mx-auto mt-12 relative z-10 text-center">
+          <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8 leading-tight">
+            Technology
+          </h1>
         </div>
       </section>
       {/* Logo Ticker */}
