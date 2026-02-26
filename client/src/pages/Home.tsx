@@ -262,8 +262,8 @@ export default function Home() {
         </div>
       </section>
       {/* Logos Ticker */}
-      <section className="pt-0 pb-10 overflow-hidden" style={{ backgroundColor: '#0d1f3c' }}>
-        <div className="relative w-full overflow-hidden flex items-center py-4">
+      <section className="py-0 overflow-hidden" style={{ backgroundColor: '#0d1f3c' }}>
+        <div className="relative w-full overflow-hidden flex items-center py-8">
           <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #0d1f3c, transparent)' }}></div>
           <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #0d1f3c, transparent)' }}></div>
           
@@ -282,7 +282,7 @@ export default function Home() {
         </div>
       </section>
       {/* Mission & Video Slider Section */}
-      <section className="pt-8 md:pt-10 text-primary-foreground relative overflow-hidden">
+      <section className="pt-0 text-primary-foreground relative overflow-hidden">
         {/* Abstract shapes for background interest */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-50 z-0"></div>
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50 z-0"></div>
