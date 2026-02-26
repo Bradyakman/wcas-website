@@ -311,7 +311,7 @@ export default function Home() {
             </div>
             <div className="max-w-[85vw] md:max-w-2xl lg:max-w-none mx-auto lg:mx-0 text-center lg:text-left lg:pt-2">
               <p className="text-xl md:text-2xl leading-relaxed text-white/90 font-light">
-                WCAS’s mission is to lead in Healthcare and Technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner by executives and investors.
+                WCAS’s mission is to lead in healthcare and technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner by executives and investors.
               </p>
             </div>
           </div>
