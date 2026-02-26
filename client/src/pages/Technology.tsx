@@ -83,9 +83,12 @@ export default function Technology() {
         
         <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center justify-center h-full">
           <div className="pb-40 md:pb-44 lg:pb-48 xl:pb-44 flex flex-col items-center text-center">
-            <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight">
+            <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6">
               Technology
             </h1>
+            <p className="text-lg md:text-xl font-light text-white/80 max-w-3xl leading-relaxed">
+              We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.
+            </p>
           </div>
         </div>
 
