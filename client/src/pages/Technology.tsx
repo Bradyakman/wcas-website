@@ -140,7 +140,7 @@ export default function Technology() {
         </div>
 
         {/* Portfolio CTA */}
-        <div className="mt-12 mb-4 flex items-center justify-center">
+        <div className="mt-16 mb-16 flex items-center justify-center">
           <Button size="lg" className="bg-[#cbd5e1] hover:bg-[#bbf7d0] text-[#1e3a8a] hover:text-[#1e3a8a] font-bold tracking-wider uppercase px-16 py-10 rounded-full transition-colors text-xl md:text-2xl">
             See Our Tech Portfolio
           </Button>
