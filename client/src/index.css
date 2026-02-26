@@ -79,6 +79,24 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading tracking-tight;
   }
+  .container {
+    max-width: 1280px;
+  }
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1440px;
+    }
+  }
+  @media (min-width: 1800px) {
+    .container {
+      max-width: 1600px;
+    }
+  }
+  @media (min-width: 2200px) {
+    .container {
+      max-width: 1920px;
+    }
+  }
 }
 
 /* Custom scrollbar for horizontal lists */
