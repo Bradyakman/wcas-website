@@ -60,7 +60,7 @@ const logos = [
 const heroSlides = [
   {
     title: (
-      <>For 45+ years, WCAS has partnered with industry leaders across technology & healthcare to reshape landscapes and drive growth</>
+      <>For over 45 years, WCAS has partnered with industry leaders across technology & healthcare to reshape landscapes and drive growth</>
     ),
     description: ""
   },
