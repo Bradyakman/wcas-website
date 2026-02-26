@@ -441,7 +441,7 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Insights</h2>
+              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4"></h2>
               <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
                 News & Perspectives
               </h3>
