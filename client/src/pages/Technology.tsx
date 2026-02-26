@@ -109,7 +109,7 @@ export default function Technology() {
         </div>
       </section>
       {/* Subsectors Grid */}
-      <section className="pt-10 pb-24 bg-white relative">
+      <section className="pt-10 pb-8 bg-white relative">
         <div className="container mx-auto px-6 md:px-12 mb-12">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground text-center">Focused Subsectors</h2>
         </div>
@@ -140,7 +140,7 @@ export default function Technology() {
         </div>
 
         {/* Logo Ticker */}
-        <div className="mt-12 overflow-hidden">
+        <div className="mt-8 py-4 overflow-hidden">
         <div className="flex animate-marquee items-center">
           {/* Duplicated for seamless loop */}
           {[...Array(2)].map((_, i) => (
