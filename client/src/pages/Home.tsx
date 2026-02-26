@@ -175,7 +175,7 @@ export default function Home() {
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative min-h-[34vh] md:min-h-[44vh] flex items-center pt-24 pb-8 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[#1d315c]"></div>
+        <div className="absolute inset-0 z-0 bg-[#0d1f3c]"></div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center justify-center h-full">
           <div className="pb-40 md:pb-44 lg:pb-48 xl:pb-44 flex flex-col items-center text-center">
