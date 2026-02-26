@@ -225,7 +225,7 @@ export default function Home() {
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:hidden"></div>
             <div className="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
-            <div className="relative z-10 px-10 md:px-16 lg:px-20 text-center max-w-xl">
+            <div className="relative z-10 px-10 md:px-16 lg:px-20 text-center max-w-xl -mt-16 md:-mt-20">
               <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.3em] text-white/40 mb-6">Sector Focus</p>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.05] tracking-tight mb-8" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>Healthcare</h2>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
@@ -245,7 +245,7 @@ export default function Home() {
               <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 75% 40%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 25% 75%, rgba(255,255,255,0.05) 0%, transparent 40%), radial-gradient(circle at 50% 10%, rgba(255,255,255,0.03) 0%, transparent 45%)' }}></div>
               <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(255,255,255,0.02) 100px, rgba(255,255,255,0.02) 101px)' }}></div>
             </div>
-            <div className="relative z-10 px-10 md:px-16 lg:px-20 text-center max-w-xl">
+            <div className="relative z-10 px-10 md:px-16 lg:px-20 text-center max-w-xl -mt-16 md:-mt-20">
               <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.3em] text-white/40 mb-6">Sector Focus</p>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.05] tracking-tight mb-8" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>Technology</h2>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10">Building category-defining technology platforms through strategic investment and operational excellence.</p>
