@@ -108,6 +108,53 @@ export default function Technology() {
           </div>
         </div>
       </section>
+      {/* Subsectors Grid */}
+      <section className="py-24 bg-white relative">
+        <div className="container mx-auto px-6 md:px-12 mb-16 relative z-10">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Focused Subsectors</h2>
+            <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight mb-6">
+              Decades of Experience
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              For over four decades, we've continually innovated and refined our investments in specific sectors, developing an investment approach and strategy for each subsector that has allowed us to provide a differentiated viewpoint.
+            </p>
+          </div>
+        </div>
+
+        <div className="relative w-full overflow-hidden">
+          <div className="flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-12 pb-12 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            {sectors.map((sector, i) => (
+              <div key={i} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-2xl overflow-hidden aspect-[4/3] bg-black relative group shadow-lg cursor-pointer">
+                <img 
+                  src={sector.image} 
+                  alt={sector.name} 
+                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <h4 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4 leading-tight">
+                      {sector.name}
+                    </h4>
+                    <div className="flex items-center text-primary-foreground font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                      View Sector
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8 text-center relative z-10">
+          <Button size="lg" className="rounded-full px-8 group">
+            View All Technology Investment Sectors
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
+      </section>
       {/* Logo Ticker */}
       <section className="py-8 bg-white border-b border-border overflow-hidden">
         <div className="flex animate-marquee items-center">
@@ -192,53 +239,6 @@ export default function Technology() {
           <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white pointer-events-none opacity-0 hover:opacity-100 transition-opacity">
             <ArrowRight size={24} />
           </div>
-        </div>
-      </section>
-      {/* Subsectors Grid */}
-      <section className="py-24 bg-white relative">
-        <div className="container mx-auto px-6 md:px-12 mb-16 relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Focused Subsectors</h2>
-            <h3 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight mb-6">
-              Decades of Experience
-            </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              For over four decades, we've continually innovated and refined our investments in specific sectors, developing an investment approach and strategy for each subsector that has allowed us to provide a differentiated viewpoint.
-            </p>
-          </div>
-        </div>
-
-        <div className="relative w-full overflow-hidden">
-          <div className="flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-12 pb-12 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-            {sectors.map((sector, i) => (
-              <div key={i} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[30vw] snap-center shrink-0 rounded-2xl overflow-hidden aspect-[4/3] bg-black relative group shadow-lg cursor-pointer">
-                <img 
-                  src={sector.image} 
-                  alt={sector.name} 
-                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <h4 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4 leading-tight">
-                      {sector.name}
-                    </h4>
-                    <div className="flex items-center text-primary-foreground font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                      View Sector
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-8 text-center relative z-10">
-          <Button size="lg" className="rounded-full px-8 group">
-            View All Technology Investment Sectors
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
         </div>
       </section>
       {/* Portfolio CTA Section */}
