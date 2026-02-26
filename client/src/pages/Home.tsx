@@ -214,7 +214,7 @@ export default function Home() {
         </div>
       </section>
       {/* The 4 Boxes - Reimagined Layout */}
-      <section className="pt-2 pb-8 bg-secondary/50">
+      <section className="pt-2 pb-0 bg-secondary/50">
         <div className="container mx-auto px-6 md:px-12">
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
@@ -264,7 +264,7 @@ export default function Home() {
         </div>
       </section>
       {/* Logos Ticker */}
-      <section className="py-8 border-t border-border overflow-hidden bg-secondary/50">
+      <section className="pt-0 pb-8 border-t-0 overflow-hidden bg-secondary/50">
         <div className="relative w-full overflow-hidden flex items-center py-4">
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/50 to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/50 to-transparent z-10 pointer-events-none"></div>
