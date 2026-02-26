@@ -79,14 +79,14 @@ const heroSlides = [
 ];
 
 const wcasVideos = [
-  { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo, logoClass: "h-6 md:h-7", centeredLayout: true },
-  { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS", partnerLogo: shieldsFullLogo, logoClass: "h-9 md:h-10" },
-  { id: "861242949", title: "Paths to Growth", partner: "absorb", partnerLogo: absorbLogo },
-  { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo, logoClass: "h-12 md:h-14 -mt-1" },
-  { id: "861243091", title: "Paths to Growth", partner: "intoxalock", partnerLogo: intoxalockLogo, logoClass: "h-6 md:h-7" },
-  { id: "913334845", title: "", partner: "Concentra", specialLayout: true },
-  { id: "861243221", title: "Paths to Growth", partner: "Green Street", partnerLogo: greenStreetLogo, logoClass: "h-10 md:h-12 -mt-2" },
-  { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", partnerLogo: leitersLogo, logoClass: "h-6 md:h-7" }
+  { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo, centeredLayout: true },
+  { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS", partnerLogo: shieldsFullLogo, centeredLayout: true },
+  { id: "861242949", title: "Paths to Growth", partner: "absorb", partnerLogo: absorbLogo, centeredLayout: true },
+  { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo, centeredLayout: true },
+  { id: "861243091", title: "Paths to Growth", partner: "intoxalock", partnerLogo: intoxalockLogo, centeredLayout: true },
+  { id: "913334845", title: "Investing in Better Healthcare", partner: "Concentra", specialLayout: true },
+  { id: "861243221", title: "Paths to Growth", partner: "Green Street", partnerLogo: greenStreetLogo, centeredLayout: true },
+  { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", partnerLogo: leitersLogo, centeredLayout: true }
 ];
 
 export default function Home() {
@@ -342,19 +342,16 @@ export default function Home() {
                       onClick={() => { if (!hasDragged.current) setPlayingVideo(video.id); }}
                     >
                       {'specialLayout' in video && video.specialLayout ? (
-                        <div className="flex flex-col items-center justify-center h-full w-full group-hover:scale-[1.02] transition-transform duration-500 gap-3">
-                          <h3 className="text-base md:text-xl font-bold font-heading leading-tight text-center max-w-[95%]">{video.title}</h3>
-                          <div className="flex flex-col items-center gap-2">
-                            <div className="flex items-center justify-center w-full">
-                              <div className="flex-1 flex justify-end pr-3 md:pr-4">
-                                <img src={wcasLogo} alt="WCAS" className="h-5 md:h-6 w-auto brightness-0 invert" />
-                              </div>
-                              <div className="w-px h-8 md:h-10 bg-white/20"></div>
-                              <div className="flex-1 flex justify-start pl-3 md:pl-4">
-                                <img src={logoSelect} alt="Select Medical" className="h-10 md:h-14 w-auto" />
-                              </div>
+                        <div className="flex flex-col items-center justify-between h-full w-full group-hover:scale-[1.02] transition-transform duration-500 py-4 md:py-6">
+                          <h3 className="text-lg md:text-2xl font-bold font-heading leading-tight text-center">{video.title}</h3>
+                          <div className="flex-1"></div>
+                          <div className="flex flex-col items-center gap-1">
+                            <div className="flex items-center justify-center gap-3 md:gap-4">
+                              <img src={wcasLogo} alt="WCAS" className="h-4 md:h-5 w-auto brightness-0 invert" />
+                              <div className="w-px h-6 md:h-8 bg-white/20"></div>
+                              <img src={logoSelect} alt="Select Medical" className="h-8 md:h-10 w-auto" />
                             </div>
-                            <h4 className="text-xl md:text-3xl font-bold font-heading tracking-tight">{video.partner}</h4>
+                            <h4 className="text-base md:text-lg font-bold font-heading tracking-tight">{video.partner}</h4>
                           </div>
                         </div>
                       ) : 'centeredLayout' in video && video.centeredLayout ? (
