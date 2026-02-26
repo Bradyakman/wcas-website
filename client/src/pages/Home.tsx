@@ -185,7 +185,7 @@ export default function Home() {
         </div>
 
         {/* Stats (Static below carousel, spanning full width at bottom) */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-border py-10 md:py-12 z-20 overflow-x-auto scrollbar-hide">
+        <div className="absolute bottom-0 left-0 right-0 py-10 md:py-12 z-20 overflow-x-auto scrollbar-hide" style={{ backgroundColor: '#ededed' }}>
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both min-w-max md:min-w-0">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
@@ -212,10 +212,10 @@ export default function Home() {
         </div>
       </section>
       {/* Logos Ticker - merged with stats bar */}
-      <section className="pt-2 pb-4 overflow-hidden bg-white/90 backdrop-blur-md">
+      <section className="pt-2 pb-4 overflow-hidden" style={{ backgroundColor: '#ededed' }}>
         <div className="relative w-full overflow-hidden flex items-center py-1">
-          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.9), transparent)' }}></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, rgba(255,255,255,0.9), transparent)' }}></div>
+          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #ededed, transparent)' }}></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #ededed, transparent)' }}></div>
           
           <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
             {[...logos, ...logos, ...logos].map((logo, index) => (
@@ -239,7 +239,7 @@ export default function Home() {
             className="group relative w-full md:w-1/2 overflow-hidden no-underline cursor-pointer block"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
-            <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ background: 'linear-gradient(160deg, #0a1628 0%, #0d1f3c 35%, #122a4e 65%, #0d1f3c 100%)' }}>
+            <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ backgroundColor: '#0a1628' }}>
               <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%), radial-gradient(circle at 60% 80%, rgba(255,255,255,0.03) 0%, transparent 45%)' }}></div>
               <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.02) 80px, rgba(255,255,255,0.02) 81px), repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px)' }}></div>
               <div className="absolute -right-20 -top-20 w-[400px] h-[400px] rounded-full border border-white/[0.04]"></div>
@@ -263,7 +263,7 @@ export default function Home() {
             className="group relative w-full md:w-1/2 overflow-hidden no-underline cursor-pointer block"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
-            <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ background: 'linear-gradient(200deg, #070e1a 0%, #0b1729 35%, #0f1f38 65%, #0b1729 100%)' }}>
+            <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ backgroundColor: '#0a1628' }}>
               <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 75% 40%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 25% 75%, rgba(255,255,255,0.05) 0%, transparent 40%), radial-gradient(circle at 50% 10%, rgba(255,255,255,0.03) 0%, transparent 45%)' }}></div>
               <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(255,255,255,0.02) 100px, rgba(255,255,255,0.02) 101px), repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(255,255,255,0.015) 100px, rgba(255,255,255,0.015) 101px)' }}></div>
               <div className="absolute -left-16 -top-16 w-[350px] h-[350px] rounded-full border border-white/[0.04]"></div>
