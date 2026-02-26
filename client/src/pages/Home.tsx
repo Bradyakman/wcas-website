@@ -211,6 +211,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Logos Ticker - merged with stats bar */}
+      <section className="pt-2 pb-4 overflow-hidden bg-white/90 backdrop-blur-md">
+        <div className="relative w-full overflow-hidden flex items-center py-1">
+          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.9), transparent)' }}></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, rgba(255,255,255,0.9), transparent)' }}></div>
+          
+          <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
+            {[...logos, ...logos, ...logos].map((logo, index) => (
+              <div key={index} className="flex-shrink-0 w-[110px] h-[40px] flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${Math.round(logo.mx * 0.7)}px`, marginRight: `${Math.round(logo.mx * 0.7)}px` }}>
+                <img 
+                  src={logo.src} 
+                  alt={`${logo.name} logo`} 
+                  className="max-w-full max-h-full object-contain mix-blend-multiply"
+                  style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Sector Split Panels */}
       <section className="w-full">
         <div className="flex flex-col md:flex-row w-full">
@@ -259,26 +279,6 @@ export default function Home() {
               </span>
             </div>
           </a>
-        </div>
-      </section>
-      {/* Logos Ticker */}
-      <section className="py-4 overflow-hidden bg-white">
-        <div className="relative w-full overflow-hidden flex items-center py-1">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
-          
-          <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
-            {[...logos, ...logos, ...logos].map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-[110px] h-[40px] flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${Math.round(logo.mx * 0.7)}px`, marginRight: `${Math.round(logo.mx * 0.7)}px` }}>
-                <img 
-                  src={logo.src} 
-                  alt={`${logo.name} logo`} 
-                  className="max-w-full max-h-full object-contain mix-blend-multiply"
-                  style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
-                />
-              </div>
-            ))}
-          </div>
         </div>
       </section>
       {/* Mission & Video Slider Section */}
