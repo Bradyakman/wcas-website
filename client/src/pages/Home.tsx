@@ -358,8 +358,9 @@ export default function Home() {
                           </div>
                         </div>
                       ) : 'centeredLayout' in video && video.centeredLayout ? (
-                        <div className="flex flex-col items-center justify-center h-full w-full group-hover:scale-[1.02] transition-transform duration-500 gap-3">
+                        <div className="flex flex-col items-center justify-between h-full w-full group-hover:scale-[1.02] transition-transform duration-500 py-4 md:py-6">
                           <h3 className="text-base md:text-xl font-bold font-heading leading-tight text-center">{video.title}</h3>
+                          <div className="flex-1"></div>
                           {'partnerLogo' in video && video.partnerLogo && (
                             <img src={video.partnerLogo} alt={video.partner} className={`${'logoClass' in video && video.logoClass ? video.logoClass : 'h-10 md:h-12'} w-auto`} />
                           )}
