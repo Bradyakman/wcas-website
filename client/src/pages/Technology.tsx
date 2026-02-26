@@ -139,43 +139,9 @@ export default function Technology() {
           </div>
         </div>
 
-        {/* Logo Ticker */}
-        <div className="mt-8 py-4 overflow-hidden">
-        <div className="flex animate-marquee items-center">
-          {/* Duplicated for seamless loop */}
-          {[...Array(2)].map((_, i) => (
-            <div key={i} className="flex gap-8 md:gap-24 items-center shrink-0 pr-8 md:pr-24">
-              {[
-                { name: 'Headstrong', src: headstrongLogo, scale: 1.5 },
-                { name: 'Global Collect', src: globalCollectLogo, scale: 1.3 },
-                { name: 'Simeio', src: simeioLogo },
-                { name: 'Alert Logic', src: alertLogicLogo },
-                { name: 'Identifix', src: identifixLogo, scale: 1.8 },
-                { name: 'LINQ', src: linqLogo, scale: 1.5 },
-                { name: 'Triple Point', src: triplePointLogo, scale: 1.8 },
-                { name: 'Ceridian', src: ceridianLogo, scale: 1.8 },
-                { name: 'Avetta', src: avettaLogo },
-                { name: 'Asurion', src: asurionLogo, scale: 1.5 },
-                { name: 'GovCIO', src: govcioLogo, scale: 1.5 }
-              ].map((logo, j) => (
-                <div key={j} className="flex-shrink-0 w-[140px] h-[50px] md:w-[167px] md:h-[61px] flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300">
-                  <img 
-                    src={logo.src} 
-                    alt={`${logo.name} logo`} 
-                    className="max-w-full max-h-full object-contain mix-blend-multiply"
-                    style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
-                  />
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-        </div>
-      </section>
-      {/* Portfolio CTA Section */}
-      <section className="py-10 bg-white">
-        <div className="container mx-auto px-6 md:px-12 flex items-center justify-center">
-          <Button size="lg" className="bg-[#cbd5e1] hover:bg-[#bbf7d0] text-[#1e3a8a] hover:text-[#1e3a8a] font-bold tracking-wider uppercase px-12 py-8 rounded-full transition-colors text-lg md:text-xl">
+        {/* Portfolio CTA */}
+        <div className="mt-12 mb-4 flex items-center justify-center">
+          <Button size="lg" className="bg-[#cbd5e1] hover:bg-[#bbf7d0] text-[#1e3a8a] hover:text-[#1e3a8a] font-bold tracking-wider uppercase px-16 py-10 rounded-full transition-colors text-xl md:text-2xl">
             See Our Tech Portfolio
           </Button>
         </div>
