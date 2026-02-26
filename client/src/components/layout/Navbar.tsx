@@ -82,20 +82,28 @@ export function Navbar() {
         <nav ref={navRef} className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             link.dropdown ? (
-              <div key={link.name} className="relative">
+              <div key={link.name} className="relative flex items-center gap-1">
+                <Link
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors cursor-pointer ${
+                    isScrolled 
+                      ? "text-foreground/80 hover:text-primary" 
+                      : isDarkHeroPage 
+                        ? "text-white/90 hover:text-white" 
+                        : "text-foreground/90 hover:text-primary"
+                  }`}
+                  style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+                  onClick={closeDropdown}
+                >
+                  {link.name}
+                </Link>
                 <button
                   type="button"
                   aria-expanded={openDropdown === link.name}
                   aria-controls={`dropdown-${link.name}`}
                   aria-haspopup="true"
                   onClick={() => toggleDropdown(link.name)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      toggleDropdown(link.name);
-                    }
-                  }}
-                  className={`text-sm font-medium transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
+                  className={`bg-transparent border-none cursor-pointer p-1 ${
                     isScrolled 
                       ? "text-foreground/80 hover:text-primary" 
                       : isDarkHeroPage 
@@ -104,7 +112,6 @@ export function Navbar() {
                   }`}
                   style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
                 >
-                  {link.name}
                   <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={`opacity-70 transition-transform duration-300 ${openDropdown === link.name ? 'rotate-180' : ''}`}>
                     <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
