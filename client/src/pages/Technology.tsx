@@ -147,13 +147,13 @@ export default function Technology() {
             <div key={i} className="flex gap-8 md:gap-24 items-center shrink-0 pr-8 md:pr-24">
               {[
                 { name: 'Headstrong', src: headstrongLogo, scale: 1.5 },
-                { name: 'Global Collect', src: globalCollectLogo },
+                { name: 'Global Collect', src: globalCollectLogo, scale: 1.3 },
                 { name: 'Simeio', src: simeioLogo },
                 { name: 'Alert Logic', src: alertLogicLogo },
-                { name: 'Identifix', src: identifixLogo },
-                { name: 'LINQ', src: linqLogo },
-                { name: 'Triple Point', src: triplePointLogo },
-                { name: 'Ceridian', src: ceridianLogo },
+                { name: 'Identifix', src: identifixLogo, scale: 1.8 },
+                { name: 'LINQ', src: linqLogo, scale: 1.5 },
+                { name: 'Triple Point', src: triplePointLogo, scale: 1.8 },
+                { name: 'Ceridian', src: ceridianLogo, scale: 1.8 },
                 { name: 'Avetta', src: avettaLogo },
                 { name: 'Asurion', src: asurionLogo, scale: 1.5 },
                 { name: 'GovCIO', src: govcioLogo, scale: 1.5 }
