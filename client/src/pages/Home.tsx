@@ -79,7 +79,7 @@ const heroSlides = [
 ];
 
 const wcasVideos = [
-  { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo, logoClass: "h-6 md:h-7" },
+  { id: "861242809", title: "Paths to Growth", partner: "quickbase", partnerLogo: quickbaseLogo, logoClass: "h-6 md:h-7", centeredLayout: true },
   { id: "913387748", title: "Investing in Better Healthcare", partner: "SHIELDS HEALTH SOLUTIONS", partnerLogo: shieldsFullLogo, logoClass: "h-9 md:h-10" },
   { id: "861242949", title: "Paths to Growth", partner: "absorb", partnerLogo: absorbLogo },
   { id: "913387297", title: "Investing in Better Healthcare", partner: "norstella", partnerLogo: norstellaLogo, logoClass: "h-12 md:h-14 -mt-1" },
@@ -356,6 +356,13 @@ export default function Home() {
                             </div>
                             <h4 className="text-xl md:text-3xl font-bold font-heading tracking-tight">{video.partner}</h4>
                           </div>
+                        </div>
+                      ) : 'centeredLayout' in video && video.centeredLayout ? (
+                        <div className="flex flex-col items-center justify-center h-full w-full group-hover:scale-[1.02] transition-transform duration-500 gap-3">
+                          <h3 className="text-base md:text-xl font-bold font-heading leading-tight text-center">{video.title}</h3>
+                          {'partnerLogo' in video && video.partnerLogo && (
+                            <img src={video.partnerLogo} alt={video.partner} className={`${'logoClass' in video && video.logoClass ? video.logoClass : 'h-10 md:h-12'} w-auto`} />
+                          )}
                         </div>
                       ) : (
                         <div className="flex items-center justify-center gap-4 md:gap-6 h-full w-full group-hover:scale-[1.02] transition-transform duration-500">
