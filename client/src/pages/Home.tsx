@@ -176,7 +176,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-[#0d1f3c]"></div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center justify-center h-full">
-          <div className="pb-40 md:pb-44 lg:pb-48 xl:pb-44 flex flex-col items-center text-center">
+          <div className="pb-52 md:pb-56 lg:pb-60 xl:pb-56 flex flex-col items-center text-center">
             <img src={wcasLogo} alt="WCAS" className="h-20 md:h-28 w-auto brightness-0 invert mb-14" />
             <h1 className="text-[1.386rem] md:text-[1.733rem] font-bold text-white leading-[1.3] tracking-normal max-w-4xl" >
               {heroSlides[0].title}
@@ -185,7 +185,7 @@ export default function Home() {
         </div>
 
         {/* Stats (Static below carousel, spanning full width at bottom) */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-border py-4 md:py-6 z-20 overflow-x-auto scrollbar-hide">
+        <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-border py-14 md:py-16 z-20 overflow-x-auto scrollbar-hide">
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both min-w-max md:min-w-0">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
