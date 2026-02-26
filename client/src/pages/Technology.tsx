@@ -115,7 +115,7 @@ export default function Technology() {
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-8 md:gap-24 items-center shrink-0 pr-8 md:pr-24">
               {[
-                { name: 'Headstrong', src: headstrongLogo },
+                { name: 'Headstrong', src: headstrongLogo, scale: 1.5 },
                 { name: 'Global Collect', src: globalCollectLogo },
                 { name: 'Simeio', src: simeioLogo },
                 { name: 'Alert Logic', src: alertLogicLogo },
@@ -124,14 +124,15 @@ export default function Technology() {
                 { name: 'Triple Point', src: triplePointLogo },
                 { name: 'Ceridian', src: ceridianLogo },
                 { name: 'Avetta', src: avettaLogo },
-                { name: 'Asurion', src: asurionLogo },
-                { name: 'GovCIO', src: govcioLogo }
+                { name: 'Asurion', src: asurionLogo, scale: 1.5 },
+                { name: 'GovCIO', src: govcioLogo, scale: 1.5 }
               ].map((logo, j) => (
                 <div key={j} className="flex-shrink-0 w-[140px] h-[50px] md:w-[167px] md:h-[61px] flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300">
                   <img 
                     src={logo.src} 
                     alt={`${logo.name} logo`} 
                     className="max-w-full max-h-full object-contain mix-blend-multiply"
+                    style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
                   />
                 </div>
               ))}
