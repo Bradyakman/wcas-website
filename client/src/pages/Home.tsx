@@ -185,30 +185,31 @@ export default function Home() {
         </div>
 
         {/* Stats (Static below carousel, spanning full width at bottom) */}
-        <div className="absolute bottom-0 left-0 right-0 py-6 md:py-7 z-20 overflow-x-auto scrollbar-hide" style={{ backgroundColor: '#ededed' }}>
-          <div className="container mx-auto px-6 md:px-12">
+        <div className="absolute bottom-0 left-0 right-0 z-20 overflow-x-auto scrollbar-hide" style={{ backgroundColor: '#ffffff' }}>
+          <div className="container mx-auto px-6 md:px-12 py-6 md:py-7">
             <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both min-w-max md:min-w-0">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">18</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744' }}>18</p>
                 <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Funds Raised</p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
+              <div className="w-px h-10 md:h-12 shrink-0" style={{ backgroundColor: '#d1d5db' }}></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">45+</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744' }}>45+</p>
                 <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Years of Experience</p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
+              <div className="w-px h-10 md:h-12 shrink-0" style={{ backgroundColor: '#d1d5db' }}></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">190+</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744' }}>190+</p>
                 <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Companies</p>
               </div>
-              <div className="w-px h-10 md:h-12 bg-border shrink-0"></div>
+              <div className="w-px h-10 md:h-12 shrink-0" style={{ backgroundColor: '#d1d5db' }}></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0 pr-6 md:pr-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-0 leading-none md:leading-normal">$33B+</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744' }}>$33B+</p>
                 <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Capital Raised</p>
               </div>
             </div>
           </div>
+          <div style={{ height: '3px', backgroundColor: '#2563eb' }}></div>
         </div>
       </section>
       
