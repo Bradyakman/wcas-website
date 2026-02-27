@@ -109,6 +109,26 @@
   width: max-content;
 }
 
+.explore-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.explore-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.group:hover .explore-link::after {
+  width: 100%;
+}
+
 .is-pressed {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
   transform: translateY(-2px) !important;
