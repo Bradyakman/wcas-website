@@ -109,6 +109,23 @@
   width: max-content;
 }
 
+.sector-card {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.sector-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+.sector-card .explore-link {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+.sector-card:hover .explore-link {
+  border-bottom-color: #3b82f6;
+}
+
 .is-pressed {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
   transform: translateY(-2px) !important;

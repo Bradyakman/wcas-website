@@ -217,46 +217,35 @@ export default function Home() {
         <div className="flex flex-col md:flex-row w-full">
           <a
             href="/healthcare"
-            className="group relative w-full md:w-1/2 overflow-hidden no-underline cursor-pointer block"
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            className="sector-card group relative w-full md:w-1/2 no-underline cursor-pointer block min-h-[400px] flex flex-col justify-end rounded-[4px] overflow-hidden"
+            style={{ backgroundColor: '#162236', WebkitTapHighlightColor: 'transparent' }}
           >
-            <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ backgroundColor: '#0a1628' }}>
-              <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%), radial-gradient(circle at 60% 80%, rgba(255,255,255,0.03) 0%, transparent 45%)' }}></div>
-              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.02) 80px, rgba(255,255,255,0.02) 81px), repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px)' }}></div>
-              <div className="absolute -right-20 -top-20 w-[400px] h-[400px] rounded-full border border-white/[0.04]"></div>
-              <div className="absolute -left-10 -bottom-10 w-[250px] h-[250px] rounded-full border border-white/[0.03]"></div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:hidden"></div>
+            <div className="absolute top-0 right-0 w-1/2 h-1/2 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.08), transparent 70%)' }}></div>
             <div className="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
-            <div className="relative z-10 py-28 md:py-36 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
-              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Healthcare</h2>
+            <div className="relative z-10 p-10 md:p-16 lg:p-20 text-left mt-auto">
+              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Healthcare</h2>
               <div className="w-16 h-px bg-white/30 mb-8"></div>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
-              <span className="inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-colors duration-500">
+              <span className="explore-link inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white">
                 Explore
-                <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-500" />
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-[400ms]" />
               </span>
             </div>
           </a>
 
           <a
             href="/technology"
-            className="group relative w-full md:w-1/2 overflow-hidden no-underline cursor-pointer block"
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            className="sector-card group relative w-full md:w-1/2 no-underline cursor-pointer block min-h-[400px] flex flex-col justify-end rounded-[4px] overflow-hidden"
+            style={{ backgroundColor: '#1a2740', WebkitTapHighlightColor: 'transparent' }}
           >
-            <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ backgroundColor: '#0a1628' }}>
-              <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 75% 40%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 25% 75%, rgba(255,255,255,0.05) 0%, transparent 40%), radial-gradient(circle at 50% 10%, rgba(255,255,255,0.03) 0%, transparent 45%)' }}></div>
-              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(255,255,255,0.02) 100px, rgba(255,255,255,0.02) 101px), repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(255,255,255,0.015) 100px, rgba(255,255,255,0.015) 101px)' }}></div>
-              <div className="absolute -left-16 -top-16 w-[350px] h-[350px] rounded-full border border-white/[0.04]"></div>
-              <div className="absolute -right-12 -bottom-12 w-[300px] h-[300px] rounded-full border border-white/[0.03]"></div>
-            </div>
-            <div className="relative z-10 py-28 md:py-36 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
-              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Technology</h2>
+            <div className="absolute top-0 right-0 w-1/2 h-1/2 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.08), transparent 70%)' }}></div>
+            <div className="relative z-10 p-10 md:p-16 lg:p-20 text-left mt-auto">
+              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Technology</h2>
               <div className="w-16 h-px bg-white/30 mb-8"></div>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Building category-defining technology platforms through strategic investment and operational excellence.</p>
-              <span className="inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-colors duration-500">
+              <span className="explore-link inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white">
                 Explore
-                <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-500" />
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-[400ms]" />
               </span>
             </div>
           </a>
