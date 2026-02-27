@@ -212,94 +212,53 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Sector Split Panels */}
-      <section className="w-full pt-12 px-10">
-        <div className="flex flex-col md:flex-row w-full gap-7">
-          <a
-            href="/healthcare"
-            className="sector-card group relative w-full md:w-1/2 no-underline cursor-pointer block min-h-[400px] md:min-h-[520px] flex flex-col justify-end rounded-[6px] overflow-hidden"
-            style={{ WebkitTapHighlightColor: 'transparent', border: '1px solid rgba(255,255,255,0.06)' }}
-          >
-            <div className="card-bg absolute inset-0 z-0" style={{
-              background: `
-                linear-gradient(160deg, #153a5e 0%, #112d4e 25%, #0f3460 50%, #112d4e 75%, #0e2444 100%)
-              `
-            }}>
-              <div className="absolute inset-0" style={{
-                backgroundImage: `
-                  repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(59,130,246,0.04) 59px, rgba(59,130,246,0.04) 60px),
-                  repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(59,130,246,0.04) 59px, rgba(59,130,246,0.04) 60px),
-                  radial-gradient(circle at 25% 25%, rgba(59,130,246,0.12), transparent 50%),
-                  radial-gradient(circle at 75% 60%, rgba(59,130,246,0.12), transparent 50%)
-                `
-              }}></div>
-              <div className="absolute inset-0" style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='520'%3E%3Cpolyline points='0,260 120,260 150,260 170,220 185,300 200,200 215,310 230,250 260,260 600,260' fill='none' stroke='rgba(59,130,246,0.12)' stroke-width='1.5'/%3E%3Crect x='420' y='100' width='8' height='40' fill='rgba(59,130,246,0.06)'/%3E%3Crect x='404' y='116' width='40' height='8' fill='rgba(59,130,246,0.06)'/%3E%3Ccircle cx='160' cy='130' r='60' fill='none' stroke='rgba(59,130,246,0.04)' stroke-width='1'/%3E%3Ccircle cx='160' cy='130' r='90' fill='none' stroke='rgba(59,130,246,0.04)' stroke-width='1'/%3E%3C/svg%3E")`,
-                backgroundSize: '100% 100%',
-                backgroundRepeat: 'no-repeat'
-              }}></div>
-            </div>
-            <div className="absolute inset-0 z-[1] pointer-events-none" style={{
-              background: 'linear-gradient(to top, rgba(6,12,24,0.95) 0%, rgba(6,12,24,0.7) 30%, rgba(6,12,24,0.2) 70%, rgba(6,12,24,0.1) 100%)'
-            }}></div>
-            <div className="blue-tint absolute inset-0 z-[2] pointer-events-none" style={{
-              background: 'linear-gradient(135deg, rgba(26,86,219,0.1), transparent 60%)'
-            }}></div>
-            <div className="relative z-10 p-12 text-left mt-auto">
-              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-4 text-[38px] md:text-[52px]">Healthcare</h2>
-              <div className="accent-bar"></div>
-              <p className="text-white/70 max-w-[380px] mb-8" style={{ fontSize: '17px', fontWeight: 300, lineHeight: 1.75 }}>Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
-              <span className="explore-btn inline-flex items-center gap-3">
-                Explore
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-[400ms]" />
-              </span>
-            </div>
-          </a>
+      {/* Sector Cards + Mission — one continuous dark section */}
+      <div style={{ backgroundColor: '#0a1628' }}>
+        <section className="w-full" style={{ paddingTop: '56px', paddingLeft: '56px', paddingRight: '56px' }}>
+          <div className="flex flex-col md:flex-row w-full gap-6 mx-auto" style={{ maxWidth: '1200px' }}>
+            <a
+              href="/healthcare"
+              className="sector-card group relative w-full md:w-1/2 no-underline cursor-pointer block min-h-[360px] flex flex-col justify-end rounded-lg overflow-hidden"
+              style={{ background: 'linear-gradient(155deg, #102847, #0f3058, #0d2240)', border: '1px solid rgba(255,255,255,0.06)', WebkitTapHighlightColor: 'transparent' }}
+            >
+              <div className="absolute top-0 right-0 w-1/2 pointer-events-none" style={{ height: '60%', background: 'radial-gradient(circle, rgba(59,130,246,0.06), transparent 70%)' }}></div>
+              <div className="relative z-10 text-left mt-auto" style={{ padding: '40px' }}>
+                <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-4" style={{ fontSize: '42px' }}>Healthcare</h2>
+                <div className="accent-bar"></div>
+                <p className="mb-8" style={{ fontSize: '15px', fontWeight: 300, lineHeight: 1.7, color: 'rgba(255,255,255,0.55)', maxWidth: '340px' }}>Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
+                <span className="explore-link inline-flex items-center gap-2">
+                  Explore
+                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
+              </div>
+            </a>
 
-          <a
-            href="/technology"
-            className="sector-card group relative w-full md:w-1/2 no-underline cursor-pointer block min-h-[400px] md:min-h-[520px] flex flex-col justify-end rounded-[6px] overflow-hidden"
-            style={{ WebkitTapHighlightColor: 'transparent', border: '1px solid rgba(255,255,255,0.06)' }}
-          >
-            <div className="card-bg absolute inset-0 z-0" style={{
-              background: `
-                linear-gradient(145deg, #091428 0%, #0b1a30 25%, #091428 50%, #0a1628 75%, #071020 100%)
-              `
-            }}>
-              <div className="absolute inset-0" style={{
-                backgroundImage: `
-                  radial-gradient(circle, rgba(59,130,246,0.08) 1px, transparent 1px),
-                  radial-gradient(circle at 70% 30%, rgba(59,130,246,0.12), transparent 50%),
-                  radial-gradient(circle at 30% 70%, rgba(59,130,246,0.12), transparent 50%)
-                `,
-                backgroundSize: '24px 24px, 100% 100%, 100% 100%'
-              }}></div>
-              <div className="absolute inset-0" style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='520'%3E%3Cline x1='100' y1='80' x2='250' y2='80' stroke='rgba(59,130,246,0.15)' stroke-width='1'/%3E%3Cline x1='250' y1='80' x2='250' y2='200' stroke='rgba(59,130,246,0.15)' stroke-width='1'/%3E%3Cline x1='250' y1='200' x2='400' y2='200' stroke='rgba(59,130,246,0.15)' stroke-width='1'/%3E%3Cline x1='400' y1='200' x2='400' y2='120' stroke='rgba(59,130,246,0.15)' stroke-width='1'/%3E%3Cline x1='400' y1='120' x2='520' y2='120' stroke='rgba(59,130,246,0.15)' stroke-width='1'/%3E%3Ccircle cx='100' cy='80' r='3' fill='rgba(59,130,246,0.15)'/%3E%3Ccircle cx='250' cy='80' r='3' fill='rgba(59,130,246,0.15)'/%3E%3Ccircle cx='250' cy='200' r='3' fill='rgba(59,130,246,0.15)'/%3E%3Ccircle cx='400' cy='200' r='3' fill='rgba(59,130,246,0.15)'/%3E%3Ccircle cx='400' cy='120' r='3' fill='rgba(59,130,246,0.15)'/%3E%3Ccircle cx='520' cy='120' r='3' fill='rgba(59,130,246,0.15)'/%3E%3Cpolygon points='480,60 510,43 540,60 540,90 510,107 480,90' fill='none' stroke='rgba(59,130,246,0.08)' stroke-width='1'/%3E%3C/svg%3E")`,
-                backgroundSize: '100% 100%',
-                backgroundRepeat: 'no-repeat'
-              }}></div>
-            </div>
-            <div className="absolute inset-0 z-[1] pointer-events-none" style={{
-              background: 'linear-gradient(to top, rgba(6,12,24,0.95) 0%, rgba(6,12,24,0.7) 30%, rgba(6,12,24,0.2) 70%, rgba(6,12,24,0.1) 100%)'
-            }}></div>
-            <div className="blue-tint absolute inset-0 z-[2] pointer-events-none" style={{
-              background: 'linear-gradient(135deg, rgba(26,86,219,0.1), transparent 60%)'
-            }}></div>
-            <div className="relative z-10 p-12 text-left mt-auto">
-              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-4 text-[38px] md:text-[52px]">Technology</h2>
-              <div className="accent-bar"></div>
-              <p className="text-white/70 max-w-[380px] mb-8" style={{ fontSize: '17px', fontWeight: 300, lineHeight: 1.75 }}>Building category-defining technology platforms through strategic investment and operational excellence.</p>
-              <span className="explore-btn inline-flex items-center gap-3">
-                Explore
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-[400ms]" />
-              </span>
-            </div>
-          </a>
+            <a
+              href="/technology"
+              className="sector-card group relative w-full md:w-1/2 no-underline cursor-pointer block min-h-[360px] flex flex-col justify-end rounded-lg overflow-hidden"
+              style={{ background: 'linear-gradient(155deg, #0b1830, #0e2040, #091428)', border: '1px solid rgba(255,255,255,0.06)', WebkitTapHighlightColor: 'transparent' }}
+            >
+              <div className="absolute top-0 right-0 w-1/2 pointer-events-none" style={{ height: '60%', background: 'radial-gradient(circle, rgba(59,130,246,0.06), transparent 70%)' }}></div>
+              <div className="relative z-10 text-left mt-auto" style={{ padding: '40px' }}>
+                <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-4" style={{ fontSize: '42px' }}>Technology</h2>
+                <div className="accent-bar"></div>
+                <p className="mb-8" style={{ fontSize: '15px', fontWeight: 300, lineHeight: 1.7, color: 'rgba(255,255,255,0.55)', maxWidth: '340px' }}>Building category-defining technology platforms through strategic investment and operational excellence.</p>
+                <span className="explore-link inline-flex items-center gap-2">
+                  Explore
+                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        {/* Blue glow divider */}
+        <div className="mx-auto" style={{ maxWidth: '1200px', paddingLeft: '56px', paddingRight: '56px', marginTop: '48px', marginBottom: '48px' }}>
+          <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(59,130,246,0.15), transparent)' }}></div>
         </div>
-      </section>
-      {/* Mission & Video Slider Section */}
-      <section className="pt-8 md:pt-10 text-primary-foreground relative overflow-hidden">
+
+        {/* Mission & Video Slider Section */}
+        <section className="text-primary-foreground relative overflow-hidden">
         {/* Abstract shapes for background interest */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] rounded-full border border-white/10 opacity-50 z-0"></div>
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-[600px] h-[600px] rounded-full border border-white/10 opacity-50 z-0"></div>
@@ -420,6 +379,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
+      </div>
       {/* Video Lightbox Modal */}
       {playingVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm p-4 md:p-8" onClick={() => setPlayingVideo(null)}>
