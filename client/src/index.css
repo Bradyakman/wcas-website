@@ -110,20 +110,51 @@
 }
 
 .sector-card {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 .sector-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
-.sector-card .explore-link {
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-  transition: color 0.4s ease, border-color 0.4s ease;
+.sector-card .card-bg {
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.sector-card:hover .explore-link {
-  border-bottom-color: #3b82f6;
+.sector-card:hover .card-bg {
+  transform: scale(1.06);
+}
+.sector-card .blue-tint {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sector-card:hover .blue-tint {
+  opacity: 1;
+}
+.sector-card .accent-bar {
+  width: 48px;
+  height: 3px;
+  background: #1a56db;
+  margin-bottom: 20px;
+  transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sector-card:hover .accent-bar {
+  width: 80px;
+}
+.sector-card .explore-btn {
+  padding: 14px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+  background: transparent;
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+.sector-card:hover .explore-btn {
+  background: #1a56db;
+  border-color: #1a56db;
 }
 
 .is-pressed {

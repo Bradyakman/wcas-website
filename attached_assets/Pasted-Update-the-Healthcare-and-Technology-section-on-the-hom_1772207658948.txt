@@ -1,0 +1,44 @@
+Update the Healthcare and Technology section on the homepage with the following changes. IMPORTANT: Keep all text in the existing Bilo font family — do NOT change any fonts.
+
+1. CARD SIZE AND LAYOUT: Make each card taller — minimum height 520px. Keep the two-column grid with 28px gap. Each card should use flexbox with flex-direction: column and justify-content: flex-end so all text sits at the bottom. Add border-radius: 6px and overflow: hidden on each card. Padding inside each card: 48px.
+
+2. HEALTHCARE CARD BACKGROUND: Give the Healthcare card a rich, layered background using CSS only (no images):
+   - Base gradient: linear-gradient(160deg, #0d2847 0%, #112d4e 25%, #0f3460 50%, #0b1f3a 75%, #091428 100%)
+   - Add a subtle grid pattern using repeating-linear-gradient in both directions: 1px lines in rgba(59, 130, 246, 0.04) every 60px
+   - Add two radial gradient glows: one at 25% 25% and one at 75% 60%, both in rgba(59, 130, 246, 0.12) fading to transparent
+   - Add an inline SVG background using a data URI with: a heartbeat/EKG line across the middle in rgba(59,130,246,0.12), a medical cross shape in rgba(59,130,246,0.06), and two concentric circles in rgba(59,130,246,0.04). These should be subtle, barely visible — just enough to suggest healthcare.
+
+3. TECHNOLOGY CARD BACKGROUND: Give the Technology card a different layered background using CSS only:
+   - Base gradient: linear-gradient(145deg, #091428 0%, #0d1f3a 25%, #0f2847 50%, #112d4e 75%, #0a1628 100%)
+   - Add a dot grid pattern: radial-gradient dots of rgba(59, 130, 246, 0.08) at 1px, spaced 24px apart
+   - Add radial gradient glows at 70% 30% and 30% 70%
+   - Add an inline SVG background using a data URI with: circuit board lines connecting nodes, small circles at connection points in rgba(59,130,246,0.15), and a hexagon shape. Again, subtle — just enough to suggest technology.
+
+4. DARK OVERLAY: Add a gradient overlay on top of each card background so text is readable: linear-gradient(to top, rgba(6,12,24,0.95) 0%, rgba(6,12,24,0.7) 30%, rgba(6,12,24,0.2) 70%, rgba(6,12,24,0.1) 100%). This makes the bottom dark for text while letting the visual background show through at the top.
+
+5. HOVER EFFECTS on each card:
+   - The background layer scales to 1.06 with transition 0.8s cubic-bezier(0.22, 1, 0.36, 1) — creates a parallax zoom effect
+   - A blue tint layer fades in: linear-gradient(135deg, rgba(26,86,219,0.1), transparent 60%)
+   - The blue accent bar below the heading expands from 48px to 80px wide
+   - The Explore button fills with WCAS blue (#1a56db), border turns blue, text turns white
+   - The arrow in the Explore button slides right 4px
+
+6. BLUE ACCENT BAR: Add a small bar below each heading — 48px wide, 3px tall, background #1a56db, with 20px margin-bottom. This expands to 80px on card hover with cubic-bezier(0.22, 1, 0.36, 1) transition.
+
+7. EXPLORE BUTTON: Replace the plain "EXPLORE →" text with a ghost button:
+   - padding: 14px 32px
+   - border: 1px solid rgba(255, 255, 255, 0.2)
+   - border-radius: 2px
+   - font-size: 13px, font-weight: 600, letter-spacing: 2px, uppercase
+   - color: white
+   - background: transparent
+   - On card hover: background becomes #1a56db, border-color becomes #1a56db
+
+8. TYPOGRAPHY — ALL TEXT MUST REMAIN IN BILO FONT:
+   - Headings: white, 52px, bold
+   - Body text: 17px, font-weight 300, line-height 1.75, color rgba(255,255,255,0.7), max-width 380px, margin-bottom 32px
+   - Do NOT import or apply any other font family
+
+9. RESPONSIVE: Stack to single column below 768px. Reduce card min-height to 400px and heading to 38px on mobile.
+
+Do NOT add any tag badges, stat callouts, or extra text. Keep only heading, accent bar, body text, and explore button in each card. Keep Bilo font everywhere. Do not change the nav, stats bar, mission section, or any other part of the page.
