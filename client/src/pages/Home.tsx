@@ -223,12 +223,12 @@ export default function Home() {
             >
               <div className="absolute top-0 right-0 w-1/2 h-3/5 pointer-events-none" style={{ background: 'radial-gradient(circle at 80% 20%, rgba(59,130,246,0.12), transparent 60%)' }}></div>
               <div className="relative z-10 text-left mt-auto" style={{ padding: '40px' }}>
-                <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-4" style={{ fontSize: '48px' }}>Healthcare</h2>
+                <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-5" style={{ fontSize: '64px' }}>Healthcare</h2>
                 <div className="accent-bar"></div>
-                <p className="mb-8" style={{ fontSize: '15px', fontWeight: 300, lineHeight: 1.7, color: 'rgba(255,255,255,0.55)', maxWidth: '340px' }}>Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
-                <span className="explore-link inline-flex items-center gap-2">
+                <p className="mb-10" style={{ fontSize: '18px', fontWeight: 300, lineHeight: 1.75, color: 'rgba(255,255,255,0.6)', maxWidth: '400px' }}>Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
+                <span className="explore-link inline-flex items-center gap-3">
                   Explore
-                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </div>
             </a>
@@ -240,12 +240,12 @@ export default function Home() {
             >
               <div className="absolute top-0 right-0 w-1/2 h-3/5 pointer-events-none" style={{ background: 'radial-gradient(circle at 80% 20%, rgba(59,130,246,0.12), transparent 60%)' }}></div>
               <div className="relative z-10 text-left mt-auto" style={{ padding: '40px' }}>
-                <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-4" style={{ fontSize: '48px' }}>Technology</h2>
+                <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-5" style={{ fontSize: '64px' }}>Technology</h2>
                 <div className="accent-bar"></div>
-                <p className="mb-8" style={{ fontSize: '15px', fontWeight: 300, lineHeight: 1.7, color: 'rgba(255,255,255,0.55)', maxWidth: '340px' }}>Building category-defining technology platforms through strategic investment and operational excellence.</p>
-                <span className="explore-link inline-flex items-center gap-2">
+                <p className="mb-10" style={{ fontSize: '18px', fontWeight: 300, lineHeight: 1.75, color: 'rgba(255,255,255,0.6)', maxWidth: '400px' }}>Building category-defining technology platforms through strategic investment and operational excellence.</p>
+                <span className="explore-link inline-flex items-center gap-3">
                   Explore
-                  <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </div>
             </a>

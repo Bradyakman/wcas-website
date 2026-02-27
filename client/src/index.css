@@ -118,17 +118,17 @@
   border-color: rgba(59, 130, 246, 0.35) !important;
 }
 .sector-card .accent-bar {
-  width: 48px;
+  width: 64px;
   height: 4px;
   background: #1a56db;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   transition: width 0.3s ease;
 }
 .sector-card:hover .accent-bar {
-  width: 80px;
+  width: 100px;
 }
 .sector-card .explore-link {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
