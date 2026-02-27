@@ -173,7 +173,7 @@ export default function Home() {
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative min-h-[34vh] md:min-h-[44vh] flex items-center pt-24 pb-8 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[#0d1f3c]"></div>
+        <div className="absolute inset-0 z-0" style={{ background: 'radial-gradient(ellipse at center, #243352 0%, #1a2744 70%)' }}></div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center justify-center h-full">
           <div className="pb-36 md:pb-40 lg:pb-44 xl:pb-40 flex flex-col items-center text-center">
@@ -189,22 +189,22 @@ export default function Home() {
           <div className="container mx-auto px-6 md:px-12 py-6 md:py-7">
             <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both min-w-max md:min-w-0">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744' }}>18</p>
+                <p className="font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744', fontSize: '58px' }}>18</p>
                 <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Funds Raised</p>
               </div>
               <div className="w-px h-10 md:h-12 shrink-0" style={{ backgroundColor: '#d1d5db' }}></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744' }}>45+</p>
+                <p className="font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744', fontSize: '58px' }}>45+</p>
                 <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Years of Experience</p>
               </div>
               <div className="w-px h-10 md:h-12 shrink-0" style={{ backgroundColor: '#d1d5db' }}></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744' }}>190+</p>
+                <p className="font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744', fontSize: '58px' }}>190+</p>
                 <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Companies</p>
               </div>
               <div className="w-px h-10 md:h-12 shrink-0" style={{ backgroundColor: '#d1d5db' }}></div>
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0 pr-6 md:pr-0">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744' }}>$33B+</p>
+                <p className="font-bold mb-0 leading-none md:leading-normal" style={{ fontFamily: "'Playfair Display', serif", color: '#1a2744', fontSize: '58px' }}>$33B+</p>
                 <p className="text-[8px] md:text-xs font-medium uppercase tracking-wider text-muted-foreground/70 max-w-[70px] md:max-w-[100px] leading-tight text-left">Capital Raised</p>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function Home() {
       </section>
       
       {/* Sector Cards + Mission — one continuous dark section */}
-      <div style={{ backgroundColor: '#0a1628' }}>
+      <div style={{ backgroundColor: '#ffffff' }}>
         <section className="w-full" style={{ paddingTop: '56px', paddingLeft: '24px', paddingRight: '24px' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-6">
             <a
