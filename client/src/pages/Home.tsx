@@ -213,16 +213,16 @@ export default function Home() {
       </section>
       
       {/* Sector Split Panels */}
-      <section className="w-full">
+      <section className="w-full pt-12 px-10">
         <div className="flex flex-col md:flex-row w-full gap-7">
           <a
             href="/healthcare"
             className="sector-card group relative w-full md:w-1/2 no-underline cursor-pointer block min-h-[400px] md:min-h-[520px] flex flex-col justify-end rounded-[6px] overflow-hidden"
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            style={{ WebkitTapHighlightColor: 'transparent', border: '1px solid rgba(255,255,255,0.06)' }}
           >
             <div className="card-bg absolute inset-0 z-0" style={{
               background: `
-                linear-gradient(160deg, #0d2847 0%, #112d4e 25%, #0f3460 50%, #0b1f3a 75%, #091428 100%)
+                linear-gradient(160deg, #153a5e 0%, #112d4e 25%, #0f3460 50%, #112d4e 75%, #0e2444 100%)
               `
             }}>
               <div className="absolute inset-0" style={{
@@ -259,11 +259,11 @@ export default function Home() {
           <a
             href="/technology"
             className="sector-card group relative w-full md:w-1/2 no-underline cursor-pointer block min-h-[400px] md:min-h-[520px] flex flex-col justify-end rounded-[6px] overflow-hidden"
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            style={{ WebkitTapHighlightColor: 'transparent', border: '1px solid rgba(255,255,255,0.06)' }}
           >
             <div className="card-bg absolute inset-0 z-0" style={{
               background: `
-                linear-gradient(145deg, #091428 0%, #0d1f3a 25%, #0f2847 50%, #112d4e 75%, #0a1628 100%)
+                linear-gradient(145deg, #091428 0%, #0b1a30 25%, #091428 50%, #0a1628 75%, #071020 100%)
               `
             }}>
               <div className="absolute inset-0" style={{
