@@ -213,83 +213,53 @@ export default function Home() {
       </section>
       
       {/* Sector Split Panels */}
-      <section className="w-full" style={{ backgroundColor: '#0a1628' }}>
-        <div className="container mx-auto px-6 md:px-12 py-16 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <a
-              href="/healthcare"
-              className="group relative overflow-hidden no-underline cursor-pointer block"
-              style={{
-                minHeight: '420px',
-                borderRadius: '4px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'flex-end',
-                transition: 'transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
-                WebkitTapHighlightColor: 'transparent',
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            >
-              <div
-                className="absolute inset-0 z-0 group-hover:scale-[1.08]"
-                style={{
-                  background: 'linear-gradient(135deg, #0f2847 0%, #1a3a5c 30%, #0d1f38 70%, #091425 100%)',
-                  transition: 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
-                }}
-              >
-                <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.05) 0%, transparent 50%)' }}></div>
-              </div>
-              <div className="absolute inset-0 z-[1]" style={{ background: 'linear-gradient(to top, rgba(10, 22, 40, 0.95) 0%, rgba(10, 22, 40, 0.4) 50%, rgba(10, 22, 40, 0.2) 100%)' }}></div>
-              <div className="relative z-10" style={{ padding: '48px' }}>
-                <h2 className="font-heading font-bold text-white mb-4" style={{ fontSize: 'clamp(34px, 5vw, 44px)', letterSpacing: '-0.5px', lineHeight: 1.1 }}>Healthcare</h2>
-                <p className="font-light mb-8" style={{ fontSize: '17px', fontWeight: 300, lineHeight: 1.7, color: 'rgba(255,255,255,0.65)', maxWidth: '380px' }}>
-                  Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.
-                </p>
-                <span className="explore-link text-white uppercase transition-colors duration-400" style={{ fontSize: '14px', fontWeight: 600, letterSpacing: '1.5px' }}>
-                  Explore
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-400" />
-                </span>
-              </div>
-            </a>
+      <section className="w-full">
+        <div className="flex flex-col md:flex-row w-full">
+          <a
+            href="/healthcare"
+            className="group relative w-full md:w-1/2 overflow-hidden no-underline cursor-pointer block"
+            style={{ WebkitTapHighlightColor: 'transparent' }}
+          >
+            <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ backgroundColor: '#0a1628' }}>
+              <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%), radial-gradient(circle at 60% 80%, rgba(255,255,255,0.03) 0%, transparent 45%)' }}></div>
+              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.02) 80px, rgba(255,255,255,0.02) 81px), repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 81px)' }}></div>
+              <div className="absolute -right-20 -top-20 w-[400px] h-[400px] rounded-full border border-white/[0.04]"></div>
+              <div className="absolute -left-10 -bottom-10 w-[250px] h-[250px] rounded-full border border-white/[0.03]"></div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:hidden"></div>
+            <div className="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
+            <div className="relative z-10 py-28 md:py-36 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
+              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Healthcare</h2>
+              <div className="w-16 h-px bg-white/30 mb-8"></div>
+              <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
+              <span className="inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-colors duration-500">
+                Explore
+                <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-500" />
+              </span>
+            </div>
+          </a>
 
-            <a
-              href="/technology"
-              className="group relative overflow-hidden no-underline cursor-pointer block"
-              style={{
-                minHeight: '420px',
-                borderRadius: '4px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'flex-end',
-                transition: 'transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
-                WebkitTapHighlightColor: 'transparent',
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            >
-              <div
-                className="absolute inset-0 z-0 group-hover:scale-[1.08]"
-                style={{
-                  background: 'linear-gradient(135deg, #091425 0%, #0f2847 30%, #162d50 70%, #0a1628 100%)',
-                  transition: 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
-                }}
-              >
-                <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%)' }}></div>
-              </div>
-              <div className="absolute inset-0 z-[1]" style={{ background: 'linear-gradient(to top, rgba(10, 22, 40, 0.95) 0%, rgba(10, 22, 40, 0.4) 50%, rgba(10, 22, 40, 0.2) 100%)' }}></div>
-              <div className="relative z-10" style={{ padding: '48px' }}>
-                <h2 className="font-heading font-bold text-white mb-4" style={{ fontSize: 'clamp(34px, 5vw, 44px)', letterSpacing: '-0.5px', lineHeight: 1.1 }}>Technology</h2>
-                <p className="font-light mb-8" style={{ fontSize: '17px', fontWeight: 300, lineHeight: 1.7, color: 'rgba(255,255,255,0.65)', maxWidth: '380px' }}>
-                  Building category-defining technology platforms through strategic investment and operational excellence.
-                </p>
-                <span className="explore-link text-white uppercase transition-colors duration-400" style={{ fontSize: '14px', fontWeight: 600, letterSpacing: '1.5px' }}>
-                  Explore
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-400" />
-                </span>
-              </div>
-            </a>
-          </div>
+          <a
+            href="/technology"
+            className="group relative w-full md:w-1/2 overflow-hidden no-underline cursor-pointer block"
+            style={{ WebkitTapHighlightColor: 'transparent' }}
+          >
+            <div className="absolute inset-0 z-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]" style={{ backgroundColor: '#0a1628' }}>
+              <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 75% 40%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 25% 75%, rgba(255,255,255,0.05) 0%, transparent 40%), radial-gradient(circle at 50% 10%, rgba(255,255,255,0.03) 0%, transparent 45%)' }}></div>
+              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(255,255,255,0.02) 100px, rgba(255,255,255,0.02) 101px), repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(255,255,255,0.015) 100px, rgba(255,255,255,0.015) 101px)' }}></div>
+              <div className="absolute -left-16 -top-16 w-[350px] h-[350px] rounded-full border border-white/[0.04]"></div>
+              <div className="absolute -right-12 -bottom-12 w-[300px] h-[300px] rounded-full border border-white/[0.03]"></div>
+            </div>
+            <div className="relative z-10 py-28 md:py-36 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
+              <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Technology</h2>
+              <div className="w-16 h-px bg-white/30 mb-8"></div>
+              <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Building category-defining technology platforms through strategic investment and operational excellence.</p>
+              <span className="inline-flex items-center gap-3 text-base font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-colors duration-500">
+                Explore
+                <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-500" />
+              </span>
+            </div>
+          </a>
         </div>
       </section>
       {/* Mission & Video Slider Section */}
