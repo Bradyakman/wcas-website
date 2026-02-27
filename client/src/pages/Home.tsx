@@ -176,7 +176,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-[#0d1f3c]"></div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center justify-center h-full">
-          <div className="pb-44 md:pb-48 lg:pb-52 xl:pb-48 flex flex-col items-center text-center">
+          <div className="pb-36 md:pb-40 lg:pb-44 xl:pb-40 flex flex-col items-center text-center">
             <img src={wcasLogo} alt="WCAS" className="h-20 md:h-28 w-auto brightness-0 invert mb-14" />
             <h1 className="text-[1.386rem] md:text-[1.733rem] font-bold text-white leading-[1.3] tracking-normal max-w-4xl" >
               {heroSlides[0].title}
@@ -185,7 +185,7 @@ export default function Home() {
         </div>
 
         {/* Stats (Static below carousel, spanning full width at bottom) */}
-        <div className="absolute bottom-0 left-0 right-0 py-10 md:py-12 z-20 overflow-x-auto scrollbar-hide" style={{ backgroundColor: '#ededed' }}>
+        <div className="absolute bottom-0 left-0 right-0 py-6 md:py-7 z-20 overflow-x-auto scrollbar-hide" style={{ backgroundColor: '#ededed' }}>
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-row gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center justify-start md:justify-center animate-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both min-w-max md:min-w-0">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 shrink-0">
@@ -211,26 +211,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Logos Ticker - merged with stats bar */}
-      <section className="pt-2 pb-4 overflow-hidden" style={{ backgroundColor: '#ededed' }}>
-        <div className="relative w-full overflow-hidden flex items-center py-1">
-          <div className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #ededed, transparent)' }}></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #ededed, transparent)' }}></div>
-          
-          <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
-            {[...logos, ...logos, ...logos].map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-[110px] h-[40px] flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300 cursor-pointer" style={{ marginLeft: `${Math.round(logo.mx * 0.7)}px`, marginRight: `${Math.round(logo.mx * 0.7)}px` }}>
-                <img 
-                  src={logo.src} 
-                  alt={`${logo.name} logo`} 
-                  className="max-w-full max-h-full object-contain mix-blend-multiply"
-                  style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
       {/* Sector Split Panels */}
       <section className="w-full">
         <div className="flex flex-col md:flex-row w-full">
@@ -247,7 +228,7 @@ export default function Home() {
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:hidden"></div>
             <div className="absolute top-0 right-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden md:block"></div>
-            <div className="relative z-10 py-20 md:py-24 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
+            <div className="relative z-10 py-28 md:py-36 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
               <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Healthcare</h2>
               <div className="w-16 h-px bg-white/30 mb-8"></div>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Partnering with market leaders across healthcare services, health IT, and life sciences for over four decades.</p>
@@ -269,7 +250,7 @@ export default function Home() {
               <div className="absolute -left-16 -top-16 w-[350px] h-[350px] rounded-full border border-white/[0.04]"></div>
               <div className="absolute -right-12 -bottom-12 w-[300px] h-[300px] rounded-full border border-white/[0.03]"></div>
             </div>
-            <div className="relative z-10 py-20 md:py-24 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
+            <div className="relative z-10 py-28 md:py-36 px-10 md:px-16 lg:px-20 text-left max-w-2xl">
               <h2 className="font-heading font-bold text-white leading-[0.95] tracking-tight mb-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(3rem, 5vw, 4rem)' }}>Technology</h2>
               <div className="w-16 h-px bg-white/30 mb-8"></div>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-md">Building category-defining technology platforms through strategic investment and operational excellence.</p>
