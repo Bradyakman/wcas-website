@@ -78,7 +78,7 @@ export function Navbar() {
         isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="w-full px-6 flex items-center justify-between">
         <nav ref={navRef} className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             link.dropdown ? (

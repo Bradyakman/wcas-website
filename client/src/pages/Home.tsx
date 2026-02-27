@@ -214,7 +214,7 @@ export default function Home() {
       
       {/* Sector Cards + Mission — one continuous dark section */}
       <div style={{ backgroundColor: '#ffffff' }}>
-        <section className="w-full" style={{ paddingTop: '56px', paddingLeft: '24px', paddingRight: '24px' }}>
+        <section className="w-full" style={{ paddingTop: '24px', paddingLeft: '24px', paddingRight: '24px' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-6">
             <a
               href="/healthcare"
