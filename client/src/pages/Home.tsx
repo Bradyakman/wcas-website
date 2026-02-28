@@ -138,9 +138,9 @@ export default function Home() {
       <section style={{ padding: "40px 56px 48px", display: "flex", gap: 48 }}>
         {[
           { num: "$33B+", label: "Capital Raised" },
-          { num: "45+", label: "Years Investing" },
           { num: "190+", label: "Companies" },
           { num: "18", label: "Funds Raised" },
+          { num: "45+", label: "Years Investing" },
         ].map((s, i) => (
           <div key={i} style={{ flex: 1, padding: "28px 0", borderTop: `2px solid ${ACCENT}` }}>
             <div style={{ fontSize: 30, fontWeight: 700, marginBottom: 4 }}>{s.num}</div>
