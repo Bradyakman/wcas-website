@@ -69,8 +69,16 @@ export function Navbar() {
       ]
     },
     { name: "News", href: "/news" },
-    { name: "Investor Portal", href: "/#investor" },
   ];
+
+  const linkColor = (scrolled: boolean, dark: boolean) =>
+    scrolled
+      ? dark
+        ? "text-white/70 hover:text-white"
+        : "text-foreground/80 hover:text-primary"
+      : dark
+        ? "text-white/70 hover:text-white"
+        : "text-foreground/90 hover:text-primary";
 
   return (
     <header 
@@ -79,98 +87,112 @@ export function Navbar() {
           ? isDarkHeroPage 
             ? "backdrop-blur-md py-4" 
             : "bg-white/90 backdrop-blur-md shadow-sm py-4"
-          : "bg-transparent py-6"
+          : isDarkHeroPage
+            ? "py-5"
+            : "bg-transparent py-6"
       }`}
-      style={isScrolled && isDarkHeroPage ? { backgroundColor: 'rgba(12,26,46,0.9)' } : undefined}
+      style={
+        isDarkHeroPage
+          ? isScrolled
+            ? { backgroundColor: 'rgba(12,26,46,0.95)', borderBottom: '1px solid rgba(255,255,255,0.08)' }
+            : { backgroundColor: 'rgba(12,26,46,0.7)', borderBottom: '1px solid rgba(255,255,255,0.08)' }
+          : undefined
+      }
     >
-      <div className="w-full px-6 flex items-center justify-between">
-        <nav ref={navRef} className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            link.dropdown ? (
-              <div key={link.name} className="relative flex items-center gap-1">
-                <Link
-                  href={link.href}
-                  className={`text-sm font-medium transition-colors cursor-pointer ${
-                    isScrolled 
-                      ? isDarkHeroPage
-                        ? "text-white/80 hover:text-white"
-                        : "text-foreground/80 hover:text-primary" 
-                      : isDarkHeroPage 
-                        ? "text-white/90 hover:text-white" 
-                        : "text-foreground/90 hover:text-primary"
-                  }`}
-                  style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
-                  onClick={closeDropdown}
-                >
-                  {link.name}
-                </Link>
-                <button
-                  type="button"
-                  aria-expanded={openDropdown === link.name}
-                  aria-controls={`dropdown-${link.name}`}
-                  aria-haspopup="true"
-                  onClick={() => toggleDropdown(link.name)}
-                  className={`bg-transparent border-none cursor-pointer p-1 ${
-                    isScrolled 
-                      ? isDarkHeroPage
-                        ? "text-white/80 hover:text-white"
-                        : "text-foreground/80 hover:text-primary" 
-                      : isDarkHeroPage 
-                        ? "text-white/90 hover:text-white" 
-                        : "text-foreground/90 hover:text-primary"
-                  }`}
-                  style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
-                >
-                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={`opacity-70 transition-transform duration-300 ${openDropdown === link.name ? 'rotate-180' : ''}`}>
-                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-                <div
-                  id={`dropdown-${link.name}`}
-                  role="menu"
-                  className={`absolute top-full left-0 pt-4 transition-all duration-200 ${
-                    openDropdown === link.name
-                      ? 'opacity-100 pointer-events-auto translate-y-0'
-                      : 'opacity-0 pointer-events-none -translate-y-1'
-                  }`}
-                >
-                  <div className="bg-white rounded-lg shadow-lg border border-border py-2 min-w-[200px] flex flex-col">
-                    {link.dropdown.map((dropItem) => (
-                      <Link
-                        key={dropItem.name}
-                        href={dropItem.href}
-                        role="menuitem"
-                        className="px-4 py-2 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 transition-colors"
-                        onClick={closeDropdown}
-                      >
-                        {dropItem.name}
-                      </Link>
-                    ))}
+      <div className="w-full px-8 md:px-14 flex items-center justify-between">
+        <Link href="/">
+          <img 
+            src={wcasLogo} 
+            alt="WCAS" 
+            className={`h-5 md:h-6 w-auto cursor-pointer transition-opacity ${
+              isDarkHeroPage ? "brightness-0 invert opacity-90" : ""
+            }`} 
+          />
+        </Link>
+
+        <div className="hidden lg:flex items-center gap-7">
+          <nav ref={navRef} className="flex items-center gap-7">
+            {navLinks.map((link) => (
+              link.dropdown ? (
+                <div key={link.name} className="relative flex items-center gap-1">
+                  <Link
+                    href={link.href}
+                    className={`text-sm font-medium transition-colors cursor-pointer ${linkColor(isScrolled, isDarkHeroPage)}`}
+                    style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+                    onClick={closeDropdown}
+                  >
+                    {link.name}
+                  </Link>
+                  <button
+                    type="button"
+                    aria-expanded={openDropdown === link.name}
+                    aria-controls={`dropdown-${link.name}`}
+                    aria-haspopup="true"
+                    onClick={() => toggleDropdown(link.name)}
+                    className={`bg-transparent border-none cursor-pointer p-1 ${linkColor(isScrolled, isDarkHeroPage)}`}
+                    style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+                  >
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={`opacity-70 transition-transform duration-300 ${openDropdown === link.name ? 'rotate-180' : ''}`}>
+                      <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                  <div
+                    id={`dropdown-${link.name}`}
+                    role="menu"
+                    className={`absolute top-full left-0 pt-4 transition-all duration-200 ${
+                      openDropdown === link.name
+                        ? 'opacity-100 pointer-events-auto translate-y-0'
+                        : 'opacity-0 pointer-events-none -translate-y-1'
+                    }`}
+                  >
+                    <div className="bg-white rounded-lg shadow-lg border border-border py-2 min-w-[200px] flex flex-col">
+                      {link.dropdown.map((dropItem) => (
+                        <Link
+                          key={dropItem.name}
+                          href={dropItem.href}
+                          role="menuitem"
+                          className="px-4 py-2 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 transition-colors"
+                          onClick={closeDropdown}
+                        >
+                          {dropItem.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              <a 
-                key={link.name} 
-                href={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  isScrolled 
-                    ? isDarkHeroPage
-                      ? "text-white/80 hover:text-white"
-                      : "text-foreground/80 hover:text-primary" 
-                    : isDarkHeroPage 
-                      ? "text-white/90 hover:text-white" 
-                      : "text-foreground/90 hover:text-primary"
-                }`}
-              >
-                {link.name}
-              </a>
-            )
-          ))}
-        </nav>
+              ) : (
+                <a 
+                  key={link.name} 
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors ${linkColor(isScrolled, isDarkHeroPage)}`}
+                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14 }}
+                >
+                  {link.name}
+                </a>
+              )
+            ))}
+          </nav>
+          <a
+            href="/#investor"
+            className="transition-all duration-200"
+            style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontSize: 14,
+              fontWeight: 400,
+              padding: "8px 20px",
+              borderRadius: 24,
+              border: isDarkHeroPage ? "1.5px solid rgba(255,255,255,0.25)" : "1.5px solid currentColor",
+              background: "none",
+              color: isDarkHeroPage ? "rgba(255,255,255,0.7)" : "#1B4F8A",
+              textDecoration: "none",
+            }}
+          >
+            Investor Portal
+          </a>
+        </div>
 
         <button 
-          className={`lg:hidden p-2 ${isDarkHeroPage ? "text-white" : isScrolled ? "text-foreground" : "text-foreground"}`}
+          className={`lg:hidden p-2 ${isDarkHeroPage ? "text-white" : "text-foreground"}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -179,18 +201,18 @@ export function Navbar() {
 
       {mobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t py-4 px-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
-          {navLinks.map((link) => (
+          {[...navLinks, { name: "Investor Portal", href: "/#investor" }].map((link) => (
             <div key={link.name} className="flex flex-col border-b border-border/50 pb-2">
               <a 
                 href={link.href}
                 className="text-lg font-medium text-foreground py-2"
-                onClick={() => !link.dropdown && setMobileMenuOpen(false)}
+                onClick={() => !('dropdown' in link && link.dropdown) && setMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
-              {link.dropdown && (
+              {'dropdown' in link && link.dropdown && (
                 <div className="flex flex-col pl-4 mt-2 gap-2 border-l-2 border-border/50 ml-2 mb-2">
-                  {link.dropdown.map(dropItem => (
+                  {(link as any).dropdown.map((dropItem: any) => (
                     <a 
                       key={dropItem.name}
                       href={dropItem.href}
