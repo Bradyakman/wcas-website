@@ -75,8 +75,13 @@ export function Navbar() {
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+        isScrolled 
+          ? isDarkHeroPage 
+            ? "backdrop-blur-md py-4" 
+            : "bg-white/90 backdrop-blur-md shadow-sm py-4"
+          : "bg-transparent py-6"
       }`}
+      style={isScrolled && isDarkHeroPage ? { backgroundColor: 'rgba(12,26,46,0.9)' } : undefined}
     >
       <div className="w-full px-6 flex items-center justify-between">
         <nav ref={navRef} className="hidden lg:flex items-center gap-8">
@@ -87,7 +92,9 @@ export function Navbar() {
                   href={link.href}
                   className={`text-sm font-medium transition-colors cursor-pointer ${
                     isScrolled 
-                      ? "text-foreground/80 hover:text-primary" 
+                      ? isDarkHeroPage
+                        ? "text-white/80 hover:text-white"
+                        : "text-foreground/80 hover:text-primary" 
                       : isDarkHeroPage 
                         ? "text-white/90 hover:text-white" 
                         : "text-foreground/90 hover:text-primary"
@@ -105,7 +112,9 @@ export function Navbar() {
                   onClick={() => toggleDropdown(link.name)}
                   className={`bg-transparent border-none cursor-pointer p-1 ${
                     isScrolled 
-                      ? "text-foreground/80 hover:text-primary" 
+                      ? isDarkHeroPage
+                        ? "text-white/80 hover:text-white"
+                        : "text-foreground/80 hover:text-primary" 
                       : isDarkHeroPage 
                         ? "text-white/90 hover:text-white" 
                         : "text-foreground/90 hover:text-primary"
@@ -146,7 +155,9 @@ export function Navbar() {
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
                   isScrolled 
-                    ? "text-foreground/80 hover:text-primary" 
+                    ? isDarkHeroPage
+                      ? "text-white/80 hover:text-white"
+                      : "text-foreground/80 hover:text-primary" 
                     : isDarkHeroPage 
                       ? "text-white/90 hover:text-white" 
                       : "text-foreground/90 hover:text-primary"
@@ -159,7 +170,7 @@ export function Navbar() {
         </nav>
 
         <button 
-          className={`lg:hidden p-2 ${!isScrolled && isDarkHeroPage ? "text-white" : "text-foreground"}`}
+          className={`lg:hidden p-2 ${isDarkHeroPage ? "text-white" : isScrolled ? "text-foreground" : "text-foreground"}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

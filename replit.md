@@ -8,7 +8,16 @@ WCAS (Welsh, Carson, Anderson & Stowe) corporate website — a full-stack React 
 - **Backend**: Express 5, TypeScript, tsx
 - **Build**: Vite for client, esbuild for server
 - **Styling**: Tailwind CSS with shadcn/ui components
-- **Typography**: Bilo (Adobe Typekit, kit `mny3qsl`) — matches WCAS.com; loaded globally for all text
+- **Typography**: Bilo (Adobe Typekit, kit `mny3qsl`) as base; Homepage uses Libre Baskerville (serif headings) + Outfit (sans-serif body) for dark blue design. Playfair Display for stat numbers on legacy pages.
+
+## Home Page Design
+- Dark blue theme (`#0C1A2E` background) inspired by KKR/Thoma Bravo/General Atlantic
+- Accent color: `#6BA3D6` (light blue)
+- Sections: Hero with photo overlay → Stats (blue top borders) → Sectors → Value Creation → Video Slider → Quote block → News
+- Fonts: Libre Baskerville for serif headings, Outfit for sans-serif body text
+- All inline styles for the dark theme (no Tailwind dark mode needed)
+- Video carousel with drag-to-scroll and Vimeo lightbox modal
+- CSS classes: `.sector-card-blue`, `.video-card-blue`, `.news-row-blue` in index.css
 
 ## Project Structure
 ```
