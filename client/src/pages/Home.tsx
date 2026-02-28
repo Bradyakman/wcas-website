@@ -143,8 +143,8 @@ export default function Home() {
           { num: "45+", label: "Years Investing" },
         ].map((s, i) => (
           <div key={i} style={{ flex: 1, padding: "28px 0", borderTop: `2px solid ${ACCENT}` }}>
-            <div style={{ fontSize: 30, fontWeight: 700, marginBottom: 4 }}>{s.num}</div>
-            <div style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.5)", fontWeight: 400 }}>{s.label}</div>
+            <div style={{ fontSize: 36, fontWeight: 700, marginBottom: 4 }}>{s.num}</div>
+            <div style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.55)", fontWeight: 400 }}>{s.label}</div>
           </div>
         ))}
       </section>
@@ -152,16 +152,43 @@ export default function Home() {
       {/* ── SECTORS ── */}
       <section style={{ padding: "80px 56px" }}>
         <p style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase", color: ACCENT, marginBottom: 12 }}>Our Focus</p>
-        <h2 style={{ fontSize: 34, fontWeight: 400, marginBottom: 48 }}>Deep expertise across healthcare and technology</h2>
+        <h2 style={{ fontSize: 34, fontWeight: 400, marginBottom: 48 }}>Where we invest</h2>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
           {[
-            { title: "Healthcare", href: "/healthcare", desc: "Care delivery, pharma value chain, payor services, and behavioral health — investing across the full continuum of care with operational depth." },
-            { title: "Technology", href: "/technology", desc: "Healthcare IT, enterprise software, analytics, and workflow automation powering the digital transformation of industries." },
+            {
+              title: "Healthcare",
+              href: "/healthcare",
+              kicker: "Investing across the full continuum of care with operational depth.",
+              items: ["Care Delivery & Physician Services", "Pharma Value Chain & Life Sciences", "Payor Services & Benefits Administration", "Behavioral Health & Post-Acute Care"],
+              link: "View healthcare investments",
+            },
+            {
+              title: "Technology",
+              href: "/technology",
+              kicker: "Building category-defining platforms through strategic investment and hands-on partnership.",
+              items: ["Enterprise Software & SaaS", "Healthcare IT & Clinical Infrastructure", "Data Analytics & Workflow Automation", "Financial Technology & Payments"],
+              link: "View technology investments",
+            },
           ].map((s, i) => (
-            <a key={i} href={s.href} className="sector-card-blue" style={{ background: "rgba(255,255,255,0.03)", border: `1px solid ${BORDER}`, padding: 36, cursor: "pointer", transition: "all 0.35s", textDecoration: "none", color: TEXT, display: "block" }}>
-              <div style={{ display: "inline-block", fontFamily: SANS, fontSize: 12, fontWeight: 500, padding: "6px 16px", borderRadius: 20, background: ACCENT, color: "white", marginBottom: 16 }}>{s.title}</div>
-              <h3 style={{ fontSize: 20, fontWeight: 400, margin: "0 0 10px" }}>{s.title}</h3>
-              <p style={{ fontFamily: SANS, fontSize: 14, color: MUTED, lineHeight: 1.65, fontWeight: 300 }}>{s.desc}</p>
+            <a key={i} href={s.href} className="sector-card-blue" style={{ background: "rgba(255,255,255,0.03)", border: `1px solid ${BORDER}`, cursor: "pointer", transition: "all 0.35s", textDecoration: "none", color: TEXT, display: "flex", flexDirection: "column", overflow: "hidden", borderRadius: 4 }}>
+              <div style={{ background: "rgba(107,163,214,0.08)", padding: "16px 36px", borderBottom: `1px solid ${BORDER}`, display: "flex", alignItems: "center", gap: 12 }}>
+                <span style={{ fontFamily: SANS, fontSize: 12, fontWeight: 500, padding: "5px 14px", borderRadius: 20, background: ACCENT, color: "white" }}>{s.title}</span>
+              </div>
+              <div style={{ padding: "28px 36px 32px" }}>
+                <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, fontWeight: 300, marginBottom: 20 }}>{s.kicker}</p>
+                <ul style={{ fontFamily: SANS, fontSize: 14, color: MUTED, lineHeight: 2, fontWeight: 300, listStyle: "none", padding: 0, margin: 0 }}>
+                  {s.items.map((item, j) => (
+                    <li key={j} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <span style={{ width: 5, height: 5, borderRadius: "50%", background: ACCENT, flexShrink: 0, opacity: 0.6 }}></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ marginTop: 24, display: "flex", alignItems: "center", gap: 8, fontFamily: SANS, fontSize: 13, fontWeight: 500, color: ACCENT }}>
+                  {s.link}
+                  <ArrowRight size={14} />
+                </div>
+              </div>
             </a>
           ))}
         </div>
