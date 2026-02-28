@@ -194,27 +194,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── VALUE CREATION ── */}
-      <section style={{ padding: "80px 56px 100px", background: "rgba(255,255,255,0.02)" }}>
-        <p style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase", color: ACCENT, marginBottom: 12 }}>Value Creation</p>
-        <h2 style={{ fontSize: 34, fontWeight: 400, marginBottom: 48 }}>How we build alongside management teams</h2>
-        {[
-          { icon: "R", title: "Reimbursement & Revenue Cycle", desc: "Navigating CMS policy, commercial contracting, and revenue integrity from the inside." },
-          { icon: "Q", title: "Clinical Quality & Compliance", desc: "Accreditation-ready infrastructure, clinical governance, and regulatory readiness." },
-          { icon: "O", title: "Operating Cadence", desc: "The rhythms, KPIs, and accountability that scale multi-site healthcare operations." },
-          { icon: "T", title: "Talent & Clinician Strategy", desc: "Recruiting, retaining, and developing leadership in competitive clinical labor markets." },
-          { icon: "S", title: "Strategic Partnerships", desc: "Pioneering the corporate-PE partnership model in healthcare." },
-        ].map((p, i) => (
-          <div key={i} style={{ display: "flex", gap: 48, padding: "32px 0", borderBottom: `1px solid rgba(255,255,255,0.06)`, alignItems: "flex-start" }}>
-            <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(107,163,214,0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: ACCENT, fontFamily: SANS, fontSize: 14, fontWeight: 600 }}>{p.icon}</div>
-            <div>
-              <h4 style={{ fontSize: 18, fontWeight: 700, marginBottom: 6 }}>{p.title}</h4>
-              <p style={{ fontFamily: SANS, fontSize: 14, color: MUTED, lineHeight: 1.65, fontWeight: 300 }}>{p.desc}</p>
-            </div>
-          </div>
-        ))}
-      </section>
-
       {/* ── VIDEO SLIDER SECTION ── */}
       <section style={{ position: "relative", overflow: "hidden", background: BG }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${missionBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
