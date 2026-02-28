@@ -1,5 +1,5 @@
 import { ArrowRight, Play, X } from "lucide-react";
-import heroBg from "@assets/1115_WCAS_March_7_23_by_John_Abbott_1771874983441.JPG";
+import heroBg from "@assets/image_1772300178571.png";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import missionBg from "@assets/2345234534_1771799538730.jpg";
 import logoSelect from "@assets/image_1772034518225.png";
