@@ -150,9 +150,9 @@ export default function Home() {
       </section>
 
       {/* ── SECTORS ── */}
-      <section style={{ padding: "48px 56px 80px" }}>
+      <section style={{ padding: "28px 56px 80px" }}>
         <p style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase", color: ACCENT, marginBottom: 12 }}>Our Focus</p>
-        <h2 style={{ fontSize: 34, fontWeight: 400, marginBottom: 48 }}>Where we invest</h2>
+        <h2 style={{ fontSize: 34, fontWeight: 400, marginBottom: 40 }}>Where we invest</h2>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
           {[
             {
@@ -170,12 +170,12 @@ export default function Home() {
               link: "View technology investments",
             },
           ].map((s, i) => (
-            <a key={i} href={s.href} className="sector-card-blue" style={{ background: "rgba(255,255,255,0.03)", border: `1px solid ${BORDER}`, cursor: "pointer", transition: "all 0.35s", textDecoration: "none", color: TEXT, display: "flex", flexDirection: "column", overflow: "hidden", borderRadius: 4 }}>
-              <div style={{ background: "rgba(107,163,214,0.08)", padding: "12px 36px", borderBottom: `1px solid ${BORDER}`, display: "flex", alignItems: "center", gap: 12 }}>
+            <a key={i} href={s.href} className="sector-card-blue" style={{ background: "linear-gradient(165deg, rgba(255,255,255,0.04) 0%, rgba(107,163,214,0.03) 100%)", border: `1px solid ${BORDER}`, cursor: "pointer", transition: "all 0.35s", textDecoration: "none", color: TEXT, display: "flex", flexDirection: "column", overflow: "hidden", borderRadius: 4 }}>
+              <div style={{ borderTop: `3px solid ${ACCENT}`, background: "rgba(107,163,214,0.06)", padding: "12px 36px", borderBottom: `1px solid ${BORDER}`, display: "flex", alignItems: "center", gap: 12 }}>
                 <span style={{ fontFamily: SANS, fontSize: 12, fontWeight: 500, padding: "5px 14px", borderRadius: 20, background: ACCENT, color: "white" }}>{s.title}</span>
               </div>
               <div style={{ padding: "28px 36px 32px" }}>
-                <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, fontWeight: 300, marginBottom: 20 }}>{s.kicker}</p>
+                <p style={{ fontFamily: SANS, fontSize: 16, color: "rgba(255,255,255,0.7)", lineHeight: 1.6, fontWeight: 400, marginBottom: 20 }}>{s.kicker}</p>
                 <ul style={{ fontFamily: SANS, fontSize: 14, color: MUTED, lineHeight: 2, fontWeight: 300, listStyle: "none", padding: 0, margin: 0 }}>
                   {s.items.map((item, j) => (
                     <li key={j} style={{ display: "flex", alignItems: "center", gap: 10 }}>
