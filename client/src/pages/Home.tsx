@@ -150,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* ── SECTORS ── */}
-      <section style={{ padding: "80px 56px" }}>
+      <section style={{ padding: "48px 56px 80px" }}>
         <p style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase", color: ACCENT, marginBottom: 12 }}>Our Focus</p>
         <h2 style={{ fontSize: 34, fontWeight: 400, marginBottom: 48 }}>Where we invest</h2>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
@@ -158,20 +158,20 @@ export default function Home() {
             {
               title: "Healthcare",
               href: "/healthcare",
-              kicker: "Investing across the full continuum of care with operational depth.",
-              items: ["Care Delivery & Physician Services", "Pharma Value Chain & Life Sciences", "Payor Services & Benefits Administration", "Behavioral Health & Post-Acute Care"],
+              kicker: "Investing across healthcare services, payor solutions, and the pharma value chain.",
+              items: ["Care delivery", "Payor solutions", "Pharma value chain", "Healthcare technology (HCIT)"],
               link: "View healthcare investments",
             },
             {
               title: "Technology",
               href: "/technology",
-              kicker: "Building category-defining platforms through strategic investment and hands-on partnership.",
-              items: ["Enterprise Software & SaaS", "Healthcare IT & Clinical Infrastructure", "Data Analytics & Workflow Automation", "Financial Technology & Payments"],
+              kicker: "Investing in software and data platforms powering essential industries.",
+              items: ["FinTech (banking, markets, payments)", "GovTech (state, local, federal)", "Built environment (property, infrastructure, construction)", "IndustrialTech (industrial software, GRC)", "Proprietary data and analytics", "Healthcare technology (HCIT), with the WCAS Healthcare Team"],
               link: "View technology investments",
             },
           ].map((s, i) => (
             <a key={i} href={s.href} className="sector-card-blue" style={{ background: "rgba(255,255,255,0.03)", border: `1px solid ${BORDER}`, cursor: "pointer", transition: "all 0.35s", textDecoration: "none", color: TEXT, display: "flex", flexDirection: "column", overflow: "hidden", borderRadius: 4 }}>
-              <div style={{ background: "rgba(107,163,214,0.08)", padding: "16px 36px", borderBottom: `1px solid ${BORDER}`, display: "flex", alignItems: "center", gap: 12 }}>
+              <div style={{ background: "rgba(107,163,214,0.08)", padding: "12px 36px", borderBottom: `1px solid ${BORDER}`, display: "flex", alignItems: "center", gap: 12 }}>
                 <span style={{ fontFamily: SANS, fontSize: 12, fontWeight: 500, padding: "5px 14px", borderRadius: 20, background: ACCENT, color: "white" }}>{s.title}</span>
               </div>
               <div style={{ padding: "28px 36px 32px" }}>
