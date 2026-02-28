@@ -128,7 +128,7 @@ export default function Home() {
             For over four decades, WCAS has invested exclusively in healthcare and technology — combining deep sector knowledge with operational partnership to create long-term value.
           </p>
           <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
-            <a href="/healthcare" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "none", background: ACCENT, color: "white", cursor: "pointer", textDecoration: "none" }}>Explore Our Portfolio</a>
+            <a href="/healthcare" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: `1.5px solid ${ACCENT}`, background: "none", color: ACCENT, cursor: "pointer", textDecoration: "none" }}>Explore Our Portfolio</a>
             <a href="/#firm" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: `1.5px solid ${ACCENT}`, background: "none", color: ACCENT, cursor: "pointer", textDecoration: "none" }}>Our Approach</a>
           </div>
         </div>
