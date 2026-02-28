@@ -124,7 +124,7 @@ export default function Home() {
             For over 45 years, WCAS has partnered with industry leaders across technology & healthcare to{" "}
             <em style={{ fontStyle: "italic", color: ACCENT }}>reshape landscapes and drive growth.</em>
           </h1>
-          <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, fontWeight: 300, maxWidth: 600 }}>
+          <p style={{ fontFamily: SANS, fontSize: 20, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, fontWeight: 300, maxWidth: 720 }}>
             As one of private equity's first sector specialists, we combine deep sector knowledge with hands-on operational support to build long-term value.
           </p>
           <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
@@ -138,7 +138,7 @@ export default function Home() {
       <section style={{ padding: "40px 56px 48px", display: "flex", gap: 48 }}>
         {[
           { num: "$33B+", label: "Capital Raised" },
-          { num: "45+", label: "Years of Experience" },
+          { num: "45+", label: "Years Investing" },
           { num: "190+", label: "Companies" },
           { num: "18", label: "Funds Raised" },
         ].map((s, i) => (
