@@ -71,42 +71,24 @@ export function Navbar() {
     { name: "News", href: "/news" },
   ];
 
-  const linkColor = (scrolled: boolean, dark: boolean) =>
-    scrolled
-      ? dark
-        ? "text-white/70 hover:text-white"
-        : "text-foreground/80 hover:text-primary"
-      : dark
-        ? "text-white/70 hover:text-white"
-        : "text-foreground/90 hover:text-primary";
+  const linkColor = () => "text-white/70 hover:text-white";
 
   return (
     <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? isDarkHeroPage 
-            ? "backdrop-blur-md py-4" 
-            : "bg-white/90 backdrop-blur-md shadow-sm py-4"
-          : isDarkHeroPage
-            ? "py-5"
-            : "bg-transparent py-6"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md ${
+        isScrolled ? "py-3" : "py-5"
       }`}
-      style={
-        isDarkHeroPage
-          ? isScrolled
-            ? { backgroundColor: 'rgba(12,26,46,0.95)', borderBottom: '1px solid rgba(255,255,255,0.08)' }
-            : { backgroundColor: 'rgba(12,26,46,0.7)', borderBottom: '1px solid rgba(255,255,255,0.08)' }
-          : undefined
-      }
+      style={{
+        backgroundColor: isScrolled ? 'rgba(12,26,46,0.95)' : 'rgba(12,26,46,0.7)',
+        borderBottom: '1px solid rgba(255,255,255,0.08)',
+      }}
     >
       <div className="w-full px-8 md:px-14 flex items-center justify-between">
         <Link href="/">
           <img 
             src={wcasLogo} 
             alt="WCAS" 
-            className={`h-5 md:h-6 w-auto cursor-pointer transition-opacity ${
-              isDarkHeroPage ? "brightness-0 invert opacity-90" : ""
-            }`} 
+            className="h-5 md:h-6 w-auto cursor-pointer transition-opacity brightness-0 invert opacity-90" 
           />
         </Link>
 
@@ -117,7 +99,7 @@ export function Navbar() {
                 <div key={link.name} className="relative flex items-center gap-1">
                   <Link
                     href={link.href}
-                    className={`text-sm font-medium transition-colors cursor-pointer ${linkColor(isScrolled, isDarkHeroPage)}`}
+                    className={`text-sm font-medium transition-colors cursor-pointer ${linkColor()}`}
                     style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
                     onClick={closeDropdown}
                   >
@@ -129,7 +111,7 @@ export function Navbar() {
                     aria-controls={`dropdown-${link.name}`}
                     aria-haspopup="true"
                     onClick={() => toggleDropdown(link.name)}
-                    className={`bg-transparent border-none cursor-pointer p-1 ${linkColor(isScrolled, isDarkHeroPage)}`}
+                    className={`bg-transparent border-none cursor-pointer p-1 ${linkColor()}`}
                     style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
                   >
                     <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={`opacity-70 transition-transform duration-300 ${openDropdown === link.name ? 'rotate-180' : ''}`}>
@@ -164,7 +146,7 @@ export function Navbar() {
                 <a 
                   key={link.name} 
                   href={link.href}
-                  className={`text-sm font-medium transition-colors ${linkColor(isScrolled, isDarkHeroPage)}`}
+                  className={`text-sm font-medium transition-colors ${linkColor()}`}
                   style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14 }}
                 >
                   {link.name}
@@ -181,9 +163,9 @@ export function Navbar() {
               fontWeight: 400,
               padding: "8px 20px",
               borderRadius: 24,
-              border: isDarkHeroPage ? "1.5px solid rgba(107,163,214,0.4)" : "1.5px solid #1B4F8A",
+              border: "1.5px solid rgba(107,163,214,0.4)",
               background: "none",
-              color: isDarkHeroPage ? "rgba(107,163,214,0.7)" : "#1B4F8A",
+              color: "rgba(107,163,214,0.7)",
               textDecoration: "none",
             }}
           >
@@ -192,7 +174,7 @@ export function Navbar() {
         </div>
 
         <button 
-          className={`lg:hidden p-2 ${isDarkHeroPage ? "text-white" : "text-foreground"}`}
+          className="lg:hidden p-2 text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
