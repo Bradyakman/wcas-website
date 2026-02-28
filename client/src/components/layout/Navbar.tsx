@@ -181,9 +181,9 @@ export function Navbar() {
               fontWeight: 400,
               padding: "8px 20px",
               borderRadius: 24,
-              border: isDarkHeroPage ? "1.5px solid rgba(255,255,255,0.25)" : "1.5px solid currentColor",
+              border: isDarkHeroPage ? "1.5px solid rgba(107,163,214,0.4)" : "1.5px solid #1B4F8A",
               background: "none",
-              color: isDarkHeroPage ? "rgba(255,255,255,0.7)" : "#1B4F8A",
+              color: isDarkHeroPage ? "rgba(107,163,214,0.7)" : "#1B4F8A",
               textDecoration: "none",
             }}
           >
