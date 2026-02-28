@@ -121,7 +121,7 @@ export default function Home() {
         }} />
         <div style={{ position: "relative", padding: "160px 56px 110px", maxWidth: 900 }}>
           <h1 style={{ fontSize: 48, fontWeight: 400, lineHeight: 1.2, marginBottom: 28 }}>
-            WCAS partners with industry leaders across technology & healthcare to{" "}
+            For over 45 years, WCAS has partnered with industry leaders across technology & healthcare to{" "}
             <em style={{ fontStyle: "italic", color: ACCENT }}>reshape landscapes and drive growth.</em>
           </h1>
           <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, fontWeight: 300, maxWidth: 600 }}>
