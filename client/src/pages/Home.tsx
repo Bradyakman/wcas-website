@@ -125,7 +125,7 @@ export default function Home() {
             <em style={{ fontStyle: "italic", color: ACCENT }}>reshape landscapes and drive growth.</em>
           </h1>
           <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, fontWeight: 300, maxWidth: 600 }}>
-            For over four decades, WCAS has invested exclusively in healthcare and technology — combining deep sector knowledge with operational partnership to create long-term value.
+            As one of private equity's first sector specialists, we combine deep sector knowledge with hands-on operational support to create long-term value.
           </p>
           <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
             <a href="/healthcare" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: `1.5px solid ${ACCENT}`, background: "none", color: ACCENT, cursor: "pointer", textDecoration: "none" }}>Explore Our Portfolio</a>
