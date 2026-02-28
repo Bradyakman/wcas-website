@@ -120,16 +120,16 @@ export default function Home() {
           background: "linear-gradient(180deg, rgba(12,26,46,0.3) 0%, rgba(12,26,46,0.95) 85%)",
         }} />
         <div style={{ position: "relative", padding: "160px 56px 110px", maxWidth: 900 }}>
-          <h1 style={{ fontSize: 48, fontWeight: 400, lineHeight: 1.2, marginBottom: 20 }}>
-            Building category leaders in{" "}
-            <span style={{ color: ACCENT }}>healthcare and technology</span>
+          <h1 style={{ fontSize: 48, fontWeight: 400, lineHeight: 1.2, marginBottom: 28 }}>
+            For over 45 years, WCAS has partnered with industry leaders across technology & healthcare to{" "}
+            <em style={{ fontStyle: "italic", color: ACCENT }}>reshape landscapes and drive growth.</em>
           </h1>
-          <p style={{ fontFamily: SANS, fontSize: 20, color: "rgba(255,255,255,0.45)", lineHeight: 1.5, fontWeight: 400, maxWidth: 520 }}>
-            Deep sector focus with operational support
+          <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, fontWeight: 300, maxWidth: 600 }}>
+            For over four decades, WCAS has invested exclusively in healthcare and technology — combining deep sector knowledge with operational partnership to create long-term value.
           </p>
-          <div style={{ marginTop: 40, display: "flex", gap: 16, alignItems: "center" }}>
-            <a href="/healthcare" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "none", background: ACCENT, color: "white", cursor: "pointer", textDecoration: "none", lineHeight: "1.4" }}>Explore Our Portfolio</a>
-            <a href="/#firm" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: `1.5px solid ${ACCENT}`, background: "none", color: ACCENT, cursor: "pointer", textDecoration: "none", lineHeight: "1.4" }}>Our Approach</a>
+          <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
+            <a href="/healthcare" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "none", background: ACCENT, color: "white", cursor: "pointer", textDecoration: "none" }}>Explore Our Portfolio</a>
+            <a href="/#firm" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: `1.5px solid ${ACCENT}`, background: "none", color: ACCENT, cursor: "pointer", textDecoration: "none" }}>Our Approach</a>
           </div>
         </div>
       </section>
