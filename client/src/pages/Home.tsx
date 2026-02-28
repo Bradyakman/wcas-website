@@ -108,17 +108,7 @@ export default function Home() {
     <div style={{ fontFamily: SERIF, background: BG, color: TEXT, minHeight: "100vh" }}>
 
       {/* ── HERO WITH IMAGE ── */}
-      <section style={{ position: "relative", overflow: "hidden" }}>
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover", backgroundPosition: "center",
-        }} />
-        <div style={{
-          position: "absolute", inset: 0,
-          background: "linear-gradient(90deg, rgba(5,10,20,0.88) 0%, rgba(5,10,20,0.78) 35%, rgba(5,10,20,0.55) 70%, rgba(5,10,20,0.30) 100%)",
-          zIndex: 1,
-        }} />
+      <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "160px 56px 110px", maxWidth: 1100 }}>
           <h1 style={{ fontSize: 36, fontWeight: 400, lineHeight: 1.35, marginBottom: 28 }}>
             For over 45 years, WCAS has partnered with industry leaders across technology &{" "}
