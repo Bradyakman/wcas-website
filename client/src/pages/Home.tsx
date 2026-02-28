@@ -144,7 +144,7 @@ export default function Home() {
         ].map((s, i) => (
           <div key={i} style={{ flex: 1, padding: "28px 0", borderTop: `2px solid ${ACCENT}` }}>
             <div style={{ fontSize: 30, fontWeight: 700, marginBottom: 4 }}>{s.num}</div>
-            <div style={{ fontFamily: SANS, fontSize: 13, color: VERY_MUTED, fontWeight: 400 }}>{s.label}</div>
+            <div style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.5)", fontWeight: 400 }}>{s.label}</div>
           </div>
         ))}
       </section>
