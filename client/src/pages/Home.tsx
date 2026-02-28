@@ -150,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* ── SECTORS ── */}
-      <section style={{ padding: "28px 56px 80px" }}>
+      <section style={{ padding: "28px 56px 80px", background: "linear-gradient(180deg, rgba(255,255,255,0.025) 0%, rgba(255,255,255,0.015) 100%)", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <p style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase", color: ACCENT, marginBottom: 12 }}>Our Focus</p>
         <h2 style={{ fontSize: 34, fontWeight: 400, marginBottom: 40 }}>Where we invest</h2>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
@@ -170,7 +170,7 @@ export default function Home() {
               link: "View technology investments",
             },
           ].map((s, i) => (
-            <a key={i} href={s.href} className="sector-card-blue" style={{ background: "linear-gradient(165deg, rgba(255,255,255,0.04) 0%, rgba(107,163,214,0.03) 100%)", border: `1px solid ${BORDER}`, cursor: "pointer", transition: "all 0.35s", textDecoration: "none", color: TEXT, display: "flex", flexDirection: "column", overflow: "hidden", borderRadius: 4 }}>
+            <a key={i} href={s.href} className="sector-card-blue" style={{ background: "linear-gradient(165deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.08) 100%)", border: `1px solid ${BORDER}`, cursor: "pointer", transition: "all 0.35s", textDecoration: "none", color: TEXT, display: "flex", flexDirection: "column", overflow: "hidden", borderRadius: 4 }}>
               <div style={{ borderTop: `3px solid ${ACCENT}`, background: "rgba(107,163,214,0.06)", padding: "12px 36px", borderBottom: `1px solid ${BORDER}`, display: "flex", alignItems: "center", gap: 12 }}>
                 <span style={{ fontFamily: SANS, fontSize: 12, fontWeight: 500, padding: "5px 14px", borderRadius: 20, background: ACCENT, color: "white" }}>{s.title}</span>
               </div>
