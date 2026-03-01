@@ -116,12 +116,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg,
-    rgba(5,10,20,0.90) 0%,
-    rgba(5,10,20,0.82) 30%,
-    rgba(5,10,20,0.65) 58%,
-    rgba(5,10,20,0.40) 78%,
-    rgba(5,10,20,0.22) 100%
+  background: linear-gradient(
+    to right,
+    rgba(10, 18, 30, 0.85) 0%,
+    rgba(10, 18, 30, 0.75) 40%,
+    rgba(10, 18, 30, 0.35) 65%,
+    rgba(10, 18, 30, 0.10) 85%,
+    rgba(10, 18, 30, 0.05) 100%
   );
   z-index: 1;
 }
