@@ -202,7 +202,6 @@ export default function Home() {
             <div className="wwi-watermark">Technology</div>
             <div className="wwi-bottom-glow" />
             <div className="wwi-content">
-              <div className="wwi-tag"><span className="wwi-tag-dot" style={{ background: "#c8985e" }} />Technology</div>
               <h3>Powering Essential<br />Industries</h3>
               <p className="wwi-desc">Software and data platforms driving transformation across financial services, government, and industrial sectors.</p>
               <div className="wwi-pills">
@@ -216,7 +215,6 @@ export default function Home() {
             <div className="wwi-watermark">Healthcare</div>
             <div className="wwi-bottom-glow" />
             <div className="wwi-content">
-              <div className="wwi-tag"><span className="wwi-tag-dot" style={{ background: "#4db8c7" }} />Healthcare</div>
               <h3>Investing in Better<br />Healthcare</h3>
               <p className="wwi-desc">Partnering with management teams across care delivery, payor solutions, and the pharma value chain.</p>
               <div className="wwi-pills">
