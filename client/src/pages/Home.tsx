@@ -121,19 +121,19 @@ export default function Home() {
             <a href="/healthcare" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: `1.5px solid ${ACCENT}`, background: "none", color: ACCENT, cursor: "pointer", textDecoration: "none" }}>Explore Our Portfolio</a>
             <a href="/#firm" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: `1.5px solid ${ACCENT}`, background: "none", color: ACCENT, cursor: "pointer", textDecoration: "none" }}>Our Approach</a>
           </div>
-          <div style={{ marginTop: 56, display: "flex", gap: 48 }}>
-            {[
-              { num: "$33B+", label: "Capital Raised" },
-              { num: "190+", label: "Companies" },
-              { num: "18", label: "Funds Raised" },
-              { num: "45+", label: "Years Investing" },
-            ].map((s, i) => (
-              <div key={i} style={{ padding: "20px 0 0", borderTop: `2px solid ${ACCENT}` }}>
-                <div style={{ fontSize: 32, fontWeight: 700, marginBottom: 4, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>{s.num}</div>
-                <div style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 400 }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
+        </div>
+        <div style={{ position: "relative", zIndex: 2, display: "flex", justifyContent: "space-between", padding: "0 56px 64px" }}>
+          {[
+            { num: "$33B+", label: "Capital Raised" },
+            { num: "190+", label: "Companies" },
+            { num: "18", label: "Funds Raised" },
+            { num: "45+", label: "Years Investing" },
+          ].map((s, i) => (
+            <div key={i} style={{ flex: 1, padding: "20px 0 0", borderTop: `2px solid ${ACCENT}` }}>
+              <div style={{ fontSize: 32, fontWeight: 700, marginBottom: 4, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>{s.num}</div>
+              <div style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 400 }}>{s.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
