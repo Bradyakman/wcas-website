@@ -139,80 +139,77 @@ export default function Home() {
         ))}
       </section>
 
-      {/* ── WHERE WE INVEST ── */}
-      <section style={{ padding: "0", background: "#0C1A2E" }}>
+      {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
+      <section style={{ padding: 0, background: "#0e1f35" }}>
         <style>{`
-          .wwi-section * { box-sizing: border-box; margin: 0; padding: 0; }
-          .wwi-section { position: relative; font-family: 'Libre Baskerville', Georgia, serif; }
-          .wwi-header { padding: 80px 56px 40px; display: flex; justify-content: space-between; align-items: flex-end; }
-          .wwi-header h2 { font-size: 42px; font-weight: 400; color: #E4E8ED; line-height: 1.15; }
-          .wwi-header h2 em { font-style: italic; color: #6BA3D6; }
-          .wwi-panels { display: flex; min-height: 520px; }
-          .wwi-panel { flex: 1; position: relative; padding: 56px; cursor: pointer; overflow: hidden; transition: flex 0.7s cubic-bezier(0.23, 1, 0.32, 1), background 0.5s; }
-          .wwi-panel:first-child { border-right: 1px solid rgba(255,255,255,0.06); }
-          .wwi-panel:hover { flex: 1.4; }
-          .wwi-panel-bg { position: absolute; inset: 0; opacity: 0; transition: opacity 0.7s; }
-          .wwi-panel:hover .wwi-panel-bg { opacity: 1; }
-          .wwi-panel-hc .wwi-panel-bg { background: linear-gradient(135deg, rgba(27,79,138,0.2) 0%, rgba(12,26,46,0.95) 100%); }
-          .wwi-panel-tech .wwi-panel-bg { background: linear-gradient(135deg, rgba(107,163,214,0.15) 0%, rgba(12,26,46,0.95) 100%); }
-          .wwi-panel-number { font-family: 'Outfit', sans-serif; font-size: 120px; font-weight: 700; position: absolute; top: -20px; right: 30px; line-height: 1; background: linear-gradient(180deg, rgba(107,163,214,0.08) 0%, transparent 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; pointer-events: none; transition: opacity 0.5s; }
-          .wwi-panel:hover .wwi-panel-number { opacity: 0.5; }
-          .wwi-pill { display: inline-block; font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 600; padding: 7px 20px; border-radius: 20px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 28px; position: relative; z-index: 1; }
-          .wwi-panel-hc .wwi-pill { background: linear-gradient(135deg, #1B4F8A, #2A6BAE); color: white; }
-          .wwi-panel-tech .wwi-pill { background: linear-gradient(135deg, #6BA3D6, #8BBDE8); color: #0C1A2E; }
-          .wwi-panel h3 { font-size: 36px; font-weight: 400; line-height: 1.15; color: #E4E8ED; margin-bottom: 20px; position: relative; z-index: 1; transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
-          .wwi-panel:hover h3 { transform: translateX(8px); }
-          .wwi-panel-desc { font-family: 'Outfit', sans-serif; font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.75; font-weight: 300; max-width: 420px; position: relative; z-index: 1; transition: color 0.5s; }
-          .wwi-panel:hover .wwi-panel-desc { color: rgba(255,255,255,0.65); }
-          .wwi-subsectors { position: relative; z-index: 1; margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.06); }
-          .wwi-subsector-label { font-family: 'Outfit', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 18px; }
-          .wwi-subsector-item { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; opacity: 0.5; transform: translateX(0); transition: opacity 0.4s, transform 0.4s; }
-          .wwi-panel:hover .wwi-subsector-item { opacity: 1; transform: translateX(8px); }
-          .wwi-panel:hover .wwi-subsector-item:nth-child(2) { transition-delay: 0.04s; }
-          .wwi-panel:hover .wwi-subsector-item:nth-child(3) { transition-delay: 0.08s; }
-          .wwi-panel:hover .wwi-subsector-item:nth-child(4) { transition-delay: 0.12s; }
-          .wwi-panel:hover .wwi-subsector-item:nth-child(5) { transition-delay: 0.16s; }
-          .wwi-panel:hover .wwi-subsector-item:nth-child(6) { transition-delay: 0.20s; }
-          .wwi-bar { width: 20px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, #6BA3D6, transparent); transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
-          .wwi-panel:hover .wwi-bar { width: 32px; }
-          .wwi-subsector-text { font-family: 'Outfit', sans-serif; font-size: 14px; color: rgba(255,255,255,0.6); font-weight: 400; transition: color 0.3s; }
-          .wwi-panel:hover .wwi-subsector-text { color: rgba(255,255,255,0.85); }
-          .wwi-cta { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 10px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; color: #6BA3D6; text-decoration: none; margin-top: 28px; padding: 10px 24px 10px 0; border-bottom: 1px solid rgba(107,163,214,0.2); transition: all 0.4s; }
-          .wwi-cta:hover { border-color: #6BA3D6; gap: 16px; }
-          .wwi-cta-arrow { display: inline-block; transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); font-size: 18px; }
-          .wwi-cta:hover .wwi-cta-arrow { transform: translateX(6px); }
-          .wwi-divider-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1px; height: 60%; background: linear-gradient(180deg, transparent, rgba(107,163,214,0.2), transparent); pointer-events: none; z-index: 2; }
+          @keyframes wwi-shimmer { 0%,100%{ opacity:1 } 50%{ opacity:0.6 } }
+          .wwi-split { display:flex; height:650px; position:relative; background:#0e1f35; }
+          .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(255,255,255,0.1),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
+          .wwi-split:has(.wwi-tech:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(200,152,94,0.25),transparent); }
+          .wwi-split:has(.wwi-hc:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(77,184,199,0.25),transparent); }
+          .wwi-pnl { flex:1; position:relative; cursor:pointer; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; transition:flex 0.4s ease, filter 0.4s ease; }
+          .wwi-pnl:hover { flex:1.4; }
+          .wwi-split:has(.wwi-tech:hover) .wwi-hc { flex:0.6; filter:brightness(0.7); }
+          .wwi-split:has(.wwi-hc:hover) .wwi-tech { flex:0.6; filter:brightness(0.7); }
+          .wwi-pnl-bg { position:absolute; inset:0; transition:transform 0.4s ease, opacity 0.4s ease; opacity:0.3; }
+          .wwi-pnl:hover .wwi-pnl-bg { transform:scale(1.06); opacity:0.5; }
+          .wwi-tech .wwi-pnl-bg { background:radial-gradient(ellipse at 30% 70%, rgba(200,152,94,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(200,152,94,0.08) 0%, transparent 50%); }
+          .wwi-hc .wwi-pnl-bg { background:radial-gradient(ellipse at 70% 70%, rgba(77,184,199,0.15) 0%, transparent 60%), radial-gradient(ellipse at 20% 20%, rgba(77,184,199,0.08) 0%, transparent 50%); }
+          .wwi-watermark { position:absolute; top:40px; left:48px; font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.07); line-height:1; pointer-events:none; animation:wwi-shimmer 4s ease-in-out infinite; transition:color 0.4s, transform 0.4s; z-index:1; }
+          .wwi-pnl:hover .wwi-watermark { animation:none; color:rgba(255,255,255,0.14); transform:translateY(-6px); }
+          .wwi-bottom-glow { position:absolute; bottom:0; left:0; right:0; height:120px; opacity:0; transition:opacity 0.4s ease; pointer-events:none; }
+          .wwi-pnl:hover .wwi-bottom-glow { opacity:1; }
+          .wwi-tech .wwi-bottom-glow { background:linear-gradient(to top, rgba(200,152,94,0.06), transparent); }
+          .wwi-hc .wwi-bottom-glow { background:linear-gradient(to top, rgba(77,184,199,0.06), transparent); }
+          .wwi-content { position:relative; z-index:2; padding:0 48px 56px; }
+          .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:6px 16px; border-radius:18px; background:rgba(255,255,255,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.06); margin-bottom:20px; }
+          .wwi-tag-dot { width:6px; height:6px; border-radius:50%; }
+          .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; color:#fff; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
+          .wwi-desc { font-family:'DM Sans',sans-serif; font-size:14px; color:rgba(255,255,255,0.4); line-height:1.65; max-height:0; overflow:hidden; opacity:0; transition:max-height 0.4s ease 0.05s, opacity 0.4s ease 0.05s, margin 0.4s ease 0.05s; margin-top:0; }
+          .wwi-pnl:hover .wwi-desc { max-height:80px; opacity:1; margin-top:16px; }
+          .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+          .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:12px; color:rgba(255,255,255,0.5); padding:6px 14px; border-radius:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); opacity:0; transform:translateY(6px); transition:opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, border-color 0.3s ease; }
+          .wwi-pnl:hover .wwi-pill2 { opacity:1; transform:translateY(0); }
+          .wwi-pnl:hover .wwi-pill2:nth-child(1) { transition-delay:0.12s; }
+          .wwi-pnl:hover .wwi-pill2:nth-child(2) { transition-delay:0.17s; }
+          .wwi-pnl:hover .wwi-pill2:nth-child(3) { transition-delay:0.22s; }
+          .wwi-pnl:hover .wwi-pill2:nth-child(4) { transition-delay:0.27s; }
+          .wwi-pnl:hover .wwi-pill2:nth-child(5) { transition-delay:0.32s; }
+          .wwi-tech .wwi-pill2:hover { background:rgba(200,152,94,0.15); border-color:rgba(200,152,94,0.3); color:#c8985e; }
+          .wwi-hc .wwi-pill2:hover { background:rgba(77,184,199,0.15); border-color:rgba(77,184,199,0.3); color:#4db8c7; }
+          .wwi-cta2 { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; text-decoration:none; margin-top:24px; opacity:0; transform:translateY(6px); transition:opacity 0.3s ease 0.35s, transform 0.3s ease 0.35s; }
+          .wwi-pnl:hover .wwi-cta2 { opacity:1; transform:translateY(0); }
+          .wwi-tech .wwi-cta2 { color:#c8985e; }
+          .wwi-hc .wwi-cta2 { color:#4db8c7; }
         `}</style>
-        <div className="wwi-section">
-          <div className="wwi-header">
-            <h2>Where we <em>invest</em></h2>
-            <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 14, color: "rgba(255,255,255,0.3)", fontWeight: 300, maxWidth: 300, textAlign: "right", lineHeight: 1.6 }}>Two sectors. Four decades of conviction. One partnership-driven approach.</p>
-          </div>
-          <div className="wwi-panels">
-            <div className="wwi-divider-glow" />
-            <div className="wwi-panel wwi-panel-hc">
-              <div className="wwi-panel-bg" />
-              <div className="wwi-panel-number">01</div>
-              <div className="wwi-pill">Healthcare</div>
-              <h3>Investing in Better Healthcare</h3>
-              <p className="wwi-panel-desc">We invest across healthcare services, payor solutions, and the pharma value chain, partnering with management teams to drive operational improvement and accelerate growth.</p>
-              <div className="wwi-subsectors">
-                <div className="wwi-subsector-label">Subsectors</div>
-                {["Care Delivery", "Payor Solutions", "Pharma Value Chain", "Healthcare Technology (HCIT)"].map((s, i) => (<div key={i} className="wwi-subsector-item"><div className="wwi-bar" /><span className="wwi-subsector-text">{s}</span></div>))}
+        <div className="wwi-split">
+          <div className="wwi-divider" />
+          <div className="wwi-pnl wwi-tech">
+            <div className="wwi-pnl-bg" />
+            <div className="wwi-watermark">Technology</div>
+            <div className="wwi-bottom-glow" />
+            <div className="wwi-content">
+              <div className="wwi-tag"><span className="wwi-tag-dot" style={{ background: "#c8985e" }} />Technology</div>
+              <h3>Powering Essential<br />Industries</h3>
+              <p className="wwi-desc">Software and data platforms driving transformation across financial services, government, and industrial sectors.</p>
+              <div className="wwi-pills">
+                {["FinTech", "GovTech", "Built Environment", "IndustrialTech", "Data & Analytics"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
-              <a href="/healthcare" className="wwi-cta"><span>View healthcare investments</span><span className="wwi-cta-arrow">&rarr;</span></a>
+              <a href="/technology" className="wwi-cta2">Explore Technology &rarr;</a>
             </div>
-            <div className="wwi-panel wwi-panel-tech">
-              <div className="wwi-panel-bg" />
-              <div className="wwi-panel-number">02</div>
-              <div className="wwi-pill">Technology</div>
-              <h3>Powering Essential Industries</h3>
-              <p className="wwi-panel-desc">We invest in software and data platforms powering essential industries. Our technology team identifies mission-critical platforms where deep sector expertise can accelerate growth.</p>
-              <div className="wwi-subsectors">
-                <div className="wwi-subsector-label">Subsectors</div>
-                {["FinTech (banking, markets, payments)", "GovTech (state, local, federal)", "Built Environment", "IndustrialTech (software, GRC)", "Proprietary Data & Analytics", "Healthcare Technology (HCIT), with the WCAS Healthcare Team"].map((s, i) => (<div key={i} className="wwi-subsector-item"><div className="wwi-bar" /><span className="wwi-subsector-text">{s}</span></div>))}
+          </div>
+          <div className="wwi-pnl wwi-hc">
+            <div className="wwi-pnl-bg" />
+            <div className="wwi-watermark">Healthcare</div>
+            <div className="wwi-bottom-glow" />
+            <div className="wwi-content">
+              <div className="wwi-tag"><span className="wwi-tag-dot" style={{ background: "#4db8c7" }} />Healthcare</div>
+              <h3>Investing in Better<br />Healthcare</h3>
+              <p className="wwi-desc">Partnering with management teams across care delivery, payor solutions, and the pharma value chain.</p>
+              <div className="wwi-pills">
+                {["Care Delivery", "Payor Solutions", "Pharma Value Chain", "Healthcare IT"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
-              <a href="/technology" className="wwi-cta"><span>View technology investments</span><span className="wwi-cta-arrow">&rarr;</span></a>
+              <a href="/healthcare" className="wwi-cta2">Explore Healthcare &rarr;</a>
             </div>
           </div>
         </div>
