@@ -154,6 +154,10 @@ export default function Home() {
 
       {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
       <section style={{ padding: 0, background: "#152238" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "48px 48px 0" }}>
+          <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Focus Sectors</span>
+          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
+        </div>
         <style>{`
           @keyframes wwi-shimmer { 0%,100%{ opacity:1 } 50%{ opacity:0.6 } }
           .wwi-split { display:flex; height:520px; position:relative; background:#152238; }
