@@ -405,8 +405,8 @@ export default function Home() {
               </div>
               <div className={`nr-expand ${expandedNews === i ? 'nr-open' : ''}`} style={{ padding: expandedNews === i ? "0 28px 28px" : "0 28px" }}>
                 <div style={{ display: "flex", gap: 28 }}>
-                  <div style={{ width: 280, flexShrink: 0, height: 160, borderRadius: 12, background: "#0b1a2e", display: "flex", alignItems: "center", justifyContent: "center", padding: 32 }}>
-                    <img src={n.logo} alt="" style={{ maxHeight: 48, maxWidth: 180, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.8 }} />
+                  <div style={{ width: 280, flexShrink: 0, borderRadius: 12, background: "#f5f0e8", display: "flex", alignItems: "center", justifyContent: "center", padding: 32, boxShadow: "0 4px 20px rgba(0,0,0,0.15)" }}>
+                    <img src={n.logo} alt="" style={{ maxHeight: 48, maxWidth: 180, objectFit: "contain" }} />
                   </div>
                   <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
                     <p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: 20 }}>{n.excerpt}</p>
