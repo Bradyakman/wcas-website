@@ -398,11 +398,8 @@ export default function Home() {
               style={{ borderBottom: i < 3 ? "1px solid rgba(12,26,46,0.08)" : "none", background: expandedNews === i ? "#0b1a2e" : "#fff", animation: `news-fade-in 0.5s ease ${i * 0.1}s both` }}
               onClick={() => setExpandedNews(expandedNews === i ? -1 : i)}
             >
-              <div style={{ display: "grid", gridTemplateColumns: "200px 1fr 40px", alignItems: "center", padding: "22px 28px", gap: 24 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <span style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: n.tagColor, padding: "4px 10px", borderRadius: 10, background: expandedNews === i ? `${n.tagColor}20` : `${n.tagColor}12`, border: `1px solid ${n.tagColor}30` }}>{n.tag}</span>
-                  <span className="nr-date" style={{ fontFamily: SANS, fontSize: 12, color: expandedNews === i ? "rgba(255,255,255,0.4)" : "#999", transition: "color 0.3s" }}>{n.date}</span>
-                </div>
+              <div style={{ display: "grid", gridTemplateColumns: "80px 1fr 40px", alignItems: "center", padding: "22px 28px", gap: 24 }}>
+                <span className="nr-date" style={{ fontFamily: SANS, fontSize: 12, color: expandedNews === i ? "rgba(255,255,255,0.4)" : "#999", transition: "color 0.3s" }}>{n.date}</span>
                 <h4 className="nr-title" style={{ fontFamily: SERIF, fontSize: 17, fontWeight: 500, color: expandedNews === i ? "#fff" : "#0c1a2e", lineHeight: 1.4, transition: "color 0.3s" }}>{n.title}</h4>
                 <div className="nr-arrow" style={{ width: 32, height: 32, borderRadius: "50%", border: `1px solid ${expandedNews === i ? "rgba(255,255,255,0.3)" : "rgba(12,26,46,0.15)"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, color: expandedNews === i ? "#fff" : "#0c1a2e", transition: "all 0.3s", transform: expandedNews === i ? "rotate(90deg)" : "none" }}>&#8594;</div>
               </div>
