@@ -51,6 +51,7 @@ export default function Home() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
   const [activeVideo, setActiveVideo] = useState(0);
   const [isVideoTransitioning, setIsVideoTransitioning] = useState(false);
+  const [expandedNews, setExpandedNews] = useState(0);
 
   const switchVideo = (idx: number) => {
     if (idx === activeVideo) return;
@@ -334,52 +335,58 @@ export default function Home() {
       {/* ── NEWS ── */}
       <section style={{ background: "#f4f3f0", padding: "100px 56px" }}>
         <style>{`
-          .news-card { border-radius:10px; overflow:hidden; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; text-decoration:none; }
-          .news-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.12); }
-          .news-arrow-btn { width:32px; height:32px; border-radius:50%; border:1px solid rgba(12,26,46,0.15); background:none; display:flex; align-items:center; justify-content:center; font-size:14px; color:#0c1a2e; transition:all 0.3s; cursor:pointer; }
-          .news-card:hover .news-arrow-btn { color:#4db8c7; border-color:#4db8c7; transform:translate(2px,-2px); }
+          @keyframes news-fade-in { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+          .news-row { cursor:pointer; transition:background 0.3s ease, color 0.3s ease; }
+          .news-row:hover { background:#0b1a2e; }
+          .news-row:hover .nr-title, .news-row:hover .nr-date { color:#fff; }
+          .news-row:hover .nr-arrow { border-color:rgba(255,255,255,0.3); color:#fff; }
+          .news-row.nr-active { background:#0b1a2e; }
+          .news-row.nr-active .nr-title, .news-row.nr-active .nr-date { color:#fff; }
+          .news-row.nr-active .nr-arrow { border-color:rgba(255,255,255,0.3); color:#fff; transform:rotate(90deg); }
+          .nr-expand { max-height:0; overflow:hidden; transition:max-height 0.4s ease, padding 0.4s ease; }
+          .nr-expand.nr-open { max-height:300px; }
         `}</style>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48 }}>
           <div>
             <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#888" }}>Latest News</span>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 36, fontWeight: 400, color: "#0c1a2e", lineHeight: 1.2, marginTop: 12 }}>WCAS and our partners in the news</h2>
           </div>
-          <a href="/news" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See all news &rarr;</a>
+          <a href="/news" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See all news &#8594;</a>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-          <a href="/news" className="news-card" style={{ display: "flex", flexDirection: "column", background: "linear-gradient(180deg, #0c1a2e 0%, #152238 100%)", minHeight: 480, position: "relative" }}>
-            <div style={{ flex: 1 }} />
-            <div style={{ background: "linear-gradient(to top, rgba(12,26,46,0.95), transparent)", padding: "48px 32px 32px", position: "relative", zIndex: 1 }}>
-              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: "#4db8c7", padding: "4px 12px", borderRadius: 12, background: "rgba(77,184,199,0.1)", border: "1px solid rgba(77,184,199,0.2)" }}>WCAS News</span>
-              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.4)", marginLeft: 12 }}>Jul 2025</span>
-              <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 24, fontWeight: 400, color: "#fff", lineHeight: 1.3, marginTop: 16, marginBottom: 20 }}>WCAS Announces Strategic Growth Investment in AIA Contract Documents</h3>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)" }}>Read more</span>
-                <button className="news-arrow-btn" style={{ borderColor: "rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.6)" }}>&nearr;</button>
+        <div style={{ borderRadius: 16, border: "1px solid rgba(12,26,46,0.08)", overflow: "hidden" }}>
+          {[
+            { tag: "WCAS News", tagColor: "#4db8c7", date: "Jul 2025", title: "WCAS Announces Strategic Growth Investment in AIA Contract Documents", excerpt: "WCAS announced a strategic growth investment in AIA Contract Documents, the industry-standard platform for construction contract documentation used by architects, contractors, and owners nationwide." },
+            { tag: "Partnership", tagColor: "#c8985e", date: "Jul 2025", title: "TrueCommerce Names Bill Glass as CEO, Marking New Phase of Growth", excerpt: "TrueCommerce, a global leader in supply chain connectivity, announced the appointment of Bill Glass as CEO, ushering in a new chapter of accelerated growth and innovation." },
+            { tag: "WCAS News", tagColor: "#4db8c7", date: "Jul 2025", title: "EquiLend Acquires Trading Apps to Advance Front-Office Automation", excerpt: "EquiLend has acquired Trading Apps, a leading provider of front-office automation solutions for securities finance, expanding its technology platform and capabilities." },
+            { tag: "Partnership", tagColor: "#c8985e", date: "Jun 2025", title: "Concentra Expands National Footprint with Acquisition of 12 New Centers", excerpt: "Concentra, one of the nation's largest occupational health providers, has expanded its national presence with the acquisition of 12 new urgent care and occupational health centers." },
+          ].map((n, i) => (
+            <div
+              key={i}
+              className={`news-row ${expandedNews === i ? 'nr-active' : ''}`}
+              style={{ borderBottom: i < 3 ? "1px solid rgba(12,26,46,0.08)" : "none", background: expandedNews === i ? "#0b1a2e" : "#fff", animation: `news-fade-in 0.5s ease ${i * 0.1}s both` }}
+              onClick={() => setExpandedNews(expandedNews === i ? -1 : i)}
+            >
+              <div style={{ display: "grid", gridTemplateColumns: "200px 1fr 40px", alignItems: "center", padding: "22px 28px", gap: 24 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: n.tagColor, padding: "4px 10px", borderRadius: 10, background: expandedNews === i ? `${n.tagColor}20` : `${n.tagColor}12`, border: `1px solid ${n.tagColor}30` }}>{n.tag}</span>
+                  <span className="nr-date" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: expandedNews === i ? "rgba(255,255,255,0.4)" : "#999", transition: "color 0.3s" }}>{n.date}</span>
+                </div>
+                <h4 className="nr-title" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 17, fontWeight: 500, color: expandedNews === i ? "#fff" : "#0c1a2e", lineHeight: 1.4, transition: "color 0.3s" }}>{n.title}</h4>
+                <div className="nr-arrow" style={{ width: 32, height: 32, borderRadius: "50%", border: `1px solid ${expandedNews === i ? "rgba(255,255,255,0.3)" : "rgba(12,26,46,0.15)"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, color: expandedNews === i ? "#fff" : "#0c1a2e", transition: "all 0.3s", transform: expandedNews === i ? "rotate(90deg)" : "none" }}>&#8594;</div>
+              </div>
+              <div className={`nr-expand ${expandedNews === i ? 'nr-open' : ''}`} style={{ padding: expandedNews === i ? "0 28px 28px" : "0 28px" }}>
+                <div style={{ display: "flex", gap: 28 }}>
+                  <div style={{ width: 320, flexShrink: 0, height: 180, borderRadius: 12, background: "linear-gradient(135deg, #0c1a2e, #152238)", position: "relative", overflow: "hidden" }}>
+                    <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: 120, height: 120, borderRadius: "50%", background: `radial-gradient(circle, ${n.tagColor}20 0%, transparent 70%)` }} />
+                  </div>
+                  <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: 20 }}>{n.excerpt}</p>
+                    <a href="/news" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, color: "#4db8c7", textDecoration: "none" }}>Read full article &#8594;</a>
+                  </div>
+                </div>
               </div>
             </div>
-          </a>
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            {[
-              { tag: "Partnership", tagColor: "#c8985e", date: "Jul 2025", title: "TrueCommerce Names Bill Glass as CEO, Marking New Phase of Growth" },
-              { tag: "WCAS News", tagColor: "#4db8c7", date: "Jul 2025", title: "EquiLend Acquires Trading Apps to Advance Front-Office Automation" },
-              { tag: "Partnership", tagColor: "#c8985e", date: "Jun 2025", title: "Concentra Expands National Footprint with Acquisition of 12 New Centers" },
-            ].map((n, i) => (
-              <a key={i} href="/news" className="news-card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", background: "#fff", padding: "28px 28px 24px", flex: 1 }}>
-                <div>
-                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
-                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: n.tagColor, padding: "4px 12px", borderRadius: 12, background: `${n.tagColor}15`, border: `1px solid ${n.tagColor}30` }}>{n.tag}</span>
-                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#999" }}>{n.date}</span>
-                  </div>
-                  <h4 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 16, fontWeight: 500, color: "#0c1a2e", lineHeight: 1.4 }}>{n.title}</h4>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 16 }}>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, color: "#888" }}>Read more</span>
-                  <button className="news-arrow-btn">&nearr;</button>
-                </div>
-              </a>
-            ))}
-          </div>
+          ))}
         </div>
       </section>
 

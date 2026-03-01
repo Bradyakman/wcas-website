@@ -1,0 +1,27 @@
+Here's the prompt to paste into Replit:
+
+---
+
+**Replace the current Latest News section with an accordion-style layout.** The current layout has a featured card on the left and stacked smaller cards on the right. Replace it entirely with a stacked accordion design. Here's exactly how it should work:
+
+**Structure:** Each news item becomes a full-width horizontal row inside a single rounded container with divider lines between rows. The container should have a subtle border and rounded corners (about 16px).
+
+**Collapsed state:** Each row displays three elements in a grid: the tag + date on the left (about 140px wide), the headline in the center (taking up remaining space), and a circular arrow button on the right. Use the same tag styling you already have — teal pill for "WCAS NEWS" and copper/orange pill for "PARTNERSHIP" — with the date in muted gray next to the tag.
+
+**Hover/active state:** When a user hovers over or clicks a row, the entire row's background transitions to the dark navy color (#0b1a2e) and all text turns white. The arrow icon rotates 90 degrees.
+
+**Expanded state:** When clicked, the row expands smoothly below the header to reveal a two-column inner section: a placeholder image/graphic on the left (320px wide, dark navy gradient with subtle radial highlight, rounded corners) and a paragraph excerpt + "Read full article →" link in teal on the right. Use a smooth max-height CSS transition for the expand/collapse animation.
+
+**Behavior:** Only one row can be expanded at a time — clicking a new row closes the previous one. The first row (WCAS Announces Strategic Growth Investment in AIA Contract Documents) should be expanded by default on page load.
+
+**Keep the existing section header** ("LATEST NEWS" label, "WCAS and our partners in the news" heading, and "See all news →" button) exactly as-is. Only replace the card grid below it.
+
+**Also fix the `&nearr;` issue** — the current cards are displaying the literal text "&nearr;" instead of rendering the arrow character. This won't be needed in the new accordion design, but make sure no escaped HTML entities carry over.
+
+**News items in order:**
+1. WCAS NEWS · Jul 2025 · "WCAS Announces Strategic Growth Investment in AIA Contract Documents"
+2. PARTNERSHIP · Jul 2025 · "TrueCommerce Names Bill Glass as CEO, Marking New Phase of Growth"
+3. WCAS NEWS · Jul 2025 · "EquiLend Acquires Trading Apps to Advance Front-Office Automation"
+4. PARTNERSHIP · Jun 2025 · "Concentra Expands National Footprint with Acquisition of 12 New Centers"
+
+Use the same fonts, colors, and design tokens already in the project. Add a staggered fade-in animation on page load so each row appears sequentially with a slight delay.
