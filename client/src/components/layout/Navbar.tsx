@@ -156,7 +156,7 @@ export function Navbar() {
           </nav>
           <a
             href="/#investor"
-            className="transition-all duration-200"
+            className="pill-btn transition-all duration-200"
             style={{
               fontFamily: "'Outfit', sans-serif",
               fontSize: 13,
