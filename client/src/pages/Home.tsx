@@ -370,17 +370,11 @@ export default function Home() {
           .news-filter-btn:not(.nf-active):hover { background:rgba(12,26,46,0.05); }
           .news-content-fade { transition:opacity 0.3s ease; }
         `}</style>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-          <span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Latest News</span>
-          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
-        </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 28 }}>
           <div>
-            <h2 style={{ fontFamily: SERIF, fontSize: 36, fontWeight: 400, color: "#0c1a2e", lineHeight: 1.2 }}>
-              {newsFilter === "News" ? "WCAS and our partners in the news" : "WCAS perspectives and insights"}
-            </h2>
+            <h2 style={{ fontFamily: SERIF, fontSize: 36, fontWeight: 400, color: "#0c1a2e", lineHeight: 1.2 }}>News & Perspectives</h2>
           </div>
-          <a href="/news" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See all news &#8594;</a>
+          <a href="/news" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See All News &#8594;</a>
         </div>
         <div style={{ display: "flex", gap: 10, marginBottom: 32 }}>
           <button className={`news-filter-btn ${newsFilter === "News" ? "nf-active" : ""}`} onClick={() => { setNewsFilter("News"); setExpandedNews(0); }}>News</button>
