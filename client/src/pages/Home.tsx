@@ -256,19 +256,19 @@ export default function Home() {
             <div className="port-marquee-track">
               {[...Array(2)].map((_, setIdx) =>
                 [
-                  { name: "Avetta", src: logoAvetta, h: 26 },
+                  { name: "Avetta", src: logoAvetta, h: 40 },
                   { name: "Asurion", src: logoAsurion, h: 22 },
                   { name: "InnovAge", src: logoInnovAge, h: 26 },
                   { name: "Quickbase", src: logoQuickbase, h: 22 },
                   { name: "GovCIO", src: logoGovCIO, h: 26 },
-                  { name: "Kindred at Home", src: logoKindred, h: 26 },
+                  { name: "Kindred at Home", src: logoKindred, h: 40 },
                   { name: "LINQ", src: logoLINQ, h: 26 },
-                  { name: "Select Medical", src: logoSelectMed, h: 26 },
+                  { name: "Select Medical", src: logoSelectMed, h: 38 },
                   { name: "Shields", src: logoShields, h: 26 },
-                  { name: "Norstella", src: logoNorstella, h: 32 },
-                  { name: "Alliance Data", src: logoAllianceData, h: 22 },
+                  { name: "Norstella", src: logoNorstella, h: 38 },
+                  { name: "Alliance Data", src: logoAllianceData, h: 30 },
                   { name: "Clearwater Analytics", src: logoClearwater, h: 26 },
-                  { name: "NaviHealth", src: logoNaviHealth, h: 32 },
+                  { name: "NaviHealth", src: logoNaviHealth, h: 38 },
                   { name: "Simeio", src: logoSimeio, h: 26 },
                 ].map((co, i) => (
                   <div key={`${setIdx}-${i}`} className="port-logo-card">
