@@ -180,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* ── PORTFOLIO ── */}
-      <section style={{ background: "#0c1a2e", padding: "100px 56px 80px" }}>
+      <section style={{ background: "#0c1a2e", padding: "100px 56px" }}>
         <style>{`
           .port-marquee-wrap { position:relative; overflow:hidden; }
           .port-marquee-wrap::before, .port-marquee-wrap::after { content:""; position:absolute; top:0; bottom:0; width:80px; z-index:2; pointer-events:none; }
@@ -205,7 +205,7 @@ export default function Home() {
           </div>
           <a href="/healthcare" className="pill-btn" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>Explore Our Portfolio &rarr;</a>
         </div>
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 40 }}>
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 48 }}>
           <div className="port-marquee-wrap">
             <div className="port-marquee-track">
               {[...Array(2)].map((_, setIdx) =>
