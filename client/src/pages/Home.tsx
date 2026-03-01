@@ -34,8 +34,8 @@ const BORDER = "rgba(255,255,255,0.08)";
 const MUTED = "rgba(255,255,255,0.5)";
 const VERY_MUTED = "rgba(255,255,255,0.4)";
 const TEXT = "#E4E8ED";
-const SERIF = "'Libre Baskerville', Georgia, serif";
-const SANS = "'Outfit', sans-serif";
+const SERIF = "'Cormorant Garamond', Georgia, serif";
+const SANS = "'DM Sans', sans-serif";
 
 const wcasVideos = [
   { id: "861242949", title: "Paths to Growth", partner: "Absorb", category: "Technology" as const, partnerLogo: absorbLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
@@ -53,6 +53,7 @@ export default function Home() {
   const [activeVideo, setActiveVideo] = useState(0);
   const [isVideoTransitioning, setIsVideoTransitioning] = useState(false);
   const [expandedNews, setExpandedNews] = useState(0);
+  const [newsFilter, setNewsFilter] = useState<"News" | "Perspectives">("News");
   const [videoFilter, setVideoFilter] = useState<"All" | "Technology" | "Healthcare">("All");
 
   const filteredVideos = (videoFilter === "All" ? wcasVideos : wcasVideos.filter(v => v.category === videoFilter)).sort((a, b) => a.partner.localeCompare(b.partner));
@@ -100,7 +101,7 @@ export default function Home() {
           ].map((s, i) => (
             <div key={i} style={{ flex: 1, padding: "20px 0 0" }}>
               <div style={{ width: "calc(100% - 24px)", height: 2, background: ACCENT, marginBottom: 20 }} />
-              <div style={{ fontSize: 32, fontWeight: 700, marginBottom: 4, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>{s.num}</div>
+              <div style={{ fontFamily: SANS, fontSize: 32, fontWeight: 700, marginBottom: 4, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>{s.num}</div>
               <div style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 400 }}>{s.label}</div>
             </div>
           ))}
@@ -363,42 +364,62 @@ export default function Home() {
           .news-row.nr-active .nr-arrow { border-color:rgba(255,255,255,0.3); color:#fff; transform:rotate(90deg); }
           .nr-expand { max-height:0; overflow:hidden; transition:max-height 0.4s ease, padding 0.4s ease; }
           .nr-expand.nr-open { max-height:300px; }
+          .news-filter-btn { font-family:'DM Sans',sans-serif; font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; padding:10px 28px; border-radius:24px; cursor:pointer; transition:all 0.2s ease; border:1px solid rgba(12,26,46,0.15); }
+          .news-filter-btn.nf-active { background:#0c1a2e; color:#fff; border-color:#0c1a2e; }
+          .news-filter-btn:not(.nf-active) { background:transparent; color:#0c1a2e; }
+          .news-filter-btn:not(.nf-active):hover { background:rgba(12,26,46,0.05); }
+          .news-content-fade { transition:opacity 0.3s ease; }
         `}</style>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48 }}>
-          <div>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 36, fontWeight: 400, color: "#0c1a2e", lineHeight: 1.2 }}>News & Perspectives</h2>
-          </div>
-          <a href="/news" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See all news &#8594;</a>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+          <span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Latest News</span>
+          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
         </div>
-        <div style={{ borderRadius: 16, border: "1px solid rgba(12,26,46,0.08)", overflow: "hidden" }}>
-          {[
-            { tag: "WCAS News", tagColor: "#4db8c7", date: "Feb 2026", title: "WCAS Portfolio Company Absorb Software Named to G2\u2019s 2026 Top 100 Global Software Companies", excerpt: "WCAS portfolio company Absorb Software has been named to G2\u2019s 2026 Best Software Awards list of the Top 100 Global Software Companies, ranking #89 worldwide out of over 116,000 total vendors." },
-            { tag: "WCAS News", tagColor: "#4db8c7", date: "Jan 2026", title: "Lumexa Imaging Announces Pricing of Initial Public Offering", excerpt: "Lumexa Imaging announced the pricing of its initial public offering of 25,000,000 shares of common stock at $18.50 per share, expected to trade on the Nasdaq Global Select Market under the symbol \u2018LMRI.\u2019" },
-            { tag: "WCAS News", tagColor: "#4db8c7", date: "Sep 2025", title: "Welsh, Carson, Anderson & Stowe Welcomes Gene Lockhart as Operating Partner", excerpt: "Gene Lockhart, former CEO and President of Mastercard and former President of the Global Retail Bank at Bank of America, has joined WCAS as an operating partner." },
-            { tag: "Partnership", tagColor: "#c8985e", date: "Aug 2025", title: "GovCIO, a Welsh, Carson, Anderson & Stowe Company, to Acquire SoldierPoint Digital Health, LLC", excerpt: "GovCIO announced it has agreed to acquire SoldierPoint Digital Health, expanding its mission supporting Veterans through the Department of Veterans Affairs." },
-          ].map((n, i) => (
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 28 }}>
+          <div>
+            <h2 style={{ fontFamily: SERIF, fontSize: 36, fontWeight: 400, color: "#0c1a2e", lineHeight: 1.2 }}>
+              {newsFilter === "News" ? "WCAS and our partners in the news" : "WCAS perspectives and insights"}
+            </h2>
+          </div>
+          <a href="/news" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See all news &#8594;</a>
+        </div>
+        <div style={{ display: "flex", gap: 10, marginBottom: 32 }}>
+          <button className={`news-filter-btn ${newsFilter === "News" ? "nf-active" : ""}`} onClick={() => { setNewsFilter("News"); setExpandedNews(0); }}>News</button>
+          <button className={`news-filter-btn ${newsFilter === "Perspectives" ? "nf-active" : ""}`} onClick={() => { setNewsFilter("Perspectives"); setExpandedNews(0); }}>Perspectives</button>
+        </div>
+        <div className="news-content-fade" style={{ borderRadius: 16, border: "1px solid rgba(12,26,46,0.08)", overflow: "hidden" }}>
+          {(newsFilter === "News" ? [
+            { tag: "WCAS News", tagColor: "#4db8c7", date: "Feb 2026", title: "WCAS Portfolio Company Absorb Software Named to G2\u2019s 2026 Top 100 Global Software Companies", excerpt: "WCAS portfolio company Absorb Software has been named to G2\u2019s 2026 Best Software Awards list of the Top 100 Global Software Companies, ranking #89 worldwide out of over 116,000 total vendors.", logo: absorbLogo },
+            { tag: "WCAS News", tagColor: "#4db8c7", date: "Jan 2026", title: "Lumexa Imaging Announces Pricing of Initial Public Offering", excerpt: "Lumexa Imaging announced the pricing of its initial public offering of 25,000,000 shares of common stock at $18.50 per share, expected to trade on the Nasdaq Global Select Market under the symbol \u2018LMRI.\u2019", logo: wcasLogo },
+            { tag: "WCAS News", tagColor: "#4db8c7", date: "Sep 2025", title: "Welsh, Carson, Anderson & Stowe Welcomes Gene Lockhart as Operating Partner", excerpt: "Gene Lockhart, former CEO and President of Mastercard and former President of the Global Retail Bank at Bank of America, has joined WCAS as an operating partner.", logo: wcasLogo },
+            { tag: "Partnership", tagColor: "#c8985e", date: "Aug 2025", title: "GovCIO, a Welsh, Carson, Anderson & Stowe Company, to Acquire SoldierPoint Digital Health, LLC", excerpt: "GovCIO announced it has agreed to acquire SoldierPoint Digital Health, expanding its mission supporting Veterans through the Department of Veterans Affairs.", logo: logoGovCIO },
+          ] : [
+            { tag: "Perspectives", tagColor: "#7c6bbf", date: "Jan 2026", title: "The Future of AI in Healthcare: Opportunities for Value Creation", excerpt: "Artificial intelligence is reshaping healthcare delivery, diagnostics, and operations. We explore where the greatest opportunities for value creation lie and how portfolio companies can position themselves at the forefront.", logo: wcasLogo },
+            { tag: "Perspectives", tagColor: "#7c6bbf", date: "Dec 2025", title: "Building Resilient GovTech Platforms in an Era of Digital Transformation", excerpt: "Government agencies are accelerating their digital transformation journeys. We examine the key attributes of resilient GovTech platforms and the strategies driving sustainable growth in this evolving market.", logo: wcasLogo },
+            { tag: "Perspectives", tagColor: "#7c6bbf", date: "Nov 2025", title: "Why Vertical SaaS Continues to Outperform: Lessons from Our Portfolio", excerpt: "Vertical SaaS companies consistently deliver superior retention, expansion, and margin profiles. Drawing on lessons from our portfolio, we analyze why industry-specific software continues to outpace horizontal alternatives.", logo: wcasLogo },
+            { tag: "Perspectives", tagColor: "#7c6bbf", date: "Oct 2025", title: "Navigating the Next Wave of Healthcare Consolidation", excerpt: "Healthcare consolidation is accelerating across care delivery, payor solutions, and the pharma value chain. We share our perspective on navigating this dynamic landscape and identifying the most compelling investment opportunities.", logo: wcasLogo },
+          ]).map((n, i) => (
             <div
-              key={i}
+              key={`${newsFilter}-${i}`}
               className={`news-row ${expandedNews === i ? 'nr-active' : ''}`}
               style={{ borderBottom: i < 3 ? "1px solid rgba(12,26,46,0.08)" : "none", background: expandedNews === i ? "#0b1a2e" : "#fff", animation: `news-fade-in 0.5s ease ${i * 0.1}s both` }}
               onClick={() => setExpandedNews(expandedNews === i ? -1 : i)}
             >
               <div style={{ display: "grid", gridTemplateColumns: "200px 1fr 40px", alignItems: "center", padding: "22px 28px", gap: 24 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: n.tagColor, padding: "4px 10px", borderRadius: 10, background: expandedNews === i ? `${n.tagColor}20` : `${n.tagColor}12`, border: `1px solid ${n.tagColor}30` }}>{n.tag}</span>
-                  <span className="nr-date" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: expandedNews === i ? "rgba(255,255,255,0.4)" : "#999", transition: "color 0.3s" }}>{n.date}</span>
+                  <span style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: n.tagColor, padding: "4px 10px", borderRadius: 10, background: expandedNews === i ? `${n.tagColor}20` : `${n.tagColor}12`, border: `1px solid ${n.tagColor}30` }}>{n.tag}</span>
+                  <span className="nr-date" style={{ fontFamily: SANS, fontSize: 12, color: expandedNews === i ? "rgba(255,255,255,0.4)" : "#999", transition: "color 0.3s" }}>{n.date}</span>
                 </div>
-                <h4 className="nr-title" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 17, fontWeight: 500, color: expandedNews === i ? "#fff" : "#0c1a2e", lineHeight: 1.4, transition: "color 0.3s" }}>{n.title}</h4>
+                <h4 className="nr-title" style={{ fontFamily: SERIF, fontSize: 17, fontWeight: 500, color: expandedNews === i ? "#fff" : "#0c1a2e", lineHeight: 1.4, transition: "color 0.3s" }}>{n.title}</h4>
                 <div className="nr-arrow" style={{ width: 32, height: 32, borderRadius: "50%", border: `1px solid ${expandedNews === i ? "rgba(255,255,255,0.3)" : "rgba(12,26,46,0.15)"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, color: expandedNews === i ? "#fff" : "#0c1a2e", transition: "all 0.3s", transform: expandedNews === i ? "rotate(90deg)" : "none" }}>&#8594;</div>
               </div>
               <div className={`nr-expand ${expandedNews === i ? 'nr-open' : ''}`} style={{ padding: expandedNews === i ? "0 28px 28px" : "0 28px" }}>
                 <div style={{ display: "flex", gap: 28 }}>
-                  <div style={{ width: 320, flexShrink: 0, height: 180, borderRadius: 12, background: "linear-gradient(135deg, #0c1a2e, #152238)", position: "relative", overflow: "hidden" }}>
-                    <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: 120, height: 120, borderRadius: "50%", background: `radial-gradient(circle, ${n.tagColor}20 0%, transparent 70%)` }} />
+                  <div style={{ width: 280, flexShrink: 0, height: 160, borderRadius: 12, background: "#0b1a2e", display: "flex", alignItems: "center", justifyContent: "center", padding: 32 }}>
+                    <img src={n.logo} alt="" style={{ maxHeight: 48, maxWidth: 180, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.8 }} />
                   </div>
                   <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: 20 }}>{n.excerpt}</p>
-                    <a href="/news" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, color: "#4db8c7", textDecoration: "none" }}>Read full article &#8594;</a>
+                    <p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: 20 }}>{n.excerpt}</p>
+                    <a href="/news" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "#4db8c7", textDecoration: "none" }}>Read full article &#8594;</a>
                   </div>
                 </div>
               </div>
