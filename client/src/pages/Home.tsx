@@ -164,6 +164,8 @@ export default function Home() {
           .wwi-pnl:hover { flex:1.4; }
           .wwi-split:has(.wwi-tech:hover) .wwi-hc { flex:0.6; filter:brightness(0.7); }
           .wwi-split:has(.wwi-hc:hover) .wwi-tech { flex:0.6; filter:brightness(0.7); }
+          .wwi-split:has(.wwi-tech:hover) .wwi-hc .wwi-content { opacity:0; transition:opacity 0.3s ease; }
+          .wwi-split:has(.wwi-hc:hover) .wwi-tech .wwi-content { opacity:0; transition:opacity 0.3s ease; }
           .wwi-pnl-bg { position:absolute; inset:0; transition:transform 0.4s ease, opacity 0.4s ease; opacity:0.3; }
           .wwi-pnl:hover .wwi-pnl-bg { transform:scale(1.06); opacity:0.5; }
           .wwi-tech .wwi-pnl-bg { background:radial-gradient(ellipse at 30% 70%, rgba(200,152,94,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(200,152,94,0.08) 0%, transparent 50%); }
@@ -174,7 +176,7 @@ export default function Home() {
           .wwi-pnl:hover .wwi-bottom-glow { opacity:1; }
           .wwi-tech .wwi-bottom-glow { background:linear-gradient(to top, rgba(200,152,94,0.06), transparent); }
           .wwi-hc .wwi-bottom-glow { background:linear-gradient(to top, rgba(77,184,199,0.06), transparent); }
-          .wwi-content { position:relative; z-index:2; padding:0 48px 48px; }
+          .wwi-content { position:relative; z-index:2; padding:0 48px 48px; transition:opacity 0.3s ease; }
           .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:6px 16px; border-radius:18px; background:rgba(255,255,255,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.06); margin-bottom:20px; }
           .wwi-tag-dot { width:6px; height:6px; border-radius:50%; }
           .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; color:#fff; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
