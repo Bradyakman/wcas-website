@@ -168,8 +168,8 @@ export default function Home() {
           .wwi-pnl:hover .wwi-pnl-bg { transform:scale(1.06); opacity:0.5; }
           .wwi-tech .wwi-pnl-bg { background:radial-gradient(ellipse at 30% 70%, rgba(200,152,94,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(200,152,94,0.05) 0%, transparent 50%); }
           .wwi-hc .wwi-pnl-bg { background:radial-gradient(ellipse at 70% 70%, rgba(77,184,199,0.08) 0%, transparent 60%), radial-gradient(ellipse at 20% 20%, rgba(77,184,199,0.05) 0%, transparent 50%); }
-          .wwi-watermark { position:absolute; top:40px; left:48px; font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(12,26,46,0.08); line-height:1; pointer-events:none; animation:wwi-shimmer 4s ease-in-out infinite; transition:color 0.4s, transform 0.4s; z-index:1; }
-          .wwi-pnl:hover .wwi-watermark { animation:none; color:rgba(12,26,46,0.15); transform:translateY(-6px); }
+          .wwi-watermark { position:absolute; top:40px; left:48px; font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(12,26,46,0.12); line-height:1; pointer-events:none; animation:wwi-shimmer 4s ease-in-out infinite; transition:color 0.4s, transform 0.4s; z-index:1; }
+          .wwi-pnl:hover .wwi-watermark { animation:none; color:rgba(12,26,46,0.22); transform:translateY(-6px); }
           .wwi-bottom-glow { position:absolute; bottom:0; left:0; right:0; height:120px; opacity:0; transition:opacity 0.4s ease; pointer-events:none; }
           .wwi-pnl:hover .wwi-bottom-glow { opacity:1; }
           .wwi-tech .wwi-bottom-glow { background:linear-gradient(to top, rgba(200,152,94,0.06), transparent); }
