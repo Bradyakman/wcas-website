@@ -1,0 +1,51 @@
+Replace the VIDEO SLIDER SECTION in Home.tsx with a new "Spotlight + Sidebar" layout. Keep everything else the same. Here's what to do:
+
+Add two new state variables at the top of the Home() function next to the existing ones:
+
+const [activeVideo, setActiveVideo] = useState(0);
+const [isVideoTransitioning, setIsVideoTransitioning] = useState(false);
+
+Add this helper function inside Home(), before the return statement:
+
+const switchVideo = (idx: number) => {
+  if (idx === activeVideo) return;
+  setIsVideoTransitioning(true);
+  setTimeout(() => {
+    setActiveVideo(idx);
+    setTimeout(() => setIsVideoTransitioning(false), 50);
+  }, 250);
+};
+
+Remove the sliderRef, scrollSlider function, makeDragHandlers, and videoDrag code since the horizontal slider is being removed.
+Replace the entire {/* ── VIDEO SLIDER SECTION ── */} section (the <section> with the horizontal scrolling video cards and left/right arrow buttons) with a new layout that has:
+
+Same "Our Mission" / "Be Your Partner of Choice" header and mission description at the top
+A progress counter in the top-right showing "01 ── 08" with a fill bar that updates based on activeVideo
+A flex row with two parts:
+
+LEFT (flex: 2): A large video card (min-height 480px, border-radius 20px, background #0f172a) that shows the currently selected video from wcasVideos[activeVideo]. It should have:
+
+Decorative corner bracket lines (2px solid accent color at 35% opacity) in all 4 corners
+A category badge top-right ("Technology" or "Healthcare" based on the video title)
+The partner logo displayed large and centered at top: 22% using the existing partnerLogo from wcasVideos. If no partnerLogo, show the partner name as text instead.
+A centered play button (88px circle with radial gradient of ACCENT color, 2px border) with the existing Play icon from lucide-react, and "WATCH STORY" text below it
+Bottom gradient overlay with the video title, "featuring [partner]" text, and a small partner logo badge in the bottom-right corner with "WCAS PARTNER" label
+onClick should call setPlayingVideo(wcasVideos[activeVideo].id) to trigger the existing Vimeo lightbox
+Content should fade out (opacity 0) during transitions using isVideoTransitioning
+
+
+RIGHT (flex: 0.85): A sidebar list of all videos in a rounded container (background rgba(255,255,255,0.015), border-radius 16px). Each item shows:
+
+An "All Stories" header at top
+Each video as a clickable row with partner name, video title, and a number (01, 02, etc.)
+Active item gets a left accent bar (3px), highlighted background, and white text
+Clicking an item calls switchVideo(i) which does the fade transition
+
+
+
+
+Below the flex row, the mission paragraph text
+
+
+
+Use the existing ACCENT, SANS, BG constants and the existing wcasVideos array. Keep the existing missionBg background image with the dark overlay. Add hover styles: .spotlight-main:hover .spotlight-play scales to 1.08, sidebar items highlight on hover.

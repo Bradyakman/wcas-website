@@ -1,4 +1,4 @@
-import { ArrowRight, Play, X } from "lucide-react";
+import { Play, X } from "lucide-react";
 import heroBg from "@assets/image_1772300178571.png";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import missionBg from "@assets/2345234534_1771799538730.jpg";
@@ -25,7 +25,7 @@ import logoClearwater from "@assets/Clearwater-Analytics_1771799704135_clean.png
 import logoNaviHealth from "@assets/navihealth_new_clean.png";
 import logoSimeio from "@assets/simeio_transparent.png";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 const ACCENT = "#6BA3D6";
 const BG = "#0C1A2E";
@@ -49,73 +49,16 @@ const wcasVideos = [
 
 export default function Home() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const hasDragged = useRef(false);
+  const [activeVideo, setActiveVideo] = useState(0);
+  const [isVideoTransitioning, setIsVideoTransitioning] = useState(false);
 
-  const makeDragHandlers = (draggedRef: React.MutableRefObject<boolean>) => {
-    const THRESHOLD = 6;
-    let isPointerDown = false;
-    let isDragging = false;
-    let startX = 0;
-    let startScrollLeft = 0;
-    let pointerId = -1;
-    let containerEl: HTMLDivElement | null = null;
-    return {
-      onPointerDown: (e: React.PointerEvent<HTMLDivElement>) => {
-        
-        isPointerDown = true;
-        isDragging = false;
-        draggedRef.current = false;
-        startX = e.clientX;
-        startScrollLeft = e.currentTarget.scrollLeft;
-        pointerId = e.pointerId;
-        containerEl = e.currentTarget;
-      },
-      onPointerMove: (e: React.PointerEvent<HTMLDivElement>) => {
-        if (!isPointerDown) return;
-        const dx = e.clientX - startX;
-        if (!isDragging && Math.abs(dx) >= THRESHOLD) {
-          isDragging = true;
-          draggedRef.current = true;
-          if (containerEl) {
-            containerEl.setPointerCapture(pointerId);
-            containerEl.style.cursor = 'grabbing';
-            containerEl.style.userSelect = 'none';
-            containerEl.style.scrollSnapType = 'none';
-          }
-        }
-        if (isDragging) {
-          e.preventDefault();
-          e.currentTarget.scrollLeft = startScrollLeft - dx;
-        }
-      },
-      onPointerUp: (e: React.PointerEvent<HTMLDivElement>) => {
-        if (!isPointerDown) return;
-        isPointerDown = false;
-        const el = e.currentTarget;
-        if (isDragging) {
-          try { el.releasePointerCapture(pointerId); } catch (_) {}
-        }
-        el.style.cursor = 'grab';
-        el.style.scrollSnapType = 'x mandatory';
-        el.style.userSelect = '';
-        containerEl = null;
-        setTimeout(() => { isDragging = false; draggedRef.current = false; }, 0);
-      },
-    };
-  };
-
-  const [videoDrag] = useState(() => makeDragHandlers(hasDragged));
-
-  const scrollSlider = (direction: 'left' | 'right') => {
-    if (sliderRef.current) {
-      const card = sliderRef.current.querySelector('div') as HTMLElement;
-      const scrollAmount = card ? card.offsetWidth + 16 : sliderRef.current.offsetWidth * 0.35;
-      sliderRef.current.scrollBy({
-        left: direction === 'right' ? scrollAmount : -scrollAmount,
-        behavior: 'smooth'
-      });
-    }
+  const switchVideo = (idx: number) => {
+    if (idx === activeVideo) return;
+    setIsVideoTransitioning(true);
+    setTimeout(() => {
+      setActiveVideo(idx);
+      setTimeout(() => setIsVideoTransitioning(false), 50);
+    }, 250);
   };
 
   return (
@@ -281,81 +224,117 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── VIDEO SLIDER SECTION ── */}
+      {/* ── SPOTLIGHT + SIDEBAR SECTION ── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#152238", marginTop: 0 }}>
+        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${missionBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div style={{ position: "absolute", inset: 0, backgroundColor: "#152238", opacity: 0.92 }} />
+        </div>
+        <style>{`
+          .spotlight-main:hover .spotlight-play { transform:translate(-50%,-50%) scale(1.08); }
+          .spotlight-sidebar-item { display:flex; align-items:center; gap:14px; padding:14px 20px; cursor:pointer; border-left:3px solid transparent; transition:all 0.2s ease; position:relative; }
+          .spotlight-sidebar-item:hover { background:rgba(255,255,255,0.04); }
+          .spotlight-sidebar-item.active { background:rgba(255,255,255,0.06); border-left-color:${ACCENT}; }
+          .spotlight-sidebar-item.active .sb-partner { color:#fff; }
+          .spotlight-sidebar-item.active .sb-title { color:rgba(255,255,255,0.7); }
+          .spotlight-sidebar-item.active .sb-num { color:${ACCENT}; }
+        `}</style>
         <div style={{ position: "relative", zIndex: 10, padding: "100px 56px 100px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start", marginBottom: 48 }}>
-            <div>
-              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Mission</span>
-                <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 48 }}>
+            <div style={{ flex: 1 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Mission</span>
+                    <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
+                  </div>
+                  <h2 style={{ fontSize: 34, fontWeight: 400, lineHeight: 1.2 }}>Be Your Partner of Choice</h2>
+                </div>
+                <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, fontWeight: 300, paddingTop: 8 }}>
+                  WCAS's mission is to lead in healthcare and technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner.
+                </p>
               </div>
-              <h2 style={{ fontSize: 34, fontWeight: 400, lineHeight: 1.2 }}>Be Your Partner of Choice</h2>
             </div>
-            <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, fontWeight: 300, paddingTop: 8 }}>
-              WCAS's mission is to lead in healthcare and technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner.
-            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginLeft: 48, flexShrink: 0 }}>
+              <span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, color: "#fff" }}>{String(activeVideo + 1).padStart(2, '0')}</span>
+              <div style={{ width: 48, height: 2, background: "rgba(255,255,255,0.1)", borderRadius: 1, position: "relative" }}>
+                <div style={{ position: "absolute", left: 0, top: 0, height: "100%", borderRadius: 1, background: ACCENT, transition: "width 0.3s ease", width: `${((activeVideo + 1) / wcasVideos.length) * 100}%` }} />
+              </div>
+              <span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 400, color: "rgba(255,255,255,0.35)" }}>{String(wcasVideos.length).padStart(2, '0')}</span>
+            </div>
           </div>
 
-          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <button
-              onClick={() => scrollSlider('left')}
-              style={{ flexShrink: 0, width: 40, height: 40, borderRadius: "50%", background: "rgba(255,255,255,0.1)", border: `1px solid rgba(255,255,255,0.2)`, color: "white", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}
-            >
-              <ArrowRight size={20} style={{ transform: "rotate(180deg)" }} />
-            </button>
+          <div style={{ display: "flex", gap: 24 }}>
+            {/* LEFT — Spotlight Card */}
             <div
-              ref={sliderRef}
-              className="scrollbar-hide"
-              style={{ display: "flex", gap: 16, overflowX: "auto", flex: 1, cursor: "grab", scrollSnapType: "x mandatory" }}
-              onPointerDown={videoDrag.onPointerDown}
-              onPointerMove={videoDrag.onPointerMove}
-              onPointerUp={videoDrag.onPointerUp}
-              onPointerCancel={videoDrag.onPointerUp}
+              className="spotlight-main"
+              onClick={() => setPlayingVideo(wcasVideos[activeVideo].id)}
+              style={{ flex: 2, minHeight: 480, borderRadius: 20, background: "#0f172a", position: "relative", overflow: "hidden", cursor: "pointer", border: "1px solid rgba(255,255,255,0.08)" }}
             >
-              {wcasVideos.map((video, index) => (
-                <div key={index} className="video-card-blue" style={{ minWidth: "30%", scrollSnapAlign: "center", flexShrink: 0, borderRadius: 12, overflow: "hidden", aspectRatio: "16/9", background: "#0f172a", position: "relative", border: `1px solid rgba(255,255,255,0.16)`, cursor: "pointer" }}>
+              {/* Corner brackets */}
+              <div style={{ position: "absolute", top: 20, left: 20, width: 28, height: 28, borderTop: `2px solid rgba(107,163,214,0.35)`, borderLeft: `2px solid rgba(107,163,214,0.35)`, zIndex: 3 }} />
+              <div style={{ position: "absolute", top: 20, right: 20, width: 28, height: 28, borderTop: `2px solid rgba(107,163,214,0.35)`, borderRight: `2px solid rgba(107,163,214,0.35)`, zIndex: 3 }} />
+              <div style={{ position: "absolute", bottom: 20, left: 20, width: 28, height: 28, borderBottom: `2px solid rgba(107,163,214,0.35)`, borderLeft: `2px solid rgba(107,163,214,0.35)`, zIndex: 3 }} />
+              <div style={{ position: "absolute", bottom: 20, right: 20, width: 28, height: 28, borderBottom: `2px solid rgba(107,163,214,0.35)`, borderRight: `2px solid rgba(107,163,214,0.35)`, zIndex: 3 }} />
+
+              {/* Category badge */}
+              <div style={{ position: "absolute", top: 24, right: 32, zIndex: 4 }}>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: wcasVideos[activeVideo].title.includes("Healthcare") ? "#4db8c7" : "#c8985e", padding: "5px 14px", borderRadius: 12, background: wcasVideos[activeVideo].title.includes("Healthcare") ? "rgba(77,184,199,0.1)" : "rgba(200,152,94,0.1)", border: `1px solid ${wcasVideos[activeVideo].title.includes("Healthcare") ? "rgba(77,184,199,0.2)" : "rgba(200,152,94,0.2)"}` }}>
+                  {wcasVideos[activeVideo].title.includes("Healthcare") ? "Healthcare" : "Technology"}
+                </span>
+              </div>
+
+              {/* Content area with fade transition */}
+              <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 2 }}>
+                {/* Partner logo */}
+                {'partnerLogo' in wcasVideos[activeVideo] && wcasVideos[activeVideo].partnerLogo ? (
+                  <img src={wcasVideos[activeVideo].partnerLogo} alt={wcasVideos[activeVideo].partner} style={{ height: 36, marginBottom: 32, opacity: 0.7 }} />
+                ) : (
+                  <span style={{ fontFamily: SANS, fontSize: 20, fontWeight: 600, color: "rgba(255,255,255,0.7)", marginBottom: 32 }}>{wcasVideos[activeVideo].partner}</span>
+                )}
+
+                {/* Play button */}
+                <div className="spotlight-play" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 10, transition: "transform 0.3s ease" }}>
+                  <div style={{ width: 88, height: 88, borderRadius: "50%", background: `radial-gradient(circle, rgba(107,163,214,0.2) 0%, rgba(107,163,214,0.05) 70%)`, border: `2px solid rgba(107,163,214,0.3)`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Play style={{ color: "white", fill: "white" }} size={28} />
+                  </div>
+                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Watch Story</span>
+                </div>
+              </div>
+
+              {/* Bottom gradient overlay */}
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "80px 32px 28px", background: "linear-gradient(to top, rgba(15,23,42,0.95) 0%, transparent 100%)", zIndex: 3, display: "flex", justifyContent: "space-between", alignItems: "flex-end", opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease" }}>
+                <div>
+                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, fontWeight: 400, color: "#fff", marginBottom: 4 }}>{wcasVideos[activeVideo].title}</h3>
+                  <span style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.4)" }}>featuring {wcasVideos[activeVideo].partner}</span>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 12px", borderRadius: 8, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <img src={wcasLogo} alt="WCAS" style={{ height: 12, filter: "brightness(0) invert(1)", opacity: 0.6 }} />
+                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 9, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: "rgba(255,255,255,0.4)" }}>WCAS Partner</span>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT — Sidebar */}
+            <div style={{ flex: 0.85, background: "rgba(255,255,255,0.015)", borderRadius: 16, border: "1px solid rgba(255,255,255,0.06)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
+              <div style={{ padding: "20px 20px 12px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", color: "rgba(255,255,255,0.35)" }}>All Stories</span>
+              </div>
+              <div style={{ flex: 1, overflowY: "auto" }}>
+                {wcasVideos.map((video, i) => (
                   <div
-                    style={{ position: "absolute", inset: 0, padding: "24px 32px", display: "flex", flexDirection: "column", justifyContent: "center", zIndex: 2 }}
-                    onClick={() => { if (!hasDragged.current) setPlayingVideo(video.id); }}
+                    key={i}
+                    className={`spotlight-sidebar-item ${i === activeVideo ? 'active' : ''}`}
+                    onClick={() => switchVideo(i)}
                   >
-                    {'specialLayout' in video && video.specialLayout ? (
-                      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", height: "100%", padding: "16px 0" }}>
-                        <h3 style={{ fontSize: 20, fontWeight: 700, textAlign: "center", color: "white" }}>{video.title}</h3>
-                        <div style={{ flex: 1 }}></div>
-                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
-                          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                            <img src={wcasLogo} alt="WCAS" style={{ height: 16, filter: "brightness(0) invert(1)" }} />
-                            <div style={{ width: 1, height: 24, background: "rgba(255,255,255,0.2)" }}></div>
-                            <img src={logoSelect} alt="Select Medical" style={{ height: 32 }} />
-                          </div>
-                          <h4 style={{ fontSize: 16, fontWeight: 700, color: "white" }}>{video.partner}</h4>
-                        </div>
-                      </div>
-                    ) : 'centeredLayout' in video && video.centeredLayout ? (
-                      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", height: "100%", padding: "16px 0" }}>
-                        <h3 style={{ fontSize: 20, fontWeight: 700, textAlign: "center", color: "white" }}>{video.title}</h3>
-                        <div style={{ flex: 1 }}></div>
-                        {'partnerLogo' in video && video.partnerLogo && (
-                          <img src={video.partnerLogo} alt={video.partner} style={{ height: 32 }} />
-                        )}
-                      </div>
-                    ) : null}
-                    <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 4, zIndex: 10 }}>
-                      <div style={{ background: "rgba(255,255,255,0.2)", width: 64, height: 44, borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(4px)", border: "1px solid rgba(255,255,255,0.25)" }}>
-                        <Play style={{ color: "white", fill: "white" }} size={24} />
-                      </div>
+                    <span className="sb-num" style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.2)", minWidth: 20 }}>{String(i + 1).padStart(2, '0')}</span>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div className="sb-partner" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.5)", marginBottom: 2, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{video.partner}</div>
+                      <div className="sb-title" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.25)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{video.title}</div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-            <button
-              onClick={() => scrollSlider('right')}
-              style={{ flexShrink: 0, width: 40, height: 40, borderRadius: "50%", background: "rgba(255,255,255,0.1)", border: `1px solid rgba(255,255,255,0.2)`, color: "white", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}
-            >
-              <ArrowRight size={20} />
-            </button>
           </div>
         </div>
       </section>
