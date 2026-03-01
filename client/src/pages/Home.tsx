@@ -213,6 +213,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── PORTFOLIO ── */}
+      <section style={{ background: "#0c1a2e", padding: "100px 56px 80px" }}>
+        <style>{`
+          .port-marquee-wrap { position:relative; overflow:hidden; }
+          .port-marquee-wrap::before, .port-marquee-wrap::after { content:""; position:absolute; top:0; bottom:0; width:80px; z-index:2; pointer-events:none; }
+          .port-marquee-wrap::before { left:0; background:linear-gradient(to right, #0c1a2e, transparent); }
+          .port-marquee-wrap::after { right:0; background:linear-gradient(to left, #0c1a2e, transparent); }
+          .port-marquee-track { display:flex; gap:16px; animation:port-scroll 30s linear infinite; width:max-content; }
+          .port-marquee-track:hover { animation-play-state:paused; }
+          @keyframes port-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+          .port-logo-card { width:180px; height:80px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+          .port-logo-card:hover { transform:translateY(-3px); border-color:rgba(77,184,199,0.3); box-shadow:0 4px 20px rgba(77,184,199,0.08); }
+          .port-logo-card span { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:rgba(255,255,255,0.7); letter-spacing:0.5px; }
+          @media (prefers-reduced-motion: reduce) { .port-marquee-track { animation:none !important; flex-wrap:wrap; justify-content:center; } }
+        `}</style>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 48 }}>
+          <div style={{ maxWidth: 640 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Portfolio</span>
+              <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
+            </div>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 42, fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 20 }}>Building market leaders across healthcare and technology</h2>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>We bring decades of sector expertise and operational resources to every partnership, working alongside management teams to create lasting value.</p>
+          </div>
+          <a href="/healthcare" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "1.5px solid rgba(255,255,255,0.25)", background: "none", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>View all companies &rarr;</a>
+        </div>
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 40 }}>
+          <div className="port-marquee-wrap">
+            <div className="port-marquee-track">
+              {[...Array(2)].map((_, setIdx) =>
+                ["Cotiviti", "Press Ganey", "Ensemble Health Partners", "MultiPlan", "Absorb Software", "Net Health", "Greenway Health", "nThrive", "Covetrus", "UST", "Houghton Mifflin Harcourt", "SS&C Technologies"].map((name, i) => (
+                  <div key={`${setIdx}-${i}`} className="port-logo-card">
+                    <span>{name}</span>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── VIDEO SLIDER SECTION ── */}
       <section style={{ position: "relative", overflow: "hidden", background: BG, marginTop: 0 }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${missionBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
@@ -299,47 +340,6 @@ export default function Home() {
         </blockquote>
         <div style={{ width: 40, height: 2, background: "rgba(255,255,255,0.4)", marginBottom: 12 }} />
         <p style={{ fontFamily: SANS, fontSize: 13, opacity: 0.7 }}>WCAS Corporate Partnership Strategy</p>
-      </section>
-
-      {/* ── PORTFOLIO ── */}
-      <section style={{ background: "#0c1a2e", padding: "100px 56px 80px" }}>
-        <style>{`
-          .port-marquee-wrap { position:relative; overflow:hidden; }
-          .port-marquee-wrap::before, .port-marquee-wrap::after { content:""; position:absolute; top:0; bottom:0; width:80px; z-index:2; pointer-events:none; }
-          .port-marquee-wrap::before { left:0; background:linear-gradient(to right, #0c1a2e, transparent); }
-          .port-marquee-wrap::after { right:0; background:linear-gradient(to left, #0c1a2e, transparent); }
-          .port-marquee-track { display:flex; gap:16px; animation:port-scroll 30s linear infinite; width:max-content; }
-          .port-marquee-track:hover { animation-play-state:paused; }
-          @keyframes port-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-          .port-logo-card { width:180px; height:80px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
-          .port-logo-card:hover { transform:translateY(-3px); border-color:rgba(77,184,199,0.3); box-shadow:0 4px 20px rgba(77,184,199,0.08); }
-          .port-logo-card span { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:rgba(255,255,255,0.7); letter-spacing:0.5px; }
-          @media (prefers-reduced-motion: reduce) { .port-marquee-track { animation:none !important; flex-wrap:wrap; justify-content:center; } }
-        `}</style>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 48 }}>
-          <div style={{ maxWidth: 640 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Portfolio</span>
-              <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
-            </div>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 42, fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 20 }}>Building market leaders across healthcare and technology</h2>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>We bring decades of sector expertise and operational resources to every partnership, working alongside management teams to create lasting value.</p>
-          </div>
-          <a href="/healthcare" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "1.5px solid rgba(255,255,255,0.25)", background: "none", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>View all companies &rarr;</a>
-        </div>
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 40 }}>
-          <div className="port-marquee-wrap">
-            <div className="port-marquee-track">
-              {[...Array(2)].map((_, setIdx) =>
-                ["Cotiviti", "Press Ganey", "Ensemble Health Partners", "MultiPlan", "Absorb Software", "Net Health", "Greenway Health", "nThrive", "Covetrus", "UST", "Houghton Mifflin Harcourt", "SS&C Technologies"].map((name, i) => (
-                  <div key={`${setIdx}-${i}`} className="port-logo-card">
-                    <span>{name}</span>
-                  </div>
-                ))
-              )}
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* ── TRANSITION STRIP ── */}
