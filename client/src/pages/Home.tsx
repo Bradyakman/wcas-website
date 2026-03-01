@@ -268,8 +268,19 @@ export default function Home() {
             <div
               className="spotlight-main"
               onClick={() => setPlayingVideo(filteredVideos[safeActiveVideo].id)}
-              style={{ flex: 2, minHeight: 480, borderRadius: 20, background: "#0f172a", position: "relative", overflow: "hidden", cursor: "pointer", border: "1px solid rgba(255,255,255,0.08)" }}
+              style={{ flex: 2, minHeight: 480, borderRadius: 20, background: "linear-gradient(135deg, #0c1a2e 0%, #152238 50%, #0f172a 100%)", position: "relative", overflow: "hidden", cursor: "pointer", border: "1px solid rgba(255,255,255,0.08)" }}
             >
+              {/* Vimeo thumbnail background */}
+              {(() => {
+                const accentColor = filteredVideos[safeActiveVideo].category === "Healthcare" ? "#8BBDE8" : "#4db8c7";
+                return (
+                  <>
+                    <div style={{ position: "absolute", inset: 0, backgroundImage: `url(https://vumbnail.com/${filteredVideos[safeActiveVideo].id}.jpg)`, backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.25) saturate(0.6)", opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.4s ease", zIndex: 0 }} />
+                    <div style={{ position: "absolute", inset: 0, background: `linear-gradient(135deg, ${accentColor}12, rgba(12,26,46,0.6) 40%, rgba(12,26,46,0.85) 100%)`, zIndex: 1 }} />
+                  </>
+                );
+              })()}
+
               {/* Corner brackets */}
               <div style={{ position: "absolute", top: 20, left: 20, width: 28, height: 28, borderTop: `2px solid rgba(107,163,214,0.35)`, borderLeft: `2px solid rgba(107,163,214,0.35)`, zIndex: 3 }} />
               <div style={{ position: "absolute", top: 20, right: 20, width: 28, height: 28, borderTop: `2px solid rgba(107,163,214,0.35)`, borderRight: `2px solid rgba(107,163,214,0.35)`, zIndex: 3 }} />
