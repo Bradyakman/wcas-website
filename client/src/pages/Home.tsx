@@ -282,10 +282,7 @@ export default function Home() {
       </section>
 
       {/* ── VIDEO SLIDER SECTION ── */}
-      <section style={{ position: "relative", overflow: "hidden", background: BG, marginTop: 0 }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${missionBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-          <div style={{ position: "absolute", inset: 0, backgroundColor: BG, opacity: 0.92 }}></div>
-        </div>
+      <section style={{ position: "relative", overflow: "hidden", background: "#152238", marginTop: 0 }}>
         <div style={{ position: "relative", zIndex: 10, padding: "80px 56px 100px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start", marginBottom: 48 }}>
             <div>
