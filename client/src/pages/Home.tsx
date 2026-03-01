@@ -201,7 +201,7 @@ export default function Home() {
             <div className="wwi-watermark">Technology</div>
             <div className="wwi-bottom-glow" />
             <div className="wwi-content">
-              <h3>Powering Essential<br />Industries</h3>
+              <h3>Powering Essential Industries</h3>
               <p className="wwi-desc">Software and data platforms driving transformation across financial services, government, and industrial sectors.</p>
               <div className="wwi-pills">
                 {["FinTech", "GovTech", "Built Environment", "IndustrialTech", "Data & Analytics"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
@@ -214,7 +214,7 @@ export default function Home() {
             <div className="wwi-watermark">Healthcare</div>
             <div className="wwi-bottom-glow" />
             <div className="wwi-content">
-              <h3>Investing in Better<br />Healthcare</h3>
+              <h3>Investing in Better Healthcare</h3>
               <p className="wwi-desc">Partnering with management teams across care delivery, payor solutions, and the pharma value chain.</p>
               <div className="wwi-pills">
                 {["Care Delivery", "Payor Solutions", "Pharma Value Chain", "Healthcare IT"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
