@@ -170,7 +170,7 @@ export default function Home() {
             <div className="wwi-bottom-glow" />
             <div className="wwi-content">
               <h3>Investing in Better Healthcare</h3>
-              <p className="wwi-desc">Partnering with management teams across care delivery, payor solutions, and the pharma value chain.</p>
+              <p className="wwi-desc">We partner with category-defining healthcare companies and their management teams to expand access, improve quality, and build lasting value.</p>
               <div className="wwi-pills">
                 {["Care Delivery", "Healthcare IT", "Payor Solutions", "Pharma Value Chain"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
