@@ -13,11 +13,14 @@ WCAS (Welsh, Carson, Anderson & Stowe) corporate website — a full-stack React 
 ## Home Page Design
 - Dark blue theme (`#0C1A2E` background) inspired by KKR/Thoma Bravo/General Atlantic
 - Accent color: `#6BA3D6` (light blue)
-- Sections: Hero with photo overlay → Stats (blue top borders) → Sectors → Value Creation → Video Slider → Quote block → News
-- Fonts: Libre Baskerville for serif headings, Outfit for sans-serif body text
+- Sections: Hero (with stats) → Sectors (split-screen) → Video Slider → Quote → Portfolio (logo marquee) → News (light background)
+- Fonts: Libre Baskerville for serif headings, Outfit for sans-serif body; Cormorant Garamond + DM Sans for portfolio/news/sector sections
 - All inline styles for the dark theme (no Tailwind dark mode needed)
 - Video carousel with drag-to-scroll and Vimeo lightbox modal
-- CSS classes: `.sector-card-blue`, `.video-card-blue`, `.news-row-blue` in index.css
+- Portfolio marquee: auto-scrolling company name cards, pauses on hover, 30s loop, reduced-motion fallback
+- News section: light (#f4f3f0) background, 2-column grid with featured dark card + 3 stacked white cards
+- Transition strip: 4px teal-to-gold gradient between portfolio and news
+- CSS classes: `.video-card-blue`, `.news-row-blue`, `.port-marquee-*`, `.news-card` in Home.tsx inline styles
 
 ## Project Structure
 ```

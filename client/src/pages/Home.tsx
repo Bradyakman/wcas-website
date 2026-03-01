@@ -301,27 +301,100 @@ export default function Home() {
         <p style={{ fontFamily: SANS, fontSize: 13, opacity: 0.7 }}>WCAS Corporate Partnership Strategy</p>
       </section>
 
-      {/* ── NEWS ── */}
-      <section style={{ padding: "80px 56px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 32 }}>
-          <div>
-            <p style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase", color: ACCENT, marginBottom: 12 }}>Insights</p>
-            <h2 style={{ fontSize: 34, fontWeight: 400 }}>Latest perspectives</h2>
+      {/* ── PORTFOLIO ── */}
+      <section style={{ background: "#0c1a2e", padding: "100px 56px 80px" }}>
+        <style>{`
+          .port-marquee-wrap { position:relative; overflow:hidden; }
+          .port-marquee-wrap::before, .port-marquee-wrap::after { content:""; position:absolute; top:0; bottom:0; width:80px; z-index:2; pointer-events:none; }
+          .port-marquee-wrap::before { left:0; background:linear-gradient(to right, #0c1a2e, transparent); }
+          .port-marquee-wrap::after { right:0; background:linear-gradient(to left, #0c1a2e, transparent); }
+          .port-marquee-track { display:flex; gap:16px; animation:port-scroll 30s linear infinite; width:max-content; }
+          .port-marquee-track:hover { animation-play-state:paused; }
+          @keyframes port-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+          .port-logo-card { width:180px; height:80px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+          .port-logo-card:hover { transform:translateY(-3px); border-color:rgba(77,184,199,0.3); box-shadow:0 4px 20px rgba(77,184,199,0.08); }
+          .port-logo-card span { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:rgba(255,255,255,0.7); letter-spacing:0.5px; }
+          @media (prefers-reduced-motion: reduce) { .port-marquee-track { animation:none !important; flex-wrap:wrap; justify-content:center; } }
+        `}</style>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 48 }}>
+          <div style={{ maxWidth: 640 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Portfolio</span>
+              <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
+            </div>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 42, fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 20 }}>Building market leaders across healthcare and technology</h2>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>We bring decades of sector expertise and operational resources to every partnership, working alongside management teams to create lasting value.</p>
           </div>
-          <a href="/news" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: `1.5px solid ${ACCENT}`, background: "none", color: ACCENT, cursor: "pointer", textDecoration: "none" }}>See All →</a>
+          <a href="/healthcare" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "1.5px solid rgba(255,255,255,0.25)", background: "none", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>View all companies &rarr;</a>
         </div>
-        {[
-          { date: "Jul 2025", tag: "News", title: "TrueCommerce Names Bill Glass as CEO, Marking New Phase of Growth" },
-          { date: "Jul 2025", tag: "News", title: "EquiLend Acquires Trading Apps to Advance Front-Office Automation" },
-          { date: "Jul 2025", tag: "News", title: "WCAS Announces Strategic Growth Investment in AIA Contract Documents" },
-          { date: "Jun 2025", tag: "News", title: "Concentra Expands National Footprint with Acquisition of 12 New Centers" },
-        ].map((n, i) => (
-          <a key={i} href="/news" style={{ padding: "24px 0", borderBottom: `1px solid rgba(255,255,255,0.06)`, display: "flex", gap: 24, alignItems: "baseline", cursor: "pointer", textDecoration: "none", color: TEXT }} className="news-row-blue">
-            <span style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.35)", minWidth: 70 }}>{n.date}</span>
-            <span style={{ fontFamily: SANS, fontSize: 11, fontWeight: 500, color: ACCENT, textTransform: "uppercase", letterSpacing: 1, minWidth: 120 }}>{n.tag}</span>
-            <h4 style={{ fontSize: 16, fontWeight: 400 }}>{n.title}</h4>
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 40 }}>
+          <div className="port-marquee-wrap">
+            <div className="port-marquee-track">
+              {[...Array(2)].map((_, setIdx) =>
+                ["Cotiviti", "Press Ganey", "Ensemble Health Partners", "MultiPlan", "Absorb Software", "Net Health", "Greenway Health", "nThrive", "Covetrus", "UST", "Houghton Mifflin Harcourt", "SS&C Technologies"].map((name, i) => (
+                  <div key={`${setIdx}-${i}`} className="port-logo-card">
+                    <span>{name}</span>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TRANSITION STRIP ── */}
+      <div style={{ height: 4, background: "linear-gradient(90deg, #4db8c7, #c8985e)", opacity: 0.6 }} />
+
+      {/* ── NEWS ── */}
+      <section style={{ background: "#f4f3f0", padding: "100px 56px" }}>
+        <style>{`
+          .news-card { border-radius:10px; overflow:hidden; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; text-decoration:none; }
+          .news-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.12); }
+          .news-arrow-btn { width:32px; height:32px; border-radius:50%; border:1px solid rgba(12,26,46,0.15); background:none; display:flex; align-items:center; justify-content:center; font-size:14px; color:#0c1a2e; transition:all 0.3s; cursor:pointer; }
+          .news-card:hover .news-arrow-btn { color:#4db8c7; border-color:#4db8c7; transform:translate(2px,-2px); }
+        `}</style>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48 }}>
+          <div>
+            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#888" }}>Latest News</span>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 36, fontWeight: 400, color: "#0c1a2e", lineHeight: 1.2, marginTop: 12 }}>WCAS and our partners in the news</h2>
+          </div>
+          <a href="/news" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See all news &rarr;</a>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+          <a href="/news" className="news-card" style={{ display: "flex", flexDirection: "column", background: "linear-gradient(180deg, #0c1a2e 0%, #152238 100%)", minHeight: 480, position: "relative" }}>
+            <div style={{ flex: 1 }} />
+            <div style={{ background: "linear-gradient(to top, rgba(12,26,46,0.95), transparent)", padding: "48px 32px 32px", position: "relative", zIndex: 1 }}>
+              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: "#4db8c7", padding: "4px 12px", borderRadius: 12, background: "rgba(77,184,199,0.1)", border: "1px solid rgba(77,184,199,0.2)" }}>WCAS News</span>
+              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.4)", marginLeft: 12 }}>Jul 2025</span>
+              <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 24, fontWeight: 400, color: "#fff", lineHeight: 1.3, marginTop: 16, marginBottom: 20 }}>WCAS Announces Strategic Growth Investment in AIA Contract Documents</h3>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)" }}>Read more</span>
+                <button className="news-arrow-btn" style={{ borderColor: "rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.6)" }}>&nearr;</button>
+              </div>
+            </div>
           </a>
-        ))}
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {[
+              { tag: "Partnership", tagColor: "#c8985e", date: "Jul 2025", title: "TrueCommerce Names Bill Glass as CEO, Marking New Phase of Growth" },
+              { tag: "WCAS News", tagColor: "#4db8c7", date: "Jul 2025", title: "EquiLend Acquires Trading Apps to Advance Front-Office Automation" },
+              { tag: "Partnership", tagColor: "#c8985e", date: "Jun 2025", title: "Concentra Expands National Footprint with Acquisition of 12 New Centers" },
+            ].map((n, i) => (
+              <a key={i} href="/news" className="news-card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", background: "#fff", padding: "28px 28px 24px", flex: 1 }}>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
+                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: n.tagColor, padding: "4px 12px", borderRadius: 12, background: `${n.tagColor}15`, border: `1px solid ${n.tagColor}30` }}>{n.tag}</span>
+                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#999" }}>{n.date}</span>
+                  </div>
+                  <h4 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 16, fontWeight: 500, color: "#0c1a2e", lineHeight: 1.4 }}>{n.title}</h4>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 16 }}>
+                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, color: "#888" }}>Read more</span>
+                  <button className="news-arrow-btn">&nearr;</button>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Video Lightbox Modal */}

@@ -1,0 +1,57 @@
+Here's your Replit prompt. I included portfolio companies I know — double-check the list and swap any that are off:
+
+```
+Add two new sections below the Technology/Healthcare split screen section.
+
+=== SECTION 1: PORTFOLIO (dark navy background, seamless from split above) ===
+
+Top area: flex row with text on the left and a button on the right.
+- Left side:
+  - Eyebrow: "OUR PORTFOLIO" in teal (#4db8c7), 12px, uppercase, letter-spacing 3px, with a short gradient line after it
+  - Heading: "Building market leaders across healthcare and technology" in Cormorant Garamond, 42px, white
+  - Paragraph: "We bring decades of sector expertise and operational resources to every partnership, working alongside management teams to create lasting value." in 15px, rgba(255,255,255,0.45)
+- Right side: ghost button "View all companies →" with rounded border, white text
+
+Below that: a horizontal auto-scrolling logo marquee. The logos scroll continuously left at a steady pace (30s loop) and pause on hover.
+- Each logo sits in a rounded rectangle card (180px × 80px, rgba(255,255,255,0.04) background, subtle border)
+- On hover, cards lift slightly and border glows teal
+- Fade-out gradients on left and right edges (using the navy background color)
+- Duplicate the full set of logos so the scroll loops seamlessly
+- ALL LOGOS SHOULD BE WHITE (use CSS filter: brightness(0) invert(1) or serve white versions)
+
+Portfolio companies to include (use their actual logos, displayed in white):
+Cotiviti, Press Ganey, Ensemble Health Partners, MultiPlan, Absorb Software, Net Health, Greenway Health, nThrive, Covetrus, UST, Houghton Mifflin Harcourt, SS&C Technologies
+
+Above the marquee, add a thin 1px border-top in rgba(255,255,255,0.06) for separation.
+
+Background: #0c1a2e (same as stats and split sections — should feel like one continuous dark block)
+
+=== THIN TRANSITION STRIP ===
+Between the portfolio and news sections, add a 4px tall gradient bar:
+background: linear-gradient(90deg, #4db8c7, #c8985e) at opacity 0.6
+
+=== SECTION 2: NEWS (light background) ===
+
+Background: #f4f3f0
+
+Top area: flex row with text left, "See all news →" button right (dark navy pill button)
+- Eyebrow: "LATEST NEWS" in gray, 12px uppercase
+- Heading: "WCAS and our partners in the news" in Cormorant Garamond, 36px, navy
+
+Layout: 2-column grid
+- LEFT: One large featured card that spans the full height. It has a dark navy gradient background image area that fills the card, with the text content overlaid at the bottom using a gradient overlay (transparent → dark). The title should be 24px, white.
+- RIGHT: 3 smaller cards stacked vertically, no image, just white card with text content. Title is 16px, navy.
+
+Each card has:
+- A colored category tag pill: "WCAS NEWS" uses teal (#4db8c7 background at 10% opacity, teal text, teal border), "PARTNERSHIP" uses gold (#c8985e same treatment)
+- A date in gray, 12px
+- A title in Cormorant Garamond
+- A footer with "Read more" text link and a circular arrow button (↗). On hover the arrow shifts up-right and turns teal.
+- Cards lift with subtle shadow on hover, border-radius 10px
+
+Pull the actual latest 4 news items from the existing news data on the site. If no news data exists yet, use placeholder headlines.
+
+Fonts: Cormorant Garamond for headings, DM Sans for body — same as rest of site.
+```
+
+You'll want to verify that portfolio company list — I pulled from what I know but you may have more current or different companies you want featured. The key instruction is the white logo treatment and the auto-scroll, which should make it feel alive without being distracting.
