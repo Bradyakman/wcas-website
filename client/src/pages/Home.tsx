@@ -1,6 +1,7 @@
 import { Play, X } from "lucide-react";
 import heroBg from "@assets/image_1772300178571.png";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
+import logoLumexa from "@assets/image_1772400832099.png";
 import missionBg from "@assets/2345234534_1771799538730.jpg";
 import logoSelect from "@assets/image_1772034518225.png";
 import shieldsFullLogo from "@assets/shields_word_white_only_1772037749705.png";
@@ -375,7 +376,7 @@ export default function Home() {
         <div className="news-content-fade" style={{ borderRadius: 16, border: "1px solid rgba(12,26,46,0.08)", overflow: "hidden" }}>
           {([
             { tag: "WCAS News", tagColor: "#4db8c7", date: "Feb 2026", title: "WCAS Portfolio Company Absorb Software Named to G2\u2019s 2026 Top 100 Global Software Companies", excerpt: "WCAS portfolio company Absorb Software has been named to G2\u2019s 2026 Best Software Awards list of the Top 100 Global Software Companies, ranking #89 worldwide out of over 116,000 total vendors.", logo: absorbLogo },
-            { tag: "WCAS News", tagColor: "#4db8c7", date: "Jan 2026", title: "Lumexa Imaging Announces Pricing of Initial Public Offering", excerpt: "Lumexa Imaging announced the pricing of its initial public offering of 25,000,000 shares of common stock at $18.50 per share, expected to trade on the Nasdaq Global Select Market under the symbol \u2018LMRI.\u2019", logo: wcasLogo },
+            { tag: "WCAS News", tagColor: "#4db8c7", date: "Jan 2026", title: "Lumexa Imaging Announces Pricing of Initial Public Offering", excerpt: "Lumexa Imaging announced the pricing of its initial public offering of 25,000,000 shares of common stock at $18.50 per share, expected to trade on the Nasdaq Global Select Market under the symbol \u2018LMRI.\u2019", logo: logoLumexa },
             { tag: "WCAS News", tagColor: "#4db8c7", date: "Sep 2025", title: "Welsh, Carson, Anderson & Stowe Welcomes Gene Lockhart as Operating Partner", excerpt: "Gene Lockhart, former CEO and President of Mastercard and former President of the Global Retail Bank at Bank of America, has joined WCAS as an operating partner.", logo: wcasLogo },
             { tag: "Partnership", tagColor: "#c8985e", date: "Aug 2025", title: "GovCIO, a Welsh, Carson, Anderson & Stowe Company, to Acquire SoldierPoint Digital Health, LLC", excerpt: "GovCIO announced it has agreed to acquire SoldierPoint Digital Health, expanding its mission supporting Veterans through the Department of Veterans Affairs.", logo: logoGovCIO },
           ]).map((n, i, arr) => (
