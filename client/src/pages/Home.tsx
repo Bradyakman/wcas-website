@@ -334,15 +334,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── QUOTE ── */}
-      <section style={{ margin: "80px 56px", padding: "72px 56px", borderRadius: 8, background: ACCENT, color: "white" }}>
-        <blockquote style={{ fontSize: 24, fontWeight: 400, lineHeight: 1.55, fontStyle: "italic", maxWidth: 700, marginBottom: 24, opacity: 0.95 }}>
-          "WCAS pioneered the corporate partnership model in healthcare private equity — creating alignment between the operational capabilities of health systems and the resources of private equity."
-        </blockquote>
-        <div style={{ width: 40, height: 2, background: "rgba(255,255,255,0.4)", marginBottom: 12 }} />
-        <p style={{ fontFamily: SANS, fontSize: 13, opacity: 0.7 }}>WCAS Corporate Partnership Strategy</p>
-      </section>
-
       {/* ── TRANSITION STRIP ── */}
       <div style={{ height: 4, background: "linear-gradient(90deg, #4db8c7, #c8985e)", opacity: 0.6 }} />
 
