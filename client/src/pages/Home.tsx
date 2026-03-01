@@ -22,7 +22,7 @@ import logoShields from "@assets/Shields_logo_transparent_LRG-3-1024x272_1771799
 import logoNorstella from "@assets/Norstella_color_positive_RGB_-_USE_THIS-1-1024x354_1771799704136_clean.png";
 import logoAllianceData from "@assets/AllianceData_1771799704135_clean.png";
 import logoClearwater from "@assets/Clearwater-Analytics_1771799704135_clean.png";
-import logoNaviHealth from "@assets/navihealth_transparent.png";
+import logoNaviHealth from "@assets/navihealth_new_clean.png";
 import logoSimeio from "@assets/simeio_transparent.png";
 
 import { useState, useRef } from "react";
