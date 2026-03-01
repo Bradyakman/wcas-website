@@ -159,7 +159,7 @@ export default function Home() {
               <h3>Powering Essential Industries</h3>
               <p className="wwi-desc">Software and data platforms driving transformation across financial services, government, and industrial sectors.</p>
               <div className="wwi-pills">
-                {["FinTech", "GovTech", "Built Environment", "IndustrialTech", "Data & Analytics"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
+                {["Built Environment", "Data & Analytics", "FinTech", "GovTech", "IndustrialTech"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
               <a href="/technology" className="wwi-cta2">Explore Technology &rarr;</a>
             </div>
@@ -172,7 +172,7 @@ export default function Home() {
               <h3>Investing in Better Healthcare</h3>
               <p className="wwi-desc">Partnering with management teams across care delivery, payor solutions, and the pharma value chain.</p>
               <div className="wwi-pills">
-                {["Care Delivery", "Payor Solutions", "Pharma Value Chain", "Healthcare IT"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
+                {["Care Delivery", "Healthcare IT", "Payor Solutions", "Pharma Value Chain"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
               <a href="/healthcare" className="wwi-cta2">Explore Healthcare &rarr;</a>
             </div>
