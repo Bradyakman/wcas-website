@@ -53,7 +53,7 @@ export default function Home() {
   const [activeVideo, setActiveVideo] = useState(0);
   const [isVideoTransitioning, setIsVideoTransitioning] = useState(false);
   const [expandedNews, setExpandedNews] = useState(0);
-  const [newsFilter, setNewsFilter] = useState<"News" | "Perspectives">("News");
+
   const [videoFilter, setVideoFilter] = useState<"All" | "Technology" | "Healthcare">("All");
 
   const filteredVideos = (videoFilter === "All" ? wcasVideos : wcasVideos.filter(v => v.category === videoFilter)).sort((a, b) => a.partner.localeCompare(b.partner));
@@ -364,10 +364,6 @@ export default function Home() {
           .news-row.nr-active .nr-arrow { border-color:rgba(255,255,255,0.3); color:#fff; transform:rotate(90deg); }
           .nr-expand { max-height:0; overflow:hidden; transition:max-height 0.4s ease, padding 0.4s ease; }
           .nr-expand.nr-open { max-height:300px; }
-          .news-filter-btn { font-family:'DM Sans',sans-serif; font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; padding:10px 28px; border-radius:24px; cursor:pointer; transition:all 0.2s ease; border:1px solid rgba(12,26,46,0.15); }
-          .news-filter-btn.nf-active { background:#0c1a2e; color:#fff; border-color:#0c1a2e; }
-          .news-filter-btn:not(.nf-active) { background:transparent; color:#0c1a2e; }
-          .news-filter-btn:not(.nf-active):hover { background:rgba(12,26,46,0.05); }
           .news-content-fade { transition:opacity 0.3s ease; }
         `}</style>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 28 }}>
@@ -376,26 +372,17 @@ export default function Home() {
           </div>
           <a href="/news" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See All News &#8594;</a>
         </div>
-        <div style={{ display: "flex", gap: 10, marginBottom: 32 }}>
-          <button className={`news-filter-btn ${newsFilter === "News" ? "nf-active" : ""}`} onClick={() => { setNewsFilter("News"); setExpandedNews(0); }}>News</button>
-          <button className={`news-filter-btn ${newsFilter === "Perspectives" ? "nf-active" : ""}`} onClick={() => { setNewsFilter("Perspectives"); setExpandedNews(0); }}>Perspectives</button>
-        </div>
         <div className="news-content-fade" style={{ borderRadius: 16, border: "1px solid rgba(12,26,46,0.08)", overflow: "hidden" }}>
-          {(newsFilter === "News" ? [
+          {([
             { tag: "WCAS News", tagColor: "#4db8c7", date: "Feb 2026", title: "WCAS Portfolio Company Absorb Software Named to G2\u2019s 2026 Top 100 Global Software Companies", excerpt: "WCAS portfolio company Absorb Software has been named to G2\u2019s 2026 Best Software Awards list of the Top 100 Global Software Companies, ranking #89 worldwide out of over 116,000 total vendors.", logo: absorbLogo },
             { tag: "WCAS News", tagColor: "#4db8c7", date: "Jan 2026", title: "Lumexa Imaging Announces Pricing of Initial Public Offering", excerpt: "Lumexa Imaging announced the pricing of its initial public offering of 25,000,000 shares of common stock at $18.50 per share, expected to trade on the Nasdaq Global Select Market under the symbol \u2018LMRI.\u2019", logo: wcasLogo },
             { tag: "WCAS News", tagColor: "#4db8c7", date: "Sep 2025", title: "Welsh, Carson, Anderson & Stowe Welcomes Gene Lockhart as Operating Partner", excerpt: "Gene Lockhart, former CEO and President of Mastercard and former President of the Global Retail Bank at Bank of America, has joined WCAS as an operating partner.", logo: wcasLogo },
             { tag: "Partnership", tagColor: "#c8985e", date: "Aug 2025", title: "GovCIO, a Welsh, Carson, Anderson & Stowe Company, to Acquire SoldierPoint Digital Health, LLC", excerpt: "GovCIO announced it has agreed to acquire SoldierPoint Digital Health, expanding its mission supporting Veterans through the Department of Veterans Affairs.", logo: logoGovCIO },
-          ] : [
-            { tag: "Perspectives", tagColor: "#7c6bbf", date: "Jan 2026", title: "The Future of AI in Healthcare: Opportunities for Value Creation", excerpt: "Artificial intelligence is reshaping healthcare delivery, diagnostics, and operations. We explore where the greatest opportunities for value creation lie and how portfolio companies can position themselves at the forefront.", logo: wcasLogo },
-            { tag: "Perspectives", tagColor: "#7c6bbf", date: "Dec 2025", title: "Building Resilient GovTech Platforms in an Era of Digital Transformation", excerpt: "Government agencies are accelerating their digital transformation journeys. We examine the key attributes of resilient GovTech platforms and the strategies driving sustainable growth in this evolving market.", logo: wcasLogo },
-            { tag: "Perspectives", tagColor: "#7c6bbf", date: "Nov 2025", title: "Why Vertical SaaS Continues to Outperform: Lessons from Our Portfolio", excerpt: "Vertical SaaS companies consistently deliver superior retention, expansion, and margin profiles. Drawing on lessons from our portfolio, we analyze why industry-specific software continues to outpace horizontal alternatives.", logo: wcasLogo },
-            { tag: "Perspectives", tagColor: "#7c6bbf", date: "Oct 2025", title: "Navigating the Next Wave of Healthcare Consolidation", excerpt: "Healthcare consolidation is accelerating across care delivery, payor solutions, and the pharma value chain. We share our perspective on navigating this dynamic landscape and identifying the most compelling investment opportunities.", logo: wcasLogo },
-          ]).map((n, i) => (
+          ]).map((n, i, arr) => (
             <div
-              key={`${newsFilter}-${i}`}
+              key={i}
               className={`news-row ${expandedNews === i ? 'nr-active' : ''}`}
-              style={{ borderBottom: i < 3 ? "1px solid rgba(12,26,46,0.08)" : "none", background: expandedNews === i ? "#0b1a2e" : "#fff", animation: `news-fade-in 0.5s ease ${i * 0.1}s both` }}
+              style={{ borderBottom: i < arr.length - 1 ? "1px solid rgba(12,26,46,0.08)" : "none", background: expandedNews === i ? "#0b1a2e" : "#fff", animation: `news-fade-in 0.5s ease ${i * 0.1}s both` }}
               onClick={() => setExpandedNews(expandedNews === i ? -1 : i)}
             >
               <div style={{ display: "grid", gridTemplateColumns: "80px 1fr 40px", alignItems: "center", padding: "22px 28px", gap: 24 }}>
