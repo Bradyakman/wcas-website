@@ -24,7 +24,7 @@ import logoAllianceData from "@assets/AllianceData_1771799704135_clean.png";
 import logoClearwater from "@assets/Clearwater-Analytics_1771799704135_clean.png";
 import logoNaviHealth from "@assets/navihealth_new_clean.png";
 import logoSimeio from "@assets/simeio_transparent.png";
-import concentraLogo from "@assets/concentra_transparent.png";
+import concentraLogo from "@assets/Picture1-removebg-preview_1772398995578.png";
 
 import { useState } from "react";
 
