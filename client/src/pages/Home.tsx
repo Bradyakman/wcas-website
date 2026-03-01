@@ -10,6 +10,20 @@ import norstellaLogo from "@assets/norstella_text_white_1772038125226.png";
 import intoxalockLogo from "@assets/intoxalock_black_to_white_clean_1772038444095.png";
 import leitersLogo from "@assets/image_1772039486572.png";
 import greenStreetLogo from "@assets/greenstreet_text_white_preserve_bg_1772038753340.png";
+import logoAvetta from "@assets/Avetta-5-e1733175555759_1771799704133.png";
+import logoAsurion from "@assets/Asurion_1771799704133.png";
+import logoInnovAge from "@assets/InnovAge_1771799704134.png";
+import logoQuickbase from "@assets/Quickbase_1771799704134.png";
+import logoGovCIO from "@assets/GovCIO_1771799704134.png";
+import logoKindred from "@assets/KindredAtHome_Logo_1771799704135.png";
+import logoLINQ from "@assets/LINQ_1771799704131.png";
+import logoSelectMed from "@assets/Select_Medical_2x-3_1771799704136.png";
+import logoShields from "@assets/Shields_logo_transparent_LRG-3-1024x272_1771799704132.png";
+import logoNorstella from "@assets/Norstella_color_positive_RGB_-_USE_THIS-1-1024x354_1771799704136.png";
+import logoAllianceData from "@assets/AllianceData_1771799704135.png";
+import logoClearwater from "@assets/Clearwater-Analytics_1771799704135.png";
+import logoNaviHealth from "@assets/navihealth-jpg_1771799704136.webp";
+import logoSimeio from "@assets/simeio_2x-1-300x88_1771767564739.png";
 
 import { useState, useRef } from "react";
 
@@ -244,9 +258,24 @@ export default function Home() {
           <div className="port-marquee-wrap">
             <div className="port-marquee-track">
               {[...Array(2)].map((_, setIdx) =>
-                ["Cotiviti", "Press Ganey", "Ensemble Health Partners", "MultiPlan", "Absorb Software", "Net Health", "Greenway Health", "nThrive", "Covetrus", "UST", "Houghton Mifflin Harcourt", "SS&C Technologies"].map((name, i) => (
+                [
+                  { name: "Avetta", src: logoAvetta },
+                  { name: "Asurion", src: logoAsurion },
+                  { name: "InnovAge", src: logoInnovAge },
+                  { name: "Quickbase", src: logoQuickbase },
+                  { name: "GovCIO", src: logoGovCIO },
+                  { name: "Kindred at Home", src: logoKindred },
+                  { name: "LINQ", src: logoLINQ },
+                  { name: "Select Medical", src: logoSelectMed },
+                  { name: "Shields", src: logoShields },
+                  { name: "Norstella", src: logoNorstella },
+                  { name: "Alliance Data", src: logoAllianceData },
+                  { name: "Clearwater Analytics", src: logoClearwater },
+                  { name: "NaviHealth", src: logoNaviHealth },
+                  { name: "Simeio", src: logoSimeio },
+                ].map((co, i) => (
                   <div key={`${setIdx}-${i}`} className="port-logo-card">
-                    <span>{name}</span>
+                    <img src={co.src} alt={co.name} style={{ maxHeight: 36, maxWidth: 140, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
                   </div>
                 ))
               )}
