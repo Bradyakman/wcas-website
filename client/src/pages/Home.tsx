@@ -169,12 +169,12 @@ export default function Home() {
       </section>
 
       {/* ── PORTFOLIO ── */}
-      <section style={{ background: "#152238", padding: "100px 56px 80px" }}>
+      <section style={{ background: "#0c1a2e", padding: "100px 56px 80px" }}>
         <style>{`
           .port-marquee-wrap { position:relative; overflow:hidden; }
           .port-marquee-wrap::before, .port-marquee-wrap::after { content:""; position:absolute; top:0; bottom:0; width:80px; z-index:2; pointer-events:none; }
-          .port-marquee-wrap::before { left:0; background:linear-gradient(to right, #152238, transparent); }
-          .port-marquee-wrap::after { right:0; background:linear-gradient(to left, #152238, transparent); }
+          .port-marquee-wrap::before { left:0; background:linear-gradient(to right, #0c1a2e, transparent); }
+          .port-marquee-wrap::after { right:0; background:linear-gradient(to left, #0c1a2e, transparent); }
           .port-marquee-track { display:flex; gap:16px; animation:port-scroll 30s linear infinite; width:max-content; }
           .port-marquee-track:hover { animation-play-state:paused; }
           @keyframes port-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
