@@ -287,9 +287,9 @@ export default function Home() {
               </div>
 
               {/* Partner logo at top */}
-              <div style={{ position: "absolute", top: 48, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 4 }}>
+              <div style={{ position: "absolute", top: 40, left: 0, right: 0, display: "flex", justifyContent: "center", alignItems: "center", height: 80, opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 4 }}>
                 {'partnerLogo' in filteredVideos[safeActiveVideo] && filteredVideos[safeActiveVideo].partnerLogo ? (
-                  <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ height: ('spotlightH' in filteredVideos[safeActiveVideo] ? (filteredVideos[safeActiveVideo] as any).spotlightH : 65), maxWidth: 300, objectFit: "contain", opacity: 0.85 }} />
+                  <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ maxHeight: 70, maxWidth: 280, objectFit: "contain", opacity: 0.85 }} />
                 ) : (
                   <span style={{ fontFamily: SANS, fontSize: 26, fontWeight: 600, color: "rgba(255,255,255,0.85)" }}>{filteredVideos[safeActiveVideo].partner}</span>
                 )}
