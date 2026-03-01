@@ -164,8 +164,8 @@ export default function Home() {
           .wwi-pnl:hover { flex:1.4; }
           .wwi-split:has(.wwi-tech:hover) .wwi-hc { flex:0.6; filter:brightness(0.7); }
           .wwi-split:has(.wwi-hc:hover) .wwi-tech { flex:0.6; filter:brightness(0.7); }
-          .wwi-split:has(.wwi-tech:hover) .wwi-hc .wwi-content { opacity:0; transition:opacity 0.3s ease; }
-          .wwi-split:has(.wwi-hc:hover) .wwi-tech .wwi-content { opacity:0; transition:opacity 0.3s ease; }
+          .wwi-split:has(.wwi-tech:hover) .wwi-hc .wwi-content { opacity:0; transition:opacity 0.15s ease; pointer-events:none; }
+          .wwi-split:has(.wwi-hc:hover) .wwi-tech .wwi-content { opacity:0; transition:opacity 0.15s ease; pointer-events:none; }
           .wwi-split:has(.wwi-tech:hover) .wwi-divider, .wwi-split:has(.wwi-hc:hover) .wwi-divider { opacity:0; transition:opacity 0.3s ease; }
           .wwi-pnl-bg { position:absolute; inset:0; transition:transform 0.4s ease, opacity 0.4s ease; opacity:0.3; }
           .wwi-pnl:hover .wwi-pnl-bg { transform:scale(1.06); opacity:0.5; }
