@@ -40,7 +40,7 @@ const SANS = "'Outfit', sans-serif";
 const wcasVideos = [
   { id: "861242949", title: "Paths to Growth", partner: "Absorb", category: "Technology" as const, partnerLogo: absorbLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
   { id: "913334845", title: "Investing in Better Healthcare", partner: "Concentra", category: "Healthcare" as const, partnerLogo: concentraLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
-  { id: "861243221", title: "Paths to Growth", partner: "Green Street", category: "Technology" as const, partnerLogo: greenStreetLogo, centeredLayout: true, logoClass: "h-12 md:h-14" },
+  { id: "861243221", title: "Paths to Growth", partner: "Green Street", category: "Technology" as const, partnerLogo: greenStreetLogo, centeredLayout: true, logoClass: "h-12 md:h-14", spotlightH: 80 },
   { id: "861243091", title: "Paths to Growth", partner: "Intoxalock", category: "Technology" as const, partnerLogo: intoxalockLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
   { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", category: "Healthcare" as const, partnerLogo: leitersLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
   { id: "913387297", title: "Investing in Better Healthcare", partner: "Norstella", category: "Healthcare" as const, partnerLogo: norstellaLogo, centeredLayout: true, logoClass: "h-12 md:h-14" },
@@ -287,7 +287,7 @@ export default function Home() {
               {/* Partner logo at top */}
               <div style={{ position: "absolute", top: 48, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 4 }}>
                 {'partnerLogo' in filteredVideos[safeActiveVideo] && filteredVideos[safeActiveVideo].partnerLogo ? (
-                  <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ height: 56, objectFit: "contain", opacity: 0.85 }} />
+                  <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ height: ('spotlightH' in filteredVideos[safeActiveVideo] ? (filteredVideos[safeActiveVideo] as any).spotlightH : 56), objectFit: "contain", opacity: 0.85 }} />
                 ) : (
                   <span style={{ fontFamily: SANS, fontSize: 26, fontWeight: 600, color: "rgba(255,255,255,0.85)" }}>{filteredVideos[safeActiveVideo].partner}</span>
                 )}
