@@ -188,7 +188,7 @@ export default function Home() {
           .wwi-desc { font-family:'DM Sans',sans-serif; font-size:14px; color:rgba(255,255,255,0.4); line-height:1.65; margin-top:16px; }
           .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
           .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:12px; color:rgba(255,255,255,0.5); padding:6px 14px; border-radius:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); transition:background 0.3s ease, border-color 0.3s ease; }
-          .wwi-tech .wwi-pill2:hover { background:rgba(200,152,94,0.15); border-color:rgba(200,152,94,0.3); color:#c8985e; }
+          .wwi-tech .wwi-pill2:hover { background:rgba(77,184,199,0.15); border-color:rgba(77,184,199,0.3); color:#4db8c7; }
           .wwi-hc .wwi-pill2:hover { background:rgba(77,184,199,0.15); border-color:rgba(77,184,199,0.3); color:#4db8c7; }
           .wwi-cta2 { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; text-decoration:none; margin-top:24px; opacity:0; transform:translateY(6px); transition:opacity 0.3s ease 0.35s, transform 0.3s ease 0.35s; }
           .wwi-pnl:hover .wwi-cta2 { opacity:1; transform:translateY(0); }
