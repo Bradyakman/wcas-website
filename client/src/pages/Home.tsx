@@ -171,7 +171,7 @@ export default function Home() {
           .wwi-split:has(.wwi-tech:hover) .wwi-hc .wwi-content { opacity:0; transition:opacity 0.15s ease; pointer-events:none; }
           .wwi-split:has(.wwi-hc:hover) .wwi-tech .wwi-content { opacity:0; transition:opacity 0.15s ease; pointer-events:none; }
           .wwi-split:has(.wwi-tech:hover) .wwi-divider, .wwi-split:has(.wwi-hc:hover) .wwi-divider { opacity:0; transition:opacity 0.3s ease; }
-          .wwi-pnl-bg { position:absolute; inset:0; transition:transform 0.4s ease, opacity 0.4s ease; opacity:0.3; }
+          .wwi-pnl-bg { position:absolute; inset:0; transition:transform 0.4s ease, opacity 0.4s ease; opacity:0; }
           .wwi-pnl:hover .wwi-pnl-bg { transform:scale(1.06); opacity:0.5; }
           .wwi-tech .wwi-pnl-bg { background:radial-gradient(ellipse at 30% 70%, rgba(200,152,94,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(200,152,94,0.08) 0%, transparent 50%); }
           .wwi-hc .wwi-pnl-bg { background:radial-gradient(ellipse at 70% 70%, rgba(77,184,199,0.15) 0%, transparent 60%), radial-gradient(ellipse at 20% 20%, rgba(77,184,199,0.08) 0%, transparent 50%); }
