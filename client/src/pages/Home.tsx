@@ -305,7 +305,8 @@ export default function Home() {
               </div>
 
               {/* Bottom gradient overlay */}
-              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "80px 36px 32px", background: "linear-gradient(to top, rgba(8,14,26,0.95) 0%, rgba(8,14,26,0.7) 30%, transparent 60%)", zIndex: 3, opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease" }}>
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "45%", background: "linear-gradient(to top, rgba(8,14,26,0.95) 0%, rgba(8,14,26,0.7) 20%, transparent 50%)", zIndex: 3, pointerEvents: "none" }} />
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "0 36px 32px", zIndex: 4, opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease" }}>
                 <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, fontWeight: 400, color: "#fff" }}>{filteredVideos[safeActiveVideo].title}</h3>
               </div>
             </div>
