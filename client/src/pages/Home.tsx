@@ -278,7 +278,7 @@ export default function Home() {
 
               {/* Category badge */}
               <div style={{ position: "absolute", top: 24, right: 32, zIndex: 4 }}>
-                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: filteredVideos[safeActiveVideo].category === "Healthcare" ? "#4db8c7" : "#c8985e", padding: "5px 14px", borderRadius: 12, background: filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(77,184,199,0.1)" : "rgba(200,152,94,0.1)", border: `1px solid ${filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(77,184,199,0.2)" : "rgba(200,152,94,0.2)"}` }}>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: filteredVideos[safeActiveVideo].category === "Healthcare" ? "#8BBDE8" : "#4db8c7", padding: "5px 14px", borderRadius: 12, background: filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(139,189,232,0.1)" : "rgba(77,184,199,0.1)", border: `1px solid ${filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(139,189,232,0.2)" : "rgba(77,184,199,0.2)"}` }}>
                   {filteredVideos[safeActiveVideo].category}
                 </span>
               </div>
