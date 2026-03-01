@@ -132,8 +132,8 @@ export default function Home() {
             As one of private equity's first sector specialists, we combine deep sector knowledge with hands-on operational support to build long-term value.
           </p>
           <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
-            <a href="/healthcare" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 600, padding: "16px 36px", borderRadius: 28, border: "1.5px solid rgba(255,255,255,0.3)", background: "none", color: "#fff", cursor: "pointer", textDecoration: "none" }}>Explore Our Portfolio</a>
-            <a href="/#firm" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 600, padding: "16px 36px", borderRadius: 28, border: "1.5px solid rgba(255,255,255,0.3)", background: "none", color: "#fff", cursor: "pointer", textDecoration: "none" }}>Our Approach</a>
+            <a href="/healthcare" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none" }}>Explore Our Portfolio</a>
+            <a href="/#firm" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none" }}>Our Approach</a>
           </div>
         </div>
         <div style={{ position: "relative", zIndex: 2, display: "flex", justifyContent: "space-between", padding: "0 56px 64px" }}>
