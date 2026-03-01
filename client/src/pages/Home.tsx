@@ -153,43 +153,43 @@ export default function Home() {
       </section>
 
       {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
-      <section style={{ padding: 0, background: "#f4f3f0" }}>
+      <section style={{ padding: 0, background: "#152238" }}>
         <style>{`
           @keyframes wwi-shimmer { 0%,100%{ opacity:1 } 50%{ opacity:0.6 } }
-          .wwi-split { display:flex; height:480px; position:relative; background:#f4f3f0; }
-          .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(12,26,46,0.1),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
-          .wwi-split:has(.wwi-tech:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(200,152,94,0.35),transparent); }
-          .wwi-split:has(.wwi-hc:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(77,184,199,0.35),transparent); }
+          .wwi-split { display:flex; height:480px; position:relative; background:#152238; }
+          .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(255,255,255,0.1),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
+          .wwi-split:has(.wwi-tech:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(200,152,94,0.25),transparent); }
+          .wwi-split:has(.wwi-hc:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(77,184,199,0.25),transparent); }
           .wwi-pnl { flex:1; position:relative; cursor:pointer; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; transition:flex 0.4s ease, filter 0.4s ease; }
           .wwi-pnl:hover { flex:1.4; }
-          .wwi-split:has(.wwi-tech:hover) .wwi-hc { flex:0.6; filter:brightness(0.95); }
-          .wwi-split:has(.wwi-hc:hover) .wwi-tech { flex:0.6; filter:brightness(0.95); }
+          .wwi-split:has(.wwi-tech:hover) .wwi-hc { flex:0.6; filter:brightness(0.7); }
+          .wwi-split:has(.wwi-hc:hover) .wwi-tech { flex:0.6; filter:brightness(0.7); }
           .wwi-pnl-bg { position:absolute; inset:0; transition:transform 0.4s ease, opacity 0.4s ease; opacity:0.3; }
           .wwi-pnl:hover .wwi-pnl-bg { transform:scale(1.06); opacity:0.5; }
-          .wwi-tech .wwi-pnl-bg { background:radial-gradient(ellipse at 30% 70%, rgba(200,152,94,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(200,152,94,0.05) 0%, transparent 50%); }
-          .wwi-hc .wwi-pnl-bg { background:radial-gradient(ellipse at 70% 70%, rgba(77,184,199,0.08) 0%, transparent 60%), radial-gradient(ellipse at 20% 20%, rgba(77,184,199,0.05) 0%, transparent 50%); }
-          .wwi-watermark { position:absolute; top:40px; left:48px; font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(12,26,46,0.12); line-height:1; pointer-events:none; animation:wwi-shimmer 4s ease-in-out infinite; transition:color 0.4s, transform 0.4s; z-index:1; }
-          .wwi-pnl:hover .wwi-watermark { animation:none; color:rgba(12,26,46,0.22); transform:translateY(-6px); }
+          .wwi-tech .wwi-pnl-bg { background:radial-gradient(ellipse at 30% 70%, rgba(200,152,94,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(200,152,94,0.08) 0%, transparent 50%); }
+          .wwi-hc .wwi-pnl-bg { background:radial-gradient(ellipse at 70% 70%, rgba(77,184,199,0.15) 0%, transparent 60%), radial-gradient(ellipse at 20% 20%, rgba(77,184,199,0.08) 0%, transparent 50%); }
+          .wwi-watermark { position:absolute; top:40px; left:48px; font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.07); line-height:1; pointer-events:none; animation:wwi-shimmer 4s ease-in-out infinite; transition:color 0.4s, transform 0.4s; z-index:1; }
+          .wwi-pnl:hover .wwi-watermark { animation:none; color:rgba(255,255,255,0.14); transform:translateY(-6px); }
           .wwi-bottom-glow { position:absolute; bottom:0; left:0; right:0; height:120px; opacity:0; transition:opacity 0.4s ease; pointer-events:none; }
           .wwi-pnl:hover .wwi-bottom-glow { opacity:1; }
           .wwi-tech .wwi-bottom-glow { background:linear-gradient(to top, rgba(200,152,94,0.06), transparent); }
           .wwi-hc .wwi-bottom-glow { background:linear-gradient(to top, rgba(77,184,199,0.06), transparent); }
           .wwi-content { position:relative; z-index:2; padding:0 48px 56px; }
-          .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(12,26,46,0.5); padding:6px 16px; border-radius:18px; background:rgba(12,26,46,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(12,26,46,0.06); margin-bottom:20px; }
+          .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:6px 16px; border-radius:18px; background:rgba(255,255,255,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.06); margin-bottom:20px; }
           .wwi-tag-dot { width:6px; height:6px; border-radius:50%; }
-          .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; color:#0c1a2e; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
-          .wwi-desc { font-family:'DM Sans',sans-serif; font-size:14px; color:rgba(12,26,46,0.5); line-height:1.65; max-height:0; overflow:hidden; opacity:0; transition:max-height 0.4s ease 0.05s, opacity 0.4s ease 0.05s, margin 0.4s ease 0.05s; margin-top:0; }
+          .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; color:#fff; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
+          .wwi-desc { font-family:'DM Sans',sans-serif; font-size:14px; color:rgba(255,255,255,0.4); line-height:1.65; max-height:0; overflow:hidden; opacity:0; transition:max-height 0.4s ease 0.05s, opacity 0.4s ease 0.05s, margin 0.4s ease 0.05s; margin-top:0; }
           .wwi-pnl:hover .wwi-desc { max-height:80px; opacity:1; margin-top:16px; }
           .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
-          .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:12px; color:rgba(12,26,46,0.5); padding:6px 14px; border-radius:16px; background:rgba(12,26,46,0.04); border:1px solid rgba(12,26,46,0.1); opacity:0; transform:translateY(6px); transition:opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, border-color 0.3s ease; }
+          .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:12px; color:rgba(255,255,255,0.5); padding:6px 14px; border-radius:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); opacity:0; transform:translateY(6px); transition:opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, border-color 0.3s ease; }
           .wwi-pnl:hover .wwi-pill2 { opacity:1; transform:translateY(0); }
           .wwi-pnl:hover .wwi-pill2:nth-child(1) { transition-delay:0.12s; }
           .wwi-pnl:hover .wwi-pill2:nth-child(2) { transition-delay:0.17s; }
           .wwi-pnl:hover .wwi-pill2:nth-child(3) { transition-delay:0.22s; }
           .wwi-pnl:hover .wwi-pill2:nth-child(4) { transition-delay:0.27s; }
           .wwi-pnl:hover .wwi-pill2:nth-child(5) { transition-delay:0.32s; }
-          .wwi-tech .wwi-pill2:hover { background:rgba(200,152,94,0.1); border-color:rgba(200,152,94,0.3); color:#c8985e; }
-          .wwi-hc .wwi-pill2:hover { background:rgba(77,184,199,0.1); border-color:rgba(77,184,199,0.3); color:#4db8c7; }
+          .wwi-tech .wwi-pill2:hover { background:rgba(200,152,94,0.15); border-color:rgba(200,152,94,0.3); color:#c8985e; }
+          .wwi-hc .wwi-pill2:hover { background:rgba(77,184,199,0.15); border-color:rgba(77,184,199,0.3); color:#4db8c7; }
           .wwi-cta2 { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; text-decoration:none; margin-top:24px; opacity:0; transform:translateY(6px); transition:opacity 0.3s ease 0.35s, transform 0.3s ease 0.35s; }
           .wwi-pnl:hover .wwi-cta2 { opacity:1; transform:translateY(0); }
           .wwi-tech .wwi-cta2 { color:#c8985e; }
