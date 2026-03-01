@@ -238,7 +238,7 @@ export default function Home() {
       {/* ── SPOTLIGHT + SIDEBAR SECTION ── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#152238", marginTop: 0 }}>
         <style>{`
-          .spotlight-main:hover .spotlight-play { transform:translate(-50%,-50%) scale(1.08); }
+          .spotlight-main:hover .spotlight-play { transform:scale(1.08); }
           .spotlight-sidebar-item { display:flex; align-items:center; gap:14px; padding:14px 20px; cursor:pointer; border-left:3px solid transparent; transition:all 0.2s ease; position:relative; }
           .spotlight-sidebar-item:hover { background:rgba(255,255,255,0.04); }
           .spotlight-sidebar-item.active { background:rgba(255,255,255,0.06); border-left-color:${ACCENT}; }
