@@ -159,13 +159,13 @@ export function Navbar() {
             className="transition-all duration-200"
             style={{
               fontFamily: "'Outfit', sans-serif",
-              fontSize: 14,
-              fontWeight: 400,
-              padding: "8px 20px",
-              borderRadius: 24,
-              border: "1.5px solid rgba(107,163,214,0.4)",
-              background: "none",
-              color: "rgba(107,163,214,0.7)",
+              fontSize: 13,
+              fontWeight: 500,
+              padding: "10px 28px",
+              borderRadius: 20,
+              border: "1px solid rgba(255,255,255,0.15)",
+              background: "rgba(255,255,255,0.04)",
+              color: "rgba(255,255,255,0.7)",
               textDecoration: "none",
             }}
           >
