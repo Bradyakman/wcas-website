@@ -250,7 +250,7 @@ export default function Home() {
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 42, fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 20 }}>Building market leaders across healthcare and technology</h2>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>We bring decades of sector expertise and operational resources to every partnership, working alongside management teams to create lasting value.</p>
           </div>
-          <a href="/healthcare" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "1.5px solid rgba(255,255,255,0.25)", background: "none", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>View all companies &rarr;</a>
+          <a href="/healthcare" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>View all companies &rarr;</a>
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 40 }}>
           <div className="port-marquee-wrap">
