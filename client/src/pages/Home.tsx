@@ -125,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* ── STATS ── */}
-      <section style={{ padding: "40px 56px 48px", display: "flex", gap: 48 }}>
+      <section style={{ padding: "56px 56px 56px", display: "flex", gap: 48, background: "rgba(15, 25, 45, 1)", borderTop: "1px solid rgba(255,255,255,0.08)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
         {[
           { num: "$33B+", label: "Capital Raised" },
           { num: "190+", label: "Companies" },
@@ -140,10 +140,10 @@ export default function Home() {
       </section>
 
       {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
-      <section style={{ padding: 0, background: "#0e1f35" }}>
+      <section style={{ padding: 0, background: "#152238" }}>
         <style>{`
           @keyframes wwi-shimmer { 0%,100%{ opacity:1 } 50%{ opacity:0.6 } }
-          .wwi-split { display:flex; height:650px; position:relative; background:#0e1f35; }
+          .wwi-split { display:flex; height:650px; position:relative; background:#152238; }
           .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(255,255,255,0.1),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
           .wwi-split:has(.wwi-tech:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(200,152,94,0.25),transparent); }
           .wwi-split:has(.wwi-hc:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(77,184,199,0.25),transparent); }
@@ -216,7 +216,7 @@ export default function Home() {
       </section>
 
       {/* ── VIDEO SLIDER SECTION ── */}
-      <section style={{ position: "relative", overflow: "hidden", background: BG }}>
+      <section style={{ position: "relative", overflow: "hidden", background: BG, marginTop: 0 }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${missionBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
           <div style={{ position: "absolute", inset: 0, backgroundColor: BG, opacity: 0.92 }}></div>
         </div>
