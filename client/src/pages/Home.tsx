@@ -178,16 +178,9 @@ export default function Home() {
           .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:6px 16px; border-radius:18px; background:rgba(255,255,255,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.06); margin-bottom:20px; }
           .wwi-tag-dot { width:6px; height:6px; border-radius:50%; }
           .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; color:#fff; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
-          .wwi-desc { font-family:'DM Sans',sans-serif; font-size:14px; color:rgba(255,255,255,0.4); line-height:1.65; max-height:0; overflow:hidden; opacity:0; transition:max-height 0.4s ease 0.05s, opacity 0.4s ease 0.05s, margin 0.4s ease 0.05s; margin-top:0; }
-          .wwi-pnl:hover .wwi-desc { max-height:80px; opacity:1; margin-top:16px; }
+          .wwi-desc { font-family:'DM Sans',sans-serif; font-size:14px; color:rgba(255,255,255,0.4); line-height:1.65; margin-top:16px; }
           .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
-          .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:12px; color:rgba(255,255,255,0.5); padding:6px 14px; border-radius:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); opacity:0; transform:translateY(6px); transition:opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, border-color 0.3s ease; }
-          .wwi-pnl:hover .wwi-pill2 { opacity:1; transform:translateY(0); }
-          .wwi-pnl:hover .wwi-pill2:nth-child(1) { transition-delay:0.12s; }
-          .wwi-pnl:hover .wwi-pill2:nth-child(2) { transition-delay:0.17s; }
-          .wwi-pnl:hover .wwi-pill2:nth-child(3) { transition-delay:0.22s; }
-          .wwi-pnl:hover .wwi-pill2:nth-child(4) { transition-delay:0.27s; }
-          .wwi-pnl:hover .wwi-pill2:nth-child(5) { transition-delay:0.32s; }
+          .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:12px; color:rgba(255,255,255,0.5); padding:6px 14px; border-radius:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); transition:background 0.3s ease, border-color 0.3s ease; }
           .wwi-tech .wwi-pill2:hover { background:rgba(200,152,94,0.15); border-color:rgba(200,152,94,0.3); color:#c8985e; }
           .wwi-hc .wwi-pill2:hover { background:rgba(77,184,199,0.15); border-color:rgba(77,184,199,0.3); color:#4db8c7; }
           .wwi-cta2 { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; text-decoration:none; margin-top:24px; opacity:0; transform:translateY(6px); transition:opacity 0.3s ease 0.35s, transform 0.3s ease 0.35s; }
