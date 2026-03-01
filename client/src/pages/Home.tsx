@@ -160,7 +160,7 @@ export default function Home() {
           .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(255,255,255,0.1),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
           .wwi-split:has(.wwi-tech:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(200,152,94,0.25),transparent); }
           .wwi-split:has(.wwi-hc:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(77,184,199,0.25),transparent); }
-          .wwi-pnl { flex:1; position:relative; cursor:pointer; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; transition:flex 0.4s ease, filter 0.4s ease; }
+          .wwi-pnl { flex:1; position:relative; cursor:pointer; overflow:hidden; display:flex; flex-direction:column; justify-content:center; transition:flex 0.4s ease, filter 0.4s ease; }
           .wwi-pnl:hover { flex:1.4; }
           .wwi-split:has(.wwi-tech:hover) .wwi-hc { flex:0.6; filter:brightness(0.7); }
           .wwi-split:has(.wwi-hc:hover) .wwi-tech { flex:0.6; filter:brightness(0.7); }
@@ -168,8 +168,8 @@ export default function Home() {
           .wwi-pnl:hover .wwi-pnl-bg { transform:scale(1.06); opacity:0.5; }
           .wwi-tech .wwi-pnl-bg { background:radial-gradient(ellipse at 30% 70%, rgba(200,152,94,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(200,152,94,0.08) 0%, transparent 50%); }
           .wwi-hc .wwi-pnl-bg { background:radial-gradient(ellipse at 70% 70%, rgba(77,184,199,0.15) 0%, transparent 60%), radial-gradient(ellipse at 20% 20%, rgba(77,184,199,0.08) 0%, transparent 50%); }
-          .wwi-watermark { position:absolute; top:40px; left:48px; font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.07); line-height:1; pointer-events:none; animation:wwi-shimmer 4s ease-in-out infinite; transition:color 0.4s, transform 0.4s; z-index:1; }
-          .wwi-pnl:hover .wwi-watermark { animation:none; color:rgba(255,255,255,0.14); transform:translateY(-6px); }
+          .wwi-watermark { position:absolute; top:40px; left:48px; font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.18); line-height:1; pointer-events:none; animation:wwi-shimmer 4s ease-in-out infinite; transition:color 0.4s, transform 0.4s; z-index:1; }
+          .wwi-pnl:hover .wwi-watermark { animation:none; color:rgba(255,255,255,0.3); transform:translateY(-6px); }
           .wwi-bottom-glow { position:absolute; bottom:0; left:0; right:0; height:120px; opacity:0; transition:opacity 0.4s ease; pointer-events:none; }
           .wwi-pnl:hover .wwi-bottom-glow { opacity:1; }
           .wwi-tech .wwi-bottom-glow { background:linear-gradient(to top, rgba(200,152,94,0.06), transparent); }
