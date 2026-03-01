@@ -289,7 +289,7 @@ export default function Home() {
               {/* Partner logo at top */}
               <div style={{ position: "absolute", top: 48, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 4 }}>
                 {'partnerLogo' in filteredVideos[safeActiveVideo] && filteredVideos[safeActiveVideo].partnerLogo ? (
-                  <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ height: ('spotlightH' in filteredVideos[safeActiveVideo] ? (filteredVideos[safeActiveVideo] as any).spotlightH : 56), objectFit: "contain", opacity: 0.85 }} />
+                  <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ height: ('spotlightH' in filteredVideos[safeActiveVideo] ? (filteredVideos[safeActiveVideo] as any).spotlightH : 65), maxWidth: 300, objectFit: "contain", opacity: 0.85 }} />
                 ) : (
                   <span style={{ fontFamily: SANS, fontSize: 26, fontWeight: 600, color: "rgba(255,255,255,0.85)" }}>{filteredVideos[safeActiveVideo].partner}</span>
                 )}
@@ -306,8 +306,8 @@ export default function Home() {
 
               {/* Bottom gradient overlay */}
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "45%", background: "linear-gradient(to top, rgba(8,14,26,0.95) 0%, rgba(8,14,26,0.7) 20%, transparent 50%)", zIndex: 3, pointerEvents: "none" }} />
-              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "0 36px 32px", zIndex: 4, opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease" }}>
-                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, fontWeight: 400, color: "#fff" }}>{filteredVideos[safeActiveVideo].title}</h3>
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "0 36px 32px", zIndex: 4, opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", textAlign: "center" }}>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 30, fontWeight: 400, color: "#fff" }}>{filteredVideos[safeActiveVideo].title}</h3>
               </div>
             </div>
 
