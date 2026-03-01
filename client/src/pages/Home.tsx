@@ -251,13 +251,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginLeft: 48, flexShrink: 0 }}>
-              <span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, color: "#fff" }}>{String(activeVideo + 1).padStart(2, '0')}</span>
-              <div style={{ width: 48, height: 2, background: "rgba(255,255,255,0.1)", borderRadius: 1, position: "relative" }}>
-                <div style={{ position: "absolute", left: 0, top: 0, height: "100%", borderRadius: 1, background: ACCENT, transition: "width 0.3s ease", width: `${((activeVideo + 1) / wcasVideos.length) * 100}%` }} />
-              </div>
-              <span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 400, color: "rgba(255,255,255,0.35)" }}>{String(wcasVideos.length).padStart(2, '0')}</span>
-            </div>
           </div>
 
           <div style={{ display: "flex", gap: 24 }}>
@@ -323,7 +316,6 @@ export default function Home() {
                     className={`spotlight-sidebar-item ${i === activeVideo ? 'active' : ''}`}
                     onClick={() => switchVideo(i)}
                   >
-                    <span className="sb-num" style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.2)", minWidth: 20 }}>{String(i + 1).padStart(2, '0')}</span>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div className="sb-partner" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.5)", marginBottom: 2, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{video.partner}</div>
                       <div className="sb-title" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.25)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{video.title}</div>
