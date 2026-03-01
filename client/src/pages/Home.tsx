@@ -150,7 +150,7 @@ export default function Home() {
           .wwi-cta2 { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; text-decoration:none; margin-top:24px; opacity:0; transform:translateY(6px); transition:opacity 0.3s ease 0.35s, transform 0.3s ease 0.35s; }
           .wwi-pnl:hover .wwi-cta2 { opacity:1; transform:translateY(0); }
           .wwi-tech .wwi-cta2 { color:#4db8c7; }
-          .wwi-hc .wwi-cta2 { color:#4db8c7; }
+          .wwi-hc .wwi-cta2 { color:#8BBDE8; }
         `}</style>
         <div className="wwi-split">
           <div className="wwi-divider" />
