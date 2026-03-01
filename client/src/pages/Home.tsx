@@ -121,22 +121,20 @@ export default function Home() {
             <a href="/healthcare" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: `1.5px solid ${ACCENT}`, background: "none", color: ACCENT, cursor: "pointer", textDecoration: "none" }}>Explore Our Portfolio</a>
             <a href="/#firm" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: `1.5px solid ${ACCENT}`, background: "none", color: ACCENT, cursor: "pointer", textDecoration: "none" }}>Our Approach</a>
           </div>
-        </div>
-      </section>
-
-      {/* ── STATS ── */}
-      <section style={{ padding: "56px 56px 56px", display: "flex", gap: 48, background: "rgba(15, 25, 45, 1)", borderTop: "1px solid rgba(255,255,255,0.08)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
-        {[
-          { num: "$33B+", label: "Capital Raised" },
-          { num: "190+", label: "Companies" },
-          { num: "18", label: "Funds Raised" },
-          { num: "45+", label: "Years Investing" },
-        ].map((s, i) => (
-          <div key={i} style={{ flex: 1, padding: "28px 0", borderTop: `2px solid ${ACCENT}` }}>
-            <div style={{ fontSize: 36, fontWeight: 700, marginBottom: 4 }}>{s.num}</div>
-            <div style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.55)", fontWeight: 400 }}>{s.label}</div>
+          <div style={{ marginTop: 56, display: "flex", gap: 48 }}>
+            {[
+              { num: "$33B+", label: "Capital Raised" },
+              { num: "190+", label: "Companies" },
+              { num: "18", label: "Funds Raised" },
+              { num: "45+", label: "Years Investing" },
+            ].map((s, i) => (
+              <div key={i} style={{ padding: "20px 0 0", borderTop: `2px solid ${ACCENT}` }}>
+                <div style={{ fontSize: 32, fontWeight: 700, marginBottom: 4, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>{s.num}</div>
+                <div style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 400 }}>{s.label}</div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </section>
 
       {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
