@@ -235,7 +235,7 @@ export default function Home() {
           .port-marquee-track { display:flex; gap:16px; animation:port-scroll 30s linear infinite; width:max-content; }
           .port-marquee-track:hover { animation-play-state:paused; }
           @keyframes port-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-          .port-logo-card { width:180px; height:80px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+          .port-logo-card { width:200px; height:90px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.3s, border-color 0.3s, box-shadow 0.3s; padding:0 24px; box-sizing:border-box; }
           .port-logo-card:hover { transform:translateY(-3px); border-color:rgba(77,184,199,0.3); box-shadow:0 4px 20px rgba(77,184,199,0.08); }
           .port-logo-card span { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:rgba(255,255,255,0.7); letter-spacing:0.5px; }
           @media (prefers-reduced-motion: reduce) { .port-marquee-track { animation:none !important; flex-wrap:wrap; justify-content:center; } }
@@ -256,23 +256,23 @@ export default function Home() {
             <div className="port-marquee-track">
               {[...Array(2)].map((_, setIdx) =>
                 [
-                  { name: "Avetta", src: logoAvetta, h: 28 },
-                  { name: "Asurion", src: logoAsurion, h: 28 },
-                  { name: "InnovAge", src: logoInnovAge, h: 28 },
-                  { name: "Quickbase", src: logoQuickbase, h: 28 },
-                  { name: "GovCIO", src: logoGovCIO, h: 28 },
-                  { name: "Kindred at Home", src: logoKindred, h: 28 },
-                  { name: "LINQ", src: logoLINQ, h: 28 },
-                  { name: "Select Medical", src: logoSelectMed, h: 28 },
-                  { name: "Shields", src: logoShields, h: 28 },
-                  { name: "Norstella", src: logoNorstella, h: 36 },
-                  { name: "Alliance Data", src: logoAllianceData, h: 28 },
-                  { name: "Clearwater Analytics", src: logoClearwater, h: 28 },
-                  { name: "NaviHealth", src: logoNaviHealth, h: 36 },
-                  { name: "Simeio", src: logoSimeio, h: 28 },
+                  { name: "Avetta", src: logoAvetta, h: 26 },
+                  { name: "Asurion", src: logoAsurion, h: 22 },
+                  { name: "InnovAge", src: logoInnovAge, h: 26 },
+                  { name: "Quickbase", src: logoQuickbase, h: 22 },
+                  { name: "GovCIO", src: logoGovCIO, h: 26 },
+                  { name: "Kindred at Home", src: logoKindred, h: 26 },
+                  { name: "LINQ", src: logoLINQ, h: 26 },
+                  { name: "Select Medical", src: logoSelectMed, h: 26 },
+                  { name: "Shields", src: logoShields, h: 26 },
+                  { name: "Norstella", src: logoNorstella, h: 32 },
+                  { name: "Alliance Data", src: logoAllianceData, h: 22 },
+                  { name: "Clearwater Analytics", src: logoClearwater, h: 26 },
+                  { name: "NaviHealth", src: logoNaviHealth, h: 32 },
+                  { name: "Simeio", src: logoSimeio, h: 26 },
                 ].map((co, i) => (
                   <div key={`${setIdx}-${i}`} className="port-logo-card">
-                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 130, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
+                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 120, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
                   </div>
                 ))
               )}
