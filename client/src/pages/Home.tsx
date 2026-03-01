@@ -24,6 +24,7 @@ import logoAllianceData from "@assets/AllianceData_1771799704135_clean.png";
 import logoClearwater from "@assets/Clearwater-Analytics_1771799704135_clean.png";
 import logoNaviHealth from "@assets/navihealth_new_clean.png";
 import logoSimeio from "@assets/simeio_transparent.png";
+import concentraLogo from "@assets/image_1772395982625.png";
 
 import { useState } from "react";
 
@@ -38,7 +39,7 @@ const SANS = "'Outfit', sans-serif";
 
 const wcasVideos = [
   { id: "861242949", title: "Paths to Growth", partner: "Absorb", category: "Technology" as const, partnerLogo: absorbLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
-  { id: "913334845", title: "Investing in Better Healthcare", partner: "Concentra", category: "Healthcare" as const, specialLayout: true },
+  { id: "913334845", title: "Investing in Better Healthcare", partner: "Concentra", category: "Healthcare" as const, partnerLogo: concentraLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
   { id: "861243221", title: "Paths to Growth", partner: "Green Street", category: "Technology" as const, partnerLogo: greenStreetLogo, centeredLayout: true, logoClass: "h-12 md:h-14" },
   { id: "861243091", title: "Paths to Growth", partner: "Intoxalock", category: "Technology" as const, partnerLogo: intoxalockLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
   { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", category: "Healthcare" as const, partnerLogo: leitersLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
