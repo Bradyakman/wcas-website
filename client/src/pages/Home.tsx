@@ -256,23 +256,23 @@ export default function Home() {
             <div className="port-marquee-track">
               {[...Array(2)].map((_, setIdx) =>
                 [
-                  { name: "Avetta", src: logoAvetta },
-                  { name: "Asurion", src: logoAsurion },
-                  { name: "InnovAge", src: logoInnovAge },
-                  { name: "Quickbase", src: logoQuickbase },
-                  { name: "GovCIO", src: logoGovCIO },
-                  { name: "Kindred at Home", src: logoKindred },
-                  { name: "LINQ", src: logoLINQ },
-                  { name: "Select Medical", src: logoSelectMed },
-                  { name: "Shields", src: logoShields },
-                  { name: "Norstella", src: logoNorstella },
-                  { name: "Alliance Data", src: logoAllianceData },
-                  { name: "Clearwater Analytics", src: logoClearwater },
-                  { name: "NaviHealth", src: logoNaviHealth },
-                  { name: "Simeio", src: logoSimeio },
+                  { name: "Avetta", src: logoAvetta, h: 28 },
+                  { name: "Asurion", src: logoAsurion, h: 28 },
+                  { name: "InnovAge", src: logoInnovAge, h: 28 },
+                  { name: "Quickbase", src: logoQuickbase, h: 28 },
+                  { name: "GovCIO", src: logoGovCIO, h: 28 },
+                  { name: "Kindred at Home", src: logoKindred, h: 28 },
+                  { name: "LINQ", src: logoLINQ, h: 28 },
+                  { name: "Select Medical", src: logoSelectMed, h: 28 },
+                  { name: "Shields", src: logoShields, h: 28 },
+                  { name: "Norstella", src: logoNorstella, h: 36 },
+                  { name: "Alliance Data", src: logoAllianceData, h: 28 },
+                  { name: "Clearwater Analytics", src: logoClearwater, h: 28 },
+                  { name: "NaviHealth", src: logoNaviHealth, h: 36 },
+                  { name: "Simeio", src: logoSimeio, h: 28 },
                 ].map((co, i) => (
                   <div key={`${setIdx}-${i}`} className="port-logo-card">
-                    <img src={co.src} alt={co.name} style={{ height: 28, maxWidth: 130, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
+                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 130, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
                   </div>
                 ))
               )}
