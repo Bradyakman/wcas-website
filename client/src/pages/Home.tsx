@@ -37,14 +37,14 @@ const SERIF = "'Libre Baskerville', Georgia, serif";
 const SANS = "'Outfit', sans-serif";
 
 const wcasVideos = [
-  { id: "861242809", title: "Paths to Growth", partner: "Quickbase", partnerLogo: quickbaseLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
-  { id: "913387748", title: "Investing in Better Healthcare", partner: "Shields Health Solutions", partnerLogo: shieldsFullLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
-  { id: "861242949", title: "Paths to Growth", partner: "Absorb", partnerLogo: absorbLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
-  { id: "913387297", title: "Investing in Better Healthcare", partner: "Norstella", partnerLogo: norstellaLogo, centeredLayout: true, logoClass: "h-12 md:h-14" },
-  { id: "861243091", title: "Paths to Growth", partner: "Intoxalock", partnerLogo: intoxalockLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
-  { id: "913334845", title: "Investing in Better Healthcare", partner: "Concentra", specialLayout: true },
-  { id: "861243221", title: "Paths to Growth", partner: "Green Street", partnerLogo: greenStreetLogo, centeredLayout: true, logoClass: "h-12 md:h-14" },
-  { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", partnerLogo: leitersLogo, centeredLayout: true, logoClass: "h-8 md:h-10" }
+  { id: "861242949", title: "Paths to Growth", partner: "Absorb", category: "Technology" as const, partnerLogo: absorbLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
+  { id: "913334845", title: "Investing in Better Healthcare", partner: "Concentra", category: "Healthcare" as const, specialLayout: true },
+  { id: "861243221", title: "Paths to Growth", partner: "Green Street", category: "Technology" as const, partnerLogo: greenStreetLogo, centeredLayout: true, logoClass: "h-12 md:h-14" },
+  { id: "861243091", title: "Paths to Growth", partner: "Intoxalock", category: "Technology" as const, partnerLogo: intoxalockLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
+  { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", category: "Healthcare" as const, partnerLogo: leitersLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
+  { id: "913387297", title: "Investing in Better Healthcare", partner: "Norstella", category: "Healthcare" as const, partnerLogo: norstellaLogo, centeredLayout: true, logoClass: "h-12 md:h-14" },
+  { id: "861242809", title: "Paths to Growth", partner: "Quickbase", category: "Technology" as const, partnerLogo: quickbaseLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
+  { id: "913387748", title: "Investing in Better Healthcare", partner: "Shields Health Solutions", category: "Healthcare" as const, partnerLogo: shieldsFullLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
 ];
 
 export default function Home() {
@@ -52,6 +52,10 @@ export default function Home() {
   const [activeVideo, setActiveVideo] = useState(0);
   const [isVideoTransitioning, setIsVideoTransitioning] = useState(false);
   const [expandedNews, setExpandedNews] = useState(0);
+  const [videoFilter, setVideoFilter] = useState<"All" | "Technology" | "Healthcare">("All");
+
+  const filteredVideos = (videoFilter === "All" ? wcasVideos : wcasVideos.filter(v => v.category === videoFilter)).sort((a, b) => a.partner.localeCompare(b.partner));
+  const safeActiveVideo = Math.min(activeVideo, Math.max(0, filteredVideos.length - 1));
 
   const switchVideo = (idx: number) => {
     if (idx === activeVideo) return;
@@ -60,6 +64,12 @@ export default function Home() {
       setActiveVideo(idx);
       setTimeout(() => setIsVideoTransitioning(false), 50);
     }, 250);
+  };
+
+  const handleFilterChange = (filter: "All" | "Technology" | "Healthcare") => {
+    setVideoFilter(filter);
+    setActiveVideo(0);
+    setIsVideoTransitioning(false);
   };
 
   return (
@@ -234,7 +244,6 @@ export default function Home() {
           .spotlight-sidebar-item.active { background:rgba(255,255,255,0.06); border-left-color:${ACCENT}; }
           .spotlight-sidebar-item.active .sb-partner { color:#fff; }
           .spotlight-sidebar-item.active .sb-title { color:rgba(255,255,255,0.7); }
-          .spotlight-sidebar-item.active .sb-num { color:${ACCENT}; }
         `}</style>
         <div style={{ position: "relative", zIndex: 10, padding: "100px 56px 100px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 48 }}>
@@ -258,7 +267,7 @@ export default function Home() {
             {/* LEFT — Spotlight Card */}
             <div
               className="spotlight-main"
-              onClick={() => setPlayingVideo(wcasVideos[activeVideo].id)}
+              onClick={() => setPlayingVideo(filteredVideos[safeActiveVideo].id)}
               style={{ flex: 2, minHeight: 480, borderRadius: 20, background: "#0f172a", position: "relative", overflow: "hidden", cursor: "pointer", border: "1px solid rgba(255,255,255,0.08)" }}
             >
               {/* Corner brackets */}
@@ -269,18 +278,18 @@ export default function Home() {
 
               {/* Category badge */}
               <div style={{ position: "absolute", top: 24, right: 32, zIndex: 4 }}>
-                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: wcasVideos[activeVideo].title.includes("Healthcare") ? "#4db8c7" : "#c8985e", padding: "5px 14px", borderRadius: 12, background: wcasVideos[activeVideo].title.includes("Healthcare") ? "rgba(77,184,199,0.1)" : "rgba(200,152,94,0.1)", border: `1px solid ${wcasVideos[activeVideo].title.includes("Healthcare") ? "rgba(77,184,199,0.2)" : "rgba(200,152,94,0.2)"}` }}>
-                  {wcasVideos[activeVideo].title.includes("Healthcare") ? "Healthcare" : "Technology"}
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: filteredVideos[safeActiveVideo].category === "Healthcare" ? "#4db8c7" : "#c8985e", padding: "5px 14px", borderRadius: 12, background: filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(77,184,199,0.1)" : "rgba(200,152,94,0.1)", border: `1px solid ${filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(77,184,199,0.2)" : "rgba(200,152,94,0.2)"}` }}>
+                  {filteredVideos[safeActiveVideo].category}
                 </span>
               </div>
 
               {/* Content area with fade transition */}
               <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 2 }}>
                 {/* Partner logo */}
-                {'partnerLogo' in wcasVideos[activeVideo] && wcasVideos[activeVideo].partnerLogo ? (
-                  <img src={wcasVideos[activeVideo].partnerLogo} alt={wcasVideos[activeVideo].partner} style={{ height: 36, marginBottom: 32, opacity: 0.7 }} />
+                {'partnerLogo' in filteredVideos[safeActiveVideo] && filteredVideos[safeActiveVideo].partnerLogo ? (
+                  <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ height: 36, marginBottom: 32, opacity: 0.7 }} />
                 ) : (
-                  <span style={{ fontFamily: SANS, fontSize: 20, fontWeight: 600, color: "rgba(255,255,255,0.7)", marginBottom: 32 }}>{wcasVideos[activeVideo].partner}</span>
+                  <span style={{ fontFamily: SANS, fontSize: 20, fontWeight: 600, color: "rgba(255,255,255,0.7)", marginBottom: 32 }}>{filteredVideos[safeActiveVideo].partner}</span>
                 )}
 
                 {/* Play button */}
@@ -288,38 +297,42 @@ export default function Home() {
                   <div style={{ width: 88, height: 88, borderRadius: "50%", background: `radial-gradient(circle, rgba(107,163,214,0.2) 0%, rgba(107,163,214,0.05) 70%)`, border: `2px solid rgba(107,163,214,0.3)`, display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <Play style={{ color: "white", fill: "white" }} size={28} />
                   </div>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Watch Story</span>
                 </div>
               </div>
 
               {/* Bottom gradient overlay */}
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "80px 32px 28px", background: "linear-gradient(to top, rgba(15,23,42,0.95) 0%, transparent 100%)", zIndex: 3, display: "flex", justifyContent: "space-between", alignItems: "flex-end", opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease" }}>
-                <div>
-                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, fontWeight: 400, color: "#fff", marginBottom: 4 }}>{wcasVideos[activeVideo].title}</h3>
-                  <span style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.4)" }}>featuring {wcasVideos[activeVideo].partner}</span>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 12px", borderRadius: 8, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}>
-                  <img src={wcasLogo} alt="WCAS" style={{ height: 12, filter: "brightness(0) invert(1)", opacity: 0.6 }} />
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 9, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: "rgba(255,255,255,0.4)" }}>WCAS Partner</span>
-                </div>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, fontWeight: 400, color: "#fff" }}>{filteredVideos[safeActiveVideo].title}</h3>
               </div>
             </div>
 
             {/* RIGHT — Sidebar */}
             <div style={{ flex: 0.85, background: "rgba(255,255,255,0.015)", borderRadius: 16, border: "1px solid rgba(255,255,255,0.06)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-              <div style={{ padding: "20px 20px 12px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", color: "rgba(255,255,255,0.35)" }}>All Testimonials</span>
+              <div style={{ padding: "16px 16px 12px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                <div
+                  onClick={() => handleFilterChange("All")}
+                  style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", textAlign: "center", padding: "8px 0", borderRadius: 8, marginBottom: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "All" ? "rgba(255,255,255,0.08)" : "transparent", color: videoFilter === "All" ? "#fff" : "rgba(255,255,255,0.35)", border: `1px solid ${videoFilter === "All" ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.04)"}` }}
+                >All Testimonials</div>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+                  <div
+                    onClick={() => handleFilterChange("Technology")}
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Technology" ? "rgba(77,184,199,0.12)" : "transparent", color: videoFilter === "Technology" ? "#4db8c7" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Technology" ? "rgba(77,184,199,0.25)" : "rgba(255,255,255,0.04)"}` }}
+                  >Technology</div>
+                  <div
+                    onClick={() => handleFilterChange("Healthcare")}
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Healthcare" ? "rgba(139,189,232,0.12)" : "transparent", color: videoFilter === "Healthcare" ? "#8BBDE8" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Healthcare" ? "rgba(139,189,232,0.25)" : "rgba(255,255,255,0.04)"}` }}
+                  >Healthcare</div>
+                </div>
               </div>
               <div style={{ flex: 1, overflowY: "auto" }}>
-                {wcasVideos.map((video, i) => (
+                {filteredVideos.map((video, i) => (
                   <div
-                    key={i}
-                    className={`spotlight-sidebar-item ${i === activeVideo ? 'active' : ''}`}
+                    key={video.id}
+                    className={`spotlight-sidebar-item ${i === safeActiveVideo ? 'active' : ''}`}
                     onClick={() => switchVideo(i)}
                   >
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <div className="sb-partner" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.5)", marginBottom: 2, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{video.partner}</div>
-                      <div className="sb-title" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.25)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{video.title}</div>
+                      <div className="sb-partner" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.5)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{video.partner}</div>
                     </div>
                   </div>
                 ))}
