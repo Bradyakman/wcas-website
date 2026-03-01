@@ -283,17 +283,18 @@ export default function Home() {
                 </span>
               </div>
 
-              {/* Content area with fade transition */}
-              <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 2 }}>
-                {/* Partner logo */}
+              {/* Partner logo at top */}
+              <div style={{ position: "absolute", top: 48, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 4 }}>
                 {'partnerLogo' in filteredVideos[safeActiveVideo] && filteredVideos[safeActiveVideo].partnerLogo ? (
-                  <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ height: 36, marginBottom: 32, opacity: 0.7 }} />
+                  <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ height: 56, objectFit: "contain", opacity: 0.85 }} />
                 ) : (
-                  <span style={{ fontFamily: SANS, fontSize: 20, fontWeight: 600, color: "rgba(255,255,255,0.7)", marginBottom: 32 }}>{filteredVideos[safeActiveVideo].partner}</span>
+                  <span style={{ fontFamily: SANS, fontSize: 26, fontWeight: 600, color: "rgba(255,255,255,0.85)" }}>{filteredVideos[safeActiveVideo].partner}</span>
                 )}
+              </div>
 
-                {/* Play button */}
-                <div className="spotlight-play" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 10, transition: "transform 0.3s ease" }}>
+              {/* Play button centered */}
+              <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", zIndex: 2 }}>
+                <div className="spotlight-play" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, transition: "transform 0.3s ease" }}>
                   <div style={{ width: 88, height: 88, borderRadius: "50%", background: `radial-gradient(circle, rgba(107,163,214,0.2) 0%, rgba(107,163,214,0.05) 70%)`, border: `2px solid rgba(107,163,214,0.3)`, display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <Play style={{ color: "white", fill: "white" }} size={28} />
                   </div>
