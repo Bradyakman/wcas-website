@@ -154,7 +154,7 @@ export default function Home() {
 
       {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
       <section style={{ padding: 0, background: "#152238" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "48px 48px 0" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "100px 56px 0" }}>
           <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Focus Sectors</span>
           <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
         </div>
@@ -283,7 +283,7 @@ export default function Home() {
 
       {/* ── VIDEO SLIDER SECTION ── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#152238", marginTop: 0 }}>
-        <div style={{ position: "relative", zIndex: 10, padding: "80px 56px 100px" }}>
+        <div style={{ position: "relative", zIndex: 10, padding: "100px 56px 100px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start", marginBottom: 48 }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
