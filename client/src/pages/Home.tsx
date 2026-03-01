@@ -157,7 +157,7 @@ export default function Home() {
             <div className="wwi-bottom-glow" />
             <div className="wwi-content">
               <h3>Powering Essential Industries</h3>
-              <p className="wwi-desc">Software and data platforms driving transformation across financial services, government, and industrial sectors.</p>
+              <p className="wwi-desc">We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.</p>
               <div className="wwi-pills">
                 {["Built Environment", "Data & Analytics", "FinTech", "GovTech", "IndustrialTech"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
