@@ -130,7 +130,7 @@ export default function Home() {
             { num: "45+", label: "Years Investing" },
           ].map((s, i) => (
             <div key={i} style={{ flex: 1, padding: "20px 0 0" }}>
-              <div style={{ width: 80, height: 2, background: ACCENT, marginBottom: 20 }} />
+              <div style={{ width: "calc(100% - 24px)", height: 2, background: ACCENT, marginBottom: 20 }} />
               <div style={{ fontSize: 32, fontWeight: 700, marginBottom: 4, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>{s.num}</div>
               <div style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 400 }}>{s.label}</div>
             </div>
