@@ -53,22 +53,22 @@ export function Navbar() {
   };
 
   const navLinks = [
-    { name: "Our Firm", href: "/#firm" },
+    { name: "Our Firm", href: "#" },
     { 
       name: "Technology", 
-      href: "/technology",
+      href: "#",
       dropdown: [
-        { name: "Operating Successes", href: "/technology/operating-successes" }
+        { name: "Operating Successes", href: "#" }
       ]
     },
     { 
       name: "Healthcare", 
-      href: "/healthcare",
+      href: "#",
       dropdown: [
-        { name: "HCIT", href: "/hcit" }
+        { name: "HCIT", href: "#" }
       ]
     },
-    { name: "News", href: "/news" },
+    { name: "News", href: "#" },
   ];
 
   const linkColor = () => "text-white/70 hover:text-white";
@@ -97,14 +97,14 @@ export function Navbar() {
             {navLinks.map((link) => (
               link.dropdown ? (
                 <div key={link.name} className="relative flex items-center gap-1">
-                  <Link
-                    href={link.href}
+                  <a
+                    href="#"
                     className={`text-sm font-medium transition-colors cursor-pointer ${linkColor()}`}
-                    style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
-                    onClick={closeDropdown}
+                    style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', textDecoration: 'none' }}
+                    onClick={(e) => { e.preventDefault(); closeDropdown(); }}
                   >
                     {link.name}
-                  </Link>
+                  </a>
                   <button
                     type="button"
                     aria-expanded={openDropdown === link.name}
@@ -129,15 +129,16 @@ export function Navbar() {
                   >
                     <div className="bg-white rounded-lg shadow-lg border border-border py-2 min-w-[200px] flex flex-col">
                       {link.dropdown.map((dropItem) => (
-                        <Link
+                        <a
                           key={dropItem.name}
-                          href={dropItem.href}
+                          href="#"
                           role="menuitem"
                           className="px-4 py-2 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 transition-colors"
-                          onClick={closeDropdown}
+                          style={{ textDecoration: 'none' }}
+                          onClick={(e) => { e.preventDefault(); closeDropdown(); }}
                         >
                           {dropItem.name}
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -145,9 +146,10 @@ export function Navbar() {
               ) : (
                 <a 
                   key={link.name} 
-                  href={link.href}
+                  href="#"
+                  onClick={e => e.preventDefault()}
                   className={`text-sm font-medium transition-colors ${linkColor()}`}
-                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14 }}
+                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, textDecoration: 'none' }}
                 >
                   {link.name}
                 </a>
@@ -155,7 +157,8 @@ export function Navbar() {
             ))}
           </nav>
           <a
-            href="/#investor"
+            href="#"
+            onClick={e => e.preventDefault()}
             className="pill-btn transition-all duration-200"
             style={{
               fontFamily: "'Outfit', sans-serif",
@@ -183,12 +186,13 @@ export function Navbar() {
 
       {mobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t py-4 px-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
-          {[...navLinks, { name: "Investor Portal", href: "/#investor" }].map((link) => (
+          {[...navLinks, { name: "Investor Portal", href: "#" }].map((link) => (
             <div key={link.name} className="flex flex-col border-b border-border/50 pb-2">
               <a 
-                href={link.href}
+                href="#"
                 className="text-lg font-medium text-foreground py-2"
-                onClick={() => !('dropdown' in link && link.dropdown) && setMobileMenuOpen(false)}
+                style={{ textDecoration: 'none' }}
+                onClick={(e) => { e.preventDefault(); if (!('dropdown' in link && link.dropdown)) setMobileMenuOpen(false); }}
               >
                 {link.name}
               </a>
@@ -197,9 +201,10 @@ export function Navbar() {
                   {(link as any).dropdown.map((dropItem: any) => (
                     <a 
                       key={dropItem.name}
-                      href={dropItem.href}
+                      href="#"
                       className="text-base text-muted-foreground py-1 hover:text-primary"
-                      onClick={() => setMobileMenuOpen(false)}
+                      style={{ textDecoration: 'none' }}
+                      onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); }}
                     >
                       {dropItem.name}
                     </a>

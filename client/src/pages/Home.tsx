@@ -90,8 +90,8 @@ export default function Home() {
             As one of private equity's first sector specialists, we combine deep sector knowledge with hands-on operational support to build long-term value.
           </p>
           <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
-            <a href="/healthcare" className="pill-btn" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none" }}>Explore Our Portfolio</a>
-            <a href="/#firm" className="pill-btn" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none" }}>Our Approach</a>
+            <a href="#" onClick={e => e.preventDefault()} className="pill-btn" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none" }}>Explore Our Portfolio</a>
+            <a href="#" onClick={e => e.preventDefault()} className="pill-btn" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none" }}>Our Approach</a>
           </div>
         </div>
         <div style={{ position: "relative", zIndex: 2, display: "flex", justifyContent: "space-between", padding: "0 56px 64px" }}>
@@ -164,7 +164,7 @@ export default function Home() {
               <div className="wwi-pills">
                 {["Built Environment", "Data & Analytics", "FinTech", "GovTech", "IndustrialTech"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
-              <a href="/technology" className="wwi-cta2">Explore Technology &rarr;</a>
+              <a href="#" onClick={e => e.preventDefault()} className="wwi-cta2">Explore Technology &rarr;</a>
             </div>
           </div>
           <div className="wwi-pnl wwi-hc">
@@ -177,7 +177,7 @@ export default function Home() {
               <div className="wwi-pills">
                 {["Care Delivery", "Healthcare IT", "Payor Solutions", "Pharma Value Chain"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
-              <a href="/healthcare" className="wwi-cta2">Explore Healthcare &rarr;</a>
+              <a href="#" onClick={e => e.preventDefault()} className="wwi-cta2">Explore Healthcare &rarr;</a>
             </div>
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function Home() {
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 42, fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 20, whiteSpace: "nowrap" }}>Building market leaders across healthcare and technology</h2>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>With deep domain experience and a long-term partnership mentality, we look to drive value through a combination of operational improvements, internal growth initiatives and strategic acquisitions.</p>
           </div>
-          <a href="/healthcare" className="pill-btn" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>Explore Our Portfolio &rarr;</a>
+          <a href="#" onClick={e => e.preventDefault()} className="pill-btn" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>Explore Our Portfolio &rarr;</a>
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 48 }}>
           <div className="port-marquee-wrap">
@@ -372,7 +372,7 @@ export default function Home() {
           <div>
             <h2 style={{ fontFamily: SERIF, fontSize: 36, fontWeight: 400, color: "#0c1a2e", lineHeight: 1.2 }}>News & Perspectives</h2>
           </div>
-          <a href="/news" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See All News &#8594;</a>
+          <a href="#" onClick={e => e.preventDefault()} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See All News &#8594;</a>
         </div>
         <div className="news-content-fade" style={{ borderRadius: 16, border: "1px solid rgba(12,26,46,0.08)", overflow: "hidden" }}>
           {([
@@ -399,7 +399,7 @@ export default function Home() {
                   </div>
                   <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
                     <p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: 20 }}>{n.excerpt}</p>
-                    <a href="/news" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "#4db8c7", textDecoration: "none" }}>Read full article &#8594;</a>
+                    <a href="#" onClick={e => e.preventDefault()} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "#4db8c7", textDecoration: "none" }}>Read full article &#8594;</a>
                   </div>
                 </div>
               </div>
