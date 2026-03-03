@@ -149,8 +149,6 @@ export default function WCASAIPage() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center", zIndex: 0 }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(12,26,46,0.55) 0%, rgba(12,26,46,0.8) 70%, rgba(12,26,46,0.95) 100%)", zIndex: 1 }} />
         <div style={{ position: "relative", zIndex: 2, padding: "100px 64px 0" }}>
-          <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.25)", marginBottom: 44, display: "flex", alignItems: "center", gap: 8 }}><Link href="/" style={{ color: "inherit", textDecoration: "none" }}>Home</Link><span style={{ opacity: 0.4 }}>/</span><span>About</span><span style={{ opacity: 0.4 }}>/</span><span style={{ color: "rgba(255,255,255,0.5)" }}>WCAS on AI</span></div>
-          <SL text="AI & Data" />
           <h1 style={{ fontSize: 52, fontWeight: 300, lineHeight: 1.18, color: "#fff", maxWidth: 780, marginBottom: 28 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: ACCENT }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: TEAL }}>Artificial Intelligence</em></h1>
           <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.5)", lineHeight: 1.75, maxWidth: 700, fontWeight: 300, marginBottom: 44 }}>WCAS's AI & Data platform drives the integration of machine learning, advanced analytics, and data infrastructure across our portfolio — from how we evaluate investments to how we create enduring competitive advantage.</p>
           <div style={{ display: "flex", gap: 10, paddingBottom: 48, flexWrap: "wrap" }}>
