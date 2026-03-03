@@ -54,7 +54,6 @@ export function Navbar() {
   };
 
   const navLinks = [
-    { name: "AI at WCAS", href: "/ai" },
     { 
       name: "Technology", 
       href: "#",
