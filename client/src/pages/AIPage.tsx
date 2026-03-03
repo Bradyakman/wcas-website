@@ -146,8 +146,8 @@ export default function WCASAIPage() {
 
       {/* HERO */}
       <section style={{ position: "relative", overflow: "hidden", background: `linear-gradient(to right, rgba(12,26,46,0.92) 0%, rgba(12,26,46,0.75) 40%, rgba(12,26,46,0.45) 100%), url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div style={{ position: "relative", zIndex: 2, padding: "160px 56px 128px" }}>
-          <h1 style={{ fontSize: 48, fontWeight: 400, lineHeight: 1.35, color: "#fff", maxWidth: 820, marginBottom: 32 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
+        <div style={{ position: "relative", zIndex: 2, padding: "160px 56px 24px" }}>
+          <h1 style={{ fontSize: 44, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 32 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
           <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.6)", lineHeight: 1.75, maxWidth: 720, fontWeight: 300, marginBottom: 48 }}>WCAS's AI & Data platform drives the integration of machine learning, advanced analytics, and data infrastructure across our portfolio — from how we evaluate investments to how we create enduring competitive advantage.</p>
           <div style={{ display: "flex", gap: 10, paddingBottom: 40, flexWrap: "wrap" }}>
             {anchors.map(a => (<a key={a.id} href={`#${a.id}`} className={`ap ${activeAnchor===a.id?"ac":""}`} onClick={e=>{e.preventDefault();setActiveAnchor(a.id);document.getElementById(a.id)?.scrollIntoView({behavior:"smooth"})}}>{a.l}</a>))}
@@ -156,7 +156,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" style={{ background: BG, padding: "96px 64px" }}>
+      <section id="about" style={{ background: BG, padding: "32px 64px 96px" }}>
         <Fade><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
           <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>AI's impact on most software companies has been modest to date, but we believe 2026 may be an inflection point. At WCAS, we've built the frameworks, team, and playbooks to ensure our portfolio companies are on the right side of that inflection.</p>
           <div style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.85 }}>
