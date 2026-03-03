@@ -124,7 +124,7 @@ export default function WCASAIPage() {
     <div style={{ fontFamily: SERIF, background: BG, color: "#E4E8ED", minHeight: "100vh" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
-        .ap{font-family:${SANS};font-size:12px;font-weight:500;padding:6px 18px;border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:rgba(255,255,255,0.35);cursor:pointer;transition:all 0.3s;text-decoration:none;white-space:nowrap}.ap:hover{color:#fff;border-color:rgba(255,255,255,0.2)}.ap.ac{color:#fff;border-color:${TEAL};background:rgba(77,184,199,0.08)}
+        .ap{font-family:${SANS};font-size:13px;font-weight:500;padding:10px 24px;border-radius:24px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.55);cursor:pointer;transition:all 0.3s;text-decoration:none;white-space:nowrap}.ap:hover{color:#fff;border-color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.08)}.ap.ac{color:#fff;border-color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.1)}
         .csc{padding:24px 28px;cursor:pointer;border-left:3px solid transparent;transition:all 0.25s}.csc:hover{background:rgba(255,255,255,0.03)}.csc.csa{background:rgba(255,255,255,0.05);border-left-color:${TEAL}}
         .fc{font-family:${SANS};font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;padding:7px 16px;border-radius:16px;cursor:pointer;transition:all 0.25s;border:1px solid rgba(255,255,255,0.06);background:transparent;color:rgba(255,255,255,0.3)}.fc:hover{color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15)}.fc.fca{color:${TEAL};border-color:rgba(77,184,199,0.3);background:rgba(77,184,199,0.08)}
         @keyframes gs{0%{background-position:0% 50%}100%{background-position:200% 50%}}
@@ -145,17 +145,14 @@ export default function WCASAIPage() {
       `}</style>
 
       {/* HERO */}
-      <section style={{ position: "relative", overflow: "hidden", minHeight: 560 }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center", zIndex: 0 }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(12,26,46,0.55) 0%, rgba(12,26,46,0.8) 70%, rgba(12,26,46,0.95) 100%)", zIndex: 1 }} />
-        <div style={{ position: "relative", zIndex: 2, padding: "100px 64px 0" }}>
-          <h1 style={{ fontSize: 52, fontWeight: 300, lineHeight: 1.18, color: "#fff", maxWidth: 780, marginBottom: 28 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: ACCENT }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: TEAL }}>Artificial Intelligence</em></h1>
-          <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.5)", lineHeight: 1.75, maxWidth: 700, fontWeight: 300, marginBottom: 44 }}>WCAS's AI & Data platform drives the integration of machine learning, advanced analytics, and data infrastructure across our portfolio — from how we evaluate investments to how we create enduring competitive advantage.</p>
-          <div style={{ display: "flex", gap: 10, paddingBottom: 48, flexWrap: "wrap" }}>
+      <section style={{ position: "relative", overflow: "hidden", minHeight: 680, background: `linear-gradient(175deg, rgba(12,26,46,0.82) 0%, rgba(12,26,46,0.92) 60%, rgba(12,26,46,0.75) 100%), url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center 40%" }}>
+        <div style={{ position: "relative", zIndex: 2, padding: "140px 64px 0" }}>
+          <h1 style={{ fontSize: 56, fontWeight: 300, lineHeight: 1.15, color: "#fff", maxWidth: 820, marginBottom: 32 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: ACCENT }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: TEAL }}>Artificial Intelligence</em></h1>
+          <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.6)", lineHeight: 1.75, maxWidth: 720, fontWeight: 300, marginBottom: 48 }}>WCAS's AI & Data platform drives the integration of machine learning, advanced analytics, and data infrastructure across our portfolio — from how we evaluate investments to how we create enduring competitive advantage.</p>
+          <div style={{ display: "flex", gap: 10, paddingBottom: 64, flexWrap: "wrap" }}>
             {anchors.map(a => (<a key={a.id} href={`#${a.id}`} className={`ap ${activeAnchor===a.id?"ac":""}`} onClick={e=>{e.preventDefault();setActiveAnchor(a.id);document.getElementById(a.id)?.scrollIntoView({behavior:"smooth"})}}>{a.l}</a>))}
           </div>
         </div>
-        <div style={{ height: 2, background: `linear-gradient(90deg, ${TEAL}, ${ACCENT}, ${GOLD})`, backgroundSize: "200% 100%", animation: "gs 6s linear infinite", opacity: 0.35 }} />
       </section>
 
       {/* ABOUT */}
@@ -364,8 +361,8 @@ export default function WCASAIPage() {
           <h2 style={{ fontSize: 32, fontWeight: 400, color: "#fff", marginBottom: 16 }}>Explore how WCAS creates value</h2>
           <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.4)", marginBottom: 32 }}>Discover our portfolio, our sectors, and the partnerships that define the Welsh Carson way.</p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center" }}>
-            <a href="#" onClick={e=>e.preventDefault()} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 32px", borderRadius: 24, background: TEAL, color: "#fff", textDecoration: "none" }}>Explore Our Portfolio</a>
-            <a href="#" onClick={e=>e.preventDefault()} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 32px", borderRadius: 24, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>Our Sectors</a>
+            <a href="#" onClick={e=>e.preventDefault()} style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "#fff", textDecoration: "none" }}>Explore Our Portfolio</a>
+            <a href="#" onClick={e=>e.preventDefault()} style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, border: "1px solid rgba(255,255,255,0.1)", background: "transparent", color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>Our Sectors</a>
           </div>
         </Fade>
       </section>
