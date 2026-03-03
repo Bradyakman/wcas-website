@@ -15,6 +15,7 @@ export function Navbar() {
                          location === "/news" || 
                          location === "/technology" ||
                          location === "/technology/operating-successes" || 
+                         location === "/ai" ||
                          location.startsWith("/team/");
 
   useEffect(() => {
@@ -53,7 +54,7 @@ export function Navbar() {
   };
 
   const navLinks = [
-    { name: "Our Firm", href: "#" },
+    { name: "AI at WCAS", href: "/ai" },
     { 
       name: "Technology", 
       href: "#",
@@ -143,6 +144,15 @@ export function Navbar() {
                     </div>
                   </div>
                 </div>
+              ) : link.href.startsWith("/") ? (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors ${linkColor()}`}
+                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, textDecoration: 'none' }}
+                >
+                  {link.name}
+                </Link>
               ) : (
                 <a 
                   key={link.name} 
@@ -188,14 +198,25 @@ export function Navbar() {
         <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t py-4 px-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
           {[...navLinks, { name: "Investor Portal", href: "#" }].map((link) => (
             <div key={link.name} className="flex flex-col border-b border-border/50 pb-2">
-              <a 
-                href="#"
-                className="text-lg font-medium text-foreground py-2"
-                style={{ textDecoration: 'none' }}
-                onClick={(e) => { e.preventDefault(); if (!('dropdown' in link && link.dropdown)) setMobileMenuOpen(false); }}
-              >
-                {link.name}
-              </a>
+              {link.href.startsWith("/") ? (
+                <Link
+                  href={link.href}
+                  className="text-lg font-medium text-foreground py-2"
+                  style={{ textDecoration: 'none' }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a 
+                  href="#"
+                  className="text-lg font-medium text-foreground py-2"
+                  style={{ textDecoration: 'none' }}
+                  onClick={(e) => { e.preventDefault(); if (!('dropdown' in link && link.dropdown)) setMobileMenuOpen(false); }}
+                >
+                  {link.name}
+                </a>
+              )}
               {'dropdown' in link && link.dropdown && (
                 <div className="flex flex-col pl-4 mt-2 gap-2 border-l-2 border-border/50 ml-2 mb-2">
                   {(link as any).dropdown.map((dropItem: any) => (
