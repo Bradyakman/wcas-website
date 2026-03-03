@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
-import aiHeroBg from "@assets/image_1772566337214.png";
+import aiHeroBg from "@assets/image_1772566528439.png";
 
 const TEAL = "#4db8c7";
 const ACCENT = "#6BA3D6";
