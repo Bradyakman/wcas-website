@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
+import aiHeroBg from "@assets/image_1772560135025.png";
 
 const TEAL = "#4db8c7";
 const ACCENT = "#6BA3D6";
@@ -144,11 +145,9 @@ export default function WCASAIPage() {
       `}</style>
 
       {/* HERO */}
-      <section style={{ position: "relative", overflow: "hidden", background: `linear-gradient(175deg, ${BG2} 0%, ${BG} 100%)`, minHeight: 560 }}>
-        <ParticleField density={50} />
-        <div style={{ position: "absolute", top: "-25%", right: "-8%", width: "55%", height: "150%", background: "radial-gradient(ellipse at center, rgba(77,184,199,0.06) 0%, transparent 60%)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", top: "10%", right: "12%", width: 280, height: 280, borderRadius: "50%", border: "1px solid rgba(77,184,199,0.07)", animation: "rp 7s ease-in-out infinite", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", top: "15%", right: "15%", width: 200, height: 200, borderRadius: "50%", border: "1px solid rgba(200,152,94,0.05)", animation: "rp 9s ease-in-out infinite 1.5s", pointerEvents: "none" }} />
+      <section style={{ position: "relative", overflow: "hidden", minHeight: 560 }}>
+        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center", zIndex: 0 }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(12,26,46,0.55) 0%, rgba(12,26,46,0.8) 70%, rgba(12,26,46,0.95) 100%)", zIndex: 1 }} />
         <div style={{ position: "relative", zIndex: 2, padding: "100px 64px 0" }}>
           <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.25)", marginBottom: 44, display: "flex", alignItems: "center", gap: 8 }}><Link href="/" style={{ color: "inherit", textDecoration: "none" }}>Home</Link><span style={{ opacity: 0.4 }}>/</span><span>About</span><span style={{ opacity: 0.4 }}>/</span><span style={{ color: "rgba(255,255,255,0.5)" }}>WCAS on AI</span></div>
           <SL text="AI & Data" />
