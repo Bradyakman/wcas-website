@@ -160,7 +160,7 @@ export default function WCASAIPage() {
       {/* ABOUT */}
       <section id="about" style={{ background: BG, padding: "32px 64px 96px" }}>
         <Fade><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
-          <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. At WCAS, we've built the data networks, frameworks, and operational playbooks to put our portfolio on the right side of that shift.</p>
+          <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. At WCAS, we've built the data networks, frameworks, and operational playbooks to ensure our partner companies are on the right side of that shift.</p>
           <div style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.85 }}>
             <p style={{ marginBottom: 24 }}>With over 45 years of specialization in healthcare and technology, WCAS has built proprietary data networks and analytical frameworks that compound insight across every investment cycle.</p>
             <p>Our AI outlook centers on a key conviction: incumbency matters. The convergence of traditional SaaS and AI creates massive opportunities for well-positioned software companies with deep data moats, mission-critical workflows, and strong network effects.</p>
