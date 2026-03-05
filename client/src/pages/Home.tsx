@@ -81,7 +81,7 @@ export default function Home() {
 
       {/* ── HERO WITH IMAGE ── */}
       <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
-        <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "280px 56px 128px", maxWidth: 1100 }}>
+        <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "220px 56px 48px", maxWidth: 1100 }}>
           <h1 style={{ fontSize: 36, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
             For over 45 years, WCAS has partnered with industry leaders across technology &{" "}
             healthcare to <em style={{ fontStyle: "italic", color: "#8BBDE8" }}>reshape landscapes and drive growth.</em>
@@ -94,7 +94,7 @@ export default function Home() {
             <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
           </div>
         </div>
-        <div style={{ position: "relative", zIndex: 2, display: "flex", justifyContent: "space-between", padding: "0 56px 64px" }}>
+        <div style={{ position: "relative", zIndex: 2, display: "flex", justifyContent: "space-between", padding: "0 56px 40px" }}>
           {[
             { num: "$33B+", label: "Capital Raised" },
             { num: "190+", label: "Companies" },
