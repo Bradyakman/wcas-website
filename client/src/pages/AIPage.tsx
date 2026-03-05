@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
-import aiHeroBg from "@assets/image_1772566528439.png";
+import aiHeroBg from "@assets/image_1772741431593.png";
 
 const TEAL = "#4db8c7";
 const ACCENT = "#6BA3D6";
@@ -145,7 +145,7 @@ export default function WCASAIPage() {
       `}</style>
 
       {/* HERO */}
-      <section style={{ position: "relative", overflow: "hidden", background: `linear-gradient(to right, rgba(12,26,46,0.92) 0%, rgba(12,26,46,0.75) 40%, rgba(12,26,46,0.45) 100%), url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section style={{ position: "relative", overflow: "hidden", background: `linear-gradient(to right, rgba(0,0,0,0.75) 0%, transparent 60%), url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
         <div style={{ position: "relative", zIndex: 2, padding: "160px 56px 24px" }}>
           <h1 style={{ fontSize: 44, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 32 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
           <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.6)", lineHeight: 1.75, maxWidth: 720, fontWeight: 300, marginBottom: 48 }}>WCAS's AI & Data platform drives the integration of machine learning, advanced analytics, and data infrastructure across our portfolio — from how we evaluate investments to how we create enduring competitive advantage.</p>
