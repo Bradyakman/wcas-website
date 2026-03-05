@@ -150,7 +150,19 @@ export default function WCASAIPage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.70) 35%, rgba(0,0,0,0.30) 60%, transparent 80%)" }} />
         <div style={{ position: "relative", zIndex: 2, padding: "280px 64px 24px" }}>
           <h1 style={{ fontSize: 44, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 48 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
-          <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.6)", lineHeight: 1.75, maxWidth: 920, fontWeight: 300, marginBottom: 32 }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we invest, operate, and create value.</p>
+          <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.6)", lineHeight: 1.75, maxWidth: 920, fontWeight: 300, marginBottom: 40 }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we invest, operate, and create value.</p>
+          <div style={{ display: "flex", gap: 48, marginBottom: 36 }}>
+            {[
+              { num: "300+", label: "AI Use Cases Catalogued" },
+              { num: "45+", label: "Years of Sector Data" },
+              { num: "6", label: "Dedicated AI & Digital Team Members" },
+            ].map((s, i) => (
+              <div key={i} style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
+                <span style={{ fontFamily: SANS, fontSize: 22, fontWeight: 600, color: "rgba(255,255,255,0.7)" }}>{s.num}</span>
+                <span style={{ fontFamily: SANS, fontSize: 12, fontWeight: 400, color: "rgba(255,255,255,0.35)", letterSpacing: 0.5 }}>{s.label}</span>
+              </div>
+            ))}
+          </div>
           <div style={{ display: "flex", gap: 10, paddingBottom: 40, flexWrap: "wrap" }}>
             {anchors.map(a => (<a key={a.id} href={`#${a.id}`} className={`ap ${activeAnchor===a.id?"ac":""}`} onClick={e=>{e.preventDefault();setActiveAnchor(a.id);document.getElementById(a.id)?.scrollIntoView({behavior:"smooth"})}}>{a.l}</a>))}
           </div>
