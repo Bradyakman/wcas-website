@@ -161,10 +161,7 @@ export default function WCASAIPage() {
       <section id="about" style={{ background: BG, padding: "32px 64px 96px" }}>
         <Fade><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
           <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. At WCAS, we've built the data networks, frameworks, and operational playbooks to ensure our partner companies are on the right side of that shift.</p>
-          <div style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.85 }}>
-            <p style={{ marginBottom: 24 }}>Our AI outlook centers on a key conviction: incumbency matters. With over 45 years investing in healthcare and technology, the companies best positioned to win with AI already have the data moats, mission-critical workflows, and customer trust.</p>
-            <p>The foundation exists. The window to act on it is now.</p>
-          </div>
+          <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>Our AI outlook centers on a key conviction: incumbency matters. With over 45 years investing in healthcare and technology, the companies best positioned to win with AI already have the data moats, mission-critical workflows, and customer trust. The foundation exists. The window to act on it is now.</p>
         </div></Fade>
       </section>
 
