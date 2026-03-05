@@ -150,7 +150,7 @@ export default function WCASAIPage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.70) 35%, rgba(0,0,0,0.30) 60%, transparent 80%)" }} />
         <div style={{ position: "relative", zIndex: 2, padding: "280px 64px 24px" }}>
           <h1 style={{ fontSize: 44, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 48 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
-          <p style={{ fontFamily: SANS, fontSize: 22, color: "rgba(255,255,255,0.85)", lineHeight: 1.7, maxWidth: 920, fontWeight: 400, marginBottom: 40 }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we invest, operate, and create value.</p>
+          <p style={{ fontFamily: SANS, fontSize: 22, color: "rgba(255,255,255,0.85)", lineHeight: 1.7, fontWeight: 400, marginBottom: 40 }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we invest, operate, and create value.</p>
           <div style={{ display: "flex", gap: 10, paddingBottom: 40, flexWrap: "wrap" }}>
             {anchors.map(a => (<a key={a.id} href={`#${a.id}`} className={`ap ${activeAnchor===a.id?"ac":""}`} onClick={e=>{e.preventDefault();setActiveAnchor(a.id);document.getElementById(a.id)?.scrollIntoView({behavior:"smooth"})}}>{a.l}</a>))}
           </div>
