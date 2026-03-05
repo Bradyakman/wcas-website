@@ -145,7 +145,9 @@ export default function WCASAIPage() {
       `}</style>
 
       {/* HERO */}
-      <section style={{ position: "relative", overflow: "hidden", width: "100%", minHeight: 575, background: `linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 40%, transparent 65%), url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+      <section style={{ position: "relative", overflow: "hidden", width: "100%", minHeight: 575 }}>
+        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 40%, transparent 65%)" }} />
         <div style={{ position: "relative", zIndex: 2, padding: "160px 56px 24px" }}>
           <h1 style={{ fontSize: 44, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 32 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
           <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.6)", lineHeight: 1.75, maxWidth: 720, fontWeight: 300, marginBottom: 48 }}>WCAS's AI & Data platform drives the integration of machine learning, advanced analytics, and data infrastructure across our portfolio — from how we evaluate investments to how we create enduring competitive advantage.</p>
