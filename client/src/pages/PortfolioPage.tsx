@@ -194,7 +194,7 @@ export default function PortfolioPage() {
                         );
                       })}
                     </div>
-                    <div style={{ height: 1, background: "#e0e0e0", margin: "0" }} />
+                    <hr style={{ border: "none", borderTop: "1px solid #e0e0e0", margin: 0 }} />
                   </div>
                 ))}
               </div>
