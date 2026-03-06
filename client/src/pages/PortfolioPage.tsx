@@ -203,7 +203,7 @@ export default function PortfolioPage() {
             <>
               {techCompanies.length > 0 && renderGrid(techCompanies, 0)}
               {techCompanies.length > 0 && hcCompanies.length > 0 && (
-                <div style={{ borderTop: "2px solid #d1d5db", margin: "0" }} />
+                <div style={{ borderTop: "1px solid #d5d5d5", margin: "0" }} />
               )}
               {hcCompanies.length > 0 && renderGrid(hcCompanies, techCompanies.length)}
             </>
