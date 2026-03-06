@@ -171,8 +171,13 @@ export default function PortfolioPage() {
                     justifyContent: "center",
                     borderBottom: "1px solid #e4e4e4",
                     borderRight: col < 3 ? "1px solid #e4e4e4" : "none",
-                    background: isHovered ? "#f7f7f7" : "#fff",
-                    transition: "background 0.3s",
+                    background: isHovered ? "#ffffff" : "#fff",
+                    transform: isHovered ? "scale(1.02)" : "scale(1)",
+                    boxShadow: isHovered ? "0 8px 40px rgba(0,0,0,0.12)" : "none",
+                    borderColor: isHovered ? "transparent" : "#e4e4e4",
+                    transition: "transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.25s ease, background 0.25s ease",
+                    position: "relative",
+                    zIndex: isHovered ? 10 : 1,
                     cursor: "pointer",
                   }}
                 >
