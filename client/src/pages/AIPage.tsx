@@ -116,7 +116,7 @@ export default function WCASAIPage() {
   
   const fCS = csFilter === "All" ? caseStudies : caseStudies.filter(c => c.sector === csFilter);
   const si = Math.min(activeCS, fCS.length - 1);
-  const anchors = [{id:"about",l:"About"},{id:"outlook",l:"Our Outlook"},{id:"playbook",l:"Our Playbook"},{id:"case-studies",l:"Case Studies"},{id:"team",l:"The Team"}];
+  const anchors = [{id:"about",l:"About"},{id:"outlook",l:"Our Outlook"},{id:"playbook",l:"Our Playbook"},{id:"case-studies",l:"Case Studies"}];
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
@@ -272,30 +272,6 @@ export default function WCASAIPage() {
         </div>
       </section>
 
-      {/* TEAM */}
-      <section id="team" style={{ background: BG, padding: "96px 0", overflow: "hidden" }}>
-        <Fade style={{ display: "flex", alignItems: "center", gap: 0 }}>
-          <div style={{ flex: 1.3, overflow: "hidden", position: "relative" }}>
-            <div style={{ position: "absolute", top: 0, bottom: 0, left: 0, width: 80, background: `linear-gradient(to right, ${BG}, transparent)`, zIndex: 2, pointerEvents: "none" }} />
-            <div style={{ position: "absolute", top: 0, bottom: 0, right: 0, width: 80, background: `linear-gradient(to left, ${BG}, transparent)`, zIndex: 2, pointerEvents: "none" }} />
-            <div className="team-track">
-              {[...teamMembers, ...teamMembers].map((m, i) => (
-                <div key={i} className="team-photo-card">
-                  {m.photo ? <img src={m.photo} alt={m.name} className="team-photo-img" style={{ width: 180, height: 180, borderRadius: 16, objectFit: "cover", border: "1px solid rgba(255,255,255,0.08)" }} /> : <div style={{ width: 180, height: 180, borderRadius: 16, background: "linear-gradient(135deg, rgba(77,184,199,0.15), rgba(107,163,214,0.1))", border: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'DM Sans', sans-serif", fontSize: 36, fontWeight: 700, color: "rgba(77,184,199,0.5)" }}>{m.initials}</div>}
-                  <div style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, color: "#fff", marginTop: 14 }}>{m.name}</div>
-                  <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.4)", marginTop: 4 }}>{m.role}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div style={{ flex: 0.9, paddingRight: 64, paddingLeft: 24 }}>
-            <SL text="The Team" />
-            <p style={{ fontSize: 34, fontWeight: 400, color: "#fff", lineHeight: 1.35, marginBottom: 24 }}>A dedicated team of technologists driving AI strategy across the WCAS portfolio.</p>
-            <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.42)", lineHeight: 1.7, marginBottom: 32 }}>From software and healthcare CTOs to AI implementation specialists, our team is embedded across every portfolio company — turning AI ambition into measurable results.</p>
-            <a href="#" onClick={e => e.preventDefault()} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 600, textTransform: "uppercase", letterSpacing: 1.5, padding: "14px 32px", borderRadius: 28, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.7)", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10 }}>View Team <span>{"\u2192"}</span></a>
-          </div>
-        </Fade>
-      </section>
 
       {/* QUOTE */}
       <section style={{ background: BG2, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
