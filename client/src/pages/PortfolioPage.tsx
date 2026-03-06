@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import aiHeroBg from "@assets/image_1772741431593.png";
+import equilendLogo from "@assets/image_1772774291097.png";
 
 const BG = "#0C1A2E";
 const SERIF = "'Cormorant Garamond', Georgia, serif";
@@ -22,10 +23,10 @@ function Fade({ children, delay = 0, style }: { children: React.ReactNode; delay
   return <div ref={f.ref} style={{ ...style, ...f.style }}>{children}</div>;
 }
 
-type Company = { name: string; sector: "Technology" | "Healthcare"; color: string; status: "current" | "realized" };
+type Company = { name: string; sector: "Technology" | "Healthcare"; color: string; status: "current" | "realized"; logo?: string };
 
 const companies: Company[] = [
-  { name: "Equilend", sector: "Technology", color: "#2563eb", status: "current" },
+  { name: "Equilend", sector: "Technology", color: "#2563eb", status: "current", logo: equilendLogo },
   { name: "Grant Street", sector: "Technology", color: "#0d9488", status: "current" },
   { name: "ImageTrend", sector: "Technology", color: "#0284c7", status: "current" },
   { name: "LINQ", sector: "Technology", color: "#4f46e5", status: "current" },
@@ -181,14 +182,18 @@ export default function PortfolioPage() {
                     cursor: "pointer",
                   }}
                 >
-                  <span style={{
-                    fontFamily: SANS,
-                    fontSize: 22,
-                    fontWeight: 600,
-                    color: isHovered ? c.color : "#c8c8c8",
-                    transition: "color 0.3s",
-                    textAlign: "center",
-                  }}>{c.name}</span>
+                  {c.logo ? (
+                    <img src={c.logo} alt={c.name} style={{ maxHeight: 40, maxWidth: 160, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) opacity(0.35)", transition: "filter 0.3s" }} />
+                  ) : (
+                    <span style={{
+                      fontFamily: SANS,
+                      fontSize: 22,
+                      fontWeight: 600,
+                      color: isHovered ? c.color : "#c8c8c8",
+                      transition: "color 0.3s",
+                      textAlign: "center",
+                    }}>{c.name}</span>
+                  )}
                 </div>
               );
             })}
