@@ -226,10 +226,10 @@ export default function WCASAIPage() {
                       </div>
                     </div>
                     <div className="cs-flip-back" style={{ background: "rgba(8,14,28,0.85)", border: `1px solid ${accentBorder}`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", backdropFilter: "blur(12px)" }}>
-                      <div style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, marginBottom: 16 }}>Use Case</div>
-                      <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.7)", lineHeight: 1.75, marginBottom: 24 }}>{cs.useCase}</p>
-                      <div style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, marginBottom: 12 }}>Build / Source</div>
-                      <p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.7 }}>{cs.build}</p>
+                      <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, marginBottom: 16 }}>Use Case</div>
+                      <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.7)", lineHeight: 1.7, marginBottom: 28 }}>{cs.useCase}</p>
+                      <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, marginBottom: 12 }}>Build / Source</div>
+                      <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.5)", lineHeight: 1.7 }}>{cs.build}</p>
                     </div>
                   </div>
                 </div>
