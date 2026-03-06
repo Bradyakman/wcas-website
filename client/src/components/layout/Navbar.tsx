@@ -80,7 +80,7 @@ export function Navbar() {
         isScrolled ? "py-3" : "py-5"
       }`}
       style={{
-        backgroundColor: isScrolled ? 'rgba(12,26,46,0.95)' : 'rgba(12,26,46,0.7)',
+        backgroundColor: isScrolled ? 'rgba(10,22,40,0.95)' : 'rgba(10,22,40,0.7)',
         borderBottom: '1px solid rgba(255,255,255,0.08)',
       }}
     >
