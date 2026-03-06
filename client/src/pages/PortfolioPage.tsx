@@ -93,9 +93,9 @@ export default function PortfolioPage() {
         <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
           <button
             onClick={() => { setStatusOpen(!statusOpen); setSectorOpen(false); }}
-            style={{ fontFamily: SANS, fontSize: 16, fontWeight: 500, padding: "14px 36px", borderRadius: 25, border: "1px solid #888", background: "#fff", color: "#222", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, width: 200, justifyContent: "center" }}
+            style={{ fontFamily: SANS, fontSize: 16, fontWeight: 500, padding: "14px 36px", borderRadius: 25, border: statusFilter !== "current" ? "none" : "1px solid #888", background: statusFilter !== "current" ? "#0C1A2E" : "#fff", color: statusFilter !== "current" ? "#fff" : "#222", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, width: 200, justifyContent: "center" }}
           >
-            Status
+            {statusFilter === "current" ? "Status" : statusDropdownLabels[statusFilter]}
             <span style={{ fontSize: 10 }}>▾</span>
           </button>
           {statusOpen && (
@@ -113,9 +113,9 @@ export default function PortfolioPage() {
         <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
           <button
             onClick={() => { setSectorOpen(!sectorOpen); setStatusOpen(false); }}
-            style={{ fontFamily: SANS, fontSize: 16, fontWeight: 500, padding: "14px 36px", borderRadius: 25, border: "1px solid #888", background: "#fff", color: "#222", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, width: 200, justifyContent: "center" }}
+            style={{ fontFamily: SANS, fontSize: 16, fontWeight: 500, padding: "14px 36px", borderRadius: 25, border: sectorFilter !== "all" ? "none" : "1px solid #888", background: sectorFilter !== "all" ? "#0C1A2E" : "#fff", color: sectorFilter !== "all" ? "#fff" : "#222", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, width: 200, justifyContent: "center" }}
           >
-            Sector
+            {sectorFilter === "all" ? "Sector" : sectorDropdownLabels[sectorFilter]}
             <span style={{ fontSize: 10 }}>▾</span>
           </button>
           {sectorOpen && (
