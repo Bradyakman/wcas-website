@@ -98,7 +98,7 @@ export function Navbar() {
           <nav ref={navRef} className="flex items-center gap-7">
             {navLinks.map((link) => (
               link.dropdown ? (
-                <div key={link.name} className="relative flex items-center gap-1">
+                <div key={link.name} className="relative flex items-center gap-0">
                   <a
                     href="#"
                     className={`text-sm font-medium transition-colors cursor-pointer ${linkColor()}`}
