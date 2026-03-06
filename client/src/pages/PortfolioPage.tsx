@@ -69,58 +69,61 @@ export default function PortfolioPage() {
         <div style={{ position: "relative", zIndex: 2, padding: "220px 64px 64px" }}>
           <h1 style={{ fontSize: 64, fontWeight: 400, lineHeight: 1.2, color: "#fff", marginBottom: 48 }}>Building companies that <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>define</em> their categories.</h1>
           <p style={{ fontFamily: SANS, fontSize: 19, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: "100%", marginBottom: 40 }}>Over 45 years and 190+ investments, WCAS has partnered with exceptional management teams across technology and healthcare to build market-leading companies.</p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
-              <button
-                onClick={() => { setStatusOpen(!statusOpen); setSectorOpen(false); }}
-                style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", display: "flex", alignItems: "center", gap: 8 }}
-              >
-                <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e" }} />
-                {statusLabels[statusFilter]}
-                <span style={{ fontSize: 10 }}>▾</span>
-              </button>
-              {statusOpen && (
-                <div style={{ position: "absolute", top: "calc(100% + 6px)", left: 0, background: "#fff", border: "1px solid #e4e4e4", borderRadius: 12, boxShadow: "0 8px 24px rgba(0,0,0,0.1)", overflow: "hidden", minWidth: 200, zIndex: 20 }}>
-                  {(["current", "realized", "all"] as const).map(v => (
-                    <div key={v} onClick={() => { setStatusFilter(v); setStatusOpen(false); }} style={{ fontFamily: SANS, fontSize: 13, padding: "10px 20px", cursor: "pointer", background: statusFilter === v ? "#f5f5f5" : "#fff", color: "#333" }}
-                      onMouseEnter={e => (e.currentTarget.style.background = "#f5f5f5")}
-                      onMouseLeave={e => (e.currentTarget.style.background = statusFilter === v ? "#f5f5f5" : "#fff")}
-                    >{statusLabels[v]}</div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
-              <button
-                onClick={() => { setSectorOpen(!sectorOpen); setStatusOpen(false); }}
-                style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", display: "flex", alignItems: "center", gap: 6 }}
-              >
-                {sectorLabels[sectorFilter]}
-                <span style={{ fontSize: 10 }}>▾</span>
-              </button>
-              {sectorOpen && (
-                <div style={{ position: "absolute", top: "calc(100% + 6px)", left: 0, background: "#fff", border: "1px solid #e4e4e4", borderRadius: 12, boxShadow: "0 8px 24px rgba(0,0,0,0.1)", overflow: "hidden", minWidth: 160, zIndex: 20 }}>
-                  {(["all", "Technology", "Healthcare"] as const).map(v => (
-                    <div key={v} onClick={() => { setSectorFilter(v); setSectorOpen(false); }} style={{ fontFamily: SANS, fontSize: 13, padding: "10px 20px", cursor: "pointer", background: sectorFilter === v ? "#f5f5f5" : "#fff", color: "#333" }}
-                      onMouseEnter={e => (e.currentTarget.style.background = "#f5f5f5")}
-                      onMouseLeave={e => (e.currentTarget.style.background = sectorFilter === v ? "#f5f5f5" : "#fff")}
-                    >{sectorLabels[v]}</div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <input
-              type="text"
-              placeholder="Search"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              style={{ fontFamily: SANS, fontSize: 15, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.15)", outline: "none", width: 200, background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)" }}
-            />
-          </div>
         </div>
       </section>
+
+      <div style={{ position: "sticky", top: 68, zIndex: 10, background: "rgba(255,255,255,0.97)", backdropFilter: "blur(16px)", borderBottom: "1px solid #e8e8e8", padding: "18px 48px", display: "flex", alignItems: "center", justifyContent: "center", gap: 12, boxShadow: "0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)", borderRadius: "0 0 20px 20px" }}>
+        <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
+          <button
+            onClick={() => { setStatusOpen(!statusOpen); setSectorOpen(false); }}
+            style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 22px", borderRadius: 20, border: "none", background: "#0a1628", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 8 }}
+          >
+            <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e" }} />
+            {statusLabels[statusFilter]}
+            <span style={{ fontSize: 10 }}>▾</span>
+          </button>
+          {statusOpen && (
+            <div style={{ position: "absolute", top: "calc(100% + 6px)", left: 0, background: "#fff", border: "1px solid #e4e4e4", borderRadius: 12, boxShadow: "0 8px 24px rgba(0,0,0,0.1)", overflow: "hidden", minWidth: 200, zIndex: 20 }}>
+              {(["current", "realized", "all"] as const).map(v => (
+                <div key={v} onClick={() => { setStatusFilter(v); setStatusOpen(false); }} style={{ fontFamily: SANS, fontSize: 13, padding: "10px 20px", cursor: "pointer", background: statusFilter === v ? "#f5f5f5" : "#fff", color: "#333" }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "#f5f5f5")}
+                  onMouseLeave={e => (e.currentTarget.style.background = statusFilter === v ? "#f5f5f5" : "#fff")}
+                >{statusLabels[v]}</div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
+          <button
+            onClick={() => { setSectorOpen(!sectorOpen); setStatusOpen(false); }}
+            style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 22px", borderRadius: 20, border: "none", background: "#0a1628", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 6 }}
+          >
+            {sectorLabels[sectorFilter]}
+            <span style={{ fontSize: 10 }}>▾</span>
+          </button>
+          {sectorOpen && (
+            <div style={{ position: "absolute", top: "calc(100% + 6px)", left: 0, background: "#fff", border: "1px solid #e4e4e4", borderRadius: 12, boxShadow: "0 8px 24px rgba(0,0,0,0.1)", overflow: "hidden", minWidth: 160, zIndex: 20 }}>
+              {(["all", "Technology", "Healthcare"] as const).map(v => (
+                <div key={v} onClick={() => { setSectorFilter(v); setSectorOpen(false); }} style={{ fontFamily: SANS, fontSize: 13, padding: "10px 20px", cursor: "pointer", background: sectorFilter === v ? "#f5f5f5" : "#fff", color: "#333" }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "#f5f5f5")}
+                  onMouseLeave={e => (e.currentTarget.style.background = sectorFilter === v ? "#f5f5f5" : "#fff")}
+                >{sectorLabels[v]}</div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div style={{ position: "absolute", right: 48 }}>
+          <input
+            type="text"
+            placeholder="Search"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            style={{ fontFamily: SANS, fontSize: 13, padding: "10px 22px", borderRadius: 20, border: "1px solid #e4e4e4", outline: "none", width: 200, background: "#fff", color: "#333" }}
+          />
+        </div>
+      </div>
 
       <div style={{ background: "#fff", padding: "0 64px" }}>
         {filtered.length === 0 ? (
