@@ -177,13 +177,12 @@ export default function WCASAIPage() {
           <Fade delay={100}>
             <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: 48 }}>
               {scaleSteps.map((s, i) => (
-                <div key={i} className="pb-row" style={{ display: "grid", gridTemplateColumns: "48px 240px 1fr", gap: 24, alignItems: "start", padding: "44px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", transition: "background 0.3s ease, padding-left 0.3s ease", borderRadius: 4, cursor: "default" }}>
-                  <div style={{ color: "rgba(77,184,199,0.5)", marginTop: 4, transition: "color 0.3s" }} className="pb-icon">{s.icon}</div>
+                <div key={i} className="pb-row" style={{ display: "grid", gridTemplateColumns: "260px 1fr", gap: 32, alignItems: "start", padding: "44px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", transition: "background 0.3s ease, padding-left 0.3s ease", borderRadius: 4, cursor: "default" }}>
                   <div>
-                    <div style={{ fontFamily: SANS, fontSize: 11, fontWeight: 600, letterSpacing: 1.8, textTransform: "uppercase", color: TEAL, marginBottom: 10 }}>{s.detail}</div>
-                    <h4 style={{ fontFamily: SANS, fontSize: 20, fontWeight: 700, color: "#fff", lineHeight: 1.3, textTransform: "uppercase", letterSpacing: 0.5 }}>{s.title}</h4>
+                    <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.8, textTransform: "uppercase", color: TEAL, marginBottom: 10 }}>{s.detail}</div>
+                    <h4 style={{ fontFamily: SANS, fontSize: 22, fontWeight: 700, color: "#fff", lineHeight: 1.3, textTransform: "uppercase", letterSpacing: 0.5 }}>{s.title}</h4>
                   </div>
-                  <p style={{ fontFamily: SANS, fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.8, transition: "color 0.3s" }} className="pb-desc">{s.desc}</p>
+                  <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.45)", lineHeight: 1.8, transition: "color 0.3s" }} className="pb-desc">{s.desc}</p>
                 </div>
               ))}
             </div>
