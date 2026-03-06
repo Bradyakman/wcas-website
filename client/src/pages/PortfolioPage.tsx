@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import equilendLogo from "@assets/image_1772774291097.png";
 import grantStreetLogo from "@assets/image_1772817244560.png";
 import imageTrendLogo from "@assets/image_1772817650981.png";
+import linqLogo from "@assets/image_1772817668672.png";
 
 
 const SERIF = "'Cormorant Garamond', Georgia, serif";
@@ -13,7 +14,7 @@ const companies: Company[] = [
   { name: "Equilend", sector: "Technology", color: "#2563eb", status: "current", logo: equilendLogo },
   { name: "Grant Street", sector: "Technology", color: "#0d9488", status: "current", logo: grantStreetLogo },
   { name: "ImageTrend", sector: "Technology", color: "#0284c7", status: "current", logo: imageTrendLogo },
-  { name: "LINQ", sector: "Technology", color: "#4f46e5", status: "current" },
+  { name: "LINQ", sector: "Technology", color: "#4f46e5", status: "current", logo: linqLogo },
   { name: "ACD", sector: "Technology", color: "#7c3aed", status: "current" },
   { name: "GovCIO", sector: "Technology", color: "#0891b2", status: "current" },
   { name: "Absorb", sector: "Technology", color: "#2563eb", status: "current" },
