@@ -115,7 +115,7 @@ export default function WCASAIPage() {
   
   const fCS = csFilter === "All" ? caseStudies : caseStudies.filter(c => c.sector === csFilter);
   const si = Math.min(activeCS, fCS.length - 1);
-  const anchors = [{id:"about",l:"About"},{id:"outlook",l:"Our Outlook"},{id:"playbook",l:"Our Playbook"},{id:"case-studies",l:"Case Studies"}];
+  const anchors = [{id:"about",l:"About"},{id:"playbook",l:"Our Playbook"},{id:"case-studies",l:"Case Studies"}];
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
