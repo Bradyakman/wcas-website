@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import equilendLogo from "@assets/image_1772774291097.png";
+import grantStreetLogo from "@assets/image_1772817244560.png";
 
 
 const SERIF = "'Cormorant Garamond', Georgia, serif";
@@ -9,7 +10,7 @@ type Company = { name: string; sector: "Technology" | "Healthcare"; color: strin
 
 const companies: Company[] = [
   { name: "Equilend", sector: "Technology", color: "#2563eb", status: "current", logo: equilendLogo },
-  { name: "Grant Street", sector: "Technology", color: "#0d9488", status: "current" },
+  { name: "Grant Street", sector: "Technology", color: "#0d9488", status: "current", logo: grantStreetLogo },
   { name: "ImageTrend", sector: "Technology", color: "#0284c7", status: "current" },
   { name: "LINQ", sector: "Technology", color: "#4f46e5", status: "current" },
   { name: "ACD", sector: "Technology", color: "#7c3aed", status: "current" },
@@ -168,7 +169,7 @@ export default function PortfolioPage() {
                   }}
                 >
                   {c.logo ? (
-                    <img src={c.logo} alt={c.name} style={{ maxHeight: 56, maxWidth: 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) opacity(0.5)", transition: "filter 0.3s" }} />
+                    <img src={c.logo} alt={c.name} style={{ maxHeight: 56, maxWidth: 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) brightness(0) opacity(0.6)", transition: "filter 0.3s" }} />
                   ) : (
                     <span style={{
                       fontFamily: SANS,
