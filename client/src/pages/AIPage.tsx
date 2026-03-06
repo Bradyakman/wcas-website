@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import aiHeroBg from "@assets/image_1772741431593.png";
+import norstellaWhiteLogo from "@assets/norstella_text_white_1772038125226.png";
 import georgePhoto from "@assets/image_1772773366337.png";
 import mikePhoto from "@assets/image_1772773735309.png";
 import tylerPhoto from "@assets/image_1772773752068.png";
@@ -100,12 +101,12 @@ const scaleSteps = [
   { title: "AI Transformation Support", desc: "We partner directly with portfolio companies to unlock AI opportunities \u2014 driving strategic scoping, delivering expert technical advice, and providing hands-on training to accelerate adoption.", stat: "Hands-On", detail: "Embedded advisory", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> },
 ];
 const caseStudies = [
-  { company: "Norstella", sector: "Healthcare", app: "NorstellaLinQ Trial Design Co-Pilot", useCase: "GenAI + ML powered data and tools supporting clinical trial design and optimization.", build: "Built internally leveraging large multimodal data set.", stat: "$70M" },
-  { company: "Lumexa Imaging", sector: "Healthcare", app: "Patient Data Support", useCase: "Agentic AI bots analyze and translate patient data and update billing records.", build: "Built in partnership with OnQ.", stat: "Ops Reduction" },
-  { company: "AllazoHealth", sector: "Healthcare", app: "AssistRx Add-On Patient Engagement", useCase: "AI-powered platform predicts adherence risk and personalizes outreach.", build: "Acquired via AssistRx.", stat: "Adherence AI" },
-  { company: "Absorb", sector: "Technology", app: "Course Generation", useCase: "GenAI features to build, adapt, and personalize Absorb LMS learning content.", build: "Internally built with cloud-native functionality.", stat: "LMS GenAI" },
-  { company: "LINQ", sector: "Technology", app: "LINQ Q Support Agent", useCase: "AI agent supports voice and chat channels for everyday customer requests.", build: "Built with low-code AI platform.", stat: "Voice + Chat AI" },
-  { company: "AIA Contract Documents", sector: "Technology", app: "Contract Review", useCase: "AI automates contract risk review and improves risk detection.", build: "Roadmap contemplates internal build or acquisition.", stat: "Risk Detection" },
+  { company: "Norstella", sector: "Healthcare", app: "NorstellaLinQ Trial Design Co-Pilot", useCase: "GenAI + ML powered data and tools supporting clinical trial design and optimization.", build: "Built internally leveraging large multimodal data set.", logo: norstellaWhiteLogo, logoH: 36 },
+  { company: "Lumexa Imaging", sector: "Healthcare", app: "Patient Data Support", useCase: "Agentic AI bots analyze and translate patient data and update billing records.", build: "Built in partnership with OnQ." },
+  { company: "AllazoHealth", sector: "Healthcare", app: "AssistRx Add-On Patient Engagement", useCase: "AI-powered platform predicts adherence risk and personalizes outreach.", build: "Acquired via AssistRx." },
+  { company: "Absorb", sector: "Technology", app: "Course Generation", useCase: "GenAI features to build, adapt, and personalize Absorb LMS learning content.", build: "Internally built with cloud-native functionality." },
+  { company: "LINQ", sector: "Technology", app: "LINQ Q Support Agent", useCase: "AI agent supports voice and chat channels for everyday customer requests.", build: "Built with low-code AI platform." },
+  { company: "AIA Contract Documents", sector: "Technology", app: "Contract Review", useCase: "AI automates contract risk review and improves risk detection.", build: "Roadmap contemplates internal build or acquisition." },
 ];
 
 export default function WCASAIPage() {
@@ -212,13 +213,16 @@ export default function WCASAIPage() {
                   <div className="cs-flip-inner">
                     <div className="cs-flip-front" style={{ background: "rgba(8,14,28,0.7)", border: `1px solid rgba(255,255,255,0.06)`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%", position: "relative", backdropFilter: "blur(12px)" }}>
                       <div>
-                        <span style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, padding: "4px 12px", borderRadius: 10, background: accentBg, border: `1px solid ${accentBorder}`, display: "inline-block", marginBottom: 20 }}>{cs.sector}</span>
-                        <h3 style={{ fontFamily: SERIF, fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.25, marginBottom: 8 }}>{cs.company}</h3>
-                        <p style={{ fontFamily: SANS, fontSize: 12, fontWeight: 500, color: accent, letterSpacing: 0.5, fontVariant: "small-caps" }}>{cs.app}</p>
+                        {(cs as any).logo ? (
+                          <img src={(cs as any).logo} alt={cs.company} style={{ height: (cs as any).logoH || 32, objectFit: "contain", marginBottom: 16, filter: "brightness(0) invert(1)" }} />
+                        ) : (
+                          <h3 style={{ fontFamily: SERIF, fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.25, marginBottom: 8 }}>{cs.company}</h3>
+                        )}
+                        <p style={{ fontFamily: SERIF, fontSize: 22, fontWeight: 400, color: "#fff", lineHeight: 1.3 }}>{cs.app}</p>
                       </div>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginTop: 32 }}>
-                        <span style={{ fontFamily: SANS, fontSize: 28, fontWeight: 700, color: "#fff" }}>{cs.stat}</span>
-                        <span style={{ fontFamily: SANS, fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Hover to explore &rarr;</span>
+                        <span style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, padding: "4px 12px", borderRadius: 10, background: accentBg, border: `1px solid ${accentBorder}` }}>{cs.sector}</span>
+                        <span style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.45)" }}>Hover to explore &rarr;</span>
                       </div>
                     </div>
                     <div className="cs-flip-back" style={{ background: "rgba(8,14,28,0.85)", border: `1px solid ${accentBorder}`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", backdropFilter: "blur(12px)" }}>
