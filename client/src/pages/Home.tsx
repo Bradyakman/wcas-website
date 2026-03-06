@@ -231,6 +231,7 @@ export default function Home() {
                   { name: "NaviHealth", src: logoNaviHealth, h: 42 },
                   { name: "Simeio", src: logoSimeio, h: 29 },
                   { name: "Lumexa", src: "/logos/lumexa-transparent.png", h: 40 },
+                  { name: "AssistRx", src: "/logos/assistrx-transparent.png", h: 34 },
                   { name: "Equilend", src: "/logos/equilend.png", h: 29 },
                 ].map((co, i) => (
                   <div key={`${setIdx}-${i}`} className="port-logo-card">
