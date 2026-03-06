@@ -69,8 +69,8 @@ export function Navbar() {
         { name: "Operating Successes", href: "#" }
       ]
     },
-    { name: "News", href: "#" },
     { name: "AI", href: "/ai" },
+    { name: "News", href: "#" },
   ];
 
   const linkColor = () => "text-white/70 hover:text-white";
