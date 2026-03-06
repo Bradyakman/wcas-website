@@ -65,7 +65,7 @@ export default function PortfolioPage() {
 
       <section style={{ position: "relative", overflow: "hidden", width: "100%", minHeight: 575, background: "#0a1628" }}>
         <div style={{ position: "relative", zIndex: 2, padding: "220px 64px 64px" }}>
-          <h1 style={{ fontSize: 44, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 48 }}>Building <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Enduring Value</em> Across Our <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Portfolio</em></h1>
+          <h1 style={{ fontSize: 64, fontWeight: 400, lineHeight: 1.2, color: "#fff", marginBottom: 48 }}>Building companies that <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>define</em> their categories.</h1>
           <p style={{ fontFamily: SANS, fontSize: 19, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: 880, marginBottom: 40 }}>Over 45 years and 190+ investments, WCAS has partnered with management teams across technology and healthcare to build market-leading companies.</p>
         </div>
       </section>
