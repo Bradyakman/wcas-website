@@ -8,6 +8,7 @@ import davidPhoto from "@assets/image_1772773762646.png";
 import carolinePhoto from "@assets/image_1772773770479.png";
 import balaPhoto from "@assets/image_1772773802351.png";
 import billPhoto from "@assets/image_1772773830252.png";
+import lawrencePhoto from "@assets/image_1772774151472.png";
 
 const TEAL = "#4db8c7";
 const ACCENT = "#6BA3D6";
@@ -88,6 +89,7 @@ const teamMembers = [
   { name: "Mike Donovan", role: "General Partner", initials: "MD", photo: mikePhoto },
   { name: "Bala Girsiaballa", role: "Offshoring", initials: "BG", photo: balaPhoto },
   { name: "George Mashini", role: "Software Portfolio CTO", initials: "GM", photo: georgePhoto },
+  { name: "Lawrence Miller", role: "General Partner", initials: "LM", photo: lawrencePhoto },
   { name: "Tyler Pitchford", role: "AI Implementation", initials: "TP", photo: tylerPhoto },
 ];
 const scaleSteps = [
