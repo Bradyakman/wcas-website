@@ -177,12 +177,7 @@ export default function WCASAIPage() {
           <Fade delay={100}>
             <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: 48 }}>
               {scaleSteps.map((s, i) => (
-                <div key={i} className="pb-row" style={{ display: "grid", gridTemplateColumns: "60px 240px 1fr", gap: 28, alignItems: "start", padding: "44px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", transition: "background 0.3s ease, padding-left 0.3s ease", borderRadius: 4, cursor: "default" }}>
-                  <div style={{ fontFamily: SERIF, fontSize: 40, fontWeight: 300, color: "rgba(77,184,199,0.35)", lineHeight: 1, transition: "color 0.3s" }} className="pb-num">{"0"+(i+1)}</div>
-                  <div>
-                    <div style={{ fontFamily: SANS, fontSize: 11, fontWeight: 600, letterSpacing: 1.8, textTransform: "uppercase", color: TEAL, marginBottom: 10 }}>{s.detail}</div>
-                    <h4 style={{ fontFamily: SANS, fontSize: 20, fontWeight: 700, color: "#fff", lineHeight: 1.3, textTransform: "uppercase", letterSpacing: 0.5 }}>{s.title}</h4>
-                  </div>
+                <div key={i} className="pb-row" style={{ padding: "44px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", transition: "background 0.3s ease, padding-left 0.3s ease", borderRadius: 4, cursor: "default" }}>
                   <p style={{ fontFamily: SANS, fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.8, transition: "color 0.3s" }} className="pb-desc">{s.desc}</p>
                 </div>
               ))}
