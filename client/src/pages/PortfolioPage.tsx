@@ -135,7 +135,7 @@ export default function PortfolioPage() {
           placeholder="Search"
           value={search}
           onChange={e => setSearch(e.target.value)}
-          style={{ fontFamily: SANS, fontSize: 16, padding: "14px 36px", borderRadius: 25, border: "1px solid #888", outline: "none", width: 200, background: "#fff", color: "#222" }}
+          style={{ fontFamily: SANS, fontSize: 16, fontWeight: 500, padding: "14px 36px", borderRadius: 25, border: "1px solid #888", outline: "none", width: 200, background: "#fff", color: "#222", textAlign: "center" }}
         />
       </div>
 
