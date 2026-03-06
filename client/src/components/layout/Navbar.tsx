@@ -55,7 +55,6 @@ export function Navbar() {
   };
 
   const navLinks = [
-    { name: "AI", href: "/ai" },
     { 
       name: "Healthcare", 
       href: "#",
@@ -71,6 +70,7 @@ export function Navbar() {
       ]
     },
     { name: "News", href: "#" },
+    { name: "AI", href: "/ai" },
   ];
 
   const linkColor = () => "text-white/70 hover:text-white";
