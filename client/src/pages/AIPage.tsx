@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import aiHeroBg from "@assets/image_1772741431593.png";
+import georgePhoto from "@assets/image_1772773366337.png";
 
 const TEAL = "#4db8c7";
 const ACCENT = "#6BA3D6";
@@ -75,7 +76,7 @@ const SD = ({ children, mw = 660 }: { children: React.ReactNode; mw?: number }) 
 
 
 const teamMembers = [
-  { name: "George Mashini", role: "Software Portfolio CTO", initials: "GM" },
+  { name: "George Mashini", role: "Software Portfolio CTO", initials: "GM", photo: georgePhoto },
   { name: "Lawrence Miller", role: "Healthcare Portfolio CTO", initials: "LM" },
   { name: "Tyler Pitchford", role: "AI Implementation", initials: "TP" },
   { name: "Bala Girsiaballa", role: "Offshoring", initials: "BG" },
@@ -270,7 +271,7 @@ export default function WCASAIPage() {
             <div className="team-track">
               {[...teamMembers, ...teamMembers].map((m, i) => (
                 <div key={i} className="team-photo-card">
-                  <div style={{ width: 180, height: 180, borderRadius: 16, background: "linear-gradient(135deg, rgba(77,184,199,0.15), rgba(107,163,214,0.1))", border: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'DM Sans', sans-serif", fontSize: 36, fontWeight: 700, color: "rgba(77,184,199,0.5)" }}>{m.initials}</div>
+                  {m.photo ? <img src={m.photo} alt={m.name} style={{ width: 180, height: 180, borderRadius: 16, objectFit: "cover", border: "1px solid rgba(255,255,255,0.08)" }} /> : <div style={{ width: 180, height: 180, borderRadius: 16, background: "linear-gradient(135deg, rgba(77,184,199,0.15), rgba(107,163,214,0.1))", border: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'DM Sans', sans-serif", fontSize: 36, fontWeight: 700, color: "rgba(77,184,199,0.5)" }}>{m.initials}</div>}
                   <div style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, color: "#fff", marginTop: 14 }}>{m.name}</div>
                   <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.4)", marginTop: 4 }}>{m.role}</div>
                 </div>
