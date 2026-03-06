@@ -190,12 +190,6 @@ export default function WCASAIPage() {
         </div>
       </section>
 
-      {/* DIVIDER */}
-      <div style={{ position: "relative", height: 120, overflow: "hidden", background: `linear-gradient(180deg, ${BG2}, ${BG})` }}>
-        <ParticleField density={25} />
-        <div style={{ position: "absolute", top: "45%", left: 0, right: 0, height: 2, background: `linear-gradient(90deg, transparent 5%, ${TEAL} 30%, ${ACCENT} 50%, ${GOLD} 70%, transparent 95%)`, opacity: 0.1 }} />
-      </div>
-
       {/* CASE STUDIES */}
       <section id="case-studies" style={{ background: BG, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
