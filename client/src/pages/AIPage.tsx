@@ -73,11 +73,6 @@ const SL = ({ text, color = TEAL }: { text: string; color?: string }) => (<div s
 const ST = ({ children, mw = 700 }: { children: React.ReactNode; mw?: number }) => (<h2 style={{ fontSize: 40, fontWeight: 400, color: "#fff", lineHeight: 1.2, marginBottom: 20, maxWidth: mw }}>{children}</h2>);
 const SD = ({ children, mw = 660 }: { children: React.ReactNode; mw?: number }) => (<p style={{ fontFamily: SANS, fontSize: 16, color: "rgba(255,255,255,0.4)", lineHeight: 1.7, maxWidth: mw, marginBottom: 48 }}>{children}</p>);
 
-const aiOpportunities = [
-  { letter: "A", title: "Expand & Monetize", desc: "Unlock and monetize more use cases for existing customers, driving improved net revenue retention" },
-  { letter: "B", title: "Product & Pricing Power", desc: "New product enhancements and bundling opportunities significantly improve pricing power" },
-  { letter: "C", title: "Internal Efficiency", desc: "Efficiency opportunities across nearly all internal functions" },
-];
 
 const teamMembers = [
   { name: "George Mashini", role: "Software Portfolio CTO", initials: "GM" },
@@ -157,20 +152,6 @@ export default function WCASAIPage() {
         <Fade><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
           <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. At WCAS, we've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.</p>
           <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>Our conviction: <strong>incumbency matters</strong>. Every investment is evaluated through a proprietary AI Scorecard assessing market defensibility and data moats. Post-investment, our dedicated team embeds directly with portfolio companies to turn AI ambition into measurable results.</p>
-        </div></Fade>
-      </section>
-
-      {/* OUTLOOK */}
-      <section id="outlook" style={{ background: BG, padding: "96px 64px" }}>
-        <Fade><SL text="Our AI Outlook" /><ST mw={800}>Incumbency matters: the convergence of SaaS and AI</ST><SD mw={700}>We believe sizeable value creation opportunities are just starting to be realized. Every investment is evaluated through our proprietary AI Scorecard, a weighted framework assessing target market defensibility, mission criticality, data moats, and network effects.</SD></Fade>
-        <Fade delay={100}><div style={{ marginBottom: 56 }}>
-          <div style={{ display: "flex", gap: 20 }}>
-            {aiOpportunities.map((o, i) => (<div key={i} className="oc">
-              <div style={{ width: 36, height: 36, borderRadius: "50%", background: "rgba(77,184,199,0.12)", border: "1px solid rgba(77,184,199,0.25)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: SANS, fontSize: 14, fontWeight: 700, color: TEAL, marginBottom: 20 }}>{o.letter}</div>
-              <h4 style={{ fontSize: 20, fontWeight: 400, color: "#fff", marginBottom: 10 }}>{o.title}</h4>
-              <p style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>{o.desc}</p>
-            </div>))}
-          </div>
         </div></Fade>
       </section>
 
