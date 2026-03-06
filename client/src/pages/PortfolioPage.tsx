@@ -87,11 +87,11 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <div ref={filterBarRef} style={{ position: "sticky", top: 68, zIndex: 10, background: isStuck ? "rgba(255,255,255,0.97)" : "#fff", backdropFilter: isStuck ? "blur(16px)" : "none", borderBottom: "1px solid #e8e8e8", padding: "18px 48px", display: "flex", alignItems: "center", justifyContent: "center", gap: 12, boxShadow: isStuck ? "0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)" : "none", borderRadius: isStuck ? "0 0 20px 20px" : "0", transition: "box-shadow 0.3s ease, border-radius 0.3s ease, background 0.3s ease" }}>
+      <div ref={filterBarRef} style={{ position: "sticky", top: 68, zIndex: 10, background: isStuck ? "rgba(10,22,40,0.95)" : "#0a1628", backdropFilter: isStuck ? "blur(16px)" : "none", padding: "18px 48px", display: "flex", alignItems: "center", justifyContent: "center", gap: 12, boxShadow: isStuck ? "0 8px 32px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1)" : "none", borderRadius: isStuck ? "0 0 20px 20px" : "0", transition: "box-shadow 0.3s ease, border-radius 0.3s ease, background 0.3s ease" }}>
         <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
           <button
             onClick={() => { setStatusOpen(!statusOpen); setSectorOpen(false); }}
-            style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "none", background: "#0a1628", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, minWidth: 180, justifyContent: "center" }}
+            style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", display: "flex", alignItems: "center", gap: 8 }}
           >
             Status
             <span style={{ fontSize: 10 }}>▾</span>
@@ -111,7 +111,7 @@ export default function PortfolioPage() {
         <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
           <button
             onClick={() => { setSectorOpen(!sectorOpen); setStatusOpen(false); }}
-            style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "none", background: "#0a1628", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, minWidth: 180, justifyContent: "center" }}
+            style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", display: "flex", alignItems: "center", gap: 8 }}
           >
             Sector
             <span style={{ fontSize: 10 }}>▾</span>
@@ -133,7 +133,7 @@ export default function PortfolioPage() {
           placeholder="Search"
           value={search}
           onChange={e => setSearch(e.target.value)}
-          style={{ fontFamily: SANS, fontSize: 14, padding: "12px 28px", borderRadius: 24, border: "1px solid #e4e4e4", outline: "none", width: 200, background: "#fff", color: "#333" }}
+          style={{ fontFamily: SANS, fontSize: 15, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.15)", outline: "none", width: 200, background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)" }}
         />
       </div>
 
