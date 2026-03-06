@@ -123,7 +123,7 @@ export default function WCASAIPage() {
     <div style={{ fontFamily: SERIF, background: BG, color: "#E4E8ED", minHeight: "100vh" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
-        .pb-row:hover{background:rgba(255,255,255,0.03);padding-left:16px!important;padding-right:16px}.pb-row:hover .pb-num{color:rgba(77,184,199,0.7)}.pb-row:hover .pb-desc{color:rgba(255,255,255,0.95)}
+        .pb-row:hover{background:rgba(255,255,255,0.03);padding-left:16px!important;padding-right:16px}.pb-row:hover .pb-num{color:rgba(77,184,199,0.7)}.pb-row:hover .pb-desc{color:rgba(255,255,255,0.7)}
         .ap{font-family:${SANS};font-size:15px;font-weight:500;padding:12px 32px;border-radius:23px;border:1px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.9);cursor:pointer;transition:all 0.3s;text-decoration:none;white-space:nowrap}.ap:hover{color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.12)}.ap.ac{color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.15)}
         .csc{padding:24px 28px;cursor:pointer;border-left:3px solid transparent;transition:all 0.25s}.csc:hover{background:rgba(255,255,255,0.03)}.csc.csa{background:rgba(255,255,255,0.05);border-left-color:${TEAL}}
         .fc{font-family:${SANS};font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;padding:7px 16px;border-radius:16px;cursor:pointer;transition:all 0.25s;border:1px solid rgba(255,255,255,0.06);background:transparent;color:rgba(255,255,255,0.3)}.fc:hover{color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15)}.fc.fca{color:${TEAL};border-color:rgba(77,184,199,0.3);background:rgba(77,184,199,0.08)}
@@ -177,8 +177,13 @@ export default function WCASAIPage() {
           <Fade delay={100}>
             <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: 48 }}>
               {scaleSteps.map((s, i) => (
-                <div key={i} className="pb-row" style={{ padding: "44px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", transition: "background 0.3s ease, padding-left 0.3s ease", borderRadius: 4, cursor: "default" }}>
-                  <p style={{ fontFamily: SANS, fontSize: 19, color: "rgba(255,255,255,0.7)", lineHeight: 1.8, transition: "color 0.3s" }} className="pb-desc">{s.desc}</p>
+                <div key={i} className="pb-row" style={{ display: "grid", gridTemplateColumns: "60px 240px 1fr", gap: 28, alignItems: "start", padding: "44px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", transition: "background 0.3s ease, padding-left 0.3s ease", borderRadius: 4, cursor: "default" }}>
+                  <div style={{ fontFamily: SERIF, fontSize: 40, fontWeight: 300, color: "rgba(77,184,199,0.35)", lineHeight: 1, transition: "color 0.3s" }} className="pb-num">{"0"+(i+1)}</div>
+                  <div>
+                    <div style={{ fontFamily: SANS, fontSize: 11, fontWeight: 600, letterSpacing: 1.8, textTransform: "uppercase", color: TEAL, marginBottom: 10 }}>{s.detail}</div>
+                    <h4 style={{ fontFamily: SANS, fontSize: 20, fontWeight: 700, color: "#fff", lineHeight: 1.3, textTransform: "uppercase", letterSpacing: 0.5 }}>{s.title}</h4>
+                  </div>
+                  <p style={{ fontFamily: SANS, fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.8, transition: "color 0.3s" }} className="pb-desc">{s.desc}</p>
                 </div>
               ))}
             </div>
