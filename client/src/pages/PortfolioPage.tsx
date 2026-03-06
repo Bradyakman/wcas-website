@@ -139,7 +139,7 @@ export default function PortfolioPage() {
         />
       </div>
 
-      <div style={{ background: "#fff", padding: "0 64px" }}>
+      <div style={{ background: "#0C1A2E", padding: "0 64px" }}>
         {filtered.length === 0 ? (
           <div style={{ fontFamily: SANS, fontSize: 15, color: "#999", textAlign: "center", padding: "80px 0" }}>No companies match your filters.</div>
         ) : (() => {
@@ -151,7 +151,7 @@ export default function PortfolioPage() {
             return (
               <div>
                 {rows.map((row, ri) => (
-                  <div key={ri} style={{ background: "#fff", borderBottom: "1px solid #d5d5d5" }}>
+                  <div key={ri} style={{ background: "#0C1A2E", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
                       {row.map((c, ci) => {
                         const idx = offset + ri * 4 + ci;
@@ -167,7 +167,7 @@ export default function PortfolioPage() {
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
-                              background: isHovered ? "#fff" : "transparent",
+                              background: isHovered ? "rgba(255,255,255,0.05)" : "transparent",
                               transform: isHovered ? "scale(1.08) translateY(-6px)" : "scale(1)",
                               boxShadow: isHovered ? "0 24px 60px rgba(0,0,0,0.14), 0 8px 20px rgba(0,0,0,0.08)" : "none",
                               borderRadius: isHovered ? 16 : 0,
@@ -179,13 +179,13 @@ export default function PortfolioPage() {
                             }}
                           >
                             {c.logo ? (
-                              <img src={c.logo} alt={c.name} style={{ maxHeight: c.name === "Grant Street" ? 90 : 56, maxWidth: c.name === "Grant Street" ? 340 : 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) opacity(0.7)", transition: "filter 0.3s" }} />
+                              <img src={c.logo} alt={c.name} style={{ maxHeight: c.name === "Grant Street" ? 90 : 56, maxWidth: c.name === "Grant Street" ? 340 : 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) brightness(10) opacity(0.7)", transition: "filter 0.3s" }} />
                             ) : (
                               <span style={{
                                 fontFamily: SANS,
                                 fontSize: 32,
                                 fontWeight: 600,
-                                color: isHovered ? c.color : "#111",
+                                color: isHovered ? c.color : "rgba(255,255,255,0.85)",
                                 transition: "color 0.3s",
                                 textAlign: "center",
                               }}>{c.name}</span>
@@ -203,7 +203,7 @@ export default function PortfolioPage() {
             <>
               {techCompanies.length > 0 && renderGrid(techCompanies, 0)}
               {techCompanies.length > 0 && hcCompanies.length > 0 && (
-                <div style={{ borderTop: "1px solid #d5d5d5", margin: "0" }} />
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", margin: "0" }} />
               )}
               {hcCompanies.length > 0 && renderGrid(hcCompanies, techCompanies.length)}
             </>
