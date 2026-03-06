@@ -111,7 +111,6 @@ const caseStudies = [
 export default function WCASAIPage() {
   const [activeAnchor, setActiveAnchor] = useState("about");
   const [activeCS, setActiveCS] = useState(0);
-  const [playStep, setPlayStep] = useState(0);
   const [csFilter, setCsFilter] = useState("All");
   
   const fCS = csFilter === "All" ? caseStudies : caseStudies.filter(c => c.sector === csFilter);
@@ -176,47 +175,18 @@ export default function WCASAIPage() {
             <SD mw={720}>We move fast on AI developments — sharing playbooks, a 300+ use-case library, monthly roundtables, and active vendor pilots.</SD>
           </Fade>
           <Fade delay={100}>
-            <div style={{ display: "flex", gap: 0, marginTop: 8 }}>
-              <div style={{ flex: 0.85, borderRight: "1px solid rgba(255,255,255,0.04)", paddingRight: 0 }}>
-                {scaleSteps.map((s, i) => {
-                  const isA = playStep === i;
-                  return (
-                    <div key={i} onClick={() => setPlayStep(i)} style={{ padding: "20px 28px 20px 0", cursor: "pointer", position: "relative", transition: "all 0.3s" }}>
-                      <div style={{ position: "absolute", right: -1, top: isA ? "10%" : "50%", width: 2, height: isA ? "80%" : 0, background: "linear-gradient(180deg, #4db8c7, #6BA3D6)", borderRadius: 1, transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)" }} />
-                      <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-                        <div style={{ position: "relative", width: 44, height: 44, flexShrink: 0 }}>
-                          <svg width="44" height="44" style={{ position: "absolute", top: 0, left: 0, transform: "rotate(-90deg)" }}>
-                            <circle cx="22" cy="22" r="19" fill="none" stroke="rgba(255,255,255,0.04)" strokeWidth="1.5" />
-                            <circle cx="22" cy="22" r="19" fill="none" stroke={isA ? "#4db8c7" : "transparent"} strokeWidth="1.5" strokeDasharray={isA ? "119 119" : "0 119"} style={{ transition: "stroke-dasharray 0.6s cubic-bezier(0.4,0,0.2,1), stroke 0.3s" }} />
-                          </svg>
-                          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: SANS, fontSize: 14, fontWeight: 700, color: isA ? "#4db8c7" : "rgba(255,255,255,0.18)", transition: "color 0.3s" }}>{"0"+(i+1)}</div>
-                        </div>
-                        <div>
-                          <h4 style={{ fontFamily: SANS, fontSize: 15, fontWeight: isA ? 600 : 400, color: isA ? "#fff" : "rgba(255,255,255,0.35)", transition: "all 0.3s", letterSpacing: isA ? 0.2 : 0 }}>{s.title}</h4>
-                          {isA && <div style={{ fontFamily: SANS, fontSize: 11, color: "rgba(255,255,255,0.25)", marginTop: 4, letterSpacing: 0.3 }}>{s.detail}</div>}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              <div style={{ flex: 1.15, paddingLeft: 48, position: "relative", minHeight: 340 }}>
-                <div style={{ position: "absolute", top: -24, right: -12, fontFamily: SANS, fontSize: 180, fontWeight: 800, lineHeight: 1, color: "transparent", WebkitTextStroke: "1px rgba(77,184,199,0.06)", pointerEvents: "none", userSelect: "none" }}>{"0"+(playStep+1)}</div>
-                <div style={{ position: "absolute", top: 0, left: 48, width: 20, height: 20, borderTop: "2px solid rgba(77,184,199,0.15)", borderLeft: "2px solid rgba(77,184,199,0.15)" }} />
-                <div style={{ position: "absolute", bottom: 0, right: 0, width: 20, height: 20, borderBottom: "2px solid rgba(77,184,199,0.15)", borderRight: "2px solid rgba(77,184,199,0.15)" }} />
-                <div style={{ position: "relative", zIndex: 2, paddingTop: 12 }}>
-                  <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 16px", borderRadius: 20, background: "rgba(77,184,199,0.06)", border: "1px solid rgba(77,184,199,0.12)", marginBottom: 24 }}>
-                    <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#4db8c7" }} />
-                    <span style={{ fontFamily: SANS, fontSize: 11, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", color: "#4db8c7" }}>{scaleSteps[playStep].stat}</span>
+            <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: 48 }}>
+              {scaleSteps.map((s, i) => (
+                <div key={i} style={{ display: "grid", gridTemplateColumns: "60px 220px 1fr auto", gap: 24, alignItems: "start", padding: "40px 0", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                  <div style={{ fontFamily: SERIF, fontSize: 36, fontWeight: 300, color: "rgba(77,184,199,0.35)", lineHeight: 1 }}>{"0"+(i+1)}</div>
+                  <div>
+                    <div style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.8, textTransform: "uppercase", color: TEAL, marginBottom: 10 }}>{s.detail}</div>
+                    <h4 style={{ fontFamily: SANS, fontSize: 18, fontWeight: 700, color: "#fff", lineHeight: 1.3, textTransform: "uppercase", letterSpacing: 0.5 }}>{s.title}</h4>
                   </div>
-                  <h3 style={{ fontFamily: SERIF, fontSize: 30, fontWeight: 400, color: "#fff", lineHeight: 1.3, marginBottom: 20 }}>{scaleSteps[playStep].title}</h3>
-                  <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.48)", lineHeight: 1.85, marginBottom: 32, maxWidth: 480 }}>{scaleSteps[playStep].desc}</p>
-                  <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-                    <div style={{ height: 1, flex: 1, background: "linear-gradient(90deg, rgba(77,184,199,0.15), transparent)" }} />
-                    <span style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", color: "rgba(255,255,255,0.15)" }}>{"0"+(playStep+1)} of 05</span>
-                  </div>
+                  <p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.45)", lineHeight: 1.75, maxWidth: 480 }}>{s.desc}</p>
+                  <div style={{ fontFamily: SANS, fontSize: 11, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.5)", padding: "8px 18px", borderRadius: 4, border: "1px solid rgba(255,255,255,0.15)", whiteSpace: "nowrap" }}>{s.stat}</div>
                 </div>
-              </div>
+              ))}
             </div>
           </Fade>
         </div>
