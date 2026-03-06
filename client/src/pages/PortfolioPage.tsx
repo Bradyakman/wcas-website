@@ -149,8 +149,8 @@ export default function PortfolioPage() {
                   onMouseEnter={() => setHoveredCell(i)}
                   onMouseLeave={() => setHoveredCell(null)}
                   style={{
-                    minHeight: 180,
-                    padding: "64px 40px",
+                    minHeight: 240,
+                    padding: "80px 48px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -168,11 +168,11 @@ export default function PortfolioPage() {
                   }}
                 >
                   {c.logo ? (
-                    <img src={c.logo} alt={c.name} style={{ maxHeight: 46, maxWidth: 184, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) opacity(0.5)", transition: "filter 0.3s" }} />
+                    <img src={c.logo} alt={c.name} style={{ maxHeight: 56, maxWidth: 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) opacity(0.5)", transition: "filter 0.3s" }} />
                   ) : (
                     <span style={{
                       fontFamily: SANS,
-                      fontSize: 26,
+                      fontSize: 32,
                       fontWeight: 600,
                       color: isHovered ? c.color : "#555",
                       transition: "color 0.3s",
