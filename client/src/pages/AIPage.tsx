@@ -173,7 +173,6 @@ export default function WCASAIPage() {
           <Fade>
             <SL text="Our Playbook" />
             <ST>How we scale AI across the portfolio</ST>
-            <SD mw={720}>We move fast on AI developments — sharing playbooks, a 300+ use-case library, monthly roundtables, and active vendor pilots.</SD>
           </Fade>
           <Fade delay={100}>
             <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: 48 }}>
