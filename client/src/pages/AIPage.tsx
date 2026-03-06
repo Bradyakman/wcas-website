@@ -112,7 +112,7 @@ export default function WCASAIPage() {
   const [activeAnchor, setActiveAnchor] = useState("about");
   const [activeCS, setActiveCS] = useState(0);
   const [csFilter, setCsFilter] = useState("All");
-  const [openPB, setOpenPB] = useState<number | null>(null);
+  const [openPB, setOpenPB] = useState<number | null>(0);
   
   const fCS = csFilter === "All" ? caseStudies : caseStudies.filter(c => c.sector === csFilter);
   const si = Math.min(activeCS, fCS.length - 1);
@@ -191,7 +191,7 @@ export default function WCASAIPage() {
                       </div>
                     </div>
                     <div style={{ maxHeight: isOpen ? 300 : 0, overflow: "hidden", transition: "max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease", opacity: isOpen ? 1 : 0 }}>
-                      <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.45)", lineHeight: 1.8, padding: "0 16px 32px", maxWidth: 800 }} className="pb-desc">{s.desc}</p>
+                      <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.6)", lineHeight: 1.8, padding: "0 16px 32px" }} className="pb-desc">{s.desc}</p>
                     </div>
                   </div>
                 );
