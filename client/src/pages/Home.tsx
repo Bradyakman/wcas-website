@@ -130,8 +130,8 @@ export default function Home() {
           .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:37px; font-weight:400; color:#fff; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
           .wwi-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(255,255,255,0.4); line-height:1.65; margin-top:16px; }
           .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
-          .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:13px; color:rgba(255,255,255,0.5); padding:7px 15px; border-radius:18px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); transition:transform 0.2s ease, border-color 0.2s ease; }
-          .wwi-pill2:hover { transform:none; }
+          .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:13px; color:rgba(255,255,255,0.65); padding:7px 15px; border-radius:18px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); cursor:pointer; transition:transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease; }
+          .wwi-pill2:hover { transform:translateY(-3px); color:rgba(255,255,255,0.95); border-color:rgba(255,255,255,0.4); background:rgba(255,255,255,0.12); }
           .wwi-cta2 { display:none; }
         `}</style>
         <div className="wwi-split">
