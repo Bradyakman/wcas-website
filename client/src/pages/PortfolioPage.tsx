@@ -68,7 +68,7 @@ export default function PortfolioPage() {
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 80% 50%, rgba(45,212,191,0.08) 0%, transparent 60%)" }} />
         <div style={{ position: "relative", zIndex: 2, padding: "220px 64px 64px" }}>
           <h1 style={{ fontSize: 64, fontWeight: 400, lineHeight: 1.2, color: "#fff", marginBottom: 48 }}>Building companies that <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>define</em> their categories.</h1>
-          <p style={{ fontFamily: SANS, fontSize: 19, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: "100%", marginBottom: 40 }}>Over 45 years and 190+ investments, WCAS has partnered with exceptional management teams across technology and healthcare to build market-leading companies</p>
+          <p style={{ fontFamily: SANS, fontSize: 19, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: "100%", marginBottom: 40 }}>Over 45 years and 190+ investments, WCAS has partnered with exceptional management teams across technology and healthcare to build market-leading companies.</p>
         </div>
       </section>
 
