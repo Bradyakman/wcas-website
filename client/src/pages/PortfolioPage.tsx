@@ -140,51 +140,65 @@ export default function PortfolioPage() {
       <div style={{ background: "#fff", padding: "0 64px" }}>
         {filtered.length === 0 ? (
           <div style={{ fontFamily: SANS, fontSize: 15, color: "#999", textAlign: "center", padding: "80px 0" }}>No companies match your filters.</div>
-        ) : (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
-            {filtered.map((c, i) => {
-              const isHovered = hoveredCell === i;
-              return (
-                <div
-                  key={c.name + i}
-                  onMouseEnter={() => setHoveredCell(i)}
-                  onMouseLeave={() => setHoveredCell(null)}
-                  style={{
-                    minHeight: 240,
-                    padding: "80px 48px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderBottom: "1px solid #ebebeb",
-                    background: "#fff",
-                    transform: isHovered ? "scale(1.08) translateY(-6px)" : "scale(1)",
-                    boxShadow: isHovered ? "0 24px 60px rgba(0,0,0,0.14), 0 8px 20px rgba(0,0,0,0.08)" : "none",
-                    borderColor: isHovered ? "transparent" : "#e4e4e4",
-                    borderRadius: isHovered ? 16 : 0,
-                    transition: "transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-radius 0.3s ease, border-color 0.3s ease",
-                    willChange: "transform",
-                    position: "relative",
-                    zIndex: isHovered ? 20 : 1,
-                    cursor: "pointer",
-                  }}
-                >
-                  {c.logo ? (
-                    <img src={c.logo} alt={c.name} style={{ maxHeight: c.name === "Grant Street" ? 90 : 56, maxWidth: c.name === "Grant Street" ? 340 : 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) brightness(0) opacity(0.85)", transition: "filter 0.3s" }} />
-                  ) : (
-                    <span style={{
-                      fontFamily: SANS,
-                      fontSize: 32,
-                      fontWeight: 600,
-                      color: isHovered ? c.color : "#111",
-                      transition: "color 0.3s",
-                      textAlign: "center",
-                    }}>{c.name}</span>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        )}
+        ) : (() => {
+          const techCompanies = filtered.filter(c => c.sector === "Technology");
+          const hcCompanies = filtered.filter(c => c.sector === "Healthcare");
+          const renderGrid = (items: Company[], offset: number) => (
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
+              {items.map((c, i) => {
+                const idx = offset + i;
+                const isHovered = hoveredCell === idx;
+                return (
+                  <div
+                    key={c.name + idx}
+                    onMouseEnter={() => setHoveredCell(idx)}
+                    onMouseLeave={() => setHoveredCell(null)}
+                    style={{
+                      minHeight: 240,
+                      padding: "80px 48px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderBottom: "1px solid #ebebeb",
+                      background: "#fff",
+                      transform: isHovered ? "scale(1.08) translateY(-6px)" : "scale(1)",
+                      boxShadow: isHovered ? "0 24px 60px rgba(0,0,0,0.14), 0 8px 20px rgba(0,0,0,0.08)" : "none",
+                      borderColor: isHovered ? "transparent" : "#ebebeb",
+                      borderRadius: isHovered ? 16 : 0,
+                      transition: "transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-radius 0.3s ease, border-color 0.3s ease",
+                      willChange: "transform",
+                      position: "relative",
+                      zIndex: isHovered ? 20 : 1,
+                      cursor: "pointer",
+                    }}
+                  >
+                    {c.logo ? (
+                      <img src={c.logo} alt={c.name} style={{ maxHeight: c.name === "Grant Street" ? 90 : 56, maxWidth: c.name === "Grant Street" ? 340 : 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) brightness(0) opacity(0.85)", transition: "filter 0.3s" }} />
+                    ) : (
+                      <span style={{
+                        fontFamily: SANS,
+                        fontSize: 32,
+                        fontWeight: 600,
+                        color: isHovered ? c.color : "#111",
+                        transition: "color 0.3s",
+                        textAlign: "center",
+                      }}>{c.name}</span>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          );
+          return (
+            <>
+              {techCompanies.length > 0 && renderGrid(techCompanies, 0)}
+              {techCompanies.length > 0 && hcCompanies.length > 0 && (
+                <div style={{ borderTop: "2px solid #d1d5db", margin: "0" }} />
+              )}
+              {hcCompanies.length > 0 && renderGrid(hcCompanies, techCompanies.length)}
+            </>
+          );
+        })()}
       </div>
 
     </div>
