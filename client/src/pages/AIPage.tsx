@@ -102,7 +102,7 @@ const scaleSteps = [
 ];
 const caseStudies = [
   { company: "Norstella", sector: "Healthcare", app: "NorstellaLinQ Trial Design Co-Pilot", useCase: "GenAI + ML powered data and tools supporting clinical trial design and optimization.", build: "Built internally leveraging large multimodal data set.", logo: norstellaWhiteLogo, logoH: 60 },
-  { company: "Lumexa Imaging", sector: "Healthcare", app: "Patient Data Support", useCase: "Agentic AI bots analyze and translate patient data and update billing records.", build: "Built in partnership with OnQ." },
+  { company: "Lumexa Imaging", sector: "Healthcare", app: "Patient Data Support", useCase: "Agentic AI bots analyze and translate patient data and update billing records.", build: "Built in partnership with OnQ.", logo: "/logos/lumexa-transparent.png", logoH: 50 },
   { company: "AllazoHealth", sector: "Healthcare", app: "AssistRx Add-On Patient Engagement", useCase: "AI-powered platform predicts adherence risk and personalizes outreach.", build: "Acquired via AssistRx." },
   { company: "Absorb", sector: "Technology", app: "Course Generation", useCase: "GenAI features to build, adapt, and personalize Absorb LMS learning content.", build: "Internally built with cloud-native functionality." },
   { company: "LINQ", sector: "Technology", app: "LINQ Q Support Agent", useCase: "AI agent supports voice and chat channels for everyday customer requests.", build: "Built with low-code AI platform." },
