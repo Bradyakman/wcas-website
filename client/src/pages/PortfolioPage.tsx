@@ -72,7 +72,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <div style={{ position: "sticky", top: 68, zIndex: 10, background: "rgba(255,255,255,0.95)", backdropFilter: "blur(12px)", borderBottom: "1px solid #e4e4e4", padding: "16px 48px", display: "flex", alignItems: "center", gap: 12 }}>
+      <div style={{ position: "sticky", top: 68, zIndex: 10, background: "rgba(255,255,255,0.95)", backdropFilter: "blur(12px)", borderBottom: "1px solid #e4e4e4", padding: "16px 48px", display: "flex", alignItems: "center", justifyContent: "center", gap: 12 }}>
         <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
           <button
             onClick={() => { setStatusOpen(!statusOpen); setSectorOpen(false); }}
@@ -114,7 +114,7 @@ export default function PortfolioPage() {
           )}
         </div>
 
-        <div style={{ marginLeft: "auto" }}>
+        <div style={{ marginLeft: "auto", position: "absolute", right: 48 }}>
           <input
             type="text"
             placeholder="Search"
