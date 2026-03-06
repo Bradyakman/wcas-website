@@ -1,26 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import equilendLogo from "@assets/image_1772774291097.png";
 
-const BG = "#0C1A2E";
 const SERIF = "'Cormorant Garamond', Georgia, serif";
 const SANS = "'DM Sans', sans-serif";
-
-function useFadeIn(delay = 0) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [vis, setVis] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVis(true); obs.disconnect(); } }, { threshold: 0.08 });
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-  return { ref, style: { opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(32px)", transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms` } };
-}
-function Fade({ children, delay = 0, style }: { children: React.ReactNode; delay?: number; style?: React.CSSProperties }) {
-  const f = useFadeIn(delay);
-  return <div ref={f.ref} style={{ ...style, ...f.style }}>{children}</div>;
-}
 
 type Company = { name: string; sector: "Technology" | "Healthcare"; color: string; status: "current" | "realized"; logo?: string };
 
@@ -86,13 +68,6 @@ export default function PortfolioPage() {
           <h1 style={{ fontSize: 44, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 48 }}>Building <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Enduring Value</em> Across Our <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Portfolio</em></h1>
           <p style={{ fontFamily: SANS, fontSize: 19, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: 880, marginBottom: 40 }}>Over 45 years and 190+ investments, WCAS has partnered with management teams across technology and healthcare to build market-leading companies.</p>
         </div>
-      </section>
-
-      <section style={{ background: BG, padding: "64px 64px 64px" }}>
-        <Fade><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
-          <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>We focus exclusively on technology and healthcare — two sectors where deep domain expertise creates a measurable edge. Our portfolio spans enterprise software, data & analytics, healthcare IT, and tech-enabled services.</p>
-          <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>Every partnership starts with a shared vision for growth. We combine hands-on operational support with sector knowledge built over decades to help our companies scale, innovate, and lead their markets.</p>
-        </div></Fade>
       </section>
 
       <div style={{ position: "sticky", top: 68, zIndex: 10, background: "rgba(255,255,255,0.95)", backdropFilter: "blur(12px)", borderBottom: "1px solid #e4e4e4", padding: "16px 48px", display: "flex", alignItems: "center", gap: 12 }}>
