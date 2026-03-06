@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import equilendLogo from "@assets/image_1772774291097.png";
 
 
@@ -54,6 +54,20 @@ export default function PortfolioPage() {
     return () => document.removeEventListener("click", close);
   }, []);
 
+  const filterBarRef = useRef<HTMLDivElement>(null);
+  const [isStuck, setIsStuck] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (filterBarRef.current) {
+        const rect = filterBarRef.current.getBoundingClientRect();
+        setIsStuck(rect.top <= 69);
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const filtered = companies.filter(c => {
     if (statusFilter === "realized") return false;
     if (sectorFilter !== "all" && c.sector !== sectorFilter) return false;
@@ -72,7 +86,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <div style={{ position: "sticky", top: 68, zIndex: 10, background: "rgba(255,255,255,0.97)", backdropFilter: "blur(16px)", borderBottom: "1px solid #e8e8e8", padding: "18px 48px", display: "flex", alignItems: "center", justifyContent: "center", gap: 12, boxShadow: "0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)", borderRadius: "0 0 20px 20px" }}>
+      <div ref={filterBarRef} style={{ position: "sticky", top: 68, zIndex: 10, background: isStuck ? "rgba(255,255,255,0.97)" : "#fff", backdropFilter: isStuck ? "blur(16px)" : "none", borderBottom: "1px solid #e8e8e8", padding: "18px 48px", display: "flex", alignItems: "center", justifyContent: "center", gap: 12, boxShadow: isStuck ? "0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)" : "none", borderRadius: isStuck ? "0 0 20px 20px" : "0", transition: "box-shadow 0.3s ease, border-radius 0.3s ease, background 0.3s ease" }}>
         <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
           <button
             onClick={() => { setStatusOpen(!statusOpen); setSectorOpen(false); }}
