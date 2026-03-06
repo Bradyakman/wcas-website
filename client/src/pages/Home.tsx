@@ -222,7 +222,7 @@ export default function Home() {
                   { name: "Quickbase", src: logoQuickbase, h: 22 },
                   { name: "GovCIO", src: logoGovCIO, h: 26 },
                   { name: "Kindred at Home", src: logoKindred, h: 40 },
-                  { name: "LINQ", src: logoLINQ, h: 26 },
+                  { name: "Lumexa", src: "/logos/lumexa.png", h: 38 },
                   { name: "Select Medical", src: logoSelectMed, h: 38 },
                   { name: "Shields", src: logoShields, h: 26 },
                   { name: "Norstella", src: logoNorstella, h: 38 },

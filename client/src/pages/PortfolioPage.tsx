@@ -12,6 +12,7 @@ const companies: Company[] = [
   { name: "ImageTrend", sector: "Technology", color: "#0284c7", status: "current", logo: "/logos/imagetrend.png" },
   { name: "LINQ", sector: "Technology", color: "#4f46e5", status: "current", logo: "/logos/linq.png" },
   { name: "ACD", sector: "Technology", color: "#7c3aed", status: "current" },
+  { name: "AIA", sector: "Technology", color: "#e63b2e", status: "current", logo: "/logos/aia.png", darkBg: true },
   { name: "GovCIO", sector: "Technology", color: "#0891b2", status: "current" },
   { name: "Absorb", sector: "Technology", color: "#2563eb", status: "current" },
   { name: "TrueCommerce", sector: "Technology", color: "#0d9488", status: "current" },
