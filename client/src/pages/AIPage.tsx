@@ -115,7 +115,7 @@ export default function WCASAIPage() {
   
   const fCS = csFilter === "All" ? caseStudies : caseStudies.filter(c => c.sector === csFilter);
   const si = Math.min(activeCS, fCS.length - 1);
-  const anchors = [{id:"about",l:"About"},{id:"playbook",l:"Our Playbook"},{id:"case-studies",l:"Case Studies"}];
+  const anchors = [{id:"playbook",l:"Our Playbook"},{id:"case-studies",l:"Case Studies"}];
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
@@ -124,7 +124,7 @@ export default function WCASAIPage() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
         .pb-row:hover{background:rgba(255,255,255,0.03);padding-left:16px!important;padding-right:16px}.pb-row:hover .pb-icon{color:rgba(77,184,199,0.9)}.pb-row:hover .pb-desc{color:rgba(255,255,255,0.7)}
-        .ap{font-family:${SANS};font-size:15px;font-weight:500;padding:12px 32px;border-radius:23px;border:1px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.9);cursor:pointer;transition:all 0.3s;text-decoration:none;white-space:nowrap}.ap:hover{color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.12)}.ap.ac{color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.15)}
+        .ap{font-family:${SANS};font-size:13px;font-weight:500;padding:7px 15px;border-radius:18px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.65);cursor:pointer;transition:all 0.2s;text-decoration:none;white-space:nowrap}.ap:hover{color:rgba(255,255,255,0.95);border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.12);transform:translateY(-3px)}.ap.ac{color:rgba(255,255,255,0.95);border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.15)}
         .csc{padding:24px 28px;cursor:pointer;border-left:3px solid transparent;transition:all 0.25s}.csc:hover{background:rgba(255,255,255,0.03)}.csc.csa{background:rgba(255,255,255,0.05);border-left-color:${TEAL}}
         .fc{font-family:${SANS};font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;padding:7px 16px;border-radius:16px;cursor:pointer;transition:all 0.25s;border:1px solid rgba(255,255,255,0.06);background:transparent;color:rgba(255,255,255,0.3)}.fc:hover{color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15)}.fc.fca{color:${TEAL};border-color:rgba(77,184,199,0.3);background:rgba(77,184,199,0.08)}
         @keyframes gs{0%{background-position:0% 50%}100%{background-position:200% 50%}}
