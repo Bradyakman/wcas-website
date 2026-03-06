@@ -221,7 +221,7 @@ export default function Home() {
                   { name: "InnovAge", src: logoInnovAge, h: 29 },
                   { name: "Quickbase", src: logoQuickbase, h: 24 },
                   { name: "GovCIO", src: logoGovCIO, h: 29 },
-                  { name: "Kindred at Home", src: logoKindred, h: 44 },
+                  { name: "Kindred at Home", src: "/logos/kindred.png", h: 44 },
                   
                   { name: "Select Medical", src: logoSelectMed, h: 42 },
                   { name: "Shields", src: logoShields, h: 29 },
