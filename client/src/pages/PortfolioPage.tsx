@@ -90,7 +90,7 @@ export default function PortfolioPage() {
         <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
           <button
             onClick={() => { setStatusOpen(!statusOpen); setSectorOpen(false); }}
-            style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 22px", borderRadius: 20, border: "none", background: "#0a1628", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 8 }}
+            style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "none", background: "#0a1628", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, minWidth: 180, justifyContent: "center" }}
           >
             <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e" }} />
             {statusLabels[statusFilter]}
@@ -111,7 +111,7 @@ export default function PortfolioPage() {
         <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
           <button
             onClick={() => { setSectorOpen(!sectorOpen); setStatusOpen(false); }}
-            style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "10px 22px", borderRadius: 20, border: "none", background: "#0a1628", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 6 }}
+            style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "none", background: "#0a1628", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, minWidth: 180, justifyContent: "center" }}
           >
             {sectorLabels[sectorFilter]}
             <span style={{ fontSize: 10 }}>▾</span>
