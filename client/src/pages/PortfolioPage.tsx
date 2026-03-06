@@ -9,7 +9,7 @@ type Company = { name: string; sector: "Technology" | "Healthcare"; color: strin
 const companies: Company[] = [
   { name: "Equilend", sector: "Technology", color: "#2563eb", status: "current", logo: "/logos/equilend.png", darkBg: true },
   { name: "Grant Street", sector: "Technology", color: "#0d9488", status: "current", logo: "/logos/grant-street.png", darkBg: true },
-  { name: "ImageTrend", sector: "Technology", color: "#0284c7", status: "current", logo: "/logos/imagetrend.png" },
+  { name: "ImageTrend", sector: "Technology", color: "#0284c7", status: "current", logo: "/logos/imagetrend-transparent.png", darkBg: true },
   { name: "LINQ", sector: "Technology", color: "#4f46e5", status: "current", logo: "/logos/linq.png" },
   { name: "ACD", sector: "Technology", color: "#7c3aed", status: "current" },
   { name: "AIA", sector: "Technology", color: "#e63b2e", status: "current", logo: "/logos/aia.png", darkBg: true },

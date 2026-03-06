@@ -233,6 +233,7 @@ export default function Home() {
                   { name: "Lumexa", src: "/logos/lumexa-transparent.png", h: 40 },
                   { name: "AssistRx", src: "/logos/assistrx-transparent.png", h: 34 },
                   { name: "Equilend", src: "/logos/equilend.png", h: 29 },
+                  { name: "ImageTrend", src: "/logos/imagetrend-transparent.png", h: 30 },
                 ].map((co, i) => (
                   <div key={`${setIdx}-${i}`} className="port-logo-card">
                     <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 132, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
