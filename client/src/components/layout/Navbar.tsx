@@ -55,18 +55,19 @@ export function Navbar() {
   };
 
   const navLinks = [
-    { 
-      name: "Technology", 
-      href: "#",
-      dropdown: [
-        { name: "Operating Successes", href: "#" }
-      ]
-    },
+    { name: "AI", href: "/ai" },
     { 
       name: "Healthcare", 
       href: "#",
       dropdown: [
         { name: "HCIT", href: "#" }
+      ]
+    },
+    { 
+      name: "Technology", 
+      href: "#",
+      dropdown: [
+        { name: "Operating Successes", href: "#" }
       ]
     },
     { name: "News", href: "#" },

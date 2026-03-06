@@ -83,8 +83,8 @@ export default function Home() {
       <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "220px 56px 48px", maxWidth: 1100 }}>
           <h1 style={{ fontSize: 36, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
-            For over 45 years, WCAS has partnered with industry leaders across technology &{" "}
-            healthcare to <em style={{ fontStyle: "italic", color: "#8BBDE8" }}>reshape landscapes and drive growth.</em>
+            For over 45 years, WCAS has partnered with industry leaders across healthcare &{" "}
+            technology to <em style={{ fontStyle: "italic", color: "#8BBDE8" }}>reshape landscapes and drive growth.</em>
           </h1>
           <p style={{ fontFamily: SANS, fontSize: 19, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: 900, textShadow: "0 1px 2px rgba(0,0,0,0.2)" }}>
             As one of private equity's first sector specialists, we combine deep sector knowledge with hands-on operational support to build long-term value.
@@ -154,19 +154,6 @@ export default function Home() {
         `}</style>
         <div className="wwi-split">
           <div className="wwi-divider" />
-          <div className="wwi-pnl wwi-tech">
-            <div className="wwi-pnl-bg" />
-            <div className="wwi-watermark">Technology</div>
-            <div className="wwi-bottom-glow" />
-            <div className="wwi-content">
-              <h3>Powering Essential Industries</h3>
-              <p className="wwi-desc">We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.</p>
-              <div className="wwi-pills">
-                {["Built Environment", "Data & Analytics", "FinTech", "GovTech", "IndustrialTech"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
-              </div>
-              <a href="#" onClick={e => e.preventDefault()} className="wwi-cta2">Explore Technology &rarr;</a>
-            </div>
-          </div>
           <div className="wwi-pnl wwi-hc">
             <div className="wwi-pnl-bg" />
             <div className="wwi-watermark">Healthcare</div>
@@ -178,6 +165,19 @@ export default function Home() {
                 {["Care Delivery", "Healthcare IT", "Payor Solutions", "Pharma Value Chain"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
               <a href="#" onClick={e => e.preventDefault()} className="wwi-cta2">Explore Healthcare &rarr;</a>
+            </div>
+          </div>
+          <div className="wwi-pnl wwi-tech">
+            <div className="wwi-pnl-bg" />
+            <div className="wwi-watermark">Technology</div>
+            <div className="wwi-bottom-glow" />
+            <div className="wwi-content">
+              <h3>Powering Essential Industries</h3>
+              <p className="wwi-desc">We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.</p>
+              <div className="wwi-pills">
+                {["Built Environment", "Data & Analytics", "FinTech", "GovTech", "IndustrialTech"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
+              </div>
+              <a href="#" onClick={e => e.preventDefault()} className="wwi-cta2">Explore Technology &rarr;</a>
             </div>
           </div>
         </div>
