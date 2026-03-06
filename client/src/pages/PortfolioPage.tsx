@@ -151,7 +151,7 @@ export default function PortfolioPage() {
             return (
               <div>
                 {rows.map((row, ri) => (
-                  <div key={ri}>
+                  <div key={ri} style={{ background: "#fff", borderBottom: "1px solid #d5d5d5" }}>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
                       {row.map((c, ci) => {
                         const idx = offset + ri * 4 + ci;
@@ -167,7 +167,7 @@ export default function PortfolioPage() {
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
-                              background: "#fff",
+                              background: isHovered ? "#fff" : "transparent",
                               transform: isHovered ? "scale(1.08) translateY(-6px)" : "scale(1)",
                               boxShadow: isHovered ? "0 24px 60px rgba(0,0,0,0.14), 0 8px 20px rgba(0,0,0,0.08)" : "none",
                               borderRadius: isHovered ? 16 : 0,
@@ -194,7 +194,6 @@ export default function PortfolioPage() {
                         );
                       })}
                     </div>
-                    <hr style={{ border: "none", borderTop: "1px solid #e0e0e0", margin: 0 }} />
                   </div>
                 ))}
               </div>
