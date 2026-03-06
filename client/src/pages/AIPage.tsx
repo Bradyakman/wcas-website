@@ -112,7 +112,6 @@ export default function WCASAIPage() {
   const [activeAnchor, setActiveAnchor] = useState("about");
   const [activeCS, setActiveCS] = useState(0);
   const [csFilter, setCsFilter] = useState("All");
-  const [openPB, setOpenPB] = useState<number | null>(0);
   
   const fCS = csFilter === "All" ? caseStudies : caseStudies.filter(c => c.sector === csFilter);
   const si = Math.min(activeCS, fCS.length - 1);
@@ -177,25 +176,15 @@ export default function WCASAIPage() {
           </Fade>
           <Fade delay={100}>
             <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: 48 }}>
-              {scaleSteps.map((s, i) => {
-                const isOpen = openPB === i;
-                return (
-                  <div key={i} className="pb-row" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)", transition: "background 0.3s ease", borderRadius: 4 }}>
-                    <div onClick={() => setOpenPB(isOpen ? null : i)} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "32px 16px", cursor: "pointer" }}>
-                      <div>
-                        <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.8, textTransform: "uppercase", color: TEAL, marginBottom: 10 }}>{s.detail}</div>
-                        <h4 style={{ fontFamily: SANS, fontSize: 22, fontWeight: 700, color: "#fff", lineHeight: 1.3, textTransform: "uppercase", letterSpacing: 0.5 }}>{s.title}</h4>
-                      </div>
-                      <div style={{ width: 32, height: 32, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 24, transition: "transform 0.3s ease", transform: isOpen ? "rotate(45deg)" : "rotate(0deg)" }}>
-                        <span style={{ fontFamily: SANS, fontSize: 28, fontWeight: 300, color: "rgba(255,255,255,0.4)", lineHeight: 1 }}>+</span>
-                      </div>
-                    </div>
-                    <div style={{ maxHeight: isOpen ? 300 : 0, overflow: "hidden", transition: "max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease", opacity: isOpen ? 1 : 0 }}>
-                      <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.6)", lineHeight: 1.8, padding: "0 16px 32px" }} className="pb-desc">{s.desc}</p>
-                    </div>
+              {scaleSteps.map((s, i) => (
+                <div key={i} className="pb-row" style={{ display: "grid", gridTemplateColumns: "260px 1fr", gap: 32, alignItems: "start", padding: "44px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", transition: "background 0.3s ease, padding-left 0.3s ease", borderRadius: 4, cursor: "default" }}>
+                  <div>
+                    <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.8, textTransform: "uppercase", color: TEAL, marginBottom: 10 }}>{s.detail}</div>
+                    <h4 style={{ fontFamily: SANS, fontSize: 22, fontWeight: 700, color: "#fff", lineHeight: 1.3, textTransform: "uppercase", letterSpacing: 0.5 }}>{s.title}</h4>
                   </div>
-                );
-              })}
+                  <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.45)", lineHeight: 1.8, transition: "color 0.3s" }} className="pb-desc">{s.desc}</p>
+                </div>
+              ))}
             </div>
           </Fade>
         </div>
