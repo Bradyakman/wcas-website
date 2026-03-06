@@ -93,7 +93,7 @@ export default function PortfolioPage() {
         <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
           <button
             onClick={() => { setStatusOpen(!statusOpen); setSectorOpen(false); }}
-            style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid #d1d5db", background: "#fff", color: "#555", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, width: 180, justifyContent: "center" }}
+            style={{ fontFamily: SANS, fontSize: 16, fontWeight: 500, padding: "14px 36px", borderRadius: 25, border: "1px solid #888", background: "#fff", color: "#222", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, width: 200, justifyContent: "center" }}
           >
             Status
             <span style={{ fontSize: 10 }}>▾</span>
@@ -113,7 +113,7 @@ export default function PortfolioPage() {
         <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
           <button
             onClick={() => { setSectorOpen(!sectorOpen); setStatusOpen(false); }}
-            style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid #d1d5db", background: "#fff", color: "#555", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, width: 180, justifyContent: "center" }}
+            style={{ fontFamily: SANS, fontSize: 16, fontWeight: 500, padding: "14px 36px", borderRadius: 25, border: "1px solid #888", background: "#fff", color: "#222", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, width: 200, justifyContent: "center" }}
           >
             Sector
             <span style={{ fontSize: 10 }}>▾</span>
@@ -135,7 +135,7 @@ export default function PortfolioPage() {
           placeholder="Search"
           value={search}
           onChange={e => setSearch(e.target.value)}
-          style={{ fontFamily: SANS, fontSize: 15, padding: "12px 32px", borderRadius: 23, border: "1px solid #d1d5db", outline: "none", width: 180, background: "#fff", color: "#555" }}
+          style={{ fontFamily: SANS, fontSize: 16, padding: "14px 36px", borderRadius: 25, border: "1px solid #888", outline: "none", width: 200, background: "#fff", color: "#222" }}
         />
       </div>
 
@@ -179,7 +179,7 @@ export default function PortfolioPage() {
                             }}
                           >
                             {c.logo ? (
-                              <img src={c.logo} alt={c.name} style={{ maxHeight: c.name === "Grant Street" ? 90 : 56, maxWidth: c.name === "Grant Street" ? 340 : 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) opacity(0.7)", transition: "filter 0.3s" }} />
+                              <img src={c.logo} alt={c.name} style={{ maxHeight: c.name === "Grant Street" ? 90 : c.name === "ImageTrend" ? 72 : 56, maxWidth: c.name === "Grant Street" ? 340 : c.name === "ImageTrend" ? 280 : 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) brightness(0) opacity(0.85)", transition: "filter 0.3s" }} />
                             ) : (
                               <span style={{
                                 fontFamily: SANS,
