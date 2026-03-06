@@ -222,7 +222,7 @@ export default function Home() {
                   { name: "Quickbase", src: logoQuickbase, h: 22 },
                   { name: "GovCIO", src: logoGovCIO, h: 26 },
                   { name: "Kindred at Home", src: logoKindred, h: 40 },
-                  { name: "Lumexa", src: "/logos/lumexa.png", h: 38, whiteBg: true },
+                  
                   { name: "Select Medical", src: logoSelectMed, h: 38 },
                   { name: "Shields", src: logoShields, h: 26 },
                   { name: "Norstella", src: logoNorstella, h: 38 },
@@ -230,11 +230,11 @@ export default function Home() {
                   { name: "Clearwater Analytics", src: logoClearwater, h: 26 },
                   { name: "NaviHealth", src: logoNaviHealth, h: 38 },
                   { name: "Simeio", src: logoSimeio, h: 26 },
-                  { name: "AssistRx", src: "/logos/assistrx.png", h: 34, whiteBg: true },
+                  
                   { name: "Equilend", src: "/logos/equilend.png", h: 26 },
-                ].map((co: any, i: number) => (
+                ].map((co, i) => (
                   <div key={`${setIdx}-${i}`} className="port-logo-card">
-                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 120, objectFit: "contain", filter: co.whiteBg ? "none" : "brightness(0) invert(1)", mixBlendMode: "screen" }} />
+                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 120, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
                   </div>
                 ))
               )}
