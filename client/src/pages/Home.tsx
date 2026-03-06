@@ -120,25 +120,10 @@ export default function Home() {
           @keyframes wwi-shimmer { 0%,100%{ opacity:1 } 50%{ opacity:0.6 } }
           .wwi-split { display:flex; height:520px; position:relative; background:#152238; }
           .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(255,255,255,0.1),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
-          .wwi-split:has(.wwi-tech:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(200,152,94,0.25),transparent); }
-          .wwi-split:has(.wwi-hc:hover) .wwi-divider { background:linear-gradient(180deg,transparent,rgba(77,184,199,0.25),transparent); }
-          .wwi-pnl { flex:1; position:relative; cursor:pointer; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; transition:flex 0.4s ease, filter 0.4s ease; }
-          .wwi-pnl:hover { flex:1; }
-          .wwi-split:has(.wwi-tech:hover) .wwi-hc { flex:1; filter:none; }
-          .wwi-split:has(.wwi-hc:hover) .wwi-tech { flex:1; filter:none; }
-          .wwi-split:has(.wwi-tech:hover) .wwi-hc .wwi-content { opacity:1; pointer-events:auto; }
-          .wwi-split:has(.wwi-hc:hover) .wwi-tech .wwi-content { opacity:1; pointer-events:auto; }
-          .wwi-split:has(.wwi-tech:hover) .wwi-divider, .wwi-split:has(.wwi-hc:hover) .wwi-divider { opacity:1; }
-          .wwi-pnl-bg { position:absolute; inset:0; transition:transform 0.4s ease, opacity 0.4s ease; opacity:0; }
-          .wwi-pnl:hover .wwi-pnl-bg { transform:none; opacity:0; }
-          .wwi-tech .wwi-pnl-bg { background:radial-gradient(ellipse at 30% 70%, rgba(200,152,94,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(200,152,94,0.08) 0%, transparent 50%); }
-          .wwi-hc .wwi-pnl-bg { background:radial-gradient(ellipse at 70% 70%, rgba(77,184,199,0.15) 0%, transparent 60%), radial-gradient(ellipse at 20% 20%, rgba(77,184,199,0.08) 0%, transparent 50%); }
-          .wwi-watermark { position:absolute; top:40px; left:48px; font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1; pointer-events:none; transition:color 0.4s, transform 0.4s; z-index:1; }
-          .wwi-pnl:hover .wwi-watermark { color:rgba(255,255,255,0.03); transform:none; }
-          .wwi-bottom-glow { position:absolute; bottom:0; left:0; right:0; height:120px; opacity:0; transition:opacity 0.4s ease; pointer-events:none; }
-          .wwi-pnl:hover .wwi-bottom-glow { opacity:0; }
-          .wwi-tech .wwi-bottom-glow { background:linear-gradient(to top, rgba(200,152,94,0.06), transparent); }
-          .wwi-hc .wwi-bottom-glow { background:linear-gradient(to top, rgba(77,184,199,0.06), transparent); }
+          .wwi-pnl { flex:1; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; }
+          .wwi-pnl-bg { position:absolute; inset:0; opacity:0; }
+          .wwi-watermark { position:absolute; top:40px; left:48px; font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.03); line-height:1; pointer-events:none; z-index:1; }
+          .wwi-bottom-glow { display:none; }
           .wwi-content { position:relative; z-index:2; padding:0 48px 48px; transition:opacity 0.3s ease; }
           .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:6px 16px; border-radius:18px; background:rgba(255,255,255,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.06); margin-bottom:20px; }
           .wwi-tag-dot { width:6px; height:6px; border-radius:50%; }
@@ -146,11 +131,8 @@ export default function Home() {
           .wwi-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(255,255,255,0.4); line-height:1.65; margin-top:16px; }
           .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
           .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:13px; color:rgba(255,255,255,0.5); padding:7px 15px; border-radius:18px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); transition:transform 0.2s ease, border-color 0.2s ease; }
-          .wwi-pill2:hover { transform:translateY(-2px); border-color:rgba(255,255,255,0.3); }
-          .wwi-cta2 { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; text-decoration:none; margin-top:24px; opacity:0; transform:translateY(6px); transition:opacity 0.3s ease 0.35s, transform 0.3s ease 0.35s; }
-          .wwi-pnl:hover .wwi-cta2 { opacity:0; transform:translateY(6px); }
-          .wwi-tech .wwi-cta2 { color:#4db8c7; }
-          .wwi-hc .wwi-cta2 { color:#8BBDE8; }
+          .wwi-pill2:hover { transform:none; }
+          .wwi-cta2 { display:none; }
         `}</style>
         <div className="wwi-split">
           <div className="wwi-divider" />
