@@ -7,6 +7,7 @@ import tylerPhoto from "@assets/image_1772773752068.png";
 import davidPhoto from "@assets/image_1772773762646.png";
 import carolinePhoto from "@assets/image_1772773770479.png";
 import balaPhoto from "@assets/image_1772773802351.png";
+import billPhoto from "@assets/image_1772773830252.png";
 
 const TEAL = "#4db8c7";
 const ACCENT = "#6BA3D6";
@@ -87,6 +88,7 @@ const teamMembers = [
   { name: "Caroline Dechert", role: "General Partner", initials: "CD", photo: carolinePhoto },
   { name: "Mike Donovan", role: "General Partner", initials: "MD", photo: mikePhoto },
   { name: "Bala Girsiaballa", role: "Offshoring", initials: "BG", photo: balaPhoto },
+  { name: "Bill Bowman", role: "Cybersecurity", initials: "BB", photo: billPhoto },
 ];
 const scaleSteps = [
   { title: "Leadership", desc: "Prioritizing AI discussions with Board and ELT members around deployment opportunities. We set governance upfront \u2014 security, privacy, model risk, human-in-the-loop \u2014 and align on ROI targets before a single line of code is written.", stat: "Board + ELT", detail: "Governance-first approach" },
