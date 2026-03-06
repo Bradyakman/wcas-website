@@ -216,25 +216,25 @@ export default function Home() {
             <div className="port-marquee-track">
               {[...Array(2)].map((_, setIdx) =>
                 [
-                  { name: "Avetta", src: logoAvetta, h: 40 },
-                  { name: "Asurion", src: logoAsurion, h: 22 },
-                  { name: "InnovAge", src: logoInnovAge, h: 26 },
-                  { name: "Quickbase", src: logoQuickbase, h: 22 },
-                  { name: "GovCIO", src: logoGovCIO, h: 26 },
-                  { name: "Kindred at Home", src: logoKindred, h: 40 },
+                  { name: "Avetta", src: logoAvetta, h: 44 },
+                  { name: "Asurion", src: logoAsurion, h: 24 },
+                  { name: "InnovAge", src: logoInnovAge, h: 29 },
+                  { name: "Quickbase", src: logoQuickbase, h: 24 },
+                  { name: "GovCIO", src: logoGovCIO, h: 29 },
+                  { name: "Kindred at Home", src: logoKindred, h: 44 },
                   
-                  { name: "Select Medical", src: logoSelectMed, h: 38 },
-                  { name: "Shields", src: logoShields, h: 26 },
-                  { name: "Norstella", src: logoNorstella, h: 38 },
-                  { name: "Alliance Data", src: logoAllianceData, h: 30 },
-                  { name: "Clearwater Analytics", src: logoClearwater, h: 26 },
-                  { name: "NaviHealth", src: logoNaviHealth, h: 38 },
-                  { name: "Simeio", src: logoSimeio, h: 26 },
+                  { name: "Select Medical", src: logoSelectMed, h: 42 },
+                  { name: "Shields", src: logoShields, h: 29 },
+                  { name: "Norstella", src: logoNorstella, h: 42 },
+                  { name: "Alliance Data", src: logoAllianceData, h: 33 },
+                  { name: "Clearwater Analytics", src: logoClearwater, h: 29 },
+                  { name: "NaviHealth", src: logoNaviHealth, h: 42 },
+                  { name: "Simeio", src: logoSimeio, h: 29 },
                   
-                  { name: "Equilend", src: "/logos/equilend.png", h: 26 },
+                  { name: "Equilend", src: "/logos/equilend.png", h: 29 },
                 ].map((co, i) => (
                   <div key={`${setIdx}-${i}`} className="port-logo-card">
-                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 120, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
+                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 132, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
                   </div>
                 ))
               )}
