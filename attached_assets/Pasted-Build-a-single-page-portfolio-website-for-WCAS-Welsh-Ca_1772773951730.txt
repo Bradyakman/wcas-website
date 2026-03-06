@@ -1,0 +1,52 @@
+Build a single-page portfolio website for WCAS (Welsh, Carson, Anderson & Stowe).
+
+## HERO BANNER
+Full-width dark hero section with a deep navy/black background. Overlay a 
+teal network/constellation graphic (animated SVG canvas with connected dots 
+and lines, glowing teal nodes). On top of that:
+- Large headline: Building [Enduring Value] Across Our [Portfolio]
+  - "Enduring Value" and "Portfolio" are italic and teal (#4DD9C0), 
+    the rest is white
+  - Font: serif (Georgia or similar), ~52px
+- Subtext below: "Over 45 years and 190+ investments, WCAS has partnered 
+  with management teams across technology and healthcare to build 
+  market-leading companies."
+  - White, ~16px, max-width 600px, light font weight
+
+## STICKY FILTER BAR (appears below hero, sticks on scroll)
+White bar with frosted glass effect, border-bottom. Contains:
+1. Black pill button labeled "Status / Current Investments" with green dot 
+   and chevron — dropdown options: Current Investments, Realized, All
+2. Pill button "Sector" with chevron — dropdown: All Sectors, Technology, 
+   Healthcare
+3. Search input (pill shaped, right-aligned)
+
+## LOGO GRID (below filter bar)
+4-column CSS grid, each cell:
+- White background, bordered with light gray lines
+- Company name as large styled text, gray (#C8C8C8) by default
+- On hover: background becomes light gray, text snaps to company's brand color
+- Smooth color transition (0.3s)
+
+Companies (Technology sector):
+Equilend (blue), Grant Street (teal), ImageTrend (sky), LINQ (indigo), 
+ACD (purple), GovCIO (cyan), Absorb (blue), TrueCommerce (teal), 
+QuickBase (orange), Green Street (green), NEWAsurion (amber)
+
+Companies (Healthcare sector):
+Norstella (pink), AssistRx (teal), Liberty Dental (sky), CenterWell (green),
+Valtruis (indigo), CSA (blue), Owl (purple), EnableComp (cyan), 
+Leiters (orange), UMP (amber), Kiniciti (red), Lumexa (pink), 
+InnovAge (teal), USAP (sky), Abzena (green), Emerus (lime)
+
+## BEHAVIOR
+- Filter bar sticks below nav on scroll (position: sticky, top: 68px)
+- Status/Sector dropdowns filter the grid live
+- Search filters by company name live
+- All in one HTML file, no frameworks, vanilla JS only
+- Google Font: DM Sans
+
+## NAV
+Fixed top nav, white, 68px tall, border-bottom. Left: "WCAS" logo text. 
+Center: Portfolio, About, Team, Insights, Contact links. Right: 
+"Investor Login" pill button.

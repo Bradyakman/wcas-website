@@ -82,13 +82,13 @@ const SD = ({ children, mw = 660 }: { children: React.ReactNode; mw?: number }) 
 
 
 const teamMembers = [
-  { name: "George Mashini", role: "Software Portfolio CTO", initials: "GM", photo: georgePhoto },
+  { name: "Bill Bowman", role: "Cybersecurity", initials: "BB", photo: billPhoto },
   { name: "David Caluori", role: "General Partner", initials: "DC", photo: davidPhoto },
-  { name: "Tyler Pitchford", role: "AI Implementation", initials: "TP", photo: tylerPhoto },
   { name: "Caroline Dechert", role: "General Partner", initials: "CD", photo: carolinePhoto },
   { name: "Mike Donovan", role: "General Partner", initials: "MD", photo: mikePhoto },
   { name: "Bala Girsiaballa", role: "Offshoring", initials: "BG", photo: balaPhoto },
-  { name: "Bill Bowman", role: "Cybersecurity", initials: "BB", photo: billPhoto },
+  { name: "George Mashini", role: "Software Portfolio CTO", initials: "GM", photo: georgePhoto },
+  { name: "Tyler Pitchford", role: "AI Implementation", initials: "TP", photo: tylerPhoto },
 ];
 const scaleSteps = [
   { title: "Leadership", desc: "Prioritizing AI discussions with Board and ELT members around deployment opportunities. We set governance upfront \u2014 security, privacy, model risk, human-in-the-loop \u2014 and align on ROI targets before a single line of code is written.", stat: "Board + ELT", detail: "Governance-first approach" },
@@ -137,7 +137,7 @@ export default function WCASAIPage() {
         .tc{padding:28px;border-radius:16px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:20px;transition:transform 0.3s,border-color 0.3s}.tc:hover{transform:translateY(-3px);border-color:rgba(107,163,214,0.25)}
         @keyframes team-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
         .team-track{display:flex;gap:20px;animation:team-scroll 20s linear infinite;width:max-content}.team-track:hover{animation-play-state:paused}
-        .team-photo-card{width:200px;flex-shrink:0;text-align:center;transition:transform 0.3s}.team-photo-card:hover{transform:translateY(-6px)}
+        .team-photo-card{width:200px;flex-shrink:0;text-align:center;display:flex;flex-direction:column;align-items:center;transition:transform 0.3s}.team-photo-card:hover{transform:translateY(-6px)}
         .team-photo-img{filter:grayscale(100%);transition:filter 0.4s ease}.team-photo-card:hover .team-photo-img{filter:grayscale(0%)}
         
         .sl{position:absolute;left:19px;top:40px;bottom:-20px;width:2px;background:linear-gradient(180deg,${TEAL},rgba(77,184,199,0.1))}
