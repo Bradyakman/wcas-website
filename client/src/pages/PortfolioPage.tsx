@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import aiHeroBg from "@assets/image_1772741431593.png";
 
-const TEAL = "#4db8c7";
 const BG = "#0C1A2E";
 const SERIF = "'Cormorant Garamond', Georgia, serif";
 const SANS = "'DM Sans', sans-serif";
@@ -23,9 +22,64 @@ function Fade({ children, delay = 0, style }: { children: React.ReactNode; delay
   return <div ref={f.ref} style={{ ...style, ...f.style }}>{children}</div>;
 }
 
+type Company = { name: string; sector: "Technology" | "Healthcare"; color: string; status: "current" | "realized" };
+
+const companies: Company[] = [
+  { name: "Equilend", sector: "Technology", color: "#2563eb", status: "current" },
+  { name: "Grant Street", sector: "Technology", color: "#0d9488", status: "current" },
+  { name: "ImageTrend", sector: "Technology", color: "#0284c7", status: "current" },
+  { name: "LINQ", sector: "Technology", color: "#4f46e5", status: "current" },
+  { name: "ACD", sector: "Technology", color: "#7c3aed", status: "current" },
+  { name: "GovCIO", sector: "Technology", color: "#0891b2", status: "current" },
+  { name: "Absorb", sector: "Technology", color: "#2563eb", status: "current" },
+  { name: "TrueCommerce", sector: "Technology", color: "#0d9488", status: "current" },
+  { name: "QuickBase", sector: "Technology", color: "#ea580c", status: "current" },
+  { name: "Green Street", sector: "Technology", color: "#16a34a", status: "current" },
+  { name: "NEWAsurion", sector: "Technology", color: "#d97706", status: "current" },
+  { name: "Norstella", sector: "Healthcare", color: "#db2777", status: "current" },
+  { name: "AssistRx", sector: "Healthcare", color: "#0d9488", status: "current" },
+  { name: "Liberty Dental", sector: "Healthcare", color: "#0284c7", status: "current" },
+  { name: "CenterWell", sector: "Healthcare", color: "#16a34a", status: "current" },
+  { name: "Valtruis", sector: "Healthcare", color: "#4f46e5", status: "current" },
+  { name: "CSA", sector: "Healthcare", color: "#2563eb", status: "current" },
+  { name: "Owl", sector: "Healthcare", color: "#7c3aed", status: "current" },
+  { name: "EnableComp", sector: "Healthcare", color: "#0891b2", status: "current" },
+  { name: "Leiters", sector: "Healthcare", color: "#ea580c", status: "current" },
+  { name: "UMP", sector: "Healthcare", color: "#d97706", status: "current" },
+  { name: "Kiniciti", sector: "Healthcare", color: "#dc2626", status: "current" },
+  { name: "Lumexa", sector: "Healthcare", color: "#db2777", status: "current" },
+  { name: "InnovAge", sector: "Healthcare", color: "#0d9488", status: "current" },
+  { name: "USAP", sector: "Healthcare", color: "#0284c7", status: "current" },
+  { name: "Abzena", sector: "Healthcare", color: "#16a34a", status: "current" },
+  { name: "Emerus", sector: "Healthcare", color: "#65a30d", status: "current" },
+];
+
 export default function PortfolioPage() {
+  const [statusFilter, setStatusFilter] = useState<"current" | "realized" | "all">("current");
+  const [sectorFilter, setSectorFilter] = useState<"all" | "Technology" | "Healthcare">("all");
+  const [search, setSearch] = useState("");
+  const [statusOpen, setStatusOpen] = useState(false);
+  const [sectorOpen, setSectorOpen] = useState(false);
+  const [hoveredCell, setHoveredCell] = useState<number | null>(null);
+
+  const statusLabels = { current: "Current Investments", realized: "Realized Investments", all: "All Investments" };
+  const sectorLabels = { all: "All Sectors", Technology: "Technology", Healthcare: "Healthcare" };
+
+  useEffect(() => {
+    const close = () => { setStatusOpen(false); setSectorOpen(false); };
+    document.addEventListener("click", close);
+    return () => document.removeEventListener("click", close);
+  }, []);
+
+  const filtered = companies.filter(c => {
+    if (statusFilter === "realized") return false;
+    if (sectorFilter !== "all" && c.sector !== sectorFilter) return false;
+    if (search && !c.name.toLowerCase().includes(search.toLowerCase())) return false;
+    return true;
+  });
+
   return (
-    <div style={{ fontFamily: SERIF, background: BG, color: "#fff", minHeight: "100vh" }}>
+    <div style={{ fontFamily: SERIF, background: "#fff", color: "#111", minHeight: "100vh" }}>
 
       <section style={{ position: "relative", overflow: "hidden", width: "100%", minHeight: 575 }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }} />
@@ -42,6 +96,100 @@ export default function PortfolioPage() {
           <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>Every partnership starts with a shared vision for growth. We combine hands-on operational support with sector knowledge built over decades to help our companies scale, innovate, and lead their markets.</p>
         </div></Fade>
       </section>
+
+      <div style={{ position: "sticky", top: 68, zIndex: 10, background: "rgba(255,255,255,0.95)", backdropFilter: "blur(12px)", borderBottom: "1px solid #e4e4e4", padding: "16px 48px", display: "flex", alignItems: "center", gap: 12 }}>
+        <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
+          <button
+            onClick={() => { setStatusOpen(!statusOpen); setSectorOpen(false); }}
+            style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "8px 20px", borderRadius: 20, border: "none", background: "#111", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 8 }}
+          >
+            <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e" }} />
+            {statusLabels[statusFilter]}
+            <span style={{ fontSize: 10 }}>▾</span>
+          </button>
+          {statusOpen && (
+            <div style={{ position: "absolute", top: "calc(100% + 6px)", left: 0, background: "#fff", border: "1px solid #e4e4e4", borderRadius: 12, boxShadow: "0 8px 24px rgba(0,0,0,0.1)", overflow: "hidden", minWidth: 200, zIndex: 20 }}>
+              {(["current", "realized", "all"] as const).map(v => (
+                <div key={v} onClick={() => { setStatusFilter(v); setStatusOpen(false); }} style={{ fontFamily: SANS, fontSize: 13, padding: "10px 20px", cursor: "pointer", background: statusFilter === v ? "#f5f5f5" : "#fff", color: "#333" }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "#f5f5f5")}
+                  onMouseLeave={e => (e.currentTarget.style.background = statusFilter === v ? "#f5f5f5" : "#fff")}
+                >{statusLabels[v]}</div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div style={{ position: "relative" }} onClick={e => e.stopPropagation()}>
+          <button
+            onClick={() => { setSectorOpen(!sectorOpen); setStatusOpen(false); }}
+            style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "8px 20px", borderRadius: 20, border: "1px solid #e4e4e4", background: sectorFilter !== "all" ? "#111" : "#fff", color: sectorFilter !== "all" ? "#fff" : "#333", cursor: "pointer", display: "flex", alignItems: "center", gap: 6 }}
+          >
+            {sectorLabels[sectorFilter]}
+            <span style={{ fontSize: 10 }}>▾</span>
+          </button>
+          {sectorOpen && (
+            <div style={{ position: "absolute", top: "calc(100% + 6px)", left: 0, background: "#fff", border: "1px solid #e4e4e4", borderRadius: 12, boxShadow: "0 8px 24px rgba(0,0,0,0.1)", overflow: "hidden", minWidth: 160, zIndex: 20 }}>
+              {(["all", "Technology", "Healthcare"] as const).map(v => (
+                <div key={v} onClick={() => { setSectorFilter(v); setSectorOpen(false); }} style={{ fontFamily: SANS, fontSize: 13, padding: "10px 20px", cursor: "pointer", background: sectorFilter === v ? "#f5f5f5" : "#fff", color: "#333" }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "#f5f5f5")}
+                  onMouseLeave={e => (e.currentTarget.style.background = sectorFilter === v ? "#f5f5f5" : "#fff")}
+                >{sectorLabels[v]}</div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div style={{ marginLeft: "auto" }}>
+          <input
+            type="text"
+            placeholder="Search"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            style={{ fontFamily: SANS, fontSize: 13, padding: "8px 20px", borderRadius: 20, border: "1px solid #e4e4e4", outline: "none", width: 200, background: "#fff", color: "#333" }}
+          />
+        </div>
+      </div>
+
+      <div style={{ background: "#fff" }}>
+        {filtered.length === 0 ? (
+          <div style={{ fontFamily: SANS, fontSize: 15, color: "#999", textAlign: "center", padding: "80px 0" }}>No companies match your filters.</div>
+        ) : (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
+            {filtered.map((c, i) => {
+              const isHovered = hoveredCell === i;
+              const col = i % 4;
+              return (
+                <div
+                  key={c.name + i}
+                  onMouseEnter={() => setHoveredCell(i)}
+                  onMouseLeave={() => setHoveredCell(null)}
+                  style={{
+                    minHeight: 148,
+                    padding: "52px 40px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderBottom: "1px solid #e4e4e4",
+                    borderRight: col < 3 ? "1px solid #e4e4e4" : "none",
+                    background: isHovered ? "#f7f7f7" : "#fff",
+                    transition: "background 0.3s",
+                    cursor: "pointer",
+                  }}
+                >
+                  <span style={{
+                    fontFamily: SANS,
+                    fontSize: 22,
+                    fontWeight: 600,
+                    color: isHovered ? c.color : "#c8c8c8",
+                    transition: "color 0.3s",
+                    textAlign: "center",
+                  }}>{c.name}</span>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
 
     </div>
   );

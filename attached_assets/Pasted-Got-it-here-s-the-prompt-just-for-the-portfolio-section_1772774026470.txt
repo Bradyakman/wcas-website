@@ -1,0 +1,80 @@
+Got it — here's the prompt just for the portfolio section that goes under the banner:
+
+---
+
+```
+Below an existing hero banner, add a portfolio companies section to this page.
+
+## STICKY FILTER BAR
+Sits directly below the banner. Sticks on scroll (position: sticky, top: 68px).
+White background with frosted glass blur, border-bottom: 1px solid #e4e4e4.
+Padding: 16px 48px. Contains:
+
+1. Black pill (always active/black): "Status / Current Investments" 
+   — green dot (#22c55e), chevron
+   — dropdown: Current Investments, Realized Investments, All Investments
+2. White pill: "Sector" with chevron
+   — dropdown: All Sectors, Technology, Healthcare
+3. Search input — pill-shaped, right side, placeholder "Search"
+
+Clicking a pill opens its dropdown. Selecting an option updates the label 
+and filters the grid live. Active (non-default) pills turn black.
+Clicking outside closes all dropdowns.
+
+## LOGO GRID
+4-column CSS grid directly below the filter bar.
+Each cell: white bg, gray borders (1px #e4e4e4), min-height 148px, 
+centered content, padding 52px 40px.
+
+Company name displayed as large text (~22px, semibold).
+DEFAULT state: color #c8c8c8 (gray).
+HOVER state: cell bg becomes #f7f7f7, text snaps to brand color (transition 0.3s).
+
+Companies:
+TECHNOLOGY sector:
+- Equilend (blue #2563eb)
+- Grant Street (teal #0d9488)
+- ImageTrend (sky #0284c7)
+- LINQ (indigo #4f46e5)
+- ACD (purple #7c3aed)
+- GovCIO (cyan #0891b2)
+- Absorb (blue #2563eb)
+- TrueCommerce (teal #0d9488)
+- QuickBase (orange #ea580c)
+- Green Street (green #16a34a)
+- NEWAsurion (amber #d97706)
+
+HEALTHCARE sector:
+- Norstella (pink #db2777)
+- AssistRx (teal #0d9488)
+- Liberty Dental (sky #0284c7)
+- CenterWell (green #16a34a)
+- Valtruis (indigo #4f46e5)
+- CSA (blue #2563eb)
+- Owl (purple #7c3aed)
+- EnableComp (cyan #0891b2)
+- Leiters (orange #ea580c)
+- UMP (amber #d97706)
+- Kiniciti (red #dc2626)
+- Lumexa (pink #db2777)
+- InnovAge (teal #0d9488)
+- USAP (sky #0284c7)
+- Abzena (green #16a34a)
+- Emerus (lime #65a30d)
+
+## FILTERING LOGIC
+- Status filter: "current" shows all (all are current), "realized" shows none, 
+  "all" shows all
+- Sector filter: "technology" or "healthcare" filters by that group
+- Search: live filter by company name, case-insensitive
+- All filters combine (AND logic)
+
+## STYLE
+Font: DM Sans (Google Fonts). Vanilla JS only, no frameworks. 
+Border-right removed from every 4th cell. 
+No results state: centered gray text "No companies match your filters."
+```
+
+---
+
+That's scoped purely to the filter bar + grid — nothing above the banner. Paste it in and it'll drop right in.
