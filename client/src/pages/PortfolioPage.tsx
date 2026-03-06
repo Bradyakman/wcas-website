@@ -125,7 +125,7 @@ export default function PortfolioPage() {
         </div>
       </div>
 
-      <div style={{ background: "#fff" }}>
+      <div style={{ background: "#fff", padding: "0 64px" }}>
         {filtered.length === 0 ? (
           <div style={{ fontFamily: SANS, fontSize: 15, color: "#999", textAlign: "center", padding: "80px 0" }}>No companies match your filters.</div>
         ) : (
