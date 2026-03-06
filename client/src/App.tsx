@@ -12,6 +12,7 @@ import HCIT from "@/pages/HCIT";
 import News from "@/pages/News";
 import TechOperatingSuccesses from "@/pages/TechOperatingSuccesses";
 import AIPage from "@/pages/AIPage";
+import PortfolioPage from "@/pages/PortfolioPage";
 import NotFound from "@/pages/not-found";
 
 import TeamMember from "@/pages/TeamMember";
@@ -39,6 +40,7 @@ function Router() {
       <Route path="/news" component={News} />
           <Route path="/hcit" component={HCIT} />
           <Route path="/ai" component={AIPage} />
+          <Route path="/portfolio" component={PortfolioPage} />
           <Route path="/team/:name" component={TeamMember} />
           <Route component={NotFound} />
         </Switch>

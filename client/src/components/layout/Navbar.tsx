@@ -16,6 +16,7 @@ export function Navbar() {
                          location === "/technology" ||
                          location === "/technology/operating-successes" || 
                          location === "/ai" ||
+                         location === "/portfolio" ||
                          location.startsWith("/team/");
 
   useEffect(() => {
