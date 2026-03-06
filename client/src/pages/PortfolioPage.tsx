@@ -29,7 +29,7 @@ const companies: Company[] = [
   { name: "Leiters", sector: "Healthcare", color: "#ea580c", status: "current" },
   { name: "UMP", sector: "Healthcare", color: "#d97706", status: "current" },
   { name: "Kiniciti", sector: "Healthcare", color: "#dc2626", status: "current" },
-  { name: "Lumexa", sector: "Healthcare", color: "#db2777", status: "current" },
+  { name: "Lumexa", sector: "Healthcare", color: "#1a7db6", status: "current", logo: "/logos/lumexa.png" },
   { name: "InnovAge", sector: "Healthcare", color: "#0d9488", status: "current" },
   { name: "USAP", sector: "Healthcare", color: "#0284c7", status: "current" },
   { name: "Abzena", sector: "Healthcare", color: "#16a34a", status: "current" },
