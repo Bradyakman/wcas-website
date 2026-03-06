@@ -225,7 +225,7 @@ export default function Home() {
                   
                   { name: "Select Medical", src: logoSelectMed, h: 42 },
                   { name: "Shields", src: logoShields, h: 29 },
-                  { name: "Norstella", src: logoNorstella, h: 42 },
+                  { name: "Norstella", src: logoNorstella, h: 48 },
                   { name: "Alliance Data", src: logoAllianceData, h: 33 },
                   { name: "Clearwater Analytics", src: logoClearwater, h: 29 },
                   { name: "NaviHealth", src: logoNaviHealth, h: 42 },
