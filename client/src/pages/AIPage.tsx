@@ -100,12 +100,12 @@ const scaleSteps = [
   { title: "AI Transformation Support", desc: "We partner directly with portfolio companies to unlock AI opportunities \u2014 driving strategic scoping, delivering expert technical advice, and providing hands-on training to accelerate adoption.", stat: "Hands-On", detail: "Embedded advisory", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> },
 ];
 const caseStudies = [
-  { company: "Norstella", sector: "Healthcare", app: "NorstellaLinQ \u2014 Trial Design Co-Pilot", useCase: "GenAI + ML powered data and tools supporting clinical trial design and optimization", build: "Internally developed, leveraging large multimodal data set", impact: "$70M of annual revenue generated from 12+ AI-enabled products", stat: "$70M", statLabel: "annual AI-enabled revenue" },
-  { company: "Lumexa Imaging", sector: "Healthcare", app: "Patient Data Support", useCase: "Agentic AI bots analyze and translate patient data, and update billing records", build: "Developed in partnership with OnQ", impact: "$750K annual savings from bot utilization", stat: "$750K", statLabel: "annual savings" },
-  { company: "AllazoHealth", sector: "Healthcare", app: "Patient Engagement", useCase: "AI-powered platform predicts adherence risk and personalizes outreach", build: "Acquired via AssistRx; embedded in BV/PA and hub workflows", impact: "Improved therapy initiation ~16% and adherence ~19%", stat: "~19%", statLabel: "adherence improvement" },
-  { company: "Absorb", sector: "Technology", app: "Course Generation", useCase: "GenAI features to build, adapt, and personalize LMS learning content", build: "Internally built with cloud-native functionality", impact: "Cuts course creation from hours to minutes", stat: "Hrs\u2192Min", statLabel: "course creation time" },
-  { company: "LINQ", sector: "Technology", app: "LINQ Q Support Agent", useCase: "AI agent supports voice and chat channels for everyday customer requests", build: "Built with low-code AI platform to reduce time to market", impact: "30% fewer seasonal contractors; 10% CX staff reduction", stat: "30%", statLabel: "fewer seasonal contractors" },
-  { company: "AIA Contract Documents", sector: "Technology", app: "Contract Review", useCase: "AI automates contract risk review, provides insights, improves risk detection", build: "Roadmap contemplates internal build or acquisition", impact: "Launch expected in 2026", stat: "2026", statLabel: "expected launch" },
+  { company: "Norstella", sector: "Healthcare", app: "NorstellaLinQ Trial Design Co-Pilot", useCase: "GenAI + ML powered data and tools supporting clinical trial design and optimization.", build: "Built internally leveraging large multimodal data set.", stat: "$70M" },
+  { company: "Lumexa Imaging", sector: "Healthcare", app: "Patient Data Support", useCase: "Agentic AI bots analyze and translate patient data and update billing records.", build: "Built in partnership with OnQ.", stat: "Ops Reduction" },
+  { company: "AllazoHealth", sector: "Healthcare", app: "AssistRx Add-On Patient Engagement", useCase: "AI-powered platform predicts adherence risk and personalizes outreach.", build: "Acquired via AssistRx.", stat: "Adherence AI" },
+  { company: "Absorb", sector: "Technology", app: "Course Generation", useCase: "GenAI features to build, adapt, and personalize Absorb LMS learning content.", build: "Internally built with cloud-native functionality.", stat: "LMS GenAI" },
+  { company: "LINQ", sector: "Technology", app: "LINQ Q Support Agent", useCase: "AI agent supports voice and chat channels for everyday customer requests.", build: "Built with low-code AI platform.", stat: "Voice + Chat AI" },
+  { company: "AIA Contract Documents", sector: "Technology", app: "Contract Review", useCase: "AI automates contract risk review and improves risk detection.", build: "Roadmap contemplates internal build or acquisition.", stat: "Risk Detection" },
 ];
 
 export default function WCASAIPage() {
@@ -124,6 +124,7 @@ export default function WCASAIPage() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
         .pb-row:hover{background:rgba(255,255,255,0.03);padding-left:16px!important;padding-right:16px}.pb-row:hover .pb-icon{color:rgba(77,184,199,0.9)}.pb-row:hover .pb-desc{color:rgba(255,255,255,0.7)}
+        .cs-flip-wrap{perspective:1000px;height:320px}.cs-flip-inner{position:relative;width:100%;height:100%;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);transform-style:preserve-3d}.cs-flip-wrap:hover .cs-flip-inner{transform:rotateY(180deg)}.cs-flip-front,.cs-flip-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}.cs-flip-back{transform:rotateY(180deg)}
         .ap{font-family:${SANS};font-size:13px;font-weight:500;padding:7px 15px;border-radius:18px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.65);cursor:pointer;transition:all 0.2s;text-decoration:none;white-space:nowrap}.ap:hover{color:rgba(255,255,255,0.95);border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.12);transform:translateY(-3px)}.ap.ac{color:rgba(255,255,255,0.95);border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.15)}
         .csc{padding:24px 28px;cursor:pointer;border-left:3px solid transparent;transition:all 0.25s}.csc:hover{background:rgba(255,255,255,0.03)}.csc.csa{background:rgba(255,255,255,0.05);border-left-color:${TEAL}}
         .fc{font-family:${SANS};font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;padding:7px 16px;border-radius:16px;cursor:pointer;transition:all 0.25s;border:1px solid rgba(255,255,255,0.06);background:transparent;color:rgba(255,255,255,0.3)}.fc:hover{color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15)}.fc.fca{color:${TEAL};border-color:rgba(77,184,199,0.3);background:rgba(77,184,199,0.08)}
@@ -200,36 +201,36 @@ export default function WCASAIPage() {
           <Fade delay={100}><div style={{ display: "flex", gap: 10, marginBottom: 36 }}>
             {["All","Technology","Healthcare"].map(f => (<div key={f} className={`fc ${csFilter===f?"fca":""}`} onClick={()=>{setCsFilter(f);setActiveCS(0)}}>{f}</div>))}
           </div></Fade>
-          <Fade delay={150}><div style={{ display: "flex", gap: 24 }}>
-            <div style={{ flex: 2, borderRadius: 20, background: "rgba(8,14,28,0.7)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.06)", overflow: "hidden", position: "relative", minHeight: 480 }}>
-              {[["top","left"],["top","right"],["bottom","left"],["bottom","right"]].map(([v,h],i)=>(<div key={i} style={{ position:"absolute" as const,[v as string]:20,[h as string]:20,width:24,height:24,[`border${(v as string)[0].toUpperCase()+(v as string).slice(1)}`]:`2px solid rgba(107,163,214,0.25)`,[`border${(h as string)[0].toUpperCase()+(h as string).slice(1)}`]:`2px solid rgba(107,163,214,0.25)`,zIndex:3}} />))}
-              {fCS[si] && (()=>{const cs=fCS[si];return(<div style={{ padding: "44px 40px", position: "relative", zIndex: 2 }}>
-                <span style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: cs.sector==="Healthcare"?ACCENT:TEAL, padding: "5px 14px", borderRadius: 12, background: cs.sector==="Healthcare"?"rgba(107,163,214,0.08)":"rgba(77,184,199,0.08)", border: `1px solid ${cs.sector==="Healthcare"?"rgba(107,163,214,0.15)":"rgba(77,184,199,0.15)"}`, display: "inline-block", marginBottom: 24 }}>{cs.sector}</span>
-                <h3 style={{ fontSize: 32, fontWeight: 400, color: "#fff", lineHeight: 1.2, marginBottom: 6 }}>{cs.company}</h3>
-                <p style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: TEAL, letterSpacing: 0.5, marginBottom: 28 }}>{cs.app}</p>
-                <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 28, paddingBottom: 28, borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-                  <span style={{ fontFamily: SANS, fontSize: 44, fontWeight: 700, color: "#fff" }}>{cs.stat}</span>
-                  <span style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.4)" }}>{cs.statLabel}</span>
+          <Fade delay={150}><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
+            {fCS.map((cs) => {
+              const isHC = cs.sector === "Healthcare";
+              const accent = isHC ? TEAL : GOLD;
+              const accentBg = isHC ? "rgba(77,184,199,0.08)" : "rgba(200,152,94,0.08)";
+              const accentBorder = isHC ? "rgba(77,184,199,0.2)" : "rgba(200,152,94,0.2)";
+              return (
+                <div key={cs.company} className="cs-flip-wrap">
+                  <div className="cs-flip-inner">
+                    <div className="cs-flip-front" style={{ background: "rgba(8,14,28,0.7)", border: `1px solid rgba(255,255,255,0.06)`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%", position: "relative", backdropFilter: "blur(12px)" }}>
+                      <div>
+                        <span style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, padding: "4px 12px", borderRadius: 10, background: accentBg, border: `1px solid ${accentBorder}`, display: "inline-block", marginBottom: 20 }}>{cs.sector}</span>
+                        <h3 style={{ fontFamily: SERIF, fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.25, marginBottom: 8 }}>{cs.company}</h3>
+                        <p style={{ fontFamily: SANS, fontSize: 12, fontWeight: 500, color: accent, letterSpacing: 0.5, fontVariant: "small-caps" }}>{cs.app}</p>
+                      </div>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginTop: 32 }}>
+                        <span style={{ fontFamily: SANS, fontSize: 28, fontWeight: 700, color: "#fff" }}>{cs.stat}</span>
+                        <span style={{ fontFamily: SANS, fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Hover to explore &rarr;</span>
+                      </div>
+                    </div>
+                    <div className="cs-flip-back" style={{ background: "rgba(8,14,28,0.85)", border: `1px solid ${accentBorder}`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", backdropFilter: "blur(12px)" }}>
+                      <div style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, marginBottom: 16 }}>Use Case</div>
+                      <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.7)", lineHeight: 1.75, marginBottom: 24 }}>{cs.useCase}</p>
+                      <div style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, marginBottom: 12 }}>Build / Source</div>
+                      <p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.7 }}>{cs.build}</p>
+                    </div>
+                  </div>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 24 }}>
-                  <div><div style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 8 }}>Use Case</div><p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}>{cs.useCase}</p></div>
-                  <div><div style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 8 }}>Build / Source</div><p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}>{cs.build}</p></div>
-                </div>
-                <div style={{ padding: "16px 20px", borderRadius: 12, background: "rgba(77,184,199,0.05)", border: "1px solid rgba(77,184,199,0.1)" }}>
-                  <div style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: TEAL, marginBottom: 6 }}>Impact</div>
-                  <p style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, color: "#fff", lineHeight: 1.6 }}>{cs.impact}</p>
-                </div>
-              </div>)})()}
-            </div>
-            <div style={{ flex: 0.75, background: "rgba(255,255,255,0.02)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", borderRadius: 16, border: "1px solid rgba(255,255,255,0.06)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-              <div style={{ padding: "16px 20px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}><span style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.3)" }}>{fCS.length} Case Studies</span></div>
-              <div style={{ flex: 1, overflowY: "auto" }}>
-                {fCS.map((cs, i) => (<div key={cs.company} className={`csc ${i===si?"csa":""}`} onClick={()=>setActiveCS(i)}>
-                  <div style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: i===si?"#fff":"rgba(255,255,255,0.45)", marginBottom: 3, transition: "color 0.2s" }}>{cs.company}</div>
-                  <div style={{ fontFamily: SANS, fontSize: 11, color: i===si?"rgba(255,255,255,0.5)":"rgba(255,255,255,0.25)", transition: "color 0.2s" }}>{cs.app}</div>
-                </div>))}
-              </div>
-            </div>
+              );
+            })}
           </div></Fade>
         </div>
       </section>
