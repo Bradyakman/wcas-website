@@ -8,11 +8,11 @@ import linqLogo from "@assets/image_1772817668672.png";
 const SERIF = "'Cormorant Garamond', Georgia, serif";
 const SANS = "'DM Sans', sans-serif";
 
-type Company = { name: string; sector: "Technology" | "Healthcare"; color: string; status: "current" | "realized"; logo?: string };
+type Company = { name: string; sector: "Technology" | "Healthcare"; color: string; status: "current" | "realized"; logo?: string; darkBg?: boolean };
 
 const companies: Company[] = [
-  { name: "Equilend", sector: "Technology", color: "#2563eb", status: "current", logo: equilendLogo },
-  { name: "Grant Street", sector: "Technology", color: "#0d9488", status: "current", logo: grantStreetLogo },
+  { name: "Equilend", sector: "Technology", color: "#2563eb", status: "current", logo: equilendLogo, darkBg: true },
+  { name: "Grant Street", sector: "Technology", color: "#0d9488", status: "current", logo: grantStreetLogo, darkBg: true },
   { name: "ImageTrend", sector: "Technology", color: "#0284c7", status: "current", logo: imageTrendLogo },
   { name: "LINQ", sector: "Technology", color: "#4f46e5", status: "current", logo: linqLogo },
   { name: "ACD", sector: "Technology", color: "#7c3aed", status: "current" },
@@ -179,7 +179,7 @@ export default function PortfolioPage() {
                             }}
                           >
                             {c.logo ? (
-                              <img src={c.logo} alt={c.name} style={{ maxHeight: c.name === "Grant Street" ? 90 : c.name === "ImageTrend" ? 72 : 56, maxWidth: c.name === "Grant Street" ? 340 : c.name === "ImageTrend" ? 280 : 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) brightness(0) opacity(0.85)", transition: "filter 0.3s" }} />
+                              <img src={c.logo} alt={c.name} style={{ maxHeight: c.name === "Grant Street" ? 90 : c.name === "ImageTrend" ? 72 : 56, maxWidth: c.name === "Grant Street" ? 340 : c.name === "ImageTrend" ? 280 : 220, objectFit: "contain", filter: isHovered ? "none" : c.darkBg ? "grayscale(100%) brightness(0) opacity(0.85)" : "grayscale(100%) opacity(0.5)", transition: "filter 0.3s" }} />
                             ) : (
                               <span style={{
                                 fontFamily: SANS,
