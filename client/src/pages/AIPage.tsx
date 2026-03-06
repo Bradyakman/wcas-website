@@ -76,12 +76,12 @@ const SD = ({ children, mw = 660 }: { children: React.ReactNode; mw?: number }) 
 
 
 const teamMembers = [
-  { name: "George Mashini", role: "Software Portfolio CTO", initials: "GM", photo: georgePhoto, photoStyle: { objectFit: "cover" as const } },
-  { name: "Lawrence Miller", role: "Healthcare Portfolio CTO", initials: "LM", photo: georgePhoto, photoStyle: { objectFit: "cover" as const, objectPosition: "center top", filter: "grayscale(100%)" } },
-  { name: "Tyler Pitchford", role: "AI Implementation", initials: "TP", photo: georgePhoto, photoStyle: { objectFit: "cover" as const, borderRadius: "50%", objectPosition: "center 20%" } },
-  { name: "Bala Girsiaballa", role: "Offshoring", initials: "BG", photo: georgePhoto, photoStyle: { objectFit: "cover" as const, filter: "sepia(60%) hue-rotate(180deg)", objectPosition: "center 15%" } },
-  { name: "Bill Bowman", role: "Cybersecurity", initials: "BB", photo: georgePhoto, photoStyle: { objectFit: "cover" as const, filter: "contrast(1.2) brightness(0.9)", objectPosition: "center 10%", borderRadius: "16px 48px 16px 48px" } },
-  { name: "Jeffrey Gallant", role: "Cloud Procurement", initials: "JG", photo: georgePhoto, photoStyle: { objectFit: "cover" as const, filter: "grayscale(50%) sepia(20%)", objectPosition: "center 25%", borderRadius: "50% 16px 50% 16px" } },
+  { name: "George Mashini", role: "Software Portfolio CTO", initials: "GM", photo: georgePhoto },
+  { name: "Lawrence Miller", role: "Healthcare Portfolio CTO", initials: "LM", photo: georgePhoto },
+  { name: "Tyler Pitchford", role: "AI Implementation", initials: "TP", photo: georgePhoto },
+  { name: "Bala Girsiaballa", role: "Offshoring", initials: "BG", photo: georgePhoto },
+  { name: "Bill Bowman", role: "Cybersecurity", initials: "BB", photo: georgePhoto },
+  { name: "Jeffrey Gallant", role: "Cloud Procurement", initials: "JG", photo: georgePhoto },
 ];
 const scaleSteps = [
   { title: "Leadership", desc: "Prioritizing AI discussions with Board and ELT members around deployment opportunities. We set governance upfront \u2014 security, privacy, model risk, human-in-the-loop \u2014 and align on ROI targets before a single line of code is written.", stat: "Board + ELT", detail: "Governance-first approach" },
@@ -131,6 +131,7 @@ export default function WCASAIPage() {
         @keyframes team-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
         .team-track{display:flex;gap:20px;animation:team-scroll 20s linear infinite;width:max-content}.team-track:hover{animation-play-state:paused}
         .team-photo-card{width:200px;flex-shrink:0;text-align:center;transition:transform 0.3s}.team-photo-card:hover{transform:translateY(-6px)}
+        .team-photo-img{filter:grayscale(100%);transition:filter 0.4s ease}.team-photo-card:hover .team-photo-img{filter:grayscale(0%)}
         
         .sl{position:absolute;left:19px;top:40px;bottom:-20px;width:2px;background:linear-gradient(180deg,${TEAL},rgba(77,184,199,0.1))}
       `}</style>
@@ -271,7 +272,7 @@ export default function WCASAIPage() {
             <div className="team-track">
               {[...teamMembers, ...teamMembers].map((m, i) => (
                 <div key={i} className="team-photo-card">
-                  {m.photo ? <img src={m.photo} alt={m.name} style={{ width: 180, height: 180, borderRadius: 16, border: "1px solid rgba(255,255,255,0.08)", ...m.photoStyle }} /> : <div style={{ width: 180, height: 180, borderRadius: 16, background: "linear-gradient(135deg, rgba(77,184,199,0.15), rgba(107,163,214,0.1))", border: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'DM Sans', sans-serif", fontSize: 36, fontWeight: 700, color: "rgba(77,184,199,0.5)" }}>{m.initials}</div>}
+                  {m.photo ? <img src={m.photo} alt={m.name} className="team-photo-img" style={{ width: 180, height: 180, borderRadius: 16, objectFit: "cover", border: "1px solid rgba(255,255,255,0.08)" }} /> : <div style={{ width: 180, height: 180, borderRadius: 16, background: "linear-gradient(135deg, rgba(77,184,199,0.15), rgba(107,163,214,0.1))", border: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'DM Sans', sans-serif", fontSize: 36, fontWeight: 700, color: "rgba(77,184,199,0.5)" }}>{m.initials}</div>}
                   <div style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, color: "#fff", marginTop: 14 }}>{m.name}</div>
                   <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.4)", marginTop: 4 }}>{m.role}</div>
                 </div>
