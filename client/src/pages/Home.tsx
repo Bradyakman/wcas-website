@@ -234,7 +234,7 @@ export default function Home() {
                   { name: "Equilend", src: "/logos/equilend.png", h: 26 },
                 ].map((co, i) => (
                   <div key={`${setIdx}-${i}`} className="port-logo-card">
-                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 120, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
+                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 120, objectFit: "contain", filter: "brightness(0) invert(1)", mixBlendMode: "screen" }} />
                   </div>
                 ))
               )}
