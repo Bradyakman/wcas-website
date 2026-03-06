@@ -113,12 +113,9 @@ export function Navbar() {
                     aria-controls={`dropdown-${link.name}`}
                     aria-haspopup="true"
                     onClick={() => toggleDropdown(link.name)}
-                    className={`bg-transparent border-none cursor-pointer p-1 ${linkColor()}`}
-                    style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+                    className={`bg-transparent border-none cursor-pointer p-0 ${linkColor()}`}
+                    style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', width: 0, height: 0, overflow: 'hidden' }}
                   >
-                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={`opacity-70 transition-transform duration-300 ${openDropdown === link.name ? 'rotate-180' : ''}`}>
-                      <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
                   </button>
                   <div
                     id={`dropdown-${link.name}`}
