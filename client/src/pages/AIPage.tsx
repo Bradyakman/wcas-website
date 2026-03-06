@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import aiHeroBg from "@assets/image_1772741431593.png";
 import georgePhoto from "@assets/image_1772773366337.png";
 import mikePhoto from "@assets/image_1772773735309.png";
+import tylerPhoto from "@assets/image_1772773752068.png";
 
 const TEAL = "#4db8c7";
 const ACCENT = "#6BA3D6";
@@ -79,7 +80,7 @@ const SD = ({ children, mw = 660 }: { children: React.ReactNode; mw?: number }) 
 const teamMembers = [
   { name: "George Mashini", role: "Software Portfolio CTO", initials: "GM", photo: georgePhoto },
   { name: "Lawrence Miller", role: "Healthcare Portfolio CTO", initials: "LM", photo: georgePhoto },
-  { name: "Tyler Pitchford", role: "AI Implementation", initials: "TP", photo: georgePhoto },
+  { name: "Tyler Pitchford", role: "AI Implementation", initials: "TP", photo: tylerPhoto },
   { name: "Bala Girsiaballa", role: "Offshoring", initials: "BG", photo: georgePhoto },
   { name: "Bill Bowman", role: "Cybersecurity", initials: "BB", photo: georgePhoto },
   { name: "Mike Donovan", role: "General Partner", initials: "MD", photo: mikePhoto },
