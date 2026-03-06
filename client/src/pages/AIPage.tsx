@@ -73,11 +73,6 @@ const SL = ({ text, color = TEAL }: { text: string; color?: string }) => (<div s
 const ST = ({ children, mw = 700 }: { children: React.ReactNode; mw?: number }) => (<h2 style={{ fontSize: 40, fontWeight: 400, color: "#fff", lineHeight: 1.2, marginBottom: 20, maxWidth: mw }}>{children}</h2>);
 const SD = ({ children, mw = 660 }: { children: React.ReactNode; mw?: number }) => (<p style={{ fontFamily: SANS, fontSize: 16, color: "rgba(255,255,255,0.4)", lineHeight: 1.7, maxWidth: mw, marginBottom: 48 }}>{children}</p>);
 
-const aiLandscape = [
-  { title: "New Customer Acquisition", icon: "\uD83D\uDD0D", desc: "AI Overviews are diverting new customer leads away from traditional PPC and SEO digital channels, reshaping how software companies acquire customers." },
-  { title: "Operating Efficiency", icon: "\u26A1", desc: "Productivity gains in customer support, engineering & QA, and content production are reducing headcount growth requirements across the portfolio." },
-  { title: "Native AI Product Innovation", icon: "\uD83E\uDDE0", desc: "Complementary AI tools offered by software vendors are beginning to generate meaningful revenue, creating new product-led growth vectors." },
-];
 const aiOpportunities = [
   { letter: "A", title: "Expand & Monetize", desc: "Unlock and monetize more use cases for existing customers, driving improved net revenue retention" },
   { letter: "B", title: "Product & Pricing Power", desc: "New product enhancements and bundling opportunities significantly improve pricing power" },
@@ -164,27 +159,6 @@ export default function WCASAIPage() {
           <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>Our conviction: <strong>incumbency matters</strong>. Every investment is evaluated through a proprietary AI Scorecard assessing market defensibility and data moats. Post-investment, our dedicated team embeds directly with portfolio companies to turn AI ambition into measurable results.</p>
         </div></Fade>
       </section>
-
-      {/* AI LANDSCAPE */}
-      <section id="landscape" style={{ background: BG2, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, pointerEvents: "none", opacity: 0.025, backgroundImage: `linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)`, backgroundSize: "60px 60px" }} />
-        <div style={{ position: "relative", zIndex: 2 }}>
-          <Fade><SL text="AI Landscape" /><ST>How AI is impacting software today</ST><SD>Four forces are reshaping the software landscape. Understanding them is the first step to turning disruption into opportunity.</SD></Fade>
-          <Fade delay={100}><div style={{ display: "flex", gap: 20 }}>
-            {aiLandscape.map((item, i) => (<div key={i} className="lc">
-              <div style={{ fontSize: 28, marginBottom: 16 }}>{item.icon}</div>
-              <div style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: [TEAL,ACCENT,GOLD,"#e06c75"][i], marginBottom: 12 }}>{`0${i+1}`}</div>
-              <h3 style={{ fontSize: 20, fontWeight: 400, color: "#fff", lineHeight: 1.3, marginBottom: 12 }}>{item.title}</h3>
-              <p style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.4)", lineHeight: 1.7 }}>{item.desc}</p>
-            </div>))}
-          </div></Fade>
-        </div>
-      </section>
-
-      {/* DIVIDER */}
-      <div style={{ position: "relative", height: 100, overflow: "hidden", background: `linear-gradient(180deg, ${BG2}, ${BG})` }}>
-        {[0,1,2].map(i => <div key={i} style={{ position: "absolute", top: `${25+i*25}%`, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, ${[TEAL,GOLD,ACCENT][i]}, transparent)`, opacity: 0.06, animation: `wd ${12+i*4}s ease-in-out infinite ${i}s` }} />)}
-      </div>
 
       {/* OUTLOOK */}
       <section id="outlook" style={{ background: BG, padding: "96px 64px" }}>
