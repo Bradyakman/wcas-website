@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import aiHeroBg from "@assets/image_1772741431593.png";
 import georgePhoto from "@assets/image_1772773366337.png";
+import mikePhoto from "@assets/image_1772773735309.png";
 
 const TEAL = "#4db8c7";
 const ACCENT = "#6BA3D6";
@@ -81,7 +82,7 @@ const teamMembers = [
   { name: "Tyler Pitchford", role: "AI Implementation", initials: "TP", photo: georgePhoto },
   { name: "Bala Girsiaballa", role: "Offshoring", initials: "BG", photo: georgePhoto },
   { name: "Bill Bowman", role: "Cybersecurity", initials: "BB", photo: georgePhoto },
-  { name: "Jeffrey Gallant", role: "Cloud Procurement", initials: "JG", photo: georgePhoto },
+  { name: "Mike Donovan", role: "General Partner", initials: "MD", photo: mikePhoto },
 ];
 const scaleSteps = [
   { title: "Leadership", desc: "Prioritizing AI discussions with Board and ELT members around deployment opportunities. We set governance upfront \u2014 security, privacy, model risk, human-in-the-loop \u2014 and align on ROI targets before a single line of code is written.", stat: "Board + ELT", detail: "Governance-first approach" },
