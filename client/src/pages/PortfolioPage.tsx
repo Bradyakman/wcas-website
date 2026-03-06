@@ -169,7 +169,7 @@ export default function PortfolioPage() {
                   }}
                 >
                   {c.logo ? (
-                    <img src={c.logo} alt={c.name} style={{ maxHeight: 56, maxWidth: 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) brightness(0) opacity(0.6)", transition: "filter 0.3s" }} />
+                    <img src={c.logo} alt={c.name} style={{ maxHeight: c.name === "Grant Street" ? 72 : 56, maxWidth: c.name === "Grant Street" ? 280 : 220, objectFit: "contain", filter: isHovered ? "none" : "grayscale(100%) brightness(0) opacity(0.6)", transition: "filter 0.3s" }} />
                   ) : (
                     <span style={{
                       fontFamily: SANS,
