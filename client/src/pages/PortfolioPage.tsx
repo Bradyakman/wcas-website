@@ -45,8 +45,8 @@ export default function PortfolioPage() {
   const [sectorOpen, setSectorOpen] = useState(false);
   const [hoveredCell, setHoveredCell] = useState<number | null>(null);
 
-  const statusLabels = { current: "Current Investments", realized: "Realized Investments", all: "All Investments" };
-  const sectorLabels = { all: "All Sectors", Technology: "Technology", Healthcare: "Healthcare" };
+  const statusDropdownLabels = { current: "Current Investments", realized: "Realized Investments", all: "All Investments" };
+  const sectorDropdownLabels = { all: "All Sectors", Technology: "Technology", Healthcare: "Healthcare" };
 
   useEffect(() => {
     const close = () => { setStatusOpen(false); setSectorOpen(false); };
@@ -92,8 +92,7 @@ export default function PortfolioPage() {
             onClick={() => { setStatusOpen(!statusOpen); setSectorOpen(false); }}
             style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "none", background: "#0a1628", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, minWidth: 180, justifyContent: "center" }}
           >
-            <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e" }} />
-            {statusLabels[statusFilter]}
+            Status
             <span style={{ fontSize: 10 }}>▾</span>
           </button>
           {statusOpen && (
@@ -102,7 +101,7 @@ export default function PortfolioPage() {
                 <div key={v} onClick={() => { setStatusFilter(v); setStatusOpen(false); }} style={{ fontFamily: SANS, fontSize: 13, padding: "10px 20px", cursor: "pointer", background: statusFilter === v ? "#f5f5f5" : "#fff", color: "#333" }}
                   onMouseEnter={e => (e.currentTarget.style.background = "#f5f5f5")}
                   onMouseLeave={e => (e.currentTarget.style.background = statusFilter === v ? "#f5f5f5" : "#fff")}
-                >{statusLabels[v]}</div>
+                >{statusDropdownLabels[v]}</div>
               ))}
             </div>
           )}
@@ -113,7 +112,7 @@ export default function PortfolioPage() {
             onClick={() => { setSectorOpen(!sectorOpen); setStatusOpen(false); }}
             style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "12px 28px", borderRadius: 24, border: "none", background: "#0a1628", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", gap: 8, minWidth: 180, justifyContent: "center" }}
           >
-            {sectorLabels[sectorFilter]}
+            Sector
             <span style={{ fontSize: 10 }}>▾</span>
           </button>
           {sectorOpen && (
@@ -122,21 +121,19 @@ export default function PortfolioPage() {
                 <div key={v} onClick={() => { setSectorFilter(v); setSectorOpen(false); }} style={{ fontFamily: SANS, fontSize: 13, padding: "10px 20px", cursor: "pointer", background: sectorFilter === v ? "#f5f5f5" : "#fff", color: "#333" }}
                   onMouseEnter={e => (e.currentTarget.style.background = "#f5f5f5")}
                   onMouseLeave={e => (e.currentTarget.style.background = sectorFilter === v ? "#f5f5f5" : "#fff")}
-                >{sectorLabels[v]}</div>
+                >{sectorDropdownLabels[v]}</div>
               ))}
             </div>
           )}
         </div>
 
-        <div style={{ position: "absolute", right: 48 }}>
-          <input
-            type="text"
-            placeholder="Search"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            style={{ fontFamily: SANS, fontSize: 13, padding: "10px 22px", borderRadius: 20, border: "1px solid #e4e4e4", outline: "none", width: 200, background: "#fff", color: "#333" }}
-          />
-        </div>
+        <input
+          type="text"
+          placeholder="Search"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          style={{ fontFamily: SANS, fontSize: 14, padding: "12px 28px", borderRadius: 24, border: "1px solid #e4e4e4", outline: "none", width: 200, background: "#fff", color: "#333" }}
+        />
       </div>
 
       <div style={{ background: "#fff", padding: "0 64px" }}>
