@@ -116,7 +116,7 @@ export default function WCASAIPage() {
   
   const fCS = csFilter === "All" ? caseStudies : caseStudies.filter(c => c.sector === csFilter);
   const si = Math.min(activeCS, fCS.length - 1);
-  const anchors = [{id:"playbook",l:"Our Playbook"},{id:"case-studies",l:"Case Studies"}];
+  const anchors = [{id:"case-studies",l:"Case Studies"},{id:"playbook",l:"Our Playbook"}];
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
@@ -168,37 +168,13 @@ export default function WCASAIPage() {
         </div></Fade>
       </section>
 
-      {/* PLAYBOOK */}
-      <section id="playbook" style={{ background: BG2, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", bottom: "-20%", left: "-5%", width: "40%", height: "60%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(200,152,94,0.04) 0%, transparent 65%)", animation: "m2 22s ease-in-out infinite", filter: "blur(40px)", pointerEvents: "none" }} />
-        <div style={{ position: "relative", zIndex: 2 }}>
-          <Fade>
-            <SL text="Our Playbook" />
-            <ST>How we scale AI across the portfolio</ST>
-          </Fade>
-          <Fade delay={100}>
-            <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: 48 }}>
-              {scaleSteps.map((s, i) => (
-                <div key={i} className="pb-row" style={{ display: "grid", gridTemplateColumns: "260px 1fr", gap: 32, alignItems: "start", padding: "44px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", transition: "background 0.3s ease, padding-left 0.3s ease", borderRadius: 4, cursor: "default" }}>
-                  <div>
-                    <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.8, textTransform: "uppercase", color: TEAL, marginBottom: 10 }}>{s.detail}</div>
-                    <h4 style={{ fontFamily: SANS, fontSize: 22, fontWeight: 700, color: "#fff", lineHeight: 1.3, textTransform: "uppercase", letterSpacing: 0.5 }}>{s.title}</h4>
-                  </div>
-                  <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.45)", lineHeight: 1.8, transition: "color 0.3s" }} className="pb-desc">{s.desc}</p>
-                </div>
-              ))}
-            </div>
-          </Fade>
-        </div>
-      </section>
-
       {/* CASE STUDIES */}
-      <section id="case-studies" style={{ background: BG, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
+      <section id="case-studies" style={{ background: BG2, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
           <div style={{ position: "absolute", top: "-10%", right: "-8%", width: "45%", height: "65%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(77,184,199,0.04) 0%, transparent 65%)", animation: "m1 20s ease-in-out infinite", filter: "blur(40px)" }} />
         </div>
         <div style={{ position: "relative", zIndex: 2 }}>
-          <Fade><SL text="Portfolio Case Studies" /><ST>AI at work across healthcare & technology</ST><SD>Real-world AI use cases delivering measurable value and accelerated adoption.</SD></Fade>
+          <Fade><SL text="Select Portfolio Case Studies" /><ST>AI at work across healthcare & technology</ST><SD>Real-world AI use cases delivering measurable value and accelerated adoption.</SD></Fade>
           <Fade delay={100}><div style={{ display: "flex", gap: 10, marginBottom: 36 }}>
             {["All","Technology","Healthcare"].map(f => (<div key={f} className={`fc ${csFilter===f?"fca":""}`} onClick={()=>{setCsFilter(f);setActiveCS(0)}}>{f}</div>))}
           </div></Fade>
@@ -254,6 +230,29 @@ export default function WCASAIPage() {
         </div>
       </section>
 
+      {/* PLAYBOOK */}
+      <section id="playbook" style={{ background: BG, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", bottom: "-20%", left: "-5%", width: "40%", height: "60%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(200,152,94,0.04) 0%, transparent 65%)", animation: "m2 22s ease-in-out infinite", filter: "blur(40px)", pointerEvents: "none" }} />
+        <div style={{ position: "relative", zIndex: 2 }}>
+          <Fade>
+            <SL text="Our Playbook" />
+            <ST>How we scale AI across the portfolio</ST>
+          </Fade>
+          <Fade delay={100}>
+            <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", marginTop: 48 }}>
+              {scaleSteps.map((s, i) => (
+                <div key={i} className="pb-row" style={{ display: "grid", gridTemplateColumns: "260px 1fr", gap: 32, alignItems: "start", padding: "44px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", transition: "background 0.3s ease, padding-left 0.3s ease", borderRadius: 4, cursor: "default" }}>
+                  <div>
+                    <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.8, textTransform: "uppercase", color: TEAL, marginBottom: 10 }}>{s.detail}</div>
+                    <h4 style={{ fontFamily: SANS, fontSize: 22, fontWeight: 700, color: "#fff", lineHeight: 1.3, textTransform: "uppercase", letterSpacing: 0.5 }}>{s.title}</h4>
+                  </div>
+                  <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.45)", lineHeight: 1.8, transition: "color 0.3s" }} className="pb-desc">{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Fade>
+        </div>
+      </section>
 
       {/* QUOTE */}
       <section style={{ background: BG2, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
