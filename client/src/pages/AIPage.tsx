@@ -102,7 +102,7 @@ const scaleSteps = [
 ];
 const caseStudies = [
   { company: "Norstella", sector: "Healthcare", app: "NorstellaLinQ Trial Design Co-Pilot", useCase: "GenAI + ML powered data and tools supporting clinical trial design and optimization.", build: "Built internally leveraging large multimodal data set.", logo: norstellaWhiteLogo, logoH: 60 },
-  { company: "Lumexa Imaging", sector: "Healthcare", app: "Patient Data Support", useCase: "Agentic AI bots analyze and translate patient data and update billing records.", build: "Built in partnership with OnQ.", logo: "/logos/lumexa-transparent.png", logoH: 50 },
+  { company: "Lumexa Imaging", sector: "Healthcare", app: "Patient Data Support", useCase: "Agentic AI bots analyze and translate patient data and update billing records.", build: "Built in partnership with OnQ.", logo: "/logos/lumexa-transparent.png", logoH: 50, cardImg: "/logos/lumexa-ai-card.png" },
   { company: "AllazoHealth", sector: "Healthcare", app: "AssistRx Add-On Patient Engagement", useCase: "AI-powered platform predicts adherence risk and personalizes outreach.", build: "Acquired via AssistRx." },
   { company: "Absorb", sector: "Technology", app: "Course Generation", useCase: "GenAI features to build, adapt, and personalize Absorb LMS learning content.", build: "Internally built with cloud-native functionality." },
   { company: "LINQ", sector: "Technology", app: "LINQ Q Support Agent", useCase: "AI agent supports voice and chat channels for everyday customer requests.", build: "Built with low-code AI platform." },
@@ -211,7 +211,7 @@ export default function WCASAIPage() {
               return (
                 <div key={cs.company} className="cs-flip-wrap">
                   <div className="cs-flip-inner">
-                    <div className="cs-flip-front" style={{ background: "rgba(8,14,28,0.7)", border: `1px solid rgba(255,255,255,0.06)`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%", position: "relative", backdropFilter: "blur(12px)" }}>
+                    <div className="cs-flip-front" style={{ background: (cs as any).cardImg ? `linear-gradient(180deg, rgba(8,14,28,0.3) 0%, rgba(8,14,28,0.85) 100%), url(${(cs as any).cardImg}) center/cover no-repeat` : "rgba(8,14,28,0.7)", border: `1px solid rgba(255,255,255,0.06)`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%", position: "relative", backdropFilter: "blur(12px)" }}>
                       <div>
                         {(cs as any).logo ? (
                           <img src={(cs as any).logo} alt={cs.company} style={{ height: (cs as any).logoH || 32, objectFit: "contain", marginBottom: 16, filter: "brightness(0) invert(1)" }} />
