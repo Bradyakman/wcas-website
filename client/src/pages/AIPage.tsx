@@ -214,8 +214,7 @@ export default function WCASAIPage() {
                     <div className="cs-flip-front" style={{ background: (cs as any).cardImg ? `linear-gradient(180deg, rgba(8,14,28,0.5) 0%, rgba(8,14,28,0.9) 100%), url(${(cs as any).cardImg}) center/cover no-repeat` : "rgba(8,14,28,0.7)", border: `1px solid rgba(255,255,255,0.06)`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: (cs as any).cardImg ? "center" : "space-between", alignItems: (cs as any).cardImg ? "center" : "stretch", height: "100%", position: "relative", backdropFilter: "blur(12px)" }}>
                       {(cs as any).cardImg ? (<>
                         <div style={{ textAlign: "center" }}>
-                          {(cs as any).logo && <img src={(cs as any).logo} alt={cs.company} style={{ height: (cs as any).logoH || 32, objectFit: "contain", marginBottom: 16, filter: "brightness(0) invert(1)" }} />}
-                          <p style={{ fontFamily: SERIF, fontSize: 22, fontWeight: 400, color: "#fff", lineHeight: 1.3 }}>{cs.app}</p>
+                          {(cs as any).logo && <img src={(cs as any).logo} alt={cs.company} style={{ height: (cs as any).logoH || 32, objectFit: "contain", filter: "brightness(0) invert(1)" }} />}
                         </div>
                         <div style={{ position: "absolute", bottom: 28, left: 28, right: 28, display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
                           <span style={{ fontFamily: SANS, fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, padding: "4px 12px", borderRadius: 10, background: accentBg, border: `1px solid ${accentBorder}` }}>{cs.sector}</span>
@@ -237,6 +236,7 @@ export default function WCASAIPage() {
                       </>)}
                     </div>
                     <div className="cs-flip-back" style={{ background: "rgba(8,14,28,0.85)", border: `1px solid ${accentBorder}`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: "center", height: "100%", backdropFilter: "blur(12px)" }}>
+                      {(cs as any).cardImg && <p style={{ fontFamily: SERIF, fontSize: 22, fontWeight: 400, color: "#fff", lineHeight: 1.3, marginBottom: 20 }}>{cs.app}</p>}
                       <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, marginBottom: 16 }}>Use Case</div>
                       <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.7)", lineHeight: 1.7, marginBottom: 28 }}>{cs.useCase}</p>
                       <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, marginBottom: 12 }}>Build / Source</div>
