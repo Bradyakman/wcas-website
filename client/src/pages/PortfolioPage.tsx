@@ -79,7 +79,7 @@ export default function PortfolioPage() {
   return (
     <div style={{ fontFamily: SERIF, background: "#fff", color: "#111", minHeight: "100vh" }}>
 
-      <section style={{ position: "relative", overflow: "hidden", width: "100%", minHeight: 575, background: "radial-gradient(ellipse 80% 60% at 72% 80%, #0d4a4a55 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 60% 50%, #0a343422 0%, transparent 60%), linear-gradient(135deg, #060d18 0%, #091520 40%, #0b2030 70%, #0a2828 100%)" }}>
+      <section style={{ position: "relative", overflow: "hidden", width: "100%", minHeight: 575, background: "radial-gradient(ellipse 80% 60% at 72% 80%, #0d3a4a55 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 60% 50%, #0a2a3a22 0%, transparent 60%), linear-gradient(135deg, #060d18 0%, #091520 40%, #0b2030 70%, #0a1e32 100%)" }}>
         <div style={{ position: "relative", zIndex: 2, padding: "220px 64px 64px" }}>
           <h1 style={{ fontSize: 64, fontWeight: 400, lineHeight: 1.2, color: "#fff", marginBottom: 48 }}>Building companies that <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>define</em> their categories.</h1>
           <p style={{ fontFamily: SANS, fontSize: 19, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: "100%", marginBottom: 40 }}>Over 45 years and 190+ investments, WCAS has partnered with exceptional management teams across technology and healthcare to build market-leading companies.</p>
