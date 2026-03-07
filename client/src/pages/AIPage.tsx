@@ -106,7 +106,7 @@ const caseStudies = [
   { company: "AllazoHealth", sector: "Healthcare", app: "AssistRx Add-On Patient Engagement", useCase: "AI-powered platform predicts adherence risk and personalizes outreach.", build: "Acquired via AssistRx." },
   { company: "Absorb", sector: "Technology", app: "Course Generation", useCase: "GenAI features to build, adapt, and personalize Absorb LMS learning content.", build: "Internally built with cloud-native functionality." },
   { company: "LINQ", sector: "Technology", app: "LINQ Q Support Agent", useCase: "AI agent supports voice and chat channels for everyday customer requests.", build: "Built with low-code AI platform." },
-  { company: "AIA Contract Documents", sector: "Technology", app: "Contract Review", useCase: "AI automates contract risk review and improves risk detection.", build: "Roadmap contemplates internal build or acquisition." },
+  { company: "AIA Contract Documents", sector: "Technology", app: "Contract Review", useCase: "AI automates contract risk review and improves risk detection.", build: "Roadmap contemplates internal build or acquisition.", cardImg: "/logos/aia-ai-card.png" },
 ];
 
 export default function WCASAIPage() {
