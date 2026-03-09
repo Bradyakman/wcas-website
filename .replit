@@ -35,6 +35,7 @@ localPort = 5000
 externalPort = 80
 
 [deployment]
-run = ["sh", "-c", "npm run dev"]
-deploymentTarget = "cloudrun"
+run = ["npm", "run", "start"]
+deploymentTarget = "autoscale"
 publicDir = "dist/public"
+build = ["npm", "run", "build"]
