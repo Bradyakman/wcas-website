@@ -124,7 +124,7 @@ export default function Home() {
           .wwi-pnl-bg { position:absolute; inset:0; opacity:0; }
           .wwi-watermark { font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.95); line-height:1; pointer-events:none; z-index:1; padding:0 48px; margin-bottom:32px; }
           .wwi-bottom-glow { display:none; }
-          .wwi-content { position:relative; z-index:2; padding:0 48px 80px; transition:opacity 0.3s ease; text-align:left; }
+          .wwi-content { position:relative; z-index:2; padding:0 48px 56px; transition:opacity 0.3s ease; text-align:left; }
           .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:6px 16px; border-radius:18px; background:rgba(255,255,255,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.06); margin-bottom:20px; }
           .wwi-tag-dot { width:6px; height:6px; border-radius:50%; }
           .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:37px; font-weight:400; color:#fff; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
