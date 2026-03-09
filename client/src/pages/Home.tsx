@@ -81,7 +81,7 @@ export default function Home() {
 
       {/* ── HERO WITH IMAGE ── */}
       <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
-        <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "220px 56px 48px", maxWidth: 1400 }}>
+        <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "160px 56px 48px", maxWidth: 1400 }}>
           <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
             For over 45 years, WCAS has partnered with industry leaders across healthcare &{" "}
             technology to <em style={{ fontStyle: "italic", color: "#8BBDE8" }}>reshape landscapes and drive growth.</em>
