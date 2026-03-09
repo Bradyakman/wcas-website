@@ -1,5 +1,5 @@
 import { Play, X } from "lucide-react";
-import { useState, useRef, useEffect, useCallback } from "react";
+import heroBg from "@assets/image_1773080745684.png";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import logoLumexa from "@assets/image_1772400832099.png";
 import absorbLogoDark from "@assets/image_1772400928657.png";
@@ -28,86 +28,7 @@ import logoNaviHealth from "@assets/navihealth_new_clean.png";
 import logoSimeio from "@assets/simeio_transparent.png";
 import concentraLogo from "@assets/Picture1-removebg-preview_1772398995578.png";
 
-
-function BeamCanvas() {
-  const ref = useRef<HTMLCanvasElement>(null);
-  const draw = useCallback((ctx: CanvasRenderingContext2D, w: number, h: number, t: number) => {
-    ctx.fillStyle = "#060d18";
-    ctx.fillRect(0, 0, w, h);
-    const bx = w * 0.58, by = h * 0.15;
-    const angle = Math.PI * 0.38;
-    const len = Math.max(w, h) * 1.6;
-    const beamW = 90;
-    const dx = Math.cos(angle), dy = Math.sin(angle);
-    for (let i = 0; i < 6; i++) {
-      const spread = beamW * (0.3 + i * 0.14);
-      const alpha = 0.08 - i * 0.012;
-      const g = ctx.createLinearGradient(bx, by, bx + dx * len, by + dy * len);
-      g.addColorStop(0, `rgba(180,210,255,${alpha})`);
-      g.addColorStop(0.3, `rgba(120,175,240,${alpha * 0.7})`);
-      g.addColorStop(1, "transparent");
-      ctx.save();
-      ctx.translate(bx, by);
-      ctx.rotate(angle);
-      ctx.fillStyle = g;
-      ctx.beginPath();
-      ctx.moveTo(0, -spread);
-      ctx.lineTo(len, -spread * 2.5);
-      ctx.lineTo(len, spread * 2.5);
-      ctx.lineTo(0, spread);
-      ctx.closePath();
-      ctx.fill();
-      ctx.restore();
-    }
-    const coreG = ctx.createRadialGradient(bx, by, 0, bx, by, 120);
-    coreG.addColorStop(0, "rgba(220,240,255,0.35)");
-    coreG.addColorStop(0.3, "rgba(160,200,255,0.12)");
-    coreG.addColorStop(1, "transparent");
-    ctx.fillStyle = coreG;
-    ctx.fillRect(bx - 120, by - 120, 240, 240);
-    const pCount = 60;
-    for (let i = 0; i < pCount; i++) {
-      const seed = i * 137.508;
-      const onBeam = i < pCount * 0.7;
-      let px: number, py: number;
-      if (onBeam) {
-        const along = ((seed * 0.37 + t * 0.00003 * (1 + (i % 3) * 0.5)) % 1);
-        const drift = (Math.sin(seed + t * 0.001) * beamW * (0.4 + along * 0.8));
-        px = bx + dx * along * len * 0.7;
-        py = by + dy * along * len * 0.7 + drift;
-      } else {
-        px = (seed * 7.3 + t * 0.002) % w;
-        py = (seed * 3.7 + Math.sin(t * 0.0008 + seed) * 20) % h;
-      }
-      const flicker = 0.4 + 0.6 * Math.sin(t * 0.002 + seed);
-      const r = onBeam ? 1.2 + flicker * 1.0 : 0.6 + flicker * 0.4;
-      const a = onBeam ? 0.5 * flicker : 0.15 * flicker;
-      ctx.beginPath();
-      ctx.arc(px, py, r, 0, Math.PI * 2);
-      ctx.fillStyle = onBeam ? `rgba(190,220,255,${a})` : `rgba(140,180,220,${a})`;
-      ctx.fill();
-    }
-    const vigG = ctx.createRadialGradient(w * 0.5, h * 0.5, w * 0.2, w * 0.5, h * 0.5, w * 0.8);
-    vigG.addColorStop(0, "transparent");
-    vigG.addColorStop(1, "rgba(6,13,24,0.6)");
-    ctx.fillStyle = vigG;
-    ctx.fillRect(0, 0, w, h);
-  }, []);
-  useEffect(() => {
-    const c = ref.current;
-    if (!c) return;
-    const ctx = c.getContext("2d");
-    if (!ctx) return;
-    let af: number;
-    const resize = () => { c.width = c.offsetWidth * 2; c.height = c.offsetHeight * 2; ctx.scale(2, 2); };
-    resize();
-    window.addEventListener("resize", resize);
-    const loop = (t: number) => { ctx.setTransform(2, 0, 0, 2, 0, 0); draw(ctx, c.offsetWidth, c.offsetHeight, t); af = requestAnimationFrame(loop); };
-    af = requestAnimationFrame(loop);
-    return () => { cancelAnimationFrame(af); window.removeEventListener("resize", resize); };
-  }, [draw]);
-  return <canvas ref={ref} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", zIndex: 0 }} />;
-}
+import { useState } from "react";
 
 const ACCENT = "#7baee0";
 const BG = "#0C1A2E";
@@ -159,8 +80,7 @@ export default function Home() {
     <div style={{ fontFamily: SERIF, background: BG, color: TEXT, minHeight: "100vh" }}>
 
       {/* ── HERO WITH IMAGE ── */}
-      <section className="hero-section" style={{ position: "relative", overflow: "hidden", background: "#060d18" }}>
-        <BeamCanvas />
+      <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "160px 56px 48px", maxWidth: 1400 }}>
           <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
             For over 45 years, WCAS has partnered with industry leaders across healthcare &{" "}
