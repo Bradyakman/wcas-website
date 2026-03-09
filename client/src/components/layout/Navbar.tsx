@@ -10,7 +10,8 @@ export function Navbar() {
   const [location] = useLocation();
   const navRef = useRef<HTMLElement>(null);
 
-  const isDarkHeroPage = location === "/hcit" || 
+  const isDarkHeroPage = location === "/" ||
+                         location === "/hcit" || 
                          location === "/news" || 
                          location === "/technology" ||
                          location === "/technology/operating-successes" || 

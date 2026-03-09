@@ -80,14 +80,14 @@ export default function Home() {
     <div style={{ fontFamily: SERIF, background: BG, color: TEXT, minHeight: "100vh" }}>
 
       {/* ── HERO WITH IMAGE ── */}
-      <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: "url(/logos/hero-bg-nyc.png)", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#FFFFFF" }}>
+      <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: "url(/logos/hero-bg-nyc.png)", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#0C1A2E" }}>
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "140px 56px 48px", maxWidth: 1400 }}>
-          <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#0C1A2E" }}>
+          <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
             45 years of turning sector knowledge into lasting growth.
           </h1>
           <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
-            <span className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(12,26,46,0.2)", background: "rgba(12,26,46,0.05)", color: "#0C1A2E", cursor: "default", textDecoration: "none" }}>Explore Our Portfolio</span>
-            <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(12,26,46,0.2)", background: "rgba(12,26,46,0.05)", color: "#0C1A2E", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
+            <span className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "default", textDecoration: "none" }}>Explore Our Portfolio</span>
+            <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
           </div>
         </div>
         <div style={{ position: "relative", zIndex: 2, display: "flex", justifyContent: "space-between", padding: "0 56px 40px" }}>
@@ -99,8 +99,8 @@ export default function Home() {
           ].map((s, i) => (
             <div key={i} style={{ flex: 1, padding: "20px 0 0" }}>
               <div style={{ width: "calc(100% - 24px)", height: 2, background: ACCENT, marginBottom: 20 }} />
-              <div style={{ fontFamily: SANS, fontSize: 32, fontWeight: 700, marginBottom: 4, color: "#0C1A2E" }}>{s.num}</div>
-              <div style={{ fontFamily: SANS, fontSize: 13, color: "rgba(12,26,46,0.5)", fontWeight: 400 }}>{s.label}</div>
+              <div style={{ fontFamily: SANS, fontSize: 32, fontWeight: 700, marginBottom: 4, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>{s.num}</div>
+              <div style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 400 }}>{s.label}</div>
             </div>
           ))}
         </div>
