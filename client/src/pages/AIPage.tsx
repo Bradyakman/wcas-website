@@ -262,8 +262,7 @@ export default function WCASAIPage() {
         </div>
         <Fade><div style={{ maxWidth: 880, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 2 }}>
           <div style={{ width: 48, height: 2, background: TEAL, margin: "0 auto 44px", borderRadius: 1 }} />
-          <p style={{ fontSize: 27, fontWeight: 400, color: "#fff", lineHeight: 1.55, marginBottom: 28 }}>WCAS's proprietary data infrastructure compounds institutional knowledge across 45+ years, enabling our teams to identify patterns, surface insights, and make decisions with a depth of context no algorithm alone can replicate.</p>
-          <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.8, maxWidth: 680, margin: "0 auto" }}>By combining proprietary deal data, sector benchmarks, and advanced AI capabilities, we give our teams and portfolio companies a persistent analytical advantage.</p>
+          <p style={{ fontSize: 27, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>WCAS's proprietary data infrastructure compounds institutional knowledge across 45+ years, enabling our teams to identify patterns, surface insights, and make decisions with a depth of context no algorithm alone can replicate.</p>
         </div></Fade>
       </section>
 
