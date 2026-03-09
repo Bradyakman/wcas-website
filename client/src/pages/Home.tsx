@@ -147,7 +147,7 @@ export default function Home() {
               <div className="wwi-pills">
                 {["Care Delivery", "Healthcare IT", "Payor Solutions", "Pharma Value Chain"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
-              <a href="/hcit" className="wwi-cta2">Explore Healthcare &rarr;</a>
+              <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(77,184,199,0.7)" }}>Explore Healthcare &rarr;</a>
             </div>
           </div>
           <div className="wwi-pnl wwi-tech">
@@ -160,7 +160,7 @@ export default function Home() {
               <div className="wwi-pills">
                 {["Built Environment", "Data & Analytics", "FinTech", "GovTech", "IndustrialTech"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
-              <a href="/technology" className="wwi-cta2">Explore Technology &rarr;</a>
+              <a href="/technology" className="wwi-cta2" style={{ color: "rgba(139,189,232,0.7)" }}>Explore Technology &rarr;</a>
             </div>
           </div>
         </div>
