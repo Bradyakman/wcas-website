@@ -147,7 +147,7 @@ export default function Home() {
               <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(77,184,199,0.7)" }}>Explore Healthcare &rarr;</a>
             </div>
           </div>
-          <div className="wwi-pnl wwi-tech">
+          <div className="wwi-pnl wwi-tech" style={{ background: "linear-gradient(180deg, rgba(12,26,46,0.82) 0%, rgba(12,26,46,0.92) 100%), url(/logos/tech-panel-bg.png) center/cover no-repeat" }}>
             <div className="wwi-pnl-bg" />
             <div className="wwi-watermark">Technology</div>
             <div className="wwi-bottom-glow" />
