@@ -102,7 +102,7 @@ const scaleSteps = [
 ];
 const caseStudies = [
   { company: "Absorb", sector: "Technology", app: "Course Generation", useCase: "GenAI features to build, adapt, and personalize Absorb LMS learning content.", build: "Internally built with cloud-native functionality.", cardImg: "/logos/absorb-ai-card-new.png", logo: "/logos/absorb-white.png", logoH: 70 },
-  { company: "AIA Contract Documents", sector: "Technology", app: "Contract Review", useCase: "AI automates contract risk review and improves risk detection.", build: "Roadmap contemplates internal build or acquisition.", cardImg: "/logos/aia-ai-card-new.png", logo: "/logos/aia-logo-v2.png", logoH: 55 },
+  { company: "AIA Contract Documents", sector: "Technology", app: "Contract Review", useCase: "AI automates contract risk review and improves risk detection.", build: "Roadmap contemplates internal build or acquisition.", cardImg: "/logos/aia-ai-card-new.png", logo: "/logos/aia-logo-v2.png", logoH: 55, darkOverlay: true },
   { company: "AllazoHealth", sector: "Healthcare", app: "AssistRx Add-On Patient Engagement", useCase: "AI-powered platform predicts adherence risk and personalizes outreach.", build: "Acquired via AssistRx.", cardImg: "/logos/allazo-ai-card-new.png", logo: "/logos/assistrx-transparent.png", logoH: 50 },
   { company: "LINQ", sector: "Technology", app: "LINQ Q Support Agent", useCase: "AI agent supports voice and chat channels for everyday customer requests.", build: "Built with low-code AI platform.", cardImg: "/logos/linq-ai-card.png", logo: "/logos/linq.png", logoH: 55 },
   { company: "Lumexa Imaging", sector: "Healthcare", app: "Patient Data Support", useCase: "Agentic AI bots analyze and translate patient data and update billing records.", build: "Built in partnership with OnQ.", logo: "/logos/lumexa-transparent.png", logoH: 50, cardImg: "/logos/lumexa-ai-card.png" },
@@ -188,7 +188,7 @@ export default function WCASAIPage() {
               return (
                 <div key={cs.company} className="cs-flip-wrap">
                   <div className="cs-flip-inner">
-                    <div className="cs-flip-front" style={{ background: (cs as any).cardImg ? `linear-gradient(180deg, rgba(8,14,28,0.5) 0%, rgba(8,14,28,0.9) 100%), url(${(cs as any).cardImg}) center/cover no-repeat` : "rgba(8,14,28,0.7)", border: `1px solid rgba(255,255,255,0.06)`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: (cs as any).cardImg ? "center" : "space-between", alignItems: (cs as any).cardImg ? "center" : "stretch", height: "100%", position: "relative", backdropFilter: "blur(12px)" }}>
+                    <div className="cs-flip-front" style={{ background: (cs as any).cardImg ? `linear-gradient(180deg, rgba(8,14,28,${(cs as any).darkOverlay ? '0.75' : '0.5'}) 0%, rgba(8,14,28,${(cs as any).darkOverlay ? '0.95' : '0.9'}) 100%), url(${(cs as any).cardImg}) center/cover no-repeat` : "rgba(8,14,28,0.7)", border: `1px solid rgba(255,255,255,0.06)`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: (cs as any).cardImg ? "center" : "space-between", alignItems: (cs as any).cardImg ? "center" : "stretch", height: "100%", position: "relative", backdropFilter: "blur(12px)" }}>
                       {(cs as any).cardImg ? (<>
                         <div style={{ textAlign: "center" }}>
                           {(cs as any).logo ? (
