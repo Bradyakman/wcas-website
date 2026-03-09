@@ -132,7 +132,8 @@ export default function Home() {
           .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
           .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:13px; color:rgba(255,255,255,0.65); padding:7px 15px; border-radius:18px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); cursor:pointer; transition:transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease; }
           .wwi-pill2:hover { transform:translateY(-3px); color:rgba(255,255,255,0.95); border-color:rgba(255,255,255,0.4); background:rgba(255,255,255,0.12); }
-          .wwi-cta2 { display:none; }
+          .wwi-cta2 { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:rgba(255,255,255,0.55); text-decoration:none; margin-top:20px; display:inline-block; transition:color 0.2s ease; }
+          .wwi-cta2:hover { color:rgba(255,255,255,0.9); }
         `}</style>
         <div className="wwi-split">
           <div className="wwi-divider" />
@@ -146,7 +147,7 @@ export default function Home() {
               <div className="wwi-pills">
                 {["Care Delivery", "Healthcare IT", "Payor Solutions", "Pharma Value Chain"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
-              <a href="#" onClick={e => e.preventDefault()} className="wwi-cta2">Explore Healthcare &rarr;</a>
+              <a href="/hcit" className="wwi-cta2">Explore Healthcare &rarr;</a>
             </div>
           </div>
           <div className="wwi-pnl wwi-tech">
@@ -159,7 +160,7 @@ export default function Home() {
               <div className="wwi-pills">
                 {["Built Environment", "Data & Analytics", "FinTech", "GovTech", "IndustrialTech"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
-              <a href="#" onClick={e => e.preventDefault()} className="wwi-cta2">Explore Technology &rarr;</a>
+              <a href="/technology" className="wwi-cta2">Explore Technology &rarr;</a>
             </div>
           </div>
         </div>
