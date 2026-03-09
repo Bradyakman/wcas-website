@@ -1,5 +1,5 @@
 import { Play, X } from "lucide-react";
-import heroBg from "@assets/image_1773080632120.png";
+import heroBg from "@assets/image_1773080745684.png";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import logoLumexa from "@assets/image_1772400832099.png";
 import absorbLogoDark from "@assets/image_1772400928657.png";
@@ -80,7 +80,7 @@ export default function Home() {
     <div style={{ fontFamily: SERIF, background: BG, color: TEXT, minHeight: "100vh" }}>
 
       {/* ── HERO WITH IMAGE ── */}
-      <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `linear-gradient(rgba(12,26,46,0.65), rgba(12,26,46,0.65)), url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
+      <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "160px 56px 48px", maxWidth: 1400 }}>
           <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
             For over 45 years, WCAS has partnered with industry leaders across healthcare &{" "}
