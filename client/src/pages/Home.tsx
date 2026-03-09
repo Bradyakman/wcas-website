@@ -112,7 +112,7 @@ export default function Home() {
 
       {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
       <section style={{ padding: 0, background: "#152238" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "80px 48px 32px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "56px 48px 32px" }}>
           <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Focus Sectors</span>
           <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
         </div>
@@ -167,7 +167,7 @@ export default function Home() {
       </section>
 
       {/* ── PORTFOLIO ── */}
-      <section style={{ background: "#0c1a2e", padding: "80px 56px" }}>
+      <section style={{ background: "#0c1a2e", padding: "56px 56px 80px" }}>
         <style>{`
           .port-marquee-wrap { position:relative; overflow:hidden; }
           .port-marquee-wrap::before, .port-marquee-wrap::after { content:""; position:absolute; top:0; bottom:0; width:80px; z-index:2; pointer-events:none; }
@@ -238,7 +238,7 @@ export default function Home() {
           .spotlight-sidebar-item.active .sb-partner { color:#fff; }
           .spotlight-sidebar-item.active .sb-title { color:rgba(255,255,255,0.7); }
         `}</style>
-        <div style={{ position: "relative", zIndex: 10, padding: "80px 56px 80px" }}>
+        <div style={{ position: "relative", zIndex: 10, padding: "56px 56px 80px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 48 }}>
             <div style={{ flex: 1 }}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
@@ -341,7 +341,7 @@ export default function Home() {
       <div style={{ height: 4, background: "linear-gradient(90deg, #4db8c7, #c8985e)", opacity: 0.6 }} />
 
       {/* ── NEWS ── */}
-      <section style={{ background: "#f4f3f0", padding: "80px 56px" }}>
+      <section style={{ background: "#f4f3f0", padding: "56px 56px 80px" }}>
         <style>{`
           @keyframes news-fade-in { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
           .news-row { cursor:pointer; transition:background 0.3s ease, color 0.3s ease; }
