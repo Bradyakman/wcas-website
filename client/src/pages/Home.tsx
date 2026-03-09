@@ -82,7 +82,14 @@ export default function Home() {
       {/* ── HERO WITH IMAGE ── */}
       <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "160px 56px 48px", maxWidth: 1400 }}>
-          <div style={{ display: "flex", gap: 16 }}>
+          <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
+            For over 45 years, WCAS has partnered with industry leaders across healthcare &{" "}
+            technology to <em style={{ fontStyle: "italic", color: "#8BBDE8" }}>reshape landscapes and drive growth.</em>
+          </h1>
+          <p style={{ fontFamily: SANS, fontSize: 23, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: 1100, textShadow: "0 1px 2px rgba(0,0,0,0.2)" }}>
+            As one of private equity's first sector specialists, we combine deep sector knowledge with hands-on operational support to build long-term value.
+          </p>
+          <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
             <span className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "default", textDecoration: "none" }}>Explore Our Portfolio</span>
             <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
           </div>
