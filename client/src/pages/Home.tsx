@@ -1,5 +1,5 @@
 import { Play, X } from "lucide-react";
-import heroBg from "@assets/image_1773078489956.png";
+import heroBg from "@assets/image_1773078513576.png";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import logoLumexa from "@assets/image_1772400832099.png";
 import absorbLogoDark from "@assets/image_1772400928657.png";
