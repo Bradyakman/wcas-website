@@ -267,7 +267,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* STATS */}
-      <section style={{ background: BG, padding: "32px 64px 56px" }}>
+      <section style={{ background: BG, padding: "32px 64px 24px" }}>
         <Fade><div style={{ display: "flex", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 48 }}>
           {[{n:"300+",l:"AI Use Cases Cataloged"},{n:"$33B+",l:"Capital Deployed"},{n:"45+",l:"Years of Sector Data"},{n:"6",l:"Dedicated AI & Digital Team"}].map((s,i)=>(<div key={i} style={{ flex: 1 }}>
             <div style={{ width: "calc(100% - 24px)", height: 2, background: TEAL, marginBottom: 20, opacity: 0.5 }} />
@@ -281,7 +281,7 @@ export default function WCASAIPage() {
       <section style={{ background: BG2, padding: "56px 64px", textAlign: "center" }}>
         <Fade>
           <h2 style={{ fontSize: 32, fontWeight: 400, color: "#fff", marginBottom: 16 }}>Explore how WCAS creates value</h2>
-          <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.4)", marginBottom: 32 }}>Discover our portfolio, our sectors, and the partnerships that define the Welsh Carson way.</p>
+          <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.4)", marginBottom: 32 }}>Discover our portfolio, our sectors, and the partnerships that define WCAS.</p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center" }}>
             <a href="#" onClick={e=>e.preventDefault()} style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "#fff", textDecoration: "none" }}>Explore Our Portfolio</a>
             <a href="#" onClick={e=>e.preventDefault()} style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, border: "1px solid rgba(255,255,255,0.1)", background: "transparent", color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>Our Sectors</a>
