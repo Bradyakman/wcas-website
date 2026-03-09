@@ -144,9 +144,6 @@ export default function Home() {
             <div className="wwi-content">
               <h3>Investing in Better Healthcare</h3>
               <p className="wwi-desc">We partner with category-defining healthcare companies and their management teams to expand access, improve quality, and build lasting value.</p>
-              <div className="wwi-pills">
-                {["Care Delivery", "Healthcare IT", "Payor Solutions", "Pharma Value Chain"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
-              </div>
               <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(77,184,199,0.7)" }}>Explore Healthcare &rarr;</a>
             </div>
           </div>
@@ -157,9 +154,6 @@ export default function Home() {
             <div className="wwi-content">
               <h3>Powering Essential Industries</h3>
               <p className="wwi-desc">We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.</p>
-              <div className="wwi-pills">
-                {["Built Environment", "FinTech", "GovTech", "HCIT", "Industrial"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
-              </div>
               <a href="/technology" className="wwi-cta2" style={{ color: "rgba(139,189,232,0.7)" }}>Explore Technology &rarr;</a>
             </div>
           </div>
