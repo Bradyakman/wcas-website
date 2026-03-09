@@ -107,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
-      <section style={{ padding: "56px 48px", background: "#FFFFFF" }}>
+      <section style={{ padding: "56px 48px", background: "#F0F0F0" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>
           <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Focus Sectors</span>
           <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
