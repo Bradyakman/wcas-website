@@ -158,7 +158,7 @@ export default function Home() {
               <h3>Powering Essential Industries</h3>
               <p className="wwi-desc">We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.</p>
               <div className="wwi-pills">
-                {["Built Environment", "Data & Analytics", "FinTech", "GovTech", "IndustrialTech"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
+                {["Built Environment", "FinTech", "GovTech", "HCIT", "Industrial"].map((s, i) => <span key={i} className="wwi-pill2">{s}</span>)}
               </div>
               <a href="/technology" className="wwi-cta2" style={{ color: "rgba(139,189,232,0.7)" }}>Explore Technology &rarr;</a>
             </div>
