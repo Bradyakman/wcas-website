@@ -118,7 +118,7 @@ export default function Home() {
         </div>
         <style>{`
           @keyframes wwi-shimmer { 0%,100%{ opacity:1 } 50%{ opacity:0.6 } }
-          .wwi-split { display:flex; height:440px; position:relative; background:#152238; }
+          .wwi-split { display:flex; height:380px; position:relative; background:#152238; }
           .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(255,255,255,0.1),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
           .wwi-pnl { flex:1; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; }
           .wwi-pnl-bg { position:absolute; inset:0; opacity:0; }
