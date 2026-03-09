@@ -80,7 +80,7 @@ export default function Home() {
     <div style={{ fontFamily: SERIF, background: BG, color: TEXT, minHeight: "100vh" }}>
 
       {/* ── HERO WITH IMAGE ── */}
-      <section className="hero-section" style={{ position: "relative", overflow: "hidden", background: "#FFFFFF" }}>
+      <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: "url(/logos/hero-bg-sf.png)", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#FFFFFF" }}>
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "140px 56px 48px", maxWidth: 1400 }}>
           <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#0C1A2E" }}>
             45 years of turning sector knowledge into lasting growth.
