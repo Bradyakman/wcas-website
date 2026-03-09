@@ -132,6 +132,7 @@ export default function WCASAIPage() {
         @keyframes gs{0%{background-position:0% 50%}100%{background-position:200% 50%}}
         @keyframes rp{0%{transform:scale(0.85);opacity:0.25}50%{transform:scale(1.05);opacity:0.06}100%{transform:scale(0.85);opacity:0.25}}
         @keyframes m1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(4%,-3%) scale(1.08)}66%{transform:translate(-3%,4%) scale(0.95)}}
+        .ai-cta-btn:hover{transform:translateY(-3px)!important;background:rgba(255,255,255,0.14)!important;border-color:rgba(255,255,255,0.3)!important;}
         @keyframes m2{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-3%,5%) scale(1.04)}66%{transform:translate(5%,-2%) scale(0.92)}}
         @keyframes wd{0%{transform:translateX(0) scaleY(1)}50%{transform:translateX(-2%) scaleY(1.06)}100%{transform:translateX(0) scaleY(1)}}
         
@@ -283,8 +284,8 @@ export default function WCASAIPage() {
           <h2 style={{ fontSize: 32, fontWeight: 400, color: "#fff", marginBottom: 16 }}>Explore how WCAS creates value</h2>
           <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.4)", marginBottom: 32 }}>Discover our portfolio, our sectors, and the partnerships that define WCAS.</p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center" }}>
-            <a href="#" onClick={e=>e.preventDefault()} style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "#fff", textDecoration: "none" }}>Explore Our Portfolio</a>
-            <a href="#" onClick={e=>e.preventDefault()} style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, border: "1px solid rgba(255,255,255,0.1)", background: "transparent", color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>Our Sectors</a>
+            <a href="#" onClick={e=>e.preventDefault()} className="ai-cta-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.85)", textDecoration: "none", transition: "transform 0.25s ease, background 0.25s ease, border-color 0.25s ease" }}>Explore Our Portfolio</a>
+            <a href="#" onClick={e=>e.preventDefault()} className="ai-cta-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.85)", textDecoration: "none", transition: "transform 0.25s ease, background 0.25s ease, border-color 0.25s ease" }}>Our Sectors</a>
           </div>
         </Fade>
       </section>
