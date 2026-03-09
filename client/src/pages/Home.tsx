@@ -122,13 +122,13 @@ export default function Home() {
           .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(255,255,255,0.1),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
           .wwi-pnl { flex:1; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; }
           .wwi-pnl-bg { position:absolute; inset:0; opacity:0; }
-          .wwi-watermark { font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.95); line-height:1; pointer-events:none; z-index:1; padding:0 48px; margin-bottom:24px; }
+          .wwi-watermark { font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.95); line-height:1; pointer-events:none; z-index:1; padding:0 48px; margin-bottom:32px; }
           .wwi-bottom-glow { display:none; }
-          .wwi-content { position:relative; z-index:2; padding:0 48px 36px; transition:opacity 0.3s ease; }
+          .wwi-content { position:relative; z-index:2; padding:0 48px 40px; transition:opacity 0.3s ease; }
           .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:6px 16px; border-radius:18px; background:rgba(255,255,255,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.06); margin-bottom:20px; }
           .wwi-tag-dot { width:6px; height:6px; border-radius:50%; }
           .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:37px; font-weight:400; color:#fff; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
-          .wwi-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(255,255,255,0.4); line-height:1.65; margin-top:16px; }
+          .wwi-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(255,255,255,0.4); line-height:1.65; margin-top:20px; }
           .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
           .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:13px; color:rgba(255,255,255,0.65); padding:7px 15px; border-radius:18px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); cursor:pointer; transition:transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease; }
           .wwi-pill2:hover { transform:translateY(-3px); color:rgba(255,255,255,0.95); border-color:rgba(255,255,255,0.4); background:rgba(255,255,255,0.12); }
