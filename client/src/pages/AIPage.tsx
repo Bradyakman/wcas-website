@@ -261,17 +261,17 @@ export default function WCASAIPage() {
           {[380,520,660].map((sz, i) => (<div key={i} style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: sz, height: sz, borderRadius: "50%", border: `1px solid rgba(77,184,199,${0.05-i*0.015})`, animation: `rp ${6+i*2}s ease-in-out infinite ${i*0.8}s` }} />))}
         </div>
         <Fade><div style={{ maxWidth: 880, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 2 }}>
-          <div style={{ width: 48, height: 2, background: `linear-gradient(90deg, ${TEAL}, ${GOLD})`, margin: "0 auto 44px", borderRadius: 1 }} />
+          <div style={{ width: 48, height: 2, background: TEAL, margin: "0 auto 44px", borderRadius: 1 }} />
           <p style={{ fontSize: 27, fontWeight: 400, color: "#fff", lineHeight: 1.55, marginBottom: 28 }}>WCAS's proprietary data infrastructure compounds institutional knowledge across 45+ years — enabling our teams to identify patterns, surface insights, and make decisions with a depth of context no algorithm alone can replicate.</p>
           <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.8, maxWidth: 680, margin: "0 auto" }}>By combining proprietary deal data, sector benchmarks, and advanced AI capabilities, we give our teams and portfolio companies a persistent analytical advantage.</p>
         </div></Fade>
       </section>
 
       {/* STATS */}
-      <section style={{ background: BG, padding: "56px 64px" }}>
+      <section style={{ background: BG, padding: "32px 64px 56px" }}>
         <Fade><div style={{ display: "flex", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 48 }}>
           {[{n:"300+",l:"AI Use Cases Cataloged"},{n:"$33B+",l:"Capital Deployed"},{n:"45+",l:"Years of Sector Data"},{n:"6",l:"Dedicated AI & Digital Team"}].map((s,i)=>(<div key={i} style={{ flex: 1 }}>
-            <div style={{ width: "calc(100% - 24px)", height: 2, background: [TEAL,ACCENT,GOLD,TEAL][i], marginBottom: 20, opacity: 0.5 }} />
+            <div style={{ width: "calc(100% - 24px)", height: 2, background: TEAL, marginBottom: 20, opacity: 0.5 }} />
             <div style={{ fontFamily: SANS, fontSize: 36, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{s.n}</div>
             <div style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.4)" }}>{s.l}</div>
           </div>))}
