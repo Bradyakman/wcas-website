@@ -175,7 +175,7 @@ export default function WCASAIPage() {
           <div style={{ position: "absolute", top: "-10%", right: "-8%", width: "45%", height: "65%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(77,184,199,0.04) 0%, transparent 65%)", animation: "m1 20s ease-in-out infinite", filter: "blur(40px)" }} />
         </div>
         <div style={{ position: "relative", zIndex: 2 }}>
-          <Fade><SL text="Select Portfolio Case Studies" /><ST>AI at work across healthcare & technology</ST><SD>Real-world AI use cases delivering measurable value and accelerated adoption.</SD></Fade>
+          <Fade><SL text="Select Portfolio Case Studies" /><ST>AI at work across healthcare & technology</ST><SD>Real-world AI use cases delivering measurable value.</SD></Fade>
           <Fade delay={100}><div style={{ display: "flex", gap: 10, marginBottom: 36 }}>
             {["All","Technology","Healthcare"].map(f => (<div key={f} className={`fc ${csFilter===f?"fca":""}`} onClick={()=>{setCsFilter(f);setActiveCS(0)}}>{f}</div>))}
           </div></Fade>
