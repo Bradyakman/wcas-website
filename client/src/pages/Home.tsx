@@ -86,9 +86,6 @@ export default function Home() {
             45 years of turning sector knowledge into{" "}
             <em style={{ fontStyle: "italic", color: "#9ac8ec" }}>lasting growth.</em>
           </h1>
-          <p style={{ fontFamily: SANS, fontSize: 23, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: 1100, textShadow: "0 1px 2px rgba(0,0,0,0.2)" }}>
-            As one of private equity's first sector specialists, we combine deep sector knowledge with hands-on operational support to build long-term value.
-          </p>
           <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
             <span className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "default", textDecoration: "none" }}>Explore Our Portfolio</span>
             <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
