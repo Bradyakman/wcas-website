@@ -161,7 +161,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" style={{ background: BG, padding: "64px 64px 64px" }}>
+      <section id="about" style={{ background: BG, padding: "56px 64px" }}>
         <Fade><div style={{ display: "grid", gridTemplateColumns: "1fr 1px 1fr", gap: 40, alignItems: "center" }}>
           <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: <strong style={{ color: TEAL }}>incumbency matters</strong>. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.</p>
           <div style={{ width: 1, alignSelf: "stretch", background: "linear-gradient(to bottom, transparent, rgba(77,184,199,0.35), transparent)" }} />
@@ -170,7 +170,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* CASE STUDIES */}
-      <section id="case-studies" style={{ background: BG2, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
+      <section id="case-studies" style={{ background: BG2, padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
           <div style={{ position: "absolute", top: "-10%", right: "-8%", width: "45%", height: "65%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(77,184,199,0.04) 0%, transparent 65%)", animation: "m1 20s ease-in-out infinite", filter: "blur(40px)" }} />
         </div>
@@ -232,7 +232,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* PLAYBOOK */}
-      <section id="playbook" style={{ background: BG, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
+      <section id="playbook" style={{ background: BG, padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", bottom: "-20%", left: "-5%", width: "40%", height: "60%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(200,152,94,0.04) 0%, transparent 65%)", animation: "m2 22s ease-in-out infinite", filter: "blur(40px)", pointerEvents: "none" }} />
         <div style={{ position: "relative", zIndex: 2 }}>
           <Fade>
@@ -256,7 +256,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* QUOTE */}
-      <section style={{ background: BG2, padding: "96px 64px", position: "relative", overflow: "hidden" }}>
+      <section style={{ background: BG2, padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", pointerEvents: "none" }}>
           {[380,520,660].map((sz, i) => (<div key={i} style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: sz, height: sz, borderRadius: "50%", border: `1px solid rgba(77,184,199,${0.05-i*0.015})`, animation: `rp ${6+i*2}s ease-in-out infinite ${i*0.8}s` }} />))}
         </div>
@@ -268,7 +268,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* STATS */}
-      <section style={{ background: BG, padding: "64px" }}>
+      <section style={{ background: BG, padding: "56px 64px" }}>
         <Fade><div style={{ display: "flex", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 48 }}>
           {[{n:"300+",l:"AI Use Cases Cataloged"},{n:"$33B+",l:"Capital Deployed"},{n:"45+",l:"Years of Sector Data"},{n:"6",l:"Dedicated AI & Digital Team"}].map((s,i)=>(<div key={i} style={{ flex: 1 }}>
             <div style={{ width: "calc(100% - 24px)", height: 2, background: [TEAL,ACCENT,GOLD,TEAL][i], marginBottom: 20, opacity: 0.5 }} />
@@ -279,7 +279,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: BG2, padding: "80px 64px", textAlign: "center" }}>
+      <section style={{ background: BG2, padding: "56px 64px", textAlign: "center" }}>
         <Fade>
           <h2 style={{ fontSize: 32, fontWeight: 400, color: "#fff", marginBottom: 16 }}>Explore how WCAS creates value</h2>
           <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.4)", marginBottom: 32 }}>Discover our portfolio, our sectors, and the partnerships that define the Welsh Carson way.</p>
