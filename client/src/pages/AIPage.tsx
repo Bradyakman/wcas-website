@@ -270,7 +270,7 @@ export default function WCASAIPage() {
       {/* STATS */}
       <section style={{ background: BG, padding: "32px 64px 24px" }}>
         <Fade><div style={{ display: "flex", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 48 }}>
-          {[{n:"300+",l:"AI Use Cases Cataloged"},{n:"$33B+",l:"Capital Deployed"},{n:"45+",l:"Years of Sector Data"},{n:"6",l:"Dedicated AI & Digital Team"}].map((s,i)=>(<div key={i} style={{ flex: 1 }}>
+          {[{n:"$33B+",l:"Capital Deployed"},{n:"190+",l:"Portfolio Companies"},{n:"45+",l:"Years of Sector Data"},{n:"300+",l:"AI Use Cases Cataloged"}].map((s,i)=>(<div key={i} style={{ flex: 1 }}>
             <div style={{ width: "calc(100% - 24px)", height: 2, background: TEAL, marginBottom: 20, opacity: 0.5 }} />
             <div style={{ fontFamily: SANS, fontSize: 36, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{s.n}</div>
             <div style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.4)" }}>{s.l}</div>
