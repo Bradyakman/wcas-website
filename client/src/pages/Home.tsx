@@ -30,7 +30,7 @@ import concentraLogo from "@assets/Picture1-removebg-preview_1772398995578.png";
 
 import { useState } from "react";
 
-const ACCENT = "#6BA3D6";
+const ACCENT = "#7baee0";
 const BG = "#0C1A2E";
 const BORDER = "rgba(255,255,255,0.08)";
 const MUTED = "rgba(255,255,255,0.5)";
@@ -84,7 +84,7 @@ export default function Home() {
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "160px 56px 48px", maxWidth: 1400 }}>
           <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
             For over 45 years, WCAS has partnered with industry leaders across healthcare &{" "}
-            technology to <em style={{ fontStyle: "italic", color: "#8BBDE8" }}>reshape landscapes and drive growth.</em>
+            technology to <em style={{ fontStyle: "italic", color: "#9ac8ec" }}>reshape landscapes and drive growth.</em>
           </h1>
           <p style={{ fontFamily: SANS, fontSize: 23, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: 1100, textShadow: "0 1px 2px rgba(0,0,0,0.2)" }}>
             As one of private equity's first sector specialists, we combine deep sector knowledge with hands-on operational support to build long-term value.
@@ -113,8 +113,8 @@ export default function Home() {
       {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
       <section style={{ padding: 0, background: "#152238" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "56px 48px 32px" }}>
-          <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Focus Sectors</span>
-          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
+          <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Focus Sectors</span>
+          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
         </div>
         <style>{`
           @keyframes wwi-shimmer { 0%,100%{ opacity:1 } 50%{ opacity:0.6 } }
@@ -144,7 +144,7 @@ export default function Home() {
             <div className="wwi-content">
               <h3>Investing in Better Healthcare</h3>
               <p className="wwi-desc">We partner with category-defining healthcare companies and their management teams to expand access, improve quality, and build lasting value.</p>
-              <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(77,184,199,0.7)" }}>Explore Healthcare &rarr;</a>
+              <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(92,195,209,0.7)" }}>Explore Healthcare &rarr;</a>
             </div>
           </div>
           <div className="wwi-pnl wwi-tech">
@@ -154,7 +154,7 @@ export default function Home() {
             <div className="wwi-content">
               <h3>Powering Essential Industries</h3>
               <p className="wwi-desc">We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.</p>
-              <a href="/technology" className="wwi-cta2" style={{ color: "rgba(139,189,232,0.7)" }}>Explore Technology &rarr;</a>
+              <a href="/technology" className="wwi-cta2" style={{ color: "rgba(154,200,236,0.7)" }}>Explore Technology &rarr;</a>
             </div>
           </div>
         </div>
@@ -171,7 +171,7 @@ export default function Home() {
           .port-marquee-track:hover { animation-play-state:paused; }
           @keyframes port-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
           .port-logo-card { width:200px; height:90px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s; padding:0 24px; box-sizing:border-box; overflow:hidden; }
-          .port-logo-card:hover { transform:translateY(-3px); border-color:rgba(77,184,199,0.3); box-shadow:0 4px 20px rgba(77,184,199,0.08); background:rgba(255,255,255,0.95); }
+          .port-logo-card:hover { transform:translateY(-3px); border-color:rgba(92,195,209,0.3); box-shadow:0 4px 20px rgba(92,195,209,0.08); background:rgba(255,255,255,0.95); }
           .port-logo-card img { transition:filter 0.3s ease; }
           .port-logo-card:hover img { filter:none !important; }
           .port-logo-card span { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:rgba(255,255,255,0.7); letter-spacing:0.5px; }
@@ -180,8 +180,8 @@ export default function Home() {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 48 }}>
           <div style={{ maxWidth: 900 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Portfolio</span>
-              <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
+              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Portfolio</span>
+              <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
             </div>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 42, fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 20, whiteSpace: "nowrap" }}>Building market leaders across healthcare and technology</h2>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>With deep domain experience and a long-term partnership mentality, we look to drive value through a combination of operational improvements, internal growth initiatives and strategic acquisitions.</p>
@@ -238,8 +238,8 @@ export default function Home() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Mission</span>
-                    <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
+                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Mission</span>
+                    <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
                   </div>
                   <h2 style={{ fontSize: 34, fontWeight: 400, lineHeight: 1.2 }}>Be Your Partner of Choice</h2>
                 </div>
@@ -265,7 +265,7 @@ export default function Home() {
 
               {/* Category badge */}
               <div style={{ position: "absolute", top: 24, right: 32, zIndex: 4 }}>
-                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: filteredVideos[safeActiveVideo].category === "Healthcare" ? "#8BBDE8" : "#4db8c7", padding: "5px 14px", borderRadius: 12, background: filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(139,189,232,0.1)" : "rgba(77,184,199,0.1)", border: `1px solid ${filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(139,189,232,0.2)" : "rgba(77,184,199,0.2)"}` }}>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: filteredVideos[safeActiveVideo].category === "Healthcare" ? "#9ac8ec" : "#5cc3d1", padding: "5px 14px", borderRadius: 12, background: filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(154,200,236,0.1)" : "rgba(92,195,209,0.1)", border: `1px solid ${filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(154,200,236,0.2)" : "rgba(92,195,209,0.2)"}` }}>
                   {filteredVideos[safeActiveVideo].category}
                 </span>
               </div>
@@ -305,11 +305,11 @@ export default function Home() {
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
                   <div
                     onClick={() => handleFilterChange("Technology")}
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Technology" ? "rgba(77,184,199,0.12)" : "transparent", color: videoFilter === "Technology" ? "#4db8c7" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Technology" ? "rgba(77,184,199,0.25)" : "rgba(255,255,255,0.04)"}` }}
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Technology" ? "rgba(92,195,209,0.12)" : "transparent", color: videoFilter === "Technology" ? "#5cc3d1" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Technology" ? "rgba(92,195,209,0.25)" : "rgba(255,255,255,0.04)"}` }}
                   >Technology</div>
                   <div
                     onClick={() => handleFilterChange("Healthcare")}
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Healthcare" ? "rgba(139,189,232,0.12)" : "transparent", color: videoFilter === "Healthcare" ? "#8BBDE8" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Healthcare" ? "rgba(139,189,232,0.25)" : "rgba(255,255,255,0.04)"}` }}
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Healthcare" ? "rgba(154,200,236,0.12)" : "transparent", color: videoFilter === "Healthcare" ? "#9ac8ec" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Healthcare" ? "rgba(154,200,236,0.25)" : "rgba(255,255,255,0.04)"}` }}
                   >Healthcare</div>
                 </div>
               </div>
@@ -332,7 +332,7 @@ export default function Home() {
       </section>
 
       {/* ── TRANSITION STRIP ── */}
-      <div style={{ height: 4, background: "linear-gradient(90deg, #4db8c7, #c8985e)", opacity: 0.6 }} />
+      <div style={{ height: 4, background: "linear-gradient(90deg, #5cc3d1, #c8985e)", opacity: 0.6 }} />
 
       {/* ── NEWS ── */}
       <section style={{ background: "#f4f3f0", padding: "56px 56px 80px" }}>
@@ -357,9 +357,9 @@ export default function Home() {
         </div>
         <div className="news-content-fade" style={{ borderRadius: 16, border: "1px solid rgba(12,26,46,0.08)", overflow: "hidden" }}>
           {([
-            { tag: "WCAS News", tagColor: "#4db8c7", date: "Feb 2026", title: "WCAS Portfolio Company Absorb Software Named to G2\u2019s 2026 Top 100 Global Software Companies", excerpt: "WCAS portfolio company Absorb Software has been named to G2\u2019s 2026 Best Software Awards list of the Top 100 Global Software Companies, ranking #89 worldwide out of over 116,000 total vendors.", logo: absorbLogoDark },
-            { tag: "WCAS News", tagColor: "#4db8c7", date: "Jan 2026", title: "Lumexa Imaging Announces Pricing of Initial Public Offering", excerpt: "Lumexa Imaging announced the pricing of its initial public offering of 25,000,000 shares of common stock at $18.50 per share, expected to trade on the Nasdaq Global Select Market under the symbol \u2018LMRI.\u2019", logo: logoLumexa },
-            { tag: "WCAS News", tagColor: "#4db8c7", date: "Sep 2025", title: "Welsh, Carson, Anderson & Stowe Welcomes Gene Lockhart as Operating Partner", excerpt: "Gene Lockhart, former CEO and President of Mastercard and former President of the Global Retail Bank at Bank of America, has joined WCAS as an operating partner.", logo: wcasLogo },
+            { tag: "WCAS News", tagColor: "#5cc3d1", date: "Feb 2026", title: "WCAS Portfolio Company Absorb Software Named to G2\u2019s 2026 Top 100 Global Software Companies", excerpt: "WCAS portfolio company Absorb Software has been named to G2\u2019s 2026 Best Software Awards list of the Top 100 Global Software Companies, ranking #89 worldwide out of over 116,000 total vendors.", logo: absorbLogoDark },
+            { tag: "WCAS News", tagColor: "#5cc3d1", date: "Jan 2026", title: "Lumexa Imaging Announces Pricing of Initial Public Offering", excerpt: "Lumexa Imaging announced the pricing of its initial public offering of 25,000,000 shares of common stock at $18.50 per share, expected to trade on the Nasdaq Global Select Market under the symbol \u2018LMRI.\u2019", logo: logoLumexa },
+            { tag: "WCAS News", tagColor: "#5cc3d1", date: "Sep 2025", title: "Welsh, Carson, Anderson & Stowe Welcomes Gene Lockhart as Operating Partner", excerpt: "Gene Lockhart, former CEO and President of Mastercard and former President of the Global Retail Bank at Bank of America, has joined WCAS as an operating partner.", logo: wcasLogo },
             { tag: "Partnership", tagColor: "#c8985e", date: "Aug 2025", title: "GovCIO, a Welsh, Carson, Anderson & Stowe Company, to Acquire SoldierPoint Digital Health, LLC", excerpt: "GovCIO announced it has agreed to acquire SoldierPoint Digital Health, expanding its mission supporting Veterans through the Department of Veterans Affairs.", logo: logoGovCIO },
           ]).map((n, i, arr) => (
             <div
@@ -380,7 +380,7 @@ export default function Home() {
                   </div>
                   <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
                     <p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: 20 }}>{n.excerpt}</p>
-                    <a href="#" onClick={e => e.preventDefault()} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "#4db8c7", textDecoration: "none" }}>Read full article &#8594;</a>
+                    <a href="#" onClick={e => e.preventDefault()} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "#5cc3d1", textDecoration: "none" }}>Read full article &#8594;</a>
                   </div>
                 </div>
               </div>
