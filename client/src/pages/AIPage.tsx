@@ -164,7 +164,7 @@ export default function WCASAIPage() {
       <section id="about" style={{ background: BG, padding: "56px 64px" }}>
         <Fade><div style={{ display: "grid", gridTemplateColumns: "1fr 1px 1fr", gap: 40, alignItems: "center" }}>
           <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: <strong>incumbency matters</strong>. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.</p>
-          <div style={{ width: 1, alignSelf: "stretch", background: "linear-gradient(to bottom, transparent, rgba(77,184,199,0.35), transparent)" }} />
+          <div style={{ width: 1, alignSelf: "stretch", background: "linear-gradient(180deg, transparent, rgba(255,255,255,0.1), transparent)" }} />
           <p style={{ fontSize: 26, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly and persistently with portfolio companies to turn AI ambition into measurable, lasting results.</p>
         </div></Fade>
       </section>
