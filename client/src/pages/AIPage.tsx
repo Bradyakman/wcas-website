@@ -221,7 +221,7 @@ export default function WCASAIPage() {
                       <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, marginBottom: 16 }}>Use Case</div>
                       <p style={{ fontFamily: SANS, fontSize: 18, color: "rgba(255,255,255,0.7)", lineHeight: 1.7, marginBottom: 28 }}>{cs.useCase}</p>
                       <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: accent, marginBottom: 12 }}>Build / Source</div>
-                      <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.5)", lineHeight: 1.7 }}>{cs.build}</p>
+                      <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.7)", lineHeight: 1.7 }}>{cs.build}</p>
                     </div>
                   </div>
                 </div>
