@@ -132,8 +132,8 @@ export default function Home() {
           .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
           .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:13px; color:rgba(255,255,255,0.65); padding:7px 15px; border-radius:18px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); cursor:pointer; transition:transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease; }
           .wwi-pill2:hover { transform:translateY(-3px); color:rgba(255,255,255,0.95); border-color:rgba(255,255,255,0.4); background:rgba(255,255,255,0.12); }
-          .wwi-cta2 { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:rgba(255,255,255,0.55); text-decoration:none; margin-top:36px; display:inline-block; transition:color 0.2s ease; }
-          .wwi-cta2:hover { color:rgba(255,255,255,0.9); }
+          .wwi-cta2 { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:rgba(255,255,255,0.55); text-decoration:none; margin-top:36px; display:inline-block; transition:color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease; }
+          .wwi-cta2:hover { color:rgba(255,255,255,0.95); transform:translateX(6px); letter-spacing:0.5px; }
         `}</style>
         <div className="wwi-split">
           <div className="wwi-divider" />
