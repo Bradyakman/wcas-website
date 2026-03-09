@@ -137,7 +137,7 @@ export default function Home() {
         `}</style>
         <div className="wwi-split">
           <div className="wwi-divider" />
-          <div className="wwi-pnl wwi-hc">
+          <div className="wwi-pnl wwi-hc" style={{ background: "linear-gradient(180deg, rgba(12,26,46,0.82) 0%, rgba(12,26,46,0.92) 100%), url(/logos/hc-panel-bg.png) center/cover no-repeat" }}>
             <div className="wwi-pnl-bg" />
             <div className="wwi-watermark">Healthcare</div>
             <div className="wwi-bottom-glow" />
