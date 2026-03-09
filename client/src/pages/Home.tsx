@@ -80,11 +80,15 @@ export default function Home() {
     <div style={{ fontFamily: SERIF, background: BG, color: TEXT, minHeight: "100vh" }}>
 
       {/* ── HERO WITH IMAGE ── */}
-      <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: "url(/logos/hero-bg-nyc.png)", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#0C1A2E" }}>
-        <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "140px 56px 48px", maxWidth: 1400 }}>
+      <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
+        <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "220px 56px 48px", maxWidth: 1400 }}>
           <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
-            45 years of turning sector knowledge into lasting growth.
+            For over 45 years, WCAS has partnered with industry leaders across healthcare &{" "}
+            technology to <em style={{ fontStyle: "italic", color: "#8BBDE8" }}>reshape landscapes and drive growth.</em>
           </h1>
+          <p style={{ fontFamily: SANS, fontSize: 23, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, maxWidth: 1100, textShadow: "0 1px 2px rgba(0,0,0,0.2)" }}>
+            As one of private equity's first sector specialists, we combine deep sector knowledge with hands-on operational support to build long-term value.
+          </p>
           <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
             <span className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "default", textDecoration: "none" }}>Explore Our Portfolio</span>
             <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
@@ -107,27 +111,51 @@ export default function Home() {
       </section>
 
       {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
-      <section style={{ padding: "56px 48px", background: "#f4f3f0" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>
+      <section style={{ padding: 0, background: "#152238" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "56px 48px 32px" }}>
           <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#4db8c7" }}>Our Focus Sectors</span>
           <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #4db8c7, transparent)" }} />
         </div>
         <style>{`
-          .wwi-cta2 { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; text-decoration:none; margin-top:36px; display:inline-block; transition:color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease; }
+          @keyframes wwi-shimmer { 0%,100%{ opacity:1 } 50%{ opacity:0.6 } }
+          .wwi-split { display:flex; min-height:380px; position:relative; background:#152238; }
+          .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(255,255,255,0.1),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
+          .wwi-pnl { flex:1; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; }
+          .wwi-pnl-bg { position:absolute; inset:0; opacity:0; }
+          .wwi-watermark { font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.95); line-height:1; pointer-events:none; z-index:1; padding:0 48px; margin-bottom:32px; }
+          .wwi-bottom-glow { display:none; }
+          .wwi-content { position:relative; z-index:2; padding:0 48px 56px; transition:opacity 0.3s ease; text-align:left; }
+          .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:6px 16px; border-radius:18px; background:rgba(255,255,255,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.06); margin-bottom:20px; }
+          .wwi-tag-dot { width:6px; height:6px; border-radius:50%; }
+          .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:37px; font-weight:400; color:#fff; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
+          .wwi-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(255,255,255,0.4); line-height:1.65; margin-top:20px; }
+          .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+          .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:13px; color:rgba(255,255,255,0.65); padding:7px 15px; border-radius:18px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); cursor:pointer; transition:transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease; }
+          .wwi-pill2:hover { transform:translateY(-3px); color:rgba(255,255,255,0.95); border-color:rgba(255,255,255,0.4); background:rgba(255,255,255,0.12); }
+          .wwi-cta2 { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:rgba(255,255,255,0.55); text-decoration:none; margin-top:36px; display:inline-block; transition:color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease; }
           .wwi-cta2:hover { color:rgba(255,255,255,0.95); transform:translateX(6px); letter-spacing:0.5px; }
         `}</style>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-          <div style={{ background: "#0C1A2E", borderRadius: 16, padding: "48px 44px" }}>
-            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 72, fontWeight: 300, color: "rgba(255,255,255,0.95)", lineHeight: 1, marginBottom: 28 }}>Healthcare</div>
-            <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, fontWeight: 400, color: "#fff", lineHeight: 1.2, marginBottom: 0 }}>Investing in Better Healthcare</h3>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.65, marginTop: 20 }}>We partner with category-defining healthcare companies and their management teams to expand access, improve quality, and build lasting value.</p>
-            <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(77,184,199,0.7)" }}>Explore Healthcare &rarr;</a>
+        <div className="wwi-split">
+          <div className="wwi-divider" />
+          <div className="wwi-pnl wwi-hc">
+            <div className="wwi-pnl-bg" />
+            <div className="wwi-watermark">Healthcare</div>
+            <div className="wwi-bottom-glow" />
+            <div className="wwi-content">
+              <h3>Investing in Better Healthcare</h3>
+              <p className="wwi-desc">We partner with category-defining healthcare companies and their management teams to expand access, improve quality, and build lasting value.</p>
+              <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(77,184,199,0.7)" }}>Explore Healthcare &rarr;</a>
+            </div>
           </div>
-          <div style={{ background: "#0C1A2E", borderRadius: 16, padding: "48px 44px" }}>
-            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 72, fontWeight: 300, color: "rgba(255,255,255,0.95)", lineHeight: 1, marginBottom: 28 }}>Technology</div>
-            <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, fontWeight: 400, color: "#fff", lineHeight: 1.2, marginBottom: 0 }}>Powering Essential Industries</h3>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.65, marginTop: 20 }}>We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.</p>
-            <a href="/technology" className="wwi-cta2" style={{ color: "rgba(139,189,232,0.7)" }}>Explore Technology &rarr;</a>
+          <div className="wwi-pnl wwi-tech">
+            <div className="wwi-pnl-bg" />
+            <div className="wwi-watermark">Technology</div>
+            <div className="wwi-bottom-glow" />
+            <div className="wwi-content">
+              <h3>Powering Essential Industries</h3>
+              <p className="wwi-desc">We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.</p>
+              <a href="/technology" className="wwi-cta2" style={{ color: "rgba(139,189,232,0.7)" }}>Explore Technology &rarr;</a>
+            </div>
           </div>
         </div>
       </section>

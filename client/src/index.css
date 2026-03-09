@@ -113,7 +113,24 @@
   position: relative;
 }
 .hero-section::before {
-  display: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(10, 18, 30, 0.3) 0%,
+      transparent 40%
+    ),
+    linear-gradient(
+      to right,
+      rgba(10, 18, 30, 0.92) 0%,
+      rgba(10, 18, 30, 0.88) 50%,
+      rgba(10, 18, 30, 0.40) 70%,
+      rgba(10, 18, 30, 0.05) 85%,
+      rgba(10, 18, 30, 0) 100%
+    );
+  z-index: 1;
 }
 
 
