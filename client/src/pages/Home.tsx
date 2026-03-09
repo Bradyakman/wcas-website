@@ -1,5 +1,5 @@
 import { Play, X } from "lucide-react";
-import heroBg from "@assets/image_1773078513576.png";
+import heroBg from "@assets/image_1772300178571.png";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import logoLumexa from "@assets/image_1772400832099.png";
 import absorbLogoDark from "@assets/image_1772400928657.png";
@@ -83,7 +83,7 @@ export default function Home() {
       <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "160px 56px 48px", maxWidth: 1400 }}>
           <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, marginBottom: 28, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
-            45 years of turning sector expertise into{" "}
+            45 years of turning sector knowledge into{" "}
             <em style={{ fontStyle: "italic", color: "#9ac8ec" }}>lasting growth.</em>
           </h1>
           <div style={{ marginTop: 36, display: "flex", gap: 16 }}>
