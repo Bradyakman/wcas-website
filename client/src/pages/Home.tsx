@@ -108,29 +108,29 @@ export default function Home() {
       </section>
 
       {/* ── WHERE WE INVEST — SPLIT SCREEN ── */}
-      <section style={{ padding: 0, background: "#152238" }}>
+      <section style={{ padding: 0, background: "#F5F5F5" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "56px 48px 32px" }}>
-          <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Focus Sectors</span>
-          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
+          <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#0C1A2E" }}>Our Focus Sectors</span>
+          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #0C1A2E, transparent)" }} />
         </div>
         <style>{`
           @keyframes wwi-shimmer { 0%,100%{ opacity:1 } 50%{ opacity:0.6 } }
-          .wwi-split { display:flex; min-height:380px; position:relative; background:#152238; }
-          .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(255,255,255,0.1),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
+          .wwi-split { display:flex; min-height:380px; position:relative; background:#F5F5F5; }
+          .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(12,26,46,0.12),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
           .wwi-pnl { flex:1; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; }
           .wwi-pnl-bg { position:absolute; inset:0; opacity:0; }
-          .wwi-watermark { font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(255,255,255,0.95); line-height:1; pointer-events:none; z-index:1; padding:0 48px; margin-bottom:32px; }
+          .wwi-watermark { font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(12,26,46,0.08); line-height:1; pointer-events:none; z-index:1; padding:0 48px; margin-bottom:32px; }
           .wwi-bottom-glow { display:none; }
           .wwi-content { position:relative; z-index:2; padding:0 48px 56px; transition:opacity 0.3s ease; text-align:left; }
-          .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.5); padding:6px 16px; border-radius:18px; background:rgba(255,255,255,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.06); margin-bottom:20px; }
+          .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(12,26,46,0.5); padding:6px 16px; border-radius:18px; background:rgba(12,26,46,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(12,26,46,0.08); margin-bottom:20px; }
           .wwi-tag-dot { width:6px; height:6px; border-radius:50%; }
-          .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:37px; font-weight:400; color:#fff; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
-          .wwi-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(255,255,255,0.4); line-height:1.65; margin-top:20px; }
+          .wwi-pnl h3 { font-family:'Cormorant Garamond',serif; font-size:37px; font-weight:400; color:#0C1A2E; line-height:1.2; margin-bottom:0; position:relative; z-index:2; }
+          .wwi-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(12,26,46,0.55); line-height:1.65; margin-top:20px; }
           .wwi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
-          .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:13px; color:rgba(255,255,255,0.65); padding:7px 15px; border-radius:18px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); cursor:pointer; transition:transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease; }
-          .wwi-pill2:hover { transform:translateY(-3px); color:rgba(255,255,255,0.95); border-color:rgba(255,255,255,0.4); background:rgba(255,255,255,0.12); }
-          .wwi-cta2 { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:rgba(255,255,255,0.55); text-decoration:none; margin-top:36px; display:inline-block; transition:color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease; }
-          .wwi-cta2:hover { color:rgba(255,255,255,0.95); transform:translateX(6px); letter-spacing:0.5px; }
+          .wwi-pill2 { font-family:'DM Sans',sans-serif; font-size:13px; color:rgba(12,26,46,0.65); padding:7px 15px; border-radius:18px; background:rgba(12,26,46,0.06); border:1px solid rgba(12,26,46,0.12); cursor:pointer; transition:transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease; }
+          .wwi-pill2:hover { transform:translateY(-3px); color:#0C1A2E; border-color:rgba(12,26,46,0.3); background:rgba(12,26,46,0.1); }
+          .wwi-cta2 { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:rgba(12,26,46,0.55); text-decoration:none; margin-top:36px; display:inline-block; transition:color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease; }
+          .wwi-cta2:hover { color:#0C1A2E; transform:translateX(6px); letter-spacing:0.5px; }
         `}</style>
         <div className="wwi-split">
           <div className="wwi-divider" />
@@ -141,7 +141,7 @@ export default function Home() {
             <div className="wwi-content">
               <h3>Investing in Better Healthcare</h3>
               <p className="wwi-desc">We partner with category-defining healthcare companies and their management teams to expand access, improve quality, and build lasting value.</p>
-              <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(92,195,209,0.7)" }}>Explore Healthcare &rarr;</a>
+              <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(12,26,46,0.6)" }}>Explore Healthcare &rarr;</a>
             </div>
           </div>
           <div className="wwi-pnl wwi-tech">
@@ -151,7 +151,7 @@ export default function Home() {
             <div className="wwi-content">
               <h3>Powering Essential Industries</h3>
               <p className="wwi-desc">We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.</p>
-              <a href="/technology" className="wwi-cta2" style={{ color: "rgba(154,200,236,0.7)" }}>Explore Technology &rarr;</a>
+              <a href="/technology" className="wwi-cta2" style={{ color: "rgba(12,26,46,0.6)" }}>Explore Technology &rarr;</a>
             </div>
           </div>
         </div>
