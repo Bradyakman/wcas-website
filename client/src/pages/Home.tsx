@@ -110,15 +110,15 @@ export default function Home() {
       </section>
 
       {/* ── WHERE WE INVEST — CARD LAYOUT ── */}
-      <section style={{ padding: 0, background: "#F5F5F5" }}>
+      <section style={{ padding: 0, background: "#152238" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "56px 48px 32px" }}>
-          <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#0C1A2E" }}>Our Focus Sectors</span>
-          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #0C1A2E, transparent)" }} />
+          <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Focus Sectors</span>
+          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
         </div>
         <style>{`
           .wwi-cards { display:flex; gap:32px; padding:0 48px 64px; }
-          .wwi-card { flex:1; border-radius:4px; overflow:hidden; background:#fff; box-shadow:0 2px 12px rgba(12,26,46,0.08); transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:default; }
-          .wwi-card:hover { transform:translateY(-4px); box-shadow:0 8px 28px rgba(12,26,46,0.13); }
+          .wwi-card { flex:1; border-radius:4px; overflow:hidden; background:#fff; box-shadow:0 4px 20px rgba(0,0,0,0.25); transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:default; }
+          .wwi-card:hover { transform:translateY(-4px); box-shadow:0 12px 36px rgba(0,0,0,0.35); }
           .wwi-card-img-wrap { width:100%; height:180px; overflow:hidden; }
           .wwi-card-img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; display:block; }
           .wwi-card:hover .wwi-card-img { transform:scale(1.06); }
