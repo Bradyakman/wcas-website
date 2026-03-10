@@ -83,7 +83,7 @@ export default function Home() {
       <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `linear-gradient(rgba(8,14,28,0.4), rgba(8,14,28,0.4)), url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "160px 56px 80px" }}>
           <h1 style={{ fontSize: 48, fontWeight: 400, lineHeight: 1.25, marginBottom: 64, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
-            We don't diversify. We specialize.
+            Sector specialists. Long-term partners.
           </h1>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32, marginBottom: 56 }}>
             {[
