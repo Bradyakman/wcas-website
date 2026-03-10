@@ -17,7 +17,7 @@ const GOLD = "#c8985e";
 const BG = "#0C1A2E";
 const BG2 = "#152238";
 const SERIF = "'Cormorant Garamond', Georgia, serif";
-const SANS = "'Lora', Georgia, serif";
+const SANS = "'DM Sans', sans-serif";
 
 function useFadeIn(delay = 0) {
   const ref = useRef<HTMLDivElement>(null);

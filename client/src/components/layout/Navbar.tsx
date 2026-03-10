@@ -102,7 +102,7 @@ export function Navbar() {
                   <a
                     href="#"
                     className={`text-sm font-medium transition-colors cursor-pointer ${linkColor()}`}
-                    style={{ fontFamily: "'Lora', Georgia, serif", fontWeight: 400, fontSize: 14, WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', textDecoration: 'none' }}
+                    style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', textDecoration: 'none' }}
                     onClick={(e) => { e.preventDefault(); closeDropdown(); }}
                   >
                     {link.name}
@@ -147,7 +147,7 @@ export function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={`text-sm font-medium transition-colors ${linkColor()}`}
-                  style={{ fontFamily: "'Lora', Georgia, serif", fontWeight: 400, fontSize: 14, textDecoration: 'none' }}
+                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, textDecoration: 'none' }}
                 >
                   {link.name}
                 </Link>
@@ -157,7 +157,7 @@ export function Navbar() {
                   href="#"
                   onClick={e => e.preventDefault()}
                   className={`text-sm font-medium transition-colors ${linkColor()}`}
-                  style={{ fontFamily: "'Lora', Georgia, serif", fontWeight: 400, fontSize: 14, textDecoration: 'none' }}
+                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, textDecoration: 'none' }}
                 >
                   {link.name}
                 </a>
@@ -169,7 +169,7 @@ export function Navbar() {
             onClick={e => e.preventDefault()}
             className="pill-btn transition-all duration-200"
             style={{
-              fontFamily: "'Lora', Georgia, serif",
+              fontFamily: "'Outfit', sans-serif",
               fontSize: 13,
               fontWeight: 500,
               padding: "10px 28px",

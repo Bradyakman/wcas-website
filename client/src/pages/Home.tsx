@@ -37,7 +37,7 @@ const MUTED = "rgba(255,255,255,0.5)";
 const VERY_MUTED = "rgba(255,255,255,0.4)";
 const TEXT = "#E4E8ED";
 const SERIF = "'Cormorant Garamond', Georgia, serif";
-const SANS = "'Lora', Georgia, serif";
+const SANS = "'DM Sans', sans-serif";
 
 const wcasVideos = [
   { id: "861242949", title: "Paths to Growth", partner: "Absorb", category: "Technology" as const, partnerLogo: absorbLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
@@ -171,19 +171,19 @@ export default function Home() {
           .port-logo-card:hover { transform:translateY(-3px); border-color:rgba(92,195,209,0.3); box-shadow:0 4px 20px rgba(92,195,209,0.08); background:rgba(255,255,255,0.95); }
           .port-logo-card img { transition:filter 0.3s ease; }
           .port-logo-card:hover img { filter:none !important; }
-          .port-logo-card span { font-family:'Lora',Georgia,serif; font-size:13px; font-weight:500; color:rgba(255,255,255,0.7); letter-spacing:0.5px; }
+          .port-logo-card span { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:rgba(255,255,255,0.7); letter-spacing:0.5px; }
           @media (prefers-reduced-motion: reduce) { .port-marquee-track { animation:none !important; flex-wrap:wrap; justify-content:center; } }
         `}</style>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 48 }}>
           <div style={{ maxWidth: 900 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-              <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Portfolio</span>
+              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Portfolio</span>
               <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
             </div>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 42, fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 20, whiteSpace: "nowrap" }}>Building market leaders across healthcare and technology</h2>
-            <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>With deep domain experience and a long-term partnership mentality, we look to drive value through a combination of operational improvements, internal growth initiatives and strategic acquisitions.</p>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>With deep domain experience and a long-term partnership mentality, we look to drive value through a combination of operational improvements, internal growth initiatives and strategic acquisitions.</p>
           </div>
-          <a href="/portfolio" className="pill-btn" style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>Explore Our Portfolio &rarr;</a>
+          <a href="/portfolio" className="pill-btn" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>Explore Our Portfolio &rarr;</a>
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 48 }}>
           <div className="port-marquee-wrap">
@@ -235,7 +235,7 @@ export default function Home() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-                    <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Mission</span>
+                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Mission</span>
                     <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
                   </div>
                   <h2 style={{ fontSize: 34, fontWeight: 400, lineHeight: 1.2 }}>Be Your Partner of Choice</h2>
@@ -262,7 +262,7 @@ export default function Home() {
 
               {/* Category badge */}
               <div style={{ position: "absolute", top: 24, right: 32, zIndex: 4 }}>
-                <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: filteredVideos[safeActiveVideo].category === "Healthcare" ? "#9ac8ec" : "#5cc3d1", padding: "5px 14px", borderRadius: 12, background: filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(154,200,236,0.1)" : "rgba(92,195,209,0.1)", border: `1px solid ${filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(154,200,236,0.2)" : "rgba(92,195,209,0.2)"}` }}>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: filteredVideos[safeActiveVideo].category === "Healthcare" ? "#9ac8ec" : "#5cc3d1", padding: "5px 14px", borderRadius: 12, background: filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(154,200,236,0.1)" : "rgba(92,195,209,0.1)", border: `1px solid ${filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(154,200,236,0.2)" : "rgba(92,195,209,0.2)"}` }}>
                   {filteredVideos[safeActiveVideo].category}
                 </span>
               </div>
@@ -297,16 +297,16 @@ export default function Home() {
               <div style={{ padding: "16px 16px 12px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
                 <div
                   onClick={() => handleFilterChange("All")}
-                  style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 11, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", textAlign: "center", padding: "8px 0", borderRadius: 8, marginBottom: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "All" ? "rgba(255,255,255,0.08)" : "transparent", color: videoFilter === "All" ? "#fff" : "rgba(255,255,255,0.35)", border: `1px solid ${videoFilter === "All" ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.04)"}` }}
+                  style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", textAlign: "center", padding: "8px 0", borderRadius: 8, marginBottom: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "All" ? "rgba(255,255,255,0.08)" : "transparent", color: videoFilter === "All" ? "#fff" : "rgba(255,255,255,0.35)", border: `1px solid ${videoFilter === "All" ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.04)"}` }}
                 >All Testimonials</div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
                   <div
                     onClick={() => handleFilterChange("Technology")}
-                    style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Technology" ? "rgba(92,195,209,0.12)" : "transparent", color: videoFilter === "Technology" ? "#5cc3d1" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Technology" ? "rgba(92,195,209,0.25)" : "rgba(255,255,255,0.04)"}` }}
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Technology" ? "rgba(92,195,209,0.12)" : "transparent", color: videoFilter === "Technology" ? "#5cc3d1" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Technology" ? "rgba(92,195,209,0.25)" : "rgba(255,255,255,0.04)"}` }}
                   >Technology</div>
                   <div
                     onClick={() => handleFilterChange("Healthcare")}
-                    style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Healthcare" ? "rgba(154,200,236,0.12)" : "transparent", color: videoFilter === "Healthcare" ? "#9ac8ec" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Healthcare" ? "rgba(154,200,236,0.25)" : "rgba(255,255,255,0.04)"}` }}
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Healthcare" ? "rgba(154,200,236,0.12)" : "transparent", color: videoFilter === "Healthcare" ? "#9ac8ec" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Healthcare" ? "rgba(154,200,236,0.25)" : "rgba(255,255,255,0.04)"}` }}
                   >Healthcare</div>
                 </div>
               </div>

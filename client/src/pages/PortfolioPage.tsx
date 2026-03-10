@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 
 const SERIF = "'Cormorant Garamond', Georgia, serif";
-const SANS = "'Lora', Georgia, serif";
+const SANS = "'DM Sans', sans-serif";
 
 type Company = { name: string; sector: "Technology" | "Healthcare"; color: string; status: "current" | "realized"; logo?: string; darkBg?: boolean };
 
