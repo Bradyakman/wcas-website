@@ -27,7 +27,6 @@ import logoClearwater from "@assets/Clearwater-Analytics_1771799704135_clean.png
 import logoNaviHealth from "@assets/navihealth_new_clean.png";
 import logoSimeio from "@assets/simeio_transparent.png";
 import concentraLogo from "@assets/Picture1-removebg-preview_1772398995578.png";
-import hcCardBg from "@assets/image_1773168273646.png";
 
 import { useState } from "react";
 
@@ -116,16 +115,10 @@ export default function Home() {
         </div>
         <style>{`
           @keyframes wwi-shimmer { 0%,100%{ opacity:1 } 50%{ opacity:0.6 } }
-          .wwi-split { display:flex; min-height:520px; position:relative; background:#F5F5F5; }
+          .wwi-split { display:flex; min-height:380px; position:relative; background:#F5F5F5; }
           .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(12,26,46,0.12),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
           .wwi-pnl { flex:1; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; }
           .wwi-pnl-bg { position:absolute; inset:0; opacity:0; }
-          .wwi-hc { border-radius:12px; margin:0 8px 0 0; }
-          .wwi-hc .wwi-pnl-bg { opacity:1; background-size:cover; background-position:center; }
-          .wwi-hc .wwi-overlay { position:absolute; inset:0; background:rgba(12,26,46,0.6); z-index:1; }
-          .wwi-hc .wwi-watermark { color:rgba(255,255,255,0.12); }
-          .wwi-hc h3 { color:#fff !important; }
-          .wwi-hc .wwi-desc { color:rgba(255,255,255,0.75) !important; }
           .wwi-watermark { font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:#0C1A2E; line-height:1; pointer-events:none; z-index:1; padding:0 48px; margin-bottom:32px; }
           .wwi-bottom-glow { display:none; }
           .wwi-content { position:relative; z-index:2; padding:0 48px 56px; transition:opacity 0.3s ease; text-align:left; }
@@ -138,18 +131,17 @@ export default function Home() {
           .wwi-pill2:hover { transform:translateY(-3px); color:#0C1A2E; border-color:rgba(12,26,46,0.3); background:rgba(12,26,46,0.1); }
           .wwi-cta2 { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:rgba(12,26,46,0.55); text-decoration:none; margin-top:36px; display:inline-block; transition:color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease; }
           .wwi-cta2:hover { color:#0C1A2E; transform:translateX(6px); letter-spacing:0.5px; }
-          .wwi-hc .wwi-cta2:hover { color:#fff; }
         `}</style>
         <div className="wwi-split">
           <div className="wwi-divider" />
           <div className="wwi-pnl wwi-hc">
-            <div className="wwi-pnl-bg" style={{ backgroundImage: `url(${hcCardBg})` }} />
-            <div className="wwi-overlay" />
+            <div className="wwi-pnl-bg" />
             <div className="wwi-watermark">Healthcare</div>
+            <div className="wwi-bottom-glow" />
             <div className="wwi-content">
               <h3>Investing in Better Healthcare</h3>
               <p className="wwi-desc">We partner with category-defining healthcare companies and their management teams to expand access, improve quality, and build lasting value.</p>
-              <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(255,255,255,0.7)" }}>Explore Healthcare &rarr;</a>
+              <a href="/hcit" className="wwi-cta2" style={{ color: "rgba(12,26,46,0.6)" }}>Explore Healthcare &rarr;</a>
             </div>
           </div>
           <div className="wwi-pnl wwi-tech">
