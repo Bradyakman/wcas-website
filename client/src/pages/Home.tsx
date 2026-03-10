@@ -110,22 +110,22 @@ export default function Home() {
       </section>
 
       {/* ── WHERE WE INVEST — CARD LAYOUT ── */}
-      <section style={{ padding: 0, background: "#152238" }}>
+      <section style={{ padding: 0, background: "#F5F5F5" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "56px 48px 32px" }}>
-          <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Focus Sectors</span>
-          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
+          <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#0C1A2E" }}>Our Focus Sectors</span>
+          <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #0C1A2E, transparent)" }} />
         </div>
         <style>{`
           .wwi-cards { display:flex; gap:32px; padding:0 48px 64px; }
-          .wwi-card { flex:1; border-radius:4px; overflow:hidden; background:#0C1A2E; box-shadow:0 4px 20px rgba(0,0,0,0.25); transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:default; }
-          .wwi-card:hover { transform:translateY(-4px); box-shadow:0 12px 36px rgba(0,0,0,0.35); }
+          .wwi-card { flex:1; border-radius:4px; overflow:hidden; background:#fff; box-shadow:0 2px 12px rgba(12,26,46,0.08); transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:default; }
+          .wwi-card:hover { transform:translateY(-4px); box-shadow:0 8px 28px rgba(12,26,46,0.13); }
           .wwi-card-img-wrap { width:100%; height:180px; overflow:hidden; }
           .wwi-card-img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; display:block; }
           .wwi-card:hover .wwi-card-img { transform:scale(1.06); }
           .wwi-card-body { padding:36px; }
-          .wwi-card-title { font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:rgba(255,255,255,0.95); line-height:1.1; margin:0 0 8px; }
-          .wwi-card-subtitle { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; color:rgba(255,255,255,0.85); line-height:1.3; margin:0 0 16px; }
-          .wwi-card-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(255,255,255,0.45); line-height:1.65; margin:0 0 28px; }
+          .wwi-card-title { font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:#0C1A2E; line-height:1.1; margin:0 0 8px; }
+          .wwi-card-subtitle { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; color:#0C1A2E; line-height:1.3; margin:0 0 16px; }
+          .wwi-card-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(12,26,46,0.55); line-height:1.65; margin:0 0 28px; }
           .wwi-card-cta { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:#5cc3d1; text-decoration:none; display:inline-block; transition:color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease; }
           .wwi-card-cta:hover { color:#4aa8b5; transform:translateX(6px); letter-spacing:0.5px; }
         `}</style>
