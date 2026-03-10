@@ -82,15 +82,15 @@ export default function Home() {
       {/* ── HERO WITH IMAGE ── */}
       <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `linear-gradient(rgba(8,14,28,0.4), rgba(8,14,28,0.4)), url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
         <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "160px 56px 80px" }}>
-          <h1 style={{ fontSize: 48, fontWeight: 400, lineHeight: 1.25, marginBottom: 64, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
+          <h1 style={{ fontSize: 58, fontWeight: 400, lineHeight: 1.25, marginBottom: 64, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
             Sector specialists. Long-term partners.
           </h1>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32, marginBottom: 56 }}>
             {[
-              { num: "$33B+", label: "Capital Raised" },
+              { num: "45+", label: "Years Investing" },
               { num: "190+", label: "Companies" },
               { num: "18", label: "Funds Raised" },
-              { num: "45+", label: "Years Investing" },
+              { num: "$33B+", label: "Capital Raised" },
             ].map((s, i) => (
               <div key={i}>
                 <div style={{ width: "100%", height: 2, background: `linear-gradient(to right, ${ACCENT}, transparent)`, marginBottom: 24, opacity: 0.5 }} />
@@ -100,6 +100,7 @@ export default function Home() {
             ))}
           </div>
           <div style={{ display: "flex", gap: 16 }}>
+            <a href="#" onClick={e=>e.preventDefault()} className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none" }}>Our Story</a>
             <span className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "default", textDecoration: "none" }}>Explore Our Portfolio</span>
             <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
           </div>
