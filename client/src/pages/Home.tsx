@@ -119,7 +119,7 @@ export default function Home() {
           .wwi-split .wwi-divider { position:absolute; left:50%; top:0; bottom:0; width:1px; background:linear-gradient(180deg,transparent,rgba(12,26,46,0.12),transparent); z-index:3; pointer-events:none; transition:background 0.4s ease; }
           .wwi-pnl { flex:1; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; }
           .wwi-pnl-bg { position:absolute; inset:0; opacity:0; }
-          .wwi-watermark { font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:rgba(12,26,46,0.08); line-height:1; pointer-events:none; z-index:1; padding:0 48px; margin-bottom:32px; }
+          .wwi-watermark { font-family:'Cormorant Garamond',serif; font-size:88px; font-weight:300; color:#0C1A2E; line-height:1; pointer-events:none; z-index:1; padding:0 48px; margin-bottom:32px; }
           .wwi-bottom-glow { display:none; }
           .wwi-content { position:relative; z-index:2; padding:0 48px 56px; transition:opacity 0.3s ease; text-align:left; }
           .wwi-tag { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(12,26,46,0.5); padding:6px 16px; border-radius:18px; background:rgba(12,26,46,0.04); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(12,26,46,0.08); margin-bottom:20px; }
