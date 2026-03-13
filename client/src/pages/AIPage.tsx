@@ -151,7 +151,7 @@ export default function WCASAIPage() {
       {/* HERO + ABOUT — shared background image */}
       <div style={{ position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center top", backgroundRepeat: "no-repeat" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.45) 100%)" }} />
+        
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 120, background: "linear-gradient(to bottom, transparent, rgba(12,26,46,0.9))" }} />
 
         {/* HERO */}
