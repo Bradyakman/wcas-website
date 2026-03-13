@@ -86,6 +86,9 @@ export default function Home() {
         position: "relative",
         overflow: "hidden",
         background: "linear-gradient(160deg, #0a1f5c 0%, #04122e 55%, #061538 100%)",
+        backgroundImage: "linear-gradient(160deg, #0a1f5c 0%, #04122e 55%, #061538 100%)",
+        backgroundColor: "transparent",
+        boxShadow: "none",
         paddingBottom: 0,
       }}>
         {/* Nav spacer */}

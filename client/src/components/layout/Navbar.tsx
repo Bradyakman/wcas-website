@@ -81,7 +81,7 @@ export function Navbar() {
       style={{
         paddingTop: isScrolled ? 12 : 18,
         paddingBottom: isScrolled ? 12 : 18,
-        backgroundColor: '#04122e',
+        backgroundColor: '#04112b',
       }}
     >
       {/* Logo — fades in on scroll */}
