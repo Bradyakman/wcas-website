@@ -1,6 +1,5 @@
 import React from "react";
 import { Play, X } from "lucide-react";
-import heroBg from "@assets/image_1773080745684.png";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import logoLumexa from "@assets/image_1772400832099.png";
 import absorbLogoDark from "@assets/image_1772400928657.png";
