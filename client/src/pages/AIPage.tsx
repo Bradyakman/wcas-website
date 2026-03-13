@@ -148,26 +148,31 @@ export default function WCASAIPage() {
         .sl{position:absolute;left:19px;top:40px;bottom:-20px;width:2px;background:linear-gradient(180deg,${TEAL},rgba(77,184,199,0.1))}
       `}</style>
 
-      {/* HERO */}
-      <section style={{ position: "relative", overflow: "hidden", width: "100%", minHeight: 402 }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.70) 35%, rgba(0,0,0,0.30) 60%, transparent 80%)" }} />
-        <div style={{ position: "relative", zIndex: 2, padding: "154px 64px 44px" }}>
-          <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 48 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
-          <div style={{ display: "flex", gap: 10, paddingBottom: 40, flexWrap: "wrap" }}>
-            {anchors.map(a => (<a key={a.id} href={`#${a.id}`} className={`ap ${activeAnchor===a.id?"ac":""}`} onClick={e=>{e.preventDefault();setActiveAnchor(a.id);document.getElementById(a.id)?.scrollIntoView({behavior:"smooth"})}}>{a.l}</a>))}
-          </div>
-        </div>
-      </section>
+      {/* HERO + ABOUT — shared background image */}
+      <div style={{ position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center top", backgroundRepeat: "no-repeat" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.45) 100%)" }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 120, background: "linear-gradient(to bottom, transparent, rgba(12,26,46,0.9))" }} />
 
-      {/* ABOUT */}
-      <section id="about" style={{ background: BG, padding: "56px 64px" }}>
-        <Fade><div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
-          <p style={{ fontSize: 26, fontWeight: 400, color: "rgba(255,255,255,0.90)", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
-          <p style={{ fontSize: 26, fontWeight: 400, color: "rgba(255,255,255,0.90)", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: <strong>incumbency matters</strong>. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.</p>
-          <p style={{ fontSize: 26, fontWeight: 400, color: "rgba(255,255,255,0.90)", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly and persistently with portfolio companies to turn AI ambition into measurable, lasting results.</p>
-        </div></Fade>
-      </section>
+        {/* HERO */}
+        <section style={{ position: "relative", zIndex: 2, width: "100%", minHeight: 402 }}>
+          <div style={{ padding: "154px 64px 44px" }}>
+            <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 48 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
+            <div style={{ display: "flex", gap: 10, paddingBottom: 40, flexWrap: "wrap" }}>
+              {anchors.map(a => (<a key={a.id} href={`#${a.id}`} className={`ap ${activeAnchor===a.id?"ac":""}`} onClick={e=>{e.preventDefault();setActiveAnchor(a.id);document.getElementById(a.id)?.scrollIntoView({behavior:"smooth"})}}>{a.l}</a>))}
+            </div>
+          </div>
+        </section>
+
+        {/* ABOUT */}
+        <section id="about" style={{ position: "relative", zIndex: 2, padding: "56px 64px" }}>
+          <Fade><div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
+            <p style={{ fontSize: 26, fontWeight: 400, color: "rgba(255,255,255,0.90)", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
+            <p style={{ fontSize: 26, fontWeight: 400, color: "rgba(255,255,255,0.90)", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: <strong>incumbency matters</strong>. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.</p>
+            <p style={{ fontSize: 26, fontWeight: 400, color: "rgba(255,255,255,0.90)", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly and persistently with portfolio companies to turn AI ambition into measurable, lasting results.</p>
+          </div></Fade>
+        </section>
+      </div>
 
       {/* CASE STUDIES */}
       <section id="case-studies" style={{ background: BG2, padding: "56px 64px", position: "relative", overflow: "hidden" }}>
