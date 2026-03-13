@@ -273,7 +273,7 @@ export default function Home() {
             <div
               className="spotlight-main"
               onClick={() => setPlayingVideo(filteredVideos[safeActiveVideo].id)}
-              style={{ flex: 2, minHeight: 360, borderRadius: 20, background: "#0a1020", position: "relative", overflow: "hidden", cursor: "pointer", border: "1px solid rgba(255,255,255,0.08)" }}
+              style={{ flex: 1.4, minHeight: 360, borderRadius: 20, background: "#0a1020", position: "relative", overflow: "hidden", cursor: "pointer", border: "1px solid rgba(255,255,255,0.08)" }}
             >
               {/* Corner brackets */}
               <div style={{ position: "absolute", top: 20, left: 20, width: 28, height: 28, borderTop: `2px solid rgba(107,163,214,0.35)`, borderLeft: `2px solid rgba(107,163,214,0.35)`, zIndex: 3 }} />
