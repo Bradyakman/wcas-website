@@ -89,10 +89,10 @@ export default function Home() {
         paddingBottom: 0,
       }}>
         {/* Nav spacer */}
-        <div style={{ height: 72 }} />
+        <div style={{ height: 52 }} />
 
         {/* Logo centered */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "56px 48px 40px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "44px 48px 44px" }}>
           <img
             src={wcasLogo}
             alt="WCAS"
@@ -101,14 +101,14 @@ export default function Home() {
         </div>
 
         {/* Tagline */}
-        <div style={{ display: "flex", justifyContent: "center", padding: "0 48px 40px" }}>
+        <div style={{ display: "flex", justifyContent: "center", padding: "0 48px 44px" }}>
           <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 23, fontWeight: 300, lineHeight: 1.4, color: "rgba(255,255,255,0.75)", margin: 0, textAlign: "center", letterSpacing: "0.01em" }}>
             Sector specialists. Long-term partners.
           </p>
         </div>
 
         {/* Stats */}
-        <div style={{ maxWidth: 900, margin: "0 auto", padding: "32px 48px 0", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 48px 44px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
           {[
             { num: "45+", label: "Years Investing" },
             { num: "190+", label: "Companies" },
@@ -123,13 +123,13 @@ export default function Home() {
         </div>
 
         {/* Buttons */}
-        <div style={{ display: "flex", gap: 14, justifyContent: "center", padding: "36px 48px 64px" }}>
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", padding: "0 48px 44px" }}>
           <a href="#" onClick={e=>e.preventDefault()} className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Our Story</a>
           <span className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "default", textDecoration: "none" }}>Explore Our Portfolio</span>
           <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
         </div>
 
-        <div style={{ height: 64 }} />
+        <div style={{ height: 44 }} />
       </section>
 
       {/* ── WHERE WE INVEST — CARD LAYOUT ── */}
