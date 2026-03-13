@@ -173,9 +173,6 @@ export default function WCASAIPage() {
       <section id="case-studies" style={{ background: "#ffffff", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "relative", zIndex: 2 }}>
           <Fade><SL text="Select Portfolio Case Studies" color="#111" /><ST color="#111111">AI at work across healthcare & technology</ST><SD color="rgba(0,0,0,0.55)">Real-world AI use cases delivering measurable value.</SD></Fade>
-          <Fade delay={100}><div style={{ display: "flex", gap: 10, marginBottom: 36 }}>
-            {["All","Technology","Healthcare"].map(f => (<div key={f} className={`fc ${csFilter===f?"fca":""}`} onClick={()=>{setCsFilter(f);setActiveCS(0)}}>{f}</div>))}
-          </div></Fade>
           <Fade delay={150}><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
             {fCS.map((cs) => {
               const isHC = cs.sector === "Healthcare";
