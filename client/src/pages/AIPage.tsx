@@ -155,8 +155,8 @@ export default function WCASAIPage() {
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 120, background: "linear-gradient(to bottom, transparent, rgba(12,26,46,0.9))" }} />
 
         {/* HERO */}
-        <section style={{ position: "relative", zIndex: 2, width: "100%", minHeight: 280 }}>
-          <div style={{ padding: "90px 64px 12px", textAlign: "center" }}>
+        <section style={{ position: "relative", zIndex: 2, width: "100%", minHeight: 402 }}>
+          <div style={{ padding: "154px 64px 12px", textAlign: "center" }}>
             <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 0 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
           </div>
         </section>
