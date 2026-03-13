@@ -136,7 +136,7 @@ export default function Home() {
           <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
         </div>
 
-        <div style={{ height: 20 }} />
+        <div style={{ height: 52 }} />
       </section>
 
       {/* ── WHERE WE INVEST — CARD LAYOUT ── */}
