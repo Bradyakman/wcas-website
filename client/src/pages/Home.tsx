@@ -117,7 +117,7 @@ export default function Home() {
           ].map((s, i) => (
             <div key={i} style={{ textAlign: "center" }}>
               <div style={{ fontFamily: SANS, fontSize: 40, fontWeight: 700, marginBottom: 6, color: "#FFFFFF", letterSpacing: "-0.5px" }}>{s.num}</div>
-              <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.85)", fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase" }}>{s.label}</div>
+              <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.90)", fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase" }}>{s.label}</div>
             </div>
           ))}
         </div>
