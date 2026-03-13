@@ -1,3 +1,4 @@
+import React from "react";
 import { Play, X } from "lucide-react";
 import heroBg from "@assets/image_1773080745684.png";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
@@ -102,23 +103,26 @@ export default function Home() {
 
         {/* Tagline */}
         <div style={{ display: "flex", justifyContent: "center", padding: "0 48px 44px" }}>
-          <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 23, fontWeight: 300, lineHeight: 1.4, color: "rgba(255,255,255,0.75)", margin: 0, textAlign: "center", letterSpacing: "0.01em" }}>
-            Sector specialists. Long-term partners.
+          <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 23, fontWeight: 300, lineHeight: 1.4, color: "rgba(255,255,255,0.75)", margin: 0, textAlign: "center", letterSpacing: "0.18em", textTransform: "uppercase" }}>
+            Sector Specialists &nbsp;·&nbsp; Long-Term Partners
           </p>
         </div>
 
         {/* Stats */}
-        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 48px 44px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 48px 44px", display: "flex", alignItems: "stretch" }}>
           {[
             { num: "45+", label: "Years Investing" },
             { num: "190+", label: "Companies" },
             { num: "18", label: "Funds Raised" },
             { num: "$33B+", label: "Capital Raised" },
           ].map((s, i) => (
-            <div key={i} style={{ textAlign: "center" }}>
-              <div style={{ fontFamily: SANS, fontSize: 40, fontWeight: 700, marginBottom: 6, color: "#FFFFFF", letterSpacing: "-0.5px" }}>{s.num}</div>
-              <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.90)", fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase" }}>{s.label}</div>
-            </div>
+            <React.Fragment key={i}>
+              {i > 0 && <div style={{ width: 1, background: "rgba(255,255,255,0.15)", alignSelf: "stretch", flexShrink: 0 }} />}
+              <div style={{ flex: 1, textAlign: "center", padding: "0 12px" }}>
+                <div style={{ fontFamily: SANS, fontSize: 40, fontWeight: 700, marginBottom: 6, color: "#FFFFFF", letterSpacing: "-0.5px" }}>{s.num}</div>
+                <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.90)", fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase" }}>{s.label}</div>
+              </div>
+            </React.Fragment>
           ))}
         </div>
 
