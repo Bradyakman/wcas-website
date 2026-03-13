@@ -249,16 +249,6 @@ export default function WCASAIPage() {
         </div>
       </section>
 
-      {/* QUOTE */}
-      <section style={{ background: BG2, padding: "56px 64px", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", pointerEvents: "none" }}>
-          {[380,520,660].map((sz, i) => (<div key={i} style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: sz, height: sz, borderRadius: "50%", border: `1px solid rgba(77,184,199,${0.05-i*0.015})`, animation: `rp ${6+i*2}s ease-in-out infinite ${i*0.8}s` }} />))}
-        </div>
-        <Fade><div style={{ maxWidth: 880, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 2 }}>
-          <div style={{ width: 48, height: 2, background: TEAL, margin: "0 auto 44px", borderRadius: 1 }} />
-          <p style={{ fontSize: 27, fontWeight: 400, color: "#fff", lineHeight: 1.55 }}>WCAS's proprietary data infrastructure compounds institutional knowledge across 45+ years, enabling our teams to identify patterns, surface insights, and make decisions with a depth of context no algorithm alone can replicate.</p>
-        </div></Fade>
-      </section>
 
       <div style={{ height: 3, background: `linear-gradient(90deg, ${TEAL}, ${ACCENT}, ${GOLD})`, opacity: 0.45 }} />
     </div>
