@@ -166,9 +166,10 @@ export default function WCASAIPage() {
 
         {/* ABOUT */}
         <section id="about" style={{ position: "relative", zIndex: 2, padding: "56px 64px" }}>
-          <Fade><div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
-            <p style={{ fontSize: 26, fontWeight: 400, color: "rgba(255,255,255,0.90)", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
-            <p style={{ fontSize: 26, fontWeight: 400, color: "rgba(255,255,255,0.90)", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: <strong>incumbency matters</strong>. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.</p>
+          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.45)", zIndex: 0 }} />
+          <Fade><div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
+            <p style={{ fontSize: 26, fontWeight: 400, color: "#ffffff", lineHeight: 1.55, maxWidth: 900, textAlign: "center" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
+            <p style={{ fontSize: 26, fontWeight: 400, color: "#ffffff", lineHeight: 1.55, maxWidth: 900, textAlign: "center" }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: <strong>incumbency matters</strong>. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.</p>
           </div></Fade>
         </section>
       </div>
