@@ -70,7 +70,7 @@ export function Navbar() {
     fontWeight: 400,
     fontSize: 13,
     letterSpacing: '0.04em',
-    color: 'rgba(255,255,255,0.65)',
+    color: 'rgba(255,255,255,0.85)',
     textDecoration: 'none',
     transition: 'color 0.2s',
   };
@@ -93,7 +93,7 @@ export function Navbar() {
                   href="#"
                   style={linkStyle}
                   onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
                   onClick={(e) => { e.preventDefault(); toggleDropdown(link.name); }}
                 >
                   {link.name}
@@ -113,9 +113,9 @@ export function Navbar() {
                         href="#"
                         role="menuitem"
                         className="px-5 py-2.5 text-sm transition-colors"
-                        style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}
+                        style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none' }}
                         onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
-                        onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
+                        onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
                         onClick={(e) => { e.preventDefault(); closeDropdown(); }}
                       >
                         {dropItem.name}
@@ -130,7 +130,7 @@ export function Navbar() {
                 href={link.href}
                 style={linkStyle}
                 onMouseEnter={(e: any) => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
-                onMouseLeave={(e: any) => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
+                onMouseLeave={(e: any) => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
               >
                 {link.name}
               </Link>
@@ -140,7 +140,7 @@ export function Navbar() {
                 href="#"
                 style={linkStyle}
                 onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
                 onClick={e => e.preventDefault()}
               >
                 {link.name}
