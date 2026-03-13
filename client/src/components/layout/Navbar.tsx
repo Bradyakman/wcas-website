@@ -77,12 +77,11 @@ export function Navbar() {
 
   return (
     <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md ${
-        isScrolled ? "py-3" : "py-5"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "py-3" : "py-4"
       }`}
       style={{
-        backgroundColor: isScrolled ? 'rgba(10,22,40,0.95)' : 'rgba(10,22,40,0.7)',
-        borderBottom: '1px solid rgba(255,255,255,0.08)',
+        backgroundColor: 'rgba(4, 12, 32, 0.97)',
       }}
     >
       <div className="w-full px-8 md:px-14 flex items-center justify-between">
@@ -94,91 +93,93 @@ export function Navbar() {
           />
         </Link>
 
-        <div className="hidden lg:flex items-center gap-7">
-          <nav ref={navRef} className="flex items-center gap-7">
-            {navLinks.map((link) => (
-              link.dropdown ? (
-                <div key={link.name} className="relative flex items-center gap-0">
-                  <a
-                    href="#"
-                    className={`text-sm font-medium transition-colors cursor-pointer ${linkColor()}`}
-                    style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', textDecoration: 'none' }}
-                    onClick={(e) => { e.preventDefault(); closeDropdown(); }}
-                  >
-                    {link.name}
-                  </a>
-                  <button
-                    type="button"
-                    aria-expanded={openDropdown === link.name}
-                    aria-controls={`dropdown-${link.name}`}
-                    aria-haspopup="true"
-                    onClick={() => toggleDropdown(link.name)}
-                    className={`bg-transparent border-none cursor-pointer p-0 ${linkColor()}`}
-                    style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', width: 0, height: 0, overflow: 'hidden' }}
-                  >
-                  </button>
-                  <div
-                    id={`dropdown-${link.name}`}
-                    role="menu"
-                    className={`absolute top-full left-0 pt-4 transition-all duration-200 ${
-                      openDropdown === link.name
-                        ? 'opacity-100 pointer-events-auto translate-y-0'
-                        : 'opacity-0 pointer-events-none -translate-y-1'
-                    }`}
-                  >
-                    <div className="bg-white rounded-lg shadow-lg border border-border py-2 min-w-[200px] flex flex-col">
-                      {link.dropdown.map((dropItem) => (
-                        <a
-                          key={dropItem.name}
-                          href="#"
-                          role="menuitem"
-                          className="px-4 py-2 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/50 transition-colors"
-                          style={{ textDecoration: 'none' }}
-                          onClick={(e) => { e.preventDefault(); closeDropdown(); }}
-                        >
-                          {dropItem.name}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ) : link.href.startsWith("/") ? (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`text-sm font-medium transition-colors ${linkColor()}`}
-                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, textDecoration: 'none' }}
-                >
-                  {link.name}
-                </Link>
-              ) : (
-                <a 
-                  key={link.name} 
+        <nav ref={navRef} className="hidden lg:flex items-center gap-9 absolute left-1/2 -translate-x-1/2">
+          {navLinks.map((link) => (
+            link.dropdown ? (
+              <div key={link.name} className="relative flex items-center gap-0">
+                <a
                   href="#"
-                  onClick={e => e.preventDefault()}
-                  className={`text-sm font-medium transition-colors ${linkColor()}`}
-                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 14, textDecoration: 'none' }}
+                  className={`transition-colors cursor-pointer ${linkColor()}`}
+                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 13, letterSpacing: '0.03em', WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', textDecoration: 'none' }}
+                  onClick={(e) => { e.preventDefault(); closeDropdown(); }}
                 >
                   {link.name}
                 </a>
-              )
-            ))}
-          </nav>
+                <button
+                  type="button"
+                  aria-expanded={openDropdown === link.name}
+                  aria-controls={`dropdown-${link.name}`}
+                  aria-haspopup="true"
+                  onClick={() => toggleDropdown(link.name)}
+                  className={`bg-transparent border-none cursor-pointer p-0 ${linkColor()}`}
+                  style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', width: 0, height: 0, overflow: 'hidden' }}
+                >
+                </button>
+                <div
+                  id={`dropdown-${link.name}`}
+                  role="menu"
+                  className={`absolute top-full left-0 pt-4 transition-all duration-200 ${
+                    openDropdown === link.name
+                      ? 'opacity-100 pointer-events-auto translate-y-0'
+                      : 'opacity-0 pointer-events-none -translate-y-1'
+                  }`}
+                >
+                  <div className="rounded-lg shadow-lg py-2 min-w-[200px] flex flex-col" style={{ background: 'rgba(4,12,32,0.98)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                    {link.dropdown.map((dropItem) => (
+                      <a
+                        key={dropItem.name}
+                        href="#"
+                        role="menuitem"
+                        className="px-4 py-2 text-sm transition-colors"
+                        style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}
+                        onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
+                        onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
+                        onClick={(e) => { e.preventDefault(); closeDropdown(); }}
+                      >
+                        {dropItem.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : link.href.startsWith("/") ? (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`transition-colors ${linkColor()}`}
+                style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 13, letterSpacing: '0.03em', textDecoration: 'none' }}
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a 
+                key={link.name} 
+                href="#"
+                onClick={e => e.preventDefault()}
+                className={`transition-colors ${linkColor()}`}
+                style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 13, letterSpacing: '0.03em', textDecoration: 'none' }}
+              >
+                {link.name}
+              </a>
+            )
+          ))}
+        </nav>
+
+        <div className="hidden lg:flex items-center">
           <a
             href="#"
             onClick={e => e.preventDefault()}
-            className="pill-btn transition-all duration-200"
+            className="transition-all duration-200"
             style={{
               fontFamily: "'Outfit', sans-serif",
               fontSize: 13,
-              fontWeight: 500,
-              padding: "10px 28px",
-              borderRadius: 20,
-              border: "1px solid rgba(255,255,255,0.15)",
-              background: "rgba(255,255,255,0.04)",
-              color: "rgba(255,255,255,0.7)",
+              fontWeight: 400,
+              letterSpacing: '0.03em',
+              color: "rgba(255,255,255,0.6)",
               textDecoration: "none",
             }}
+            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
           >
             Investor Portal
           </a>
