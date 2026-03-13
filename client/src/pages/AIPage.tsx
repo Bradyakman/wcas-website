@@ -152,7 +152,7 @@ export default function WCASAIPage() {
       <div style={{ position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center top", backgroundRepeat: "no-repeat" }} />
         
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 120, background: "linear-gradient(to bottom, transparent, rgba(12,26,46,0.9))" }} />
+        
 
         {/* HERO */}
         <section style={{ position: "relative", zIndex: 2, width: "100%", minHeight: 402 }}>
@@ -163,7 +163,6 @@ export default function WCASAIPage() {
 
         {/* ABOUT */}
         <section id="about" style={{ position: "relative", zIndex: 2, padding: "20px 64px 56px" }}>
-          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.45)", zIndex: 0 }} />
           <Fade><div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
             <p style={{ fontSize: 26, fontWeight: 400, color: "#ffffff", lineHeight: 1.55, maxWidth: 900, textAlign: "center" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", marginTop: 8 }}>
