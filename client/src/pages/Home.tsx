@@ -273,7 +273,7 @@ export default function Home() {
             <div
               className="spotlight-main"
               onClick={() => setPlayingVideo(filteredVideos[safeActiveVideo].id)}
-              style={{ flex: 2, minHeight: 480, borderRadius: 20, background: "#0a1020", position: "relative", overflow: "hidden", cursor: "pointer", border: "1px solid rgba(255,255,255,0.08)" }}
+              style={{ flex: 2, minHeight: 360, borderRadius: 20, background: "#0a1020", position: "relative", overflow: "hidden", cursor: "pointer", border: "1px solid rgba(255,255,255,0.08)" }}
             >
               {/* Corner brackets */}
               <div style={{ position: "absolute", top: 20, left: 20, width: 28, height: 28, borderTop: `2px solid rgba(107,163,214,0.35)`, borderLeft: `2px solid rgba(107,163,214,0.35)`, zIndex: 3 }} />
@@ -289,7 +289,7 @@ export default function Home() {
               </div>
 
               {/* Partner logo at top */}
-              <div style={{ position: "absolute", top: 36, left: 0, right: 0, display: "flex", justifyContent: "center", alignItems: "center", height: 100, opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 4 }}>
+              <div style={{ position: "absolute", top: 28, left: 0, right: 0, display: "flex", justifyContent: "center", alignItems: "center", height: 75, opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 4 }}>
                 {'partnerLogo' in filteredVideos[safeActiveVideo] && filteredVideos[safeActiveVideo].partnerLogo ? (
                   <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ maxHeight: 90, maxWidth: 300, objectFit: "contain", opacity: 0.85 }} />
                 ) : (
@@ -300,8 +300,8 @@ export default function Home() {
               {/* Play button centered */}
               <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", zIndex: 2 }}>
                 <div className="spotlight-play" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, transition: "transform 0.3s ease" }}>
-                  <div style={{ width: 88, height: 88, borderRadius: "50%", background: `radial-gradient(circle, rgba(107,163,214,0.2) 0%, rgba(107,163,214,0.05) 70%)`, border: `2px solid rgba(107,163,214,0.3)`, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <Play style={{ color: "white", fill: "white" }} size={28} />
+                  <div style={{ width: 66, height: 66, borderRadius: "50%", background: `radial-gradient(circle, rgba(107,163,214,0.2) 0%, rgba(107,163,214,0.05) 70%)`, border: `2px solid rgba(107,163,214,0.3)`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Play style={{ color: "white", fill: "white" }} size={22} />
                   </div>
                 </div>
               </div>
@@ -309,7 +309,7 @@ export default function Home() {
               {/* Bottom gradient overlay */}
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "45%", background: "linear-gradient(to top, rgba(8,14,26,0.95) 0%, rgba(8,14,26,0.7) 20%, transparent 50%)", zIndex: 3, pointerEvents: "none" }} />
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "0 36px 32px", zIndex: 4, opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", textAlign: "center" }}>
-                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 30, fontWeight: 400, color: "#fff" }}>{filteredVideos[safeActiveVideo].title}</h3>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 24, fontWeight: 400, color: "#fff" }}>{filteredVideos[safeActiveVideo].title}</h3>
               </div>
             </div>
 
