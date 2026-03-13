@@ -241,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* ── SPOTLIGHT + SIDEBAR SECTION ── */}
-      <section style={{ position: "relative", overflow: "hidden", background: "#152238", marginTop: 0 }}>
+      <section style={{ position: "relative", overflow: "hidden", background: "#0a1f44", marginTop: 0 }}>
         <style>{`
           .spotlight-main:hover .spotlight-play { transform:scale(1.08); }
           .spotlight-sidebar-item { display:flex; align-items:center; gap:14px; padding:14px 20px; cursor:pointer; border-left:3px solid transparent; transition:all 0.2s ease; position:relative; }
