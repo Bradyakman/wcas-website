@@ -182,7 +182,7 @@ export default function WCASAIPage() {
               return (
                 <div key={cs.company} className="cs-flip-wrap">
                   <div className="cs-flip-inner">
-                    <div className="cs-flip-front" style={{ background: (cs as any).cardImg ? `linear-gradient(180deg, rgba(8,14,28,${(cs as any).darkOverlay ? '0.65' : '0.5'}) 0%, rgba(8,14,28,${(cs as any).darkOverlay ? '0.92' : '0.9'}) 100%), url(${(cs as any).cardImg}) center/cover no-repeat` : "rgba(8,14,28,0.7)", border: `1px solid rgba(255,255,255,0.06)`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: (cs as any).cardImg ? "center" : "space-between", alignItems: (cs as any).cardImg ? "center" : "stretch", height: "100%", position: "relative", backdropFilter: "blur(12px)" }}>
+                    <div className="cs-flip-front" style={{ background: (cs as any).cardImg ? `linear-gradient(180deg, rgba(8,14,28,${(cs as any).darkOverlay ? '0.35' : '0.25'}) 0%, rgba(8,14,28,${(cs as any).darkOverlay ? '0.65' : '0.60'}) 100%), url(${(cs as any).cardImg}) center/cover no-repeat` : "rgba(8,14,28,0.5)", border: `1px solid rgba(255,255,255,0.06)`, borderRadius: 16, padding: "32px 28px", display: "flex", flexDirection: "column", justifyContent: (cs as any).cardImg ? "center" : "space-between", alignItems: (cs as any).cardImg ? "center" : "stretch", height: "100%", position: "relative", backdropFilter: "blur(12px)" }}>
                       {(cs as any).cardImg ? (<>
                         <div style={{ textAlign: "center" }}>
                           {(cs as any).logo ? (
