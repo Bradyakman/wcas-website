@@ -79,8 +79,8 @@ function ParticleField({ density = 50 }: { density?: number }) {
 }
 
 const SL = ({ text, color = TEAL }: { text: string; color?: string }) => (<div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color }}>{text}</span><div style={{ width: 40, height: 1, background: `linear-gradient(to right, ${color}, transparent)` }} /></div>);
-const ST = ({ children, mw = 700 }: { children: React.ReactNode; mw?: number }) => (<h2 style={{ fontSize: 40, fontWeight: 400, color: "#fff", lineHeight: 1.2, marginBottom: 20, maxWidth: mw }}>{children}</h2>);
-const SD = ({ children, mw = 660 }: { children: React.ReactNode; mw?: number }) => (<p style={{ fontFamily: SANS, fontSize: 16, color: "rgba(255,255,255,0.4)", lineHeight: 1.7, maxWidth: mw, marginBottom: 48 }}>{children}</p>);
+const ST = ({ children, mw = 700, color = "#fff" }: { children: React.ReactNode; mw?: number; color?: string }) => (<h2 style={{ fontSize: 40, fontWeight: 400, color, lineHeight: 1.2, marginBottom: 20, maxWidth: mw }}>{children}</h2>);
+const SD = ({ children, mw = 660, color = "rgba(255,255,255,0.4)" }: { children: React.ReactNode; mw?: number; color?: string }) => (<p style={{ fontFamily: SANS, fontSize: 16, color, lineHeight: 1.7, maxWidth: mw, marginBottom: 48 }}>{children}</p>);
 
 
 const teamMembers = [
@@ -175,12 +175,9 @@ export default function WCASAIPage() {
       </div>
 
       {/* CASE STUDIES */}
-      <section id="case-studies" style={{ background: BG2, padding: "56px 64px", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
-          <div style={{ position: "absolute", top: "-10%", right: "-8%", width: "45%", height: "65%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(77,184,199,0.04) 0%, transparent 65%)", animation: "m1 20s ease-in-out infinite", filter: "blur(40px)" }} />
-        </div>
+      <section id="case-studies" style={{ background: "#ffffff", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "relative", zIndex: 2 }}>
-          <Fade><SL text="Select Portfolio Case Studies" /><ST>AI at work across healthcare & technology</ST><SD>Real-world AI use cases delivering measurable value.</SD></Fade>
+          <Fade><SL text="Select Portfolio Case Studies" color="#111" /><ST color="#111111">AI at work across healthcare & technology</ST><SD color="rgba(0,0,0,0.55)">Real-world AI use cases delivering measurable value.</SD></Fade>
           <Fade delay={100}><div style={{ display: "flex", gap: 10, marginBottom: 36 }}>
             {["All","Technology","Healthcare"].map(f => (<div key={f} className={`fc ${csFilter===f?"fca":""}`} onClick={()=>{setCsFilter(f);setActiveCS(0)}}>{f}</div>))}
           </div></Fade>
