@@ -35,8 +35,8 @@ import { useState } from "react";
 const ACCENT = "#7baee0";
 const BG = "#0C1A2E";
 const BORDER = "rgba(255,255,255,0.08)";
-const MUTED = "rgba(255,255,255,0.5)";
-const VERY_MUTED = "rgba(255,255,255,0.4)";
+const MUTED = "rgba(255,255,255,0.78)";
+const VERY_MUTED = "rgba(255,255,255,0.78)";
 const TEXT = "#E4E8ED";
 const SERIF = "'Cormorant Garamond', Georgia, serif";
 const SANS = "'DM Sans', sans-serif";
@@ -202,7 +202,7 @@ export default function Home() {
               <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
             </div>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 42, fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 20, whiteSpace: "nowrap" }}>Building market leaders across healthcare and technology</h2>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>With deep domain experience and a long-term partnership mentality, we look to drive value through a combination of operational improvements, internal growth initiatives and strategic acquisitions.</p>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.78)", lineHeight: 1.7 }}>With deep domain experience and a long-term partnership mentality, we look to drive value through a combination of operational improvements, internal growth initiatives and strategic acquisitions.</p>
           </div>
           <a href="/portfolio" className="pill-btn" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "10px 28px", borderRadius: 20, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap", marginTop: 40 }}>Explore Our Portfolio &rarr;</a>
         </div>
@@ -261,7 +261,7 @@ export default function Home() {
                   </div>
                   <h2 style={{ fontSize: 34, fontWeight: 400, lineHeight: 1.2 }}>Be Your Partner of Choice</h2>
                 </div>
-                <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, fontWeight: 300, paddingTop: 8 }}>
+                <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.78)", lineHeight: 1.7, fontWeight: 300, paddingTop: 8 }}>
                   WCAS's mission is to lead in healthcare and technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner.
                 </p>
               </div>
@@ -397,7 +397,7 @@ export default function Home() {
                     <img src={n.logo} alt="" style={{ maxHeight: 64, maxWidth: 220, objectFit: "contain" }} />
                   </div>
                   <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                    <p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: 20 }}>{n.excerpt}</p>
+                    <p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.78)", lineHeight: 1.7, marginBottom: 20 }}>{n.excerpt}</p>
                     <a href="#" onClick={e => e.preventDefault()} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "#5cc3d1", textDecoration: "none" }}>Read full article &#8594;</a>
                   </div>
                 </div>
