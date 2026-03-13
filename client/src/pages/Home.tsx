@@ -86,7 +86,7 @@ export default function Home() {
       <section style={{
         position: "relative",
         overflow: "hidden",
-        background: "linear-gradient(160deg, #03091c 0%, #061535 40%, #0a2260 70%, #0d3080 100%)",
+        background: "linear-gradient(160deg, #0a1f5c 0%, #04122e 55%, #061538 100%)",
         paddingBottom: 0,
       }}>
         {/* Nav spacer */}
