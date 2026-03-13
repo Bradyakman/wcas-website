@@ -163,8 +163,8 @@ export default function WCASAIPage() {
       {/* ABOUT */}
       <section id="about" style={{ background: "#ffffff", padding: "56px 0" }}>
         <Fade><div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
-          <p style={{ fontSize: 26, fontWeight: 400, color: "#111111", lineHeight: 1.55, width: "100%", textAlign: "center", padding: "0 8px" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
-          <p style={{ fontSize: 26, fontWeight: 400, color: "#111111", lineHeight: 1.55, width: "100%", textAlign: "center", padding: "0 8px" }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: <strong>incumbency matters</strong>. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.</p>
+          <p style={{ fontSize: 26, fontWeight: 400, color: "#111111", lineHeight: 1.55, width: "100%", textAlign: "justify", padding: "0 8px" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
+          <p style={{ fontSize: 26, fontWeight: 400, color: "#111111", lineHeight: 1.55, width: "100%", textAlign: "justify", padding: "0 8px" }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: <strong>incumbency matters</strong>. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.</p>
         </div></Fade>
       </section>
 
