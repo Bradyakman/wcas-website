@@ -163,9 +163,9 @@ export default function WCASAIPage() {
       {/* ABOUT */}
       <section id="about" style={{ background: "#ffffff", padding: "56px 64px" }}>
         <Fade><div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
-          <p style={{ fontSize: 26, fontWeight: 400, color: "#111111", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
+          <p style={{ fontSize: 26, fontWeight: 400, color: "#111111", lineHeight: 1.55, maxWidth: 900, textAlign: "left", alignSelf: "flex-start" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
           <p style={{ fontSize: 26, fontWeight: 400, color: "#111111", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: <strong>incumbency matters</strong>. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.</p>
-          <p style={{ fontSize: 26, fontWeight: 400, color: "#111111", lineHeight: 1.55, maxWidth: 900, textAlign: "left" }}>Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly and persistently with portfolio companies to turn AI ambition into measurable, lasting results.</p>
+          <p style={{ fontSize: 26, fontWeight: 400, color: "#111111", lineHeight: 1.55, maxWidth: 900, textAlign: "left", alignSelf: "flex-end" }}>Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly and persistently with portfolio companies to turn AI ambition into measurable, lasting results.</p>
         </div></Fade>
       </section>
 
