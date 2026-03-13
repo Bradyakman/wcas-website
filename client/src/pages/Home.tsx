@@ -91,21 +91,11 @@ export default function Home() {
         {/* Nav spacer */}
         <div style={{ height: 72 }} />
 
-        {/* Logo + divider + tagline */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 0, padding: "56px 48px 40px" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", flex: 1, paddingRight: 48 }}>
-            <img
-              src={wcasLogo}
-              alt="WCAS"
-              style={{ height: 64, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.95 }}
-            />
-          </div>
-          <div style={{ width: 1, height: 80, background: "rgba(255,255,255,0.35)", flexShrink: 0 }} />
-          <div style={{ flex: 1, paddingLeft: 48 }}>
-            <h1 style={{ fontFamily: "'Outfit', sans-serif", fontSize: 46, fontWeight: 300, lineHeight: 1.2, color: "#FFFFFF", margin: 0, letterSpacing: "-0.5px" }}>
-              Sector specialists.<br />Long-term partners.
-            </h1>
-          </div>
+        {/* Tagline */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "56px 48px 40px" }}>
+          <h1 style={{ fontFamily: "'Outfit', sans-serif", fontSize: 46, fontWeight: 300, lineHeight: 1.2, color: "#FFFFFF", margin: 0, letterSpacing: "-0.5px", textAlign: "center" }}>
+            Sector specialists.<br />Long-term partners.
+          </h1>
         </div>
 
         {/* Stats */}
