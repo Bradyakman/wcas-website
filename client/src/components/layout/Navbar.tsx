@@ -89,9 +89,9 @@ export function Navbar() {
         <img src={wcasLogo} alt="WCAS" style={{ height: 26, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.92 }} />
       </div>
 
-      <div ref={navRef} className="w-full flex items-center justify-center px-8">
-        <nav className="hidden lg:flex items-center gap-10">
-          {navLinks.map((link) => (
+      <div ref={navRef} className="w-full flex items-center justify-end px-8" style={{ gap: 32 }}>
+        <nav className="hidden lg:flex items-center gap-8">
+          {navLinks.filter(l => l.name !== "Investor Portal").map((link) => (
             link.dropdown ? (
               <div key={link.name} className="relative">
                 <a
@@ -153,6 +153,18 @@ export function Navbar() {
             )
           ))}
         </nav>
+
+        {/* Investor Portal pill */}
+        <a
+          href="#"
+          className="hidden lg:inline-flex"
+          onClick={e => e.preventDefault()}
+          style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 13, letterSpacing: '0.04em', color: 'rgba(255,255,255,0.95)', textDecoration: 'none', padding: '7px 18px', borderRadius: 20, border: '1px solid rgba(255,255,255,0.3)', transition: 'border-color 0.2s, color 0.2s', whiteSpace: 'nowrap' }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.6)'; (e.currentTarget as HTMLElement).style.color = '#fff'; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.3)'; (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.95)'; }}
+        >
+          Investor Portal
+        </a>
 
         <button
           className="lg:hidden p-2 text-white absolute right-8"
