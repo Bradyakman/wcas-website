@@ -260,28 +260,6 @@ export default function WCASAIPage() {
         </div></Fade>
       </section>
 
-      {/* STATS */}
-      <section style={{ background: BG, padding: "32px 64px 24px" }}>
-        <Fade><div style={{ display: "flex", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 48 }}>
-          {[{n:"$33B+",l:"Capital Deployed"},{n:"190+",l:"Portfolio Companies"},{n:"45+",l:"Years of Sector Data"},{n:"300+",l:"AI Use Cases Cataloged"}].map((s,i)=>(<div key={i} style={{ flex: 1 }}>
-            <div style={{ width: "calc(100% - 24px)", height: 2, background: TEAL, marginBottom: 20, opacity: 0.5 }} />
-            <div style={{ fontFamily: SANS, fontSize: 36, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{s.n}</div>
-            <div style={{ fontFamily: SANS, fontSize: 13, color: "rgba(255,255,255,0.4)" }}>{s.l}</div>
-          </div>))}
-        </div></Fade>
-      </section>
-
-      {/* CTA */}
-      <section style={{ background: BG2, padding: "56px 64px", textAlign: "center" }}>
-        <Fade>
-          <h2 style={{ fontSize: 32, fontWeight: 400, color: "#fff", marginBottom: 16 }}>Explore how WCAS creates value</h2>
-          <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.4)", marginBottom: 32 }}>Discover our portfolio, our sectors, and the partnerships that define WCAS.</p>
-          <div style={{ display: "flex", gap: 16, justifyContent: "center" }}>
-            <a href="#" onClick={e=>e.preventDefault()} className="ai-cta-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.85)", textDecoration: "none", transition: "transform 0.25s ease, background 0.25s ease, border-color 0.25s ease" }}>Explore Our Portfolio</a>
-            <a href="#" onClick={e=>e.preventDefault()} className="ai-cta-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.85)", textDecoration: "none", transition: "transform 0.25s ease, background 0.25s ease, border-color 0.25s ease" }}>Our Sectors</a>
-          </div>
-        </Fade>
-      </section>
       <div style={{ height: 3, background: `linear-gradient(90deg, ${TEAL}, ${ACCENT}, ${GOLD})`, opacity: 0.45 }} />
     </div>
   );
