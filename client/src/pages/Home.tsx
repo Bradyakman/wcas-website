@@ -100,6 +100,13 @@ export default function Home() {
           />
         </div>
 
+        {/* Tagline */}
+        <div style={{ display: "flex", justifyContent: "center", padding: "0 48px 40px" }}>
+          <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 20, fontWeight: 300, lineHeight: 1.4, color: "rgba(255,255,255,0.75)", margin: 0, textAlign: "center", letterSpacing: "0.01em" }}>
+            Sector specialists. Long-term partners.
+          </p>
+        </div>
+
         {/* Stats */}
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "32px 48px 0", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
           {[
@@ -110,7 +117,7 @@ export default function Home() {
           ].map((s, i) => (
             <div key={i} style={{ textAlign: "center" }}>
               <div style={{ fontFamily: SANS, fontSize: 40, fontWeight: 700, marginBottom: 6, color: "#FFFFFF", letterSpacing: "-0.5px" }}>{s.num}</div>
-              <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.5)", fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase" }}>{s.label}</div>
+              <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.85)", fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase" }}>{s.label}</div>
             </div>
           ))}
         </div>
