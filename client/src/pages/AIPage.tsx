@@ -165,7 +165,7 @@ export default function WCASAIPage() {
         </section>
 
         {/* ABOUT */}
-        <section id="about" style={{ position: "relative", zIndex: 2, padding: "56px 64px" }}>
+        <section id="about" style={{ position: "relative", zIndex: 2, padding: "20px 64px 56px" }}>
           <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.45)", zIndex: 0 }} />
           <Fade><div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
             <p style={{ fontSize: 26, fontWeight: 400, color: "#ffffff", lineHeight: 1.55, maxWidth: 900, textAlign: "center" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
