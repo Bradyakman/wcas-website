@@ -268,7 +268,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div style={{ display: "flex", gap: 24 }}>
+          <div style={{ display: "flex", gap: 24, maxWidth: 900, margin: "0 auto" }}>
             {/* LEFT — Spotlight Card */}
             <div
               className="spotlight-main"
