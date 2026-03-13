@@ -108,7 +108,7 @@ export default function Home() {
         </div>
 
         {/* Stats */}
-        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 48px 44px", display: "flex", alignItems: "stretch" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 64px 44px", display: "flex", alignItems: "flex-start" }}>
           {[
             { num: "45+", label: "Years Investing" },
             { num: "190+", label: "Companies" },
@@ -116,10 +116,11 @@ export default function Home() {
             { num: "$33B+", label: "Capital Raised" },
           ].map((s, i) => (
             <React.Fragment key={i}>
-              {i > 0 && <div style={{ width: 1, background: "rgba(255,255,255,0.15)", alignSelf: "stretch", flexShrink: 0 }} />}
               <div style={{ flex: 1, textAlign: "center", padding: "0 12px" }}>
-                <div style={{ fontFamily: SANS, fontSize: 40, fontWeight: 700, marginBottom: 6, color: "#FFFFFF", letterSpacing: "-0.5px" }}>{s.num}</div>
-                <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.90)", fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase" }}>{s.label}</div>
+                <div style={{ fontFamily: SANS, fontSize: 40, fontWeight: 700, marginBottom: 12, color: "#FFFFFF", letterSpacing: "-0.5px" }}>{s.num}</div>
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: 8 }}>
+                  <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.90)", fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase" }}>{s.label}</div>
+                </div>
               </div>
             </React.Fragment>
           ))}
