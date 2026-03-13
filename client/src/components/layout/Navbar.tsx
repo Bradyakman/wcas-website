@@ -8,16 +8,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [location] = useLocation();
-  const navRef = useRef<HTMLElement>(null);
-
-  const isDarkHeroPage = location === "/" ||
-                         location === "/hcit" || 
-                         location === "/news" || 
-                         location === "/technology" ||
-                         location === "/technology/operating-successes" || 
-                         location === "/ai" ||
-                         location === "/portfolio" ||
-                         location.startsWith("/team/");
+  const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,66 +62,57 @@ export function Navbar() {
     },
     { name: "AI", href: "/ai" },
     { name: "News", href: "#" },
+    { name: "Investor Portal", href: "#" },
   ];
 
-  const linkColor = () => "text-white/70 hover:text-white";
+  const linkStyle: React.CSSProperties = {
+    fontFamily: "'Outfit', sans-serif",
+    fontWeight: 400,
+    fontSize: 13,
+    letterSpacing: '0.04em',
+    color: 'rgba(255,255,255,0.65)',
+    textDecoration: 'none',
+    transition: 'color 0.2s',
+  };
 
   return (
-    <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "py-3" : "py-4"
-      }`}
+    <header
+      className="fixed top-0 w-full z-50 transition-all duration-300"
       style={{
-        backgroundColor: 'rgba(4, 12, 32, 0.97)',
+        paddingTop: isScrolled ? 12 : 18,
+        paddingBottom: isScrolled ? 12 : 18,
+        backgroundColor: isScrolled ? 'rgba(3, 9, 28, 0.97)' : 'transparent',
       }}
     >
-      <div className="w-full px-8 md:px-14 flex items-center justify-between">
-        <Link href="/">
-          <img 
-            src={wcasLogo} 
-            alt="WCAS" 
-            className="h-5 md:h-6 w-auto cursor-pointer transition-opacity brightness-0 invert opacity-90" 
-          />
-        </Link>
-
-        <nav ref={navRef} className="hidden lg:flex items-center gap-9 absolute left-1/2 -translate-x-1/2">
+      <div ref={navRef} className="w-full flex items-center justify-center px-8">
+        <nav className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
             link.dropdown ? (
-              <div key={link.name} className="relative flex items-center gap-0">
+              <div key={link.name} className="relative">
                 <a
                   href="#"
-                  className={`transition-colors cursor-pointer ${linkColor()}`}
-                  style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 13, letterSpacing: '0.03em', WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', textDecoration: 'none' }}
-                  onClick={(e) => { e.preventDefault(); closeDropdown(); }}
+                  style={linkStyle}
+                  onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
+                  onClick={(e) => { e.preventDefault(); toggleDropdown(link.name); }}
                 >
                   {link.name}
                 </a>
-                <button
-                  type="button"
-                  aria-expanded={openDropdown === link.name}
-                  aria-controls={`dropdown-${link.name}`}
-                  aria-haspopup="true"
-                  onClick={() => toggleDropdown(link.name)}
-                  className={`bg-transparent border-none cursor-pointer p-0 ${linkColor()}`}
-                  style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation', width: 0, height: 0, overflow: 'hidden' }}
-                >
-                </button>
                 <div
-                  id={`dropdown-${link.name}`}
                   role="menu"
-                  className={`absolute top-full left-0 pt-4 transition-all duration-200 ${
+                  className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 transition-all duration-200 ${
                     openDropdown === link.name
                       ? 'opacity-100 pointer-events-auto translate-y-0'
                       : 'opacity-0 pointer-events-none -translate-y-1'
                   }`}
                 >
-                  <div className="rounded-lg shadow-lg py-2 min-w-[200px] flex flex-col" style={{ background: 'rgba(4,12,32,0.98)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                  <div className="rounded-md shadow-xl py-2 min-w-[180px] flex flex-col" style={{ background: 'rgba(3,9,28,0.98)', border: '1px solid rgba(255,255,255,0.1)' }}>
                     {link.dropdown.map((dropItem) => (
                       <a
                         key={dropItem.name}
                         href="#"
                         role="menuitem"
-                        className="px-4 py-2 text-sm transition-colors"
+                        className="px-5 py-2.5 text-sm transition-colors"
                         style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}
                         onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
                         onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
@@ -146,18 +128,20 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`transition-colors ${linkColor()}`}
-                style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 13, letterSpacing: '0.03em', textDecoration: 'none' }}
+                style={linkStyle}
+                onMouseEnter={(e: any) => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
+                onMouseLeave={(e: any) => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
               >
                 {link.name}
               </Link>
             ) : (
-              <a 
-                key={link.name} 
+              <a
+                key={link.name}
                 href="#"
+                style={linkStyle}
+                onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
                 onClick={e => e.preventDefault()}
-                className={`transition-colors ${linkColor()}`}
-                style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 13, letterSpacing: '0.03em', textDecoration: 'none' }}
               >
                 {link.name}
               </a>
@@ -165,65 +149,45 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center">
-          <a
-            href="#"
-            onClick={e => e.preventDefault()}
-            className="transition-all duration-200"
-            style={{
-              fontFamily: "'Outfit', sans-serif",
-              fontSize: 13,
-              fontWeight: 400,
-              letterSpacing: '0.03em',
-              color: "rgba(255,255,255,0.6)",
-              textDecoration: "none",
-            }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
-          >
-            Investor Portal
-          </a>
-        </div>
-
-        <button 
-          className="lg:hidden p-2 text-white"
+        <button
+          className="lg:hidden p-2 text-white absolute right-8"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
       {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t py-4 px-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
-          {[...navLinks, { name: "Investor Portal", href: "#" }].map((link) => (
-            <div key={link.name} className="flex flex-col border-b border-border/50 pb-2">
+        <div className="lg:hidden absolute top-full left-0 w-full shadow-lg py-4 px-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto" style={{ background: 'rgba(3,9,28,0.98)', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+          {navLinks.map((link) => (
+            <div key={link.name} className="flex flex-col pb-2" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
               {link.href.startsWith("/") ? (
                 <Link
                   href={link.href}
-                  className="text-lg font-medium text-foreground py-2"
-                  style={{ textDecoration: 'none' }}
+                  className="text-base py-2"
+                  style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontFamily: "'Outfit', sans-serif" }}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
                 </Link>
               ) : (
-                <a 
+                <a
                   href="#"
-                  className="text-lg font-medium text-foreground py-2"
-                  style={{ textDecoration: 'none' }}
+                  className="text-base py-2"
+                  style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontFamily: "'Outfit', sans-serif" }}
                   onClick={(e) => { e.preventDefault(); if (!('dropdown' in link && link.dropdown)) setMobileMenuOpen(false); }}
                 >
                   {link.name}
                 </a>
               )}
               {'dropdown' in link && link.dropdown && (
-                <div className="flex flex-col pl-4 mt-2 gap-2 border-l-2 border-border/50 ml-2 mb-2">
+                <div className="flex flex-col pl-4 mt-1 gap-1 ml-2 mb-1" style={{ borderLeft: '1px solid rgba(255,255,255,0.1)' }}>
                   {(link as any).dropdown.map((dropItem: any) => (
-                    <a 
+                    <a
                       key={dropItem.name}
                       href="#"
-                      className="text-base text-muted-foreground py-1 hover:text-primary"
-                      style={{ textDecoration: 'none' }}
+                      className="text-sm py-1"
+                      style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontFamily: "'Outfit', sans-serif" }}
                       onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); }}
                     >
                       {dropItem.name}

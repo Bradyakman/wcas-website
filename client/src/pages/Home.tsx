@@ -81,31 +81,60 @@ export default function Home() {
   return (
     <div style={{ fontFamily: SERIF, background: BG, color: TEXT, minHeight: "100vh" }}>
 
-      {/* ── HERO WITH IMAGE ── */}
-      <section className="hero-section" style={{ position: "relative", overflow: "hidden", backgroundImage: `linear-gradient(rgba(8,14,28,0.4), rgba(8,14,28,0.4)), url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center right", backgroundRepeat: "no-repeat" }}>
-        <div className="hero-content-scrim" style={{ position: "relative", zIndex: 2, padding: "160px 56px 80px" }}>
-          <h1 style={{ fontSize: 58, fontWeight: 400, lineHeight: 1.25, marginBottom: 64, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
-            Sector specialists. Long-term partners.
-          </h1>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32, marginBottom: 56 }}>
-            {[
-              { num: "45+", label: "Years Investing" },
-              { num: "190+", label: "Companies" },
-              { num: "18", label: "Funds Raised" },
-              { num: "$33B+", label: "Capital Raised" },
-            ].map((s, i) => (
-              <div key={i}>
-                <div style={{ width: "100%", height: 2, background: `linear-gradient(to right, ${ACCENT}, transparent)`, marginBottom: 24, opacity: 0.5 }} />
-                <div style={{ fontFamily: SANS, fontSize: 52, fontWeight: 700, marginBottom: 8, color: "#FFFFFF", textShadow: "0 1px 3px rgba(0,0,0,0.3)", letterSpacing: "-0.5px" }}>{s.num}</div>
-                <div style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.5)", fontWeight: 500, letterSpacing: 1, textTransform: "uppercase" }}>{s.label}</div>
-              </div>
-            ))}
+      {/* ── HERO ── */}
+      <section style={{
+        position: "relative",
+        overflow: "hidden",
+        background: "linear-gradient(160deg, #03091c 0%, #061535 40%, #0a2260 70%, #0d3080 100%)",
+        paddingBottom: 0,
+      }}>
+        {/* Nav spacer */}
+        <div style={{ height: 72 }} />
+
+        {/* Logo + divider + tagline */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 0, padding: "56px 48px 40px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", flex: 1, paddingRight: 48 }}>
+            <img
+              src={wcasLogo}
+              alt="WCAS"
+              style={{ height: 64, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.95 }}
+            />
           </div>
-          <div style={{ display: "flex", gap: 16 }}>
-            <a href="#" onClick={e=>e.preventDefault()} className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none" }}>Our Story</a>
-            <span className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "default", textDecoration: "none" }}>Explore Our Portfolio</span>
-            <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 500, padding: "12px 32px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.9)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
+          <div style={{ width: 1, height: 80, background: "rgba(255,255,255,0.35)", flexShrink: 0 }} />
+          <div style={{ flex: 1, paddingLeft: 48 }}>
+            <h1 style={{ fontFamily: "'Outfit', sans-serif", fontSize: 46, fontWeight: 300, lineHeight: 1.2, color: "#FFFFFF", margin: 0, letterSpacing: "-0.5px" }}>
+              Sector specialists.<br />Long-term partners.
+            </h1>
           </div>
+        </div>
+
+        {/* Stats */}
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "32px 48px 0", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
+          {[
+            { num: "45+", label: "Years Investing" },
+            { num: "190+", label: "Companies" },
+            { num: "18", label: "Funds Raised" },
+            { num: "$33B+", label: "Capital Raised" },
+          ].map((s, i) => (
+            <div key={i} style={{ textAlign: "center" }}>
+              <div style={{ fontFamily: SANS, fontSize: 40, fontWeight: 700, marginBottom: 6, color: "#FFFFFF", letterSpacing: "-0.5px" }}>{s.num}</div>
+              <div style={{ fontFamily: SANS, fontSize: 12, color: "rgba(255,255,255,0.5)", fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase" }}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Buttons */}
+        <div style={{ display: "flex", gap: 14, justifyContent: "center", padding: "36px 48px 64px" }}>
+          <a href="#" onClick={e=>e.preventDefault()} className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 28px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Our Story</a>
+          <span className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 28px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "default", textDecoration: "none" }}>Explore Our Portfolio</span>
+          <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 28px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
+        </div>
+
+        {/* Curved white bottom */}
+        <div style={{ position: "relative", height: 80, overflow: "hidden" }}>
+          <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style={{ position: "absolute", bottom: 0, width: "100%", height: "100%" }}>
+            <path d="M0,80 C360,0 1080,0 1440,80 L1440,80 L0,80 Z" fill="#ffffff" />
+          </svg>
         </div>
       </section>
 
