@@ -57,6 +57,7 @@ export default function Home() {
   const [activeVideo, setActiveVideo] = useState(0);
   const [isVideoTransitioning, setIsVideoTransitioning] = useState(false);
   const [expandedNews, setExpandedNews] = useState(0);
+  const [carouselIdx, setCarouselIdx] = useState(0);
 
   const [videoFilter, setVideoFilter] = useState<"All" | "Technology" | "Healthcare">("All");
 
@@ -354,6 +355,77 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── VIDEO CAROUSEL ── */}
+      {(() => {
+        const cards = [
+          { id: "861242809", title: "Paths to Growth", logo: quickbaseLogo, logoH: 28 },
+          { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 36 },
+          { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 32 },
+        ];
+        const total = cards.length;
+        const prev = () => setCarouselIdx(i => (i - 1 + total) % total);
+        const next = () => setCarouselIdx(i => (i + 1) % total);
+        const orderedCards = [
+          cards[(carouselIdx) % total],
+          cards[(carouselIdx + 1) % total],
+          cards[(carouselIdx + 2) % total],
+        ];
+        return (
+          <section style={{ background: "#04122e", padding: "64px 0 56px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, padding: "0 32px" }}>
+              {/* Left arrow */}
+              <button onClick={prev} aria-label="Previous" style={{ flexShrink: 0, width: 44, height: 44, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, transition: "border-color 0.2s, background 0.2s" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.4)"; (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.08)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.2)"; (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)"; }}>
+                &#8592;
+              </button>
+
+              {/* Cards */}
+              <div style={{ display: "flex", gap: 20, flex: 1, maxWidth: 1000 }}>
+                {orderedCards.map((card, i) => (
+                  <div key={card.id + i} onClick={() => setPlayingVideo(card.id)}
+                    style={{ flex: 1, borderRadius: 16, background: "#0a1020", border: "1px solid rgba(255,255,255,0.08)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 260, padding: "24px 24px 20px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.2)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
+                    {/* Title */}
+                    <div style={{ fontFamily: SANS, fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.9)", letterSpacing: "0.02em", textTransform: "uppercase" }}>{card.title}</div>
+                    {/* Play button */}
+                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flex: 1, paddingTop: 16 }}>
+                      <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(107,163,214,0.15)", border: "2px solid rgba(107,163,214,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="white" style={{ marginLeft: 2 }}><path d="M4 2l10 6-10 6z"/></svg>
+                      </div>
+                    </div>
+                    {/* Logo */}
+                    <div style={{ display: "flex", justifyContent: "center", paddingTop: 16 }}>
+                      <img src={card.logo} alt="" style={{ height: card.logoH, maxWidth: 140, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.8 }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Right arrow */}
+              <button onClick={next} aria-label="Next" style={{ flexShrink: 0, width: 44, height: 44, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, transition: "border-color 0.2s, background 0.2s" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.4)"; (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.08)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.2)"; (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)"; }}>
+                &#8594;
+              </button>
+            </div>
+
+            {/* Dots */}
+            <div style={{ display: "flex", justifyContent: "center", gap: 6, marginTop: 24 }}>
+              {cards.map((_, i) => (
+                <div key={i} onClick={() => setCarouselIdx(i)} style={{ width: i === carouselIdx ? 20 : 6, height: 6, borderRadius: 3, background: i === carouselIdx ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.2)", cursor: "pointer", transition: "all 0.3s" }} />
+              ))}
+            </div>
+
+            {/* CTA button */}
+            <div style={{ display: "flex", justifyContent: "center", marginTop: 40 }}>
+              <a href="#" onClick={e => e.preventDefault()} className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 260, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none", display: "inline-block" }}>Learn More About Our History</a>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* ── TRANSITION STRIP ── */}
       <div style={{ height: 4, background: "linear-gradient(90deg, #5cc3d1, #c8985e)", opacity: 0.6 }} />
