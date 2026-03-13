@@ -81,7 +81,7 @@ export function Navbar() {
       style={{
         paddingTop: isScrolled ? 12 : 18,
         paddingBottom: isScrolled ? 12 : 18,
-        backgroundColor: isScrolled ? 'rgba(3, 9, 28, 0.97)' : 'transparent',
+        backgroundColor: '#04112b',
       }}
     >
       <div ref={navRef} className="w-full flex items-center justify-center px-8">
