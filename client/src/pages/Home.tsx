@@ -102,7 +102,7 @@ export default function Home() {
 
         {/* Tagline */}
         <div style={{ display: "flex", justifyContent: "center", padding: "0 48px 40px" }}>
-          <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 20, fontWeight: 300, lineHeight: 1.4, color: "rgba(255,255,255,0.75)", margin: 0, textAlign: "center", letterSpacing: "0.01em" }}>
+          <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 23, fontWeight: 300, lineHeight: 1.4, color: "rgba(255,255,255,0.75)", margin: 0, textAlign: "center", letterSpacing: "0.01em" }}>
             Sector specialists. Long-term partners.
           </p>
         </div>
