@@ -165,9 +165,6 @@ export default function WCASAIPage() {
         <section id="about" style={{ position: "relative", zIndex: 2, padding: "20px 64px 56px" }}>
           <Fade><div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
             <p style={{ fontSize: 26, fontWeight: 400, color: "#ffffff", lineHeight: 1.55, maxWidth: 900, textAlign: "center" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", marginTop: 8 }}>
-              {anchors.map(a => (<a key={a.id} href={`#${a.id}`} className={`ap ${activeAnchor===a.id?"ac":""}`} onClick={e=>{e.preventDefault();setActiveAnchor(a.id);document.getElementById(a.id)?.scrollIntoView({behavior:"smooth"})}}>{a.l}</a>))}
-            </div>
           </div></Fade>
         </section>
       </div>
