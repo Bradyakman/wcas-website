@@ -129,12 +129,7 @@ export default function Home() {
           <a href="/ai" className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 28px", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
         </div>
 
-        {/* Curved white bottom */}
-        <div style={{ position: "relative", height: 80, overflow: "hidden" }}>
-          <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style={{ position: "absolute", bottom: 0, width: "100%", height: "100%" }}>
-            <path d="M0,80 C360,0 1080,0 1440,80 L1440,80 L0,80 Z" fill="#ffffff" />
-          </svg>
-        </div>
+        <div style={{ height: 64 }} />
       </section>
 
       {/* ── WHERE WE INVEST — CARD LAYOUT ── */}
