@@ -156,9 +156,9 @@ export default function WCASAIPage() {
 
         {/* HERO */}
         <section style={{ position: "relative", zIndex: 2, width: "100%", minHeight: 402 }}>
-          <div style={{ padding: "154px 64px 44px" }}>
+          <div style={{ padding: "154px 64px 44px", textAlign: "center" }}>
             <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 48 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
-            <div style={{ display: "flex", gap: 10, paddingBottom: 40, flexWrap: "wrap" }}>
+            <div style={{ display: "flex", gap: 10, paddingBottom: 40, flexWrap: "wrap", justifyContent: "center" }}>
               {anchors.map(a => (<a key={a.id} href={`#${a.id}`} className={`ap ${activeAnchor===a.id?"ac":""}`} onClick={e=>{e.preventDefault();setActiveAnchor(a.id);document.getElementById(a.id)?.scrollIntoView({behavior:"smooth"})}}>{a.l}</a>))}
             </div>
           </div>
