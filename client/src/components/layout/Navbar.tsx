@@ -84,6 +84,11 @@ export function Navbar() {
         backgroundColor: '#04112b',
       }}
     >
+      {/* Logo — fades in on scroll */}
+      <div style={{ position: "absolute", left: 28, top: "50%", transform: "translateY(-50%)", opacity: isScrolled ? 1 : 0, transition: "opacity 0.3s ease", pointerEvents: isScrolled ? "auto" : "none" }}>
+        <img src={wcasLogo} alt="WCAS" style={{ height: 26, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.92 }} />
+      </div>
+
       <div ref={navRef} className="w-full flex items-center justify-center px-8">
         <nav className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
