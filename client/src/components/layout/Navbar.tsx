@@ -86,7 +86,7 @@ export function Navbar() {
     >
       {/* Logo — fades in on scroll */}
       <div style={{ position: "absolute", left: 28, top: "50%", transform: "translateY(-50%)", opacity: isScrolled ? 1 : 0, transition: "opacity 0.3s ease", pointerEvents: isScrolled ? "auto" : "none" }}>
-        <img src={wcasLogo} alt="WCAS" style={{ height: 36, width: "auto", mixBlendMode: "screen", display: "block" }} />
+        <img src={wcasLogo} alt="WCAS" style={{ height: 28, width: "auto", mixBlendMode: "screen", display: "block" }} />
       </div>
 
       <div ref={navRef} className="w-full flex items-center justify-end px-8" style={{ gap: 32 }}>
