@@ -6,6 +6,7 @@ import absorbLogoDark from "@assets/image_1772400928657.png";
 import missionBg from "@assets/2345234534_1771799538730.jpg";
 import logoSelect from "@assets/image_1772034518225.png";
 import shieldsFullLogo from "@assets/shields_word_white_only_1772037749705.png";
+import shieldsBg from "@assets/image_1773498945274.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
 import norstellaLogo from "@assets/norstella_text_white_1772038125226.png";
@@ -237,7 +238,7 @@ export default function Home() {
       {(() => {
         const cards = [
           { id: "861242809", title: "Paths to Growth", logo: quickbaseLogo, logoH: 42 },
-          { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 50 },
+          { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 50, bg: shieldsBg },
           { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 46 },
         ];
         const total = cards.length;
@@ -262,7 +263,7 @@ export default function Home() {
               <div style={{ display: "flex", gap: 20, flex: 1 }}>
                 {orderedCards.map((card, i) => (
                   <div key={card.id + i} onClick={() => setPlayingVideo(card.id)}
-                    style={{ flex: 1, borderRadius: 16, background: "#0a1020", border: "1px solid rgba(255,255,255,0.12)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 230, padding: "24px 24px 24px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
+                    style={{ flex: 1, borderRadius: 16, background: (card as any).bg ? `linear-gradient(180deg, rgba(8,18,42,0.25) 0%, rgba(8,18,42,0.9) 100%), url(${(card as any).bg}) center/cover no-repeat` : "#0a1020", border: "1px solid rgba(255,255,255,0.12)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 230, padding: "24px 24px 24px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.28)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.12)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
                     {/* Title */}
