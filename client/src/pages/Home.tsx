@@ -241,6 +241,11 @@ export default function Home() {
           { id: "861242809", title: "Paths to Growth", logo: quickbaseLogo, logoH: 42, qbBg: quickbaseBg },
           { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 50, bg: shieldsBg },
           { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 46 },
+          { id: "913334845", title: "Investing in Better Healthcare", logo: concentraLogo, logoH: 32 },
+          { id: "861243221", title: "Paths to Growth", logo: greenStreetLogo, logoH: 30 },
+          { id: "861243091", title: "Paths to Growth", logo: intoxalockLogo, logoH: 26 },
+          { id: "913388269", title: "Investing in Better Healthcare", logo: leitersLogo, logoH: 32 },
+          { id: "913387297", title: "Investing in Better Healthcare", logo: norstellaLogo, logoH: 28 },
         ];
         const total = cards.length;
         const prev = () => setCarouselIdx(i => (i - 1 + total) % total);
