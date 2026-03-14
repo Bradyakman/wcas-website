@@ -154,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* ── PORTFOLIO ── */}
-      <section style={{ background: "#0a1f44", padding: "56px 56px 80px" }}>
+      <section style={{ background: "#0a1f44", padding: "56px 56px 40px" }}>
         <style>{`
           .port-marquee-wrap { position:relative; overflow:hidden; }
           .port-marquee-wrap::before, .port-marquee-wrap::after { content:""; position:absolute; top:0; bottom:0; width:80px; z-index:2; pointer-events:none; }
@@ -217,7 +217,7 @@ export default function Home() {
 
       {/* ── SPOTLIGHT + SIDEBAR SECTION ── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#0a1f44", marginTop: 0 }}>
-        <div style={{ position: "relative", zIndex: 10, padding: "56px 56px 56px" }}>
+        <div style={{ position: "relative", zIndex: 10, padding: "28px 56px 56px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
