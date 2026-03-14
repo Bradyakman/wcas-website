@@ -249,7 +249,7 @@ export default function Home() {
           cards[(carouselIdx + 2) % total],
         ];
         return (
-          <section style={{ background: "#04122e", padding: "64px 0 56px" }}>
+          <section style={{ background: "#0a1f44", padding: "64px 0 56px" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, padding: "0 32px" }}>
               {/* Left arrow */}
               <button onClick={prev} aria-label="Previous" style={{ flexShrink: 0, width: 44, height: 44, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.7)", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, transition: "border-color 0.2s, background 0.2s" }}
