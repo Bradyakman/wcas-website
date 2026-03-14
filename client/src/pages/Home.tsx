@@ -56,7 +56,7 @@ export default function Home() {
   const [carouselIdx, setCarouselIdx] = useState(0);
 
   return (
-    <div style={{ fontFamily: SERIF, background: BG, color: TEXT, minHeight: "100vh" }}>
+    <div style={{ fontFamily: SANS, background: BG, color: TEXT, minHeight: "100vh" }}>
 
       {/* ── HERO ── */}
       <section style={{
@@ -232,7 +232,7 @@ export default function Home() {
                 <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Mission</span>
                 <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
               </div>
-              <h2 style={{ fontSize: 34, fontWeight: 400, lineHeight: 1.2 }}>Be Your Partner of Choice</h2>
+              <h2 style={{ fontFamily: SERIF, fontSize: 34, fontWeight: 400, lineHeight: 1.2 }}>Be Your Partner of Choice</h2>
             </div>
             <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.78)", lineHeight: 1.7, fontWeight: 300, paddingTop: 8 }}>
               WCAS's mission is to lead in healthcare and technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner.
