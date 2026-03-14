@@ -11,6 +11,7 @@ import quickbaseBg from "@assets/image_1773499488838.png";
 import leitersBg from "@assets/image_1773500380478.png";
 import intoxalockBg from "@assets/image_1773501067574.png";
 import concentraBg from "@assets/image_1773501491242.png";
+import norstellaBg from "@assets/image_1773501790273.png";
 import greenStreetBg from "@assets/image_1773500927503.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
@@ -249,7 +250,7 @@ export default function Home() {
           { id: "861243221", title: "Paths to Growth", logo: greenStreetLogo, logoH: 30, gsHBg: greenStreetBg },
           { id: "861243091", title: "Paths to Growth", logo: intoxalockLogo, logoH: 26, intoxHBg: intoxalockBg },
           { id: "913388269", title: "Investing in Better Healthcare", logo: leitersLogo, logoH: 32, leitersHBg: leitersBg },
-          { id: "913387297", title: "Investing in Better Healthcare", logo: norstellaLogo, logoH: 28 },
+          { id: "913387297", title: "Investing in Better Healthcare", logo: norstellaLogo, logoH: 28, norstellaHBg: norstellaBg },
         ];
         const total = cards.length;
         const prev = () => setCarouselIdx(i => (i - 1 + total) % total);
@@ -299,6 +300,11 @@ export default function Home() {
                     {/* Intoxalock background layers */}
                     {(card as any).intoxHBg && <>
                       <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${(card as any).intoxHBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", zIndex: 0 }} />
+                      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,18,42,0.35) 0%, rgba(8,18,42,0.88) 100%)", zIndex: 1 }} />
+                    </>}
+                    {/* Norstella background layers */}
+                    {(card as any).norstellaHBg && <>
+                      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${(card as any).norstellaHBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", zIndex: 0 }} />
                       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,18,42,0.35) 0%, rgba(8,18,42,0.88) 100%)", zIndex: 1 }} />
                     </>}
                     {/* Title */}
