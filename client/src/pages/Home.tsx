@@ -9,6 +9,8 @@ import shieldsFullLogo from "@assets/shields_word_white_only_1772037749705.png";
 import shieldsBg from "@assets/image_1773499385445.png";
 import quickbaseBg from "@assets/image_1773499488838.png";
 import leitersBg from "@assets/image_1773500380478.png";
+import intoxalockBg from "@assets/image_1773500913814.png";
+import greenStreetBg from "@assets/image_1773500927503.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
 import norstellaLogo from "@assets/norstella_text_white_1772038125226.png";
@@ -243,8 +245,8 @@ export default function Home() {
           { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 50, bg: shieldsBg },
           { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 46 },
           { id: "913334845", title: "Investing in Better Healthcare", logo: concentraLogo, logoH: 32 },
-          { id: "861243221", title: "Paths to Growth", logo: greenStreetLogo, logoH: 30 },
-          { id: "861243091", title: "Paths to Growth", logo: intoxalockLogo, logoH: 26 },
+          { id: "861243221", title: "Paths to Growth", logo: greenStreetLogo, logoH: 30, gsHBg: greenStreetBg },
+          { id: "861243091", title: "Paths to Growth", logo: intoxalockLogo, logoH: 26, intoxHBg: intoxalockBg },
           { id: "913388269", title: "Investing in Better Healthcare", logo: leitersLogo, logoH: 32, leitersHBg: leitersBg },
           { id: "913387297", title: "Investing in Better Healthcare", logo: norstellaLogo, logoH: 28 },
         ];
@@ -281,6 +283,16 @@ export default function Home() {
                     {/* Leiters Health background layers */}
                     {(card as any).leitersHBg && <>
                       <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${(card as any).leitersHBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", zIndex: 0 }} />
+                      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,18,42,0.35) 0%, rgba(8,18,42,0.88) 100%)", zIndex: 1 }} />
+                    </>}
+                    {/* Green Street background layers */}
+                    {(card as any).gsHBg && <>
+                      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${(card as any).gsHBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", zIndex: 0 }} />
+                      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,18,42,0.35) 0%, rgba(8,18,42,0.88) 100%)", zIndex: 1 }} />
+                    </>}
+                    {/* Intoxalock background layers */}
+                    {(card as any).intoxHBg && <>
+                      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${(card as any).intoxHBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", zIndex: 0 }} />
                       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,18,42,0.35) 0%, rgba(8,18,42,0.88) 100%)", zIndex: 1 }} />
                     </>}
                     {/* Title */}
