@@ -12,6 +12,7 @@ import leitersBg from "@assets/image_1773500380478.png";
 import intoxalockBg from "@assets/image_1773501067574.png";
 import concentraBg from "@assets/image_1773501491242.png";
 import norstellaBg from "@assets/image_1773501790273.png";
+import absorbBg from "@assets/image_1773503737609.png";
 import greenStreetBg from "@assets/image_1773500927503.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
@@ -245,7 +246,7 @@ export default function Home() {
         const cards = [
           { id: "861242809", title: "Paths to Growth", logo: quickbaseLogo, logoH: 42, qbBg: quickbaseBg },
           { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 50, bg: shieldsBg },
-          { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 46 },
+          { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 46, absorbHBg: absorbBg },
           { id: "913334845", title: "Investing in Better Healthcare", logo: concentraLogo, logoH: 32, concentraHBg: concentraBg },
           { id: "861243221", title: "Paths to Growth", logo: greenStreetLogo, logoH: 30, gsHBg: greenStreetBg },
           { id: "861243091", title: "Paths to Growth", logo: intoxalockLogo, logoH: 26, intoxHBg: intoxalockBg },
@@ -280,6 +281,11 @@ export default function Home() {
                     {/* Quickbase background layers */}
                     {(card as any).qbBg && <>
                       <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${(card as any).qbBg})`, backgroundSize: "130%", backgroundPosition: "50% 30%", backgroundRepeat: "no-repeat", zIndex: 0 }} />
+                      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,18,42,0.35) 0%, rgba(8,18,42,0.88) 100%)", zIndex: 1 }} />
+                    </>}
+                    {/* Absorb background layers */}
+                    {(card as any).absorbHBg && <>
+                      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${(card as any).absorbHBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", zIndex: 0 }} />
                       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,18,42,0.35) 0%, rgba(8,18,42,0.88) 100%)", zIndex: 1 }} />
                     </>}
                     {/* Leiters Health background layers */}
