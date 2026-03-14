@@ -360,10 +360,10 @@ export default function Home() {
         <style>{`
           @keyframes news-fade-in { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
           .news-row { cursor:pointer; transition:background 0.3s ease, color 0.3s ease; }
-          .news-row:hover { background:#0b1a2e; }
+          .news-row:hover { background:#0a1f44; }
           .news-row:hover .nr-title, .news-row:hover .nr-date { color:#fff; }
           .news-row:hover .nr-arrow { border-color:rgba(255,255,255,0.3); color:#fff; }
-          .news-row.nr-active { background:#0b1a2e; }
+          .news-row.nr-active { background:#0a1f44; }
           .news-row.nr-active .nr-title, .news-row.nr-active .nr-date { color:#fff; }
           .news-row.nr-active .nr-arrow { border-color:rgba(255,255,255,0.3); color:#fff; transform:rotate(90deg); }
           .nr-expand { max-height:0; overflow:hidden; transition:max-height 0.4s ease, padding 0.4s ease; }
@@ -386,7 +386,7 @@ export default function Home() {
             <div
               key={i}
               className={`news-row ${expandedNews === i ? 'nr-active' : ''}`}
-              style={{ borderBottom: i < arr.length - 1 ? "1px solid rgba(12,26,46,0.08)" : "none", background: expandedNews === i ? "#0b1a2e" : "#fff", animation: `news-fade-in 0.5s ease ${i * 0.1}s both` }}
+              style={{ borderBottom: i < arr.length - 1 ? "1px solid rgba(12,26,46,0.08)" : "none", background: expandedNews === i ? "#0a1f44" : "#fff", animation: `news-fade-in 0.5s ease ${i * 0.1}s both` }}
               onClick={() => setExpandedNews(expandedNews === i ? -1 : i)}
             >
               <div style={{ display: "grid", gridTemplateColumns: "80px 1fr 40px", alignItems: "center", padding: "22px 28px", gap: 24 }}>
