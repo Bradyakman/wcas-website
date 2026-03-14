@@ -9,7 +9,7 @@ import shieldsFullLogo from "@assets/shields_word_white_only_1772037749705.png";
 import shieldsBg from "@assets/image_1773499385445.png";
 import quickbaseBg from "@assets/image_1773499488838.png";
 import leitersBg from "@assets/image_1773500380478.png";
-import intoxalockBg from "@assets/image_1773500913814.png";
+import intoxalockBg from "@assets/image_1773501067574.png";
 import greenStreetBg from "@assets/image_1773500927503.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
