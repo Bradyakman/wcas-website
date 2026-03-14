@@ -352,9 +352,6 @@ export default function Home() {
         );
       })()}
 
-      {/* ── TRANSITION STRIP ── */}
-      <div style={{ height: 4, background: "linear-gradient(90deg, #5cc3d1, #c8985e)", opacity: 0.6 }} />
-
       {/* ── NEWS ── */}
       <section style={{ background: "#f4f3f0", padding: "56px 56px 80px" }}>
         <style>{`
