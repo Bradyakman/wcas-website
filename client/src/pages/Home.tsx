@@ -259,10 +259,10 @@ export default function Home() {
               </button>
 
               {/* Cards */}
-              <div style={{ display: "flex", gap: 20, flex: 1 }}>
+              <div style={{ display: "flex", gap: 20, overflow: "hidden", maxWidth: 820 }}>
                 {orderedCards.map((card, i) => (
                   <div key={card.id + i} onClick={() => setPlayingVideo(card.id)}
-                    style={{ flex: 1, borderRadius: 16, background: "#0a1020", border: "1px solid rgba(255,255,255,0.12)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 230, padding: "24px 24px 24px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
+                    style={{ flex: "0 0 280px", borderRadius: 16, background: "#0a1020", border: "1px solid rgba(255,255,255,0.12)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 230, padding: "24px 24px 24px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.28)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.12)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
                     {/* Title */}
