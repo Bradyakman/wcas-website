@@ -10,6 +10,7 @@ import shieldsBg from "@assets/image_1773499385445.png";
 import quickbaseBg from "@assets/image_1773499488838.png";
 import leitersBg from "@assets/image_1773500380478.png";
 import intoxalockBg from "@assets/image_1773501067574.png";
+import concentraBg from "@assets/image_1773501491242.png";
 import greenStreetBg from "@assets/image_1773500927503.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
@@ -244,7 +245,7 @@ export default function Home() {
           { id: "861242809", title: "Paths to Growth", logo: quickbaseLogo, logoH: 42, qbBg: quickbaseBg },
           { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 50, bg: shieldsBg },
           { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 46 },
-          { id: "913334845", title: "Investing in Better Healthcare", logo: concentraLogo, logoH: 32 },
+          { id: "913334845", title: "Investing in Better Healthcare", logo: concentraLogo, logoH: 32, concentraHBg: concentraBg },
           { id: "861243221", title: "Paths to Growth", logo: greenStreetLogo, logoH: 30, gsHBg: greenStreetBg },
           { id: "861243091", title: "Paths to Growth", logo: intoxalockLogo, logoH: 26, intoxHBg: intoxalockBg },
           { id: "913388269", title: "Investing in Better Healthcare", logo: leitersLogo, logoH: 32, leitersHBg: leitersBg },
@@ -284,6 +285,11 @@ export default function Home() {
                     {(card as any).leitersHBg && <>
                       <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${(card as any).leitersHBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", zIndex: 0 }} />
                       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,18,42,0.35) 0%, rgba(8,18,42,0.88) 100%)", zIndex: 1 }} />
+                    </>}
+                    {/* Concentra background layers */}
+                    {(card as any).concentraHBg && <>
+                      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${(card as any).concentraHBg})`, backgroundSize: "cover", backgroundPosition: "center top", backgroundRepeat: "no-repeat", zIndex: 0 }} />
+                      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,18,42,0.45) 0%, rgba(8,18,42,0.88) 100%)", zIndex: 1 }} />
                     </>}
                     {/* Green Street background layers */}
                     {(card as any).gsHBg && <>
