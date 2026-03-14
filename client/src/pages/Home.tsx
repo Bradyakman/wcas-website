@@ -259,17 +259,17 @@ export default function Home() {
               </button>
 
               {/* Cards */}
-              <div style={{ display: "flex", gap: 20, overflow: "hidden", maxWidth: 740 }}>
+              <div style={{ display: "flex", gap: 20, flex: 1 }}>
                 {orderedCards.map((card, i) => (
                   <div key={card.id + i} onClick={() => setPlayingVideo(card.id)}
-                    style={{ flex: "0 0 300px", borderRadius: 16, background: "#0a1020", border: "1px solid rgba(255,255,255,0.08)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 230, padding: "24px 24px 24px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.2)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
+                    style={{ flex: 1, borderRadius: 16, background: "#0a1020", border: "1px solid rgba(255,255,255,0.12)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 230, padding: "24px 24px 24px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.28)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.12)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
                     {/* Title */}
                     <div style={{ fontFamily: SANS, fontSize: 17, fontWeight: 600, color: "rgba(255,255,255,0.9)", letterSpacing: "0", lineHeight: 1.3 }}>{card.title}</div>
                     {/* Play button */}
                     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flex: 1, paddingTop: 16 }}>
-                      <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(107,163,214,0.15)", border: "2px solid rgba(107,163,214,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(255,255,255,0.06)", border: "1.5px solid rgba(255,255,255,0.5)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="white" style={{ marginLeft: 2 }}><path d="M4 2l10 6-10 6z"/></svg>
                       </div>
                     </div>
@@ -298,7 +298,7 @@ export default function Home() {
 
             {/* CTA button */}
             <div style={{ display: "flex", justifyContent: "center", marginTop: 40 }}>
-              <a href="#" onClick={e => e.preventDefault()} className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 260, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none", display: "inline-block" }}>Learn More About Our History</a>
+              <a href="#" onClick={e => e.preventDefault()} className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 260, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "transparent", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none", display: "inline-block" }}>Learn More About Our History</a>
             </div>
           </section>
         );
