@@ -195,7 +195,7 @@ export default function Home() {
           .port-marquee-track { display:flex; gap:16px; animation:port-scroll 30s linear infinite; width:max-content; }
           .port-marquee-track:hover { animation-play-state:paused; }
           @keyframes port-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-          .port-logo-card { width:280px; height:120px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s; padding:0 24px; box-sizing:border-box; overflow:hidden; }
+          .port-logo-card { width:320px; min-width:320px; height:120px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s; padding:0 24px; box-sizing:border-box; overflow:hidden; }
           .port-logo-card:hover { transform:translateY(-3px); border-color:rgba(92,195,209,0.3); box-shadow:0 4px 20px rgba(92,195,209,0.08); background:rgba(255,255,255,0.95); }
           .port-logo-card img { transition:filter 0.3s ease; }
           .port-logo-card:hover img { filter:none !important; }
@@ -237,7 +237,7 @@ export default function Home() {
                   { name: "Equilend", src: "/logos/equilend.png", h: 29 },
                   { name: "ImageTrend", src: "/logos/imagetrend-transparent.png", h: 30 },
                 ].map((co, i) => (
-                  <div key={`${setIdx}-${i}`} className="port-logo-card">
+                  <div key={`${setIdx}-${i}`} className="port-logo-card" style={{ minWidth: 320, flexShrink: 0 }}>
                     <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 180, maxHeight: 70, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
                   </div>
                 ))
