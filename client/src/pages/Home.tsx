@@ -248,10 +248,10 @@ export default function Home() {
           { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 50, bg: shieldsBg },
           { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 46, absorbHBg: absorbBg },
           { id: "913334845", title: "Investing in Better Healthcare", logo: concentraLogo, logoH: 32, concentraHBg: concentraBg },
-          { id: "861243221", title: "Paths to Growth", logo: greenStreetLogo, logoH: 30, gsHBg: greenStreetBg },
+          { id: "861243221", title: "Paths to Growth", logo: greenStreetLogo, logoH: 42, gsHBg: greenStreetBg },
           { id: "861243091", title: "Paths to Growth", logo: intoxalockLogo, logoH: 26, intoxHBg: intoxalockBg },
           { id: "913388269", title: "Investing in Better Healthcare", logo: leitersLogo, logoH: 32, leitersHBg: leitersBg },
-          { id: "913387297", title: "Investing in Better Healthcare", logo: norstellaLogo, logoH: 28, norstellaHBg: norstellaBg },
+          { id: "913387297", title: "Investing in Better Healthcare", logo: norstellaLogo, logoH: 42, norstellaHBg: norstellaBg },
         ];
         const total = cards.length;
         const prev = () => setCarouselIdx(i => (i - 1 + total) % total);
@@ -323,7 +323,7 @@ export default function Home() {
                     </div>
                     {/* Logo */}
                     <div style={{ display: "flex", justifyContent: "center", paddingTop: 20, paddingBottom: 4, position: "relative", zIndex: 2 }}>
-                      <img src={card.logo} alt="" style={{ height: card.logoH, maxWidth: 160, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.8 }} />
+                      <img src={card.logo} alt="" style={{ height: card.logoH, maxWidth: 200, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.8 }} />
                     </div>
                   </div>
                 ))}
