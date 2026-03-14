@@ -123,8 +123,8 @@ export default function Home() {
         </div>
         <style>{`
           .wwi-cards { display:flex; gap:32px; padding:0 48px 64px; }
-          .wwi-card { flex:1; border-radius:4px; overflow:hidden; background:#fff; box-shadow:0 4px 16px rgba(12,26,46,0.1), 0 1px 3px rgba(12,26,46,0.06); transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:default; }
-          .wwi-card:hover { transform:translateY(-4px); box-shadow:0 8px 28px rgba(12,26,46,0.13); }
+          .wwi-card { flex:1; border-radius:4px; overflow:hidden; background:#fff; box-shadow:0 4px 12px rgba(12,26,46,0.1), 0 12px 32px rgba(12,26,46,0.12), 0 1px 3px rgba(12,26,46,0.08); transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:default; }
+          .wwi-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(12,26,46,0.12), 0 24px 48px rgba(12,26,46,0.16), 0 1px 4px rgba(12,26,46,0.1); }
           .wwi-card-img-wrap { width:100%; height:180px; overflow:hidden; }
           .wwi-card-img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; display:block; }
           .wwi-card:hover .wwi-card-img { transform:scale(1.06); }
