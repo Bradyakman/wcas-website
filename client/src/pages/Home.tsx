@@ -7,6 +7,7 @@ import missionBg from "@assets/2345234534_1771799538730.jpg";
 import logoSelect from "@assets/image_1772034518225.png";
 import shieldsFullLogo from "@assets/shields_word_white_only_1772037749705.png";
 import shieldsBg from "@assets/image_1773499385445.png";
+import quickbaseBg from "@assets/image_1773499488838.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
 import norstellaLogo from "@assets/norstella_text_white_1772038125226.png";
@@ -237,7 +238,7 @@ export default function Home() {
       {/* ── VIDEO CAROUSEL ── */}
       {(() => {
         const cards = [
-          { id: "861242809", title: "Paths to Growth", logo: quickbaseLogo, logoH: 42 },
+          { id: "861242809", title: "Paths to Growth", logo: quickbaseLogo, logoH: 42, qbBg: quickbaseBg },
           { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 50, bg: shieldsBg },
           { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 46 },
         ];
@@ -266,16 +267,21 @@ export default function Home() {
                     style={{ flex: 1, borderRadius: 16, backgroundColor: (card as any).bg ? "#0d2535" : "#0a1020", backgroundImage: (card as any).bg ? `linear-gradient(180deg, rgba(8,18,42,0.25) 0%, rgba(8,18,42,0.9) 100%), url(${(card as any).bg})` : undefined, backgroundSize: (card as any).bg ? "auto, cover" : undefined, backgroundPosition: (card as any).bg ? "center, 50% 20%" : undefined, backgroundRepeat: (card as any).bg ? "no-repeat, no-repeat" : undefined, backgroundOrigin: (card as any).bg ? "border-box, border-box" : undefined, border: "1px solid rgba(255,255,255,0.12)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 230, padding: "24px 24px 24px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.28)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.12)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
+                    {/* Quickbase background layers */}
+                    {(card as any).qbBg && <>
+                      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${(card as any).qbBg})`, backgroundSize: "130%", backgroundPosition: "50% 30%", backgroundRepeat: "no-repeat", zIndex: 0 }} />
+                      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,18,42,0.35) 0%, rgba(8,18,42,0.88) 100%)", zIndex: 1 }} />
+                    </>}
                     {/* Title */}
-                    <div style={{ fontFamily: SANS, fontSize: 17, fontWeight: 600, color: "rgba(255,255,255,0.9)", letterSpacing: "0", lineHeight: 1.3 }}>{card.title}</div>
+                    <div style={{ fontFamily: SANS, fontSize: 17, fontWeight: 600, color: "rgba(255,255,255,0.9)", letterSpacing: "0", lineHeight: 1.3, position: "relative", zIndex: 2 }}>{card.title}</div>
                     {/* Play button */}
-                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flex: 1, paddingTop: 16 }}>
+                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flex: 1, paddingTop: 16, position: "relative", zIndex: 2 }}>
                       <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(255,255,255,0.06)", border: "1.5px solid rgba(255,255,255,0.5)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="white" style={{ marginLeft: 2 }}><path d="M4 2l10 6-10 6z"/></svg>
                       </div>
                     </div>
                     {/* Logo */}
-                    <div style={{ display: "flex", justifyContent: "center", paddingTop: 20, paddingBottom: 4 }}>
+                    <div style={{ display: "flex", justifyContent: "center", paddingTop: 20, paddingBottom: 4, position: "relative", zIndex: 2 }}>
                       <img src={card.logo} alt="" style={{ height: card.logoH, maxWidth: 160, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.8 }} />
                     </div>
                   </div>
