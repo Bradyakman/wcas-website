@@ -12,7 +12,7 @@ export function Footer() {
 
           <div className="flex flex-1 gap-16 lg:gap-24">
             <div>
-              <h4 className="font-heading font-semibold mb-6 uppercase tracking-wider text-sm text-white/80">New York</h4>
+              <h4 className="font-semibold mb-6 uppercase tracking-wider text-sm text-white/80" style={{ fontFamily: "'DM Sans', sans-serif" }}>New York</h4>
               <div className="text-white/60 text-sm leading-relaxed space-y-1">
                 <p>599 Lexington Ave. Suite 1800</p>
                 <p>New York, NY 10022</p>
@@ -21,7 +21,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="font-heading font-semibold mb-6 uppercase tracking-wider text-sm text-white/80">San Francisco</h4>
+              <h4 className="font-semibold mb-6 uppercase tracking-wider text-sm text-white/80" style={{ fontFamily: "'DM Sans', sans-serif" }}>San Francisco</h4>
               <div className="text-white/60 text-sm leading-relaxed space-y-1">
                 <p>580 California St. Suite 1700</p>
                 <p>San Francisco, CA 94104</p>

@@ -82,7 +82,7 @@ export default function Home() {
 
         {/* Tagline */}
         <div style={{ display: "flex", justifyContent: "center", padding: "0 48px 44px" }}>
-          <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 23, fontWeight: 300, lineHeight: 1.4, color: "rgba(255,255,255,0.75)", margin: 0, textAlign: "center", letterSpacing: "0.18em", textTransform: "uppercase" }}>
+          <p style={{ fontFamily: SANS, fontSize: 23, fontWeight: 300, lineHeight: 1.4, color: "rgba(255,255,255,0.75)", margin: 0, textAlign: "center", letterSpacing: "0.18em", textTransform: "uppercase" }}>
             Sector Specialists &nbsp;·&nbsp; Long-Term Partners
           </p>
         </div>
@@ -130,7 +130,7 @@ export default function Home() {
           .wwi-card:hover .wwi-card-img { transform:scale(1.06); }
           .wwi-card-body { padding:36px; display:flex; flex-direction:column; flex:1; }
           .wwi-card-title { font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:#0C1A2E; line-height:1.1; margin:0 0 8px; }
-          .wwi-card-subtitle { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; color:#0C1A2E; line-height:1.3; margin:0 0 16px; }
+          .wwi-card-subtitle { font-family:'DM Sans',sans-serif; font-size:18px; font-weight:400; color:#0C1A2E; line-height:1.3; margin:0 0 16px; }
           .wwi-card-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(12,26,46,0.55); line-height:1.65; margin:0 0 28px; }
           .wwi-card-cta { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:#5cc3d1; text-decoration:none; display:inline-block; margin-top:auto; transition:color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease; }
           .wwi-card-cta:hover { color:#4aa8b5; transform:translateX(6px); letter-spacing:0.5px; }
@@ -184,8 +184,8 @@ export default function Home() {
               <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Portfolio</span>
               <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
             </div>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 42, fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 20, whiteSpace: "nowrap" }}>Building market leaders across healthcare and technology</h2>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.78)", lineHeight: 1.7 }}>With deep domain experience and a long-term partnership mentality, we look to drive value through a combination of operational improvements, internal growth initiatives and strategic acquisitions.</p>
+            <h2 style={{ fontFamily: SERIF, fontSize: 42, fontWeight: 400, color: "#fff", lineHeight: 1.15, marginBottom: 20, whiteSpace: "nowrap" }}>Building market leaders across healthcare and technology</h2>
+            <p style={{ fontFamily: SANS, fontSize: 15, color: "rgba(255,255,255,0.78)", lineHeight: 1.7 }}>With deep domain experience and a long-term partnership mentality, we look to drive value through a combination of operational improvements, internal growth initiatives and strategic acquisitions.</p>
           </div>
           <a href="/portfolio" className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none", marginTop: 40, display: "inline-block" }}>Explore Our Portfolio &rarr;</a>
         </div>
@@ -389,7 +389,7 @@ export default function Home() {
             >
               <div style={{ display: "grid", gridTemplateColumns: "80px 1fr 40px", alignItems: "center", padding: "22px 28px", gap: 24 }}>
                 <span className="nr-date" style={{ fontFamily: SANS, fontSize: 12, color: expandedNews === i ? "rgba(255,255,255,0.4)" : "#999", transition: "color 0.3s" }}>{n.date}</span>
-                <h4 className="nr-title" style={{ fontFamily: SERIF, fontSize: 17, fontWeight: 500, color: expandedNews === i ? "#fff" : "#0c1a2e", lineHeight: 1.4, transition: "color 0.3s" }}>{n.title}</h4>
+                <h4 className="nr-title" style={{ fontFamily: SANS, fontSize: 17, fontWeight: 500, color: expandedNews === i ? "#fff" : "#0c1a2e", lineHeight: 1.4, transition: "color 0.3s" }}>{n.title}</h4>
                 <div className="nr-arrow" style={{ width: 32, height: 32, borderRadius: "50%", border: `1px solid ${expandedNews === i ? "rgba(255,255,255,0.3)" : "rgba(12,26,46,0.15)"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, color: expandedNews === i ? "#fff" : "#0c1a2e", transition: "all 0.3s", transform: expandedNews === i ? "rotate(90deg)" : "none" }}>&#8594;</div>
               </div>
               <div className={`nr-expand ${expandedNews === i ? 'nr-open' : ''}`} style={{ padding: expandedNews === i ? "0 28px 28px" : "0 28px" }}>
