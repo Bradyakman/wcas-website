@@ -370,9 +370,10 @@ export default function Home() {
           .nr-expand.nr-open { max-height:300px; }
           .news-content-fade { transition:opacity 0.3s ease; }
         `}</style>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 28 }}>
-          <div>
-            <h2 style={{ fontFamily: SERIF, fontSize: 36, fontWeight: 400, color: "#0c1a2e", lineHeight: 1.2 }}>News & Perspectives</h2>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#0C1A2E" }}>News & Perspectives</span>
+            <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #0C1A2E, transparent)" }} />
           </div>
           <a href="#" onClick={e => e.preventDefault()} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, padding: "12px 28px", borderRadius: 24, background: "#0c1a2e", color: "#fff", cursor: "pointer", textDecoration: "none", whiteSpace: "nowrap" }}>See All News &#8594;</a>
         </div>
