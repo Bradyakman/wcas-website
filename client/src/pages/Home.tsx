@@ -346,7 +346,7 @@ export default function Home() {
 
             {/* CTA button */}
             <div style={{ display: "flex", justifyContent: "center", marginTop: 40 }}>
-              <a href="#" onClick={e => e.preventDefault()} className="pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 260, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.3)", background: "transparent", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none", display: "inline-block" }}>Learn More About Our History</a>
+              <a href="#" onClick={e => e.preventDefault()} className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 260, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none", display: "inline-block" }}>Learn More About Our History</a>
             </div>
           </section>
         );
