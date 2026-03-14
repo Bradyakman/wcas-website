@@ -236,9 +236,9 @@ export default function Home() {
       {/* ── VIDEO CAROUSEL ── */}
       {(() => {
         const cards = [
-          { id: "861242809", title: "Paths to Growth", logo: quickbaseLogo, logoH: 28 },
-          { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 36 },
-          { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 32 },
+          { id: "861242809", title: "Paths to Growth", logo: quickbaseLogo, logoH: 42 },
+          { id: "913387748", title: "Investing in Better Healthcare", logo: shieldsFullLogo, logoH: 50 },
+          { id: "861242949", title: "Paths to Growth", logo: absorbLogo, logoH: 46 },
         ];
         const total = cards.length;
         const prev = () => setCarouselIdx(i => (i - 1 + total) % total);
@@ -259,14 +259,14 @@ export default function Home() {
               </button>
 
               {/* Cards */}
-              <div style={{ display: "flex", gap: 20, flex: 1, maxWidth: 1000 }}>
+              <div style={{ display: "flex", gap: 20, overflow: "hidden", maxWidth: 740 }}>
                 {orderedCards.map((card, i) => (
                   <div key={card.id + i} onClick={() => setPlayingVideo(card.id)}
-                    style={{ flex: 1, borderRadius: 16, background: "#0a1020", border: "1px solid rgba(255,255,255,0.08)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 260, padding: "24px 24px 20px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
+                    style={{ flex: "0 0 300px", borderRadius: 16, background: "#0a1020", border: "1px solid rgba(255,255,255,0.08)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 230, padding: "24px 24px 24px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.2)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
                     {/* Title */}
-                    <div style={{ fontFamily: SANS, fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.9)", letterSpacing: "0.02em", textTransform: "uppercase" }}>{card.title}</div>
+                    <div style={{ fontFamily: SANS, fontSize: 17, fontWeight: 600, color: "rgba(255,255,255,0.9)", letterSpacing: "0", lineHeight: 1.3 }}>{card.title}</div>
                     {/* Play button */}
                     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flex: 1, paddingTop: 16 }}>
                       <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(107,163,214,0.15)", border: "2px solid rgba(107,163,214,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -274,8 +274,8 @@ export default function Home() {
                       </div>
                     </div>
                     {/* Logo */}
-                    <div style={{ display: "flex", justifyContent: "center", paddingTop: 16 }}>
-                      <img src={card.logo} alt="" style={{ height: card.logoH, maxWidth: 140, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.8 }} />
+                    <div style={{ display: "flex", justifyContent: "center", paddingTop: 20, paddingBottom: 4 }}>
+                      <img src={card.logo} alt="" style={{ height: card.logoH, maxWidth: 160, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.8 }} />
                     </div>
                   </div>
                 ))}
