@@ -1,5 +1,5 @@
 import React from "react";
-import { Play, X } from "lucide-react";
+import { X } from "lucide-react";
 import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import logoLumexa from "@assets/image_1772400832099.png";
 import absorbLogoDark from "@assets/image_1772400928657.png";
@@ -41,43 +41,11 @@ const TEXT = "#E4E8ED";
 const SERIF = "'Cormorant Garamond', Georgia, serif";
 const SANS = "'DM Sans', sans-serif";
 
-const wcasVideos = [
-  { id: "861242949", title: "Paths to Growth", partner: "Absorb", category: "Technology" as const, partnerLogo: absorbLogo, centeredLayout: true, logoClass: "h-10 md:h-12" },
-  { id: "913334845", title: "Investing in Better Healthcare", partner: "Concentra", category: "Healthcare" as const, partnerLogo: concentraLogo, centeredLayout: true, logoClass: "h-10 md:h-12", spotlightH: 90 },
-  { id: "861243221", title: "Paths to Growth", partner: "Green Street", category: "Technology" as const, partnerLogo: greenStreetLogo, centeredLayout: true, logoClass: "h-12 md:h-14", spotlightH: 80 },
-  { id: "861243091", title: "Paths to Growth", partner: "Intoxalock", category: "Technology" as const, partnerLogo: intoxalockLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
-  { id: "913388269", title: "Investing in Better Healthcare", partner: "Leiters Health", category: "Healthcare" as const, partnerLogo: leitersLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
-  { id: "913387297", title: "Investing in Better Healthcare", partner: "Norstella", category: "Healthcare" as const, partnerLogo: norstellaLogo, centeredLayout: true, logoClass: "h-12 md:h-14", spotlightH: 100 },
-  { id: "861242809", title: "Paths to Growth", partner: "Quickbase", category: "Technology" as const, partnerLogo: quickbaseLogo, centeredLayout: true, logoClass: "h-8 md:h-10" },
-  { id: "913387748", title: "Investing in Better Healthcare", partner: "Shields Health Solutions", category: "Healthcare" as const, partnerLogo: shieldsFullLogo, centeredLayout: true, logoClass: "h-10 md:h-12", spotlightH: 80 },
-];
 
 export default function Home() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
-  const [activeVideo, setActiveVideo] = useState(0);
-  const [isVideoTransitioning, setIsVideoTransitioning] = useState(false);
   const [expandedNews, setExpandedNews] = useState(0);
   const [carouselIdx, setCarouselIdx] = useState(0);
-
-  const [videoFilter, setVideoFilter] = useState<"All" | "Technology" | "Healthcare">("All");
-
-  const filteredVideos = (videoFilter === "All" ? wcasVideos : wcasVideos.filter(v => v.category === videoFilter)).sort((a, b) => a.partner.localeCompare(b.partner));
-  const safeActiveVideo = Math.min(activeVideo, Math.max(0, filteredVideos.length - 1));
-
-  const switchVideo = (idx: number) => {
-    if (idx === activeVideo) return;
-    setIsVideoTransitioning(true);
-    setTimeout(() => {
-      setActiveVideo(idx);
-      setTimeout(() => setIsVideoTransitioning(false), 50);
-    }, 250);
-  };
-
-  const handleFilterChange = (filter: "All" | "Technology" | "Healthcare") => {
-    setVideoFilter(filter);
-    setActiveVideo(0);
-    setIsVideoTransitioning(false);
-  };
 
   return (
     <div style={{ fontFamily: SERIF, background: BG, color: TEXT, minHeight: "100vh" }}>
@@ -249,109 +217,18 @@ export default function Home() {
 
       {/* ── SPOTLIGHT + SIDEBAR SECTION ── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#0a1f44", marginTop: 0 }}>
-        <style>{`
-          .spotlight-main:hover .spotlight-play { transform:scale(1.08); }
-          .spotlight-sidebar-item { display:flex; align-items:center; gap:14px; padding:14px 20px; cursor:pointer; border-left:3px solid transparent; transition:all 0.2s ease; position:relative; }
-          .spotlight-sidebar-item:hover { background:rgba(255,255,255,0.04); }
-          .spotlight-sidebar-item.active { background:rgba(255,255,255,0.06); border-left-color:${ACCENT}; }
-          .spotlight-sidebar-item.active .sb-partner { color:#fff; }
-          .spotlight-sidebar-item.active .sb-title { color:rgba(255,255,255,0.7); }
-        `}</style>
-        <div style={{ position: "relative", zIndex: 10, padding: "56px 56px 80px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 48 }}>
-            <div style={{ flex: 1 }}>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
-                <div>
-                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Mission</span>
-                    <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
-                  </div>
-                  <h2 style={{ fontSize: 34, fontWeight: 400, lineHeight: 1.2 }}>Be Your Partner of Choice</h2>
-                </div>
-                <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.78)", lineHeight: 1.7, fontWeight: 300, paddingTop: 8 }}>
-                  WCAS's mission is to lead in healthcare and technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner.
-                </p>
+        <div style={{ position: "relative", zIndex: 10, padding: "56px 56px 56px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#5cc3d1" }}>Our Mission</span>
+                <div style={{ width: 40, height: 1, background: "linear-gradient(to right, #5cc3d1, transparent)" }} />
               </div>
+              <h2 style={{ fontSize: 34, fontWeight: 400, lineHeight: 1.2 }}>Be Your Partner of Choice</h2>
             </div>
-          </div>
-
-          <div style={{ display: "flex", gap: 24, maxWidth: 900, margin: "0 auto" }}>
-            {/* LEFT — Spotlight Card */}
-            <div
-              className="spotlight-main"
-              onClick={() => setPlayingVideo(filteredVideos[safeActiveVideo].id)}
-              style={{ flex: 1.4, minHeight: 360, borderRadius: 20, background: "#0a1020", position: "relative", overflow: "hidden", cursor: "pointer", border: "1px solid rgba(255,255,255,0.08)" }}
-            >
-              {/* Corner brackets */}
-              <div style={{ position: "absolute", top: 20, left: 20, width: 28, height: 28, borderTop: `2px solid rgba(107,163,214,0.35)`, borderLeft: `2px solid rgba(107,163,214,0.35)`, zIndex: 3 }} />
-              <div style={{ position: "absolute", top: 20, right: 20, width: 28, height: 28, borderTop: `2px solid rgba(107,163,214,0.35)`, borderRight: `2px solid rgba(107,163,214,0.35)`, zIndex: 3 }} />
-              <div style={{ position: "absolute", bottom: 12, left: 20, width: 28, height: 28, borderBottom: `2px solid rgba(107,163,214,0.35)`, borderLeft: `2px solid rgba(107,163,214,0.35)`, zIndex: 5 }} />
-              <div style={{ position: "absolute", bottom: 12, right: 20, width: 28, height: 28, borderBottom: `2px solid rgba(107,163,214,0.35)`, borderRight: `2px solid rgba(107,163,214,0.35)`, zIndex: 5 }} />
-
-              {/* Category badge */}
-              <div style={{ position: "absolute", top: 24, right: 32, zIndex: 4 }}>
-                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: filteredVideos[safeActiveVideo].category === "Healthcare" ? "#9ac8ec" : "#5cc3d1", padding: "5px 14px", borderRadius: 12, background: filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(154,200,236,0.1)" : "rgba(92,195,209,0.1)", border: `1px solid ${filteredVideos[safeActiveVideo].category === "Healthcare" ? "rgba(154,200,236,0.2)" : "rgba(92,195,209,0.2)"}` }}>
-                  {filteredVideos[safeActiveVideo].category}
-                </span>
-              </div>
-
-              {/* Partner logo at top */}
-              <div style={{ position: "absolute", top: 28, left: 0, right: 0, display: "flex", justifyContent: "center", alignItems: "center", height: 75, opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", zIndex: 4 }}>
-                {'partnerLogo' in filteredVideos[safeActiveVideo] && filteredVideos[safeActiveVideo].partnerLogo ? (
-                  <img src={filteredVideos[safeActiveVideo].partnerLogo} alt={filteredVideos[safeActiveVideo].partner} style={{ maxHeight: 90, maxWidth: 300, objectFit: "contain", opacity: 0.85 }} />
-                ) : (
-                  <span style={{ fontFamily: SANS, fontSize: 26, fontWeight: 600, color: "rgba(255,255,255,0.85)" }}>{filteredVideos[safeActiveVideo].partner}</span>
-                )}
-              </div>
-
-              {/* Play button centered */}
-              <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", zIndex: 2 }}>
-                <div className="spotlight-play" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, transition: "transform 0.3s ease" }}>
-                  <div style={{ width: 66, height: 66, borderRadius: "50%", background: `radial-gradient(circle, rgba(107,163,214,0.2) 0%, rgba(107,163,214,0.05) 70%)`, border: `2px solid rgba(107,163,214,0.3)`, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <Play style={{ color: "white", fill: "white" }} size={22} />
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom gradient overlay */}
-              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "45%", background: "linear-gradient(to top, rgba(8,14,26,0.95) 0%, rgba(8,14,26,0.7) 20%, transparent 50%)", zIndex: 3, pointerEvents: "none" }} />
-              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "0 36px 32px", zIndex: 4, opacity: isVideoTransitioning ? 0 : 1, transition: "opacity 0.25s ease", textAlign: "center" }}>
-                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 24, fontWeight: 400, color: "#fff" }}>{filteredVideos[safeActiveVideo].title}</h3>
-              </div>
-            </div>
-
-            {/* RIGHT — Sidebar */}
-            <div style={{ flex: 0.85, background: "rgba(255,255,255,0.015)", borderRadius: 16, border: "1px solid rgba(255,255,255,0.06)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-              <div style={{ padding: "16px 16px 12px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-                <div
-                  onClick={() => handleFilterChange("All")}
-                  style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", textAlign: "center", padding: "8px 0", borderRadius: 8, marginBottom: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "All" ? "rgba(255,255,255,0.08)" : "transparent", color: videoFilter === "All" ? "#fff" : "rgba(255,255,255,0.35)", border: `1px solid ${videoFilter === "All" ? "rgba(255,255,255,0.12)" : "rgba(255,255,255,0.04)"}` }}
-                >All Testimonials</div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
-                  <div
-                    onClick={() => handleFilterChange("Technology")}
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Technology" ? "rgba(92,195,209,0.12)" : "transparent", color: videoFilter === "Technology" ? "#5cc3d1" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Technology" ? "rgba(92,195,209,0.25)" : "rgba(255,255,255,0.04)"}` }}
-                  >Technology</div>
-                  <div
-                    onClick={() => handleFilterChange("Healthcare")}
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: 1.2, textTransform: "uppercase", textAlign: "center", padding: "7px 0", borderRadius: 8, cursor: "pointer", transition: "all 0.2s ease", background: videoFilter === "Healthcare" ? "rgba(154,200,236,0.12)" : "transparent", color: videoFilter === "Healthcare" ? "#9ac8ec" : "rgba(255,255,255,0.3)", border: `1px solid ${videoFilter === "Healthcare" ? "rgba(154,200,236,0.25)" : "rgba(255,255,255,0.04)"}` }}
-                  >Healthcare</div>
-                </div>
-              </div>
-              <div style={{ flex: 1, overflowY: "auto" }}>
-                {filteredVideos.map((video, i) => (
-                  <div
-                    key={video.id}
-                    className={`spotlight-sidebar-item ${i === safeActiveVideo ? 'active' : ''}`}
-                    onClick={() => switchVideo(i)}
-                  >
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div className="sb-partner" style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.5)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{video.partner}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.78)", lineHeight: 1.7, fontWeight: 300, paddingTop: 8 }}>
+              WCAS's mission is to lead in healthcare and technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner.
+            </p>
           </div>
         </div>
       </section>
