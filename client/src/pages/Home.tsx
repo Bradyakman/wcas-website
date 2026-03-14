@@ -6,7 +6,7 @@ import absorbLogoDark from "@assets/image_1772400928657.png";
 import missionBg from "@assets/2345234534_1771799538730.jpg";
 import logoSelect from "@assets/image_1772034518225.png";
 import shieldsFullLogo from "@assets/shields_word_white_only_1772037749705.png";
-import shieldsBg from "@assets/image_1773498945274.png";
+import shieldsBg from "@assets/image_1773499385445.png";
 import quickbaseLogo from "@assets/quickbase_white_transparent_(3)_1772034799124.png";
 import absorbLogo from "@assets/absorb_text_white_only_1772037851934.png";
 import norstellaLogo from "@assets/norstella_text_white_1772038125226.png";
