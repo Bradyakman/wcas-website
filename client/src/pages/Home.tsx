@@ -263,7 +263,7 @@ export default function Home() {
               <div style={{ display: "flex", gap: 20, flex: 1 }}>
                 {orderedCards.map((card, i) => (
                   <div key={card.id + i} onClick={() => setPlayingVideo(card.id)}
-                    style={{ flex: 1, borderRadius: 16, background: (card as any).bg ? `linear-gradient(180deg, rgba(8,18,42,0.25) 0%, rgba(8,18,42,0.9) 100%), url(${(card as any).bg}) center/cover no-repeat` : "#0a1020", border: "1px solid rgba(255,255,255,0.12)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 230, padding: "24px 24px 24px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
+                    style={{ flex: 1, borderRadius: 16, background: (card as any).bg ? `linear-gradient(180deg, rgba(8,18,42,0.25) 0%, rgba(8,18,42,0.9) 100%), url(${(card as any).bg}) center top/cover no-repeat` : "#0a1020", border: "1px solid rgba(255,255,255,0.12)", overflow: "hidden", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: 230, padding: "24px 24px 24px", position: "relative", transition: "border-color 0.2s, transform 0.2s" }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.28)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.12)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
                     {/* Title */}
