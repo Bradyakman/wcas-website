@@ -145,6 +145,20 @@ export default function WCASAIPage() {
         .team-photo-img{filter:grayscale(100%);transition:filter 0.4s ease}.team-photo-card:hover .team-photo-img{filter:grayscale(0%)}
         
         .sl{position:absolute;left:19px;top:40px;bottom:-20px;width:2px;background:linear-gradient(180deg,${TEAL},rgba(77,184,199,0.1))}
+        @media (max-width: 640px) {
+          .ai-hero-content { padding: 32px 24px 40px !important; align-items: center !important; }
+          .ai-hero-h1 { font-size: 28px !important; line-height: 1.2 !important; margin-bottom: 16px !important; }
+          .ai-hero-rule { margin: 0 auto 16px !important; }
+          .ai-hero-sub { font-size: 15px !important; }
+          .ai-hero-btns { flex-direction: column !important; align-items: stretch !important; gap: 10px !important; width: 100% !important; max-width: 280px !important; }
+          .ai-hero-btns a { width: 100% !important; }
+          .ai-conviction { grid-template-columns: 1fr !important; padding: 40px 24px !important; gap: 32px !important; }
+          .ai-case-studies { padding: 40px 20px !important; }
+          .ai-case-studies-grid { grid-template-columns: 1fr !important; }
+          .cs-flip-wrap { height: 280px; }
+          .ai-playbook { padding: 40px 20px !important; }
+          .pb-row { grid-template-columns: 1fr !important; gap: 12px !important; }
+        }
       `}</style>
 
 
@@ -155,11 +169,11 @@ export default function WCASAIPage() {
         {/* Nav spacer */}
         <div style={{ height: 52, flexShrink: 0 }} />
         {/* Centered content area — minHeight keeps hero same size as before */}
-        <div style={{ flex: 1, minHeight: 453, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "44px 48px 54px", position: "relative", zIndex: 1 }}>
-          <h1 style={{ fontFamily: SANS, fontSize: 48, fontWeight: 400, lineHeight: 1.25, color: "#fff", margin: "0 0 28px" }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
-          <div style={{ width: 48, height: 1, background: "#8BBDE8", margin: "0 auto 20px" }} />
-          <Fade><p style={{ fontFamily: SANS, fontSize: 20, fontWeight: 400, color: "rgba(255,255,255,0.75)", lineHeight: 1.55, maxWidth: 820, margin: "0 0 32px" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p></Fade>
-          <div style={{ display: "flex", gap: 14, justifyContent: "center" }}>
+        <div className="ai-hero-content" style={{ flex: 1, minHeight: 453, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "44px 48px 54px", position: "relative", zIndex: 1 }}>
+          <h1 className="ai-hero-h1" style={{ fontFamily: SANS, fontSize: 48, fontWeight: 400, lineHeight: 1.25, color: "#fff", margin: "0 0 28px" }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
+          <div className="ai-hero-rule" style={{ width: 48, height: 1, background: "#8BBDE8", margin: "0 auto 20px" }} />
+          <Fade><p className="ai-hero-sub" style={{ fontFamily: SANS, fontSize: 20, fontWeight: 400, color: "rgba(255,255,255,0.75)", lineHeight: 1.55, maxWidth: 820, margin: "0 0 32px" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p></Fade>
+          <div className="ai-hero-btns" style={{ display: "flex", gap: 14, justifyContent: "center" }}>
             <a href="#case-studies" className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 220, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Portfolio Case Studies</a>
             <a href="#playbook" className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 220, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Our Playbook</a>
           </div>
@@ -167,7 +181,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* AI CONVICTION */}
-      <section style={{ background: "#fff", padding: "56px 64px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }}>
+      <section className="ai-conviction" style={{ background: "#fff", padding: "56px 64px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }}>
         <div>
           <h2 style={{ fontFamily: "'Georgia', serif", fontSize: 28, color: "#0a1a3a", lineHeight: 1.3, margin: "0 0 14px" }}>Our conviction: incumbency matters.</h2>
           <div style={{ width: 40, height: 2, background: "#8BBDE8", marginBottom: 20 }} />
@@ -185,10 +199,10 @@ export default function WCASAIPage() {
       </section>
 
       {/* CASE STUDIES */}
-      <section id="case-studies" style={{ background: "#0a1f44", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
+      <section id="case-studies" className="ai-case-studies" style={{ background: "#0a1f44", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "relative", zIndex: 2 }}>
           <Fade><SL text="Select Portfolio Case Studies" /><ST mw={960}>AI at work across healthcare & technology</ST><SD mw={860} fs={18}>Showcasing real-world AI use cases across healthcare and technology, helping deliver measurable value and accelerated adoption</SD></Fade>
-          <Fade delay={150}><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
+          <Fade delay={150}><div className="ai-case-studies-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
             {fCS.map((cs) => {
               const isHC = cs.sector === "Healthcare";
               const accent = "#8BBDE8";
@@ -241,7 +255,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* PLAYBOOK */}
-      <section id="playbook" style={{ background: "#0a1f44", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
+      <section id="playbook" className="ai-playbook" style={{ background: "#0a1f44", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", bottom: "-20%", left: "-5%", width: "40%", height: "60%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(200,152,94,0.04) 0%, transparent 65%)", animation: "m2 22s ease-in-out infinite", filter: "blur(40px)", pointerEvents: "none" }} />
         <div style={{ position: "relative", zIndex: 2 }}>
           <Fade>
