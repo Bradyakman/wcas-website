@@ -148,23 +148,19 @@ export default function WCASAIPage() {
       `}</style>
 
 
-      {/* HERO + ABOUT — shared background */}
-      <div style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #041a2e 0%, #0a3d4a 50%, #062830 100%)" }}>
+      {/* HERO */}
+      <section style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #041a2e 0%, #0a3d4a 50%, #062830 100%)" }}>
+        <div style={{ padding: "158px 64px 271px", textAlign: "center" }}>
+          <h1 style={{ fontFamily: SANS, fontSize: 32, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 0, whiteSpace: "nowrap" }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
+        </div>
+      </section>
 
-        {/* HERO */}
-        <section style={{ position: "relative", zIndex: 2, width: "100%" }}>
-          <div style={{ padding: "158px 64px 200px", textAlign: "center" }}>
-            <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 0 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
-          </div>
-        </section>
-
-        {/* ABOUT */}
-        <section id="about" style={{ position: "relative", zIndex: 2, padding: "20px 64px 56px" }}>
-          <Fade><div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
-            <p style={{ fontSize: 26, fontWeight: 400, color: "#ffffff", lineHeight: 1.55, maxWidth: 900, textAlign: "center" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
-          </div></Fade>
-        </section>
-      </div>
+      {/* ABOUT */}
+      <section id="about" style={{ background: BG, padding: "20px 64px 56px" }}>
+        <Fade><div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
+          <p style={{ fontSize: 26, fontWeight: 400, color: "#ffffff", lineHeight: 1.55, maxWidth: 900, textAlign: "center" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p>
+        </div></Fade>
+      </section>
 
       {/* AI CONVICTION */}
       <section style={{ background: "#fff", padding: "56px 24px" }}>
