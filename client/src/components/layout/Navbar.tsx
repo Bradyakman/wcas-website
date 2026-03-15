@@ -115,18 +115,25 @@ export function Navbar() {
                   {link.name}
                 </a>
                 <div
-                  className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 transition-all duration-200 ${
-                    openDropdown === link.name
-                      ? 'opacity-100 pointer-events-auto translate-y-0'
-                      : 'opacity-0 pointer-events-none -translate-y-1'
-                  }`}
+                  style={{
+                    position: 'absolute',
+                    top: 'calc(100% + 10px)',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    minWidth: 190,
+                    transition: 'opacity 0.2s ease, transform 0.2s ease',
+                    opacity: openDropdown === link.name ? 1 : 0,
+                    pointerEvents: openDropdown === link.name ? 'auto' : 'none',
+                    zIndex: 100,
+                  }}
                 >
-                  <div className="rounded-md shadow-xl py-2 min-w-[220px] flex flex-col" style={{ background: 'rgba(3,9,28,0.98)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                  <div style={{ background: 'rgba(8,18,45,0.96)', border: '0.5px solid rgba(255,255,255,0.1)', borderRadius: 6, padding: '4px 0', display: 'flex', flexDirection: 'column' }}>
                     {link.dropdown.map((dropItem) => (
                       <span
                         key={dropItem.name}
-                        className="px-5 py-2.5 text-sm block"
-                        style={{ fontFamily: "'DM Sans', sans-serif", color: 'rgba(255,255,255,0.80)', cursor: 'default', userSelect: 'none' }}
+                        style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: 'rgba(255,255,255,0.62)', padding: '6px 14px', cursor: 'default', userSelect: 'none', display: 'block', transition: 'color 0.15s, background 0.15s', borderRadius: 4 }}
+                        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.95)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.05)'; }}
+                        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.62)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
                       >
                         {dropItem.name}
                       </span>
