@@ -77,7 +77,7 @@ function ParticleField({ density = 50 }: { density?: number }) {
   return <canvas ref={canvasRef} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none" }} />;
 }
 
-const SL = ({ text, color = TEAL }: { text: string; color?: string }) => (<div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color }}>{text}</span><div style={{ width: 40, height: 1, background: `linear-gradient(to right, ${color}, transparent)` }} /></div>);
+const SL = ({ text, color = "#8BBDE8" }: { text: string; color?: string }) => (<div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color }}>{text}</span><div style={{ width: 40, height: 1, background: `linear-gradient(to right, ${color}, transparent)` }} /></div>);
 const ST = ({ children, mw = 700, color = "#fff" }: { children: React.ReactNode; mw?: number; color?: string }) => (<h2 style={{ fontSize: 40, fontWeight: 400, color, lineHeight: 1.2, marginBottom: 20, maxWidth: mw }}>{children}</h2>);
 const SD = ({ children, mw = 660, color = "rgba(255,255,255,0.4)", fs = 16 }: { children: React.ReactNode; mw?: number; color?: string; fs?: number }) => (<p style={{ fontFamily: SANS, fontSize: fs, color, lineHeight: 1.7, maxWidth: mw, marginBottom: 48 }}>{children}</p>);
 
@@ -232,7 +232,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* PLAYBOOK */}
-      <section id="playbook" style={{ background: BG, padding: "56px 64px", position: "relative", overflow: "hidden" }}>
+      <section id="playbook" style={{ background: "#0a1f44", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", bottom: "-20%", left: "-5%", width: "40%", height: "60%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(200,152,94,0.04) 0%, transparent 65%)", animation: "m2 22s ease-in-out infinite", filter: "blur(40px)", pointerEvents: "none" }} />
         <div style={{ position: "relative", zIndex: 2 }}>
           <Fade>
