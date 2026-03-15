@@ -157,7 +157,7 @@ export default function WCASAIPage() {
         {/* Centered content area — minHeight keeps hero same size as before */}
         <div style={{ flex: 1, minHeight: 453, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "44px 48px 54px", position: "relative", zIndex: 1 }}>
           <h1 style={{ fontFamily: SANS, fontSize: 48, fontWeight: 400, lineHeight: 1.25, color: "#fff", margin: "0 0 28px" }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
-          <div style={{ width: 48, height: 1, background: "rgba(77,184,168,0.6)", margin: "0 auto 20px" }} />
+          <div style={{ width: 48, height: 1, background: "#8BBDE8", margin: "0 auto 20px" }} />
           <Fade><p style={{ fontFamily: SANS, fontSize: 20, fontWeight: 400, color: "rgba(255,255,255,0.75)", lineHeight: 1.55, maxWidth: 820, margin: "0 0 32px" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p></Fade>
           <div style={{ display: "flex", gap: 14, justifyContent: "center" }}>
             <a href="#case-studies" className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 220, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Portfolio Case Studies</a>
@@ -170,12 +170,12 @@ export default function WCASAIPage() {
       <section style={{ background: "#fff", padding: "56px 64px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }}>
         <div>
           <h2 style={{ fontFamily: "'Georgia', serif", fontSize: 28, color: "#0a1a3a", lineHeight: 1.3, margin: "0 0 14px" }}>Our conviction: incumbency matters.</h2>
-          <div style={{ width: 40, height: 2, background: "rgba(77,184,168,0.6)", marginBottom: 20 }} />
-          <p style={{ fontFamily: SANS, fontSize: 14, color: "#444", lineHeight: 1.85, margin: 0 }}>
+          <div style={{ width: 40, height: 2, background: "#8BBDE8", marginBottom: 20 }} />
+          <p style={{ fontFamily: SANS, fontSize: 16, color: "#444", lineHeight: 1.85, margin: 0 }}>
             AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.
           </p>
         </div>
-        <p style={{ fontFamily: SANS, fontSize: 14, color: "#444", lineHeight: 1.85, margin: 0 }}>
+        <p style={{ fontFamily: SANS, fontSize: 16, color: "#444", lineHeight: 1.85, margin: 0 }}>
           Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly and persistently with portfolio companies to turn AI ambition into measurable, lasting results.
         </p>
       </section>
