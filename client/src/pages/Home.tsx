@@ -401,7 +401,7 @@ export default function Home() {
                   </div>
                   <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
                     <p style={{ fontFamily: SANS, fontSize: 14, color: "rgba(255,255,255,0.78)", lineHeight: 1.7, marginBottom: 20 }}>{n.excerpt}</p>
-                    <a href="#" onClick={e => e.preventDefault()} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "#5cc3d1", textDecoration: "none" }}>Read full article &#8594;</a>
+                    <a href="#" onClick={e => { e.preventDefault(); e.stopPropagation(); }} style={{ fontFamily: SANS, fontSize: 13, fontWeight: 500, color: "#5cc3d1", textDecoration: "none" }}>Read full article &#8594;</a>
                   </div>
                 </div>
               </div>
