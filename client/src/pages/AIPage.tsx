@@ -155,7 +155,7 @@ export default function WCASAIPage() {
         {/* Nav spacer */}
         <div style={{ height: 52, flexShrink: 0 }} />
         {/* Centered content area — minHeight keeps hero same size as before */}
-        <div style={{ flex: 1, minHeight: 453, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "44px 48px 70px", position: "relative", zIndex: 1 }}>
+        <div style={{ flex: 1, minHeight: 453, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "44px 48px 80px", position: "relative", zIndex: 1 }}>
           <h1 style={{ fontFamily: SANS, fontSize: 48, fontWeight: 400, lineHeight: 1.25, color: "#fff", margin: "0 0 28px" }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
           <Fade><p style={{ fontFamily: SANS, fontSize: 20, fontWeight: 400, color: "rgba(255,255,255,0.75)", lineHeight: 1.55, maxWidth: 820, margin: "0 0 32px" }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p></Fade>
           <div style={{ display: "flex", gap: 14, justifyContent: "center" }}>
