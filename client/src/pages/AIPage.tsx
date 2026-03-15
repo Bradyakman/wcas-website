@@ -162,7 +162,7 @@ export default function WCASAIPage() {
         {/* Block 4: spacer */}
         <div style={{ padding: "53px 64px 44px" }} />
         {/* Block 5: spacer */}
-        <div style={{ padding: "0 48px 138px" }} />
+        <div style={{ padding: "0 48px 135px" }} />
       </section>
 
       {/* AI CONVICTION */}
