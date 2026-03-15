@@ -199,7 +199,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* CASE STUDIES */}
-      <section id="case-studies" className="ai-case-studies" style={{ background: "#0a1f44", padding: "56px 64px 28px", position: "relative", overflow: "hidden" }}>
+      <section id="case-studies" className="ai-case-studies" style={{ background: "#0a1f44", padding: "56px 64px 28px", position: "relative", overflow: "hidden", scrollMarginTop: 80 }}>
         <div style={{ position: "relative", zIndex: 2 }}>
           <Fade><SL text="Select Portfolio Case Studies" /><ST mw={960}>AI at work across healthcare & technology</ST><SD mw={860} fs={18}>Showcasing real-world AI use cases across healthcare and technology, helping deliver measurable value and accelerated adoption</SD></Fade>
           <Fade delay={150}><div className="ai-case-studies-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
@@ -255,7 +255,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* PLAYBOOK */}
-      <section id="playbook" className="ai-playbook" style={{ background: "#0a1f44", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
+      <section id="playbook" className="ai-playbook" style={{ background: "#0a1f44", padding: "56px 64px", position: "relative", overflow: "hidden", scrollMarginTop: 80 }}>
         <div style={{ position: "absolute", bottom: "-20%", left: "-5%", width: "40%", height: "60%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(200,152,94,0.04) 0%, transparent 65%)", animation: "m2 22s ease-in-out infinite", filter: "blur(40px)", pointerEvents: "none" }} />
         <div style={{ position: "relative", zIndex: 2 }}>
           <Fade>
