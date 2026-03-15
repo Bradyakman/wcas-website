@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
-import aiHeroBg from "@assets/image_1773418699596.png";
 import norstellaWhiteLogo from "@assets/norstella_text_white_1772038125226.png";
 import georgePhoto from "@assets/image_1772773366337.png";
 import mikePhoto from "@assets/image_1772773735309.png";
@@ -149,15 +148,12 @@ export default function WCASAIPage() {
       `}</style>
 
 
-      {/* HERO + ABOUT — shared background image */}
-      <div style={{ position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${aiHeroBg})`, backgroundSize: "cover", backgroundPosition: "center top", backgroundRepeat: "no-repeat" }} />
-        
-        
+      {/* HERO + ABOUT — shared background */}
+      <div style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #041a2e 0%, #0a3d4a 50%, #062830 100%)" }}>
 
         {/* HERO */}
-        <section style={{ position: "relative", zIndex: 2, width: "100%", minHeight: 278 }}>
-          <div style={{ padding: "158px 64px 12px", textAlign: "center" }}>
+        <section style={{ position: "relative", zIndex: 2, width: "100%" }}>
+          <div style={{ padding: "158px 64px 200px", textAlign: "center" }}>
             <h1 style={{ fontSize: 43, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 0 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
           </div>
         </section>
