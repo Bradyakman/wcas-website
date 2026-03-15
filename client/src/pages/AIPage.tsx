@@ -167,13 +167,15 @@ export default function WCASAIPage() {
       </section>
 
       {/* AI CONVICTION */}
-      <section style={{ background: "#fff", padding: "56px 24px" }}>
-        <p style={{ fontFamily: "'Georgia', serif", fontSize: 18, color: "#0a1a3a", lineHeight: 1.7, marginBottom: 20, textAlign: "center", maxWidth: 900, margin: "0 auto 20px" }}>
-          AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: incumbency matters. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.
-        </p>
-        <p style={{ fontFamily: SANS, fontSize: 15, color: "#555", lineHeight: 1.85, textAlign: "center", maxWidth: 900, margin: "0 auto" }}>
-          Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly with portfolio companies to turn AI ambition into measurable, lasting results.
-        </p>
+      <section style={{ background: "#fff", padding: "48px 64px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }}>
+          <p style={{ fontFamily: "'Georgia', serif", fontSize: 18, color: "#0a1a3a", lineHeight: 1.75, margin: 0 }}>
+            AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. Our conviction: incumbency matters. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.
+          </p>
+          <p style={{ fontFamily: SANS, fontSize: 13, color: "#0a1a3a", lineHeight: 1.85, margin: 0, paddingTop: 4 }}>
+            Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly with portfolio companies to turn AI ambition into measurable, lasting results.
+          </p>
+        </div>
       </section>
 
       {/* CASE STUDIES */}
