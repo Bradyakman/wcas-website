@@ -189,7 +189,7 @@ export default function Home() {
           </div>
           <a href="#" onClick={e => e.preventDefault()} className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "default", textDecoration: "none", marginTop: 40, display: "inline-block" }}>Explore Our Portfolio &rarr;</a>
         </div>
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: 48 }}>
+        <div style={{ paddingTop: 56 }}>
           <div className="port-marquee-wrap">
             <div className="port-marquee-track">
               {[...Array(2)].map((_, setIdx) =>
