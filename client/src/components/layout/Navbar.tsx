@@ -50,7 +50,11 @@ export function Navbar() {
       name: "Healthcare", 
       href: "#",
       dropdown: [
-        { name: "HCIT", href: "#" }
+        { name: "Overview" },
+        { name: "Team" },
+        { name: "Portfolio" },
+        { name: "Investment Sectors" },
+        { name: "Investing in Better Healthcare" },
       ]
     },
     { 
@@ -93,38 +97,35 @@ export function Navbar() {
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.filter(l => l.name !== "Investor Portal").map((link) => (
             link.dropdown ? (
-              <div key={link.name} className="relative">
+              <div key={link.name} className="relative"
+                onMouseEnter={() => setOpenDropdown(link.name)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
                 <a
                   href="#"
                   style={linkStyle}
                   onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
                   onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.90)')}
-                  onClick={(e) => { e.preventDefault(); toggleDropdown(link.name); }}
+                  onClick={e => e.preventDefault()}
                 >
                   {link.name}
                 </a>
                 <div
-                  role="menu"
                   className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 transition-all duration-200 ${
                     openDropdown === link.name
                       ? 'opacity-100 pointer-events-auto translate-y-0'
                       : 'opacity-0 pointer-events-none -translate-y-1'
                   }`}
                 >
-                  <div className="rounded-md shadow-xl py-2 min-w-[180px] flex flex-col" style={{ background: 'rgba(3,9,28,0.98)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                  <div className="rounded-md shadow-xl py-2 min-w-[220px] flex flex-col" style={{ background: 'rgba(3,9,28,0.98)', border: '1px solid rgba(255,255,255,0.1)' }}>
                     {link.dropdown.map((dropItem) => (
-                      <a
+                      <span
                         key={dropItem.name}
-                        href="#"
-                        role="menuitem"
-                        className="px-5 py-2.5 text-sm transition-colors"
-                        style={{ color: 'rgba(255,255,255,0.90)', textDecoration: 'none' }}
-                        onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
-                        onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.90)')}
-                        onClick={(e) => { e.preventDefault(); closeDropdown(); }}
+                        className="px-5 py-2.5 text-sm block"
+                        style={{ fontFamily: "'DM Sans', sans-serif", color: 'rgba(255,255,255,0.80)', cursor: 'default', userSelect: 'none' }}
                       >
                         {dropItem.name}
-                      </a>
+                      </span>
                     ))}
                   </div>
                 </div>
