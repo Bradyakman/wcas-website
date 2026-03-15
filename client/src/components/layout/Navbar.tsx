@@ -117,17 +117,18 @@ export function Navbar() {
                 <div
                   style={{
                     position: 'absolute',
-                    top: 'calc(100% + 6px)',
+                    top: '100%',
                     left: 0,
                     transform: 'none',
                     minWidth: 200,
+                    paddingTop: 6,
                     transition: 'opacity 0.2s ease',
                     opacity: openDropdown === link.name ? 1 : 0,
                     pointerEvents: openDropdown === link.name ? 'auto' : 'none',
                     zIndex: 100,
                   }}
                 >
-                  <div style={{ background: '#0d2050', border: '0.5px solid rgba(255,255,255,0.08)', borderRadius: 4, padding: '4px 0', display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ background: '#04112b', border: '0.5px solid rgba(255,255,255,0.08)', borderRadius: 4, padding: '4px 0', display: 'flex', flexDirection: 'column' }}>
                     {link.dropdown.map((dropItem) => (
                       <span
                         key={dropItem.name}
