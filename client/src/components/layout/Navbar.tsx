@@ -92,10 +92,10 @@ export function Navbar() {
         backgroundColor: '#04112b',
       }}
     >
-      {/* Logo — always visible */}
-      <div style={{ position: "absolute", left: 24, top: "50%", transform: "translateY(-50%)" }}>
+      {/* Logo — always visible, links to home */}
+      <Link href="/" style={{ position: "absolute", left: 24, top: "50%", transform: "translateY(-50%)", textDecoration: "none", display: "block", lineHeight: 0 }}>
         <img src={wcasLogo} alt="WCAS" style={{ height: 28, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.95, display: "block" }} />
-      </div>
+      </Link>
 
       <div ref={navRef} className="w-full flex items-center justify-end px-8" style={{ gap: 32 }}>
         <nav className="hidden lg:flex items-center gap-8">
