@@ -390,8 +390,8 @@ export default function Home() {
               onClick={() => setExpandedNews(expandedNews === i ? -1 : i)}
             >
               <div style={{ display: "grid", gridTemplateColumns: "80px 1fr 40px", alignItems: "center", padding: "22px 28px", gap: 24 }}>
-                <span className="nr-date" style={{ fontFamily: SANS, fontSize: 12, color: expandedNews === i ? "#fff" : "#555", transition: "color 0.3s" }}>{n.date}</span>
-                <h4 className="nr-title" style={{ fontFamily: SANS, fontSize: 17, fontWeight: 500, color: expandedNews === i ? "#fff" : "#0c1a2e", lineHeight: 1.4, transition: "color 0.3s" }}>{n.title}</h4>
+                <span className="nr-date" style={{ fontFamily: SANS, fontSize: 12, color: expandedNews === i ? "#fff" : "#555", transition: "color 0.3s", display: "flex", alignItems: "center" }}>{n.date}</span>
+                <h4 className="nr-title" style={{ fontFamily: SANS, fontSize: 17, fontWeight: 500, color: expandedNews === i ? "#fff" : "#0c1a2e", lineHeight: 1.4, transition: "color 0.3s", margin: 0 }}>{n.title}</h4>
                 <div className="nr-arrow" style={{ width: 32, height: 32, borderRadius: "50%", border: `1px solid ${expandedNews === i ? "rgba(255,255,255,0.3)" : "rgba(12,26,46,0.15)"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, color: expandedNews === i ? "#fff" : "#0c1a2e", transition: "all 0.3s", transform: expandedNews === i ? "rotate(90deg)" : "none" }}>&#8594;</div>
               </div>
               <div className={`nr-expand ${expandedNews === i ? 'nr-open' : ''}`} style={{ padding: expandedNews === i ? "0 28px 28px" : "0 28px" }}>
