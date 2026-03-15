@@ -162,7 +162,7 @@ export default function Home() {
       </section>
 
       {/* ── PORTFOLIO ── */}
-      <section style={{ background: "#0a1f44", padding: "56px 56px 40px" }}>
+      <section style={{ background: "#0a1f44", padding: "56px 56px 32px" }}>
         <style>{`
           .port-marquee-wrap { position:relative; overflow:hidden; }
           .port-marquee-wrap::before, .port-marquee-wrap::after { content:""; position:absolute; top:0; bottom:0; width:80px; z-index:2; pointer-events:none; }
@@ -178,7 +178,7 @@ export default function Home() {
           .port-logo-card span { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:rgba(255,255,255,0.7); letter-spacing:0.5px; }
           @media (prefers-reduced-motion: reduce) { .port-marquee-track { animation:none !important; flex-wrap:wrap; justify-content:center; } }
         `}</style>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 48 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 32 }}>
           <div style={{ maxWidth: 900 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
               <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: "#8BBDE8" }}>Our Portfolio</span>
@@ -189,7 +189,7 @@ export default function Home() {
           </div>
           <a href="#" onClick={e => e.preventDefault()} className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "default", textDecoration: "none", marginTop: 40, display: "inline-block" }}>Explore Our Portfolio &rarr;</a>
         </div>
-        <div style={{ paddingTop: 56 }}>
+        <div style={{ paddingTop: 32 }}>
           <div className="port-marquee-wrap">
             <div className="port-marquee-track">
               {[...Array(2)].map((_, setIdx) =>
@@ -225,7 +225,7 @@ export default function Home() {
 
       {/* ── SPOTLIGHT + SIDEBAR SECTION ── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#0a1f44", marginTop: 0 }}>
-        <div style={{ position: "relative", zIndex: 10, padding: "40px 56px 40px" }}>
+        <div style={{ position: "relative", zIndex: 10, padding: "32px 56px 32px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
@@ -262,7 +262,7 @@ export default function Home() {
           cards[(carouselIdx + 2) % total],
         ];
         return (
-          <section style={{ background: "#0a1f44", padding: "40px 0 56px" }}>
+          <section style={{ background: "#0a1f44", padding: "32px 0 56px" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, padding: "0 32px" }}>
               {/* Left arrow */}
               <button onClick={prev} aria-label="Previous" style={{ fontFamily: SANS, fontSize: 20, fontWeight: 500, width: 52, height: 52, borderRadius: 26, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "border-color 0.2s, background 0.2s, color 0.2s" }}
