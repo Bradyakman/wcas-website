@@ -214,7 +214,7 @@ export default function Home() {
                   { name: "ImageTrend", src: "/logos/imagetrend-transparent.png", h: 30 },
                 ].map((co, i) => (
                   <div key={`${setIdx}-${i}`} className="port-logo-card" style={{ minWidth: 320, flexShrink: 0 }}>
-                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 180, maxHeight: 70, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
+                    <img src={co.src} alt={co.name} style={{ height: co.h, maxWidth: 180, maxHeight: 70, objectFit: "contain", filter: "brightness(0) invert(1)", ...(co.name === "Alliance Data" ? { clipPath: "inset(0 0 6px 0)" } : {}) }} />
                   </div>
                 ))
               )}
