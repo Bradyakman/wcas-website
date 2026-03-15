@@ -155,7 +155,7 @@ export default function Home() {
               <div className="wwi-card-title">Technology</div>
               <div className="wwi-card-subtitle">Powering Essential Industries</div>
               <p className="wwi-card-desc">We partner with leading B2B technology companies and their management teams to accelerate growth and build lasting success.</p>
-              <a href="/technology" className="wwi-card-cta">Explore Technology &rarr;</a>
+              <a href="#" onClick={e => e.preventDefault()} className="wwi-card-cta">Explore Technology &rarr;</a>
             </div>
           </div>
         </div>
