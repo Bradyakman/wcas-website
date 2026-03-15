@@ -144,7 +144,7 @@ export default function Home() {
               <div className="wwi-card-title">Healthcare</div>
               <div className="wwi-card-subtitle">Investing in Better Healthcare</div>
               <p className="wwi-card-desc">We partner with category-defining healthcare companies and their management teams to expand access, improve quality, and build lasting value.</p>
-              <a href="/hcit" className="wwi-card-cta">Explore Healthcare &rarr;</a>
+              <a href="#" className="wwi-card-cta" onClick={e => e.preventDefault()} style={{ cursor: "default" }}>Explore Healthcare &rarr;</a>
             </div>
           </div>
           <div className="wwi-card">
