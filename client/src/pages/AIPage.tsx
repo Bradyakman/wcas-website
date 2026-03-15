@@ -247,7 +247,7 @@ export default function WCASAIPage() {
                     <div style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, letterSpacing: 1.8, textTransform: "uppercase", color: "#8BBDE8", marginBottom: 8 }}>{s.detail}</div>
                     <h4 style={{ fontFamily: SANS, fontSize: 22, fontWeight: 700, color: "#fff", lineHeight: 1.3, textTransform: "uppercase", letterSpacing: 0.5, whiteSpace: "nowrap" }}>{s.title}</h4>
                   </div>
-                  <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.45)", lineHeight: 1.8, transition: "color 0.3s" }} className="pb-desc">{s.desc}</p>
+                  <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.8)", lineHeight: 1.8, transition: "color 0.3s" }} className="pb-desc">{s.desc}</p>
                 </div>
               ))}
             </div>
