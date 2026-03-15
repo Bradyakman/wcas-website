@@ -176,7 +176,7 @@ export default function WCASAIPage() {
           </p>
         </div>
         <div>
-          <h2 style={{ fontFamily: "'Georgia', serif", fontSize: 28, color: "#0a1a3a", lineHeight: 1.3, margin: "0 0 14px" }}>Our conviction: incumbency matters.</h2>
+          <h2 style={{ fontFamily: "'Georgia', serif", fontSize: 28, color: "#0a1a3a", lineHeight: 1.3, margin: "0 0 14px" }}>Our embedded approach.</h2>
           <div style={{ width: 40, height: 2, background: "#8BBDE8", marginBottom: 20 }} />
           <p style={{ fontFamily: SANS, fontSize: 16, color: "#444", lineHeight: 1.85, margin: 0 }}>
             Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly and persistently with portfolio companies to turn AI ambition into measurable, lasting results.
