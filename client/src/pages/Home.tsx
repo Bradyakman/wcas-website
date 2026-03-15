@@ -235,7 +235,7 @@ export default function Home() {
               <h2 style={{ fontFamily: SERIF, fontSize: 34, fontWeight: 400, lineHeight: 1.2 }}>Be Your Partner of Choice</h2>
             </div>
             <p style={{ fontFamily: SANS, fontSize: 17, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 300, paddingTop: 8 }}>
-              WCAS's mission is to lead in healthcare and technology investments through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner.
+              WCAS's mission is to lead through thought leadership, culture, and results. We create deep partnerships and are frequently selected as the preferred partner.
             </p>
           </div>
         </div>
