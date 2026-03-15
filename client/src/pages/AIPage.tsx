@@ -167,13 +167,16 @@ export default function WCASAIPage() {
       </section>
 
       {/* AI CONVICTION */}
-      <section style={{ background: "#fff", padding: "56px 64px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
+      <section style={{ background: "#fff", padding: "56px 64px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }}>
         <div>
           <h2 style={{ fontFamily: "'Georgia', serif", fontSize: 28, color: "#0a1a3a", lineHeight: 1.3, margin: "0 0 14px" }}>Our conviction: incumbency matters.</h2>
-          <div style={{ width: 40, height: 2, background: "rgba(77,184,168,0.6)" }} />
+          <div style={{ width: 40, height: 2, background: "rgba(77,184,168,0.6)", marginBottom: 20 }} />
+          <p style={{ fontFamily: SANS, fontSize: 14, color: "#444", lineHeight: 1.85, margin: 0 }}>
+            AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.
+          </p>
         </div>
         <p style={{ fontFamily: SANS, fontSize: 14, color: "#444", lineHeight: 1.85, margin: 0 }}>
-          AI is reshaping every industry, and the gap between companies that lead and those that lag is widening fast. We've spent 45 years building the sector expertise and data infrastructure to make sure our partner companies are on the right side of that shift.
+          Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly and persistently with portfolio companies to turn AI ambition into measurable, lasting results.
         </p>
       </section>
 
