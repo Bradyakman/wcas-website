@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
-import aiHeroWave from "@assets/image_1773588380276.png";
+import aiHeroWave from "@assets/image_1773588798636.png";
 import norstellaWhiteLogo from "@assets/norstella_text_white_1772038125226.png";
 import georgePhoto from "@assets/image_1772773366337.png";
 import mikePhoto from "@assets/image_1772773735309.png";
@@ -152,7 +152,7 @@ export default function WCASAIPage() {
       {/* HERO — mirrors homepage hero block structure exactly */}
       <section id="about" style={{ position: "relative", overflow: "hidden", background: "#041828", backgroundImage: `url(${aiHeroWave})`, backgroundSize: "cover", backgroundPosition: "top center" }}>
         {/* Dark overlay */}
-        <div style={{ position: "absolute", inset: 0, background: "rgba(4, 20, 40, 0.65)", zIndex: 0 }} />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(4, 20, 40, 0.25)", zIndex: 0 }} />
         {/* Block 1: nav spacer — identical to homepage */}
         <div style={{ height: 52, position: "relative", zIndex: 1 }} />
         {/* Block 2: headline — same padding as homepage logo block */}
