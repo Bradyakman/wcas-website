@@ -146,8 +146,6 @@ export default function WCASAIPage() {
         
         .sl{position:absolute;left:19px;top:40px;bottom:-20px;width:2px;background:linear-gradient(180deg,${TEAL},rgba(77,184,199,0.1))}
       `}</style>
-
-
       {/* HERO — mirrors homepage hero block structure exactly */}
       <section id="about" style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #041a2e 0%, #0a3d4a 50%, #062830 100%)" }}>
         {/* Block 1: nav spacer — identical to homepage */}
@@ -161,11 +159,10 @@ export default function WCASAIPage() {
           <Fade><p style={{ fontFamily: SANS, fontSize: 20, fontWeight: 400, color: "rgba(255,255,255,0.75)", lineHeight: 1.55, maxWidth: 820, margin: 0 }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p></Fade>
         </div>
         {/* Block 4: spacer — same padding as homepage stats block + compensates for missing stats content (80px) */}
-        <div style={{ padding: "40px 64px 44px" }} />
+        <div style={{ padding: "40px 64px 44px" }} className="pt-[48px]" />
         {/* Block 5: spacer — compensates for missing buttons content */}
         <div style={{ padding: "0 48px 126px" }} />
       </section>
-
       {/* AI CONVICTION */}
       <section style={{ background: "#fff", padding: "56px 24px" }}>
         <p style={{ fontFamily: "'Georgia', serif", fontSize: 15, color: "#0a1a3a", lineHeight: 1.7, marginBottom: 20, textAlign: "center", maxWidth: 720, margin: "0 auto 20px" }}>
@@ -175,7 +172,6 @@ export default function WCASAIPage() {
           Every WCAS investment is evaluated through a proprietary AI Scorecard assessing market defensibility, data moats, organizational readiness, and more. Post-investment, our dedicated team embeds directly with portfolio companies to turn AI ambition into measurable, lasting results.
         </p>
       </section>
-
       {/* CASE STUDIES */}
       <section id="case-studies" style={{ background: "#ffffff", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "relative", zIndex: 2 }}>
@@ -231,7 +227,6 @@ export default function WCASAIPage() {
           </div></Fade>
         </div>
       </section>
-
       {/* PLAYBOOK */}
       <section id="playbook" style={{ background: BG, padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", bottom: "-20%", left: "-5%", width: "40%", height: "60%", borderRadius: "50%", background: "radial-gradient(ellipse at center, rgba(200,152,94,0.04) 0%, transparent 65%)", animation: "m2 22s ease-in-out infinite", filter: "blur(40px)", pointerEvents: "none" }} />
@@ -255,8 +250,6 @@ export default function WCASAIPage() {
           </Fade>
         </div>
       </section>
-
-
       <div style={{ height: 3, background: `linear-gradient(90deg, ${TEAL}, ${ACCENT}, ${GOLD})`, opacity: 0.45 }} />
     </div>
   );
