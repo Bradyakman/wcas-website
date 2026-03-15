@@ -163,7 +163,7 @@ export default function WCASAIPage() {
         {/* Block 4: spacer — same padding as homepage stats block + compensates for missing stats content (80px) */}
         <div style={{ padding: "43px 64px 44px" }} />
         {/* Block 5: spacer — compensates for missing buttons content */}
-        <div style={{ padding: "0 48px 129px" }} />
+        <div style={{ padding: "0 48px 128px" }} />
       </section>
 
       {/* AI CONVICTION */}
