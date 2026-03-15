@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
-import aiHeroWave from "@assets/image_1773588892075.png";
 import norstellaWhiteLogo from "@assets/norstella_text_white_1772038125226.png";
 import georgePhoto from "@assets/image_1772773366337.png";
 import mikePhoto from "@assets/image_1772773735309.png";
@@ -150,23 +149,21 @@ export default function WCASAIPage() {
 
 
       {/* HERO — mirrors homepage hero block structure exactly */}
-      <section id="about" style={{ position: "relative", overflow: "hidden", background: "#041828", backgroundImage: `url(${aiHeroWave})`, backgroundSize: "cover", backgroundPosition: "top center" }}>
-        {/* Dark overlay */}
-        <div style={{ position: "absolute", inset: 0, background: "rgba(4, 20, 40, 0.25)", zIndex: 0 }} />
+      <section id="about" style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #041a2e 0%, #0a3d4a 50%, #062830 100%)" }}>
         {/* Block 1: nav spacer — identical to homepage */}
-        <div style={{ height: 52, position: "relative", zIndex: 1 }} />
+        <div style={{ height: 52 }} />
         {/* Block 2: headline — same padding as homepage logo block */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "44px 48px 44px", textAlign: "center", position: "relative", zIndex: 1 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "44px 48px 44px", textAlign: "center" }}>
           <h1 style={{ fontFamily: SANS, fontSize: 32, fontWeight: 400, lineHeight: 1.35, color: "#fff", margin: 0 }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
         </div>
         {/* Block 3: paragraph — same padding as homepage tagline block */}
-        <div style={{ display: "flex", justifyContent: "center", padding: "0 48px 44px", textAlign: "center", position: "relative", zIndex: 1 }}>
+        <div style={{ display: "flex", justifyContent: "center", padding: "0 48px 44px", textAlign: "center" }}>
           <Fade><p style={{ fontFamily: SANS, fontSize: 20, fontWeight: 400, color: "rgba(255,255,255,0.75)", lineHeight: 1.55, maxWidth: 820, margin: 0 }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p></Fade>
         </div>
         {/* Block 4: spacer */}
-        <div style={{ padding: "43px 64px 44px", position: "relative", zIndex: 1 }} />
+        <div style={{ padding: "43px 64px 44px" }} />
         {/* Block 5: spacer */}
-        <div style={{ padding: "0 48px 128px", position: "relative", zIndex: 1 }} />
+        <div style={{ padding: "0 48px 128px" }} />
       </section>
 
       {/* AI CONVICTION */}
