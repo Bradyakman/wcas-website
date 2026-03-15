@@ -132,8 +132,8 @@ export default function Home() {
           .wwi-card-title { font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:#0C1A2E; line-height:1.1; margin:0 0 8px; }
           .wwi-card-subtitle { font-family:'DM Sans',sans-serif; font-size:18px; font-weight:400; color:#0C1A2E; line-height:1.3; margin:0 0 16px; }
           .wwi-card-desc { font-family:'DM Sans',sans-serif; font-size:16.5px; color:rgba(12,26,46,0.55); line-height:1.65; margin:0 0 28px; }
-          .wwi-card-cta { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:#5cc3d1; text-decoration:none; display:inline-block; margin-top:auto; transition:color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease; }
-          .wwi-card-cta:hover { color:#4aa8b5; transform:translateX(6px); letter-spacing:0.5px; }
+          .wwi-card-cta { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:#0a1a3a; text-decoration:none; display:inline-block; margin-top:auto; }
+          .wwi-card-cta:hover { text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(10,26,58,0.3); }
         `}</style>
         <div className="wwi-cards">
           <div className="wwi-card">
