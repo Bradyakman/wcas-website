@@ -118,8 +118,8 @@ export function Navbar() {
                   style={{
                     position: 'absolute',
                     top: 'calc(100% + 10px)',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
+                    left: 0,
+                    transform: 'none',
                     minWidth: 190,
                     transition: 'opacity 0.2s ease, transform 0.2s ease',
                     opacity: openDropdown === link.name ? 1 : 0,
