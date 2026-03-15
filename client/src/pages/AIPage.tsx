@@ -79,7 +79,7 @@ function ParticleField({ density = 50 }: { density?: number }) {
 
 const SL = ({ text, color = TEAL }: { text: string; color?: string }) => (<div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color }}>{text}</span><div style={{ width: 40, height: 1, background: `linear-gradient(to right, ${color}, transparent)` }} /></div>);
 const ST = ({ children, mw = 700, color = "#fff" }: { children: React.ReactNode; mw?: number; color?: string }) => (<h2 style={{ fontSize: 40, fontWeight: 400, color, lineHeight: 1.2, marginBottom: 20, maxWidth: mw }}>{children}</h2>);
-const SD = ({ children, mw = 660, color = "rgba(255,255,255,0.4)" }: { children: React.ReactNode; mw?: number; color?: string }) => (<p style={{ fontFamily: SANS, fontSize: 16, color, lineHeight: 1.7, maxWidth: mw, marginBottom: 48 }}>{children}</p>);
+const SD = ({ children, mw = 660, color = "rgba(255,255,255,0.4)", fs = 16 }: { children: React.ReactNode; mw?: number; color?: string; fs?: number }) => (<p style={{ fontFamily: SANS, fontSize: fs, color, lineHeight: 1.7, maxWidth: mw, marginBottom: 48 }}>{children}</p>);
 
 
 const teamMembers = [
@@ -176,9 +176,9 @@ export default function WCASAIPage() {
       </section>
 
       {/* CASE STUDIES */}
-      <section id="case-studies" style={{ background: "#ffffff", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
+      <section id="case-studies" style={{ background: "#0a1f44", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "relative", zIndex: 2 }}>
-          <Fade><SL text="Select Portfolio Case Studies" color="#111" /><ST color="#111111">AI at work across healthcare & technology</ST><SD color="rgba(0,0,0,0.55)">Real-world AI use cases delivering measurable value.</SD></Fade>
+          <Fade><SL text="Select Portfolio Case Studies" /><ST mw={960}>AI at work across healthcare & technology</ST><SD mw={860} fs={18}>Real-world AI use cases delivering measurable value.</SD></Fade>
           <Fade delay={150}><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
             {fCS.map((cs) => {
               const isHC = cs.sector === "Healthcare";
