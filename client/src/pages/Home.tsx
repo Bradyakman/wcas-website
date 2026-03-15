@@ -267,7 +267,8 @@ export default function Home() {
               {/* Left arrow */}
               <button onClick={prev} aria-label="Previous" style={{ fontFamily: SANS, fontSize: 20, fontWeight: 500, width: 52, height: 52, borderRadius: 26, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "border-color 0.2s, background 0.2s, color 0.2s" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#ffffff"; (e.currentTarget as HTMLElement).style.borderColor = "#ffffff"; (e.currentTarget as HTMLElement).style.color = "#0C1A2E"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.07)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.25)"; (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.85)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.07)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.25)"; (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.85)"; }}
+                onTouchEnd={e => { const el = e.currentTarget as HTMLElement; setTimeout(() => { el.style.background = "rgba(255,255,255,0.07)"; el.style.borderColor = "rgba(255,255,255,0.25)"; el.style.color = "rgba(255,255,255,0.85)"; }, 150); }}>
                 &#8592;
               </button>
 
@@ -332,7 +333,8 @@ export default function Home() {
               {/* Right arrow */}
               <button onClick={next} aria-label="Next" style={{ fontFamily: SANS, fontSize: 20, fontWeight: 500, width: 52, height: 52, borderRadius: 26, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "border-color 0.2s, background 0.2s, color 0.2s" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#ffffff"; (e.currentTarget as HTMLElement).style.borderColor = "#ffffff"; (e.currentTarget as HTMLElement).style.color = "#0C1A2E"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.07)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.25)"; (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.85)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.07)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.25)"; (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.85)"; }}
+                onTouchEnd={e => { const el = e.currentTarget as HTMLElement; setTimeout(() => { el.style.background = "rgba(255,255,255,0.07)"; el.style.borderColor = "rgba(255,255,255,0.25)"; el.style.color = "rgba(255,255,255,0.85)"; }, 150); }}>
                 &#8594;
               </button>
             </div>
