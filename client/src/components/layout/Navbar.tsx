@@ -61,7 +61,11 @@ export function Navbar() {
       name: "Technology", 
       href: "#",
       dropdown: [
-        { name: "Operating Successes", href: "#" }
+        { name: "Overview" },
+        { name: "Team" },
+        { name: "Portfolio" },
+        { name: "Investment Sectors" },
+        { name: "Operating Successes" },
       ]
     },
     { name: "AI", href: "/ai" },
