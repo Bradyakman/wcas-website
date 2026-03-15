@@ -149,7 +149,7 @@ export default function WCASAIPage() {
 
 
       {/* HERO */}
-      <section id="about" style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #041a2e 0%, #0a3d4a 50%, #062830 100%)", height: 482, minHeight: 482, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "0 64px", textAlign: "center" }}>
+      <section id="about" style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #041a2e 0%, #0a3d4a 50%, #062830 100%)", height: 482, minHeight: 482, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "65px 64px 0", textAlign: "center" }}>
         <h1 style={{ fontFamily: SANS, fontSize: 32, fontWeight: 400, lineHeight: 1.35, color: "#fff", marginBottom: 28, whiteSpace: "nowrap" }}>Where <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Sector Expertise</em> Meets <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8BBDE8" }}>Artificial Intelligence</em></h1>
         <Fade><p style={{ fontFamily: SANS, fontSize: 20, fontWeight: 400, color: "rgba(255,255,255,0.75)", lineHeight: 1.55, maxWidth: 820, margin: 0 }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p></Fade>
       </section>
