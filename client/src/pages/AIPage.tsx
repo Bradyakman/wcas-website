@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import aiHeroBg from "@assets/image_1773418699596.png";
-import wcasLogo from "@assets/WCAS-logo-sheaco.png";
 import norstellaWhiteLogo from "@assets/norstella_text_white_1772038125226.png";
 import georgePhoto from "@assets/image_1772773366337.png";
 import mikePhoto from "@assets/image_1772773735309.png";
@@ -149,10 +148,6 @@ export default function WCASAIPage() {
         .sl{position:absolute;left:19px;top:40px;bottom:-20px;width:2px;background:linear-gradient(180deg,${TEAL},rgba(77,184,199,0.1))}
       `}</style>
 
-      {/* Top-left logo */}
-      <Link href="/" style={{ position: "fixed", top: 16, left: 24, zIndex: 100, display: "flex", alignItems: "center", textDecoration: "none", background: "rgba(8,14,28,0.55)", backdropFilter: "blur(8px)", padding: "8px 14px", borderRadius: 8 }}>
-        <img src={wcasLogo} alt="WCAS" style={{ height: 28, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.95 }} />
-      </Link>
 
       {/* HERO + ABOUT — shared background image */}
       <div style={{ position: "relative", overflow: "hidden" }}>
