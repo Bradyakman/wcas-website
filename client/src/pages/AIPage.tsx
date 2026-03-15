@@ -78,8 +78,8 @@ function ParticleField({ density = 50 }: { density?: number }) {
 }
 
 const SL = ({ text, color = "#8BBDE8" }: { text: string; color?: string }) => (<div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><span style={{ fontFamily: SANS, fontSize: 14, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color }}>{text}</span><div style={{ width: 40, height: 1, background: `linear-gradient(to right, ${color}, transparent)` }} /></div>);
-const ST = ({ children, mw = 700, color = "#fff" }: { children: React.ReactNode; mw?: number; color?: string }) => (<h2 style={{ fontSize: 40, fontWeight: 400, color, lineHeight: 1.2, marginBottom: 20, maxWidth: mw }}>{children}</h2>);
-const SD = ({ children, mw = 660, color = "rgba(255,255,255,0.4)", fs = 16 }: { children: React.ReactNode; mw?: number; color?: string; fs?: number }) => (<p style={{ fontFamily: SANS, fontSize: fs, color, lineHeight: 1.7, maxWidth: mw, marginBottom: 48 }}>{children}</p>);
+const ST = ({ children, mw = 700, color = "#fff" }: { children: React.ReactNode; mw?: number; color?: string }) => (<h2 style={{ fontFamily: SERIF, fontSize: 42, fontWeight: 400, color, lineHeight: 1.15, marginBottom: 20, maxWidth: mw }}>{children}</h2>);
+const SD = ({ children, mw = 660, color = "rgba(255,255,255,0.8)", fs = 15 }: { children: React.ReactNode; mw?: number; color?: string; fs?: number }) => (<p style={{ fontFamily: SANS, fontSize: fs, color, lineHeight: 1.7, maxWidth: mw, marginBottom: 48 }}>{children}</p>);
 
 
 const teamMembers = [
