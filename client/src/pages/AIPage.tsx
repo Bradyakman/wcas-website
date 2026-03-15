@@ -199,7 +199,7 @@ export default function WCASAIPage() {
       </section>
 
       {/* CASE STUDIES */}
-      <section id="case-studies" className="ai-case-studies" style={{ background: "#0a1f44", padding: "56px 64px", position: "relative", overflow: "hidden" }}>
+      <section id="case-studies" className="ai-case-studies" style={{ background: "#0a1f44", padding: "56px 64px 28px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "relative", zIndex: 2 }}>
           <Fade><SL text="Select Portfolio Case Studies" /><ST mw={960}>AI at work across healthcare & technology</ST><SD mw={860} fs={18}>Showcasing real-world AI use cases across healthcare and technology, helping deliver measurable value and accelerated adoption</SD></Fade>
           <Fade delay={150}><div className="ai-case-studies-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
