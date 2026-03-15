@@ -150,9 +150,9 @@ export default function WCASAIPage() {
 
 
       {/* HERO — mirrors homepage hero block structure exactly */}
-      <section id="about" style={{ position: "relative", overflow: "hidden", background: "#041828", backgroundImage: `url(${aiHeroWave})`, backgroundSize: "cover", backgroundPosition: "center top" }}>
+      <section id="about" style={{ position: "relative", overflow: "hidden", background: "#041828", backgroundImage: `url(${aiHeroWave})`, backgroundSize: "cover", backgroundPosition: "center center" }}>
         {/* Dark overlay */}
-        <div style={{ position: "absolute", inset: 0, background: "rgba(4, 20, 40, 0.55)", zIndex: 0 }} />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(4, 20, 40, 0.35)", zIndex: 0 }} />
         {/* Block 1: nav spacer — identical to homepage */}
         <div style={{ height: 52, position: "relative", zIndex: 1 }} />
         {/* Block 2: headline — same padding as homepage logo block */}
