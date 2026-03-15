@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
-import aiHeroWave from "@assets/image_1773588798636.png";
+import aiHeroWave from "@assets/image_1773588892075.png";
 import norstellaWhiteLogo from "@assets/norstella_text_white_1772038125226.png";
 import georgePhoto from "@assets/image_1772773366337.png";
 import mikePhoto from "@assets/image_1772773735309.png";
