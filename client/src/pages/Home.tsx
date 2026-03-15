@@ -225,7 +225,7 @@ export default function Home() {
 
       {/* ── SPOTLIGHT + SIDEBAR SECTION ── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#0a1f44", marginTop: 0 }}>
-        <div style={{ position: "relative", zIndex: 10, padding: "28px 56px 56px" }}>
+        <div style={{ position: "relative", zIndex: 10, padding: "40px 56px 40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
@@ -262,7 +262,7 @@ export default function Home() {
           cards[(carouselIdx + 2) % total],
         ];
         return (
-          <section style={{ background: "#0a1f44", padding: "64px 0 56px" }}>
+          <section style={{ background: "#0a1f44", padding: "40px 0 56px" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, padding: "0 32px" }}>
               {/* Left arrow */}
               <button onClick={prev} aria-label="Previous" style={{ fontFamily: SANS, fontSize: 20, fontWeight: 500, width: 52, height: 52, borderRadius: 26, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "border-color 0.2s, background 0.2s, color 0.2s" }}
