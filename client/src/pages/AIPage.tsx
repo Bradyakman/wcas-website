@@ -182,9 +182,9 @@ export default function WCASAIPage() {
           <Fade delay={150}><div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
             {fCS.map((cs) => {
               const isHC = cs.sector === "Healthcare";
-              const accent = isHC ? TEAL : "#8bbde8";
-              const accentBg = isHC ? "rgba(77,184,199,0.08)" : "rgba(139,189,232,0.08)";
-              const accentBorder = isHC ? "rgba(77,184,199,0.2)" : "rgba(139,189,232,0.2)";
+              const accent = "#8BBDE8";
+              const accentBg = "rgba(139,189,232,0.08)";
+              const accentBorder = "rgba(139,189,232,0.2)";
               return (
                 <div key={cs.company} className="cs-flip-wrap">
                   <div className="cs-flip-inner">
