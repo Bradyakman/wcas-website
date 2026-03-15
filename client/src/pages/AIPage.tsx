@@ -161,9 +161,9 @@ export default function WCASAIPage() {
           <Fade><p style={{ fontFamily: SANS, fontSize: 20, fontWeight: 400, color: "rgba(255,255,255,0.75)", lineHeight: 1.55, maxWidth: 820, margin: 0 }}>At WCAS, AI isn't a theme. It's infrastructure, embedded in how we evaluate investments, how we support our portfolio, and how we create lasting value.</p></Fade>
         </div>
         {/* Block 4: spacer — same padding as homepage stats block + compensates for missing stats content (80px) */}
-        <div style={{ padding: "44px 64px 44px" }} />
+        <div style={{ padding: "43px 64px 44px" }} />
         {/* Block 5: spacer — compensates for missing buttons content */}
-        <div style={{ padding: "0 48px 130px" }} />
+        <div style={{ padding: "0 48px 129px" }} />
       </section>
 
       {/* AI CONVICTION */}
