@@ -108,7 +108,7 @@ export default function Home() {
 
         {/* Buttons */}
         <div style={{ display: "flex", gap: 14, justifyContent: "center", padding: "0 48px 28px" }}>
-          <a href="#" onClick={e=>e.preventDefault()} className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid #22c55e", background: "#22c55e", color: "#fff", cursor: "pointer", textDecoration: "none" }}>Our Story</a>
+          <a href="#" onClick={e=>e.preventDefault()} className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Our Story</a>
           <span className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "default", textDecoration: "none" }}>Explore Our Portfolio</span>
           <a href="/ai" className="pill-btn hero-pill-btn" style={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "11px 0", width: 200, textAlign: "center", borderRadius: 23, border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.85)", cursor: "pointer", textDecoration: "none" }}>Our Approach to AI</a>
         </div>
