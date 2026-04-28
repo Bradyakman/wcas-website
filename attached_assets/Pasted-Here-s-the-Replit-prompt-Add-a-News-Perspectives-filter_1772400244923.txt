@@ -1,0 +1,25 @@
+Here's the Replit prompt:
+
+---
+
+**Add a News / Perspectives filter toggle to the Latest News section.** Right now the section just shows "News & Perspectives" as a heading with no toggle. I need an actual clickable filter added. Style it exactly like the testimonials section filter (the row with "ALL TESTIMONIALS," "TECHNOLOGY," "HEALTHCARE" buttons).
+
+1. **Add the "LATEST NEWS" section label** in teal above the heading, matching the other sections.
+
+2. **Change the heading** from "News & Perspectives" back to "WCAS and our partners in the news" — this should update dynamically based on which filter is active.
+
+3. **Add a filter row** between the heading and the accordion with two buttons: "NEWS" and "PERSPECTIVES." Copy the exact same button styling from the testimonials filter — uppercase text, letter-spacing, rounded pill borders, same font size and padding. The active button gets a solid dark navy fill with white text, the inactive button is outlined/transparent with navy text.
+
+4. **"NEWS" should be active by default**, showing the current four news articles.
+
+5. **When "PERSPECTIVES" is clicked**, the heading changes to "WCAS perspectives and insights", the accordion fades out and is replaced with four placeholder Perspectives articles:
+   - PERSPECTIVES · Jan 2026 · "The Future of AI in Healthcare: Opportunities for Value Creation"
+   - PERSPECTIVES · Dec 2025 · "Building Resilient GovTech Platforms in an Era of Digital Transformation"
+   - PERSPECTIVES · Nov 2025 · "Why Vertical SaaS Continues to Outperform: Lessons from Our Portfolio"
+   - PERSPECTIVES · Oct 2025 · "Navigating the Next Wave of Healthcare Consolidation"
+
+6. **PERSPECTIVES tag styling:** Use a purple/violet color (#7c6bbf) for the pill, same format as the WCAS NEWS and PARTNERSHIP tags.
+
+7. **Behavior:** Only one filter active at a time. Switching filters resets the accordion so the first item is expanded by default. Add a subtle fade transition when swapping content.
+
+Keep the accordion styling, expand/collapse behavior, and "See all news →" button exactly as they are.

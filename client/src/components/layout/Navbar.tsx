@@ -1,0 +1,234 @@
+import { Link, useLocation } from "wouter";
+import { Menu, X } from "lucide-react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import wcasLogo from "@assets/wcas-logo-white_(1)_1773500662280.png";
+
+export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [location] = useLocation();
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const closeDropdown = useCallback(() => {
+    setOpenDropdown(null);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent | TouchEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        closeDropdown();
+      }
+    };
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeDropdown();
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [closeDropdown]);
+
+  const toggleDropdown = (name: string) => {
+    setOpenDropdown(prev => prev === name ? null : name);
+  };
+
+  const navLinks = [
+    { 
+      name: "Healthcare", 
+      href: "#",
+      dropdown: [
+        { name: "Overview" },
+        { name: "Team" },
+        { name: "Portfolio" },
+        { name: "Investment Sectors" },
+        { name: "Investing in Better Healthcare" },
+      ]
+    },
+    { 
+      name: "Technology", 
+      href: "#",
+      dropdown: [
+        { name: "Overview" },
+        { name: "Team" },
+        { name: "Portfolio" },
+        { name: "Investment Sectors" },
+        { name: "Operating Successes" },
+      ]
+    },
+    { name: "AI", href: "/ai" },
+    { name: "News", href: "#" },
+    { name: "Investor Portal", href: "#" },
+  ];
+
+  const linkStyle: React.CSSProperties = {
+    fontFamily: "'Outfit', sans-serif",
+    fontWeight: 400,
+    fontSize: 13,
+    letterSpacing: '0.04em',
+    color: 'rgba(255,255,255,0.90)',
+    textDecoration: 'none',
+    transition: 'color 0.2s',
+  };
+
+  return (
+    <header
+      className="fixed top-0 w-full z-50 transition-all duration-300"
+      style={{
+        paddingTop: isScrolled ? 12 : 18,
+        paddingBottom: isScrolled ? 12 : 18,
+        backgroundColor: '#04112b',
+      }}
+    >
+      {/* Logo — always visible, links to home */}
+      <Link href="/" style={{ position: "absolute", left: 24, top: "50%", transform: "translateY(-50%)", textDecoration: "none", display: "block", lineHeight: 0 }}>
+        <img src={wcasLogo} alt="WCAS" style={{ height: 28, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.95, display: "block" }} />
+      </Link>
+
+      <div ref={navRef} className="w-full flex items-center justify-end px-8" style={{ gap: 32 }}>
+        <nav className="hidden lg:flex items-center gap-8">
+          {navLinks.filter(l => l.name !== "Investor Portal").map((link) => (
+            link.dropdown ? (
+              <div key={link.name} className="relative"
+                onMouseEnter={() => setOpenDropdown(link.name)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <a
+                  href="#"
+                  style={linkStyle}
+                  onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.90)')}
+                  onClick={e => e.preventDefault()}
+                >
+                  {link.name}
+                </a>
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '100%',
+                    left: 0,
+                    transform: 'none',
+                    minWidth: 200,
+                    paddingTop: 6,
+                    transition: 'opacity 0.2s ease',
+                    opacity: openDropdown === link.name ? 1 : 0,
+                    pointerEvents: openDropdown === link.name ? 'auto' : 'none',
+                    zIndex: 100,
+                  }}
+                >
+                  <div style={{ background: '#04112b', border: '0.5px solid rgba(255,255,255,0.08)', borderRadius: 4, padding: '4px 0', display: 'flex', flexDirection: 'column' }}>
+                    {link.dropdown.map((dropItem) => (
+                      <span
+                        key={dropItem.name}
+                        style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, color: '#fff', padding: '10px 16px', cursor: 'default', userSelect: 'none', display: 'block', whiteSpace: 'nowrap', transition: 'background 0.15s' }}
+                        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.1)'; }}
+                        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
+                      >
+                        {dropItem.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : link.href.startsWith("/") ? (
+              <Link
+                key={link.name}
+                href={link.href}
+                style={linkStyle}
+                onMouseEnter={(e: any) => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
+                onMouseLeave={(e: any) => (e.currentTarget.style.color = 'rgba(255,255,255,0.90)')}
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href="#"
+                style={linkStyle}
+                onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,1)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.90)')}
+                onClick={e => e.preventDefault()}
+              >
+                {link.name}
+              </a>
+            )
+          ))}
+        </nav>
+
+        {/* Investor Portal pill */}
+        <a
+          href="#"
+          className="hidden lg:inline-flex"
+          onClick={e => e.preventDefault()}
+          style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: 13, letterSpacing: '0.04em', color: 'rgba(255,255,255,0.95)', textDecoration: 'none', padding: '7px 18px', borderRadius: 20, border: '1px solid rgba(255,255,255,0.3)', transition: 'border-color 0.2s, color 0.2s', whiteSpace: 'nowrap' }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.6)'; (e.currentTarget as HTMLElement).style.color = '#fff'; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.3)'; (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.95)'; }}
+        >
+          Investor Portal
+        </a>
+
+        <button
+          className="lg:hidden p-2 text-white absolute right-8"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </div>
+
+      {mobileMenuOpen && (
+        <div className="lg:hidden absolute top-full left-0 w-full shadow-lg py-4 px-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto" style={{ background: 'rgba(3,9,28,0.98)', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+          {navLinks.map((link) => (
+            <div key={link.name} className="flex flex-col pb-2" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+              {link.href.startsWith("/") ? (
+                <Link
+                  href={link.href}
+                  className="text-base py-2"
+                  style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontFamily: "'Outfit', sans-serif" }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  href="#"
+                  className="text-base py-2"
+                  style={{ color: 'rgba(255,255,255,0.8)', textDecoration: 'none', fontFamily: "'Outfit', sans-serif" }}
+                  onClick={(e) => { e.preventDefault(); if (!('dropdown' in link && link.dropdown)) setMobileMenuOpen(false); }}
+                >
+                  {link.name}
+                </a>
+              )}
+              {'dropdown' in link && link.dropdown && (
+                <div className="flex flex-col pl-4 mt-1 gap-1 ml-2 mb-1" style={{ borderLeft: '1px solid rgba(255,255,255,0.1)' }}>
+                  {(link as any).dropdown.map((dropItem: any) => (
+                    <a
+                      key={dropItem.name}
+                      href="#"
+                      className="text-sm py-1"
+                      style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontFamily: "'Outfit', sans-serif" }}
+                      onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); }}
+                    >
+                      {dropItem.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </header>
+  );
+}

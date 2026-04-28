@@ -1,0 +1,44 @@
+This isn’t hover. If taps do nothing on iPad for multiple buttons, you almost definitely have a hit-testing problem on iOS: an invisible overlay (often a `::before` layer, background image layer, or a container with `transform`) sits on top and steals touches. Desktop clicks still work because of different layout/breakpoint or because the cursor hits a different element.
+
+Give Replit this prompt. It forces them to find and fix the real cause, not paper over it.
+
+```text id="g3o7r0"
+On iPad/iOS Safari, multiple CTA buttons do nothing when tapped:
+- “Learn More About Our History”
+- “See All News”
+They work on desktop. Fix iOS tap/click reliably.
+
+This is not a hover issue. Treat it as an iOS hit-testing / overlay interception bug.
+
+Required investigation (must do):
+1) In iOS Safari responsive mode (or real iPad), inspect the DOM around both CTAs.
+2) Find any element layered above the CTAs (common: absolute/fixed background layers, ::before/::after overlays, gradient overlays, large invisible divs, carousel layers).
+3) Confirm by temporarily setting a bright background on the suspected overlay and by adding console logs for touchstart/click on the CTA.
+
+Fix requirements:
+A) Ensure CTAs are real interactive elements:
+   - If they navigate, they must be <a href="..."> (no JS-only routing required).
+   - If they trigger actions, they must be <button type="button">.
+B) Ensure CTAs sit above decorative layers:
+   - Put CTAs in a positioned stacking context: position: relative; z-index: 20+ (or appropriate).
+   - For decorative overlays/background layers: pointer-events: none;
+C) Remove iOS hit-testing traps:
+   - If any ancestor container uses transform/filter/backdrop-filter, it can break tap targets on iOS.
+   - Either remove that transform from the ancestor OR move the CTAs outside the transformed layer OR create a new stacking context for CTAs above it.
+D) Add touch improvements:
+   - touch-action: manipulation;
+   - -webkit-tap-highlight-color: transparent; (optional)
+
+Verification (required):
+- On iPad Safari, tapping each CTA triggers navigation/action every time.
+- Report root cause (which overlay/transform was blocking taps).
+- Show diffs (files + lines changed).
+```
+
+If they claim “no overlay,” push them to search for these exact patterns that frequently break iOS taps:
+
+* any parent with `transform: translate3d(...)`, `transform: translate(...)`, `filter`, or `backdrop-filter`
+* any full-width `position: absolute` layer with higher `z-index`
+* pseudo-elements used for gradients: `.section::before { ... }`
+
+Fix is usually: `pointer-events: none` on the decorative layer + `position: relative; z-index` on the CTA wrapper.

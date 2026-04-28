@@ -1,0 +1,52 @@
+The News carousel is now broken: it won’t click OR drag-scroll. Roll back the last News carousel interaction changes and re-implement drag-to-scroll correctly (like the top video carousel) without breaking clicks.
+
+Hard requirements:
+1) First, revert the News carousel event/overlay changes that caused it to stop responding.
+2) Then implement drag-to-scroll ONLY on the News scroll container using Pointer Events, with a small movement threshold so clicks still work.
+
+Correct implementation details:
+A) Do NOT set pointer-events:none on the scroll container or any layer above it.
+B) Do NOT use draggable=true or HTML drag-drop.
+C) Do NOT call preventDefault on pointerdown. Only call preventDefault inside pointermove IF dragging is active.
+D) Use this exact state machine:
+
+- const THRESHOLD = 6;
+- onPointerDown(e):
+    isPointerDown = true
+    isDragging = false
+    startX = e.clientX
+    startScrollLeft = container.scrollLeft
+    container.setPointerCapture(e.pointerId)
+
+- onPointerMove(e):
+    if (!isPointerDown) return
+    const dx = e.clientX - startX
+    if (!isDragging && Math.abs(dx) >= THRESHOLD) isDragging = true
+    if (isDragging):
+        e.preventDefault()
+        container.scrollLeft = startScrollLeft - dx
+
+- onPointerUp / onPointerCancel(e):
+    isPointerDown = false
+    container.releasePointerCapture(e.pointerId)
+    setTimeout(() => isDragging = false, 0)
+
+- onClickCapture(e) on each card link:
+    if (isDragging) { e.preventDefault(); e.stopPropagation(); }
+
+E) Styles:
+- container: cursor: grab;
+- container while dragging: cursor: grabbing; user-select:none;
+- container: touch-action: pan-y; (not none)
+
+3) Verification / debug proof (required):
+- Temporarily log pointerdown/move/up events to confirm they fire on desktop.
+- Confirm:
+   - Dragging horizontally scrolls the row immediately (no holding).
+   - Clicking a card without dragging opens it.
+   - Arrows still work.
+- Remove logs after confirming.
+
+Deliverable:
+- Diffs (files + lines).
+- Briefly state what broke it (pointer-events none, preventDefault too early, overlay stealing events, etc.).

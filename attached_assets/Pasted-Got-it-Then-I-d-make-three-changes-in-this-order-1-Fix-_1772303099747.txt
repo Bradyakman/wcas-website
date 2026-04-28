@@ -1,0 +1,66 @@
+Got it. Then I’d make three changes, in this order.
+
+### 1) Fix the tech card first (it’s the weak one)
+
+Your tech kicker is generic and the bullets don’t match your actual sector list.
+
+Replace the Technology kicker + bullets with:
+
+Kicker:
+Investing in software and data platforms powering essential industries.
+
+Bullets:
+
+* FinTech (banking, markets, payments)
+* GovTech (state, local, federal)
+* Built environment (property, infrastructure, construction)
+* IndustrialTech (industrial software, GRC)
+* Proprietary data and analytics
+* Healthcare technology (HCIT), with the WCAS Healthcare Team
+
+### 2) Simplify the healthcare card to your real four buckets
+
+Your current bullets are too long and feel like consultant copy. Use your actual buckets.
+
+Kicker:
+Investing across healthcare services, payor solutions, and the pharma value chain.
+
+Bullets:
+
+* Care delivery
+* Payor solutions
+* Pharma value chain
+* Healthcare technology (HCIT)
+
+### 3) Tighten vertical spacing
+
+The stats row plus “Our Focus” header has too much dead air.
+
+* Reduce padding between stats and “Our Focus” by ~25-35%.
+* Reduce card header band height slightly.
+
+Tell Replit
+
+```text id="c7r1k9"
+Update the "Where we invest" cards.
+
+Healthcare card:
+Kicker: "Investing across healthcare services, payor solutions, and the pharma value chain."
+Bullets: Care delivery; Payor solutions; Pharma value chain; Healthcare technology (HCIT)
+
+Technology card:
+Kicker: "Investing in software and data platforms powering essential industries."
+Bullets:
+FinTech (banking, markets, payments)
+GovTech (state, local, federal)
+Built environment (property, infrastructure, construction)
+IndustrialTech (industrial software, GRC)
+Proprietary data and analytics
+Healthcare technology (HCIT), with the WCAS Healthcare Team
+
+Layout:
+Reduce vertical padding between the stats row and the "Our Focus" section by ~25-35%.
+Slightly reduce the height of the card header band.
+```
+
+If you share the max character limit you want for each kicker line, I can tighten them so they wrap perfectly in your card width.

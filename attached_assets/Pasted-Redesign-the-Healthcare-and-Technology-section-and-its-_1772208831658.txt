@@ -1,0 +1,40 @@
+Redesign the Healthcare and Technology section and its transition into the Mission section below. IMPORTANT: Keep all text in the existing Bilo font family — do NOT change any fonts.
+
+1. WRAPPER: The entire area from the Healthcare/Technology cards through the Mission section should share ONE continuous dark background color (#0a1628). No background changes or color shifts between sections.
+
+2. CARDS LAYOUT: Two cards side by side in a two-column grid. Max-width 1200px, centered. 24px gap between cards. 56px padding on left and right of the container. 56px padding above the cards (between stats bar and cards).
+
+3. CARD STYLING:
+   - Healthcare card background: linear-gradient(155deg, #102847, #0f3058, #0d2240)
+   - Technology card background: linear-gradient(155deg, #0b1830, #0e2040, #091428)
+   - Both cards: 1px solid border in rgba(255, 255, 255, 0.06), border-radius 8px, overflow hidden
+   - Min-height: 360px
+   - Padding: 40px inside each card
+   - Flexbox with flex-direction column and justify-content flex-end (text at bottom)
+   - Add a subtle radial glow in the top-right corner: radial-gradient(circle, rgba(59,130,246,0.06), transparent 70%), positioned absolute, 50% width, 60% height
+
+4. CARD HOVER:
+   - translateY(-3px)
+   - box-shadow: 0 12px 36px rgba(0,0,0,0.25)
+   - border-color changes to rgba(26, 86, 219, 0.2)
+   - The blue accent bar expands from 36px to 60px
+   - transition: all 0.3s ease
+
+5. BLUE ACCENT BAR: Below each heading, 36px wide, 3px tall, background #1a56db, margin-bottom 16px.
+
+6. EXPLORE LINK: Text link style (not a button), 12px, font-weight 600, letter-spacing 2px, uppercase, color #3b82f6. On card hover, color changes to white.
+
+7. DIVIDER: Between the cards and the Mission section, add a horizontal line:
+   - 48px margin above and below
+   - 1px tall
+   - background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.15), transparent)
+   - This creates a subtle blue glow divider that separates the sections cleanly
+
+8. MISSION SECTION: Stays exactly as it is now but make sure it sits on the same #0a1628 background with no visible break or color change from the cards above.
+
+9. TYPOGRAPHY — ALL BILO FONT, do not change:
+   - Card headings: white, 42px, bold
+   - Card body: 15px, font-weight 300, line-height 1.7, color rgba(255,255,255,0.55), max-width 340px
+   - Keep Mission heading and text as-is
+
+Do NOT change the nav, stats bar, video carousel, or any other sections. The goal is that the cards and mission feel like one cohesive dark section with a subtle divider between them — no awkward transitions.

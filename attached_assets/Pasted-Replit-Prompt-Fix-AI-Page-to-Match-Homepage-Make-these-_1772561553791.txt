@@ -1,0 +1,46 @@
+Replit Prompt: Fix AI Page to Match Homepage
+Make these specific changes to the AI page component (AIPage.jsx). Do NOT rewrite the whole file — just find and update these parts:
+1. Hero section tag — make it taller with darker overlay
+Find the hero <section> opening tag and replace it with:
+jsx<section style={{ position: "relative", overflow: "hidden", minHeight: 680, background: `linear-gradient(175deg, rgba(12,26,46,0.82) 0%, rgba(12,26,46,0.92) 60%, rgba(12,26,46,0.75) 100%), url(/assets/hero-bg.png)`, backgroundSize: "cover", backgroundPosition: "center 40%" }}>
+This makes the hero taller (680px instead of 560px) and darkens the overlay so text is readable.
+Also upload the hero background image to /public/assets/hero-bg.png.
+2. Hero content padding — more breathing room under nav
+Find padding: "100px 64px 0" in the hero content div and change to:
+padding: "140px 64px 0"
+3. Headline — larger to match homepage
+Find the h1 style and change:
+
+fontSize: 52 → fontSize: 56
+fontWeight: 300 stays the same
+lineHeight: 1.18 → lineHeight: 1.15
+maxWidth: 780 → maxWidth: 820
+marginBottom: 28 → marginBottom: 32
+
+4. Subtitle text — brighter for readability
+Find the subtitle <p> under the h1 and change:
+
+fontSize: 17 → fontSize: 18
+color: "rgba(255,255,255,0.5)" → color: "rgba(255,255,255,0.6)"
+maxWidth: 700 → maxWidth: 720
+marginBottom: 44 → marginBottom: 48
+
+5. Anchor nav pills — match homepage button style
+In the CSS styles block, find the .ap class and replace the entire thing with:
+css.ap{font-family:${SANS};font-size:13px;font-weight:500;padding:10px 24px;border-radius:24px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.55);cursor:pointer;transition:all 0.3s;text-decoration:none;white-space:nowrap}
+.ap:hover{color:#fff;border-color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.08)}
+.ap.ac{color:#fff;border-color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.1)}
+6. Anchor nav bottom padding
+Find paddingBottom: 48 in the anchor nav flex div and change to:
+paddingBottom: 64
+7. Remove the animated gradient line at bottom of hero
+Find and DELETE this entire line (it's right after the hero content closing div):
+jsx<div style={{ height: 2, background: `linear-gradient(90deg, ${TEAL}, ${ACCENT}, ${GOLD})`, backgroundSize: "200% 100%", animation: "gs 6s linear infinite", opacity: 0.35 }} />
+The homepage doesn't have this line so it needs to go.
+8. Bottom CTA buttons — match homepage style
+Find the "Explore Our Portfolio" button and change its style to:
+jsxstyle={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "#fff", textDecoration: "none" }}
+Find the "Our Sectors" button and change its style to:
+jsxstyle={{ fontFamily: SANS, fontSize: 14, fontWeight: 500, padding: "14px 36px", borderRadius: 28, border: "1px solid rgba(255,255,255,0.1)", background: "transparent", color: "rgba(255,255,255,0.55)", textDecoration: "none" }}
+Summary
+These changes make page 2 match page 1: taller hero, readable text, matching button styles, consistent spacing. Do not change anything else.

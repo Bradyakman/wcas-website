@@ -1,0 +1,32 @@
+The News carousel still does NOT drag-scroll like the video carousel. Right now it behaves like a click-and-hold (long press) instead of grab-and-drag. Fix it so the News carousel drag behavior matches the TOP video carousel exactly.
+
+Hard constraints:
+- Do NOT use long-press, draggable=true, or HTML drag-and-drop.
+- Implement true grab-to-scroll: pointer/mouse down + move updates scrollLeft continuously.
+- Keep arrows. Keep card sizes unchanged.
+
+Required implementation (must match top):
+1) Identify the exact code that makes the TOP video carousel drag-scroll (event listeners + threshold logic). Reuse the same hook/component for News. Do not write a different approach.
+2) Use Pointer Events (preferred) to support mouse + touch consistently:
+   - pointerdown: set isDragging=true, store startX and startScrollLeft, setPointerCapture
+   - pointermove: if isDragging, preventDefault and set scrollLeft = startScrollLeft - (currentX - startX)
+   - pointerup/pointercancel: isDragging=false, releasePointerCapture
+3) Add a drag threshold so clicks still work:
+   - If movement < 6px, treat as click (open article).
+   - If movement >= 6px, treat as drag and suppress click on cards/links.
+4) UX polish:
+   - cursor: grab; while dragging cursor: grabbing
+   - disable text selection while dragging (user-select: none on container during drag)
+   - set touch-action: pan-y on the container so vertical page scroll still works, but horizontal drag is captured
+5) IMPORTANT: The bug right now is “hold without dragging.”
+   - Fix by responding immediately to pointermove deltas (no timers, no delays).
+
+Verification (required):
+- On desktop: click and drag left/right anywhere on the News card row scrolls smoothly, exactly like the top carousel.
+- It should NOT require holding for a moment.
+- On iPad: swiping still works normally.
+- Clicking a card without dragging still opens the article.
+
+Deliverable:
+- Diffs (files + lines)
+- Name the shared hook/component used by BOTH carousels (top and news).

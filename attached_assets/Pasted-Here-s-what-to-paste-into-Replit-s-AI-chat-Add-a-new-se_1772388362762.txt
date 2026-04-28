@@ -1,0 +1,54 @@
+Here's what to paste into Replit's AI chat:
+
+```
+Add a new section directly below the stats row (the $33B+, 190+, 18, 45+ numbers). This is a split-screen "Where we invest" section. Replace whatever is currently there (the "Our Focus" / "Where we invest" section with the two cards).
+
+Here's exactly what to build:
+
+STRUCTURE:
+- A flex container, 650px tall, with two panels side by side
+- A thin vertical divider line down the center
+- Left panel = Technology, Right panel = Healthcare
+
+LAYOUT & BEHAVIOR:
+- Default state: both panels are flex: 1 (equal 50/50 width)
+- On hover: hovered panel expands to flex: 1.4, other shrinks to flex: 0.6
+- The non-hovered panel dims to brightness(0.7)
+- Transition: 0.4s ease on flex, filter, and all animations
+- Background color: #0e1f35 (same dark navy as the stats section above — should feel seamless)
+
+DIVIDER LINE:
+- Position absolute, left: 50%, full height, 1px wide
+- Default: subtle white gradient (transparent at top/bottom, rgba(255,255,255,0.1) in middle)
+- When tech panel is hovered: divider glows warm gold (rgba(200,152,94,0.25))
+- When healthcare panel is hovered: divider glows teal (rgba(77,184,199,0.25))
+- Use CSS :has() selector: .split:has(.tech:hover) .divider
+
+EACH PANEL HAS THESE LAYERS (back to front):
+1. A background div with subtle radial gradients (warm gold tones for tech, teal tones for healthcare). On hover, this scales to 1.06 and opacity increases from 0.3 to 0.5
+2. Large watermark text at top-left: "Technology" / "Healthcare" in Cormorant Garamond, 88px, font-weight 300, color rgba(255,255,255,0.07). It has a shimmer animation (opacity pulses between 1 and 0.6 over 4s). On hover: shimmer stops, color brightens to rgba(255,255,255,0.14), translateY(-6px)
+3. A subtle bottom-edge glow (gradient from transparent to the accent color at 0.06 opacity), only visible on hover
+4. Content anchored to the bottom of the panel with padding 0 48px 56px
+
+CONTENT IN EACH PANEL (bottom-aligned):
+- A pill-shaped tag: "TECHNOLOGY" or "HEALTHCARE" with a small colored dot (gold #c8985e for tech, teal #4db8c7 for healthcare). Styled with backdrop-filter blur, border radius 18px, 10px uppercase text
+- A heading in Cormorant Garamond, 34px, white, with a line break. Tech: "Powering Essential\nIndustries". Healthcare: "Investing in Better\nHealthcare"
+- A description paragraph (HIDDEN by default, reveals on hover with 0.05s delay): 14px, rgba(255,255,255,0.4). Use max-height: 0 → 80px transition. Tech text: "Software and data platforms driving transformation across financial services, government, and industrial sectors." Healthcare text: "Partnering with management teams across care delivery, payor solutions, and the pharma value chain."
+- Subsector pills in a flex-wrap row (HIDDEN by default, STAGGERED reveal on hover):
+  - Tech pills: FinTech, GovTech, Built Environment, IndustrialTech, Data & Analytics
+  - Healthcare pills: Care Delivery, Payor Solutions, Pharma Value Chain, Healthcare IT
+  - Each pill fades in 50ms after the previous: nth-child(1) delay 0.12s, nth-child(2) 0.17s, nth-child(3) 0.22s, nth-child(4) 0.27s, nth-child(5) 0.32s
+  - Pills: 12px font, border-radius 16px, rgba(255,255,255,0.06) background, rgba(255,255,255,0.08) border
+  - On pill hover: tech pills glow gold, healthcare pills glow teal
+- A CTA link (HIDDEN, reveals last with 0.35s delay): "Explore Technology →" / "Explore Healthcare →" in the accent color
+
+COLORS:
+- Technology accent: #c8985e (warm gold)
+- Healthcare accent: #4db8c7 (teal)
+- Background: #0e1f35
+- Use Cormorant Garamond for headings and watermark, DM Sans for body text
+
+The section should flow seamlessly from the dark stats section above it — no visible gap or color change between the stats and this split section.
+```
+
+That should give Replit everything it needs. If it asks which file, point it to your main homepage file. Let me know how it turns out!
