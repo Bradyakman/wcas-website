@@ -7,11 +7,11 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
 
-  // Check if we are on a page with a dark hero section
-  const isDarkHeroPage = location === "/hcit" || 
-                         location === "/news" || 
+  const isDarkHeroPage = location === "/hcit" ||
+                         location === "/news" ||
                          location === "/technology" ||
-                         location === "/technology/operating-successes" || 
+                         location === "/technology/operating-successes" ||
+                         location === "/history" ||
                          location.startsWith("/team/");
 
   useEffect(() => {
@@ -23,16 +23,16 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Our Firm", href: "/#firm" },
-    { 
-      name: "Technology", 
+    { name: "Our Firm", href: "/history" },
+    {
+      name: "Technology",
       href: "/technology",
       dropdown: [
         { name: "Operating Successes", href: "/technology/operating-successes" }
       ]
     },
-    { 
-      name: "Healthcare", 
+    {
+      name: "Healthcare",
       href: "/healthcare",
       dropdown: [
         { name: "HCIT", href: "/hcit" }
@@ -44,7 +44,7 @@ export function Navbar() {
   ];
 
   return (
-    <header 
+    <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
       }`}
@@ -56,18 +56,17 @@ export function Navbar() {
           WCAS
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             link.dropdown ? (
               <div key={link.name} className="relative group">
-                <a 
+                <a
                   href={link.href}
                   className={`text-sm font-medium transition-colors flex items-center gap-1 ${
-                    isScrolled 
-                      ? "text-foreground/80 hover:text-primary" 
-                      : isDarkHeroPage 
-                        ? "text-white/90 hover:text-white" 
+                    isScrolled
+                      ? "text-foreground/80 hover:text-primary"
+                      : isDarkHeroPage
+                        ? "text-white/90 hover:text-white"
                         : "text-foreground/90 hover:text-primary"
                   }`}
                 >
@@ -87,14 +86,14 @@ export function Navbar() {
                 </div>
               </div>
             ) : (
-              <a 
-                key={link.name} 
+              <a
+                key={link.name}
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
-                  isScrolled 
-                    ? "text-foreground/80 hover:text-primary" 
-                    : isDarkHeroPage 
-                      ? "text-white/90 hover:text-white" 
+                  isScrolled
+                    ? "text-foreground/80 hover:text-primary"
+                    : isDarkHeroPage
+                      ? "text-white/90 hover:text-white"
                       : "text-foreground/90 hover:text-primary"
                 }`}
               >
@@ -104,8 +103,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* Mobile Toggle */}
-        <button 
+        <button
           className={`lg:hidden p-2 ${!isScrolled && isDarkHeroPage ? "text-white" : "text-foreground"}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -113,12 +111,11 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {mobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t py-4 px-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
           {navLinks.map((link) => (
             <div key={link.name} className="flex flex-col border-b border-border/50 pb-2">
-              <a 
+              <a
                 href={link.href}
                 className="text-lg font-medium text-foreground py-2"
                 onClick={() => !link.dropdown && setMobileMenuOpen(false)}
@@ -128,7 +125,7 @@ export function Navbar() {
               {link.dropdown && (
                 <div className="flex flex-col pl-4 mt-2 gap-2 border-l-2 border-border/50 ml-2 mb-2">
                   {link.dropdown.map(dropItem => (
-                    <a 
+                    <a
                       key={dropItem.name}
                       href={dropItem.href}
                       className="text-base text-muted-foreground py-1 hover:text-primary"
